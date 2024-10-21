@@ -1,0 +1,40 @@
+Source,Target,Relation,Incident_ID
+MR. TIMOTHY ALLEN WELLS,PILOT IN COMMAND,acting as,20000215010329A
+MR. TIMOTHY ALLEN WELLS,BELL HELICOPTER MODEL BHT-47-G5,was pilot of,20000215010329A
+BELL HELICOPTER MODEL BHT-47-G5,N4754R,has registration,20000215010329A
+L, ,coreferential,
+Aircraft,Taxiing for Take Off,was performing,19990213001379A
+Aircraft,Control,lost,19990213001379A
+Aircraft,Ditch,ran into,19990213001379A
+Aircraft,Tree,struck,19990213001379A
+Aircraft,Fence,struck,19841214074599I
+Aircraft,Objects dropped out,returned after,19860128014289I
+Aircraft,Ray Airport,departed from,20070630826079I
+Aircraft,Takeoff,entered phase,20070630826079I
+Aircraft,Climb,entered phase,20070630826079I
+Other Circumstances,Unknown,status,19990213001379A
+Engine,Takeoff,quit after,19800217031649I
+Engine,Problems,started to have,20070630826079I
+Wing Fuel Tank Sumps,Preflight,were not drained during,19800217031649I
+Wing Fuel Tank Sumps,Frozen,condition,19800217031649I
+Drained,Frozen,prevented by,19800217031649I
+Helicopter,Sling Load,took off with,19790720021329A
+Helicopter,Load Wedged in Trees,crashed due to,19790720021329A
+Crash,Improper Preflight,caused by,19790720021329A
+Taxiing,Nosewheel Steering,lost,19841214074599I
+Taxiing,Brakes,lost,19841214074599I
+Circuit Breaker Hydraulic Pump,Open,status,19841214074599I
+Forward Cargo Door,Takeoff,opened during,19860128014289I
+Objects,Forward Cargo Door,dropped out from,19860128014289I
+,,nan,19860128014289I
+Forced Landing,Engine Quit,occurred after,19801116083749I
+Ice,Auxiliary Fuel System,found in,19801116083749I
+Pilot,Icing,descending due to,19850315007389A
+Pilot,Lost Control,experienced,19850315007389A
+Icing,Icing Forecast,was forecasted,19850315007389A
+Altimeter,IFR Certified,not,19850315007389A
+Fuel,Ferry Flight,ran out during,19900425011659A
+Left Pontoon,Landing,separated during,19900425011659A
+Left Pontoon,Pond,landed in,19900425011659A
+Fuel Cap,Fuel,not secured,19900425011659A
+Fuel siphoned, Fuel Cap not Secured,caused by,19900425011659A
