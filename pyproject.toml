@@ -1,0 +1,33 @@
+[project]
+name = "trusted_ke"
+version = "0.1.0"
+description = "Python package for the Trusted knowledge Extraction paper."
+authors = [
+    {name = "Priscila Saboia Moreira", email = "pmoreira@nd.edu"},
+    {name = "Kate Mealey", email = "kmealey2@nd.edu"},
+    {name = "Jonathan Karr", email = "jkarr@nd.edu"},
+
+]
+dependencies = [
+    "SPARQLWrapper>=2.0.0",
+    "requests>=2.31.0",
+    "pip>=24.0",
+    "ipykernel>=6.29.4",
+    "fastai>=2.7.14",
+    "jupyterlab>=4.1.5",
+    "nbdev>=2.3.13",
+    "jupyterlab-quarto>=0.3.3",
+    "python-dotenv>=1.0.1",
+    "aiohttp>=3.9.3",
+    "pandas>=2.2.1",
+    "nest-asyncio>=1.6.0",
+    "openpyxl>=3.1.2",
+    "nbdime>=4.0.1",
+]
+requires-python = "==3.10.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false

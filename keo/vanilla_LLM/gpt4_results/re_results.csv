@@ -1,0 +1,11 @@
+id,triples_predicted
+19990213001379A,"[('ACFT', 'WAS TAXIING', 'FOR TAKE OFF'), ('ACFT', 'LOST', 'CONTROL'), ('ACFT', 'RAN INTO', 'A DITCH'), ('ACFT', 'STRUCK', 'A TREE'), ('OTHER CIRCUMSTANCES', 'ARE', 'UNKNOWN (abbreviated as UNK in the text)')]"
+19800217031649I,"[('ENGINE', 'QUIT', 'AFTER TAKEOFF'), ('WING FUEL TANK SUMPS', 'WERE NOT DRAINED', 'DURING PREFLIGHT'), ('WING FUEL TANK SUMPS', 'WERE FROZEN', '(implicit)')]"
+19790720021329A,"[('HELICOPTER', 'TOOK OFF WITH', 'SLING LOAD ATTACHED'), ('LOAD', 'WEDGED IN', 'TREES'), ('CRASH', 'CAUSED BY', 'IMPROPER PREFLIGHT')]"
+19841214074599I,"[('Taxiing', 'lost', 'nosewheel steering and brakes'), ('Taxiing', 'struck', '2 aircraft and fence'), ('Circuit breaker hydraulic pump', 'open', '(no explicit object, implied to be the state of the pump)')]"
+19860128014289I,"[('FORWARD CARGO DOOR', 'OPENED', 'AS AIRCRAFT TOOK OFF'), ('OBJECTS', 'DROPPED OUT', '(none specified)'), ('AIRCRAFT', 'RETURNED', '(none specified)'), ('(unspecified)', 'FAILED TO SEE', 'WARNING LIGHT')]"
+20000215010329A,"[('MR. TIMOTHY ALLEN WELLS', 'WAS ACTING AS', 'PILOT IN COMMAND'), ('PILOT IN COMMAND', 'OF', 'A BELL HELICOPTER MODEL BHT-47-G5, N4754R'), ('A BELL HELICOPTER MODEL BHT-47-G5, N4754R', 'ENGAGED', '(not specified in the text)')]"
+19801116083749I,"[('ONE ENGINE', 'QUIT', 'FORCED LANDING'), ('ICE', 'FOUND IN', 'AUXILIARY FUEL SYSTEM')]"
+19850315007389A,"[('PILOT', 'WAS DESCENDING TO', 'LOWER ALTITUDE'), ('PILOT', 'LOST', 'CONTROL'), ('ALTIMETER', 'NOT IFR CERTIFIED', '(none)'), ('ICING', 'FORECAST', '(none)')]"
+20070630826079I,"[('AIRCRAFT', 'DEPARTED', 'RAY AIRPORT'), ('AIRCRAFT ENGINE', 'STARTED TO HAVE', 'PROBLEMS')]"
+19900425011659A,"[('Ferry flight', 'ran out of', 'fuel'), ('Left pontoon', 'separated during', 'landing in a pond'), ('Fuel cap', 'was not', 'secured'), ('Fuel', 'was', 'siphoned')]"
