@@ -1,0 +1,215 @@
+c5_unique_id,sample,subject,subject_type,relation,relation_type,object,object_type
+19800217031649I,"AFTER TAKEOFF, ENGINE QUIT. WING FUEL TANK SUMPS WERE NOT DRAINED DURING PREFLIGHT BECAUSE THEY WERE FROZEN.       ",engine quit,event,has cause,causation,wing fuel tank sumps were not drained during preflight,action
+19800217031649I,"AFTER TAKEOFF, ENGINE QUIT. WING FUEL TANK SUMPS WERE NOT DRAINED DURING PREFLIGHT BECAUSE THEY WERE FROZEN.       ",wing fuel tank sumps were not drained during preflight,action,had effect,consequence,engine quit,event
+19790720021329A,HELICOPTER TOOK OFF WITH SLING LOAD ATTACHED. CRASHED WHEN LOAD WEDGED IN TREES. IMPROPER PREFLIGHT.               ,took off,action,has effect,causation,crashed,event
+19790720021329A,HELICOPTER TOOK OFF WITH SLING LOAD ATTACHED. CRASHED WHEN LOAD WEDGED IN TREES. IMPROPER PREFLIGHT.               ,crashed,event,caused by,causation,wedged in trees,event
+19790720021329A,HELICOPTER TOOK OFF WITH SLING LOAD ATTACHED. CRASHED WHEN LOAD WEDGED IN TREES. IMPROPER PREFLIGHT.               ,crashed,event,caused by,causation,improper preflight,circumstance
+19841214074599I,WHILE TAXIING LOST NOSEWHEEL STEERING AND BRAKES. STRUCK 2 AIRCRAFT AND FENCE. CIRCUIT BREAKER HYDRAULIC PUMP OPEN.,lost nosewheel steering,action,has effect,causation,struck 2 aircraft and fence,event
+19841214074599I,WHILE TAXIING LOST NOSEWHEEL STEERING AND BRAKES. STRUCK 2 AIRCRAFT AND FENCE. CIRCUIT BREAKER HYDRAULIC PUMP OPEN.,lost nosewheel steering,action,has effect,causation,circuit breaker hydraulic pump open,state
+19860128014289I,FORWARD CARGO DOOR OPENED AS AIRCRAFT TOOK OFF. OBJECTS DROPPED OUT. RETURNED. FAILED TO SEE WARNING LIGHT.        ,aircraft took off,action,has effect,causation,objects dropped out,event
+19860128014289I,FORWARD CARGO DOOR OPENED AS AIRCRAFT TOOK OFF. OBJECTS DROPPED OUT. RETURNED. FAILED TO SEE WARNING LIGHT.        ,forward cargo door opened,action,has effect,causation,objects dropped out,event
+19860128014289I,FORWARD CARGO DOOR OPENED AS AIRCRAFT TOOK OFF. OBJECTS DROPPED OUT. RETURNED. FAILED TO SEE WARNING LIGHT.        ,returned,action,has effect,causation,failed to see warning light,event
+20000215010329A,"(-23) MR. TIMOTHY ALLEN WELLS WAS ACTING AS PILOT IN COMMAND OF A BELL HELICOPTER MODEL BHT-47-G5, N4754R, ENGAGED ",Mr. Timothy Allen Wells,person,was acting as,role or occupation,pilot in command,job or position
+20000215010329A,"(-23) MR. TIMOTHY ALLEN WELLS WAS ACTING AS PILOT IN COMMAND OF A BELL HELICOPTER MODEL BHT-47-G5, N4754R, ENGAGED ",Mr. Timothy Allen Wells,person,of,possession or affiliation,"A Bell Helicopter Model BHT-47-G5, N4754R",object
+19801116083749I,FORCED LANDING AFTER ONE ENGINE QUIT;FOUND ICE IN AUXILIARY FUEL SYSTEM.                                           ,one engine quit,event,has cause,causation,forced landing,action
+19801116083749I,FORCED LANDING AFTER ONE ENGINE QUIT;FOUND ICE IN AUXILIARY FUEL SYSTEM.                                           ,one engine quit,event,has effect,consequence,found ice in auxiliary fuel system,action
+19801116083749I,FORCED LANDING AFTER ONE ENGINE QUIT;FOUND ICE IN AUXILIARY FUEL SYSTEM.                                           ,found ice in auxiliary fuel system,event,has cause,causation,one engine quit,event
+19850315007389A,PILOT WAS DESCENDING TO LOWER ALTITUDE DUE TO ICING. LOST CONTROL. ALTIMETER NOT IFR CERTIFIED. ICING FORECAST.    ,descending to lower altitude,action,due to,causation,icing,condition
+19850315007389A,PILOT WAS DESCENDING TO LOWER ALTITUDE DUE TO ICING. LOST CONTROL. ALTIMETER NOT IFR CERTIFIED. ICING FORECAST.    ,lost control,action,caused by,causation,icing,condition
+20070630826079I,(-23) AIRCRAFT DEPARTED RAY AIRPORT AND AFTER TAKEOFF INTO THE CLIMB AIRCRAFT ENGINE STARTED TO HAVE PROBLEMS. PILO,"departed
+Relation: has effect
+Object: ray airport
+Object Type: location
+
+Subject: started to have problems",action,has reason,explanation,aircraft engine,event
+19900425011659A,RAN OUT OF FUEL ON FERRY FLIGHT. LEFT PONTOON SEPARATED LANDING IN A POND. FUEL CAP NOT SECURED. FUEL SIPHONED.    ,ran out of fuel,action,has effect,causation,left pontoon separated,event
+19900425011659A,RAN OUT OF FUEL ON FERRY FLIGHT. LEFT PONTOON SEPARATED LANDING IN A POND. FUEL CAP NOT SECURED. FUEL SIPHONED.    ,landed in a pond,event,caused by,causation,ran out of fuel,action
+19900425011659A,RAN OUT OF FUEL ON FERRY FLIGHT. LEFT PONTOON SEPARATED LANDING IN A POND. FUEL CAP NOT SECURED. FUEL SIPHONED.    ,fuel cap not secured,condition,has effect,causation,fuel siphoned,event
+19991230042089A,"(.4)THE PILOT SAID THAT SHORTLY AFTER TAKEOFF, THE ENGINE 'STARTED CUTTING OUT AND WAS NOT DEVELOPING ENOUGH POWER ",started cutting out,action,has effect,causation,was not developing enough power,event
+19820725041999I,"LOOSE COWLING ON TAKEOFF. COWLING CAME OFF ON RETURNING TO LAND. CRACKED WINDSHIELD, DENTED STABILIZER.            ",cowling came off,action,has effect,damage,windshield cracked,event
+19820725041999I,"LOOSE COWLING ON TAKEOFF. COWLING CAME OFF ON RETURNING TO LAND. CRACKED WINDSHIELD, DENTED STABILIZER.            ",cowling came off,action,has effect,damage,stabilizer dented,event
+19940412011509I,AIRCRAFT POPPED OPEN ON DESCENT. FLIGHT MANUAL FLEW OUT AND STRUCK TRUCK WINDSHIELD ON GROUND. LANDED SAFELY.      ,Popped open,action,has effect,causation,flew out and struck truck windshield,event
+19940412011509I,AIRCRAFT POPPED OPEN ON DESCENT. FLIGHT MANUAL FLEW OUT AND STRUCK TRUCK WINDSHIELD ON GROUND. LANDED SAFELY.      ,Flew out and struck truck windshield,event,caused by,causation,popped open,action
+19971226042729I,NR2 ENGINE FIRE WHILE LOADING PASSENGERS AT GATE. EVACUATED. FUEL LEVER WAS IN FLIGHT IDLE. CUT OFF. SMOKE CLEARED.,NR2 engine fire,event,has effect,causation,smoke cleared,state
+19971226042729I,NR2 ENGINE FIRE WHILE LOADING PASSENGERS AT GATE. EVACUATED. FUEL LEVER WAS IN FLIGHT IDLE. CUT OFF. SMOKE CLEARED.,fuel lever was in flight idle,state,has cause,causation,NR2 engine fire,event
+19971226042729I,NR2 ENGINE FIRE WHILE LOADING PASSENGERS AT GATE. EVACUATED. FUEL LEVER WAS IN FLIGHT IDLE. CUT OFF. SMOKE CLEARED.,fuel lever was in cut off,action,has effect,prevention,smoke cleared,state
+19950619021589I,AFTER DEPARTING HIGH OIL TEMP. LANDED OFF AIRPOR. SHEARED MAIN GEAR. FOUND LOW ON OIL.                             ,departing,action,has effect,causation,high oil temp,condition
+19950619021589I,AFTER DEPARTING HIGH OIL TEMP. LANDED OFF AIRPOR. SHEARED MAIN GEAR. FOUND LOW ON OIL.                             ,landed off airport,event,has cause,causation,departing,action
+19950619021589I,AFTER DEPARTING HIGH OIL TEMP. LANDED OFF AIRPOR. SHEARED MAIN GEAR. FOUND LOW ON OIL.                             ,sheared main gear,event,has effect,consequence,found low on oil,condition
+19940815046149I,BATTERY COMPARTMENT DOOR CAME OPEN. ANTENNA CRACKED WINDSHIELD.                                                    ,antenna cracked windshield,event,has effect,causation,came open,action
+19940815046149I,BATTERY COMPARTMENT DOOR CAME OPEN. ANTENNA CRACKED WINDSHIELD.                                                    ,antenna cracked windshield,event,caused by,causation,battery compartment door came open,action
+19860228038269I,RETURNED WHEN NOSE GEAR FAILED TO RETRACT. FOUND THAT PIN HAD NOT BEEN REMOVED AFTER PREVIOUS MAINTENANCE.         ,nose gear failed to retract,action,has effect,causation,returned,event
+19860228038269I,RETURNED WHEN NOSE GEAR FAILED TO RETRACT. FOUND THAT PIN HAD NOT BEEN REMOVED AFTER PREVIOUS MAINTENANCE.         ,nose gear failed to retract,action,caused by,causation,pin had not been removed after previous maintenance,condition
+19860228038269I,RETURNED WHEN NOSE GEAR FAILED TO RETRACT. FOUND THAT PIN HAD NOT BEEN REMOVED AFTER PREVIOUS MAINTENANCE.         ,pin had not been removed after previous maintenance,condition,has effect,causation,nose gear failed to retract,action
+19790718019229I,GROUND STAND BAGGAGE CART WITH INOPERATIVE BRAKES ROLLED INTO SIDE OF PARKED AIRCRAFT. 9 INCH TEAR IN FUSELAGE.    ,rolled into side of parked aircraft,action,has effect,causation,9 inch tear in fuselage,event
+19790718019229I,GROUND STAND BAGGAGE CART WITH INOPERATIVE BRAKES ROLLED INTO SIDE OF PARKED AIRCRAFT. 9 INCH TEAR IN FUSELAGE.    ,rolled into side of parked aircraft,action,caused by,means,inoperative brakes,condition
+20000625032189I,(-23)NORTHWEST AIRLINES DC-10 BOEING PUSHED BACK FOR REPOSITIONING OFF OF GATE B-52 STRUCK A CONTINENTAL AIRLINES D,pushed back,action,has effect,causation,struck,event
+20000625032189I,(-23)NORTHWEST AIRLINES DC-10 BOEING PUSHED BACK FOR REPOSITIONING OFF OF GATE B-52 STRUCK A CONTINENTAL AIRLINES D,pushed back,action,caused by,causation,repositioning off of gate B-52,event
+19860530030499A,ENGINE OVERHEAT. HOT OIL SMELL.KNEW HE HAD FAILED TO REMOVE AIR INTAKE PLUGS. NOSED OVER IN FURROWS PLOWED FAILED  ,engine overheat,condition,has effect,causation,hot oil smell,symptom
+19860530030499A,ENGINE OVERHEAT. HOT OIL SMELL.KNEW HE HAD FAILED TO REMOVE AIR INTAKE PLUGS. NOSED OVER IN FURROWS PLOWED FAILED  ,failed to remove air intake plugs,action,has cause,causation,engine overheat,condition
+19860530030499A,ENGINE OVERHEAT. HOT OIL SMELL.KNEW HE HAD FAILED TO REMOVE AIR INTAKE PLUGS. NOSED OVER IN FURROWS PLOWED FAILED  ,nose over in furrows plowed,event,has effect,consequence,failed to remove air intake plugs,action
+19821117066379I,PILOT UNABLE TO PRESSURIZE. FOUND ACCESS DOOR SLIGHTLY OPEN. DEPRESSURIZED. DOOR OPENED FULLY. STOPPED BY FUSELAGE.,unable to pressurize,action,has effect,causation,found access door slightly open,event
+19821117066379I,PILOT UNABLE TO PRESSURIZE. FOUND ACCESS DOOR SLIGHTLY OPEN. DEPRESSURIZED. DOOR OPENED FULLY. STOPPED BY FUSELAGE.,unable to pressurize,action,has effect,causation,depressurized,state
+19821117066379I,PILOT UNABLE TO PRESSURIZE. FOUND ACCESS DOOR SLIGHTLY OPEN. DEPRESSURIZED. DOOR OPENED FULLY. STOPPED BY FUSELAGE.,found access door slightly open,event,has effect,causation,depressurized,state
+19821117066379I,PILOT UNABLE TO PRESSURIZE. FOUND ACCESS DOOR SLIGHTLY OPEN. DEPRESSURIZED. DOOR OPENED FULLY. STOPPED BY FUSELAGE.,opened fully,action,has effect,causation,stopped by fuselage,event
+19810303007119A,VEERED OFF RUNWAY ON LANDING.  HIT PARKED AIRPLANE.  NEWLY INSTALLED CARPETING RESTRICTED RUDDER PEDAL MOVEMENT.   ,veered off runway,action,caused by,causation,restricted rudder pedal movement,event
+19810303007119A,VEERED OFF RUNWAY ON LANDING.  HIT PARKED AIRPLANE.  NEWLY INSTALLED CARPETING RESTRICTED RUDDER PEDAL MOVEMENT.   ,hit parked airplane,action,has effect,causation,restricted rudder pedal movement,event
+19950602032329I,VEERED OFF TAXIWAY. STRUCK TAXIWAY LIGHT. WAS ADVISED DAMAGED PROP. CONTINUED TO LIT.                              ,struck taxiway light,action,has effect,causation,continued to lit,event
+19901101064289I,FUEL CAP MISSING FROM RIGHT TANK AND GAS ESCAPING WHILE TAXIING. REPLACED CAP. RESUMED FLIGHT WITHOUT CLEANING WING,fuel cap missing,state,has effect,causation,gas escaping,event
+19901101064289I,FUEL CAP MISSING FROM RIGHT TANK AND GAS ESCAPING WHILE TAXIING. REPLACED CAP. RESUMED FLIGHT WITHOUT CLEANING WING,fuel cap missing,state,caused by,means,replacing the cap,action
+19901101064289I,FUEL CAP MISSING FROM RIGHT TANK AND GAS ESCAPING WHILE TAXIING. REPLACED CAP. RESUMED FLIGHT WITHOUT CLEANING WING,resuming flight,action,has consequence,effect,not cleaning the wing,event
+19860706034879A,THE ENGINE LOST POWER ON TAKEOFF AND THE AIRCRAFT FLIPPED ON LANDING.PILOT HAD JUST FILLED TANKS. WATER IN FUEL.   ,lost power,action,has effect,causation,flipped on landing,event
+19860706034879A,THE ENGINE LOST POWER ON TAKEOFF AND THE AIRCRAFT FLIPPED ON LANDING.PILOT HAD JUST FILLED TANKS. WATER IN FUEL.   ,had just filled tanks,action,caused by,causation,water in fuel,circumstance
+19840121015319I,ENGINE FAILED AFTER TAKEOFF. TRIED TO MAKE A ROAD BUT DRIFTED OFF THE EDGE. FOUND SOLID ICE IN CARBURETOR BOWL.    ,engine failed,action,has effect,causation,make a road,event
+19840121015319I,ENGINE FAILED AFTER TAKEOFF. TRIED TO MAKE A ROAD BUT DRIFTED OFF THE EDGE. FOUND SOLID ICE IN CARBURETOR BOWL.    ,make a road,event,has effect,causation,drifted off the edge,event
+19840121015319I,ENGINE FAILED AFTER TAKEOFF. TRIED TO MAKE A ROAD BUT DRIFTED OFF THE EDGE. FOUND SOLID ICE IN CARBURETOR BOWL.    ,found solid ice,action,has effect,causation,worked in carburetor bowl,action
+19960322013629I,NARRATIVE: THE AIRCRAFT WAS BEING FERRIED FOR MAINTENANCE. THE GEAR BLOCKED DOWN AND THE NOSE BLOCK FELL OUT DURING,blocked down,action,has effect,causation,nose block fell out,event
+19960322013629I,NARRATIVE: THE AIRCRAFT WAS BEING FERRIED FOR MAINTENANCE. THE GEAR BLOCKED DOWN AND THE NOSE BLOCK FELL OUT DURING,the gear blocked down,action,has effect,causation,nose block fell out,event
+19960504009509A,FAILED TO DETACH TRAILER TIE DOWN FROM SKID. LOST CONTROL AND ROLLED ON LIFT OFF. (-23) PILOT FAILED TO FULLY DETAC,failed to detach trailer tie down,action,has effect,causation,lost control,action
+19960504009509A,FAILED TO DETACH TRAILER TIE DOWN FROM SKID. LOST CONTROL AND ROLLED ON LIFT OFF. (-23) PILOT FAILED TO FULLY DETAC,lost control,action,has effect,causation,rolled on lift off,event
+19790211002709A,AIRCRAFT FAILED TO LIFTOFF RUNWAY. RAN OFF END INTO SNOW BANK. FROST ON AIRFRAME.                                  ,failed to liftoff,action,has effect,causation,ran off end into snow bank,event
+19790211002709A,AIRCRAFT FAILED TO LIFTOFF RUNWAY. RAN OFF END INTO SNOW BANK. FROST ON AIRFRAME.                                  ,ran off end into snow bank,event,caused by,causation,frost on airframe,circumstance
+19850418016709I,ENGINE POWER FAILURE WHILE DOING AEROBATICS. LANDED IN FIELD. PILOT DID NOT VISUALLY INSPECT FUEL TANKS.           ,engine power failure,event,has effect,causation,landed in field,event
+19850418016709I,ENGINE POWER FAILURE WHILE DOING AEROBATICS. LANDED IN FIELD. PILOT DID NOT VISUALLY INSPECT FUEL TANKS.           ,engine power failure,event,caused by,causation,pilot did not visually inspect fuel tanks,action
+19850418016709I,ENGINE POWER FAILURE WHILE DOING AEROBATICS. LANDED IN FIELD. PILOT DID NOT VISUALLY INSPECT FUEL TANKS.           ,landing in field,event,is a result of,consequence,engine power failure,event
+19780913017419I,ABORTED TAKEOFF WHEN FRONT BAGGAGE DOOR POPPED OPEN.                                                               ,front baggage door popped open,action,has effect,causation,aborted takeoff,event
+19781113027039I,PILOT TAXIED INTO UNMARKED DITCH AT END OF TAXIWAY.                                                                ,taxied into an unmarked ditch,action,has effect,causation,at end of taxiway,location
+19870606018859A,UNABLE TO STAY AIRBORNE ON TAKEOFF. ABORTED AND GROUND LOOPED INTO A TREE TO AVOID OVERRUN. MAG SWITCH ON ONE MAG. ,stayed airborne,action,has effect,causation,aborted takeoff,event
+19870606018859A,UNABLE TO STAY AIRBORNE ON TAKEOFF. ABORTED AND GROUND LOOPED INTO A TREE TO AVOID OVERRUN. MAG SWITCH ON ONE MAG. ,ground looped into a tree,action,has effect,causation,avoid overrun,goal
+19870319012959I,NOSE GEAR WOULD NOT RETRACT AFTER TAKEOFF. RETURNED AND FOUND PIN WAS INSTALLED.                                   ,nose gear would not retract,action,has effect,causation,installed pin,event
+19870319012959I,NOSE GEAR WOULD NOT RETRACT AFTER TAKEOFF. RETURNED AND FOUND PIN WAS INSTALLED.                                   ,returned,action,has cause,causation,found pin was installed,event
+20050504010229A,"(-23) A SIKORSKY S-70A, N160LA, ENCOUNTERED A VIBRATION AFTER THE APU DOOR STRUCK A MAIN ROTOR BLADE INFLIGHT NEAR ",encountered a vibration,action,has effect,causation,struck a main rotor blade,event
+20050504010229A,"(-23) A SIKORSKY S-70A, N160LA, ENCOUNTERED A VIBRATION AFTER THE APU DOOR STRUCK A MAIN ROTOR BLADE INFLIGHT NEAR ",struck a main rotor blade,event,has effect,causation,encountered a vibration,condition
+20050429009279I,(-23) THE PILOT WAS TAXIING THE AIRCRAFT TO PARKING FOLLOWING A CARGO TRIP. UPON REACHING A POINT WHERE THE TAXIWAY,was taxiing,action,has effect,causation,reaching a point,event
+20050429009279I,(-23) THE PILOT WAS TAXIING THE AIRCRAFT TO PARKING FOLLOWING A CARGO TRIP. UPON REACHING A POINT WHERE THE TAXIWAY,was taxiing,action,has effect,causation,following a cargo trip,event
+20050429009279I,(-23) THE PILOT WAS TAXIING THE AIRCRAFT TO PARKING FOLLOWING A CARGO TRIP. UPON REACHING A POINT WHERE THE TAXIWAY,the pilot,person,has effect,causation,reaching a point,event
+19890723054159I,AFTER LANDING IT WAS DETERMINED THERE WAS INSUFFICIENT NUMBER OF SEATS AND OXYGEN MASKS FOR PASSENGERS ONBOARD.    ,there was insufficient number of seats and oxygen masks,condition,has effect,causation,passengers onboard,entity
+19890723054159I,AFTER LANDING IT WAS DETERMINED THERE WAS INSUFFICIENT NUMBER OF SEATS AND OXYGEN MASKS FOR PASSENGERS ONBOARD.    ,there was insufficient number of seats and oxygen masks,condition,has effect,causation,landing,action
+19970523014439I,NARRATIVE: THE CARGO DOOR WAS LATCHED BEFORE TAKEOFF BY MR. BOWEN. RUNWAY CONDITIONS AT STEVEN'S VILLAGE WAS EXTREM,cargo door was latched,event,by,agency,Mr. Bowen,entity
+19970523014439I,NARRATIVE: THE CARGO DOOR WAS LATCHED BEFORE TAKEOFF BY MR. BOWEN. RUNWAY CONDITIONS AT STEVEN'S VILLAGE WAS EXTREM,runway conditions at Steven's Village were,condition,were,equality,"as stated in the phrase ""EXTREM""",value
+19970908038069A,TIRED TAXI WITH TIEDOWN CHAINS ATTACHE. ROLLED OVER. PILOT FAILED NOTE RAMP PERSON TIED SKIDS DUE HIGH WIND.       ,taxi,object,failed to note,action,ramp person tied skids due high wind,event
+19970908038069A,TIRED TAXI WITH TIEDOWN CHAINS ATTACHE. ROLLED OVER. PILOT FAILED NOTE RAMP PERSON TIED SKIDS DUE HIGH WIND.       ,rolled over,action,has effect,causation,pilot,entity
+19970908038069A,TIRED TAXI WITH TIEDOWN CHAINS ATTACHE. ROLLED OVER. PILOT FAILED NOTE RAMP PERSON TIED SKIDS DUE HIGH WIND.       ,rolled over,action,caused by,causation,high wind,phenomenon
+19781108022239I,BAGGAGE CART WAS BLOWN INTO PARKED AIRCRAFT BY JET BLAST. BRAKES WERE INOPERATIVE ON CART.                         ,blown into parked aircraft,action,has effect,causation,brakes were inoperative on cart,state
+19781108022239I,BAGGAGE CART WAS BLOWN INTO PARKED AIRCRAFT BY JET BLAST. BRAKES WERE INOPERATIVE ON CART.                         ,blown into parked aircraft,action,cause of,causation,brakes were inoperative on cart,state
+19760606015529A,SUFFICIENT OPPORTUNITY EXISTED TO RELEASE WHEN GLIDER ASSUMED NOSE HIGH ATTITUDE.                                  ,sufficient opportunity existed,"Relation: assumed nose high attitude
+Relation Type: 
+Object: glider
+Object Type: 
+
+Subject: sufficient opportunity existed
+Subject Type:",release,,when glider assumed nose high attitude,
+19930530020029I,PILOT LOST CONTROL OF AIRCRAFT ON TAKEOFF ROLL. PILOTS SEAT WAS NOT LOCKED IN POSITION AND SLID AFT ON ACCELARATION,lost control,action,has effect,causation,pilots seat was not locked in position,condition
+19930530020029I,PILOT LOST CONTROL OF AIRCRAFT ON TAKEOFF ROLL. PILOTS SEAT WAS NOT LOCKED IN POSITION AND SLID AFT ON ACCELARATION,slid aft on accelaration,event,caused by,causation,pilots seat was not locked in position,condition
+19801230089799I,"FLAT NOSE STRUT FAILED TO EXTEND BEFORE RETRACTION. IT CAUGHT ON AIRPLANE STRUCTURE, BROKE THE BELLCRANK. COLLAPSED",failed to extend,action,has effect,causation,caught on airplane structure,event
+19801230089799I,"FLAT NOSE STRUT FAILED TO EXTEND BEFORE RETRACTION. IT CAUGHT ON AIRPLANE STRUCTURE, BROKE THE BELLCRANK. COLLAPSED",broke the bellcrank,action,has effect,causation,collapsed,event
+19980508008619A,LOST POWER ENROUTE. NOSED OVER LANDING ON A SLOPE. NO EVIDENCE OF FUEL AT SCENE. FAILED TO VISUALLY CHECK FUEL.. (.,lost power,action,has effect,causation,nozed over landing on a slope,event
+19980508008619A,LOST POWER ENROUTE. NOSED OVER LANDING ON A SLOPE. NO EVIDENCE OF FUEL AT SCENE. FAILED TO VISUALLY CHECK FUEL.. (.,failed to visually check fuel,action,has cause,explanation,lost power,condition
+19920405008919A,"ATTEMPTED TAKEOFF FROM 2500 FT SOD STRIP.GUSTY NORTH WIND,HIT TREES OFF END OF STRIP CRASHED.                      ",hit trees,action,has effect,causation,crashed,event
+19920405008919A,"ATTEMPTED TAKEOFF FROM 2500 FT SOD STRIP.GUSTY NORTH WIND,HIT TREES OFF END OF STRIP CRASHED.                      ",gusty north wind,condition,cause,causation,crashed,event
+19840821046409A,CRASH OCCURRED DURING FORCED LANDING AFTER ENGINE FAILURE DURING TAKEOFF. AIRCRAFT HAD NOT HAD ANNUAL INSPECTION.  ,occurred,action,cause,causation,engine failure during takeoff,event
+19840821046409A,CRASH OCCURRED DURING FORCED LANDING AFTER ENGINE FAILURE DURING TAKEOFF. AIRCRAFT HAD NOT HAD ANNUAL INSPECTION.  ,had not had,action,has effect,consequence,annual inspection,event
+19950216008379I,"NARRATIVE: THE PILOT OF CESSNA 207, N1549U STATED THAT AFTER TAKEOFF FROM THE BETHEL AIRPORT, THE ENGINE STOPPED RU",the engine stopped,action,has effect,causation,takeoff from Bethel Airport,event
+19950216008379I,"NARRATIVE: THE PILOT OF CESSNA 207, N1549U STATED THAT AFTER TAKEOFF FROM THE BETHEL AIRPORT, THE ENGINE STOPPED RU",the engine stopped,action,is related to,general relation,N1549U,instance
+19850525020799A,TOUCHED DOWN LONG AND BOUNCED. ATTEMPTED DOWNWIND GO AROUND WITH FULL FLAPS. STRUCK TREE 3 MILES FROM AIRPORT.     ,touched down long and bounced,event,has effect,causation,attempted downwind go around with full flaps,action
+19850525020799A,TOUCHED DOWN LONG AND BOUNCED. ATTEMPTED DOWNWIND GO AROUND WITH FULL FLAPS. STRUCK TREE 3 MILES FROM AIRPORT.     ,attempted downwind go around with full flaps,action,has effect,causation,struck tree 3 miles from airport,event
+19850525020799A,TOUCHED DOWN LONG AND BOUNCED. ATTEMPTED DOWNWIND GO AROUND WITH FULL FLAPS. STRUCK TREE 3 MILES FROM AIRPORT.     ,touched down long and bounced,event,has cause,causation,attempted downwind go around with full flaps,action
+19850525020799A,TOUCHED DOWN LONG AND BOUNCED. ATTEMPTED DOWNWIND GO AROUND WITH FULL FLAPS. STRUCK TREE 3 MILES FROM AIRPORT.     ,attempted downwind go around with full flaps,action,has effect,causation,struck tree 3 miles from airport,event
+19861114075329I,ENTERED TCA WITHOUT ATC COMMUNICATION. PILOT WAS AWARE OF MALFUNCTIONING ENCODING ALTIMETER.                       ,entered tca,action,without,instrumentality,atc communication,event
+19861114075329I,ENTERED TCA WITHOUT ATC COMMUNICATION. PILOT WAS AWARE OF MALFUNCTIONING ENCODING ALTIMETER.                       ,was aware of,action,has effect,causation,malfunctioning encoding altimeter,condition
+19960524045629A,NOSE BAGGAGE DOOR OPENED ON TAKEOFF. BAGGAGE HIT LEFT PROP. GOT BELWO UMC. LANDED ON SEA ICE. WILL FLY DOOR OPEN.  ,opened,action,has effect,causation,hit left prop,event
+19960524045629A,NOSE BAGGAGE DOOR OPENED ON TAKEOFF. BAGGAGE HIT LEFT PROP. GOT BELWO UMC. LANDED ON SEA ICE. WILL FLY DOOR OPEN.  ,opened,action,has effect,causation,got below unc,"unknown/unclear (note: ""UNC"" is unclear, but I'm leaving it as is since you asked me to follow the format)"
+19871211075169A,ROUGH ENGINE ON CLIMBOUT. LANDED ON CITY STREET. SPARK PLUGS OUT OF TOLERENCE. FOUND PRIMER UNLOCKED.              ,rough engine,condition,has effect,causation,climbout,event
+19871211075169A,ROUGH ENGINE ON CLIMBOUT. LANDED ON CITY STREET. SPARK PLUGS OUT OF TOLERENCE. FOUND PRIMER UNLOCKED.              ,landed on city street,action,has effect,causation,spark plugs out of tolerance,condition
+19871211075169A,ROUGH ENGINE ON CLIMBOUT. LANDED ON CITY STREET. SPARK PLUGS OUT OF TOLERENCE. FOUND PRIMER UNLOCKED.              ,found primer unlocked,action,has effect,causation,climbout,event
+20010910029739I,"(-23) DURING TAXI OUT, CFI NOTICED NOSE LANDING GEAR GREEN LIGHT WAS OUT. SHE ATTEMPTED TO SWAP LIGHTS TO VERIFY TH",nose landing gear green light was out,state of affairs,has effect,causation,no swap lights to verify this,action
+19871027060859A,"ELECTRIC POWER LOST ON IFR DUAL FLIGHT. STRUCK POWER POLE ON FORCED LANDING, FOUND CIRCUIT BREAKER OFF. PILOT ERROR",lost electric power,action,has effect,causation,struck power pole,event
+19871027060859A,"ELECTRIC POWER LOST ON IFR DUAL FLIGHT. STRUCK POWER POLE ON FORCED LANDING, FOUND CIRCUIT BREAKER OFF. PILOT ERROR",found circuit breaker off,action,has effect,causation,forced landing,event
+19980616023109I,LOUD BANG AND SHUDDER ENROUTE. SAW SPARKS AT ROTOR. RETURNED. ENGINE COWLING SEPERATED. COWL NOT FASTENED.         ,saw sparks at rotor,action,has effect,causation,engine cowling separated,physical change
+19980616023109I,LOUD BANG AND SHUDDER ENROUTE. SAW SPARKS AT ROTOR. RETURNED. ENGINE COWLING SEPERATED. COWL NOT FASTENED.         ,saw sparks at rotor,action,has effect,causation,cowl not fastened,physical condition
+19910710026989A,REPORTED PROBLEM ON CLIMBOUT. STALLED AND CRASHED. NO LOCKING PINS IN SEAT TRACK. SEAT PIN BENT. BELT NOT FASTENED ,reported problem,action,has effect,causation,stalled and crashed,event
+19910710026989A,REPORTED PROBLEM ON CLIMBOUT. STALLED AND CRASHED. NO LOCKING PINS IN SEAT TRACK. SEAT PIN BENT. BELT NOT FASTENED ,stalled and crashed,event,has reason,explanation,no locking pins in seat track,condition
+19910710026989A,REPORTED PROBLEM ON CLIMBOUT. STALLED AND CRASHED. NO LOCKING PINS IN SEAT TRACK. SEAT PIN BENT. BELT NOT FASTENED ,bent,action,has effect,causation,seat pin,object
+19910710026989A,REPORTED PROBLEM ON CLIMBOUT. STALLED AND CRASHED. NO LOCKING PINS IN SEAT TRACK. SEAT PIN BENT. BELT NOT FASTENED ,not fastened,state,has reason,explanation,belt,object
+19780509032859I,FORCED LANDING AFTER POWER LOSS. FOUND WATER IN FUEL.                                                              ,forced landing,action,has cause,causation,power loss,event
+19780509032859I,FORCED LANDING AFTER POWER LOSS. FOUND WATER IN FUEL.                                                              ,found water in fuel,action,has effect,causation,forced landing,event
+19800506012169A,LOST CONTROL OF AIRPLANE ON TAKEOFF ROLL. FAILED TO REMOVE AILERON-ELEVATOR LOCK PIN.                              ,lost control of airplane on takeoff roll,action,has effect,causation,failed to remove aileron-elevator lock pin,event
+19791128035159A,"PILOT LANDED TO WAIT OUT RAIN SHOWER. ON CLIMBOUT, ENGINE RAN ROUGH. PILOT LANDED IN FIELD. CLAIMS WATER IN FUEL.  ",landed to wait out rain shower,action,has effect,causation,ran rough,state
+19791128035159A,"PILOT LANDED TO WAIT OUT RAIN SHOWER. ON CLIMBOUT, ENGINE RAN ROUGH. PILOT LANDED IN FIELD. CLAIMS WATER IN FUEL.  ",climbed out,action,led to,consequence,engine ran rough,event
+19791128035159A,"PILOT LANDED TO WAIT OUT RAIN SHOWER. ON CLIMBOUT, ENGINE RAN ROUGH. PILOT LANDED IN FIELD. CLAIMS WATER IN FUEL.  ",landed in field,action,has result,effect,claims water in fuel,statement
+19791128035159A,"PILOT LANDED TO WAIT OUT RAIN SHOWER. ON CLIMBOUT, ENGINE RAN ROUGH. PILOT LANDED IN FIELD. CLAIMS WATER IN FUEL.  ",climbed out,action,led to,consequence,landed in field,event
+20060621012279A,"(-23) THE PILOT ^PRIVACY DA^ STATED THAT DURING TAKEOFF (AT ROTATION) HIS SEAT SLID BACK, CAUSING HIM TO OVERROTATE",his seat slid back,action,cause,causation,him to overrotate,event
+19950314029269I,"NARRATIVE: ON MARCH 14, 1995, N7016M, AN AMATEUR BUILT AIRCRAFT, MADE AN EMERGENCY OFF AIRPORT LANDING NEAR THE BLO",made an emergency off airport landing,action,happened on,time,"March 14, 1995",date
+19800804037399A,EARLY FUEL EXHAUSTION FROM FUEL SIPHONING FROM IMPROPERLY SECURED VENT CAP. OVERSHOT EMERGENCY LANDING AREA.       ,fuel siphoning,action,has effect,causation,early fuel exhaustion,event
+19800804037399A,EARLY FUEL EXHAUSTION FROM FUEL SIPHONING FROM IMPROPERLY SECURED VENT CAP. OVERSHOT EMERGENCY LANDING AREA.       ,overshooting,action,has consequence,temporal,emergency landing area,location
+19780402008409I,TAXIING AIRCRAFT STRUCK PARKED AIRCRAFT. FOUND WORN OUT & INEFFECTIVE BRAKES AS CAUSE.                             ,worn out & ineffective brakes,condition,cause,causation,struck parked aircraft,event
+19780402008409I,TAXIING AIRCRAFT STRUCK PARKED AIRCRAFT. FOUND WORN OUT & INEFFECTIVE BRAKES AS CAUSE.                             ,worn out & ineffective brakes,condition,cause,causation,taxiing aircraft,state
+19890725041869I,ON ENGINE START PILOTS SEAT WENT TO FULL AFT POSITION. PUSH THROTTLE IN FULL. AIRCRAFT COLLIDED WITH PARKED PLANE. ,seat went to full aft position,action,caused by,causation,pilots seat going to full aft position is not clear but related to,"event ( unclear, so relation type is changed)"
+19890725041869I,ON ENGINE START PILOTS SEAT WENT TO FULL AFT POSITION. PUSH THROTTLE IN FULL. AIRCRAFT COLLIDED WITH PARKED PLANE. ,pushed throttle in full,action,has effect,causation,aircraft collided with parked plane,event
+19911222062669I,AFTER LIFTOFF PILOT NOTICED RIGHT FUEL CAP MISSING. ABORTED. LANDED ON SAME RUNWAY. RAN OFF SIDE OF RUNWAY.        ,noticed missing right fuel cap,action,has effect,causation,aborted,event
+19911222062669I,AFTER LIFTOFF PILOT NOTICED RIGHT FUEL CAP MISSING. ABORTED. LANDED ON SAME RUNWAY. RAN OFF SIDE OF RUNWAY.        ,noticed missing right fuel cap,action,has effect,causation,landed on same runway,event
+19911222062669I,AFTER LIFTOFF PILOT NOTICED RIGHT FUEL CAP MISSING. ABORTED. LANDED ON SAME RUNWAY. RAN OFF SIDE OF RUNWAY.        ,ran off side of runway,action,preceded by,temporal ordering,landed on same runway,event
+19801005072789I,PILOT RAN OFF END OF RUNWAY WHEN REMAINING BRAKE FAILED.                                                           ,ran off end of runway,action,has effect,causation,failed brake,event
+19781210024199I,WHEELS LOCKED UP AFTER SEVERAL TOUCH AND GO LANDINGS DUE TO SNOW PACKED IN THE WHEEL PANTS.                        ,locked up,action,due to,condition,snow packed in the wheel pants,state
+19950804028629A,LOST POWER LANDED HARD IN ROUGH WATER. DAMAGED FLOATS AND LONGERON. WATER IN FUEL. MISREAD WATER IN SUMP TO BE FUEL,lost power,action,has effect,causation,landed hard in rough water,event
+19950804028629A,LOST POWER LANDED HARD IN ROUGH WATER. DAMAGED FLOATS AND LONGERON. WATER IN FUEL. MISREAD WATER IN SUMP TO BE FUEL,lost power,action,damaged,physical effect,floats,object
+19950804028629A,LOST POWER LANDED HARD IN ROUGH WATER. DAMAGED FLOATS AND LONGERON. WATER IN FUEL. MISREAD WATER IN SUMP TO BE FUEL,lost power,action,damaged,physical effect,longeron,object
+19950804028629A,LOST POWER LANDED HARD IN ROUGH WATER. DAMAGED FLOATS AND LONGERON. WATER IN FUEL. MISREAD WATER IN SUMP TO BE FUEL,water in fuel,condition,has effect,causation,landed hard in rough water,event
+19950804028629A,LOST POWER LANDED HARD IN ROUGH WATER. DAMAGED FLOATS AND LONGERON. WATER IN FUEL. MISREAD WATER IN SUMP TO BE FUEL,water in sump,condition,misread as,perception error,fuel,substance
+20040304003309I,"(-23) AFTER NORMAL TOUCHDOWN THE AIRCRAFT STARTED SLIDING OR HYDROPLANING TOWARD LEFT SIDE OF RUNWAY, AIRCRAFT STRU",started sliding or hydroplaning,action,has effect,causation,toward left side of runway,location
+20040304003309I,"(-23) AFTER NORMAL TOUCHDOWN THE AIRCRAFT STARTED SLIDING OR HYDROPLANING TOWARD LEFT SIDE OF RUNWAY, AIRCRAFT STRU",started sliding or hydroplaning,action,is related to,temporal,touchdown,event
+19780427013859I,ENGINE COWLING SEPARATED FROM ENGINE IN FLIGHT.                                                                    ,engine cowling separated from engine,action,has effect,causation,in flight,event
+20070202001609A,"(-23) ON A FLIGHT FROM NOTH PLATTE, NE, TO IOWA CITY, IA, (487 STATUTE MILES) THE AIRCRAFT LOST POWER NEAR GRINNELL",lost power,action,has location,place,near Grinnell,location
+19780916024019A,TIE DOWN STRAP ACROSS LEFT SKID CAUGHT ON TRAILER AND TETHERED HEPER.                                              ,caught on,action,has effect,causation,trailer,object
+19780916024019A,TIE DOWN STRAP ACROSS LEFT SKID CAUGHT ON TRAILER AND TETHERED HEPER.                                              ,tethered,action,has effect,causation,heper,person
+20060718018299I,(-23) THE PILOT IN COMMAND (PIC) FAILED TO ENSURE ALL FUEL TANK CAPS WERE SECURELY FASTENED PRIOR TO DEPARTURE. SUB,failed to ensure,action,has effect,causation,all fuel tank caps were securely fastened,state
+20060718018299I,(-23) THE PILOT IN COMMAND (PIC) FAILED TO ENSURE ALL FUEL TANK CAPS WERE SECURELY FASTENED PRIOR TO DEPARTURE. SUB,failed to ensure,action,has cause,causation,departure,event
+20040925025079A,(-23) FUEL CONTAMINATION IN AIRFRAME FUEL FILTER AS WELL AS IN FUEL FILTER AND ENGINE DRIVEN FUEL PUMP FILTER. THE ,fuel contamination,event,has effect,causation,airframe fuel filter,object
+20040925025079A,(-23) FUEL CONTAMINATION IN AIRFRAME FUEL FILTER AS WELL AS IN FUEL FILTER AND ENGINE DRIVEN FUEL PUMP FILTER. THE ,fuel contamination,event,has effect,causation,fuel filter,object
+20040925025079A,(-23) FUEL CONTAMINATION IN AIRFRAME FUEL FILTER AS WELL AS IN FUEL FILTER AND ENGINE DRIVEN FUEL PUMP FILTER. THE ,fuel contamination,event,has effect,causation,engine driven fuel pump filter,object
+19961027033759A,PRIOR DEMO FLIGHT. CONNECTING ROD BENT BY HYDRO LOCK IN NR5 CYL ON STARTUP. BROKE. HIT COUNTER WT. BROKE PORP SHAFT,connecting rod bent by hydro lock,action,has effect,causation,broke,event
+19961027033759A,PRIOR DEMO FLIGHT. CONNECTING ROD BENT BY HYDRO LOCK IN NR5 CYL ON STARTUP. BROKE. HIT COUNTER WT. BROKE PORP SHAFT,broke counter weight,action,has effect,causation,broke prop shaft,event
+19870309039779I,"WHILE TAXIING, THE AIRCRAFT STRUCK N106DA WHICH WAS PARKED.  PILOT WAS UNAWARE OF BRAKE PROBLEMS ON THE AIRCRAFT.  ",struck,action,has effect,causation,N106DA,entity
+19870309039779I,"WHILE TAXIING, THE AIRCRAFT STRUCK N106DA WHICH WAS PARKED.  PILOT WAS UNAWARE OF BRAKE PROBLEMS ON THE AIRCRAFT.  ",pilot,person,was unaware of,negative causality,brake problems,entity
+19951031041599A,ON CLIMBOUT NOSE BAGGAGE DOOR OPENED. REDUCED POWER. STALLED. ROLLED. DIVED INTO OCEAN. TEST FLIGHT FROM STORAGE.  ,nose baggage door opened,action,has effect,causation,reduced power,action
+19951031041599A,ON CLIMBOUT NOSE BAGGAGE DOOR OPENED. REDUCED POWER. STALLED. ROLLED. DIVED INTO OCEAN. TEST FLIGHT FROM STORAGE.  ,reduced power,action,has effect,causation,stalled,action
+19951031041599A,ON CLIMBOUT NOSE BAGGAGE DOOR OPENED. REDUCED POWER. STALLED. ROLLED. DIVED INTO OCEAN. TEST FLIGHT FROM STORAGE.  ,stalled,action,has effect,causation,rolled,event
+19951031041599A,ON CLIMBOUT NOSE BAGGAGE DOOR OPENED. REDUCED POWER. STALLED. ROLLED. DIVED INTO OCEAN. TEST FLIGHT FROM STORAGE.  ,rolled,event,has effect,causation,dived into ocean,event
+19951031041599A,ON CLIMBOUT NOSE BAGGAGE DOOR OPENED. REDUCED POWER. STALLED. ROLLED. DIVED INTO OCEAN. TEST FLIGHT FROM STORAGE.  ,dive into ocean,event,is a part of,temporal relation,test flight from storage,event
+19951031041599A,ON CLIMBOUT NOSE BAGGAGE DOOR OPENED. REDUCED POWER. STALLED. ROLLED. DIVED INTO OCEAN. TEST FLIGHT FROM STORAGE.  ,open nose baggage door,action,has effect,causation,reduced power,action
+19850729066139I,ELEVATOR CONTROL JAMMED SHEN HARNESS CAUGHT ON ELEVATOR CABLE. STICK BOOT NOT FASTENED TO FLOOR. LANDED IN A FIELD.,control jammed,action,has effect,causation,shen harness caught on elevator cable,event
+19850729066139I,ELEVATOR CONTROL JAMMED SHEN HARNESS CAUGHT ON ELEVATOR CABLE. STICK BOOT NOT FASTENED TO FLOOR. LANDED IN A FIELD.,stick boot not fastened to floor,condition,was cause of,causation,landed in a field,event
+19940226003029A,LOST POWER EN ROUTE. LANDED ON PRIVATE STRIP. NOSED OVER. LEFT FUEL CAP LEAKED. PREVENTED GRAVITY FUEL FLOW.       ,lost power,action,has effect,causation,landed on private strip,event
+19940226003029A,LOST POWER EN ROUTE. LANDED ON PRIVATE STRIP. NOSED OVER. LEFT FUEL CAP LEAKED. PREVENTED GRAVITY FUEL FLOW.       ,landed on private strip,event,has cause,causation,lost power,action
+19940226003029A,LOST POWER EN ROUTE. LANDED ON PRIVATE STRIP. NOSED OVER. LEFT FUEL CAP LEAKED. PREVENTED GRAVITY FUEL FLOW.       ,nosed over,action,has effect,causation,left fuel cap leaked,event
+19940226003029A,LOST POWER EN ROUTE. LANDED ON PRIVATE STRIP. NOSED OVER. LEFT FUEL CAP LEAKED. PREVENTED GRAVITY FUEL FLOW.       ,left fuel cap leaked,event,has cause,causation,prevented gravity fuel flow,action
+19940226003029A,LOST POWER EN ROUTE. LANDED ON PRIVATE STRIP. NOSED OVER. LEFT FUEL CAP LEAKED. PREVENTED GRAVITY FUEL FLOW.       ,prevented gravity fuel flow,action,has effect,causation,left fuel cap leaked,event
+19780111000459A,ACFT DISPATCHER HARRASSMENT OF PILOT. PILOT FORGOT TO REMOVE TIEDROPE.                                             ,harrassment of pilot,event,has cause,causation,forgot to remove tied rope,action
+19780111000459A,ACFT DISPATCHER HARRASSMENT OF PILOT. PILOT FORGOT TO REMOVE TIEDROPE.                                             ,forgot to remove tied rope,action,has effect,causation,harrassment of pilot,event
+20010411006739I,"(-23) THE HELICOPTER WAS IDLING ON THE HELIPAD, AND THE RPM CONTROL WAS BROUGHT UP TO FLY POSITION FOR THE TAKEOFF.",idling on the helipad,state,has effect,causation,brought up to fly position for takeoff,action
+20010411006739I,"(-23) THE HELICOPTER WAS IDLING ON THE HELIPAD, AND THE RPM CONTROL WAS BROUGHT UP TO FLY POSITION FOR THE TAKEOFF.",was brought up to fly position for takeoff,action,is preceded by,temporality,idling on the helipad,state
+19870816062719I,"A COPPER TUBE, USED TO HOLD AERIAL BANNERS, FELL THROUGH THE ROOF OF A HOUSE. LOCAL OPERATOR IS BEING MONITORED.   ",fell through the roof,action,has effect,causation,held aerial banners,object
+19980620030289I,"MR. KADERA THEN ATTEMPTED TO LAND IN A FIELD BUT WAS FORCED TO LAND ON HIGHWAY 93. THREE MILES EAST OF SUNMER, IOWA",land,action,location of,spatial,in a field,place
+19980620030289I,"MR. KADERA THEN ATTEMPTED TO LAND IN A FIELD BUT WAS FORCED TO LAND ON HIGHWAY 93. THREE MILES EAST OF SUNMER, IOWA",land,action,forced to,causation,on highway 93,route
+19990923027739A,"(.19) ON SEPTEMBER 23, 1999, AT 1900 HOURS PACIFIC DAYLIGHT TIME, A HOMEBUILT CIERNIA GLASAIR III, N153JC, EXPERIEN",homebuilt Ciernia Glasair III,aircraft type,is a,classification,N153JC,aircraft registration
+19980415037339I,(-5)NOSE BAGGAGE CARGO CONSISTING OF A WOODEN WHEEL CHOCK SHIFTED DURING FLIGHT AND JAMMED THE NOSE LANDING GEAR ME,a wooden wheel chock shifted,action,jammed,causation,the nose landing gear,body_part
+19950826026019A,"EXPLOSION LIFTING LOGS. PITCHED UP, ROLLED. COMPRESSOR STALL NR1 ENGINE. FAILED RELEASE LOGS AND USE SE PROCEDURES.",explosion lifting logs,event,has effect,causation,pitched up,action
+19950826026019A,"EXPLOSION LIFTING LOGS. PITCHED UP, ROLLED. COMPRESSOR STALL NR1 ENGINE. FAILED RELEASE LOGS AND USE SE PROCEDURES.",pitched up,action,has effect,causation,rolled,event
+19950826026019A,"EXPLOSION LIFTING LOGS. PITCHED UP, ROLLED. COMPRESSOR STALL NR1 ENGINE. FAILED RELEASE LOGS AND USE SE PROCEDURES.",compressor stall nr1 engine,event,has effect,causation,failed release logs and use se procedures,procedure
+19950826026019A,"EXPLOSION LIFTING LOGS. PITCHED UP, ROLLED. COMPRESSOR STALL NR1 ENGINE. FAILED RELEASE LOGS AND USE SE PROCEDURES.",pitched up,action,has effect,causation,rolled,event
+19950826026019A,"EXPLOSION LIFTING LOGS. PITCHED UP, ROLLED. COMPRESSOR STALL NR1 ENGINE. FAILED RELEASE LOGS AND USE SE PROCEDURES.",compressor stall nr1 engine,event,has effect,causation,failed release logs and use se procedures,procedure
+20000215041409A,"(.19) ON FEBRUARY 19, 2000, AT 1825 EASTERN STANDARD TIME, A BEECH 1900D, N81SK, OPERATED AS SKYWAY AIRLINE FLIGHT ","February 19, 2000",date,occurred at,time,Eastern Standard Time,time zone
+20000215041409A,"(.19) ON FEBRUARY 19, 2000, AT 1825 EASTERN STANDARD TIME, A BEECH 1900D, N81SK, OPERATED AS SKYWAY AIRLINE FLIGHT ","February 19, 2000",date,coincides with,coincidence,Skyway Airline Flight,event
+19860514036219I,GROUND LOOPED ON LANDING. TAILWHEEL WAS FOUND JAMMED FAR RIGHT.                                                    ,ground looped on landing,action,has effect,causation,tailwheel was found jammed far right,state
+19860514036219I,GROUND LOOPED ON LANDING. TAILWHEEL WAS FOUND JAMMED FAR RIGHT.                                                    ,ground looped on landing,action,was found,discovery,tailwheel was found jammed far right,state
+19880527016939A,ENGINE QUIT ON INITIAL CLIMBOUT. CRASH LANDED AVOIDING TREES. FOUND SELECTED FUEL TANK EMPTY. TRIP WAS TO GET FUEL.,engine quit,action,has effect,causation,crash landed a avoiding trees,event
+19880527016939A,ENGINE QUIT ON INITIAL CLIMBOUT. CRASH LANDED AVOIDING TREES. FOUND SELECTED FUEL TANK EMPTY. TRIP WAS TO GET FUEL.,engine quit,action,caused by,cause,selected fuel tank empty,condition
+19960418007829A,CRASHED AND BURNED. (.4)WITNESSES REPORTED THAT AFTER DEPARTURE FROM A GRASS RUNWAY. THE AIRPLANE REACHED AN ALTITU,crashed and burned,event,has cause,causation,reached an altitude,event
+19970828026989A,LOUD POP ON TAKEOFF ROLL. LOST RUDDER CONTROL. EXITED RWY INTO CORNFIELD. HAD FAILED TO LOCK THE TAILWHEEL. (-23) M,loud pop on takeoff roll,event,has cause,causation,lost rudder control,action
+19970828026989A,LOUD POP ON TAKEOFF ROLL. LOST RUDDER CONTROL. EXITED RWY INTO CORNFIELD. HAD FAILED TO LOCK THE TAILWHEEL. (-23) M,lost rudder control,action,has effect,causation,exited runway into cornfield,event
+19970828026989A,LOUD POP ON TAKEOFF ROLL. LOST RUDDER CONTROL. EXITED RWY INTO CORNFIELD. HAD FAILED TO LOCK THE TAILWHEEL. (-23) M,had failed to lock the tailwheel,action,was cause of,causation,loud pop on takeoff roll,event
+19870523018729A,"CANOPY CAME OPEN ON CLIMBOUT CAUSING AN UNCONTROLLED GROUND COLLISION, NO DEFECTS REPORTED. APPEARS PILOT ERROR.   ",came open,action,has effect,causation,ground collision,event
+19870523018729A,"CANOPY CAME OPEN ON CLIMBOUT CAUSING AN UNCONTROLLED GROUND COLLISION, NO DEFECTS REPORTED. APPEARS PILOT ERROR.   ",caused,verb,is caused by,causation,pilot error,circumstance
+19870523018729A,"CANOPY CAME OPEN ON CLIMBOUT CAUSING AN UNCONTROLLED GROUND COLLISION, NO DEFECTS REPORTED. APPEARS PILOT ERROR.   ",appeared,action,has effect,attribution,pilot error,circumstance
+20030620012809I,(-23) PILOT FAILED TO ASSURE THE OIL FILLER CAP WAS SECURE AND TOOK OFF. OIL WAS OBSERVED COMING OUT OF THE ENGINE ,failed to assure,action,has effect,causation,oil was coming out of the engine,event
+20030620012809I,(-23) PILOT FAILED TO ASSURE THE OIL FILLER CAP WAS SECURE AND TOOK OFF. OIL WAS OBSERVED COMING OUT OF THE ENGINE ,took off,action,has effect,causation,oil was coming out of the engine,event
