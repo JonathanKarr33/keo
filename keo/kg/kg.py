@@ -32,7 +32,7 @@ for _, row in ner_df.iterrows():
             if entity:
                 G.add_node(entity, type=entity_type, incident_id=str(incident_id))
     else:
-        #TODO: Fix csv mismamtch
+        #TODO: Fix csv mismatch
         print(f"Warning: Mismatched lengths for GS and GS TYPE in incident {incident_id}")
 print("Named Entity Recognition nodes were added.")
 print(f"Number of nodes: {len(G.nodes)}")
