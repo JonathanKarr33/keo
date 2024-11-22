@@ -19,6 +19,9 @@ nel_df = pd.read_csv(nel_path, delimiter=',', encoding='utf-8')
 # Create a directed graph for the Knowledge Graph
 G = nx.DiGraph()
 
+# Create a dictionary to hold sentences for each incident
+incident_sentences = {}
+
 # Step 1: Process Entities and Types from ner_df for nodes
 for _, row in ner_df.iterrows():
     incident_id = row['c5_unique_id']
@@ -32,7 +35,7 @@ for _, row in ner_df.iterrows():
             if entity:
                 G.add_node(entity, type=entity_type, incident_id=str(incident_id))
     else:
-        #TODO: Fix csv mismatch
+        #TODO: Fix csv mismatched lengths
         print(f"Warning: Mismatched lengths for GS and GS TYPE in incident {incident_id}")
 print("Named Entity Recognition nodes were added.")
 print(f"Number of nodes: {len(G.nodes)}")
@@ -65,7 +68,7 @@ print("Coreference relationships processed and nodes added as needed:")
 print(f"Number of nodes: {len(G.nodes)}")
 print(f"Number of edges: {len(G.edges)}")
 
-#Step 3: add NEL and its QIDs from nel.csv
+# Step 3: add NEL and its QIDs from nel.csv
 for _, row in nel_df.iterrows():
     incident_id = row['id']
     primary_ent = row['primary_ent']
@@ -109,10 +112,12 @@ print("Named entity linking with QIDs was added:")
 print(f"Number of nodes: {len(G.nodes)}")
 print(f"Number of edges: {len(G.edges)}")
 
-# Step 4: Create Edges from re_df
-#TODO: Step for needs updated GS Nodes to match
+# Step 4: Create Edges from re_df and populate incident_sentences
 for _, row in re_df.iterrows():
     incident_id = row['c5_unique_id']
+    # Store the c119_text corresponding to this incident ID
+    incident_sentences[incident_id] = row['c119_text']
+    
     relations = row['entity1, relation_type, entity2']
     
     if isinstance(relations, str):
@@ -134,7 +139,7 @@ for _, row in re_df.iterrows():
                 # Skip any incomplete triples
                 continue
 
-print("RE not done yet:")
+print("RE processing done:")
 print(f"Number of nodes: {len(G.nodes)}")
 print(f"Number of edges: {len(G.edges)}")
 
@@ -147,20 +152,26 @@ for u, v, data in G.edges(data=True):
     for key in data:
         data[key] = str(data[key]) if data[key] else ""
 
-# Save the graph to a GML file
-nx.write_gml(G, "knowledge_graph.gml")
-
-# Save the graph nodes to a CSV file, using .get() to handle missing attributes
+# Prepare the nodes DataFrame including c119_text
 nodes_df = pd.DataFrame([
-    (node, data.get('type', ''), data.get('qid', ''), data.get('incident_id', '')) for node, data in G.nodes(data=True)
-], columns=['Node', 'Type', 'QID', 'Incident_ID'])
+    (node, data.get('type', ''), data.get('qid', ''), data.get('incident_id', ''), incident_sentences.get(data.get('incident_id', ''), '')) 
+    for node, data in G.nodes(data=True)
+], columns=['Node', 'Type', 'QID', 'Incident_ID', 'c119_text'])
+
+# Save the nodes DataFrame to a CSV file
 nodes_df.to_csv("knowledge_graph_nodes.csv", index=False)
 
-# Save the graph edges to a CSV file, using .get() to handle missing attributes
+# Prepare the edges DataFrame including c119_text
 edges_df = pd.DataFrame([
-    (u, v, data.get('relation', ''), data.get('incident_id', '')) for u, v, data in G.edges(data=True)
-], columns=['Source', 'Target', 'Relation', 'Incident_ID'])
+    (u, v, data.get('relation', ''), data.get('incident_id', ''), incident_sentences.get(data.get('incident_id', ''), '')) 
+    for u, v, data in G.edges(data=True)
+], columns=['Source', 'Target', 'Relation', 'Incident_ID', 'c119_text'])
+
+# Save the edges DataFrame to a CSV file
 edges_df.to_csv("knowledge_graph_edges.csv", index=False)
+
+# Save the graph to a GML file
+nx.write_gml(G, "knowledge_graph.gml")
 
 # Visualization
 plt.figure(figsize=(12, 12))
