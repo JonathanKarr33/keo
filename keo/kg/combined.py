@@ -10,9 +10,9 @@ data_expanded = data.assign(incident_ids=data['incident_ids'].str.split(',')).ex
 # Cleaning up whitespace in incident_ids
 data_expanded['incident_ids'] = data_expanded['incident_ids'].str.strip()
 
-# Grouping nodes by incident_ids while retaining the c119_text
+# Grouping nodes and c119_text by incident_ids
 result = data_expanded.groupby('incident_ids').agg({
-    'c119_text': 'first',  # The first c119_text per incident_id
+    'c119_text': lambda x: '; '.join(x),  # Combine all associated c119_text entries with a semicolon
     'node': lambda x: ', '.join(x)  # Combine all associated nodes as a string
 }).reset_index()
 
