@@ -6,6 +6,9 @@ import nltk
 import json
 import os
 from tqdm import tqdm
+from utils.evaluate_cr import evaluate_cr
+from utils.evaluate_re import evaluate_re
+from utils.evaluate_ner import evaluate_ner
 
 # Download NLTK tokenizer if not already available
 nltk.download('punkt')
@@ -17,7 +20,6 @@ MODEL_NAME = 'llama3.1'  # Adjust if your model name is different
 # File paths
 base_path = "OMIn_dataset/gold_standard/raw"
 ner_path = f"{base_path}/ner.csv"
-nel_path = f"{base_path}/nel.csv"
 cr_path = f"{base_path}/cr.csv"
 re_path = f"{base_path}/re.csv"
 
@@ -29,7 +31,6 @@ os.makedirs(results_dir, exist_ok=True)
 
 # Load the datasets
 ner_df = pd.read_csv(ner_path)
-nel_df = pd.read_csv(nel_path)
 cr_df = pd.read_csv(cr_path)
 re_df = pd.read_csv(re_path)
 
@@ -127,137 +128,8 @@ def perform_ner(ner_df):
     print(f"NER results saved to {os.path.join(results_dir, 'ner_results.csv')}")
 
     # Compare results with gold standard
-    evaluate_ner(results, ner_df)
-
-# Evaluation function for NER
-def evaluate_ner(results, ner_df):
-    # Prepare gold standard data
-    gold_standard = ner_df.groupby('id').agg({
-        'entities': lambda x: [entity for sublist in x for entity in sublist],
-        'GS TYPE': lambda x: [etype for sublist in x for etype in ast.literal_eval(sublist)]
-    }).reset_index()
-
-    comparison_df = pd.merge(pd.DataFrame(results), gold_standard, on='id', how='left')
-    total_TP_entities = total_FP_entities = total_FN_entities = 0
-    total_TP_types = total_FP_types = total_FN_types = 0
-
-    for _, row in comparison_df.iterrows():
-        true_entities = set(map(str.lower, row['entities']))
-        pred_entities = set(map(str.lower, row['entities_predicted']))
-        TP_entities = len(true_entities & pred_entities)
-        FP_entities = len(pred_entities - true_entities)
-        FN_entities = len(true_entities - pred_entities)
-        total_TP_entities += TP_entities
-        total_FP_entities += FP_entities
-        total_FN_entities += FN_entities
-
-        true_types = set(map(str.lower, row['GS TYPE']))
-        pred_types = set(map(str.lower, row['entity_types_predicted']))
-        TP_types = len(true_types & pred_types)
-        FP_types = len(pred_types - true_types)
-        FN_types = len(true_types - pred_types)
-        total_TP_types += TP_types
-        total_FP_types += FP_types
-        total_FN_types += FN_types
-
-    # Calculating metrics for entities
-    precision_entities = total_TP_entities / (total_TP_entities + total_FP_entities) if (total_TP_entities + total_FP_entities) else 0
-    recall_entities = total_TP_entities / (total_TP_entities + total_FN_entities) if (total_TP_entities + total_FN_entities) else 0
-    f1_entities = 2 * precision_entities * recall_entities / (precision_entities + recall_entities) if (precision_entities + recall_entities) else 0
-
-    # Calculating metrics for entity types
-    precision_types = total_TP_types / (total_TP_types + total_FP_types) if (total_TP_types + total_FP_types) else 0
-    recall_types = total_TP_types / (total_TP_types + total_FN_types) if (total_TP_types + total_FN_types) else 0
-    f1_types = 2 * precision_types * recall_types / (precision_types + recall_types) if (precision_types + recall_types) else 0
-
-    # Outputting the results
-    print(f"NER Results (Entities): Precision={precision_entities:.4f}, Recall={recall_entities:.4f}, F1-score={f1_entities:.4f}")
-    print(f"NER Results (Entity Types): Precision={precision_types:.4f}, Recall={recall_types:.4f}, F1-score={f1_types:.4f}")
-
-def perform_nel(nel_df):
-    # Prepare entity-QID pairs
-    nel_df['entities'] = nel_df[['primary_ent', 'secondary_ent', 'tertiary_ent']].values.tolist()
-    nel_df['qids'] = nel_df[['primary_qid', 'secondary_qid', 'tertiary_qid']].values.tolist()
-
-    # Clean up NaN values
-    nel_df['entities'] = nel_df['entities'].apply(lambda x: [e for e in x if pd.notna(e)])
-    nel_df['qids'] = nel_df['qids'].apply(lambda x: [q for q in x if pd.notna(q)])
-
-    samples_df = nel_df[['id', 'sample']].drop_duplicates()
-    results = []
-    print("Performing NEL...")
-
-    for _, row in tqdm(samples_df.iterrows(), total=len(samples_df), desc="NEL Progress"):
-        sample_id = row['id']
-        sample_text = row['sample']
-
-        # Prepare the prompt for NEL with few-shot examples
-        prompt = (
-            f"You are an AI assistant that performs Named Entity Linking (NEL). "
-            f"Identify the entities in the following text and link them to the appropriate Wikidata QIDs:\n\n"
-            f"Examples:\n"
-            f"Text: \"ACFT WAS TAXIING FOR TAKE OFF WHEN IT LOST CONTROL, RAN INTO A DITCH, AND STRUCK A TREE. OTHER CIRCUMSTANCES AE UNK\"\n"
-            f"Output: \nEntity: ACFT\nQID: Q11436\n\n"
-            f"Text: \"AFTER TAKEOFF, ENGINE QUIT. WING FUEL TANK SUMPS WERE NOT DRAINED DURING PREFLIGHT BECAUSE THEY WERE FROZEN.\"\n"
-            f"Output: \nEntity: TAKEOFF\nQID: Q854248\nEntity: ENGINE\nQID: Q1\n\n"
-            f"Now, identify the entities and link them to their respective Wikidata QIDs for the following text:\n\n"
-            f"Text: \"{sample_text}\"\n"
-            f"Output:"
-        )
-
-        # Call the Ollama API
-        gpt_output = ollama_completion(prompt)
-
-        # Extract and process the output
-        try:
-            # Regex to find entities and their QIDs in the output
-            matches = re.findall(r'Entity:\s*(.+?)\s*QID:\s*(Q\d+)', gpt_output, re.IGNORECASE)
-            entities_predicted = [match[0].strip() for match in matches]
-            qids_predicted = [match[1].strip() for match in matches]
-            results.append({
-                'id': sample_id,
-                'sample': sample_text,
-                'entities_predicted': entities_predicted,
-                'qids_predicted': qids_predicted
-            })
-        except Exception as e:
-            print(f"Error processing output for sample {sample_id}: {e}")
-            results.append({
-                'id': sample_id,
-                'entities_predicted': [],
-                'qids_predicted': []
-            })
-
-    # Save results to CSV
-    results_df = pd.DataFrame(results)
-    results_df.to_csv(os.path.join(results_dir, 'nel_results.csv'), index=False)
-    print(f"NEL results saved to {os.path.join(results_dir, 'nel_results.csv')}")
-
-    # Prepare gold standard data
-    gold_standard = nel_df.groupby('id').agg({
-        'entities': lambda x: [item for sublist in x for item in sublist],
-        'qids': lambda x: [item for sublist in x for item in sublist]
-    }).reset_index()
-    comparison_df = pd.merge(results_df, gold_standard, on='id')
-
-    print("Evaluating NEL...")
-
-    # Evaluate performance
-    total_TP = total_FP = total_FN = 0
-    for _, row in tqdm(comparison_df.iterrows(), total=len(comparison_df), desc="NEL Evaluation Progress"):
-        true_pairs = set(zip(map(str.lower, row['entities']), row['qids']))
-        pred_pairs = set(zip(map(str.lower, row['entities_predicted']), row['qids_predicted']))
-        TP = len(true_pairs & pred_pairs)
-        FP = len(pred_pairs - true_pairs)
-        FN = len(true_pairs - pred_pairs)
-        total_TP += TP
-        total_FP += FP
-        total_FN += FN
-
-    precision = total_TP / (total_TP + total_FP) if total_TP + total_FP else 0
-    recall = total_TP / (total_TP + total_FN) if total_TP + total_FN else 0
-    f1 = 2 * precision * recall / (precision + recall) if precision + recall else 0
-    print(f"NEL Results: Precision={precision:.4f}, Recall={recall:.4f}, F1-score={f1:.4f}")
+    print("Evaluating ner...")
+    evaluate_ner(ner_path, os.path.join(results_dir, 'ner_results.csv'))
 
 # Function to safely parse strings to Python literals
 def safe_literal_eval(val):
@@ -342,46 +214,73 @@ def perform_cr(cr_df):
     print(f"CR results saved to {os.path.join(results_dir, 'cr_results.csv')}")
 
     print("Evaluating CR...")
+    evaluate_cr(cr_path, os.path.join(results_dir, 'cr_results.csv'))
 
-    # Evaluation logic
-    total_TP = total_FP = total_FN = 0
-    for _, row in tqdm(samples_df.iterrows(), total=len(samples_df), desc="CR Evaluation Progress"):
-        sample_id = row['c5']
-        sample_text = row['c119_text']
+def parse_re_output(gpt_output):
+    """
+    Parse the GPT output to extract relation triples with improved handling for malformed data.
+    """
+    # Normalize newlines and clean up whitespace
+    gpt_output = gpt_output.strip().replace("\r", "").replace("\n\n", "\n").strip()
 
-        # Retrieve gold coreferences
-        gold_coreferences = cr_df[cr_df['c5'] == sample_id]['coreferences'].iloc[0]
-        gold_coreferences_parsed = safe_literal_eval(gold_coreferences)
+    # Regular expression to match complete triples
+    triple_pattern = re.compile(
+        r"Subject:\s*(.*?)\nSubject Type:\s*(.*?)\nRelation:\s*(.*?)\nObject:\s*(.*?)\nObject Type:\s*(.*?)(?:\n|$)",
+        re.DOTALL
+    )
+    
+    # Find all matches
+    matches = triple_pattern.findall(gpt_output)
+    results = []
 
-        # Retrieve predicted clusters
-        predicted_row = next((item for item in results if item['c5'] == sample_id), {})
-        predicted_coreferences = predicted_row.get('coreferences', [])
+    # Handle malformed or incomplete triples
+    lines = gpt_output.split("\n")
+    current_triple = {"Subject": None, "Subject Type": None, "Relation": None, "Object": None, "Object Type": None}
+    keys = list(current_triple.keys())
+    key_idx = 0
 
-        # Calculate True Positives, False Positives, and False Negatives
-        gold_pairs = set(tuple(pair) for cluster in gold_coreferences_parsed for pair in cluster)
-        predicted_pairs = set(tuple(pair) for cluster in predicted_coreferences for pair in cluster)
+    for line in lines:
+        # Detect and assign parts of triples
+        for key in keys[key_idx:]:
+            if line.startswith(f"{key}:"):
+                current_triple[key] = line.split(f"{key}:")[1].strip()
+                key_idx += 1
+                break
 
-        TP = len(gold_pairs & predicted_pairs)
-        FP = len(predicted_pairs - gold_pairs)
-        FN = len(gold_pairs - predicted_pairs)
-        total_TP += TP
-        total_FP += FP
-        total_FN += FN
+        # If a complete triple is detected, add it to results
+        if all(current_triple.values()):
+            results.append(current_triple)
+            current_triple = {key: None for key in keys}  # Reset for next triple
+            key_idx = 0
 
-    # Calculate Precision, Recall, and F1-score
-    precision = total_TP / (total_TP + total_FP) if total_TP + total_FP else 0
-    recall = total_TP / (total_TP + total_FN) if total_TP + total_FN else 0
-    f1 = 2 * precision * recall / (precision + recall) if precision + recall else 0
+    # Combine results from regex matches and reconstructed triples
+    for match in matches:
+        results.append({
+            "Subject": match[0].strip(),
+            "Subject Type": match[1].strip(),
+            "Relation": match[2].strip(),
+            "Object": match[3].strip(),
+            "Object Type": match[4].strip(),
+        })
 
-    # Print the evaluation results
-    print(f"CR Results: Precision={precision:.4f}, Recall={recall:.4f}, F1-score={f1:.4f}")
+    return results
+
 
 def perform_re(re_df):
+    """
+    Perform Relation Extraction (RE) using GPT/Ollama API and save the results.
+
+    Parameters:
+    - re_df (DataFrame): DataFrame containing input samples for RE.
+    - results_dir (str): Directory to save the results.
+    """
     # Replace NaN values with an empty string to avoid AttributeError
     re_df['entity1, relation_type, entity2'] = re_df['entity1, relation_type, entity2'].fillna('')
 
     # Prepare entity-relation pairs
-    re_df['relations'] = re_df['entity1, relation_type, entity2'].apply(lambda x: x.split('\n') if isinstance(x, str) else [])
+    re_df['relations'] = re_df['entity1, relation_type, entity2'].apply(
+        lambda x: x.split('\n') if isinstance(x, str) else []
+    )
 
     samples_df = re_df[['c5_unique_id', 'c119_text']].drop_duplicates()
     results = []
@@ -395,33 +294,31 @@ def perform_re(re_df):
         prompt = (
             "You are an AI assistant that performs Relation Extraction (RE). "
             "Identify subject, relation, and object triples along with their types from the following text:\n\n"
+            "Here are some possible relations to choose from: has effect, has cause, followed by, part of, instance of, facet of, used by, location, time period, owned by, owner of, influenced by, maintained by, conflict, event distance, designed by, located in the administrative territorial entity, located in or next to body of water\n"
             "Examples:\n"
             "Text: \"ACFT WAS TAXIING FOR TAKE OFF WHEN IT LOST CONTROL, RAN INTO A DITCH, AND STRUCK A TREE. OTHER CIRCUMSTANCES AE UNK\"\n"
             "Output:\n"
-            "Subject: lost control\nSubject Type: action\nRelation: has effect\nRelation Type: causation\nObject: ran into a ditch\nObject Type: event\n"
-            "Subject: lost control\nSubject Type: action\nRelation: has effect\nRelation Type: causation\nObject: struck a tree\nObject Type: event\n"
+            "Subject: lost control\nSubject Type: action\nRelation: has effect\nObject: ran into a ditch\nObject Type: event\n"
+            "Subject: lost control\nSubject Type: action\nRelation: has effect\nObject: struck a tree\nObject Type: event\n"
             "Remember always follow the format above and do not add any other information. Now, extract all relations from the following text:\n"
             f"Text: \"{sample_text}\"\n"
-            "Output:")
+            "Output:"
+        )
 
         # Call the Ollama API
         gpt_output = ollama_completion(prompt)
         try:
-            # Extract and process Ollama output
-            triple_matches = re.findall(
-                r'Subject:\s*(.*?)\nSubject Type:\s*(.*?)\nRelation:\s*(.*?)\nRelation Type:\s*(.*?)\nObject:\s*(.*?)\nObject Type:\s*(.*?)(?:\n|$)',
-                gpt_output, re.DOTALL
-            )
-            for match in triple_matches:
+            # Parse the GPT output
+            parsed_triples = parse_re_output(gpt_output)
+            for triple in parsed_triples:
                 results.append({
                     'c5_unique_id': sample_id,
                     'sample': sample_text,
-                    'subject': match[0].strip(),
-                    'subject_type': match[1].strip(),
-                    'relation': match[2].strip(),
-                    'relation_type': match[3].strip(),
-                    'object': match[4].strip(),
-                    'object_type': match[5].strip()
+                    'subject': triple["Subject"],
+                    'subject_type': triple["Subject Type"],
+                    'relation': triple["Relation"],
+                    'object': triple["Object"],
+                    'object_type': triple["Object Type"]
                 })
         except Exception as e:
             print(f"Error processing output for sample {sample_id}: {e}")
@@ -432,32 +329,10 @@ def perform_re(re_df):
     print(f"RE results saved to {os.path.join(results_dir, 're_results.csv')}")
 
     print("Evaluating RE...")
+    evaluate_re(re_path, os.path.join(results_dir, 're_results.csv'))
 
-    # Prepare gold standard data
-    gold_standard = re_df.groupby('c5_unique_id').agg({
-        'relations': lambda x: [item for sublist in x for item in sublist]
-    }).reset_index()
-    comparison_df = pd.merge(results_df, gold_standard, on='c5_unique_id', how='left')
-
-    # Evaluate performance
-    total_TP = total_FP = total_FN = 0
-    for _, row in tqdm(comparison_df.iterrows(), total=len(comparison_df), desc="RE Evaluation Progress"):
-        gold_triples = set(map(lambda t: tuple(map(str.lower, t.split(','))), row['relations']))
-        pred_triples = set(map(lambda t: (t['subject'].lower(), t['relation'].lower(), t['object'].lower()), results_df[results_df['c5_unique_id'] == row['c5_unique_id']].to_dict('records')))
-        TP = len(gold_triples & pred_triples)
-        FP = len(pred_triples - gold_triples)
-        FN = len(gold_triples - pred_triples)
-        total_TP += TP
-        total_FP += FP
-        total_FN += FN
-
-    precision = total_TP / (total_TP + total_FP) if total_TP + total_FP else 0
-    recall = total_TP / (total_TP + total_FN) if total_TP + total_FN else 0
-    f1 = 2 * precision * recall / (precision + recall) if precision + recall else 0
-    print(f"RE Results: Precision={precision:.4f}, Recall={recall:.4f}, F1-score={f1:.4f}")
-
-# Run the tasks
-perform_ner(ner_df)
-perform_nel(nel_df)
-perform_cr(cr_df)
-perform_re(re_df)
+if __name__ == "__main__":
+    # Run the tasks
+    perform_ner(ner_df)
+    perform_cr(cr_df)
+    perform_re(re_df)
