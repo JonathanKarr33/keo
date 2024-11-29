@@ -1,7 +1,7 @@
 import pandas as pd
 import networkx as nx
-import matplotlib.pyplot as plt
 import ast
+import matplotlib.pyplot as plt
 
 # Load the CSV files
 base_path = "../../OMIn_dataset/gold_standard/raw"
@@ -33,12 +33,16 @@ for _, row in ner_df.iterrows():
         # Add entities as nodes with their types as attributes
         for entity, entity_type in zip(entities, types):
             if entity:
-                G.add_node(entity, type=entity_type, incident_id=str(incident_id))
+                if G.has_node(entity):
+                    G.nodes[entity]['incident_ids'].append(str(incident_id))  # Append if node exists
+                else:
+                    G.add_node(entity, type=entity_type, incident_ids=[str(incident_id)])
     else:
-        #TODO: Fix csv mismatched lengths
         print(f"Warning: Mismatched lengths for GS and GS TYPE in incident {incident_id}")
-print("Named Entity Recognition nodes were added.")
-print(f"Number of nodes: {len(G.nodes)}")
+
+# Print number of nodes and edges after step 1
+print(f"Nodes after processing ner_df: {len(G.nodes)}")
+print(f"Edges after processing ner_df: {len(G.edges)}")
 
 # Step 2: Add coreference relationships from cr_df
 for _, row in cr_df.iterrows():
@@ -56,19 +60,27 @@ for _, row in cr_df.iterrows():
                 entity2 = coreferences[j].strip()  # Second entity
                 
                 # Add the nodes to the graph if they don't exist
-                if not G.has_node(entity1):
-                    G.add_node(entity1, incident_id=str(incident_id))
-                
-                if not G.has_node(entity2):
-                    G.add_node(entity2, type="coreference", incident_id=str(incident_id))
+                if G.has_node(entity1):
+                    G.nodes[entity1]['incident_ids'].append(str(incident_id))  # Add incident_id if node exists
+                else:
+                    G.add_node(entity1, incident_ids=[str(incident_id)])
+
+                if G.has_node(entity2):
+                    G.nodes[entity2]['incident_ids'].append(str(incident_id))  # Add incident_id if node exists
+                else:
+                    G.add_node(entity2, type="coreference", incident_ids=[str(incident_id)])
 
                 # Add an edge between the coreferenced entities
-                G.add_edge(entity1, entity2, relation='coreference', incident_id=str(incident_id))
-print("Coreference relationships processed and nodes added as needed:")
-print(f"Number of nodes: {len(G.nodes)}")
-print(f"Number of edges: {len(G.edges)}")
+                if not G.has_edge(entity1, entity2):
+                    G.add_edge(entity1, entity2, relation='coreference', incident_ids=[str(incident_id)])
+                else:
+                    G[entity1][entity2]['incident_ids'].append(str(incident_id))  # Append to existing edge
 
-# Step 3: add NEL and its QIDs from nel.csv
+# Print number of nodes and edges after step 2
+print(f"Nodes after processing cr_df: {len(G.nodes)}")
+print(f"Edges after processing cr_df: {len(G.edges)}")
+
+# Step 3: Add NEL and its QIDs from nel.csv
 for _, row in nel_df.iterrows():
     incident_id = row['id']
     primary_ent = row['primary_ent']
@@ -92,90 +104,140 @@ for _, row in nel_df.iterrows():
 
     # Add primary entity as a node with its QID if available
     if primary_ent:
-        G.add_node(primary_ent, type='Primary', incident_id=str(incident_id), qid=primary_qid)
+        if G.has_node(primary_ent):
+            G.nodes[primary_ent]['incident_ids'].append(str(incident_id))
+        else:
+            G.add_node(primary_ent, type='Primary', incident_ids=[str(incident_id)], qid=primary_qid)
 
     # Add secondary entity as a node with its QID if available
     if secondary_ent:
-        G.add_node(secondary_ent, type='Secondary', incident_id=str(incident_id), qid=secondary_qid)
-    
+        if G.has_node(secondary_ent):
+            G.nodes[secondary_ent]['incident_ids'].append(str(incident_id))
+        else:
+            G.add_node(secondary_ent, type='Secondary', incident_ids=[str(incident_id)], qid=secondary_qid)
+
     # Add tertiary entity as a node with its QID if available
     if tertiary_ent:
-        G.add_node(tertiary_ent, type='Tertiary', incident_id=str(incident_id), qid=tertiary_qid)
+        if G.has_node(tertiary_ent):
+            G.nodes[tertiary_ent]['incident_ids'].append(str(incident_id))
+        else:
+            G.add_node(tertiary_ent, type='Tertiary', incident_ids=[str(incident_id)], qid=tertiary_qid)
 
     # Create edges for relationships in NEL
     if primary_ent and secondary_ent:
-        G.add_edge(primary_ent, secondary_ent, relation='secondary_of', incident_id=str(incident_id))
+        if G.has_edge(primary_ent, secondary_ent):
+            G[primary_ent][secondary_ent]['incident_ids'].append(str(incident_id))
+        else:
+            G.add_edge(primary_ent, secondary_ent, relation='secondary_of', incident_ids=[str(incident_id)])
     if primary_ent and tertiary_ent:
-        G.add_edge(primary_ent, tertiary_ent, relation='tertiary_of', incident_id=str(incident_id))
+        if G.has_edge(primary_ent, tertiary_ent):
+            G[primary_ent][tertiary_ent]['incident_ids'].append(str(incident_id))
+        else:
+            G.add_edge(primary_ent, tertiary_ent, relation='tertiary_of', incident_ids=[str(incident_id)])
 
-print("Named entity linking with QIDs was added:")
-print(f"Number of nodes: {len(G.nodes)}")
-print(f"Number of edges: {len(G.edges)}")
+# Print number of nodes and edges after step 3
+print(f"Nodes after processing nel_df: {len(G.nodes)}")
+print(f"Edges after processing nel_df: {len(G.edges)}")
 
 # Step 4: Create Edges from re_df and populate incident_sentences
 for _, row in re_df.iterrows():
     incident_id = row['c5_unique_id']
     # Store the c119_text corresponding to this incident ID
-    incident_sentences[incident_id] = row['c119_text']
-    
+    incident_sentences[incident_id] = row['c119_text'].strip()  # Strip trailing whitespaces
+
     relations = row['entity1, relation_type, entity2']
     
     if isinstance(relations, str):
         # Split by commas and strip extra spaces
         relation_triples = [r.strip() for r in relations.split(',')]
-        
-        # Process the relation triples as (subject, relation, object)
-        for i in range(0, len(relation_triples), 3):
-            try:
-                subject = relation_triples[i]
-                relation = relation_triples[i + 1]
-                object_ = relation_triples[i + 2]
-                
-                # Add edges based on the relationship information, ensuring both nodes exist
-                if subject and object_:
-                    if G.has_node(subject) and G.has_node(object_):
-                        G.add_edge(subject, object_, relation=relation, incident_id=str(incident_id))
-            except IndexError:
-                # Skip any incomplete triples
-                continue
+        if len(relation_triples) == 3:
+            entity1, relation, entity2 = relation_triples
+            # Create an edge if not already present
+            if G.has_node(entity1) and G.has_node(entity2):
+                if not G.has_edge(entity1, entity2):
+                    G.add_edge(entity1, entity2, relation=relation, incident_ids=[str(incident_id)])
+                else:
+                    G[entity1][entity2]['incident_ids'].append(str(incident_id))
 
-print("RE processing done:")
-print(f"Number of nodes: {len(G.nodes)}")
-print(f"Number of edges: {len(G.edges)}")
+# Print number of nodes and edges after step 4
+print(f"Nodes after processing re_df: {len(G.nodes)}")
+print(f"Edges after processing re_df: {len(G.edges)}")
 
-# Ensure all attributes are strings before saving
+# Step 5: Create nodes DataFrame
+nodes_data = []
 for node, data in G.nodes(data=True):
-    for k, v in data.items():
-        G.nodes[node][k] = str(v) if v else ""
+    incident_ids = data.get('incident_ids', [])
+    c119_text = []
+    for incident_id in incident_ids:
+        if incident_id in incident_sentences:
+            c119_text.append(incident_sentences.get(incident_id, '').strip())  # Strip trailing whitespace
+    
+    node_row = {
+        'node': node,
+        'type': data.get('type', ''),
+        'incident_ids': ', '.join(incident_ids),
+        'c119_text': '; '.join(c119_text)  # Join multiple sentences with a semicolon
+    }
+    nodes_data.append(node_row)
 
-for u, v, data in G.edges(data=True):
-    for key in data:
-        data[key] = str(data[key]) if data[key] else ""
+nodes_df = pd.DataFrame(nodes_data)
+nodes_df.to_csv('knowledge_graph_nodes.csv', index=False)
 
-# Prepare the nodes DataFrame including c119_text
-nodes_df = pd.DataFrame([
-    (node, data.get('type', ''), data.get('qid', ''), data.get('incident_id', ''), incident_sentences.get(data.get('incident_id', ''), '')) 
-    for node, data in G.nodes(data=True)
-], columns=['Node', 'Type', 'QID', 'Incident_ID', 'c119_text'])
+# Step 6: Create edges DataFrame
+edges_data = []
+for entity1, entity2, data in G.edges(data=True):
+    incident_ids = data.get('incident_ids', [])
+    relation = data.get('relation', '')
+    c119_text = []
+    for incident_id in incident_ids:
+        if incident_id in incident_sentences:
+            c119_text.append(incident_sentences.get(incident_id, '').strip())  # Strip trailing whitespace
 
-# Save the nodes DataFrame to a CSV file
-nodes_df.to_csv("knowledge_graph_nodes.csv", index=False)
+    edge_row = {
+        'entity1': entity1,
+        'entity2': entity2,
+        'relation': relation,
+        'incident_ids': ', '.join(incident_ids),
+        'c119_text': '; '.join(c119_text)  # Join multiple sentences with a semicolon
+    }
+    edges_data.append(edge_row)
 
-# Prepare the edges DataFrame including c119_text
-edges_df = pd.DataFrame([
-    (u, v, data.get('relation', ''), data.get('incident_id', ''), incident_sentences.get(data.get('incident_id', ''), '')) 
-    for u, v, data in G.edges(data=True)
-], columns=['Source', 'Target', 'Relation', 'Incident_ID', 'c119_text'])
+edges_df = pd.DataFrame(edges_data)
+edges_df.to_csv('knowledge_graph_edges.csv', index=False)
 
-# Save the edges DataFrame to a CSV file
-edges_df.to_csv("knowledge_graph_edges.csv", index=False)
 
-# Save the graph to a GML file
+# Step 7: Ensure all attributes are strings before saving the GML
+def convert_to_string(graph):
+    # Convert node attributes to strings
+    for node, data in graph.nodes(data=True):
+        for key, value in data.items():
+            if value is None:
+                graph.nodes[node][key] = ""  # Convert None to empty string
+            elif isinstance(value, list):
+                graph.nodes[node][key] = [str(v) if v is not None else "" for v in value]
+            else:
+                graph.nodes[node][key] = str(value)  # Ensure all values are strings
+    
+    # Convert edge attributes to strings
+    for u, v, data in graph.edges(data=True):
+        for key, value in data.items():
+            if value is None:
+                graph[u][v][key] = ""  # Convert None to empty string
+            elif isinstance(value, list):
+                graph[u][v][key] = [str(v) if v is not None else "" for v in value]
+            else:
+                graph[u][v][key] = str(value)  # Ensure all values are strings
+
+# Convert attributes of the graph
+convert_to_string(G)
+
+# Now, write the graph to a GML file
 nx.write_gml(G, "knowledge_graph.gml")
+print("GML file saved successfully.")
 
 # Visualization
 plt.figure(figsize=(12, 12))
-pos = nx.spring_layout(G, k=0.15)
-nx.draw(G, pos, with_labels=True, node_size=20, font_size=8, arrows=True)
-plt.title("Knowledge Graph")
-plt.show()
+pos = nx.spring_layout(G, k=0.3)
+nx.draw(G, pos, with_labels=True, node_size=50, font_size=8)
+plt.savefig("knowledge_graph.png", format="PNG")
+print("Knowledge graph visualization and GML file saved.")
