@@ -15,7 +15,7 @@ nltk.download('punkt')
 
 # Ollama API setup
 OLLAMA_API_URL = 'http://localhost:11434'
-MODEL_NAME = 'llama3.1'  # Adjust if your model name is different
+MODEL_NAME = 'llama3.2'  # Adjust if your model name is different
 
 # File paths
 base_path = "OMIn_dataset/gold_standard/raw"
@@ -24,7 +24,7 @@ cr_path = f"{base_path}/cr.csv"
 re_path = f"{base_path}/re.csv"
 
 # Directory to save Llama results
-results_dir = 'keo/vanilla_LLM/llama31_results'
+results_dir = 'keo/vanilla_LLM/llama32_3B_results'
 
 # Create the results directory if it doesn't exist
 os.makedirs(results_dir, exist_ok=True)
@@ -129,7 +129,7 @@ def perform_ner(ner_df):
 
     # Compare results with gold standard
     print("Evaluating ner...")
-    evaluate_ner(ner_path, os.path.join(results_dir, 'ner_results.csv'))
+    evaluate_ner(ner_path, os.path.join(results_dir, 'ner_results.csv'), os.path.join(results_dir, 'ner_score.txt'))
 
 # Function to safely parse strings to Python literals
 def safe_literal_eval(val):
@@ -214,7 +214,7 @@ def perform_cr(cr_df):
     print(f"CR results saved to {os.path.join(results_dir, 'cr_results.csv')}")
 
     print("Evaluating CR...")
-    evaluate_cr(cr_path, os.path.join(results_dir, 'cr_results.csv'))
+    evaluate_cr(cr_path, os.path.join(results_dir, 'cr_results.csv'), os.path.join(results_dir, 'cr_score.txt'))
 
 def parse_re_output(gpt_output):
     """
@@ -329,10 +329,10 @@ def perform_re(re_df):
     print(f"RE results saved to {os.path.join(results_dir, 're_results.csv')}")
 
     print("Evaluating RE...")
-    evaluate_re(re_path, os.path.join(results_dir, 're_results.csv'))
+    evaluate_re(re_path, os.path.join(results_dir, 're_results.csv'), os.path.join(results_dir, 're_score.txt'))
 
 if __name__ == "__main__":
     # Run the tasks
-    perform_ner(ner_df)
-    perform_cr(cr_df)
+    # perform_ner(ner_df)
+    # perform_cr(cr_df)
     perform_re(re_df)

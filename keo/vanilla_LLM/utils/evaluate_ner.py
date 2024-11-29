@@ -1,7 +1,7 @@
 import pandas as pd
 import ast
 
-def evaluate_ner(ground_truth_file, predictions_file):
+def evaluate_ner(ground_truth_file, predictions_file, output_file):
     """
     Evaluate NER results using ground truth and predictions CSV files.
 
@@ -59,12 +59,20 @@ def evaluate_ner(ground_truth_file, predictions_file):
     f1_types = 2 * precision_types * recall_types / (precision_types + recall_types) if (precision_types + recall_types) else 0
 
     # Outputting the results
-    print(f"NER Results (Entities): Precision={precision_entities:.4f}, Recall={recall_entities:.4f}, F1-score={f1_entities:.4f}")
-    print(f"NER Results (Entity Types): Precision={precision_types:.4f}, Recall={recall_types:.4f}, F1-score={f1_types:.4f}")
+    result = (
+        f"NER Results (Entities): Precision={precision_entities:.4f}, Recall={recall_entities:.4f}, F1-score={f1_entities:.4f}\n"
+        f"NER Results (Entity Types): Precision={precision_types:.4f}, Recall={recall_types:.4f}, F1-score={f1_types:.4f}\n"
+    )
+    print(result)
+
+    # Write the results to the output file
+    with open(output_file, 'w') as f:
+        f.write(result)
 
 if __name__ == "__main__":
     # Test the script with example files
     ground_truth_file = "/home/kuangshiai/Desktop/24Fall-ND-Courses/LLM/keo/OMIn_dataset/gold_standard/raw/ner.csv"
-    predictions_file = "keo/vanilla_LLM/gpt4_results/ner_results.csv"
+    predictions_file = "keo/vanilla_LLM/llama32_3B_results/ner_results.csv"
+    output_file = "keo/vanilla_LLM/llama32_3B_results/ner_score.txt"
 
-    evaluate_ner(ground_truth_file, predictions_file)
+    evaluate_ner(ground_truth_file, predictions_file, output_file)
