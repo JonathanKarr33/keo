@@ -163,6 +163,29 @@ for _, row in re_df.iterrows():
 print(f"Nodes after processing re_df: {len(G.nodes)}")
 print(f"Edges after processing re_df: {len(G.edges)}")
 
+# Step 5: Create the combined_knowledge_graph.csv and nodes and edges csv
+combined_data = []
+
+# For each unique incident_id, collect the nodes associated with that incident
+for incident_id, c119_text in incident_sentences.items():
+    nodes_for_incident = []
+
+    # Collect nodes that have this incident_id
+    for node, data in G.nodes(data=True):
+        if str(incident_id) in data.get('incident_ids', []):
+            nodes_for_incident.append(node)
+
+    # Append the combined data
+    combined_data.append({
+        'incident_id': incident_id,
+        'c119_text': c119_text,
+        'nodes': ', '.join(nodes_for_incident)
+    })
+
+# Create DataFrame for combined knowledge graph
+combined_df = pd.DataFrame(combined_data)
+combined_df.to_csv('combined_knowledge_graph.csv', index=False)
+
 # Export Nodes and Edges
 nodes_data = [{
     'node': node,
@@ -191,7 +214,7 @@ edges_df.to_csv('knowledge_graph_edges.csv', index=False)
 
 
 
-# Step 7: Ensure all attributes are strings before saving the GML
+# Step 6: Ensure all attributes are strings before saving the GML
 def convert_to_string(graph):
     # Convert node attributes to strings
     for node, data in graph.nodes(data=True):
