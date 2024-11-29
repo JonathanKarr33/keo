@@ -163,47 +163,32 @@ for _, row in re_df.iterrows():
 print(f"Nodes after processing re_df: {len(G.nodes)}")
 print(f"Edges after processing re_df: {len(G.edges)}")
 
-# Step 5: Create nodes DataFrame
-nodes_data = []
-for node, data in G.nodes(data=True):
-    incident_ids = data.get('incident_ids', [])
-    c119_text = []
-    for incident_id in incident_ids:
-        if incident_id in incident_sentences:
-            c119_text.append(incident_sentences.get(incident_id, '').strip())  # Strip trailing whitespace
-    
-    node_row = {
-        'node': node,
-        'type': data.get('type', ''),
-        'incident_ids': ', '.join(incident_ids),
-        'c119_text': '; '.join(c119_text)  # Join multiple sentences with a semicolon
-    }
-    nodes_data.append(node_row)
+# Export Nodes and Edges
+nodes_data = [{
+    'node': node,
+    'type': data.get('type', ''),
+    'incident_ids': ', '.join(sorted(set(data.get('incident_ids', [])))),
+    'c119_text': '; '.join(
+        sorted(set(incident_sentences.get(i, '').strip() for i in data.get('incident_ids', [])))
+    )
+} for node, data in G.nodes(data=True)]
 
 nodes_df = pd.DataFrame(nodes_data)
 nodes_df.to_csv('knowledge_graph_nodes.csv', index=False)
 
-# Step 6: Create edges DataFrame
-edges_data = []
-for entity1, entity2, data in G.edges(data=True):
-    incident_ids = data.get('incident_ids', [])
-    relation = data.get('relation', '')
-    c119_text = []
-    for incident_id in incident_ids:
-        if incident_id in incident_sentences:
-            c119_text.append(incident_sentences.get(incident_id, '').strip())  # Strip trailing whitespace
-
-    edge_row = {
-        'entity1': entity1,
-        'entity2': entity2,
-        'relation': relation,
-        'incident_ids': ', '.join(incident_ids),
-        'c119_text': '; '.join(c119_text)  # Join multiple sentences with a semicolon
-    }
-    edges_data.append(edge_row)
+edges_data = [{
+    'entity1': u,
+    'entity2': v,
+    'relation': data.get('relation', ''),
+    'incident_ids': ', '.join(sorted(set(data.get('incident_ids', [])))),
+    'c119_text': '; '.join(
+        sorted(set(incident_sentences.get(i, '').strip() for i in data.get('incident_ids', [])))
+    )
+} for u, v, data in G.edges(data=True)]
 
 edges_df = pd.DataFrame(edges_data)
 edges_df.to_csv('knowledge_graph_edges.csv', index=False)
+
 
 
 # Step 7: Ensure all attributes are strings before saving the GML
