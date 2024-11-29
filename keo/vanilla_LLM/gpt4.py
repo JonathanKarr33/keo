@@ -102,7 +102,7 @@ def perform_ner(ner_df):
 
     # Compare results with gold standard
     print("Evaluating ner...")
-    evaluate_ner(ner_path, os.path.join(results_dir, 'ner_results.csv'))
+    evaluate_ner(ner_path, os.path.join(results_dir, 'ner_results.csv'), os.path.join(results_dir, 'ner_score.txt'))
 
 def safe_literal_eval(val):
     try:
@@ -195,7 +195,7 @@ def perform_cr(cr_df):
     print(f"CR results saved to {os.path.join(results_dir, 'cr_results.csv')}")
 
     print("Evaluating CR...")
-    evaluate_cr(cr_path, os.path.join(results_dir, 'cr_results.csv'))
+    evaluate_cr(cr_path, os.path.join(results_dir, 'cr_results.csv'), os.path.join(results_dir, 'cr_score.txt'))
 
 def perform_re(re_df):
     # Replace NaN values with an empty string to avoid AttributeError
@@ -261,7 +261,7 @@ def perform_re(re_df):
     print(f"RE results saved to {os.path.join(results_dir, 're_results.csv')}")
 
     print("Evaluating RE...")
-    evaluate_re(re_path, os.path.join(results_dir, 're_results.csv'))
+    evaluate_re(re_path, os.path.join(results_dir, 're_results.csv'), os.path.join(results_dir, 're_score.txt'))
 
 if __name__ == "__main__":
     # Run the tasks

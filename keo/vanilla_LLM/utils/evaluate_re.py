@@ -33,7 +33,7 @@ def parse_gold_relations(relation_string):
     # print(f"Extracted relations:\n{relations}\n")  # Debug: Final parsed relations
     return relations
 
-def evaluate_re(gold_file, prediction_file):
+def evaluate_re(gold_file, prediction_file, output_file):
     """
     Evaluate Relation Extraction (RE) results against the gold standard.
 
@@ -95,12 +95,17 @@ def evaluate_re(gold_file, prediction_file):
     f1 = 2 * precision * recall / (precision + recall) if precision + recall > 0 else 0
 
     # Print results
-    print(f"RE Results: Precision={precision:.4f}, Recall={recall:.4f}, F1-score={f1:.4f}")
+    result = f"RE Results: Precision={precision:.4f}, Recall={recall:.4f}, F1-score={f1:.4f}"
+    print(result)
 
+    # Write the results to the output file
+    with open(output_file, 'w') as f:
+        f.write(result)
 
 if __name__ == "__main__":
     # File paths
     gold_file = "/home/kuangshiai/Desktop/24Fall-ND-Courses/LLM/keo/OMIn_dataset/gold_standard/raw/re.csv"  # Path to gold standard file
-    prediction_file = "/home/kuangshiai/Desktop/24Fall-ND-Courses/LLM/keo/keo/vanilla_LLM/gpt4_results/re_results.csv"  # Path to prediction file
+    prediction_file = "/home/kuangshiai/Desktop/24Fall-ND-Courses/LLM/keo/keo/vanilla_LLM/llama31_results/re_results.csv"  # Path to prediction file
+    output_file = "keo/vanilla_LLM/llama31_results/re_score.txt"
 
-    evaluate_re(gold_file, prediction_file)
+    evaluate_re(gold_file, prediction_file, output_file)

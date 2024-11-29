@@ -1,0 +1,2 @@
+NER Results (Entities): Precision=0.7332, Recall=0.6701, F1-score=0.7002
+NER Results (Entity Types): Precision=0.2669, Recall=0.2684, F1-score=0.2676

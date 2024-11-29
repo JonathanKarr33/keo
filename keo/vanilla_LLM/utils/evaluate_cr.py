@@ -7,7 +7,7 @@ def safe_literal_eval(value):
     except Exception:
         return []
 
-def evaluate_cr(ground_truth_file, predictions_file):
+def evaluate_cr(ground_truth_file, predictions_file, output_file):
     """
     Evaluate Coreference Resolution (CR) results.
 
@@ -44,11 +44,18 @@ def evaluate_cr(ground_truth_file, predictions_file):
     recall = total_TP / (total_TP + total_FN) if total_TP + total_FN else 0
     f1 = 2 * precision * recall / (precision + recall) if precision + recall else 0
 
-    print(f"CR Results: Precision={precision:.4f}, Recall={recall:.4f}, F1-score={f1:.4f}")
+    result = f"CR Results: Precision={precision:.4f}, Recall={recall:.4f}, F1-score={f1:.4f}"
+    print(result)
+
+    # Write the results to the output file
+    with open(output_file, 'w') as f:
+        f.write(result)
+
 
 if __name__ == "__main__":
     # Test the script with example files
     ground_truth_file = "/home/kuangshiai/Desktop/24Fall-ND-Courses/LLM/keo/OMIn_dataset/gold_standard/raw/cr.csv"
-    predictions_file = "keo/vanilla_LLM/gpt4_results/cr_results.csv"
+    predictions_file = "keo/vanilla_LLM/llama31_results/cr_results.csv"
+    output_file = "keo/vanilla_LLM/llama31_results/cr_score.txt"
 
-    evaluate_cr(ground_truth_file, predictions_file)
+    evaluate_cr(ground_truth_file, predictions_file, output_file)
