@@ -6,9 +6,14 @@ import matplotlib.pyplot as plt
 # Load the CSV files
 base_path = "../../OMIn_dataset/gold_standard/raw"
 ner_path = f"{base_path}/ner.csv"
-re_path = f"{base_path}/re.csv"
 cr_path = f"{base_path}/cr.csv"
 nel_path = f"{base_path}/nel.csv"
+
+strict_re_gs = True
+if strict_re_gs:
+    re_path = "re_gs_strict.csv"
+else:
+    re_path = "re_gs_loose.csv"
 
 # Read the CSVs into pandas DataFrames
 ner_df = pd.read_csv(ner_path, delimiter=',', encoding='utf-8')
@@ -140,28 +145,71 @@ print(f"Nodes after processing nel_df: {len(G.nodes)}")
 print(f"Edges after processing nel_df: {len(G.edges)}")
 
 # Step 4: Create Edges from re_df and populate incident_sentences
+
+valid_relations = [
+    "HAS EFFECT", "HAS CAUSE", "PART OF", "INSTANCE OF", "FOLLOWED BY", 
+    "LOCATION", "TIME PERIOD", "MAINTAINED BY", "USED BY", "LOCATED IN", 
+    "OWNED BY", "FACET OF", "FOLLOWS", "HAS CAUSE OF", "INFLUENCED BY", 
+    "EVENT DISTANCE", "WORK LOCATION", "DESIGNED BY", "CONFLICT", 
+    "PART-OF", "OWNER OF"
+]
+
 for _, row in re_df.iterrows():
     incident_id = row['c5_unique_id']
+    
     # Store the c119_text corresponding to this incident ID
     incident_sentences[incident_id] = row['c119_text'].strip()  # Strip trailing whitespaces
 
     relations = row['entity1, relation_type, entity2']
     
     if isinstance(relations, str):
-        # Split by commas and strip extra spaces
-        relation_triples = [r.strip() for r in relations.split(',')]
-        if len(relation_triples) == 3:
-            entity1, relation, entity2 = relation_triples
-            # Create an edge if not already present
-            if G.has_node(entity1) and G.has_node(entity2):
-                if not G.has_edge(entity1, entity2):
-                    G.add_edge(entity1, entity2, relation=relation, incident_ids=[str(incident_id)])
+        relation_groups = relations.split(';')
+        
+        for group in relation_groups:
+            # Split by commas and strip spaces
+            relation_triples = [r.strip() for r in group.split(',')]
+            
+            # Only process if the group contains at least 3 elements (entity1, relation, entity2)
+            if len(relation_triples) >= 3:
+                # Initialize variables
+                entity1, relation, entity2 = None, None, None
+                
+                # Search for the valid relation in the triples
+                for i, item in enumerate(relation_triples):
+                    if item in valid_relations:
+                        relation = item
+                        # Everything before the relation is part of entity1
+                        entity1 = ", ".join(relation_triples[:i])
+                        # Everything after the relation is part of entity2
+                        entity2 = ", ".join(relation_triples[i + 1:])
+                        break  # Exit the loop once a valid relation is found
+                
+                # If relation is not found, raise an error
+                if not relation:
+                    raise ValueError(f"Invalid relation in the group: {group}")
+                
+                # Now process the edge creation logic
+                if strict_re_gs:
+                    if G.has_node(entity1) and G.has_node(entity2):
+                        if not G.has_edge(entity1, entity2):
+                            G.add_edge(entity1, entity2, relation=relation, incident_ids=[str(incident_id)])
+                        else:
+                            G[entity1][entity2]['incident_ids'].append(str(incident_id))
                 else:
-                    G[entity1][entity2]['incident_ids'].append(str(incident_id))
+                    if not G.has_node(entity1):
+                        G.add_node(entity1, type="re", incident_ids=[str(incident_id)])
+                    if not G.has_node(entity2):
+                        G.add_node(entity2, type="re", incident_ids=[str(incident_id)])
+                    if not G.has_edge(entity1, entity2):
+                        G.add_edge(entity1, entity2, relation=relation, incident_ids=[str(incident_id)])
+                    else:
+                        G[entity1][entity2]['incident_ids'].append(str(incident_id))
 
 # Print number of nodes and edges after step 4
 print(f"Nodes after processing re_df: {len(G.nodes)}")
 print(f"Edges after processing re_df: {len(G.edges)}")
+
+
 
 # Step 5: Create the combined_knowledge_graph.csv and nodes and edges csv
 combined_data = []

@@ -3821,6 +3821,20 @@ graph [
     incident_ids "19990213001379A"
   ]
   edge [
+    source 1
+    target 169
+    relation "LOCATION"
+    incident_ids "_networkx_list_start"
+    incident_ids "19920405008919A"
+  ]
+  edge [
+    source 1
+    target 182
+    relation "LOCATION"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950216008379I"
+  ]
+  edge [
     source 4
     target 360
     relation "secondary_of"
@@ -3849,9 +3863,23 @@ graph [
     incident_ids "19800217031649I"
   ]
   edge [
+    source 7
+    target 301
+    relation "LOCATION"
+    incident_ids "_networkx_list_start"
+    incident_ids "20010411006739I"
+  ]
+  edge [
     source 8
     target 9
     relation "coreference"
+    incident_ids "_networkx_list_start"
+    incident_ids "19790720021329A"
+  ]
+  edge [
+    source 8
+    target 7
+    relation "USED BY"
     incident_ids "_networkx_list_start"
     incident_ids "19790720021329A"
   ]
@@ -3861,6 +3889,13 @@ graph [
     relation "secondary_of"
     incident_ids "_networkx_list_start"
     incident_ids "19790720021329A"
+  ]
+  edge [
+    source 12
+    target 149
+    relation "PART OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "19781108022239I"
   ]
   edge [
     source 13
@@ -3896,6 +3931,20 @@ graph [
     relation "tertiary_of"
     incident_ids "_networkx_list_start"
     incident_ids "19860128014289I"
+  ]
+  edge [
+    source 16
+    target 17
+    relation "PART-OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "19860128014289I"
+  ]
+  edge [
+    source 17
+    target 34
+    relation "LOCATION"
+    incident_ids "_networkx_list_start"
+    incident_ids "20070630826079I"
   ]
   edge [
     source 18
@@ -3935,11 +3984,32 @@ graph [
     incident_ids "19780509032859I"
   ]
   edge [
+    source 25
+    target 208
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19871027060859A"
+  ]
+  edge [
+    source 25
+    target 220
+    relation "FOLLOWS"
+    incident_ids "_networkx_list_start"
+    incident_ids "19780509032859I"
+  ]
+  edge [
     source 26
     target 2
     relation "secondary_of"
     incident_ids "_networkx_list_start"
     incident_ids "19801116083749I"
+  ]
+  edge [
+    source 28
+    target 105
+    relation "PART OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "19840121015319I"
   ]
   edge [
     source 29
@@ -3963,9 +4033,30 @@ graph [
     incident_ids "19780111000459A"
   ]
   edge [
+    source 30
+    target 128
+    relation "WORK LOCATION"
+    incident_ids "_networkx_list_start"
+    incident_ids "19990714022959I"
+  ]
+  edge [
     source 31
     target 369
     relation "secondary_of"
+    incident_ids "_networkx_list_start"
+    incident_ids "19850315007389A"
+  ]
+  edge [
+    source 31
+    target 32
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19850315007389A"
+  ]
+  edge [
+    source 32
+    target 31
+    relation "HAS EFFECT"
     incident_ids "_networkx_list_start"
     incident_ids "19850315007389A"
   ]
@@ -3998,10 +4089,24 @@ graph [
     incident_ids "19900425011659A"
   ]
   edge [
+    source 40
+    target 41
+    relation "LOCATED IN"
+    incident_ids "_networkx_list_start"
+    incident_ids "19900425011659A"
+  ]
+  edge [
     source 42
     target 92
     relation "secondary_of"
     incident_ids "19900425011659A"
+    incident_ids "19901101064289I"
+  ]
+  edge [
+    source 42
+    target 90
+    relation "PART OF"
+    incident_ids "_networkx_list_start"
     incident_ids "19901101064289I"
   ]
   edge [
@@ -4012,6 +4117,27 @@ graph [
     incident_ids "19820725041999I"
   ]
   edge [
+    source 44
+    target 1
+    relation "PART OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "19820725041999I"
+  ]
+  edge [
+    source 44
+    target 47
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19820725041999I"
+  ]
+  edge [
+    source 44
+    target 48
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19820725041999I"
+  ]
+  edge [
     source 47
     target 64
     relation "secondary_of"
@@ -4019,9 +4145,23 @@ graph [
     incident_ids "19820725041999I"
   ]
   edge [
+    source 47
+    target 44
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19820725041999I"
+  ]
+  edge [
     source 48
     target 371
     relation "secondary_of"
+    incident_ids "_networkx_list_start"
+    incident_ids "19820725041999I"
+  ]
+  edge [
+    source 48
+    target 44
+    relation "HAS CAUSE"
     incident_ids "_networkx_list_start"
     incident_ids "19820725041999I"
   ]
@@ -4066,6 +4206,13 @@ graph [
     relation "tertiary_of"
     incident_ids "_networkx_list_start"
     incident_ids "19950619021589I"
+  ]
+  edge [
+    source 60
+    target 2
+    relation "PART OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "20030620012809I"
   ]
   edge [
     source 61
@@ -4145,6 +4292,20 @@ graph [
     incident_ids "20000625032189I"
   ]
   edge [
+    source 78
+    target 80
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19860530030499A"
+  ]
+  edge [
+    source 78
+    target 79
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19860530030499A"
+  ]
+  edge [
     source 79
     target 381
     relation "secondary_of"
@@ -4152,9 +4313,23 @@ graph [
     incident_ids "19860530030499A"
   ]
   edge [
+    source 79
+    target 78
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19860530030499A"
+  ]
+  edge [
     source 80
     target 382
     relation "secondary_of"
+    incident_ids "_networkx_list_start"
+    incident_ids "19860530030499A"
+  ]
+  edge [
+    source 80
+    target 78
+    relation "HAS EFFECT"
     incident_ids "_networkx_list_start"
     incident_ids "19860530030499A"
   ]
@@ -4245,9 +4420,30 @@ graph [
     incident_ids "19950527014439A"
   ]
   edge [
+    source 110
+    target 17
+    relation "PART OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "19960322013629I"
+  ]
+  edge [
+    source 111
+    target 17
+    relation "PART OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "19960322013629I"
+  ]
+  edge [
     source 112
     target 391
     relation "secondary_of"
+    incident_ids "_networkx_list_start"
+    incident_ids "19960504009509A"
+  ]
+  edge [
+    source 112
+    target 114
+    relation "PART OF"
     incident_ids "_networkx_list_start"
     incident_ids "19960504009509A"
   ]
@@ -4266,6 +4462,13 @@ graph [
     incident_ids "19850418016709I"
   ]
   edge [
+    source 119
+    target 123
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19850418016709I"
+  ]
+  edge [
     source 120
     target 43
     relation "secondary_of"
@@ -4276,6 +4479,13 @@ graph [
     source 123
     target 101
     relation "secondary_of"
+    incident_ids "_networkx_list_start"
+    incident_ids "19850418016709I"
+  ]
+  edge [
+    source 123
+    target 119
+    relation "HAS EFFECT"
     incident_ids "_networkx_list_start"
     incident_ids "19850418016709I"
   ]
@@ -4301,6 +4511,13 @@ graph [
     incident_ids "19780913017419I"
   ]
   edge [
+    source 127
+    target 126
+    relation "INSTANCE OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "19870606018859A"
+  ]
+  edge [
     source 128
     target 185
     relation "secondary_of"
@@ -4322,9 +4539,23 @@ graph [
     incident_ids "20050504010229A"
   ]
   edge [
+    source 134
+    target 396
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "20050504010229A"
+  ]
+  edge [
     source 135
     target 82
     relation "secondary_of"
+    incident_ids "_networkx_list_start"
+    incident_ids "20050504010229A"
+  ]
+  edge [
+    source 135
+    target 131
+    relation "PART OF"
     incident_ids "_networkx_list_start"
     incident_ids "20050504010229A"
   ]
@@ -4371,6 +4602,13 @@ graph [
     incident_ids "19970523014439I"
   ]
   edge [
+    source 139
+    target 140
+    relation "MAINTAINED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "19970523014439I"
+  ]
+  edge [
     source 141
     target 400
     relation "secondary_of"
@@ -4388,6 +4626,13 @@ graph [
     source 144
     target 402
     relation "secondary_of"
+    incident_ids "_networkx_list_start"
+    incident_ids "19970908038069A"
+  ]
+  edge [
+    source 145
+    target 402
+    relation "MAINTAINED BY"
     incident_ids "_networkx_list_start"
     incident_ids "19970908038069A"
   ]
@@ -4418,6 +4663,20 @@ graph [
     relation "secondary_of"
     incident_ids "_networkx_list_start"
     incident_ids "19760606015529A"
+  ]
+  edge [
+    source 153
+    target 30
+    relation "MAINTAINED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "20051009024969I"
+  ]
+  edge [
+    source 153
+    target 405
+    relation "MAINTAINED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "20051009024969I"
   ]
   edge [
     source 154
@@ -4477,6 +4736,27 @@ graph [
     incident_ids "19940818022409A"
   ]
   edge [
+    source 165
+    target 166
+    relation "LOCATION"
+    incident_ids "_networkx_list_start"
+    incident_ids "19940818022409A"
+  ]
+  edge [
+    source 165
+    target 167
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19940818022409A"
+  ]
+  edge [
+    source 165
+    target 168
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19940818022409A"
+  ]
+  edge [
     source 167
     target 408
     relation "secondary_of"
@@ -4491,6 +4771,13 @@ graph [
     incident_ids "19940818022409A"
   ]
   edge [
+    source 167
+    target 165
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19940818022409A"
+  ]
+  edge [
     source 168
     target 410
     relation "secondary_of"
@@ -4501,6 +4788,13 @@ graph [
     source 168
     target 411
     relation "tertiary_of"
+    incident_ids "_networkx_list_start"
+    incident_ids "19940818022409A"
+  ]
+  edge [
+    source 168
+    target 165
+    relation "HAS CAUSE"
     incident_ids "_networkx_list_start"
     incident_ids "19940818022409A"
   ]
@@ -4582,6 +4876,13 @@ graph [
     incident_ids "19861114075329I"
   ]
   edge [
+    source 187
+    target 186
+    relation "LOCATION"
+    incident_ids "_networkx_list_start"
+    incident_ids "19861114075329I"
+  ]
+  edge [
     source 189
     target 416
     relation "secondary_of"
@@ -4599,6 +4900,13 @@ graph [
     source 191
     target 417
     relation "secondary_of"
+    incident_ids "_networkx_list_start"
+    incident_ids "20010421009329I"
+  ]
+  edge [
+    source 191
+    target 190
+    relation "TIME PERIOD"
     incident_ids "_networkx_list_start"
     incident_ids "20010421009329I"
   ]
@@ -4673,6 +4981,13 @@ graph [
     incident_ids "19980415037339I"
   ]
   edge [
+    source 203
+    target 201
+    relation "MAINTAINED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "20010910029739I"
+  ]
+  edge [
     source 205
     target 43
     relation "secondary_of"
@@ -4692,6 +5007,13 @@ graph [
     relation "secondary_of"
     incident_ids "19871027060859A"
     incident_ids "19870523018729A"
+  ]
+  edge [
+    source 208
+    target 25
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19871027060859A"
   ]
   edge [
     source 209
@@ -4715,6 +5037,27 @@ graph [
     incident_ids "19780427013859I"
   ]
   edge [
+    source 213
+    target 2
+    relation "PART OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "19780427013859I"
+  ]
+  edge [
+    source 215
+    target 106
+    relation "TIME PERIOD"
+    incident_ids "_networkx_list_start"
+    incident_ids "19910710026989A"
+  ]
+  edge [
+    source 216
+    target 215
+    relation "INSTANCE OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "19910710026989A"
+  ]
+  edge [
     source 220
     target 417
     relation "secondary_of"
@@ -4727,6 +5070,20 @@ graph [
     relation "secondary_of"
     incident_ids "_networkx_list_start"
     incident_ids "19791128035159A"
+  ]
+  edge [
+    source 223
+    target 224
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "20060621012279A"
+  ]
+  edge [
+    source 224
+    target 223
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "20060621012279A"
   ]
   edge [
     source 226
@@ -4988,6 +5345,13 @@ graph [
     incident_ids "19961027033759A"
   ]
   edge [
+    source 279
+    target 17
+    relation "INSTANCE OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "19870309039779I"
+  ]
+  edge [
     source 280
     target 449
     relation "secondary_of"
@@ -5051,9 +5415,23 @@ graph [
     incident_ids "19780111000459A"
   ]
   edge [
+    source 300
+    target 30
+    relation "MAINTAINED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "19780111000459A"
+  ]
+  edge [
     source 303
     target 452
     relation "secondary_of"
+    incident_ids "_networkx_list_start"
+    incident_ids "20010411006739I"
+  ]
+  edge [
+    source 303
+    target 1
+    relation "USED BY"
     incident_ids "_networkx_list_start"
     incident_ids "20010411006739I"
   ]
@@ -5128,6 +5506,13 @@ graph [
     incident_ids "19980415037339I"
   ]
   edge [
+    source 321
+    target 320
+    relation "PART OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "19980415037339I"
+  ]
+  edge [
     source 323
     target 323
     relation "coreference"
@@ -5138,6 +5523,13 @@ graph [
     source 328
     target 462
     relation "secondary_of"
+    incident_ids "_networkx_list_start"
+    incident_ids "20000215041409A"
+  ]
+  edge [
+    source 329
+    target 333
+    relation "INSTANCE OF"
     incident_ids "_networkx_list_start"
     incident_ids "20000215041409A"
   ]
@@ -5168,6 +5560,13 @@ graph [
     relation "tertiary_of"
     incident_ids "_networkx_list_start"
     incident_ids "19880527016939A"
+  ]
+  edge [
+    source 339
+    target 341
+    relation "LOCATION"
+    incident_ids "_networkx_list_start"
+    incident_ids "19960418007829A"
   ]
   edge [
     source 340
@@ -5219,6 +5618,13 @@ graph [
     incident_ids "20030620012809I"
   ]
   edge [
+    source 350
+    target 30
+    relation "MAINTAINED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "20030620012809I"
+  ]
+  edge [
     source 353
     target 354
     relation "coreference"
@@ -5261,6 +5667,13 @@ graph [
     incident_ids "19870309039779I"
   ]
   edge [
+    source 366
+    target 7
+    relation "INSTANCE OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "20000215010329A"
+  ]
+  edge [
     source 367
     target 7
     relation "secondary_of"
@@ -5268,10 +5681,87 @@ graph [
     incident_ids "20000215010329A"
   ]
   edge [
+    source 388
+    target 38
+    relation "PART OF"
+    incident_ids "19860706034879A"
+    incident_ids "19780509032859I"
+  ]
+  edge [
+    source 392
+    target 118
+    relation "PART OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "19790211002709A"
+  ]
+  edge [
+    source 396
+    target 134
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "20050504010229A"
+  ]
+  edge [
+    source 396
+    target 131
+    relation "PART OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "20050504010229A"
+  ]
+  edge [
+    source 419
+    target 203
+    relation "PART OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "20010910029739I"
+  ]
+  edge [
+    source 434
+    target 263
+    relation "PART OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "19780916024019A"
+  ]
+  edge [
     source 436
     target 30
     relation "secondary_of"
     incident_ids "_networkx_list_start"
     incident_ids "20060718018299I"
+  ]
+  edge [
+    source 437
+    target 436
+    relation "MAINTAINED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "20060718018299I"
+  ]
+  edge [
+    source 439
+    target 270
+    relation "PART OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "20040925025079A"
+  ]
+  edge [
+    source 449
+    target 17
+    relation "PART OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "19870309039779I"
+  ]
+  edge [
+    source 451
+    target 30
+    relation "CONFLICT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19780111000459A"
+  ]
+  edge [
+    source 453
+    target 305
+    relation "USED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "19870816062719I"
   ]
 ]
