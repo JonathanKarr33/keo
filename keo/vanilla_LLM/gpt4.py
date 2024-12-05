@@ -1,5 +1,6 @@
 import pandas as pd
 import openai
+from openai import OpenAI
 import ast
 import re
 import nltk
@@ -13,7 +14,8 @@ from utils.evaluate_ner import evaluate_ner
 nltk.download('punkt')
 
 # Set your OpenAI API key
-openai.api_key = "Your_OpenAI_Key"  # Replace with your OpenAI API key
+openai_api_key = "Your_Key"  # Replace with your OpenAI API key
+client = OpenAI(api_key=openai_api_key)
 
 # Load the CSV files from the 'raw' directory
 base_path = "OMIn_dataset/gold_standard/raw"
@@ -70,16 +72,19 @@ def perform_ner(ner_df):
             f"Output: Entities:"
         )
 
-        # Call the OpenAI GPT-4o API
-        response = openai.ChatCompletion.create(
+        # Call the OpenAI API
+        response = client.chat.completions.create(
             model="gpt-4o",
-            messages=[{"role": "user", "content": prompt}],
+            messages=[
+                {"role": "system", "content": "You are an assistant specializing in Named Entity Recognition (NER)."},
+                {"role": "user", "content": prompt}
+            ],
             max_tokens=500,
-            temperature=0,
-        )
+            temperature=0
+    )
 
         # Extract and process GPT-4 output
-        gpt_output = response['choices'][0]['message']['content'].strip()
+        gpt_output = response.choices[0].message.content.strip()
 
         try:
             # Regex to find the entities and types in the output
@@ -140,16 +145,20 @@ def perform_cr(cr_df):
             f"Text: \"{sample_text}\"\n"
             "Output:")
 
-        # Call the GPT-4o API
-        response = openai.ChatCompletion.create(
+        # Call the OpenAI API
+        response = client.chat.completions.create(
             model="gpt-4o",
-            messages=[{"role": "user", "content": prompt}],
+            messages=[
+                {"role": "system", "content": "You are an assistant specializing in Coreference Resolution (CR)."},
+                {"role": "user", "content": prompt}
+            ],
             max_tokens=500,
-            temperature=0,
-        )
+            temperature=0
+    )
 
-        # Extract and process GPT-4o output
-        gpt_output = response['choices'][0]['message']['content'].strip()
+        # Extract and process GPT-4 output
+        gpt_output = response.choices[0].message.content.strip()
+
         try:
             # Regex to find clusters in the output
             cluster_matches = re.findall(r'Cluster\s*\d+:\s*\[(.*?)\]', gpt_output)
@@ -226,16 +235,20 @@ def perform_re(re_df):
             f"Text: \"{sample_text}\"\n"
             "Output:")
 
-        # Call the GPT-4o API
-        response = openai.ChatCompletion.create(
+        # Call the OpenAI API
+        response = client.chat.completions.create(
             model="gpt-4o",
-            messages=[{"role": "user", "content": prompt}],
+            messages=[
+                {"role": "system", "content": "You are an assistant specializing in Relation Extraction (RE)."},
+                {"role": "user", "content": prompt}
+            ],
             max_tokens=500,
-            temperature=0,
-        )
+            temperature=0
+    )
 
-        # Extract and process GPT-4o output
-        gpt_output = response['choices'][0]['message']['content'].strip()
+        # Extract and process GPT-4 output
+        gpt_output = response.choices[0].message.content.strip()
+
         try:
             # Extract and process GPT-4o output
             triple_matches = re.findall(
