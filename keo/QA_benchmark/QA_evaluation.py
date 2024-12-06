@@ -3,11 +3,11 @@ from tqdm import tqdm
 from openai import OpenAI
 
 # File paths
-input_file_path_list = ["VanillaGPT4o_QA_Answers.csv", "GraphRAG_QA_Answers.csv"]
-output_file_path_list = ["VanillaGPT4o_QA_Evaluation.csv", "GraphRAG_QA_Evaluation.csv"]
+input_file_path_list = ["GraphRAG_QA_Answers.csv"]
+output_file_path_list = ["GraphRAG_QA_Evaluation.csv"]
 
 # OpenAI API Key
-openai_api_key = "Your_OpenAI_API_Key"
+openai_api_key = "Your_OpenAI_API_Key"  # Replace with your OpenAI API key
 client = OpenAI(api_key=openai_api_key)
 
 for input_file_path, output_file_path in zip(input_file_path_list, output_file_path_list):
