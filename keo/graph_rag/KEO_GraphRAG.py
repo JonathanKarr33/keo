@@ -1,703 +1,546 @@
-# Standard libraries
 import os
-import re
 import json
-import typing
-from typing import List, Dict, Tuple, Optional
-import pandas as pd
 import numpy as np
-from tqdm import tqdm
-import warnings
-warnings.filterwarnings("ignore", category=DeprecationWarning)
-
-# NLP and Embedding Libraries
-import spacy
-from spacy.tokens import Doc
-from transformers import pipeline
-from sentence_transformers import SentenceTransformer
+from typing import List, Dict, Optional
+import matplotlib.pyplot as plt
 
 # Graph Libraries
 import networkx as nx
-from networkx.algorithms import shortest_paths
-import matplotlib.pyplot as plt
 
-import pandas as pd
-import re
-import openai
+# OpenAI
 from openai import OpenAI
-openai_api_key = 'Your_OpenAI_API_Key'
 
-class DataPreparer:
-    def __init__(self, file_path):
-        """
-        Initialize the DataPreparer with the CSV file path.
-        """
-        self.file_path = file_path
-        self.raw_data = None
-        self.cleaned_data = None
+openai_api_key = 'api key goes here'
 
-    def load_data(self):
-        """
-        Load the data from the CSV file.
-        """
-        try:
-            self.raw_data = pd.read_csv(self.file_path)
-            print("Data loaded successfully!")
-        except Exception as e:
-            print(f"Error loading data: {e}")
-
-    def clean_data(self):
-        """
-        Perform cleaning operations on the dataset:
-        - Drop unnecessary columns.
-        - Rename columns for readability.
-        - Handle missing values.
-        """
-        if self.raw_data is None:
-            print("No data to clean. Please load data first.")
-            return
-
-        self.cleaned_data = self.raw_data.drop(columns=['Unnamed: 0'], errors='ignore')
-        self.cleaned_data.rename(
-            columns={
-                'c119': 'Incident_Description',
-                'c77': 'Contributing_Factor',
-                'c79': 'Event_Context',
-                'c81': 'Role',
-                'c146': 'Weight_Category',
-                'c148': 'Aircraft_Type',
-                'c150': 'Power_Characteristics',
-                'c161': 'Outcome',
-            },
-            inplace=True,
-        )
-        self.cleaned_data.fillna('Unknown', inplace=True)
-        print("Data cleaned successfully!")
-
-    def normalize_text(self):
-        """
-        Normalize text fields:
-        - Convert text to lowercase.
-        - Remove special characters.
-        """
-        if self.cleaned_data is None:
-            print("No data to normalize. Please clean data first.")
-            return
-
-        def normalize(text):
-            text = str(text).lower()  # Ensure text is a string before normalization
-            text = re.sub(r'[^a-zA-Z0-9\s]', '', text)
-            return text.strip()
-
-        for column in self.cleaned_data.columns:
-            if self.cleaned_data[column].dtype == "object":
-                self.cleaned_data[column] = self.cleaned_data[column].apply(normalize)
-
-        print("Text fields normalized successfully!")
-
-    def get_prepared_data(self):
-        """
-        Return the cleaned and prepared data as a Pandas DataFrame.
-        """
-        if self.cleaned_data is None:
-            print("Data is not prepared yet. Please clean and normalize the data.")
-            return None
-        return self.cleaned_data
-
-class DynamicGraphProcessor:
-    def __init__(self, data):
-        """
-        Initialize the graph processor with prepared data.
-        """
-        self.data = data
-        self.graph = nx.DiGraph()
-        self.nlp = spacy.load("en_core_web_sm")
-
-    def extract_entities_and_relationships(self, text):
-        """
-        Enhanced entity and relationship extraction.
-        """
-        doc = self.nlp(text)
-        relationships = []
-
-        # Improved entity extraction
-        entities = []
-        for ent in doc.ents:
-            if not ent.text.lower() in ['on', 'in', 'of', 'the', 'a', 'an']:  # Filter common words
-                entities.append((ent.text, ent.label_))
-
-        # Enhanced relationship extraction
-        for token in doc:
-            # Expanded dependency patterns
-            if token.dep_ in ("nsubj", "dobj", "pobj", "amod", "compound"):
-                if not token.is_stop and token.head.pos_ in ['VERB', 'NOUN']:  # More specific conditions
-                    subject = token.head.text
-                    obj = token.text
-                    rel = token.dep_
-
-                    # Get fuller context
-                    context = " ".join([t.text for t in token.head.subtree
-                                     if not t.is_stop])  # Remove stopwords from context
-
-                    # Add more semantic information
-                    relationships.append({
-                        "subject": subject,
-                        "relation": rel,
-                        "object": obj,
-                        "context": context,
-                        "verb": token.head.lemma_ if token.head.pos_ == 'VERB' else None,
-                        "confidence": 1.0 if token.dep_ in ("nsubj", "dobj") else 0.8
-                    })
-
-        return relationships, entities
-
-    def build_graph(self):
-        """
-        Enhanced graph building with better entity handling.
-        """
-        for _, row in self.data.iterrows():
-            incident_description = row.get("Incident_Description", "")
-            relationships, entities = self.extract_entities_and_relationships(incident_description)
-
-            # Add entity nodes with more context
-            for entity, entity_type in entities:
-                if len(entity.split()) <= 3:  # Filter out overly long phrases
-                    self.graph.add_node(
-                        entity,
-                        type=entity_type,
-                        category=row.get("Contributing_Factor", "Unknown"),
-                        context=row.get("Event_Context", "")
-                    )
-
-            # Add relationship edges with enhanced information
-            for rel in relationships:
-                subject = rel["subject"]
-                obj = rel["object"]
-
-                # Skip very short or common words
-                if (len(subject) <= 2 or len(obj) <= 2 or
-                    subject.lower() in ['on', 'in', 'of'] or
-                    obj.lower() in ['on', 'in', 'of']):
-                    continue
-
-                # Add nodes if they don't exist
-                for node in [subject, obj]:
-                    if node not in self.graph:
-                        self.graph.add_node(
-                            node,
-                            type="Entity",
-                            category=row.get("Contributing_Factor", "Unknown"),
-                            context=row.get("Event_Context", "")
-                        )
-
-                # Add edge with rich metadata
-                self.graph.add_edge(
-                    subject,
-                    obj,
-                    relationship=rel["relation"],
-                    context=rel["context"],
-                    confidence=rel.get("confidence", 1.0),
-                    incident_type=row.get("Contributing_Factor", "Unknown")
-                )
-
-        print(f"Graph built successfully with {self.graph.number_of_nodes()} nodes and {self.graph.number_of_edges()} edges!")
-
-    def detect_communities(self):
-        """
-        Detect communities in the graph using Label Propagation.
-        """
-        from networkx.algorithms.community import asyn_lpa_communities
-
-        # Convert to undirected graph for community detection
-        undirected_graph = self.graph.to_undirected()
-        self.communities = list(asyn_lpa_communities(undirected_graph))
-
-        # Assign community labels to nodes
-        community_mapping = {}
-        for i, community in enumerate(self.communities):
-            for node in community:
-                community_mapping[node] = i
-        nx.set_node_attributes(self.graph, community_mapping, 'community')
-
-        print(f"Detected {len(self.communities)} communities!")
-
-    def summarize_communities(self, openai_api_key):
-        """
-        Summarize each community using OpenAI's ChatCompletion API.
-        """
-        def summarize_community(community_nodes):
-            """Summarize a single community."""
-            context = "This is a community of entities and their relationships:\n"
-
-            # Add nodes and their types
-            for node in community_nodes:
-                node_type = self.graph.nodes[node].get('type', 'Unknown')
-                context += f"- {node} (Type: {node_type})\n"
-
-                # Add relationships for this node
-                for neighbor in self.graph.neighbors(node):
-                    edge_data = self.graph.get_edge_data(node, neighbor)
-                    if edge_data:
-                        relationship = edge_data.get('relationship', 'related_to')
-                        context += f"  → {relationship} → {neighbor}\n"
-
-            client = OpenAI(api_key=openai_api_key)
-            response = client.chat.completions.create(
-                model="gpt-3.5-turbo",
-                messages=[
-                    {"role": "system", "content": "You are an assistant specializing in analyzing entity relationships in aviation safety incidents."},
-                    {"role": "user", "content": f"Analyze and summarize the following entity relationships, focusing on key patterns and insights:\n{context}"}
-                ],
-                max_tokens=300,
-                temperature=0.7
-            )
-            return response.choices[0].message.content.strip()
-
-        self.community_summaries = {}
-        for i, community in enumerate(self.communities):
-            try:
-                summary = summarize_community(community)
-                self.community_summaries[i] = summary
-                print(f"Community {i} Summary:\n{summary}\n")
-            except Exception as e:
-                print(f"Error summarizing community {i}: {e}")
-
-    def get_graph_summary(self):
-        """
-        Provide a detailed summary of the graph structure.
-        """
-        summary = {
-            "Total Nodes": self.graph.number_of_nodes(),
-            "Total Edges": self.graph.number_of_edges(),
-            "Communities Detected": len(self.communities) if hasattr(self, "communities") else 0,
-            "Node Types": self._get_node_type_distribution(),
-            "Relationship Types": self._get_relationship_distribution(),
-            "Average Degree": sum(dict(self.graph.degree()).values()) / self.graph.number_of_nodes()
-        }
-        return summary
-
-    def _get_node_type_distribution(self):
-        """Helper method to get distribution of node types."""
-        type_count = {}
-        for node in self.graph.nodes():
-            node_type = self.graph.nodes[node].get('type', 'Unknown')
-            type_count[node_type] = type_count.get(node_type, 0) + 1
-        return type_count
-
-    def _get_relationship_distribution(self):
-        """Helper method to get distribution of relationship types."""
-        rel_count = {}
-        for _, _, data in self.graph.edges(data=True):
-            rel_type = data.get('relationship', 'Unknown')
-            rel_count[rel_type] = rel_count.get(rel_type, 0) + 1
-        return rel_count
-
-
-def visualize_graph_with_communities(graph):
+def load_aviation_graph(graph_path: str = 'knowledge_graph.gml') -> nx.Graph:
     """
-    Visualize the graph with nodes colored by their community.
-    """
-    # Get community labels
-    communities = nx.get_node_attributes(graph, 'community')
-    if not communities:
-        print("No communities detected. Please run community detection first.")
-        return
-
-    # Assign colors to communities
-    community_colors = {node: communities[node] for node in graph.nodes()}
-
-    # Draw the graph
-    plt.figure(figsize=(12, 8))
-    pos = nx.spring_layout(graph)  # Generate layout for visualization
-    nx.draw(
-        graph,
-        pos,
-        with_labels=True,
-        node_color=[community_colors.get(node, 0) for node in graph.nodes()],
-        cmap=plt.cm.rainbow,
-        node_size=500,
-        font_size=8,
-    )
-    plt.title("Graph Visualization with Communities")
-    plt.show()
-
-
-class GraphRetriever:
-    def __init__(self, graph, embedding_model="text-embedding-3-small"):
-        """
-        Initialize the graph retriever.
-
-        Args:
-            graph: The graph object containing nodes and edges.
-            embedding_model: Model to use for generating embeddings.
-        """
-        self.graph = graph
-        self.embedding_model = embedding_model
-        self.embeddings = {}
-        self.openai_client = None
-
-    def set_openai_client(self, api_key):
-        """
-        Set up the OpenAI client.
-
-        Args:
-            api_key: OpenAI API key.
-        """
-        self.openai_client = OpenAI(api_key=api_key)
-
-    def generate_embeddings(self):
-        """Generate embeddings with caching."""
-        cache_file = "embeddings_cache.json"
-
-        # Load cache if exists
-        if os.path.exists(cache_file):
-            with open(cache_file, 'r') as f:
-                self.embeddings = json.load(f)
-
-        # Generate missing embeddings
-        new_nodes = set(self.graph.nodes()) - set(self.embeddings.keys())
-        if new_nodes:
-            for node in new_nodes:
-                # Generate embedding as before
-                node_text = f"{node} ({self.graph.nodes[node].get('type', 'Unknown')})"
-                response = self.openai_client.embeddings.create(
-                    model=self.embedding_model,
-                    input=node_text,
-                    encoding_format="float"
-                )
-                self.embeddings[node] = response.data[0].embedding
-
-            # Save updated cache
-            with open(cache_file, 'w') as f:
-                json.dump(self.embeddings, f)
-
-    def calculate_similarity(self, query_embedding, node_embedding):
-        """
-        Calculate cosine similarity between query and node embeddings.
-        """
-        dot_product = np.dot(query_embedding, node_embedding)
-        query_norm = np.linalg.norm(query_embedding)
-        node_norm = np.linalg.norm(node_embedding)
-        return dot_product / (query_norm * node_norm)
-
-    def retrieve(self, query, k=5):
-        """
-        Retrieve k most relevant nodes based on the query.
-
-        Args:
-            query: The search query.
-            k: Number of nodes to retrieve.
-
-        Returns:
-            List of (node, similarity_score) tuples.
-        """
-        if not self.embeddings:
-            raise ValueError("No embeddings generated. Call generate_embeddings first.")
-
-        # Generate embedding for the query
-        query_response = self.openai_client.embeddings.create(
-            model=self.embedding_model,
-            input=query,
-            encoding_format="float"
-        )
-        query_embedding = query_response.data[0].embedding
-
-        # Calculate similarities
-        similarities = []
-        for node, node_embedding in self.embeddings.items():
-            similarity = self.calculate_similarity(query_embedding, node_embedding)
-            similarities.append((node, similarity))
-
-        # Sort by similarity and return top k
-        similarities.sort(key=lambda x: x[1], reverse=True)
-        return similarities[:k]
-
-    def retrieve_with_context(self, query, k=5, include_neighbors=True):
-        """
-        Retrieve relevant nodes with their neighborhood context.
-
-        Args:
-            query: The search query.
-            k: Number of nodes to retrieve.
-            include_neighbors: Whether to include neighboring nodes.
-
-        Returns:
-            Dictionary with relevant nodes and their context.
-        """
-        relevant_nodes = self.retrieve(query, k)
-
-        results = {}
-        for node, score in relevant_nodes:
-            context = {
-                'similarity_score': score,
-                'node_type': self.graph.nodes[node].get('type', 'Unknown'),
-                'neighbors': [],
-                'edges': []
-            }
-
-            if include_neighbors:
-                # Get neighboring nodes
-                neighbors = list(self.graph.neighbors(node))
-                neighbor_data = []
-                for neighbor in neighbors:
-                    neighbor_data.append({
-                        'node': neighbor,
-                        'type': self.graph.nodes[neighbor].get('type', 'Unknown')
-                    })
-                context['neighbors'] = neighbor_data
-
-                # Get edges with these neighbors
-                edges = []
-                for neighbor in neighbors:
-                    edge_data = self.graph.get_edge_data(node, neighbor)
-                    if edge_data:
-                        edges.append({
-                            'source': node,
-                            'target': neighbor,
-                            'attributes': edge_data
-                        })
-                context['edges'] = edges
-
-            results[node] = context
-
-        return results
-
-    def search(self, query, k=5, threshold=0.5):
-        """
-        Search the graph with a semantic query.
-
-        Args:
-            query: Search query.
-            k: Maximum number of results to return.
-            threshold: Minimum similarity score threshold.
-
-        Returns:
-            List of relevant results with context.
-        """
-        results = self.retrieve_with_context(query, k)
-
-        # Filter by threshold
-        filtered_results = {
-            node: data
-            for node, data in results.items()
-            if data['similarity_score'] >= threshold
-        }
-
-        return filtered_results
-    def hybrid_search(self, query, k=5, alpha=0.5):
-        """
-        Combine semantic and structural search.
-
-        Args:
-            query: Search query
-            k: Number of results
-            alpha: Weight between semantic (0) and structural (1) similarity
-        """
-        semantic_results = self.search(query, k=k)
-
-        # Add PageRank scores for structural importance
-        pagerank_scores = nx.pagerank(self.graph)
-
-        # Combine scores
-        combined_results = {}
-        for node, data in semantic_results.items():
-            combined_score = (
-                alpha * pagerank_scores[node] +
-                (1 - alpha) * data['similarity_score']
-            )
-            data['combined_score'] = combined_score
-            combined_results[node] = data
-
-        return combined_results
-
-
-# Pipeline integration code
-def run_analysis_pipeline(csv_path, openai_api_key, cache_dir="cache"):
-    """
-    Run the complete analysis pipeline with enhanced features.
+    Load the existing aviation maintenance knowledge graph.
 
     Args:
-        csv_path: Path to the FAA data CSV
-        openai_api_key: OpenAI API key
-        cache_dir: Directory for caching (reserved for future use)
-    """
-    # Create cache directory if it doesn't exist
-    os.makedirs(cache_dir, exist_ok=True)
+        graph_path (str): Path to the .gml graph file
 
-    # Step 1: Data Preparation
-    print("Step 1: Preparing data...")
-    data_preparer = DataPreparer(csv_path)
-    data_preparer.load_data()
-    data_preparer.clean_data()
-    data_preparer.normalize_text()
-    prepared_data = data_preparer.get_prepared_data()
-
-    # Step 2: Graph Processing
-    print("\nStep 2: Building and processing graph...")
-    graph_processor = DynamicGraphProcessor(prepared_data)
-    graph_processor.build_graph()
-
-    # Step 3: Community Detection
-    print("\nStep 3: Detecting communities...")
-    graph_processor.detect_communities()
-
-    # Step 4: Set up retriever
-    print("\nStep 4: Setting up retriever and generating embeddings...")
-    retriever = GraphRetriever(
-        graph_processor.graph,
-        embedding_model="text-embedding-3-small"
-    )
-    retriever.set_openai_client(openai_api_key)
-    retriever.generate_embeddings()
-
-    return {
-        'data_preparer': data_preparer,
-        'graph_processor': graph_processor,
-        'retriever': retriever
-    }
-
-def query_graph(retriever, query, k=10, threshold=0.3):
-    """
-    Query the graph and generate a coherent summary answer.
+    Returns:
+        nx.Graph: Loaded NetworkX graph
     """
     try:
-        print("Executing search...")
-        results = retriever.search(query, k=k, threshold=threshold)
+        graph = nx.read_gml(graph_path)
+        print(f"Graph loaded successfully!")
+        print(f"Number of nodes: {graph.number_of_nodes()}")
+        print(f"Number of edges: {graph.number_of_edges()}")
+        return graph
+    except Exception as e:
+        print(f"Error loading graph: {e}")
+        return None
 
-        if not results:
-            return "No relevant information found in the incident data."
+# Load the graph
+graph = load_aviation_graph()
 
-        # Collect and analyze the findings
-        findings = {
-            'incidents': [],
-            'categories': set(),
-            'contexts': set(),
-            'relationships': []
-        }
+# Print sample of nodes and edges if graph loaded successfully
+if graph:
+    print("\nSample of nodes:")
+    for node in list(graph.nodes())[:5]:
+        print(f"Node: {node}")
+        print(f"Attributes: {graph.nodes[node]}\n")
 
-        for node, data in results.items():
-            node_attrs = retriever.graph.nodes[node]
+    print("\nSample of edges:")
+    for edge in list(graph.edges(data=True))[:5]:
+        print(f"Edge: {edge}")
 
-            # Collect incident categories
-            if 'category' in node_attrs:
-                findings['categories'].add(node_attrs['category'])
 
-            # Collect contexts
-            if 'context' in node_attrs:
-                findings['contexts'].add(node_attrs['context'])
+def visualize_graph(graph: nx.Graph,
+                   max_nodes: int = 100,
+                   node_size: int = 1000,
+                   font_size: int = 12,
+                   figure_size: tuple = (15, 10)):
+    """
+    Visualize the aviation maintenance knowledge graph.
 
-            # Collect relationships and their contexts
-            if data.get('edges'):
-                for edge in data['edges']:
-                    attrs = edge.get('attributes', {})
-                    if 'context' in attrs:
-                        findings['relationships'].append({
-                            'source': edge['source'],
-                            'target': edge['target'],
-                            'context': attrs['context']
-                        })
+    Args:
+        graph (nx.Graph): The loaded knowledge graph
+        max_nodes (int): Maximum number of nodes to display for readability
+        node_size (int): Size of nodes in visualization
+        font_size (int): Size of label font
+        figure_size (tuple): Size of the figure (width, height)
+    """
+    try:
+        # Create subset if graph is too large
+        if graph.number_of_nodes() > max_nodes:
+            print(f"Graph too large, showing first {max_nodes} nodes")
+            nodes = list(graph.nodes())[:max_nodes]
+            graph_vis = graph.subgraph(nodes)
+        else:
+            graph_vis = graph
 
-        # Generate a coherent summary
-        client = OpenAI(api_key=retriever.openai_client.api_key)
+        # Setup the visualization
+        plt.figure(figsize=figure_size)
+        pos = nx.spring_layout(graph_vis, k=1, iterations=50)
 
-        # Prepare the context for GPT
-        context = f"""
-            Based on the analysis of aviation incident data:
+        # Draw nodes
+        nx.draw_networkx_nodes(graph_vis, pos,
+                             node_color='lightblue',
+                             node_size=node_size,
+                             alpha=0.7)
 
-            Categories of incidents: {', '.join(findings['categories'])}
-            Incident contexts: {', '.join(findings['contexts'])}
+        # Draw edges with relationship types
+        edge_labels = {}
+        for u, v, data in graph_vis.edges(data=True):
+            # Get relationship type from edge data
+            rel_type = data.get('relationship', '')
+            if rel_type:
+                edge_labels[(u, v)] = rel_type
 
-            Key relationships found:
-            {chr(10).join([f"- {r['source']} related to {r['target']}: {r['context']}" for r in findings['relationships']])}
+        nx.draw_networkx_edges(graph_vis, pos,
+                             edge_color='gray',
+                             arrows=True,
+                             arrowsize=20)
 
-            Original query: {query}
-            """
+        # Add labels
+        nx.draw_networkx_labels(graph_vis, pos,
+                              font_size=font_size)
+        nx.draw_networkx_edge_labels(graph_vis, pos,
+                                   edge_labels=edge_labels,
+                                   font_size=font_size-2)
 
-        response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                {"role": "system", "content": "You are an aviation safety analyst. Provide a clear, concise summary of incident data findings."},
-                {"role": "user", "content": context}
-            ],
-            max_tokens=150,
-            temperature=0.7
-        )
+        plt.title("Aviation Maintenance Knowledge Graph")
+        plt.axis('off')
+        plt.tight_layout()
 
-        summary = response.choices[0].message.content.strip()
+        # Show graph statistics
+        print(f"\nGraph Statistics:")
+        print(f"Total nodes: {graph.number_of_nodes()}")
+        print(f"Total edges: {graph.number_of_edges()}")
+        print(f"Average degree: {sum(dict(graph.degree()).values())/graph.number_of_nodes():.2f}")
 
-        # Print detailed findings for reference
-        print("\nDetailed Findings:")
-        print("="*50)
-        for node, data in results.items():
-            print(f"\nNode: {node}")
-            print(f"Similarity Score: {data['similarity_score']:.3f}")
-            print(f"Node Type: {data['node_type']}")
-            if data.get('neighbors'):
-                print("\nRelated factors:")
-                for neighbor in data['neighbors']:
-                    print(f"- {neighbor['node']}")
-
-        print("\nSummary Answer:")
-        print("="*50)
-        print(summary)
-
-        return summary
+        plt.show()
 
     except Exception as e:
-        print(f"Error during query: {e}")
-        return f"Error processing query: {str(e)}"
+        print(f"Error visualizing graph: {e}")
 
+# Example usage
+if graph:  # Only if graph was loaded successfully
+    visualize_graph(graph)
 
-# Update the main execution part:
-if __name__ == "__main__":
-    # Initialize the pipeline
-    pipeline_results = run_analysis_pipeline(
-        csv_path="../../OMIn_dataset/data/FAA_data/FAA_sample_100.csv",
-        openai_api_key=openai_api_key,
-        cache_dir="graph_cache"
-    )
+class GraphRetriever:
+    def __init__(self, graph: nx.Graph, openai_api_key: str):
+        """
+        Initialize the graph retriever with weights for hybrid search.
 
-    print("\nPipeline Statistics:")
-    print("-"*30)
-    retriever = pipeline_results['retriever']
-    graph_processor = pipeline_results['graph_processor']
-    print(f"Total nodes in graph: {graph_processor.graph.number_of_nodes()}")
-    print(f"Total edges in graph: {graph_processor.graph.number_of_edges()}")
-    print(f"Number of embeddings generated: {len(retriever.embeddings)}")
+        Args:
+            graph (nx.Graph): Loaded knowledge graph
+            openai_api_key (str): OpenAI API key for embeddings
+        """
+        self.graph = graph
+        self.openai_client = OpenAI(api_key=openai_api_key)
 
-    # Add graph analysis
-    print("\nGraph Analysis:")
-    print("-"*30)
-    print("Most connected nodes:")
-    degrees = sorted([(n, d) for n, d in graph_processor.graph.degree()],
-                    key=lambda x: x[1], reverse=True)[:5]
-    for node, degree in degrees:
-        print(f"- {node}: {degree} connections")
+        # Configuration for hybrid search
+        self.config = {
+            'semantic_weight': 0.4,      # α: Weight for semantic similarity
+            'path_weight': 0.4,          # β: Weight for path-based relevance
+            'edge_weight': 0.2,          # γ: Weight for edge type importance
+            'max_path_length': 3,        # Maximum path length to consider
+            'embedding_model': "text-embedding-3-small"
+        }
 
-    # Run example queries with more variation
-    queries = [
-        "What is the most common cause of engine failure?",
-        "Describe incidents involving engine problems",
-        "How do weather conditions affect incidents?",
-        "What are the main factors in landing incidents?",
-        "What types of pilot errors are reported?",
-        "What safety issues are most common?"
-    ]
+        # Cache for embeddings
+        self.embeddings = {}
 
-    for query in queries:
-        print(f"\nExecuting Query: {query}")
-        print("-"*50)
-        results = query_graph(
-            pipeline_results['retriever'],
-            query,
-            k=8,  # Increased number of results
-            threshold=0.3  # Lowered threshold
+        # Edge type importance (can be customized)
+        self.edge_importance = {
+            'has_part': 1.0,
+            'causes': 0.9,
+            'requires': 0.8,
+            'affects': 0.7,
+            'related_to': 0.5
+        }
+
+    def generate_embeddings(self):
+        """
+        Generate and cache embeddings for all nodes
+        """
+        try:
+            # Load cache if exists
+            if os.path.exists('embeddings_cache.json'):
+                with open('embeddings_cache.json', 'r') as f:
+                    self.embeddings = json.load(f)
+                print("Loaded embeddings from cache")
+
+            # Generate embeddings for new nodes
+            new_nodes = set(self.graph.nodes()) - set(self.embeddings.keys())
+            if new_nodes:
+                print(f"Generating embeddings for {len(new_nodes)} new nodes")
+                for node in new_nodes:
+                    # Include node attributes in embedding context
+                    node_context = f"{node} {str(self.graph.nodes[node])}"
+                    response = self.openai_client.embeddings.create(
+                        model=self.config['embedding_model'],
+                        input=node_context,
+                        encoding_format="float"
+                    )
+                    self.embeddings[node] = response.data[0].embedding
+
+                # Save updated cache
+                with open('embeddings_cache.json', 'w') as f:
+                    json.dump(self.embeddings, f)
+
+            print("Embeddings generated successfully")
+
+        except Exception as e:
+            print(f"Error generating embeddings: {e}")
+
+    def calculate_semantic_similarity(self, query_embedding: List[float], node_embedding: List[float]) -> float:
+        """
+        Calculate cosine similarity between query and node embeddings
+        """
+        dot_product = np.dot(query_embedding, node_embedding)
+        norm_product = np.linalg.norm(query_embedding) * np.linalg.norm(node_embedding)
+        return dot_product / norm_product if norm_product != 0 else 0
+
+    def calculate_path_weight(self, path: List[str]) -> float:
+        """
+        Calculate the weight of a path based on edge weights and types
+        """
+        if len(path) < 2:
+            return 0
+
+        total_weight = 1.0
+        for i in range(len(path) - 1):
+            edge_data = self.graph.get_edge_data(path[i], path[i+1])
+            if edge_data:
+                # Consider both edge weight and type importance
+                edge_weight = edge_data.get('weight', 1.0)
+                edge_type = edge_data.get('relationship', 'related_to')
+                type_importance = self.edge_importance.get(edge_type, 0.5)
+                total_weight *= edge_weight * type_importance
+
+        return total_weight
+
+    def find_relevant_paths(self, start_node: str, max_length: int = None) -> List[List[str]]:
+        """
+        Find relevant paths from a start node
+        """
+        if max_length is None:
+            max_length = self.config['max_path_length']
+
+        paths = []
+        for node in self.graph.nodes():
+            if node != start_node:
+                try:
+                    for path in nx.all_simple_paths(self.graph, start_node, node, cutoff=max_length):
+                        paths.append(path)
+                except nx.NetworkXNoPath:
+                    continue
+        return paths
+
+    def retrieve(self, query: str, k: int = 5) -> List[Dict]:
+        """
+        Retrieve relevant nodes using hybrid approach
+
+        Args:
+            query (str): Search query
+            k (int): Number of results to return
+
+        Returns:
+            List[Dict]: Ranked relevant results with scores and paths
+        """
+        try:
+            # Generate query embedding
+            query_response = self.openai_client.embeddings.create(
+                model=self.config['embedding_model'],
+                input=query,
+                encoding_format="float"
+            )
+            query_embedding = query_response.data[0].embedding
+
+            # Calculate scores for all nodes
+            results = []
+            for node in self.graph.nodes():
+                if node not in self.embeddings:
+                    continue
+
+                # Calculate semantic similarity
+                semantic_score = self.calculate_semantic_similarity(
+                    query_embedding,
+                    self.embeddings[node]
+                )
+
+                # Find relevant paths
+                paths = self.find_relevant_paths(node)
+                path_scores = [self.calculate_path_weight(path) for path in paths]
+                max_path_score = max(path_scores) if path_scores else 0
+
+                # Calculate hybrid score
+                hybrid_score = (
+                    self.config['semantic_weight'] * semantic_score +
+                    self.config['path_weight'] * max_path_score
+                )
+
+                results.append({
+                    'node': node,
+                    'score': hybrid_score,
+                    'semantic_similarity': semantic_score,
+                    'paths': paths,
+                    'attributes': self.graph.nodes[node]
+                })
+
+            # Sort by score and return top k
+            results.sort(key=lambda x: x['score'], reverse=True)
+            return results[:k]
+
+        except Exception as e:
+            print(f"Error in retrieval: {e}")
+            return []
+
+    def query(self, query: str, k: int = 5) -> Dict:
+        """
+        Perform a query and return structured results
+
+        Args:
+            query (str): Search query
+            k (int): Number of results
+
+        Returns:
+            Dict: Structured query results with context
+        """
+        results = self.retrieve(query, k)
+
+        response = {
+            'query': query,
+            'results': results,
+            'related_contexts': set(),
+            'maintenance_paths': []
+        }
+
+        # Collect related contexts and maintenance paths
+        for result in results:
+            node = result['node']
+
+            # Add node context
+            if 'context' in result['attributes']:
+                response['related_contexts'].add(result['attributes']['context'])
+
+            # Add maintenance paths
+            for path in result['paths']:
+                if len(path) > 1:
+                    path_info = {
+                        'path': path,
+                        'weight': self.calculate_path_weight(path),
+                        'relationships': []
+                    }
+
+                    # Add relationships along the path
+                    for i in range(len(path) - 1):
+                        edge_data = self.graph.get_edge_data(path[i], path[i+1])
+                        if edge_data:
+                            path_info['relationships'].append(edge_data.get('relationship', 'related_to'))
+
+                    response['maintenance_paths'].append(path_info)
+
+        return response
+    # Add this method to the GraphRetriever class
+    def generate_structured_answer(self, query: str, results: Dict, max_context: int = 3) -> str:
+        """
+        Generate a coherent answer from the graph retrieval results using GPT.
+
+        Args:
+            query (str): Original query
+            results (Dict): Results from retriever
+            max_context (int): Maximum number of context paths to include
+
+        Returns:
+            str: Structured answer to the query
+        """
+        try:
+            # Format context from results
+            context = "Based on the maintenance records analysis:\n\n"
+
+            # Add top findings
+            for i, result in enumerate(results['results'][:max_context], 1):
+                context += f"{i}. Found: {result['node']}\n"
+
+                # Add relevant paths if available
+                if result['paths']:
+                    context += "   Related information:\n"
+                    for path in result['paths'][:2]:
+                        context += f"   - {' -> '.join(path)}\n"
+
+                # Add maintenance context if available
+                if 'maintenance_paths' in results:
+                    for path_info in results['maintenance_paths']:
+                        if result['node'] in path_info['path']:
+                            context += f"   Maintenance context: {' -> '.join(path_info['path'])}\n"
+
+                context += "\n"
+
+            # Create prompt for GPT
+            prompt_message = [
+                {
+                    "role": "system",
+                    "content": """You are an aviation maintenance expert. Provide clear, technical,
+                    but understandable answers based on the maintenance records analysis. Focus on:
+                    - Direct answers to the question
+                    - Technical accuracy
+                    - Maintenance implications
+                    - Common patterns or issues identified
+                    Keep the response concise but informative."""
+                },
+                {
+                    "role": "user",
+                    "content": f"""Question: {query}\n\nAnalysis Results:\n{context}
+
+                    Please provide a clear, technical answer based on this maintenance data.
+                    Focus on answering the specific question while including relevant technical context."""
+                }
+            ]
+
+            # Generate response
+            response = self.openai_client.chat.completions.create(
+                model="gpt-3.5-turbo",
+                messages=prompt_message,
+                temperature=0.7,
+                max_tokens=300
+            )
+
+            return response.choices[0].message.content.strip()
+
+        except Exception as e:
+            print(f"Error generating structured answer: {e}")
+            return f"Error processing results: {str(e)}"
+
+def generate_structured_answer(self, query: str, results: Dict, max_context: int = 3) -> str:
+    """
+    Generate a coherent answer from the graph retrieval results using GPT.
+
+    Args:
+        query (str): Original query
+        results (Dict): Results from retriever
+        max_context (int): Maximum number of context paths to include
+
+    Returns:
+        str: Structured answer to the query
+    """
+    try:
+        # Format context from results
+        context = "Based on the maintenance records analysis:\n\n"
+
+        # Add top findings
+        for i, result in enumerate(results['results'][:max_context], 1):
+            context += f"{i}. Found: {result['node']}\n"
+
+            # Add relevant paths if available
+            if result['paths']:
+                context += "   Related information:\n"
+                for path in result['paths'][:2]:
+                    context += f"   - {' -> '.join(path)}\n"
+
+            # Add maintenance context if available
+            if 'maintenance_paths' in results:
+                for path_info in results['maintenance_paths']:
+                    if result['node'] in path_info['path']:
+                        context += f"   Maintenance context: {' -> '.join(path_info['path'])}\n"
+
+            context += "\n"
+
+        # Create prompt for GPT
+        prompt_message = [
+            {
+                "role": "system",
+                "content": """You are an aviation maintenance expert. Provide clear, technical,
+                but understandable answers based on the maintenance records analysis. Focus on:
+                - Direct answers to the question
+                - Technical accuracy
+                - Maintenance implications
+                - Common patterns or issues identified
+                Keep the response concise but informative."""
+            },
+            {
+                "role": "user",
+                "content": f"""Question: {query}\n\nAnalysis Results:\n{context}
+
+                Please provide a clear, technical answer based on this maintenance data.
+                Focus on answering the specific question while including relevant technical context."""
+            }
+        ]
+
+        # Generate response
+        response = self.openai_client.chat.completions.create(
+            model="gpt-3.5-turbo",
+            messages=prompt_message,
+            temperature=0.7,
+            max_tokens=300
         )
 
-        if not results:
-            print("No results found for this query.")
-        print("\n")
+        return response.choices[0].message.content.strip()
 
-    # # Example usage
-    # query = "What is the most common cause of engine failure?"
-    # summary = query_graph(retriever, query)
+    except Exception as e:
+        print(f"Error generating structured answer: {e}")
+        return f"Error processing results: {str(e)}"
+
+
+def query():
+   """
+   Test the GraphRetriever with sample aviation maintenance queries
+   """
+   # Initialize retriever
+   retriever = GraphRetriever(graph, openai_api_key)
+
+   # Generate embeddings (this will use cache if available)
+   print("Generating embeddings...")
+   retriever.generate_embeddings()
+
+   # Test queries
+   test_queries = [
+       "What are common issues with aircraft brakes?",
+       "Describe problems related to cargo doors",
+       "Show me incidents related to engine failures during takeoff",
+       "What are maintenance issues during taxiing?",
+       "What are common problems with warning lights?"
+   ]
+
+   print("\nTesting Queries:")
+   print("-" * 50)
+
+   for query in test_queries:
+       print(f"\nQuery: {query}")
+       results = retriever.query(query, k=3)
+
+       print("\nTop Results:")
+       for i, result in enumerate(results['results'], 1):
+           print(f"\n{i}. Node: {result['node']}")
+           print(f"   Score: {result['score']:.3f}")
+           print(f"   Semantic Similarity: {result['semantic_similarity']:.3f}")
+
+           if result['paths']:
+               print("\n   Relevant Paths:")
+               for path in result['paths'][:2]:  # Show first 2 paths
+                   print(f"   - {' -> '.join(path)}")
+
+       if results['maintenance_paths']:
+           print("\nMaintenance Context:")
+           for path_info in results['maintenance_paths'][:2]:
+               path = path_info['path']
+               relationships = path_info['relationships']
+               weight = path_info['weight']
+               print(f"   - Path: {' -> '.join(path)}")
+               print(f"   - Relationships: {relationships}")
+               print(f"   - Path Weight: {weight:.3f}")
+
+       # Generate and show structured answer
+       print("\nStructured Answer:")
+       print("-" * 50)
+       answer = retriever.generate_structured_answer(query, results)
+       print(answer)
+       print("-" * 50)
+
+def main():
+   """
+   Main execution function
+   """
+   print("Starting GraphRetriever test...")
+   try:
+       # Run the test
+       query()
+   except Exception as e:
+       print(f"Error in main execution: {e}")
+
+if __name__ == "__main__":
+   main()

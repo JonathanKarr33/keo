@@ -2,37 +2,23 @@ import pandas as pd
 from tqdm import tqdm
 import os
 import sys
-
-# Set up the module path for imports
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.append(parent_dir)
-
-# Import the updated GraphRAG module
-from graph_rag.KEO_GraphRAG import GraphRetriever, load_aviation_graph
+from graph_rag.KEO_GraphRAG_spacy import run_analysis_pipeline, query_graph
 
 # File paths
 qa_file_path = "GPT4o_Generated_QA.csv"
 faa_data_file_path = "../../OMIn_dataset/data/FAA_data/FAA_sample_100.csv"
 output_file_path = "GraphRAG_QA_Answers.csv"
-graph_file_path = "../kg/knowledge_graph.gml"
-openai_api_key = "Your_OpenAI_Key"  # Replace with your OpenAI API key
 
 # Initialize the pipeline
 print("Initializing the pipeline...")
-
-# Load the knowledge graph
-print(f"Loading knowledge graph from {graph_file_path}...")
-graph = load_aviation_graph(graph_file_path)
-if not graph:
-    raise RuntimeError("Failed to load the knowledge graph.")
-
-# Initialize the GraphRetriever
-print("Initializing the GraphRetriever...")
-retriever = GraphRetriever(graph=graph, openai_api_key=openai_api_key)
-
-# Generate embeddings (using cache if available)
-print("Generating embeddings...")
-retriever.generate_embeddings()
+pipeline_results = run_analysis_pipeline(
+    csv_path=faa_data_file_path,
+    openai_api_key="Your_OpenAI_API_Key",  # Replace with your OpenAI API key
+    cache_dir="graph_cache"
+)
+retriever = pipeline_results['retriever']
 
 # Load the QA dataset
 print(f"Loading QA data from {qa_file_path}...")
@@ -50,9 +36,7 @@ for idx, row in tqdm(qa_data.iterrows(), total=len(qa_data), desc="QA Processing
 
     # Query the graph to get an answer
     try:
-        results = retriever.query(question, k=8)
-        # Generate a structured answer
-        answer = retriever.generate_structured_answer(query=question, results=results)
+        answer = query_graph(retriever, query=question, k=8, threshold=0.3)
     except Exception as e:
         answer = f"Error processing question: {str(e)}"
 
