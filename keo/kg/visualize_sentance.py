@@ -59,26 +59,28 @@ def visualize_and_save_subgraph(subgraph, output_file, incident_id, extraction_t
 
 # Main function to run the process
 def main():
-    # Path to the GML file
-    gml_file = 'knowledge_graph_loose.gml'
+    # Paths to the GML files
+    gml_file_strict = 'knowledge_graph_strict.gml'
+    gml_file_loose = 'knowledge_graph_loose.gml'
     
-    # Load the graph
-    graph = load_graph_from_gml(gml_file)
+    # Load the graphs
+    graph_strict = load_graph_from_gml(gml_file_strict)
+    graph_loose = load_graph_from_gml(gml_file_loose)
     
     # Incident ID to filter
-    incident_id = '19960524045629A'
+    incident_id = '19800217031649I'
     
     # Define output paths
     strict_output_file = f'subgraph_strict_{incident_id}.png'
     loose_output_file = f'subgraph_loose_{incident_id}.png'
     
-    # Extract the subgraph related to the incident ID (strict)
-    strict_subgraph = extract_subgraph_by_incident(graph, incident_id, extraction_type="strict")
+    # Extract the subgraph related to the incident ID (strict) from the strict GML file
+    strict_subgraph = extract_subgraph_by_incident(graph_strict, incident_id, extraction_type="strict")
     visualize_and_save_subgraph(strict_subgraph, strict_output_file, incident_id, extraction_type="strict")
     print(f"Strict subgraph for incident ID '{incident_id}' saved as {strict_output_file}")
     
-    # Extract the subgraph related to the incident ID (loose)
-    loose_subgraph = extract_subgraph_by_incident(graph, incident_id, extraction_type="loose")
+    # Extract the subgraph related to the incident ID (loose) from the loose GML file
+    loose_subgraph = extract_subgraph_by_incident(graph_loose, incident_id, extraction_type="loose")
     visualize_and_save_subgraph(loose_subgraph, loose_output_file, incident_id, extraction_type="loose")
     print(f"Loose subgraph for incident ID '{incident_id}' saved as {loose_output_file}")
 
