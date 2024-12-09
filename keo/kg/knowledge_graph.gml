@@ -3935,7 +3935,7 @@ graph [
   edge [
     source 16
     target 17
-    relation "PART-OF"
+    relation "PART OF"
     incident_ids "_networkx_list_start"
     incident_ids "19860128014289I"
   ]
@@ -4035,7 +4035,7 @@ graph [
   edge [
     source 30
     target 128
-    relation "WORK LOCATION"
+    relation "LOCATION"
     incident_ids "_networkx_list_start"
     incident_ids "19990714022959I"
   ]
@@ -4091,7 +4091,7 @@ graph [
   edge [
     source 40
     target 41
-    relation "LOCATED IN"
+    relation "LOCATION"
     incident_ids "_networkx_list_start"
     incident_ids "19900425011659A"
   ]

@@ -40,6 +40,9 @@ for strict_re_gs, re_path in re_paths.items():
             for entity, entity_type in zip(entities, types):
                 if entity:
                     if G.has_node(entity):
+                        # Ensure incident_ids is a list before appending
+                        if 'incident_ids' not in G.nodes[entity]:
+                            G.nodes[entity]['incident_ids'] = []  # Initialize incident_ids as an empty list
                         G.nodes[entity]['incident_ids'].append(str(incident_id))
                     else:
                         G.add_node(entity, type=entity_type, incident_ids=[str(incident_id)])
@@ -57,9 +60,12 @@ for strict_re_gs, re_path in re_paths.items():
                     if not G.has_edge(entity1, entity2):
                         G.add_edge(entity1, entity2, relation='coreference', incident_ids=[str(incident_id)])
                     else:
+                        # Ensure incident_ids is a list before appending
+                        if 'incident_ids' not in G[entity1][entity2]:
+                            G[entity1][entity2]['incident_ids'] = []  # Initialize as an empty list
                         G[entity1][entity2]['incident_ids'].append(str(incident_id))
 
-    # Step 3: Add NEL and its QIDs from nel_df
+    # Step 3: Add NEL and its QIDs from nel.csv
     for _, row in nel_df.iterrows():
         incident_id = row['id']
         primary_ent = row['primary_ent']
@@ -69,24 +75,54 @@ for strict_re_gs, re_path in re_paths.items():
         tertiary_ent = str(row['tertiary_ent']).strip()
         tertiary_qid = str(row['tertiary_qid']).strip()
 
+        # Handle 'nan' values by setting them to None
+        if primary_qid.lower() == 'nan':
+            primary_qid = None
+        if secondary_ent.lower() == 'nan':
+            secondary_ent = None
+        if secondary_qid.lower() == 'nan':
+            secondary_qid = None
+        if tertiary_ent.lower() == 'nan':
+            tertiary_ent = None
+        if tertiary_qid.lower() == 'nan':
+            tertiary_qid = None
+
+        # Add primary entity as a node with its QID if available
         if primary_ent:
             if G.has_node(primary_ent):
                 G.nodes[primary_ent]['incident_ids'].append(str(incident_id))
             else:
                 G.add_node(primary_ent, type='Primary', incident_ids=[str(incident_id)], qid=primary_qid)
 
+        # Add secondary entity as a node with its QID if available
         if secondary_ent:
             if G.has_node(secondary_ent):
                 G.nodes[secondary_ent]['incident_ids'].append(str(incident_id))
             else:
                 G.add_node(secondary_ent, type='Secondary', incident_ids=[str(incident_id)], qid=secondary_qid)
 
+        # Add tertiary entity as a node with its QID if available
         if tertiary_ent:
             if G.has_node(tertiary_ent):
                 G.nodes[tertiary_ent]['incident_ids'].append(str(incident_id))
             else:
                 G.add_node(tertiary_ent, type='Tertiary', incident_ids=[str(incident_id)], qid=tertiary_qid)
 
+        # Create edges for relationships in NEL
+        if primary_ent and secondary_ent:
+            if G.has_edge(primary_ent, secondary_ent):
+                G[primary_ent][secondary_ent]['incident_ids'].append(str(incident_id))
+            else:
+                G.add_edge(primary_ent, secondary_ent, relation='secondary_of', incident_ids=[str(incident_id)])
+        if primary_ent and tertiary_ent:
+            if G.has_edge(primary_ent, tertiary_ent):
+                G[primary_ent][tertiary_ent]['incident_ids'].append(str(incident_id))
+            else:
+                G.add_edge(primary_ent, tertiary_ent, relation='tertiary_of', incident_ids=[str(incident_id)])
+
+    # Print number of nodes and edges after step 3
+    print(f"Nodes after processing nel_df: {len(G.nodes)}")
+    print(f"Edges after processing nel_df: {len(G.edges)}")
     # Step 4: Add RE edges
     valid_relations = [
         "HAS EFFECT", "HAS CAUSE", "PART OF", "INSTANCE OF", "FOLLOWED BY", 
@@ -129,6 +165,30 @@ for strict_re_gs, re_path in re_paths.items():
                         relationship_counts[strict_re_gs][relation] = 0
                     relationship_counts[strict_re_gs][relation] += 1
 
+    # Step 6: Ensure all attributes are strings before saving the GML
+    def convert_to_string(graph):
+        # Convert node attributes to strings
+        for node, data in graph.nodes(data=True):
+            for key, value in data.items():
+                if value is None:
+                    graph.nodes[node][key] = ""  # Convert None to empty string
+                elif isinstance(value, list):
+                    graph.nodes[node][key] = [str(v) if v is not None else "" for v in value]
+                else:
+                    graph.nodes[node][key] = str(value)  # Ensure all values are strings
+        
+        # Convert edge attributes to strings
+        for u, v, data in graph.edges(data=True):
+            for key, value in data.items():
+                if value is None:
+                    graph[u][v][key] = ""  # Convert None to empty string
+                elif isinstance(value, list):
+                    graph[u][v][key] = [str(v) if v is not None else "" for v in value]
+                else:
+                    graph[u][v][key] = str(value)  # Ensure all values are strings
+
+    # Convert attributes of the graph
+    convert_to_string(G)
     # Export GML
     nx.write_gml(G, f"knowledge_graph_{strict_re_gs}.gml")
     print(f"{strict_re_gs.upper()} GML saved.")
