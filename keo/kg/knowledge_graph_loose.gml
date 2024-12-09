@@ -3765,6 +3765,1315 @@ graph [
     incident_ids "19870523018729A"
     qid "Q1138598"
   ]
+  node [
+    id 468
+    label "LOST CONTROL"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19990213001379A"
+  ]
+  node [
+    id 469
+    label "RAN INTO A DITCH"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19990213001379A"
+  ]
+  node [
+    id 470
+    label "STRUCK A TREE"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19990213001379A"
+  ]
+  node [
+    id 471
+    label "ENGINE QUIT"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19800217031649I"
+  ]
+  node [
+    id 472
+    label "WING TANKS NOT DRAINED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19800217031649I"
+  ]
+  node [
+    id 473
+    label "FROZEN"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19800217031649I"
+  ]
+  node [
+    id 474
+    label "CRASHED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19790720021329A"
+  ]
+  node [
+    id 475
+    label "LOST NOSEWHEEL STEERING AND BRAKES"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19841214074599I"
+  ]
+  node [
+    id 476
+    label "STRUCK 2 AIRCRAFT"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19841214074599I"
+  ]
+  node [
+    id 477
+    label "STRUCK FENCE"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19841214074599I"
+  ]
+  node [
+    id 478
+    label "HYDRAULIC PUMP OPEN"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19841214074599I"
+  ]
+  node [
+    id 479
+    label "FORWARD CARDO DOOR OPENED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19860128014289I"
+  ]
+  node [
+    id 480
+    label "OBJECTS DROPPED OUT"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19860128014289I"
+  ]
+  node [
+    id 481
+    label "FORWARD CARGO DOOR OPENED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19860128014289I"
+  ]
+  node [
+    id 482
+    label "PILOT IN COMMAND"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "20000215010329A"
+  ]
+  node [
+    id 483
+    label "HELICOPTER MODEL"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "20000215010329A"
+  ]
+  node [
+    id 484
+    label "ICE IN AUXILIARY SYSTEM"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19801116083749I"
+  ]
+  node [
+    id 485
+    label "ALTIMETER NOT IFR CERTIFIED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19850315007389A"
+  ]
+  node [
+    id 486
+    label "FUEL SIPHONED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19900425011659A"
+  ]
+  node [
+    id 487
+    label "RAN OUT OF FUEL"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19900425011659A"
+  ]
+  node [
+    id 488
+    label "ENGINE CUTTING OUT"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19991230042089A"
+  ]
+  node [
+    id 489
+    label "RETURNING TO LAND"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19820725041999I"
+  ]
+  node [
+    id 490
+    label "COWLING CAME OFF"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19820725041999I"
+  ]
+  node [
+    id 491
+    label "AIRCRAFT POPPED OPEN"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19940412011509I"
+  ]
+  node [
+    id 492
+    label "FLIGHT MANUAL FLEW OUT"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19940412011509I"
+  ]
+  node [
+    id 493
+    label "STRUCK TRUCK WINDSHIELD"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19940412011509I"
+  ]
+  node [
+    id 494
+    label "ENGINE FIRE"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19971226042729I"
+  ]
+  node [
+    id 495
+    label "CUT OFF"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19971226042729I"
+  ]
+  node [
+    id 496
+    label "SMOKE CLEARED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19971226042729I"
+  ]
+  node [
+    id 497
+    label "NR2"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19971226042729I"
+  ]
+  node [
+    id 498
+    label "DEPARTING"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950619021589I"
+  ]
+  node [
+    id 499
+    label "LANDED OFF AIRPORT"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950619021589I"
+  ]
+  node [
+    id 500
+    label "LOW ON OIL"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950619021589I"
+  ]
+  node [
+    id 501
+    label "BATTERY"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19940815046149I"
+  ]
+  node [
+    id 502
+    label "NOSE GEAR FAILED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19860228038269I"
+  ]
+  node [
+    id 503
+    label "RETURNED  RETURNED, HAS CAUSE, NOSE GEAR FAILED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19860228038269I"
+  ]
+  node [
+    id 504
+    label "PIN HAD NOT BEEN REMOVED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19860228038269I"
+  ]
+  node [
+    id 505
+    label "PIN HAD BEEN REMOVED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19860228038269I"
+  ]
+  node [
+    id 506
+    label "DC-10 BOEING"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "20000625032189I"
+  ]
+  node [
+    id 507
+    label "NOSED OVER"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19860530030499A"
+  ]
+  node [
+    id 508
+    label "FURROWS"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19860530030499A"
+  ]
+  node [
+    id 509
+    label "ACCESS DOOR SLIGHTLY OPEN"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19821117066379I"
+  ]
+  node [
+    id 510
+    label "DEPRESSURIZED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19821117066379I"
+  ]
+  node [
+    id 511
+    label "ACCESS DOOR SLIGHTY OPENED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19821117066379I"
+  ]
+  node [
+    id 512
+    label "STOPPED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19821117066379I"
+  ]
+  node [
+    id 513
+    label "VEERED OFF RUNWAY"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19810303007119A"
+  ]
+  node [
+    id 514
+    label "HIT PARKED AIRPLANE"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19810303007119A"
+  ]
+  node [
+    id 515
+    label "RESTRICTED RUDDER PEDAL MOVEMENT"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19810303007119A"
+  ]
+  node [
+    id 516
+    label "VEERED OFF TAXIWAY"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950602032329I"
+  ]
+  node [
+    id 517
+    label "STRUCK TAXIWAY LIGHT"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950602032329I"
+  ]
+  node [
+    id 518
+    label "TAXING"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19901101064289I"
+  ]
+  node [
+    id 519
+    label "GAS ESCAPING"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19901101064289I"
+  ]
+  node [
+    id 520
+    label "FUEL CAP MISSING"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19901101064289I"
+  ]
+  node [
+    id 521
+    label "RAYTHEON ARICRAFT"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "20050713014239I"
+  ]
+  node [
+    id 522
+    label "RAYTHEON AIRCRAFT"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "20050713014239I"
+  ]
+  node [
+    id 523
+    label "LOST POWER"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19860706034879A"
+  ]
+  node [
+    id 524
+    label "AIRCRAFT FLIPPED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19860706034879A"
+  ]
+  node [
+    id 525
+    label "ENGINE FAILED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19840121015319I"
+  ]
+  node [
+    id 526
+    label "SOLID ICE"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19840121015319I"
+  ]
+  node [
+    id 527
+    label "GEAR BLOCKED DOWN"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19960322013629I"
+  ]
+  node [
+    id 528
+    label "FERRIED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19960322013629I"
+  ]
+  node [
+    id 529
+    label "NOSE BLOCK FELL OUT"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19960322013629I"
+  ]
+  node [
+    id 530
+    label "ROLLED ON LIFT OFF"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19960504009509A"
+  ]
+  node [
+    id 531
+    label "FAILED TO LIFTOFF RUNWAY"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19790211002709A"
+  ]
+  node [
+    id 532
+    label "RAN OFF END"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19790211002709A"
+  ]
+  node [
+    id 533
+    label "LANDED IN FIELD"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19850418016709I"
+  ]
+  node [
+    id 534
+    label "FRONT BAGGAGE DOOR POPPED OPEN"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19780913017419I"
+  ]
+  node [
+    id 535
+    label "UNMARKED DITCH"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19781113027039I"
+  ]
+  node [
+    id 536
+    label "UNABLE TO STAY AIRBORNE"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19870606018859A"
+  ]
+  node [
+    id 537
+    label "ABORTED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19870606018859A"
+  ]
+  node [
+    id 538
+    label "GROUND LOOPED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19870606018859A"
+  ]
+  node [
+    id 539
+    label "AVOID OVERRUN"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19870606018859A"
+  ]
+  node [
+    id 540
+    label "OVERRUN"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19870606018859A"
+  ]
+  node [
+    id 541
+    label "DEPARTED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19990714022959I"
+  ]
+  node [
+    id 542
+    label "HOURS OF DARKNESS"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19990714022959I"
+  ]
+  node [
+    id 543
+    label "NOSE GEAR WOULD NOT RETRACT"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19870319012959I"
+  ]
+  node [
+    id 544
+    label "PIN WAS INSTALLED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19870319012959I"
+  ]
+  node [
+    id 545
+    label "TAXIING"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "20050429009279I"
+  ]
+  node [
+    id 546
+    label "INSUFFICIENT NUMBER OF SEATS"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19890723054159I"
+  ]
+  node [
+    id 547
+    label "INSUFFICIENT NUMBER OF OXYGEN MASKS"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19890723054159I"
+  ]
+  node [
+    id 548
+    label "OXYGEN MASK"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19890723054159I"
+  ]
+  node [
+    id 549
+    label "CARGO DOOR LATCHED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19970523014439I"
+  ]
+  node [
+    id 550
+    label "TIED SKIDS"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19970908038069A"
+  ]
+  node [
+    id 551
+    label "ROLLED OVER"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19970908038069A"
+  ]
+  node [
+    id 552
+    label "ET BLAST"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19781108022239I"
+  ]
+  node [
+    id 553
+    label "BAGGAGE CART WAS BLOWN"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19781108022239I"
+  ]
+  node [
+    id 554
+    label "JET BLAST"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19781108022239I"
+  ]
+  node [
+    id 555
+    label "RELEASE"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19760606015529A"
+  ]
+  node [
+    id 556
+    label "HIGH ATTITUDE"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19760606015529A"
+  ]
+  node [
+    id 557
+    label "POWER CHECKS"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "20051009024969I"
+  ]
+  node [
+    id 558
+    label "CONTROL OF AIRCRAFT"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19930530020029I"
+  ]
+  node [
+    id 559
+    label "SEAT NOT LOCKED IN POSITION"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19930530020029I"
+  ]
+  node [
+    id 560
+    label "FAILED TO EXTEND"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19801230089799I"
+  ]
+  node [
+    id 561
+    label "BROKE BELLCRANK"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19801230089799I"
+  ]
+  node [
+    id 562
+    label "RETRACTION"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19801230089799I"
+  ]
+  node [
+    id 563
+    label "ENROUTE"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19980508008619A"
+  ]
+  node [
+    id 564
+    label "NOSED OVER LANDING"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19980508008619A"
+  ]
+  node [
+    id 565
+    label "FAILED TO VISUALLY CHECK FUEL"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19980508008619A"
+  ]
+  node [
+    id 566
+    label "LOST LEFT ENGINE"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19940818022409A"
+  ]
+  node [
+    id 567
+    label "HIT TREES"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19920405008919A"
+  ]
+  node [
+    id 568
+    label "AIRCRAFT HAD NOT HAD ANNUAL INSPECTION"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19840821046409A"
+  ]
+  node [
+    id 569
+    label "ENGINE STOPPED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950216008379I"
+  ]
+  node [
+    id 570
+    label "DOWNWIND GO AROUND"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19850525020799A"
+  ]
+  node [
+    id 571
+    label "STRUCK TREE"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19850525020799A"
+  ]
+  node [
+    id 572
+    label "WITHOUT ATC COMMUNICATION"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19861114075329I"
+  ]
+  node [
+    id 573
+    label "COULD NOT MAINTAIN ALTITUDE"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "20010421009329I"
+  ]
+  node [
+    id 574
+    label "NOSE BAGGAGE DOOR OPENED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19960524045629A"
+  ]
+  node [
+    id 575
+    label "BAGGAGE HIT LEFT PROP"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19960524045629A"
+  ]
+  node [
+    id 576
+    label "TOLERENCE"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19871211075169A"
+  ]
+  node [
+    id 577
+    label "PRIMER UNLOCKED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19871211075169A"
+  ]
+  node [
+    id 578
+    label "GREEN LIGHT WAS OUT"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "20010910029739I"
+  ]
+  node [
+    id 579
+    label "SWAP LIGHTS"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "20010910029739I"
+  ]
+  node [
+    id 580
+    label "ELECTRIC POWER LOST"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19871027060859A"
+  ]
+  node [
+    id 581
+    label "CIRCUIT BREAKER OFF"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19871027060859A"
+  ]
+  node [
+    id 582
+    label "CICUIT BREAKER OFF"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19871027060859A"
+  ]
+  node [
+    id 583
+    label "ENGINE COWLING SEPARATED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19980616023109I"
+  ]
+  node [
+    id 584
+    label "COWL NOT FASTENED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19980616023109I"
+  ]
+  node [
+    id 585
+    label "REPOORTED PROBLEM"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19910710026989A"
+  ]
+  node [
+    id 586
+    label "SEAT PIN BENT"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19910710026989A"
+  ]
+  node [
+    id 587
+    label "BELT NOT FASTENED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19910710026989A"
+  ]
+  node [
+    id 588
+    label "ENGINE RAN ROUGH"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19791128035159A"
+  ]
+  node [
+    id 589
+    label "LANDED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19791128035159A"
+  ]
+  node [
+    id 590
+    label "PILOT LANDED IN FIELD"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19791128035159A"
+  ]
+  node [
+    id 591
+    label "SEAT SLID BACK"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "20060621012279A"
+  ]
+  node [
+    id 592
+    label "OVERROTATE"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "20060621012279A"
+  ]
+  node [
+    id 593
+    label "EMERGECY OFF AIRPORT LANDING"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950314029269I"
+  ]
+  node [
+    id 594
+    label "MARCH 14 1995"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950314029269I"
+  ]
+  node [
+    id 595
+    label "AMATEUR"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950314029269I"
+  ]
+  node [
+    id 596
+    label "EARLY FUEL EXHAUSTION"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19800804037399A"
+  ]
+  node [
+    id 597
+    label "IMPORPERLY SECURED VENT CAP"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19800804037399A"
+  ]
+  node [
+    id 598
+    label "TAXIING AIRCRAFT STRUCK PARKED AIRCRAFT"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19780402008409I"
+  ]
+  node [
+    id 599
+    label "WORN OUT AND INEFFECTIVE BRAKES"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19780402008409I"
+  ]
+  node [
+    id 600
+    label "FULL AFT POSITION"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19890725041869I"
+  ]
+  node [
+    id 601
+    label "PUSH THROTTLE"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19890725041869I"
+  ]
+  node [
+    id 602
+    label "AIRCRAFT COLLIDED WITH PARKED PLANE"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19890725041869I"
+  ]
+  node [
+    id 603
+    label "RIGHT FUEL CAP MISSING"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19911222062669I"
+  ]
+  node [
+    id 604
+    label "BARTLESVILLE MUNICIPAL AIRPORT"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "20030607012509A"
+  ]
+  node [
+    id 605
+    label "BRAKE FAILED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19801005072789I"
+  ]
+  node [
+    id 606
+    label "WHEEL PANTS"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19781210024199I"
+  ]
+  node [
+    id 607
+    label "WHEELS LOCKED UP"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19781210024199I"
+  ]
+  node [
+    id 608
+    label "ROUGH WATER"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950804028629A"
+  ]
+  node [
+    id 609
+    label "LANDED HARD"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950804028629A"
+  ]
+  node [
+    id 610
+    label "DAMAGED FLOATS"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950804028629A"
+  ]
+  node [
+    id 611
+    label "DAMAGED LONGERON"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950804028629A"
+  ]
+  node [
+    id 612
+    label "SLIDING"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "20040304003309I"
+  ]
+  node [
+    id 613
+    label "LEFT SIDE OF RUNWAY"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "20040304003309I"
+  ]
+  node [
+    id 614
+    label "HYDROPLANING"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "20040304003309I"
+  ]
+  node [
+    id 615
+    label "NOTH PLATTER NE"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "20070202001609A"
+  ]
+  node [
+    id 616
+    label "IOWA CITY IA"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "20070202001609A"
+  ]
+  node [
+    id 617
+    label "CAUGHT ON TRAILER"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19780916024019A"
+  ]
+  node [
+    id 618
+    label "TEHTERED HEAPER"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19780916024019A"
+  ]
+  node [
+    id 619
+    label "TETHERED HEAPER"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19780916024019A"
+  ]
+  node [
+    id 620
+    label "ENSURE ALL FUEL TANK CAPS"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "20060718018299I"
+  ]
+  node [
+    id 621
+    label "FUEL CONTANIMATION"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "20040925025079A"
+  ]
+  node [
+    id 622
+    label "CONNECTING ROD BENT"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19961027033759A"
+  ]
+  node [
+    id 623
+    label "HIT COUNTER WEIGHT"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19961027033759A"
+  ]
+  node [
+    id 624
+    label "BROKE PORP SHAFT"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19961027033759A"
+  ]
+  node [
+    id 625
+    label "AIRCRAFT STRUCK N106DA"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19870309039779I"
+  ]
+  node [
+    id 626
+    label "HOT SPRINGS ARKANSAS"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "20020619014309A"
+  ]
+  node [
+    id 627
+    label "FAYETTEVILLE TENNESSEE, N759TY, CE-182, INSTANCE OF, AIRCRAFT"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "20020619014309A"
+  ]
+  node [
+    id 628
+    label "ELEVATOR CONTROL JAMMED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19850729066139I"
+  ]
+  node [
+    id 629
+    label "HARNESS CAUGHT ON ELEVATOR CABLE"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19850729066139I"
+  ]
+  node [
+    id 630
+    label "PREVENTED GRAVITY FUEL FLOW"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19940226003029A"
+  ]
+  node [
+    id 631
+    label "LEFT FUEL CAP LEAKED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19940226003029A"
+  ]
+  node [
+    id 632
+    label "3 MILES EAST OF SUNMER, IOWA"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19980620030289I"
+  ]
+  node [
+    id 633
+    label "SEPTERMBER 23, 1999"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19990923027739A"
+  ]
+  node [
+    id 634
+    label "WOODEN WHEEL CHOCK SHIFTED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19980415037339I"
+  ]
+  node [
+    id 635
+    label "JAMMED THE NOSE LANDING GEAR"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19980415037339I"
+  ]
+  node [
+    id 636
+    label "LIFTING LOGS"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950826026019A"
+  ]
+  node [
+    id 637
+    label "FAILED RELEASE LOGS"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950826026019A"
+  ]
+  node [
+    id 638
+    label "PITCHED UP"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950826026019A"
+  ]
+  node [
+    id 639
+    label "ROLLLED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950826026019A"
+  ]
+  node [
+    id 640
+    label "FAILED TO USE SE PROCEDURES"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950826026019A"
+  ]
+  node [
+    id 641
+    label "COMPRESSOR STALL NR1 ENGINE"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950826026019A"
+  ]
+  node [
+    id 642
+    label "ROLLED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950826026019A"
+  ]
+  node [
+    id 643
+    label "FEBURARY 19, 2000"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "20000215041409A"
+  ]
+  node [
+    id 644
+    label "INTIAL CLIMBOUT"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19880527016939A"
+  ]
+  node [
+    id 645
+    label "CRASH LANDED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19880527016939A"
+  ]
+  node [
+    id 646
+    label "GET FUEL"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19880527016939A"
+  ]
+  node [
+    id 647
+    label "AFTER DEPARTURE"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19960418007829A"
+  ]
+  node [
+    id 648
+    label "BURNED"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19960418007829A"
+  ]
+  node [
+    id 649
+    label "LOUD POP"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19970828026989A"
+  ]
+  node [
+    id 650
+    label "LOST RUDDER CONTROL"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19970828026989A"
+  ]
+  node [
+    id 651
+    label "EXITED RWY"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19970828026989A"
+  ]
+  node [
+    id 652
+    label "FAILED TO LOCK TAILWHEEL"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19970828026989A"
+  ]
+  node [
+    id 653
+    label "FAILED TO LOCK THE TAILWHEEL"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19970828026989A"
+  ]
+  node [
+    id 654
+    label "CANOPY CAME OPEN"
+    type "re"
+    incident_ids "_networkx_list_start"
+    incident_ids "19870523018729A"
+  ]
   edge [
     source 0
     target 351
@@ -3774,10 +5083,38 @@ graph [
   ]
   edge [
     source 1
+    target 471
+    relation "FOLLOWED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "19800217031649I"
+  ]
+  edge [
+    source 1
     target 35
     relation "FOLLOWED BY"
     incident_ids "_networkx_list_start"
     incident_ids "20070630826079I"
+  ]
+  edge [
+    source 1
+    target 488
+    relation "FOLLOWED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "19991230042089A"
+  ]
+  edge [
+    source 1
+    target 525
+    relation "FOLLOWED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "19840121015319I"
+  ]
+  edge [
+    source 1
+    target 543
+    relation "FOLLOWED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "19870319012959I"
   ]
   edge [
     source 1
@@ -3790,6 +5127,13 @@ graph [
     source 1
     target 182
     relation "LOCATION"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950216008379I"
+  ]
+  edge [
+    source 1
+    target 569
+    relation "FOLLOWED BY"
     incident_ids "_networkx_list_start"
     incident_ids "19950216008379I"
   ]
@@ -3843,9 +5187,23 @@ graph [
     incident_ids "19790720021329A"
   ]
   edge [
+    source 8
+    target 474
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19790720021329A"
+  ]
+  edge [
     source 10
     target 6
     relation "secondary_of"
+    incident_ids "_networkx_list_start"
+    incident_ids "19790720021329A"
+  ]
+  edge [
+    source 10
+    target 474
+    relation "HAS EFFECT"
     incident_ids "_networkx_list_start"
     incident_ids "19790720021329A"
   ]
@@ -3899,11 +5257,25 @@ graph [
     incident_ids "20070630826079I"
   ]
   edge [
+    source 17
+    target 595
+    relation "DESIGNED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950314029269I"
+  ]
+  edge [
     source 18
     target 365
     relation "secondary_of"
     incident_ids "_networkx_list_start"
     incident_ids "19860128014289I"
+  ]
+  edge [
+    source 19
+    target 482
+    relation "FACET OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "20000215010329A"
   ]
   edge [
     source 20
@@ -3934,6 +5306,20 @@ graph [
     incident_ids "19840821046409A"
     incident_ids "19871027060859A"
     incident_ids "19780509032859I"
+  ]
+  edge [
+    source 25
+    target 471
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19801116083749I"
+  ]
+  edge [
+    source 25
+    target 484
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19801116083749I"
   ]
   edge [
     source 25
@@ -4056,6 +5442,13 @@ graph [
   ]
   edge [
     source 42
+    target 486
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19900425011659A"
+  ]
+  edge [
+    source 42
     target 90
     relation "PART OF"
     incident_ids "_networkx_list_start"
@@ -4132,6 +5525,13 @@ graph [
     incident_ids "19820725041999I"
   ]
   edge [
+    source 49
+    target 491
+    relation "FOLLOWED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "19940412011509I"
+  ]
+  edge [
     source 50
     target 372
     relation "secondary_of"
@@ -4156,6 +5556,13 @@ graph [
     source 57
     target 374
     relation "secondary_of"
+    incident_ids "_networkx_list_start"
+    incident_ids "19971226042729I"
+  ]
+  edge [
+    source 57
+    target 494
+    relation "HAS EFFECT"
     incident_ids "_networkx_list_start"
     incident_ids "19971226042729I"
   ]
@@ -4195,6 +5602,13 @@ graph [
     incident_ids "19950619021589I"
   ]
   edge [
+    source 61
+    target 499
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950619021589I"
+  ]
+  edge [
     source 62
     target 82
     relation "secondary_of"
@@ -4205,6 +5619,13 @@ graph [
     source 63
     target 47
     relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19940815046149I"
+  ]
+  edge [
+    source 63
+    target 501
+    relation "PART OF"
     incident_ids "_networkx_list_start"
     incident_ids "19940815046149I"
   ]
@@ -4249,6 +5670,13 @@ graph [
     relation "secondary_of"
     incident_ids "_networkx_list_start"
     incident_ids "19790718019229I"
+  ]
+  edge [
+    source 72
+    target 512
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19821117066379I"
   ]
   edge [
     source 73
@@ -4314,6 +5742,27 @@ graph [
     incident_ids "19821117066379I"
   ]
   edge [
+    source 84
+    target 513
+    relation "FOLLOWED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "19810303007119A"
+  ]
+  edge [
+    source 84
+    target 546
+    relation "FOLLOWED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "19890723054159I"
+  ]
+  edge [
+    source 84
+    target 547
+    relation "FOLLOWED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "19890723054159I"
+  ]
+  edge [
     source 85
     target 161
     relation "secondary_of"
@@ -4342,6 +5791,13 @@ graph [
     incident_ids "19950602032329I"
   ]
   edge [
+    source 89
+    target 517
+    relation "FOLLOWS"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950602032329I"
+  ]
+  edge [
     source 90
     target 360
     relation "secondary_of"
@@ -4350,8 +5806,22 @@ graph [
   ]
   edge [
     source 93
+    target 615
+    relation "LOCATION"
+    incident_ids "_networkx_list_start"
+    incident_ids "20070202001609A"
+  ]
+  edge [
+    source 93
     target 259
     relation "EVENT DISTANCE"
+    incident_ids "_networkx_list_start"
+    incident_ids "20070202001609A"
+  ]
+  edge [
+    source 93
+    target 616
+    relation "LOCATION"
     incident_ids "_networkx_list_start"
     incident_ids "20070202001609A"
   ]
@@ -4370,6 +5840,13 @@ graph [
     incident_ids "20050713014239I"
   ]
   edge [
+    source 100
+    target 521
+    relation "OWNER OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "20050713014239I"
+  ]
+  edge [
     source 102
     target 388
     relation "secondary_of"
@@ -4377,6 +5854,13 @@ graph [
     incident_ids "19780509032859I"
     incident_ids "19791128035159A"
     incident_ids "19950804028629A"
+  ]
+  edge [
+    source 102
+    target 588
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19791128035159A"
   ]
   edge [
     source 104
@@ -4393,9 +5877,23 @@ graph [
     incident_ids "19840121015319I"
   ]
   edge [
+    source 107
+    target 468
+    relation "FOLLOWED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950527014439A"
+  ]
+  edge [
     source 108
     target 390
     relation "secondary_of"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950527014439A"
+  ]
+  edge [
+    source 108
+    target 468
+    relation "HAS EFFECT"
     incident_ids "_networkx_list_start"
     incident_ids "19950527014439A"
   ]
@@ -4428,6 +5926,20 @@ graph [
     incident_ids "19960504009509A"
   ]
   edge [
+    source 112
+    target 468
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19960504009509A"
+  ]
+  edge [
+    source 112
+    target 530
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19960504009509A"
+  ]
+  edge [
     source 117
     target 392
     relation "secondary_of"
@@ -4438,6 +5950,13 @@ graph [
     source 119
     target 393
     relation "secondary_of"
+    incident_ids "_networkx_list_start"
+    incident_ids "19850418016709I"
+  ]
+  edge [
+    source 119
+    target 533
+    relation "FOLLOWED BY"
     incident_ids "_networkx_list_start"
     incident_ids "19850418016709I"
   ]
@@ -4473,6 +5992,13 @@ graph [
     source 124
     target 1
     relation "secondary_of"
+    incident_ids "_networkx_list_start"
+    incident_ids "19780913017419I"
+  ]
+  edge [
+    source 124
+    target 534
+    relation "HAS CAUSE"
     incident_ids "_networkx_list_start"
     incident_ids "19780913017419I"
   ]
@@ -4561,6 +6087,13 @@ graph [
     incident_ids "20050429009279I"
   ]
   edge [
+    source 137
+    target 545
+    relation "FOLLOWED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "20050429009279I"
+  ]
+  edge [
     source 138
     target 398
     relation "secondary_of"
@@ -4603,6 +6136,13 @@ graph [
     incident_ids "19970908038069A"
   ]
   edge [
+    source 143
+    target 551
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19970908038069A"
+  ]
+  edge [
     source 144
     target 402
     relation "secondary_of"
@@ -4620,6 +6160,13 @@ graph [
     source 146
     target 403
     relation "secondary_of"
+    incident_ids "_networkx_list_start"
+    incident_ids "19970908038069A"
+  ]
+  edge [
+    source 146
+    target 550
+    relation "HAS EFFECT"
     incident_ids "_networkx_list_start"
     incident_ids "19970908038069A"
   ]
@@ -4723,6 +6270,13 @@ graph [
     incident_ids "19940818022409A"
   ]
   edge [
+    source 167
+    target 566
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19940818022409A"
+  ]
+  edge [
     source 168
     target 410
     relation "secondary_of"
@@ -4733,6 +6287,13 @@ graph [
     source 168
     target 411
     relation "tertiary_of"
+    incident_ids "_networkx_list_start"
+    incident_ids "19940818022409A"
+  ]
+  edge [
+    source 168
+    target 566
+    relation "HAS CAUSE"
     incident_ids "_networkx_list_start"
     incident_ids "19940818022409A"
   ]
@@ -4774,6 +6335,13 @@ graph [
   edge [
     source 174
     target 173
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19840821046409A"
+  ]
+  edge [
+    source 174
+    target 568
     relation "HAS EFFECT"
     incident_ids "_networkx_list_start"
     incident_ids "19840821046409A"
@@ -4842,6 +6410,13 @@ graph [
     incident_ids "19861114075329I"
   ]
   edge [
+    source 189
+    target 572
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19861114075329I"
+  ]
+  edge [
     source 191
     target 417
     relation "secondary_of"
@@ -4852,6 +6427,13 @@ graph [
     source 191
     target 190
     relation "TIME PERIOD"
+    incident_ids "_networkx_list_start"
+    incident_ids "20010421009329I"
+  ]
+  edge [
+    source 191
+    target 573
+    relation "HAS EFFECT"
     incident_ids "_networkx_list_start"
     incident_ids "20010421009329I"
   ]
@@ -4880,6 +6462,13 @@ graph [
     source 196
     target 2
     relation "secondary_of"
+    incident_ids "_networkx_list_start"
+    incident_ids "19871211075169A"
+  ]
+  edge [
+    source 196
+    target 577
+    relation "HAS CAUSE"
     incident_ids "_networkx_list_start"
     incident_ids "19871211075169A"
   ]
@@ -4955,15 +6544,43 @@ graph [
   ]
   edge [
     source 208
+    target 581
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19871027060859A"
+  ]
+  edge [
+    source 208
     target 25
     relation "HAS EFFECT"
     incident_ids "_networkx_list_start"
     incident_ids "19871027060859A"
   ]
   edge [
+    source 208
+    target 654
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19870523018729A"
+  ]
+  edge [
     source 209
     target 422
     relation "secondary_of"
+    incident_ids "_networkx_list_start"
+    incident_ids "19980616023109I"
+  ]
+  edge [
+    source 209
+    target 563
+    relation "TIME PERIOD"
+    incident_ids "_networkx_list_start"
+    incident_ids "19980616023109I"
+  ]
+  edge [
+    source 210
+    target 563
+    relation "TIME PERIOD"
     incident_ids "_networkx_list_start"
     incident_ids "19980616023109I"
   ]
@@ -5001,6 +6618,13 @@ graph [
     relation "secondary_of"
     incident_ids "_networkx_list_start"
     incident_ids "19780509032859I"
+  ]
+  edge [
+    source 221
+    target 468
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19800506012169A"
   ]
   edge [
     source 222
@@ -5045,6 +6669,20 @@ graph [
     incident_ids "19800804037399A"
   ]
   edge [
+    source 231
+    target 596
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19800804037399A"
+  ]
+  edge [
+    source 231
+    target 597
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19800804037399A"
+  ]
+  edge [
     source 232
     target 426
     relation "secondary_of"
@@ -5083,6 +6721,13 @@ graph [
     source 235
     target 12
     relation "secondary_of"
+    incident_ids "_networkx_list_start"
+    incident_ids "19780402008409I"
+  ]
+  edge [
+    source 235
+    target 598
+    relation "HAS EFFECT"
     incident_ids "_networkx_list_start"
     incident_ids "19780402008409I"
   ]
@@ -5304,6 +6949,20 @@ graph [
     incident_ids "20020619014309A"
   ]
   edge [
+    source 282
+    target 626
+    relation "LOCATION"
+    incident_ids "_networkx_list_start"
+    incident_ids "20020619014309A"
+  ]
+  edge [
+    source 282
+    target 627
+    relation "LOCATION"
+    incident_ids "_networkx_list_start"
+    incident_ids "20020619014309A"
+  ]
+  edge [
     source 289
     target 43
     relation "secondary_of"
@@ -5395,6 +7054,13 @@ graph [
     incident_ids "19870816062719I"
   ]
   edge [
+    source 309
+    target 632
+    relation "LOCATION"
+    incident_ids "_networkx_list_start"
+    incident_ids "19980620030289I"
+  ]
+  edge [
     source 315
     target 457
     relation "secondary_of"
@@ -5444,6 +7110,13 @@ graph [
     incident_ids "19980415037339I"
   ]
   edge [
+    source 322
+    target 636
+    relation "TIME PERIOD"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950826026019A"
+  ]
+  edge [
     source 323
     target 323
     relation "coreference"
@@ -5489,6 +7162,13 @@ graph [
     source 337
     target 360
     relation "tertiary_of"
+    incident_ids "_networkx_list_start"
+    incident_ids "19880527016939A"
+  ]
+  edge [
+    source 338
+    target 646
+    relation "HAS CAUSE"
     incident_ids "_networkx_list_start"
     incident_ids "19880527016939A"
   ]
@@ -5598,11 +7278,25 @@ graph [
     incident_ids "19870309039779I"
   ]
   edge [
+    source 366
+    target 483
+    relation "INSTANCE OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "20000215010329A"
+  ]
+  edge [
     source 367
     target 7
     relation "secondary_of"
     incident_ids "_networkx_list_start"
     incident_ids "20000215010329A"
+  ]
+  edge [
+    source 383
+    target 515
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19810303007119A"
   ]
   edge [
     source 388
@@ -5647,6 +7341,20 @@ graph [
     incident_ids "20010910029739I"
   ]
   edge [
+    source 432
+    target 606
+    relation "PART OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "19781210024199I"
+  ]
+  edge [
+    source 432
+    target 607
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19781210024199I"
+  ]
+  edge [
     source 434
     target 263
     relation "PART OF"
@@ -5657,6 +7365,13 @@ graph [
     source 436
     target 30
     relation "secondary_of"
+    incident_ids "_networkx_list_start"
+    incident_ids "20060718018299I"
+  ]
+  edge [
+    source 437
+    target 482
+    relation "MAINTAINED BY"
     incident_ids "_networkx_list_start"
     incident_ids "20060718018299I"
   ]
@@ -5682,6 +7397,13 @@ graph [
     incident_ids "19870309039779I"
   ]
   edge [
+    source 449
+    target 625
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19870309039779I"
+  ]
+  edge [
     source 451
     target 30
     relation "CONFLICT"
@@ -5694,5 +7416,1384 @@ graph [
     relation "USED BY"
     incident_ids "_networkx_list_start"
     incident_ids "19870816062719I"
+  ]
+  edge [
+    source 465
+    target 654
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19870523018729A"
+  ]
+  edge [
+    source 468
+    target 469
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19990213001379A"
+  ]
+  edge [
+    source 468
+    target 470
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19990213001379A"
+  ]
+  edge [
+    source 468
+    target 485
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19850315007389A"
+  ]
+  edge [
+    source 468
+    target 108
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950527014439A"
+  ]
+  edge [
+    source 468
+    target 112
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19960504009509A"
+  ]
+  edge [
+    source 468
+    target 559
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19930530020029I"
+  ]
+  edge [
+    source 468
+    target 156
+    relation "TIME PERIOD"
+    incident_ids "_networkx_list_start"
+    incident_ids "19800506012169A"
+  ]
+  edge [
+    source 468
+    target 221
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19800506012169A"
+  ]
+  edge [
+    source 469
+    target 468
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19990213001379A"
+  ]
+  edge [
+    source 470
+    target 468
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19990213001379A"
+  ]
+  edge [
+    source 471
+    target 472
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19800217031649I"
+  ]
+  edge [
+    source 471
+    target 25
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19801116083749I"
+  ]
+  edge [
+    source 471
+    target 644
+    relation "TIME PERIOD"
+    incident_ids "_networkx_list_start"
+    incident_ids "19880527016939A"
+  ]
+  edge [
+    source 471
+    target 645
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19880527016939A"
+  ]
+  edge [
+    source 472
+    target 473
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19800217031649I"
+  ]
+  edge [
+    source 472
+    target 471
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19800217031649I"
+  ]
+  edge [
+    source 473
+    target 472
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19800217031649I"
+  ]
+  edge [
+    source 474
+    target 8
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19790720021329A"
+  ]
+  edge [
+    source 474
+    target 10
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19790720021329A"
+  ]
+  edge [
+    source 474
+    target 566
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19940818022409A"
+  ]
+  edge [
+    source 474
+    target 567
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19920405008919A"
+  ]
+  edge [
+    source 474
+    target 647
+    relation "TIME PERIOD"
+    incident_ids "_networkx_list_start"
+    incident_ids "19960418007829A"
+  ]
+  edge [
+    source 475
+    target 476
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19841214074599I"
+  ]
+  edge [
+    source 475
+    target 478
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19841214074599I"
+  ]
+  edge [
+    source 475
+    target 477
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19841214074599I"
+  ]
+  edge [
+    source 476
+    target 475
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19841214074599I"
+  ]
+  edge [
+    source 477
+    target 475
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19841214074599I"
+  ]
+  edge [
+    source 478
+    target 475
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19841214074599I"
+  ]
+  edge [
+    source 479
+    target 1
+    relation "INSTANCE OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "19860128014289I"
+  ]
+  edge [
+    source 480
+    target 481
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19860128014289I"
+  ]
+  edge [
+    source 481
+    target 480
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19860128014289I"
+  ]
+  edge [
+    source 484
+    target 25
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19801116083749I"
+  ]
+  edge [
+    source 485
+    target 468
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19850315007389A"
+  ]
+  edge [
+    source 486
+    target 42
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19900425011659A"
+  ]
+  edge [
+    source 487
+    target 39
+    relation "PART OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "19900425011659A"
+  ]
+  edge [
+    source 489
+    target 490
+    relation "FOLLOWED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "19820725041999I"
+  ]
+  edge [
+    source 491
+    target 492
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19940412011509I"
+  ]
+  edge [
+    source 492
+    target 491
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19940412011509I"
+  ]
+  edge [
+    source 492
+    target 493
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19940412011509I"
+  ]
+  edge [
+    source 493
+    target 492
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19940412011509I"
+  ]
+  edge [
+    source 494
+    target 57
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19971226042729I"
+  ]
+  edge [
+    source 495
+    target 496
+    relation "FOLLOWED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "19971226042729I"
+  ]
+  edge [
+    source 497
+    target 2
+    relation "INSTANCE OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "19971226042729I"
+  ]
+  edge [
+    source 498
+    target 59
+    relation "FOLLOWED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950619021589I"
+  ]
+  edge [
+    source 499
+    target 61
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950619021589I"
+  ]
+  edge [
+    source 499
+    target 500
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950619021589I"
+  ]
+  edge [
+    source 500
+    target 499
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950619021589I"
+  ]
+  edge [
+    source 502
+    target 503
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19860228038269I"
+  ]
+  edge [
+    source 502
+    target 505
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19860228038269I"
+  ]
+  edge [
+    source 504
+    target 502
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19860228038269I"
+  ]
+  edge [
+    source 506
+    target 74
+    relation "OWNED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "20000625032189I"
+  ]
+  edge [
+    source 507
+    target 508
+    relation "LOCATION"
+    incident_ids "_networkx_list_start"
+    incident_ids "19860530030499A"
+  ]
+  edge [
+    source 509
+    target 510
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19821117066379I"
+  ]
+  edge [
+    source 510
+    target 511
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19821117066379I"
+  ]
+  edge [
+    source 512
+    target 72
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19821117066379I"
+  ]
+  edge [
+    source 513
+    target 514
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19810303007119A"
+  ]
+  edge [
+    source 514
+    target 513
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19810303007119A"
+  ]
+  edge [
+    source 515
+    target 383
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19810303007119A"
+  ]
+  edge [
+    source 516
+    target 517
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950602032329I"
+  ]
+  edge [
+    source 517
+    target 516
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950602032329I"
+  ]
+  edge [
+    source 518
+    target 519
+    relation "FOLLOWED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "19901101064289I"
+  ]
+  edge [
+    source 519
+    target 520
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19901101064289I"
+  ]
+  edge [
+    source 520
+    target 519
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19901101064289I"
+  ]
+  edge [
+    source 522
+    target 100
+    relation "OWNED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "20050713014239I"
+  ]
+  edge [
+    source 523
+    target 524
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19860706034879A"
+  ]
+  edge [
+    source 523
+    target 563
+    relation "TIME PERIOD"
+    incident_ids "_networkx_list_start"
+    incident_ids "19980508008619A"
+  ]
+  edge [
+    source 523
+    target 564
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19980508008619A"
+  ]
+  edge [
+    source 523
+    target 565
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19980508008619A"
+  ]
+  edge [
+    source 523
+    target 609
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950804028629A"
+  ]
+  edge [
+    source 523
+    target 261
+    relation "LOCATION"
+    incident_ids "_networkx_list_start"
+    incident_ids "20070202001609A"
+  ]
+  edge [
+    source 524
+    target 523
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19860706034879A"
+  ]
+  edge [
+    source 526
+    target 105
+    relation "PART OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "19840121015319I"
+  ]
+  edge [
+    source 527
+    target 528
+    relation "TIME PERIOD"
+    incident_ids "_networkx_list_start"
+    incident_ids "19960322013629I"
+  ]
+  edge [
+    source 529
+    target 528
+    relation "TIME PERIOD"
+    incident_ids "_networkx_list_start"
+    incident_ids "19960322013629I"
+  ]
+  edge [
+    source 530
+    target 112
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19960504009509A"
+  ]
+  edge [
+    source 531
+    target 532
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19790211002709A"
+  ]
+  edge [
+    source 532
+    target 531
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19790211002709A"
+  ]
+  edge [
+    source 532
+    target 605
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19801005072789I"
+  ]
+  edge [
+    source 534
+    target 124
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19780913017419I"
+  ]
+  edge [
+    source 535
+    target 88
+    relation "PART OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "19781113027039I"
+  ]
+  edge [
+    source 536
+    target 537
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19870606018859A"
+  ]
+  edge [
+    source 537
+    target 536
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19870606018859A"
+  ]
+  edge [
+    source 537
+    target 603
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19911222062669I"
+  ]
+  edge [
+    source 538
+    target 539
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19870606018859A"
+  ]
+  edge [
+    source 538
+    target 84
+    relation "TIME PERIOD"
+    incident_ids "_networkx_list_start"
+    incident_ids "19860514036219I"
+  ]
+  edge [
+    source 540
+    target 538
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19870606018859A"
+  ]
+  edge [
+    source 541
+    target 542
+    relation "TIME PERIOD"
+    incident_ids "_networkx_list_start"
+    incident_ids "19990714022959I"
+  ]
+  edge [
+    source 541
+    target 604
+    relation "LOCATION"
+    incident_ids "_networkx_list_start"
+    incident_ids "20030607012509A"
+  ]
+  edge [
+    source 541
+    target 429
+    relation "TIME PERIOD"
+    incident_ids "_networkx_list_start"
+    incident_ids "20030607012509A"
+  ]
+  edge [
+    source 543
+    target 544
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19870319012959I"
+  ]
+  edge [
+    source 544
+    target 543
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19870319012959I"
+  ]
+  edge [
+    source 548
+    target 55
+    relation "USED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "19890723054159I"
+  ]
+  edge [
+    source 549
+    target 1
+    relation "FOLLOWED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "19970523014439I"
+  ]
+  edge [
+    source 550
+    target 146
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19970908038069A"
+  ]
+  edge [
+    source 551
+    target 143
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19970908038069A"
+  ]
+  edge [
+    source 552
+    target 553
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19781108022239I"
+  ]
+  edge [
+    source 553
+    target 554
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19781108022239I"
+  ]
+  edge [
+    source 555
+    target 556
+    relation "INFLUENCED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "19760606015529A"
+  ]
+  edge [
+    source 557
+    target 30
+    relation "MAINTAINED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "20051009024969I"
+  ]
+  edge [
+    source 557
+    target 405
+    relation "MAINTAINED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "20051009024969I"
+  ]
+  edge [
+    source 558
+    target 30
+    relation "MAINTAINED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "19930530020029I"
+  ]
+  edge [
+    source 559
+    target 468
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19930530020029I"
+  ]
+  edge [
+    source 560
+    target 561
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19801230089799I"
+  ]
+  edge [
+    source 561
+    target 560
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19801230089799I"
+  ]
+  edge [
+    source 562
+    target 560
+    relation "FOLLOWS"
+    incident_ids "_networkx_list_start"
+    incident_ids "19801230089799I"
+  ]
+  edge [
+    source 564
+    target 523
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19980508008619A"
+  ]
+  edge [
+    source 565
+    target 523
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19980508008619A"
+  ]
+  edge [
+    source 566
+    target 166
+    relation "LOCATION"
+    incident_ids "_networkx_list_start"
+    incident_ids "19940818022409A"
+  ]
+  edge [
+    source 566
+    target 474
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19940818022409A"
+  ]
+  edge [
+    source 566
+    target 167
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19940818022409A"
+  ]
+  edge [
+    source 566
+    target 168
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19940818022409A"
+  ]
+  edge [
+    source 567
+    target 474
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19920405008919A"
+  ]
+  edge [
+    source 568
+    target 174
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19840821046409A"
+  ]
+  edge [
+    source 570
+    target 571
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19850525020799A"
+  ]
+  edge [
+    source 571
+    target 570
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19850525020799A"
+  ]
+  edge [
+    source 572
+    target 186
+    relation "LOCATION"
+    incident_ids "_networkx_list_start"
+    incident_ids "19861114075329I"
+  ]
+  edge [
+    source 572
+    target 189
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19861114075329I"
+  ]
+  edge [
+    source 573
+    target 191
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "20010421009329I"
+  ]
+  edge [
+    source 574
+    target 575
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19960524045629A"
+  ]
+  edge [
+    source 574
+    target 106
+    relation "TIME PERIOD"
+    incident_ids "_networkx_list_start"
+    incident_ids "19951031041599A"
+  ]
+  edge [
+    source 575
+    target 574
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19960524045629A"
+  ]
+  edge [
+    source 576
+    target 198
+    relation "FACET OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "19871211075169A"
+  ]
+  edge [
+    source 577
+    target 196
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19871211075169A"
+  ]
+  edge [
+    source 578
+    target 579
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "20010910029739I"
+  ]
+  edge [
+    source 579
+    target 578
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "20010910029739I"
+  ]
+  edge [
+    source 580
+    target 206
+    relation "TIME PERIOD"
+    incident_ids "_networkx_list_start"
+    incident_ids "19871027060859A"
+  ]
+  edge [
+    source 582
+    target 208
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19871027060859A"
+  ]
+  edge [
+    source 583
+    target 584
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19980616023109I"
+  ]
+  edge [
+    source 583
+    target 93
+    relation "TIME PERIOD"
+    incident_ids "_networkx_list_start"
+    incident_ids "19780427013859I"
+  ]
+  edge [
+    source 584
+    target 583
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19980616023109I"
+  ]
+  edge [
+    source 585
+    target 106
+    relation "TIME PERIOD"
+    incident_ids "_networkx_list_start"
+    incident_ids "19910710026989A"
+  ]
+  edge [
+    source 586
+    target 215
+    relation "INSTANCE OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "19910710026989A"
+  ]
+  edge [
+    source 587
+    target 215
+    relation "INSTANCE OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "19910710026989A"
+  ]
+  edge [
+    source 588
+    target 106
+    relation "TIME PERIOD"
+    incident_ids "_networkx_list_start"
+    incident_ids "19791128035159A"
+  ]
+  edge [
+    source 588
+    target 590
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19791128035159A"
+  ]
+  edge [
+    source 588
+    target 102
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19791128035159A"
+  ]
+  edge [
+    source 589
+    target 222
+    relation "TIME PERIOD"
+    incident_ids "_networkx_list_start"
+    incident_ids "19791128035159A"
+  ]
+  edge [
+    source 589
+    target 358
+    relation "LOCATION"
+    incident_ids "_networkx_list_start"
+    incident_ids "19911222062669I"
+  ]
+  edge [
+    source 589
+    target 608
+    relation "LOCATION"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950804028629A"
+  ]
+  edge [
+    source 589
+    target 122
+    relation "LOCATION"
+    incident_ids "_networkx_list_start"
+    incident_ids "19850729066139I"
+  ]
+  edge [
+    source 589
+    target 297
+    relation "LOCATION"
+    incident_ids "_networkx_list_start"
+    incident_ids "19940226003029A"
+  ]
+  edge [
+    source 590
+    target 588
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19791128035159A"
+  ]
+  edge [
+    source 591
+    target 1
+    relation "TIME PERIOD"
+    incident_ids "_networkx_list_start"
+    incident_ids "20060621012279A"
+  ]
+  edge [
+    source 591
+    target 592
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "20060621012279A"
+  ]
+  edge [
+    source 592
+    target 591
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "20060621012279A"
+  ]
+  edge [
+    source 593
+    target 594
+    relation "TIME PERIOD"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950314029269I"
+  ]
+  edge [
+    source 596
+    target 231
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19800804037399A"
+  ]
+  edge [
+    source 598
+    target 599
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19780402008409I"
+  ]
+  edge [
+    source 600
+    target 236
+    relation "TIME PERIOD"
+    incident_ids "_networkx_list_start"
+    incident_ids "19890725041869I"
+  ]
+  edge [
+    source 601
+    target 602
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19890725041869I"
+  ]
+  edge [
+    source 602
+    target 601
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19890725041869I"
+  ]
+  edge [
+    source 603
+    target 115
+    relation "FOLLOWS"
+    incident_ids "_networkx_list_start"
+    incident_ids "19911222062669I"
+  ]
+  edge [
+    source 603
+    target 537
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19911222062669I"
+  ]
+  edge [
+    source 605
+    target 532
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19801005072789I"
+  ]
+  edge [
+    source 607
+    target 430
+    relation "FOLLOWS"
+    incident_ids "_networkx_list_start"
+    incident_ids "19781210024199I"
+  ]
+  edge [
+    source 607
+    target 432
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19781210024199I"
+  ]
+  edge [
+    source 609
+    target 523
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950804028629A"
+  ]
+  edge [
+    source 609
+    target 610
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950804028629A"
+  ]
+  edge [
+    source 609
+    target 611
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950804028629A"
+  ]
+  edge [
+    source 610
+    target 609
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950804028629A"
+  ]
+  edge [
+    source 611
+    target 609
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950804028629A"
+  ]
+  edge [
+    source 612
+    target 254
+    relation "FOLLOWS"
+    incident_ids "_networkx_list_start"
+    incident_ids "20040304003309I"
+  ]
+  edge [
+    source 612
+    target 613
+    relation "LOCATION"
+    incident_ids "_networkx_list_start"
+    incident_ids "20040304003309I"
+  ]
+  edge [
+    source 614
+    target 254
+    relation "FOLLOWS"
+    incident_ids "_networkx_list_start"
+    incident_ids "20040304003309I"
+  ]
+  edge [
+    source 614
+    target 613
+    relation "LOCATION"
+    incident_ids "_networkx_list_start"
+    incident_ids "20040304003309I"
+  ]
+  edge [
+    source 617
+    target 618
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19780916024019A"
+  ]
+  edge [
+    source 619
+    target 617
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19780916024019A"
+  ]
+  edge [
+    source 620
+    target 267
+    relation "FOLLOWED BY"
+    incident_ids "_networkx_list_start"
+    incident_ids "20060718018299I"
+  ]
+  edge [
+    source 621
+    target 269
+    relation "PART OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "20040925025079A"
+  ]
+  edge [
+    source 621
+    target 271
+    relation "PART OF"
+    incident_ids "_networkx_list_start"
+    incident_ids "20040925025079A"
+  ]
+  edge [
+    source 622
+    target 444
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19961027033759A"
+  ]
+  edge [
+    source 623
+    target 624
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19961027033759A"
+  ]
+  edge [
+    source 628
+    target 629
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19850729066139I"
+  ]
+  edge [
+    source 630
+    target 631
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19940226003029A"
+  ]
+  edge [
+    source 631
+    target 630
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19940226003029A"
+  ]
+  edge [
+    source 633
+    target 457
+    relation "TIME PERIOD"
+    incident_ids "_networkx_list_start"
+    incident_ids "19990923027739A"
+  ]
+  edge [
+    source 634
+    target 93
+    relation "TIME PERIOD"
+    incident_ids "_networkx_list_start"
+    incident_ids "19980415037339I"
+  ]
+  edge [
+    source 634
+    target 635
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19980415037339I"
+  ]
+  edge [
+    source 635
+    target 634
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19980415037339I"
+  ]
+  edge [
+    source 637
+    target 638
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950826026019A"
+  ]
+  edge [
+    source 637
+    target 639
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950826026019A"
+  ]
+  edge [
+    source 638
+    target 637
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950826026019A"
+  ]
+  edge [
+    source 640
+    target 641
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950826026019A"
+  ]
+  edge [
+    source 641
+    target 640
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950826026019A"
+  ]
+  edge [
+    source 642
+    target 637
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19950826026019A"
+  ]
+  edge [
+    source 643
+    target 328
+    relation "TIME PERIOD"
+    incident_ids "_networkx_list_start"
+    incident_ids "20000215041409A"
+  ]
+  edge [
+    source 645
+    target 471
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19880527016939A"
+  ]
+  edge [
+    source 648
+    target 647
+    relation "TIME PERIOD"
+    incident_ids "_networkx_list_start"
+    incident_ids "19960418007829A"
+  ]
+  edge [
+    source 649
+    target 156
+    relation "TIME PERIOD"
+    incident_ids "_networkx_list_start"
+    incident_ids "19970828026989A"
+  ]
+  edge [
+    source 650
+    target 649
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19970828026989A"
+  ]
+  edge [
+    source 650
+    target 653
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19970828026989A"
+  ]
+  edge [
+    source 651
+    target 346
+    relation "LOCATION"
+    incident_ids "_networkx_list_start"
+    incident_ids "19970828026989A"
+  ]
+  edge [
+    source 652
+    target 650
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19970828026989A"
+  ]
+  edge [
+    source 654
+    target 106
+    relation "TIME PERIOD"
+    incident_ids "_networkx_list_start"
+    incident_ids "19870523018729A"
+  ]
+  edge [
+    source 654
+    target 465
+    relation "HAS EFFECT"
+    incident_ids "_networkx_list_start"
+    incident_ids "19870523018729A"
+  ]
+  edge [
+    source 654
+    target 208
+    relation "HAS CAUSE"
+    incident_ids "_networkx_list_start"
+    incident_ids "19870523018729A"
   ]
 ]

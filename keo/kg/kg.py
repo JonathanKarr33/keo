@@ -148,17 +148,18 @@ for strict_re_gs, re_path in re_paths.items():
                             entity2 = ", ".join(relation_triples[i + 1:])
                             break
                     
-                    if strict_re_gs:
+                    if strict_re_gs == 'strict':
                         if G.has_node(entity1) and G.has_node(entity2):
                             if not G.has_edge(entity1, entity2):
                                 G.add_edge(entity1, entity2, relation=relation, incident_ids=[str(incident_id)])
                     else:
-                        if not G.has_node(entity1):
-                            G.add_node(entity1, type="re", incident_ids=[str(incident_id)])
-                        if not G.has_node(entity2):
-                            G.add_node(entity2, type="re", incident_ids=[str(incident_id)])
-                        if not G.has_edge(entity1, entity2):
-                            G.add_edge(entity1, entity2, relation=relation, incident_ids=[str(incident_id)])
+                        if entity1 and entity2:
+                            if not G.has_node(entity1):
+                                G.add_node(entity1, type="re", incident_ids=[str(incident_id)])
+                            if not G.has_node(entity2):
+                                G.add_node(entity2, type="re", incident_ids=[str(incident_id)])
+                            if not G.has_edge(entity1, entity2):
+                                G.add_edge(entity1, entity2, relation=relation, incident_ids=[str(incident_id)])
                     
                     # Count the relationships
                     if relation not in relationship_counts[strict_re_gs]:
