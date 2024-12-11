@@ -7,7 +7,6 @@ graph [
     incident_ids "19990213001379A"
     incident_ids "19780111000459A"
     incident_ids "19990213001379A"
-    incident_ids "19990213001379A"
     incident_ids "19780111000459A"
   ]
   node [
@@ -112,7 +111,6 @@ graph [
     type "SYS"
     incident_ids "19800217031649I"
     incident_ids "19800217031649I"
-    incident_ids "19800217031649I"
   ]
   node [
     id 6
@@ -140,13 +138,11 @@ graph [
     type "OPS"
     incident_ids "19790720021329A"
     incident_ids "19790720021329A"
-    incident_ids "19790720021329A"
   ]
   node [
     id 9
     label "LOAD"
     type "OPS"
-    incident_ids "19790720021329A"
     incident_ids "19790720021329A"
     incident_ids "19790720021329A"
   ]
@@ -378,11 +374,6 @@ graph [
     incident_ids "19780111000459A"
     incident_ids "19870523018729A"
     incident_ids "20030620012809I"
-    incident_ids "19930530020029I"
-    incident_ids "20010421009329I"
-    incident_ids "20010421009329I"
-    incident_ids "19780111000459A"
-    incident_ids "19780111000459A"
     incident_ids "20000215010329A"
     incident_ids "19850315007389A"
     incident_ids "19991230042089A"
@@ -566,13 +557,11 @@ graph [
     type "SYS"
     incident_ids "19820725041999I"
     incident_ids "19820725041999I"
-    incident_ids "19820725041999I"
   ]
   node [
     id 45
     label "COWLING"
     type "SYS"
-    incident_ids "19820725041999I"
     incident_ids "19820725041999I"
     incident_ids "19820725041999I"
     incident_ids "19820725041999I"
@@ -881,7 +870,6 @@ graph [
     incident_ids "19911222062669I"
     incident_ids "19801005072789I"
     incident_ids "20040304003309I"
-    incident_ids "19911222062669I"
     incident_ids "19810303007119A"
     incident_ids "19790211002709A"
     incident_ids "19911222062669I"
@@ -1402,7 +1390,6 @@ graph [
     label "BAGGAGE CART"
     type "VEHICLE"
     incident_ids "19781108022239I"
-    incident_ids "19781108022239I"
     incident_ids "19790718019229I"
     incident_ids "19781108022239I"
   ]
@@ -1419,7 +1406,6 @@ graph [
     id 149
     label "CART"
     type "VEHICLE"
-    incident_ids "19781108022239I"
     incident_ids "19781108022239I"
     incident_ids "19790718019229I"
     incident_ids "19781108022239I"
@@ -1493,14 +1479,12 @@ graph [
     incident_ids "19930530020029I"
     incident_ids "19890725041869I"
     incident_ids "19930530020029I"
-    incident_ids "19930530020029I"
     incident_ids "19890725041869I"
   ]
   node [
     id 159
     label "FLAT NOSE STRUT"
     type "SYS"
-    incident_ids "19801230089799I"
     incident_ids "19801230089799I"
     incident_ids "19801230089799I"
   ]
@@ -1578,7 +1562,6 @@ graph [
     type "FAC"
     incident_ids "19920405008919A"
     incident_ids "19920405008919A"
-    incident_ids "19920405008919A"
   ]
   node [
     id 170
@@ -1598,7 +1581,6 @@ graph [
     id 172
     label "STRIP"
     type "FAC"
-    incident_ids "19920405008919A"
     incident_ids "19920405008919A"
     incident_ids "19920405008919A"
     incident_ids "19920405008919A"
@@ -1816,7 +1798,6 @@ graph [
     type "PER"
     incident_ids "20010910029739I"
     incident_ids "20010910029739I"
-    incident_ids "20010910029739I"
   ]
   node [
     id 202
@@ -1906,14 +1887,12 @@ graph [
     incident_ids "19980616023109I"
     incident_ids "19780427013859I"
     incident_ids "19980616023109I"
-    incident_ids "19980616023109I"
     incident_ids "19780427013859I"
   ]
   node [
     id 214
     label "COWL"
     type "SYS"
-    incident_ids "19980616023109I"
     incident_ids "19980616023109I"
     incident_ids "19980616023109I"
   ]
@@ -2687,8 +2666,6 @@ graph [
     incident_ids "19950826026019A"
     incident_ids "19950826026019A"
     incident_ids "19950826026019A"
-    incident_ids "19950826026019A"
-    incident_ids "19950826026019A"
   ]
   node [
     id 324
@@ -2885,63 +2862,38 @@ graph [
   node [
     id 351
     label "IT"
-    type "coreference"
-    incident_ids "19990213001379A"
-    incident_ids "19801230089799I"
   ]
   node [
     id 352
     label "THEY"
-    type "coreference"
-    incident_ids "_networkx_list_start"
-    incident_ids "19800217031649I"
   ]
   node [
     id 353
     label "THE PILOT"
-    incident_ids "19990714022959I"
-    incident_ids "20060621012279A"
-    incident_ids "20060621012279A"
   ]
   node [
     id 354
     label "HE"
-    type "coreference"
-    incident_ids "_networkx_list_start"
-    incident_ids "19990714022959I"
   ]
   node [
     id 355
     label "SHE"
-    type "coreference"
-    incident_ids "_networkx_list_start"
-    incident_ids "20010910029739I"
   ]
   node [
     id 356
     label "HIS"
-    type "coreference"
-    incident_ids "20060621012279A"
-    incident_ids "20060621012279A"
   ]
   node [
     id 357
     label "HIM"
-    type "coreference"
-    incident_ids "20060621012279A"
-    incident_ids "20060621012279A"
   ]
   node [
     id 358
     label "SAME RUNWAY"
-    incident_ids "_networkx_list_start"
-    incident_ids "19911222062669I"
   ]
   node [
     id 359
     label "THE AIRCRAFT"
-    incident_ids "19870309039779I"
-    incident_ids "19870309039779I"
   ]
   node [
     id 360
@@ -5684,8 +5636,8 @@ graph [
     source 388
     target 38
     relation "PART OF"
+    incident_ids "_networkx_list_start"
     incident_ids "19860706034879A"
-    incident_ids "19780509032859I"
   ]
   edge [
     source 392
