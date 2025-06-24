@@ -1,13 +1,15 @@
 import pandas as pd
 from tqdm import tqdm
 from openai import OpenAI
+import os
 
 # File paths
-input_file_path_list = ["GraphRAG_QA_Answers.csv"]
-output_file_path_list = ["GraphRAG_QA_Evaluation.csv"]
-
+# input_file_path_list = ["VanillaGPT4o_QA_Answers.csv", "GPT4o_GraphRAG_spacy_QA_Answers.csv", "GPT4o_GraphRAG_loose_QA_Answers.csv", "GPT4o_GraphRAG_strict_QA_Answers.csv"]
+# output_file_path_list = ["VanillaGPT4o_QA_Evaluation.csv", "GPT4o_GraphRAG_spacy_QA_Evaluation.csv", "GPT4o_GraphRAG_loose_QA_Evaluation.csv", "GPT4o_GraphRAG_strict_QA_Evaluation.csv"]
+input_file_path_list = ["GPT4o_GraphRAG_spacy_QA_Answers.csv"]
+output_file_path_list = ["GPT4o_GraphRAG_spacy_QA_Evaluation.csv"]
 # OpenAI API Key
-openai_api_key = "Your_OpenAI_API_Key"  # Replace with your OpenAI API key
+openai_api_key = os.getenv("OPENAI_API_KEY")  # Load from environment variable
 client = OpenAI(api_key=openai_api_key)
 
 for input_file_path, output_file_path in zip(input_file_path_list, output_file_path_list):
