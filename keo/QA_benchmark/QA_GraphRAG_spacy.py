@@ -9,13 +9,13 @@ from graph_rag.KEO_GraphRAG_spacy import run_analysis_pipeline, query_graph
 # File paths
 qa_file_path = "GPT4o_Generated_QA.csv"
 faa_data_file_path = "../../OMIn_dataset/data/FAA_data/FAA_sample_100.csv"
-output_file_path = "GraphRAG_QA_Answers.csv"
+output_file_path = "GPT4o_GraphRAG_spacy_QA_Answers.csv"
 
 # Initialize the pipeline
 print("Initializing the pipeline...")
 pipeline_results = run_analysis_pipeline(
     csv_path=faa_data_file_path,
-    openai_api_key="Your_OpenAI_API_Key",  # Replace with your OpenAI API key
+    openai_api_key=os.getenv("OPENAI_API_KEY"),  # Load from environment variable
     cache_dir="graph_cache"
 )
 retriever = pipeline_results['retriever']

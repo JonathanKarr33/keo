@@ -21,7 +21,8 @@ University of Notre Dame | Center for Research Computing | NSWC Crane Trusted AI
 ### Dataset [![DOI](https://zenodo.org/badge/669778163.svg)](https://zenodo.org/doi/10.5281/zenodo.13333824)
 
 ## Table of Contents
-1. [Operations and Maintenance Intelligence (OMIn) Dataset](#OMIn-dataset)
+1. [Setup and Configuration](#setup)
+2. [Operations and Maintenance Intelligence (OMIn) Dataset](#OMIn-dataset)
     - [Key Features](#key_features)
     - [How to Access](#access_dataset)
     - [How to Cite](#cite_dataset)
@@ -53,6 +54,48 @@ University of Notre Dame | Center for Research Computing | NSWC Crane Trusted AI
       - [UniRel](#unirel_re)
       - [DeepStruct](#deepstruct_re)
       - [PL-Marker (SciERC)](#plmarker_re)
+
+---
+<a name="setup"></a>
+
+## Setup and Configuration
+
+### OpenAI API Configuration
+
+Several components in this project use OpenAI's API for language model functionality, including:
+- KEO Graph-RAG system (`keo/graph_rag/`)
+- Vanilla LLM implementations (`keo/vanilla_LLM/`)
+- QA Benchmark tools (`keo/QA_benchmark/`)
+
+**To set up OpenAI API access:**
+
+1. Get an OpenAI API key from [OpenAI Platform](https://platform.openai.com/api-keys)
+
+2. Set the API key as an environment variable:
+
+   **Linux/macOS:**
+   ```bash
+   export OPENAI_API_KEY="your-openai-api-key-here"
+   ```
+   
+   **Windows:**
+   ```bash
+   set OPENAI_API_KEY=your-openai-api-key-here
+   ```
+   
+   **Permanent setup (add to ~/.bashrc, ~/.zshrc, etc.):**
+   ```bash
+   echo 'export OPENAI_API_KEY="your-openai-api-key-here"' >> ~/.zshrc
+   source ~/.zshrc
+   ```
+
+3. Verify the setup:
+   ```bash
+   echo $OPENAI_API_KEY  # Linux/macOS
+   echo %OPENAI_API_KEY%  # Windows
+   ```
+
+**Note:** Never commit your API key to version control. All files in this project have been updated to use environment variables instead of hardcoded keys.
 
 ---
 <a name="OMIn-dataset"></a>

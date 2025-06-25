@@ -10,7 +10,10 @@ import networkx as nx
 # OpenAI
 from openai import OpenAI
 
-openai_api_key = 'api key goes here'
+openai_api_key = os.getenv("OPENAI_API_KEY")
+if not openai_api_key:
+    raise ValueError("OPENAI_API_KEY environment variable not set. Please set it with your OpenAI API key.")
+model_name = "gpt-4o"
 
 def load_aviation_graph(graph_path: str = 'knowledge_graph.gml') -> nx.Graph:
     """
@@ -394,7 +397,7 @@ class GraphRetriever:
 
             # Generate response
             response = self.openai_client.chat.completions.create(
-                model="gpt-3.5-turbo",
+                model=model_name,
                 messages=prompt_message,
                 temperature=0.7,
                 max_tokens=300
@@ -463,7 +466,7 @@ def generate_structured_answer(self, query: str, results: Dict, max_context: int
 
         # Generate response
         response = self.openai_client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model=model_name,
             messages=prompt_message,
             temperature=0.7,
             max_tokens=300

@@ -25,7 +25,11 @@ import pandas as pd
 import re
 import openai
 from openai import OpenAI
-openai_api_key = 'Your_OpenAI_API_Key'
+import os
+openai_api_key = os.getenv("OPENAI_API_KEY")  # Load from environment variable
+if not openai_api_key:
+    raise ValueError("OPENAI_API_KEY environment variable not set. Please set it with your OpenAI API key.")
+model_name = "gpt-4o"
 
 class DataPreparer:
     def __init__(self, file_path):
@@ -243,7 +247,7 @@ class DynamicGraphProcessor:
 
             client = OpenAI(api_key=openai_api_key)
             response = client.chat.completions.create(
-                model="gpt-3.5-turbo",
+                model=model_name,
                 messages=[
                     {"role": "system", "content": "You are an assistant specializing in analyzing entity relationships in aviation safety incidents."},
                     {"role": "user", "content": f"Analyze and summarize the following entity relationships, focusing on key patterns and insights:\n{context}"}
@@ -614,7 +618,7 @@ def query_graph(retriever, query, k=10, threshold=0.3):
             """
 
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model=model_name,
             messages=[
                 {"role": "system", "content": "You are an aviation safety analyst. Provide a clear, concise summary of incident data findings."},
                 {"role": "user", "content": context}

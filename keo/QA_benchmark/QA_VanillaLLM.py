@@ -1,13 +1,14 @@
 import pandas as pd
 from tqdm import tqdm
 from openai import OpenAI
+import os
 
 # File paths
 qa_file_path = "GPT4o_Generated_QA.csv"
 output_file_path = "VanillaGPT4o_QA_Answers.csv"
 
 # OpenAI API Key
-openai_api_key = "Your_OpenAI_API_Key"
+openai_api_key = os.getenv("OPENAI_API_KEY")  # Load from environment variable
 client = OpenAI(api_key=openai_api_key)
 
 # Load the QA dataset
