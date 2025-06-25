@@ -14,7 +14,9 @@ from utils.evaluate_ner import evaluate_ner
 nltk.download('punkt')
 
 # Set your OpenAI API key
-openai_api_key = "Your_Key"  # Replace with your OpenAI API key
+openai_api_key = os.getenv("OPENAI_API_KEY")  # Load from environment variable
+if not openai_api_key:
+    raise ValueError("OPENAI_API_KEY environment variable not set. Please set it with your OpenAI API key.")
 client = OpenAI(api_key=openai_api_key)
 
 # Load the CSV files from the 'raw' directory

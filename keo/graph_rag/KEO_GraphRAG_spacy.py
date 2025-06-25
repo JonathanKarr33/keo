@@ -27,6 +27,8 @@ import openai
 from openai import OpenAI
 import os
 openai_api_key = os.getenv("OPENAI_API_KEY")  # Load from environment variable
+if not openai_api_key:
+    raise ValueError("OPENAI_API_KEY environment variable not set. Please set it with your OpenAI API key.")
 model_name = "gpt-4o"
 
 class DataPreparer:

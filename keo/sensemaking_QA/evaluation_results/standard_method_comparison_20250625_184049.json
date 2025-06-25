@@ -1,0 +1,59 @@
+{
+  "vanilla_average_scores": {
+    "comprehensiveness": 4.6,
+    "human_enfranchisement": 3.0,
+    "diversity": 3.8,
+    "faithfulness": 4.6,
+    "overall_score": 4.0
+  },
+  "graphrag_average_scores": {
+    "comprehensiveness": 4.2,
+    "human_enfranchisement": 3.0,
+    "diversity": 3.9,
+    "faithfulness": 4.2,
+    "overall_score": 3.825
+  },
+  "pairwise_comparison_results": {
+    "comprehensiveness": {
+      "vanilla_wins": 1,
+      "graphrag_wins": 1,
+      "ties": 3,
+      "vanilla_win_rate": 0.2,
+      "graphrag_win_rate": 0.2,
+      "tie_rate": 0.6
+    },
+    "supporting_evidence": {
+      "vanilla_wins": 1,
+      "graphrag_wins": 4,
+      "ties": 0,
+      "vanilla_win_rate": 0.2,
+      "graphrag_win_rate": 0.8,
+      "tie_rate": 0.0
+    },
+    "diverse_perspectives": {
+      "vanilla_wins": 2,
+      "graphrag_wins": 3,
+      "ties": 0,
+      "vanilla_win_rate": 0.4,
+      "graphrag_win_rate": 0.6,
+      "tie_rate": 0.0
+    },
+    "factual_accuracy": {
+      "vanilla_wins": 0,
+      "graphrag_wins": 0,
+      "ties": 5,
+      "vanilla_win_rate": 0.0,
+      "graphrag_win_rate": 0.0,
+      "tie_rate": 1.0
+    },
+    "overall_preference": {
+      "vanilla_wins": 1,
+      "graphrag_wins": 3,
+      "ties": 1,
+      "vanilla_win_rate": 0.2,
+      "graphrag_win_rate": 0.6,
+      "tie_rate": 0.2
+    }
+  },
+  "evaluation_summary": "EVALUATION COMPARISON SUMMARY\n========================================\nAverage Scores:\n  Comprehensiveness: Vanilla 4.60 vs GraphRAG 4.20\n  Human_Enfranchisement: Vanilla 3.00 vs GraphRAG 3.00\n  Diversity: Vanilla 3.80 vs GraphRAG 3.90\n  Faithfulness: Vanilla 4.60 vs GraphRAG 4.20\n  Overall_Score: Vanilla 4.00 vs GraphRAG 3.83\n\nPairwise Comparison Results:\n  Comprehensiveness: GraphRAG wins 20.0% of comparisons\n  Supporting Evidence: GraphRAG wins 80.0% of comparisons\n  Diverse Perspectives: GraphRAG wins 60.0% of comparisons\n  Factual Accuracy: GraphRAG wins 0.0% of comparisons\n  Overall Preference: GraphRAG wins 60.0% of comparisons"
+}

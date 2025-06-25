@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 from openai import OpenAI  # Assuming you are using OpenAI API for the LLM interaction
 from tqdm import tqdm  # Import the tqdm library
 
@@ -23,7 +24,9 @@ What safety issues are most common?
 """
 
 # OpenAI API Key (replace with your API key)
-openai_api_key = "Your_OpenAI_API_Key"
+openai_api_key = os.getenv("OPENAI_API_KEY")  # Load from environment variable
+if not openai_api_key:
+    raise ValueError("OPENAI_API_KEY environment variable not set. Please set it with your OpenAI API key.")
 client = OpenAI(api_key=openai_api_key)
 
 # Process each row in "c119" with a tqdm progress bar

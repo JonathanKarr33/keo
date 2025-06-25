@@ -1,0 +1,24 @@
+{
+  "total_original_records": 2763,
+  "num_sample_files": 5,
+  "samples_per_file": 100,
+  "total_sampled_records": 500,
+  "remaining_records_for_questions": 2263,
+  "random_seed": 42,
+  "sample_files": [
+    "Maintenance_sample_100_01.csv",
+    "Maintenance_sample_100_02.csv",
+    "Maintenance_sample_100_03.csv",
+    "Maintenance_sample_100_04.csv",
+    "Maintenance_sample_100_05.csv"
+  ],
+  "remaining_file": "Maintenance_remaining_for_questions.csv",
+  "excluded_from_questions": [
+    "FAA_sample_100.csv",
+    "Maintenance_sample_100_01.csv",
+    "Maintenance_sample_100_02.csv",
+    "Maintenance_sample_100_03.csv",
+    "Maintenance_sample_100_04.csv",
+    "Maintenance_sample_100_05.csv"
+  ]
+}
