@@ -4,6 +4,7 @@ from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline, AutoProcessor
 import torch
 import argparse
+import re
 
 try:
     from transformers import Gemma3ForConditionalGeneration
@@ -74,6 +75,11 @@ def load_model_and_tokenizer(model_name, shortname):
         )
         return tokenizer, model
 
+def extract_triplets_only(text):
+    # Find all lines that match the triplet pattern
+    triplet_lines = re.findall(r'<[^>]+>', text)
+    return '\n'.join(triplet_lines)
+
 def generate_triplets(prompt, tokenizer_or_processor, model, shortname, max_new_tokens=256, temperature=0.1):
     if shortname.startswith("gemma3"):
         # Format as chat template
@@ -91,9 +97,11 @@ def generate_triplets(prompt, tokenizer_or_processor, model, shortname, max_new_
             generation = generation[0][input_len:]
         decoded = tokenizer_or_processor.decode(generation, skip_special_tokens=True)
         if 'Triplets:' in decoded:
-            return decoded.split('Triplets:')[-1].strip()
+            triplet_text = decoded.split('Triplets:')[-1].strip()
         else:
-            return decoded.strip()
+            triplet_text = decoded.strip()
+        triplet_text = extract_triplets_only(triplet_text)
+        return triplet_text
     else:
         inputs = tokenizer_or_processor(prompt, return_tensors="pt").to(model.device)
         with torch.no_grad():
@@ -106,24 +114,30 @@ def generate_triplets(prompt, tokenizer_or_processor, model, shortname, max_new_
             )
         decoded = tokenizer_or_processor.decode(output[0], skip_special_tokens=True)
         if 'Triplets:' in decoded:
-            return decoded.split('Triplets:')[-1].strip()
+            triplet_text = decoded.split('Triplets:')[-1].strip()
         else:
-            return decoded.strip()
+            triplet_text = decoded.strip()
+        triplet_text = extract_triplets_only(triplet_text)
+        return triplet_text
 
 def main():
     parser = argparse.ArgumentParser(description="Extract triplets using selected LLMs.")
     parser.add_argument('--size', choices=['small', 'large'], default='small', help='Model size set to use: small (default) or large')
+    parser.add_argument('--all', action='store_true', help='If set, process all rows from the JSON file; otherwise, use the default 100-row CSV')
     args = parser.parse_args()
 
     if args.size == 'small':
         models = SMALL_MODELS
-        output_csv = "re_gs_strict_kg_gemma3_phi4mini.csv"
+        output_csv = "all_kg_llm_triplets_gemma3_phi4mini.csv" if args.all else "100_kg_llm_triplets_gemma3_phi4mini.csv"
     else:
         models = LARGE_MODELS
-        output_csv = "re_gs_strict_kg_gemma12b_phi12b_mistral.csv"
+        output_csv = "all_kg_llm_triplets_gemma12b_phi12b_mistral.csv" if args.all else "100_kg_llm_triplets_gemma12b_phi12b_mistral.csv"
         print("WARNING: Large models may require significant GPU memory. If you encounter OOM errors, run each model separately and merge results.")
 
-    input_csv = "re_gs_strict.csv"
+    if args.all:
+        input_file = "../../OMIn_dataset/data/FAA_data/faa.json"
+    else:
+        input_file = "../../OMIn_dataset/data/FAA_data/FAA_sample_100.csv"
 
     # Load models
     model_objs = {}
@@ -131,15 +145,26 @@ def main():
         print(f"Loading {modelname}...")
         model_objs[shortname] = load_model_and_tokenizer(modelname, shortname)
 
-    # Read input CSV
+    # Read input CSV or JSON
     rows = []
-    with open(input_csv, newline='', encoding='utf-8') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            rows.append(row)
+    if input_file.endswith('.json'):
+        import json
+        with open(input_file, 'r', encoding='utf-8') as f:
+            for line in f:
+                row = json.loads(line)
+                if 'c119_text' in row:
+                    row['c119_text'] = row['c119_text'].upper()
+                rows.append(row)
+    else:
+        with open(input_file, newline='', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                if 'c119_text' in row:
+                    row['c119_text'] = row['c119_text'].upper()
+                rows.append(row)
 
     # Prepare output
-    fieldnames = ["index", "c5_unique_id", "c119_text"] + [f"{shortname}_triplets" for shortname, _ in models]
+    fieldnames = ["index", "c5_unique_id", "c119_text"] + [f"{shortname}_triplets" for shortname, _ in models] + [f"{shortname}_triplets_clean" for shortname, _ in models]
     with open(output_csv, 'w', newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
@@ -149,7 +174,9 @@ def main():
             triplet_outputs = {}
             for shortname, _ in models:
                 tokenizer_or_processor, model = model_objs[shortname]
-                triplet_outputs[f"{shortname}_triplets"] = generate_triplets(prompt, tokenizer_or_processor, model, shortname)
+                raw_output = generate_triplets(prompt, tokenizer_or_processor, model, shortname)
+                triplet_outputs[f"{shortname}_triplets"] = raw_output
+                triplet_outputs[f"{shortname}_triplets_clean"] = extract_triplets_only(raw_output)
             writer.writerow({
                 "index": row["index"],
                 "c5_unique_id": row["c5_unique_id"],
@@ -161,7 +188,7 @@ def main():
 if __name__ == "__main__":
     """
     Usage:
-      python generate_kg_triplets.py [--size small|large]
+      python generate_kg_triplets.py [--size small|large] [--all]
 
     Options:
       --size small   Use small models (default):
@@ -171,6 +198,7 @@ if __name__ == "__main__":
                        - Gemma 12B (google/gemma-3-12b-it)
                        - Phi 12B (microsoft/phi-4)
                        - Mistral-Small-Instruct-2409 (mistralai/Mistral-Small-Instruct-2409)
+      --all         Process all rows from the JSON file (../../OMIn_dataset/data/FAA_data/faa.json) instead of the default 100-row CSV (../../OMIn_dataset/data/FAA_data/FAA_sample_100.csv)
 
     Notes:
       - Output CSV columns will match the models used.
