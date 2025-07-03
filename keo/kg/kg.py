@@ -199,6 +199,7 @@ for strict_re_gs, re_path in re_paths.items():
         'node': node,
         'type': data.get('type', ''),
         'incident_ids': ', '.join(sorted(set(data.get('incident_ids', [])))),
+        'weight': len(set(data.get('incident_ids', []))),
     } for node, data in G.nodes(data=True)])
     nodes_df.to_csv(f"knowledge_graph_nodes_{strict_re_gs}.csv", index=False)
     
