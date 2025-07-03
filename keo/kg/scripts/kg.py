@@ -191,7 +191,7 @@ for strict_re_gs, re_path in re_paths.items():
     # Convert attributes of the graph
     convert_to_string(G)
     # Export GML
-    nx.write_gml(G, f"knowledge_graph_{strict_re_gs}.gml")
+    nx.write_gml(G, f"output/knowledge_graph_{strict_re_gs}.gml")
     print(f"{strict_re_gs.upper()} GML saved.")
     
     # Export Nodes and Edges CSV
@@ -201,7 +201,7 @@ for strict_re_gs, re_path in re_paths.items():
         'incident_ids': ', '.join(sorted(set(data.get('incident_ids', [])))),
         'weight': len(set(data.get('incident_ids', []))),
     } for node, data in G.nodes(data=True)])
-    nodes_df.to_csv(f"knowledge_graph_nodes_{strict_re_gs}.csv", index=False)
+    nodes_df.to_csv(f"output/knowledge_graph_nodes_{strict_re_gs}.csv", index=False)
     
     edges_df = pd.DataFrame([{
         'entity1': u,
@@ -209,7 +209,7 @@ for strict_re_gs, re_path in re_paths.items():
         'relation': data.get('relation', ''),
         'incident_ids': ', '.join(sorted(set(data.get('incident_ids', [])))),
     } for u, v, data in G.edges(data=True)])
-    edges_df.to_csv(f"knowledge_graph_edges_{strict_re_gs}.csv", index=False)
+    edges_df.to_csv(f"output/knowledge_graph_edges_{strict_re_gs}.csv", index=False)
 
     print(f"{strict_re_gs.upper()} Nodes and Edges saved.")
 
@@ -218,18 +218,18 @@ relationship_counts_df = pd.DataFrame([
     {'type': rel_type, 'strict': relationship_counts['strict'].get(rel_type, 0), 'loose': relationship_counts['loose'].get(rel_type, 0)}
     for rel_type in set(relationship_counts['strict'].keys()).union(relationship_counts['loose'].keys())
 ])
-relationship_counts_df.to_csv('relationship_counts.csv', index=False)
+relationship_counts_df.to_csv('output/relationship_counts.csv', index=False)
 
 # Visualization and Saving as PNG
 # Draw the graph (simple visualization, you might want to use different layouts for better readability)
 for strict_re_gs in re_paths:
-    G = nx.read_gml(f"knowledge_graph_{strict_re_gs}.gml")
+    G = nx.read_gml(f"output/knowledge_graph_{strict_re_gs}.gml")
     
     plt.figure(figsize=(10, 10))
     nx.draw(G, with_labels=True, node_size=50, font_size=10)
     plt.title(f"Knowledge Graph: {strict_re_gs.upper()}")
     
     # Save the figure as a PNG
-    plt.savefig(f"knowledge_graph_{strict_re_gs}.png", format='png')
+    plt.savefig(f"output/knowledge_graph_{strict_re_gs}.png", format='png')
     plt.close()  # Close the plot to avoid display and memory issues
     print(f"Graph visualization for {strict_re_gs.upper()} saved as PNG.")

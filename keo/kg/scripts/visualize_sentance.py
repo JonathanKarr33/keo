@@ -45,8 +45,8 @@ def visualize_and_save_subgraph(subgraph, output_file, incident_id):
 # Main function to run the process
 def main():
     # Paths to the GML files
-    gml_file_strict = 'knowledge_graph_strict.gml'
-    gml_file_loose = 'knowledge_graph_loose.gml'
+    gml_file_strict = 'output/knowledge_graph_strict.gml'
+    gml_file_loose = 'output/knowledge_graph_loose.gml'
     
     # Load the graphs (both behave the same way)
     graph_strict = load_graph_from_gml(gml_file_strict)
@@ -56,8 +56,8 @@ def main():
     incident_id = '19800217031649I'
     
     # Define output paths
-    strict_output_file = f'subgraph_strict_{incident_id}.png'
-    loose_output_file = f'subgraph_loose_{incident_id}.png'
+    strict_output_file = f'output/subgraph_strict_{incident_id}.png'
+    loose_output_file = f'output/subgraph_loose_{incident_id}.png'
     
     # Extract the subgraph related to the incident ID (same extraction logic for both files)
     strict_subgraph = extract_subgraph_by_incident(graph_strict, incident_id)

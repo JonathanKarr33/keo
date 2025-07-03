@@ -128,10 +128,10 @@ def main():
 
     if args.size == 'small':
         models = SMALL_MODELS
-        output_csv = "all_kg_llm_triplets_gemma3_phi4mini.csv" if args.all else "100_kg_llm_triplets_gemma3_phi4mini.csv"
+        output_csv = "output/all_kg_llm_triplets_gemma3_phi4mini.csv" if args.all else "output/100_kg_llm_triplets_gemma3_phi4mini.csv"
     else:
         models = LARGE_MODELS
-        output_csv = "all_kg_llm_triplets_gemma12b_phi12b_mistral.csv" if args.all else "100_kg_llm_triplets_gemma12b_phi12b_mistral.csv"
+        output_csv = "output/all_kg_llm_triplets_gemma12b_phi12b_mistral.csv" if args.all else "output/100_kg_llm_triplets_gemma12b_phi12b_mistral.csv"
         print("WARNING: Large models may require significant GPU memory. If you encounter OOM errors, run each model separately and merge results.")
 
     if args.all:
