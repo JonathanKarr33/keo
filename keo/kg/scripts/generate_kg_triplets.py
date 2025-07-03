@@ -5,6 +5,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline, AutoProc
 import torch
 import argparse
 import re
+import json
 
 try:
     from transformers import Gemma3ForConditionalGeneration
@@ -148,28 +149,31 @@ def main():
     # Read input CSV or JSON
     rows = []
     if input_file.endswith('.json'):
-        import json
         with open(input_file, 'r', encoding='utf-8') as f:
-            for line in f:
-                row = json.loads(line)
-                if 'c119_text' in row:
-                    row['c119_text'] = row['c119_text'].upper()
-                rows.append(row)
+            data = json.load(f)
+        for key, value in data.items():
+            text = value[0].upper()  # Capitalize for consistency
+            rows.append({'c119': text})
     else:
         with open(input_file, newline='', encoding='utf-8') as f:
             reader = csv.DictReader(f)
             for row in reader:
-                if 'c119_text' in row:
-                    row['c119_text'] = row['c119_text'].upper()
+                if 'c119' in row:
+                    row['c119'] = row['c119'].upper()
                 rows.append(row)
 
     # Prepare output
-    fieldnames = ["index", "c5_unique_id", "c119_text"] + [f"{shortname}_triplets" for shortname, _ in models] + [f"{shortname}_triplets_clean" for shortname, _ in models]
+    fieldnames = ["c119"] + [f"{shortname}_triplets" for shortname, _ in models] + [f"{shortname}_triplets_clean" for shortname, _ in models]
     with open(output_csv, 'w', newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         for row in tqdm(rows, desc="Processing rows"):
-            text = row["c119_text"]
+            # For CSV: use c119; for JSON: use the first value
+            if 'c119' in row:
+                text = row['c119']
+            else:
+                # For JSON, get the first value
+                text = next(iter(row.values()))
             prompt = PROMPT_TEMPLATE.format(text=text)
             triplet_outputs = {}
             for shortname, _ in models:
@@ -178,9 +182,7 @@ def main():
                 triplet_outputs[f"{shortname}_triplets"] = raw_output
                 triplet_outputs[f"{shortname}_triplets_clean"] = extract_triplets_only(raw_output)
             writer.writerow({
-                "index": row["index"],
-                "c5_unique_id": row["c5_unique_id"],
-                "c119_text": text,
+                "c119": text,
                 **triplet_outputs
             })
             f.flush()  # Ensure the file is saved after each row
