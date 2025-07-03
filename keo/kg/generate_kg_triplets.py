@@ -64,7 +64,7 @@ def generate_triplets(prompt, tokenizer, model, max_new_tokens=256, temperature=
         output = model.generate(
             **inputs, 
             max_new_tokens=max_new_tokens, 
-            do_sample=temperature > 0,  # Only sample if temperature > 0
+            do_sample=False,  # Greedy decoding, but temperature is set to 0.1
             temperature=temperature,
             pad_token_id=tokenizer.pad_token_id
         )
