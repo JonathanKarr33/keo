@@ -178,7 +178,11 @@ def main():
         with open(input_file, 'r', encoding='utf-8') as f:
             data = json.load(f)
         for key, value in data.items():
-            text = value[0].upper()  # Capitalize for consistency
+            # value should be a list, get the first string
+            if isinstance(value, list) and value and isinstance(value[0], str):
+                text = value[0].upper()
+            else:
+                text = value[0].upper()
             rows.append({'c119': text})
     else:
         with open(input_file, newline='', encoding='utf-8') as f:
