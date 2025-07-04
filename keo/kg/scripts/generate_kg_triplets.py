@@ -65,7 +65,7 @@ def load_model_and_tokenizer(model_name, shortname):
     if shortname.startswith("gemma3"):
         if Gemma3ForConditionalGeneration is None:
             raise ImportError("transformers >=4.50.0 required for Gemma3 support.")
-        processor = AutoProcessor.from_pretrained(model_name)
+        processor = AutoProcessor.from_pretrained(model_name, use_fast=True)
         model = Gemma3ForConditionalGeneration.from_pretrained(
             model_name, device_map="auto"
         ).eval()
@@ -94,7 +94,11 @@ def generate_triplets(prompt, tokenizer_or_processor, model, shortname, max_new_
         inputs = tokenizer_or_processor.apply_chat_template(
             messages, add_generation_prompt=True, tokenize=True,
             return_dict=True, return_tensors="pt"
-        ).to(model.device, dtype=torch.bfloat16 if torch.cuda.is_available() else torch.float32)
+        ).to(model.device)
+        # Remove unsupported keys if present
+        for k in ['top_p', 'top_k', 'temperature']:
+            if k in inputs:
+                del inputs[k]
     elif shortname.startswith("phi4"):
         # Phi expects string content (see Hugging Face docs)
         messages = [
@@ -104,18 +108,39 @@ def generate_triplets(prompt, tokenizer_or_processor, model, shortname, max_new_
         inputs = tokenizer_or_processor.apply_chat_template(
             messages, add_generation_prompt=True, tokenize=True,
             return_dict=True, return_tensors="pt"
-        ).to(model.device, dtype=torch.float16 if torch.cuda.is_available() else torch.float32)
+        ).to(model.device)
     else:
         inputs = tokenizer_or_processor(prompt, return_tensors="pt").to(model.device)
     
-    if shortname.startswith("gemma3") or shortname.startswith("phi4"):
+    if shortname.startswith("gemma3"):
         input_len = inputs["input_ids"].shape[-1]
         with torch.inference_mode():
+            print(f"[INFO] Calling generate() for model: {shortname}")
             try:
                 generation = model.generate(**inputs, max_new_tokens=max_new_tokens, do_sample=False)
             except Exception as e:
+                print(f"[ERROR][{shortname}] {str(e)}")
                 if "generation flags are not valid" in str(e).lower():
-                    warnings.warn(f"Model {shortname}: {str(e)}")
+                    warnings.warn(f"[WARNING][{shortname}] {str(e)}")
+                raise
+            generation = generation[0][input_len:]
+        decoded = tokenizer_or_processor.decode(generation, skip_special_tokens=True)
+        if 'Triplets:' in decoded:
+            triplet_text = decoded.split('Triplets:')[-1].strip()
+        else:
+            triplet_text = decoded.strip()
+        triplet_text = extract_triplets_only(triplet_text)
+        return triplet_text
+    elif shortname.startswith("phi4"):
+        input_len = inputs["input_ids"].shape[-1]
+        with torch.inference_mode():
+            print(f"[INFO] Calling generate() for model: {shortname}")
+            try:
+                generation = model.generate(**inputs, max_new_tokens=max_new_tokens, do_sample=False)
+            except Exception as e:
+                print(f"[ERROR][{shortname}] {str(e)}")
+                if "generation flags are not valid" in str(e).lower():
+                    warnings.warn(f"[WARNING][{shortname}] {str(e)}")
                 raise
             generation = generation[0][input_len:]
         decoded = tokenizer_or_processor.decode(generation, skip_special_tokens=True)
@@ -127,6 +152,7 @@ def generate_triplets(prompt, tokenizer_or_processor, model, shortname, max_new_
         return triplet_text
     else:
         with torch.no_grad():
+            print(f"[INFO] Calling generate() for model: {shortname}")
             try:
                 output = model.generate(
                     **inputs, 
@@ -136,8 +162,9 @@ def generate_triplets(prompt, tokenizer_or_processor, model, shortname, max_new_
                     pad_token_id=tokenizer_or_processor.pad_token_id
                 )
             except Exception as e:
+                print(f"[ERROR][{shortname}] {str(e)}")
                 if "generation flags are not valid" in str(e).lower():
-                    warnings.warn(f"Model {shortname}: {str(e)}")
+                    warnings.warn(f"[WARNING][{shortname}] {str(e)}")
                 raise
         decoded = tokenizer_or_processor.decode(output[0], skip_special_tokens=True)
         if 'Triplets:' in decoded:
