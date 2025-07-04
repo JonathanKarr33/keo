@@ -6,11 +6,14 @@ import torch
 import argparse
 import re
 import json
+import warnings
 
 try:
     from transformers import Gemma3ForConditionalGeneration
 except ImportError:
     Gemma3ForConditionalGeneration = None
+
+os.environ["TORCHDYNAMO_DISABLE"] = "1"
 
 # Model configs
 SMALL_MODELS = [
@@ -82,8 +85,8 @@ def extract_triplets_only(text):
     return '\n'.join(triplet_lines)
 
 def generate_triplets(prompt, tokenizer_or_processor, model, shortname, max_new_tokens=256, temperature=0.1):
-    if shortname.startswith("gemma3"):
-        # Format as chat template
+    if shortname.startswith("gemma3") or shortname.startswith("phi4"):
+        # Format as chat template for Gemma, and only pass valid flags
         messages = [
             {"role": "system", "content": [{"type": "text", "text": "You are a helpful assistant."}]},
             {"role": "user", "content": [{"type": "text", "text": prompt}]}
@@ -94,7 +97,12 @@ def generate_triplets(prompt, tokenizer_or_processor, model, shortname, max_new_
         ).to(model.device, dtype=torch.bfloat16 if torch.cuda.is_available() else torch.float32)
         input_len = inputs["input_ids"].shape[-1]
         with torch.inference_mode():
-            generation = model.generate(**inputs, max_new_tokens=max_new_tokens, do_sample=False)
+            try:
+                generation = model.generate(**inputs, max_new_tokens=max_new_tokens, do_sample=False)
+            except Exception as e:
+                if "generation flags are not valid" in str(e).lower():
+                    warnings.warn(f"Model {shortname}: {str(e)}")
+                raise
             generation = generation[0][input_len:]
         decoded = tokenizer_or_processor.decode(generation, skip_special_tokens=True)
         if 'Triplets:' in decoded:
@@ -106,13 +114,18 @@ def generate_triplets(prompt, tokenizer_or_processor, model, shortname, max_new_
     else:
         inputs = tokenizer_or_processor(prompt, return_tensors="pt").to(model.device)
         with torch.no_grad():
-            output = model.generate(
-                **inputs, 
-                max_new_tokens=max_new_tokens, 
-                do_sample=False,  # Greedy decoding, but temperature is set to 0.1
-                temperature=temperature,
-                pad_token_id=tokenizer_or_processor.pad_token_id
-            )
+            try:
+                output = model.generate(
+                    **inputs, 
+                    max_new_tokens=max_new_tokens, 
+                    do_sample=False,  # Greedy decoding, but temperature is set to 0.1
+                    temperature=temperature,
+                    pad_token_id=tokenizer_or_processor.pad_token_id
+                )
+            except Exception as e:
+                if "generation flags are not valid" in str(e).lower():
+                    warnings.warn(f"Model {shortname}: {str(e)}")
+                raise
         decoded = tokenizer_or_processor.decode(output[0], skip_special_tokens=True)
         if 'Triplets:' in decoded:
             triplet_text = decoded.split('Triplets:')[-1].strip()
