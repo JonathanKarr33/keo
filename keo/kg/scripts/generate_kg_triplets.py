@@ -85,12 +85,22 @@ def extract_triplets_only(text):
     return '\n'.join(triplet_lines)
 
 def generate_triplets(prompt, tokenizer_or_processor, model, shortname, max_new_tokens=256, temperature=0.1):
-    if shortname.startswith("gemma3") or shortname.startswith("phi4"):
-        # Format as chat template for Gemma, and only pass valid flags
+    if shortname.startswith("gemma3"):
+        # Gemma expects multimodal format
         messages = [
             {"role": "system", "content": [{"type": "text", "text": "You are a helpful assistant."}]},
             {"role": "user", "content": [{"type": "text", "text": prompt}]}
         ]
+    elif shortname.startswith("phi4"):
+        # Phi expects string content
+        messages = [
+            {"role": "system", "content": "You are a helpful assistant."},
+            {"role": "user", "content": prompt}
+        ]
+    else:
+        messages = None
+
+    if messages:
         inputs = tokenizer_or_processor.apply_chat_template(
             messages, add_generation_prompt=True, tokenize=True,
             return_dict=True, return_tensors="pt"
