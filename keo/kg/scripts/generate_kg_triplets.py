@@ -189,7 +189,7 @@ def main():
         print("WARNING: Large models may require significant GPU memory. If you encounter OOM errors, run each model separately and merge results.")
 
     if args.all:
-        input_file = "../../OMIn_dataset/data/FAA_data/faa.json"
+        input_file = "../../OMIn_dataset/data/FAA_data/Maintenance_Text_data_nona.csv"
     else:
         input_file = "../../OMIn_dataset/data/FAA_data/FAA_sample_100.csv"
 
