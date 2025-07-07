@@ -26,12 +26,23 @@ def parse_triplets(triplet_string):
     
     return triplets
 
+def compute_prf1(pred, gold):
+    pred_set = set(pred)
+    gold_set = set(gold)
+    tp = len(pred_set & gold_set)
+    fp = len(pred_set - gold_set)
+    fn = len(gold_set - pred_set)
+    precision = tp / (tp + fp) if (tp + fp) > 0 else 0.0
+    recall = tp / (tp + fn) if (tp + fn) > 0 else 0.0
+    f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0.0
+    return precision, recall, f1, len(gold_set), len(pred_set)
+
 def compare_annotations(model_output_file):
-    """Compare strict vs loose gold standards and model outputs"""
+    """Compare strict vs loose gold standards and model outputs using clean triplets columns"""
     
     # Load data
-    strict_gs = pd.read_csv('re_gs_strict.csv')
-    loose_gs = pd.read_csv('re_gs_loose.csv')
+    strict_gs = pd.read_csv('output/re_gs_strict.csv')
+    loose_gs = pd.read_csv('output/re_gs_loose.csv')
     model_output = pd.read_csv(model_output_file)
     
     print("=== GOLD STANDARD COMPARISON ===")
@@ -41,7 +52,8 @@ def compare_annotations(model_output_file):
     # Parse triplets
     strict_triplets = []
     loose_triplets = []
-    model_triplets = {col: [] for col in model_output.columns if col.endswith('_triplets')}
+    # Only use columns ending with _triplets_clean
+    model_triplets = {col: [] for col in model_output.columns if col.endswith('_triplets_clean')}
     
     for idx, row in strict_gs.iterrows():
         # Parse strict GS
@@ -62,7 +74,7 @@ def compare_annotations(model_output_file):
     print(f"Strict GS triplets: {len(strict_triplets)}")
     print(f"Loose GS triplets: {len(loose_triplets)}")
     for col in model_triplets:
-        print(f"{col.replace('_triplets','').replace('_',' ').title()} triplets: {len(model_triplets[col])}")
+        print(f"{col.replace('_triplets_clean','').replace('_',' ').title()} triplets: {len(model_triplets[col])}")
     
     # Analyze relation types
     def get_relation_types(triplets):
@@ -72,7 +84,7 @@ def compare_annotations(model_output_file):
     print("Strict GS relations:", dict(get_relation_types(strict_triplets)))
     print("Loose GS relations:", dict(get_relation_types(loose_triplets)))
     for col in model_triplets:
-        print(f"{col.replace('_triplets','').replace('_',' ').title()} relations:", dict(get_relation_types(model_triplets[col])))
+        print(f"{col.replace('_triplets_clean','').replace('_',' ').title()} relations:", dict(get_relation_types(model_triplets[col])))
     
     # Sample comparison for first few incidents
     print(f"\n=== SAMPLE COMPARISON (First 3 incidents) ===")
@@ -91,7 +103,7 @@ def compare_annotations(model_output_file):
         print(f"  Strict GS: {len(strict_sample)} triplets")
         print(f"  Loose GS: {len(loose_sample)} triplets")
         for col in model_triplets:
-            print(f"  {col.replace('_triplets','').replace('_',' ').title()}: {len(model_samples.get(col, []))} triplets")
+            print(f"  {col.replace('_triplets_clean','').replace('_',' ').title()}: {len(model_samples.get(col, []))} triplets")
         
         if strict_sample:
             print(f"  Strict sample: {strict_sample[0] if strict_sample else 'None'}")
@@ -99,10 +111,29 @@ def compare_annotations(model_output_file):
             print(f"  Loose sample: {loose_sample[0] if loose_sample else 'None'}")
         for col in model_triplets:
             if model_samples.get(col):
-                print(f"  {col.replace('_triplets','').replace('_',' ').title()} sample: {model_samples[col][0]}")
+                print(f"  {col.replace('_triplets_clean','').replace('_',' ').title()} sample: {model_samples[col][0]}")
+
+    # Compute and save F1 summary
+    summary_rows = []
+    for gs_type, gold in [('strict', strict_triplets), ('loose', loose_triplets)]:
+        for col, pred in model_triplets.items():
+            model_name = col.replace('_triplets_clean','')
+            precision, recall, f1, support_gold, support_pred = compute_prf1(pred, gold)
+            summary_rows.append({
+                'model': model_name,
+                'gs_type': gs_type,
+                'precision': precision,
+                'recall': recall,
+                'f1': f1,
+                'support_gold': support_gold,
+                'support_pred': support_pred
+            })
+    summary_df = pd.DataFrame(summary_rows)
+    summary_df.to_csv('output/compare_gs_f1_summary.csv', index=False)
+    print('\nF1 summary saved to output/compare_gs_f1_summary.csv')
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Compare gold standard and model triplet outputs.")
-    parser.add_argument('--model_output', type=str, default='re_gs_strict_kg_gemma3_phi4mini.csv', help='Model output CSV file to compare (default: small models output)')
+    parser.add_argument('--model_output', type=str, default='output/100_kg_llm_triplets_gemma3_phi4mini.csv', help='Model output CSV file to compare (default: clean 100-row LLM triplets)')
     args = parser.parse_args()
     compare_annotations(args.model_output) 
