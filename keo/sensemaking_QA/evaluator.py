@@ -152,7 +152,6 @@ class SensemakingEvaluator:
         Returns:
             List of answer evaluations
         """
-        print("Evaluating answers with GraphRAG-style metrics...")
         evaluations = []
         
         # Create question lookup
@@ -186,34 +185,38 @@ class SensemakingEvaluator:
         return evaluations
     
     def compare_answer_methods(self, 
-                             vanilla_answers: List[Dict],
-                             graphrag_answers: List[Dict],
-                             questions: List[Dict]) -> Dict:
+                             method1_answers: List[Dict],
+                             method2_answers: List[Dict],
+                             questions: List[Dict],
+                             method1_name: str = "method1",
+                             method2_name: str = "method2") -> Dict:
         """
-        Compare vanilla LLM vs GraphRAG answer quality
+        Compare two answer generation methods
         
         Args:
-            vanilla_answers: Answers from vanilla LLM
-            graphrag_answers: Answers from GraphRAG
+            method1_answers: Answers from first method
+            method2_answers: Answers from second method
             questions: Original questions
+            method1_name: Name of first method
+            method2_name: Name of second method
         
         Returns:
             Comparative evaluation results
         """
-        print("Comparing vanilla LLM vs GraphRAG answers...")
+        print(f"Comparing {method1_name} vs {method2_name} answers...")
         
         # Evaluate both sets of answers
-        vanilla_evaluations = self.evaluate_answers(vanilla_answers, questions)
-        graphrag_evaluations = self.evaluate_answers(graphrag_answers, questions)
+        method1_evaluations = self.evaluate_answers(method1_answers, questions)
+        method2_evaluations = self.evaluate_answers(method2_answers, questions)
         
         # Perform pairwise comparisons
         pairwise_comparisons = self._perform_pairwise_comparisons(
-            vanilla_answers, graphrag_answers, questions
+            method1_answers, method2_answers, questions, method1_name, method2_name
         )
         
         # Calculate aggregate metrics
         comparison_results = self._calculate_comparison_metrics(
-            vanilla_evaluations, graphrag_evaluations, pairwise_comparisons
+            method1_evaluations, method2_evaluations, pairwise_comparisons, method1_name, method2_name
         )
         
         return comparison_results
@@ -324,40 +327,46 @@ class SensemakingEvaluator:
         }
     
     def compare_action_specific_methods(self,
-                                      vanilla_answers: List[Dict],
-                                      graphrag_answers: List[Dict],
-                                      questions: List[Dict]) -> Dict:
+                                      method1_answers: List[Dict],
+                                      method2_answers: List[Dict],
+                                      questions: List[Dict],
+                                      method1_name: str = "method1",
+                                      method2_name: str = "method2") -> Dict:
         """
-        Compare vanilla LLM vs GraphRAG for action-specific questions with ground truth
+        Compare two methods for action-specific questions with ground truth
         
         Args:
-            vanilla_answers: Vanilla LLM answers
-            graphrag_answers: GraphRAG answers
+            method1_answers: First method answers
+            method2_answers: Second method answers
             questions: Questions with ground truth
+            method1_name: Name of first method
+            method2_name: Name of second method
         
         Returns:
             Comparison results for action-specific questions
         """
-        print("Comparing methods on action-specific questions with ground truth...")
+        print(f"Comparing {method1_name} vs {method2_name} on action-specific questions with ground truth...")
         
         # Evaluate both methods
-        vanilla_results = self.evaluate_action_specific_answers(vanilla_answers, questions)
-        graphrag_results = self.evaluate_action_specific_answers(graphrag_answers, questions)
+        method1_results = self.evaluate_action_specific_answers(method1_answers, questions)
+        method2_results = self.evaluate_action_specific_answers(method2_answers, questions)
         
-        if vanilla_results.get('error') or graphrag_results.get('error'):
+        if method1_results.get('error') or method2_results.get('error'):
             return {"error": "Failed to evaluate one or both methods"}
         
         # Compare aggregate metrics
         comparison = self._compare_action_metrics(
-            vanilla_results['aggregate_metrics'],
-            graphrag_results['aggregate_metrics']
+            method1_results['aggregate_metrics'],
+            method2_results['aggregate_metrics'],
+            method1_name,
+            method2_name
         )
         
         return {
-            'vanilla_results': vanilla_results,
-            'graphrag_results': graphrag_results,
+            f'{method1_name}_results': method1_results,
+            f'{method2_name}_results': method2_results,
             'comparison': comparison,
-            'winner': self._determine_action_winner(comparison)
+            'winner': self._determine_action_winner(comparison, method1_name, method2_name)
         }
     
     def _evaluate_single_question(self, question_data: Dict) -> Dict:
@@ -568,7 +577,7 @@ Global Sensemaking Assessment: [overall evaluation of global capability]
                          if a.get('question_id') in action_questions and not a.get('error')]
         
         if not action_questions or not action_answers:
-            return {"error": "No action-specific questions with ground truth found"}
+            return {"error": "No action-specific answers to be evaluated"}
         
         print(f"Found {len(action_questions)} action-specific questions with ground truth")
         print(f"Found {len(action_answers)} corresponding answers to evaluate")
@@ -598,43 +607,6 @@ Global Sensemaking Assessment: [overall evaluation of global capability]
             'individual_evaluations': evaluations,
             'aggregate_metrics': aggregate_metrics,
             'evaluation_summary': self._generate_action_evaluation_summary(aggregate_metrics)
-        }
-    
-    def compare_action_specific_methods(self,
-                                      vanilla_answers: List[Dict],
-                                      graphrag_answers: List[Dict],
-                                      questions: List[Dict]) -> Dict:
-        """
-        Compare vanilla LLM vs GraphRAG for action-specific questions with ground truth
-        
-        Args:
-            vanilla_answers: Vanilla LLM answers
-            graphrag_answers: GraphRAG answers
-            questions: Questions with ground truth
-        
-        Returns:
-            Comparison results for action-specific questions
-        """
-        print("Comparing methods on action-specific questions with ground truth...")
-        
-        # Evaluate both methods
-        vanilla_results = self.evaluate_action_specific_answers(vanilla_answers, questions)
-        graphrag_results = self.evaluate_action_specific_answers(graphrag_answers, questions)
-        
-        if vanilla_results.get('error') or graphrag_results.get('error'):
-            return {"error": "Failed to evaluate one or both methods"}
-        
-        # Compare aggregate metrics
-        comparison = self._compare_action_metrics(
-            vanilla_results['aggregate_metrics'],
-            graphrag_results['aggregate_metrics']
-        )
-        
-        return {
-            'vanilla_results': vanilla_results,
-            'graphrag_results': graphrag_results,
-            'comparison': comparison,
-            'winner': self._determine_action_winner(comparison)
         }
     
     def _evaluate_single_action_answer(self, answer: Dict, question: Dict) -> GroundTruthEvaluation:
@@ -825,6 +797,116 @@ Improvement Suggestions: [suggestions if any]
         f1 = 2 * precision * recall / (precision + recall)
         return f1
     
+    def _calculate_action_aggregate_metrics(self, evaluations: List[GroundTruthEvaluation]) -> Dict:
+        """Calculate aggregate metrics from action-specific evaluations"""
+        
+        if not evaluations:
+            return {
+                'total_evaluated': 0,
+                'bleu_scores_mean': 0.0,
+                'meteor_scores_mean': 0.0,
+                'rouge_l_f1_scores_mean': 0.0,
+                'rouge_1_f1_scores_mean': 0.0,
+                'rouge_2_f1_scores_mean': 0.0,
+                'semantic_similarity_scores_mean': 0.0,
+                'exact_matches_rate': 0.0,
+                'llm_evaluation_scores_mean': 0.0
+            }
+        
+        # Collect all scores
+        bleu_scores = []
+        meteor_scores = []
+        rouge_l_f1_scores = []
+        rouge_1_f1_scores = []
+        rouge_2_f1_scores = []
+        semantic_similarity_scores = []
+        exact_matches = []
+        llm_evaluation_scores = []
+        
+        for evaluation in evaluations:
+            try:
+                # Extract NLP metrics
+                nlp_metrics = evaluation.nlp_metrics
+                bleu_scores.append(nlp_metrics.bleu_score)
+                meteor_scores.append(nlp_metrics.meteor_score)
+                rouge_l_f1_scores.append(nlp_metrics.rouge_l_f1)
+                rouge_1_f1_scores.append(nlp_metrics.rouge_1_f1)
+                rouge_2_f1_scores.append(nlp_metrics.rouge_2_f1)
+                semantic_similarity_scores.append(nlp_metrics.semantic_similarity)
+                exact_matches.append(nlp_metrics.exact_match)
+                
+                # Extract LLM evaluation score
+                llm_evaluation_scores.append(evaluation.llm_evaluation.get('overall_llm_score', 0.0))
+                
+            except Exception as e:
+                continue
+        
+        # Calculate means
+        aggregate_metrics = {
+            'total_evaluated': len(evaluations),
+            'bleu_scores_mean': np.mean(bleu_scores) if bleu_scores else 0.0,
+            'meteor_scores_mean': np.mean(meteor_scores) if meteor_scores else 0.0,
+            'rouge_l_f1_scores_mean': np.mean(rouge_l_f1_scores) if rouge_l_f1_scores else 0.0,
+            'rouge_1_f1_scores_mean': np.mean(rouge_1_f1_scores) if rouge_1_f1_scores else 0.0,
+            'rouge_2_f1_scores_mean': np.mean(rouge_2_f1_scores) if rouge_2_f1_scores else 0.0,
+            'semantic_similarity_scores_mean': np.mean(semantic_similarity_scores) if semantic_similarity_scores else 0.0,
+            'exact_matches_rate': np.mean(exact_matches) if exact_matches else 0.0,
+            'llm_evaluation_scores_mean': np.mean(llm_evaluation_scores) if llm_evaluation_scores else 0.0
+        }
+        
+        return aggregate_metrics
+    
+    def _generate_action_evaluation_summary(self, aggregate_metrics: Dict) -> str:
+        """Generate a summary of action-specific evaluation results"""
+        if not aggregate_metrics:
+            return "No evaluation metrics available"
+        
+        summary_parts = []
+        summary_parts.append("ACTION-SPECIFIC EVALUATION SUMMARY")
+        summary_parts.append("=" * 40)
+        summary_parts.append(f"Total Questions Evaluated: {aggregate_metrics.get('total_evaluated', 0)}")
+        summary_parts.append(f"Average BLEU Score: {aggregate_metrics.get('bleu_scores_mean', 0):.3f}")
+        summary_parts.append(f"Average METEOR Score: {aggregate_metrics.get('meteor_scores_mean', 0):.3f}")
+        summary_parts.append(f"Average ROUGE-L F1: {aggregate_metrics.get('rouge_l_f1_scores_mean', 0):.3f}")
+        summary_parts.append(f"Exact Match Rate: {aggregate_metrics.get('exact_matches_rate', 0):.3f}")
+        summary_parts.append(f"LLM Evaluation Score: {aggregate_metrics.get('llm_evaluation_scores_mean', 0):.3f}")
+        
+        return "\n".join(summary_parts)
+    
+    def _calculate_overall_action_score(self, nlp_metrics: ActionSpecificMetrics, llm_evaluation: Dict) -> float:
+        """Calculate overall score for action-specific answer"""
+        # Weighted combination of NLP and LLM scores
+        nlp_score = (nlp_metrics.bleu_score + nlp_metrics.meteor_score + nlp_metrics.rouge_l_f1) / 3.0
+        llm_score = llm_evaluation.get('overall_llm_score', 0.0) / 5.0  # Normalize from 1-5 to 0-1
+        
+        # 60% NLP metrics, 40% LLM evaluation
+        overall_score = (0.6 * nlp_score) + (0.4 * llm_score)
+        return overall_score
+    
+    def _parse_action_llm_scores(self, evaluation_text: str) -> Dict:
+        """Parse LLM evaluation scores for action-specific answers"""
+        scores = {}
+        lines = evaluation_text.split('\n')
+        
+        criteria = ['Correctness', 'Completeness', 'Practicality', 'Safety', 'Clarity']
+        
+        for line in lines:
+            for criterion in criteria:
+                if line.startswith(criterion):
+                    try:
+                        score_part = line.split(':')[1].strip()
+                        # Extract the first number found
+                        numbers = re.findall(r'\d+(?:\.\d+)?', score_part)
+                        if numbers:
+                            score = float(numbers[0])
+                            scores[criterion.lower()] = score
+                        else:
+                            scores[criterion.lower()] = 3.0
+                    except:
+                        scores[criterion.lower()] = 3.0
+        
+        return scores
+    
     def _parse_question_scores(self, evaluation_text: str) -> Dict:
         """Parse LLM evaluation scores for question quality"""
         scores = {}
@@ -917,25 +999,26 @@ Improvement Suggestions: [suggestions if any]
         
         return scores
 
-    def _perform_pairwise_comparisons(self, vanilla_answers: List[Dict], graphrag_answers: List[Dict], questions: List[Dict]) -> List[Dict]:
-        """Perform pairwise comparisons between vanilla and GraphRAG answers"""
+    def _perform_pairwise_comparisons(self, method1_answers: List[Dict], method2_answers: List[Dict], 
+                                     questions: List[Dict], method1_name: str, method2_name: str) -> List[Dict]:
+        """Perform pairwise comparisons between two answer generation methods"""
         comparisons = []
         
         # Create lookups
-        vanilla_lookup = {a.get('question_id', ''): a for a in vanilla_answers}
-        graphrag_lookup = {a.get('question_id', ''): a for a in graphrag_answers}
+        method1_lookup = {a.get('question_id', ''): a for a in method1_answers}
+        method2_lookup = {a.get('question_id', ''): a for a in method2_answers}
         question_lookup = {q.get('id', ''): q for q in questions}
         
         # Find matching questions
-        common_question_ids = set(vanilla_lookup.keys()) & set(graphrag_lookup.keys())
+        common_question_ids = set(method1_lookup.keys()) & set(method2_lookup.keys())
         
         for question_id in list(common_question_ids)[:5]:  # Limit for demo
             try:
-                vanilla_answer = vanilla_lookup[question_id]
-                graphrag_answer = graphrag_lookup[question_id]
+                method1_answer = method1_lookup[question_id]
+                method2_answer = method2_lookup[question_id]
                 question = question_lookup.get(question_id, {})
                 
-                comparison = self._compare_answer_pair(vanilla_answer, graphrag_answer, question)
+                comparison = self._compare_answer_pair(method1_answer, method2_answer, question, method1_name, method2_name)
                 comparisons.append(comparison)
                 
                 time.sleep(0.5)
@@ -945,16 +1028,17 @@ Improvement Suggestions: [suggestions if any]
         
         return comparisons
 
-    def _compare_answer_pair(self, vanilla_answer: Dict, graphrag_answer: Dict, question: Dict) -> Dict:
-        """Compare a pair of answers (vanilla vs GraphRAG)"""
+    def _compare_answer_pair(self, method1_answer: Dict, method2_answer: Dict, question: Dict, 
+                           method1_name: str, method2_name: str) -> Dict:
+        """Compare a pair of answers from two different methods"""
         
         prompt = f"""
 Compare these two answers to the same aviation maintenance question:
 
 Question: {question.get('question', '')}
 
-Answer A (Vanilla LLM): {vanilla_answer.get('answer', '')}
-Answer B (GraphRAG): {graphrag_answer.get('answer', '')}
+Answer A ({method1_name}): {method1_answer.get('answer', '')}
+Answer B ({method2_name}): {method2_answer.get('answer', '')}
 
 Compare the answers on these criteria:
 1. Which is more comprehensive?
@@ -989,14 +1073,16 @@ Overall Preference: [A/B/Tie] - [explanation]
             comparison_text = response.choices[0].message.content.strip()
             
             # Parse comparison results
-            comparison_scores = self._parse_comparison_scores(comparison_text)
+            comparison_scores = self._parse_comparison_scores(comparison_text, method1_name, method2_name)
             
             return {
                 'question_id': question.get('id', ''),
-                'vanilla_answer_id': vanilla_answer.get('id', ''),
-                'graphrag_answer_id': graphrag_answer.get('id', ''),
+                f'{method1_name}_answer_id': method1_answer.get('id', ''),
+                f'{method2_name}_answer_id': method2_answer.get('id', ''),
                 'comparison_scores': comparison_scores,
-                'comparison_text': comparison_text
+                'comparison_text': comparison_text,
+                'method1_name': method1_name,
+                'method2_name': method2_name
             }
             
         except Exception as e:
@@ -1005,7 +1091,7 @@ Overall Preference: [A/B/Tie] - [explanation]
                 'error': str(e)
             }
 
-    def _parse_comparison_scores(self, comparison_text: str) -> Dict:
+    def _parse_comparison_scores(self, comparison_text: str, method1_name: str, method2_name: str) -> Dict:
         """Parse pairwise comparison scores"""
         scores = {}
         lines = comparison_text.split('\n')
@@ -1018,9 +1104,9 @@ Overall Preference: [A/B/Tie] - [explanation]
                     try:
                         result_part = line.split(':')[1].strip()
                         if result_part.startswith('A'):
-                            scores[criterion.lower().replace(' ', '_')] = 'vanilla'
+                            scores[criterion.lower().replace(' ', '_')] = method1_name
                         elif result_part.startswith('B'):
-                            scores[criterion.lower().replace(' ', '_')] = 'graphrag'
+                            scores[criterion.lower().replace(' ', '_')] = method2_name
                         else:
                             scores[criterion.lower().replace(' ', '_')] = 'tie'
                     except:
@@ -1028,21 +1114,22 @@ Overall Preference: [A/B/Tie] - [explanation]
         
         return scores
 
-    def _calculate_comparison_metrics(self, vanilla_evaluations: List[Dict], graphrag_evaluations: List[Dict], pairwise_comparisons: List[Dict]) -> Dict:
+    def _calculate_comparison_metrics(self, method1_evaluations: List[Dict], method2_evaluations: List[Dict], 
+                                    pairwise_comparisons: List[Dict], method1_name: str, method2_name: str) -> Dict:
         """Calculate comparison metrics between methods"""
         
         # Calculate average scores for each method
-        vanilla_avg = self._calculate_average_scores(vanilla_evaluations)
-        graphrag_avg = self._calculate_average_scores(graphrag_evaluations)
+        method1_avg = self._calculate_average_scores(method1_evaluations)
+        method2_avg = self._calculate_average_scores(method2_evaluations)
         
         # Analyze pairwise comparisons
-        pairwise_results = self._analyze_pairwise_results(pairwise_comparisons)
+        pairwise_results = self._analyze_pairwise_results(pairwise_comparisons, method1_name, method2_name)
         
         return {
-            'vanilla_average_scores': vanilla_avg,
-            'graphrag_average_scores': graphrag_avg,
+            f'{method1_name}_average_scores': method1_avg,
+            f'{method2_name}_average_scores': method2_avg,
             'pairwise_comparison_results': pairwise_results,
-            'evaluation_summary': self._generate_comparison_summary(vanilla_avg, graphrag_avg, pairwise_results)
+            'evaluation_summary': self._generate_comparison_summary(method1_avg, method2_avg, pairwise_results, method1_name, method2_name)
         }
 
     def _calculate_average_scores(self, evaluations: List[Dict]) -> Dict:
@@ -1077,7 +1164,7 @@ Overall Preference: [A/B/Tie] - [explanation]
         average_scores = {key: score / count for key, score in total_scores.items()}
         return average_scores
 
-    def _analyze_pairwise_results(self, pairwise_comparisons: List[Dict]) -> Dict:
+    def _analyze_pairwise_results(self, pairwise_comparisons: List[Dict], method1_name: str, method2_name: str) -> Dict:
         """Analyze pairwise comparison results"""
         if not pairwise_comparisons:
             return {}
@@ -1086,8 +1173,8 @@ Overall Preference: [A/B/Tie] - [explanation]
         
         results = {}
         for criterion in criteria:
-            vanilla_wins = 0
-            graphrag_wins = 0
+            method1_wins = 0
+            method2_wins = 0
             ties = 0
             
             for comparison in pairwise_comparisons:
@@ -1097,27 +1184,28 @@ Overall Preference: [A/B/Tie] - [explanation]
                 scores = comparison.get('comparison_scores', {})
                 result = scores.get(criterion, 'tie')
                 
-                if result == 'vanilla':
-                    vanilla_wins += 1
-                elif result == 'graphrag':
-                    graphrag_wins += 1
+                if result == method1_name:
+                    method1_wins += 1
+                elif result == method2_name:
+                    method2_wins += 1
                 else:
                     ties += 1
             
-            total = vanilla_wins + graphrag_wins + ties
+            total = method1_wins + method2_wins + ties
             if total > 0:
                 results[criterion] = {
-                    'vanilla_wins': vanilla_wins,
-                    'graphrag_wins': graphrag_wins,
+                    f'{method1_name}_wins': method1_wins,
+                    f'{method2_name}_wins': method2_wins,
                     'ties': ties,
-                    'vanilla_win_rate': vanilla_wins / total,
-                    'graphrag_win_rate': graphrag_wins / total,
+                    f'{method1_name}_win_rate': method1_wins / total,
+                    f'{method2_name}_win_rate': method2_wins / total,
                     'tie_rate': ties / total
                 }
         
         return results
 
-    def _generate_comparison_summary(self, vanilla_avg: Dict, graphrag_avg: Dict, pairwise_results: Dict) -> str:
+    def _generate_comparison_summary(self, method1_avg: Dict, method2_avg: Dict, pairwise_results: Dict, 
+                                   method1_name: str, method2_name: str) -> str:
         """Generate a summary of comparison results"""
         
         summary_parts = []
@@ -1125,19 +1213,19 @@ Overall Preference: [A/B/Tie] - [explanation]
         summary_parts.append("=" * 40)
         
         # Average scores comparison
-        if vanilla_avg and graphrag_avg:
+        if method1_avg and method2_avg:
             summary_parts.append("Average Scores:")
             for criterion in ['comprehensiveness', 'human_enfranchisement', 'diversity', 'faithfulness', 'overall_score']:
-                vanilla_score = vanilla_avg.get(criterion, 0)
-                graphrag_score = graphrag_avg.get(criterion, 0)
-                summary_parts.append(f"  {criterion.title()}: Vanilla {vanilla_score:.2f} vs GraphRAG {graphrag_score:.2f}")
+                method1_score = method1_avg.get(criterion, 0)
+                method2_score = method2_avg.get(criterion, 0)
+                summary_parts.append(f"  {criterion.title()}: {method1_name} {method1_score:.2f} vs {method2_name} {method2_score:.2f}")
         
         # Pairwise results
         if pairwise_results:
             summary_parts.append("\nPairwise Comparison Results:")
             for criterion, results in pairwise_results.items():
-                graphrag_rate = results.get('graphrag_win_rate', 0)
-                summary_parts.append(f"  {criterion.replace('_', ' ').title()}: GraphRAG wins {graphrag_rate:.1%} of comparisons")
+                method2_rate = results.get(f'{method2_name}_win_rate', 0)
+                summary_parts.append(f"  {criterion.replace('_', ' ').title()}: {method2_name} wins {method2_rate:.1%} of comparisons")
         
         return "\n".join(summary_parts)
 
@@ -1178,6 +1266,156 @@ Overall Preference: [A/B/Tie] - [explanation]
             print(f"Evaluation results saved to {output_path}")
         except Exception as e:
             print(f"Error saving evaluation results: {e}")
+    
+    def _determine_action_winner(self, comparison: Dict, method1_name: str = "vanilla", method2_name: str = "graphrag") -> Dict:
+        """
+        Determine the winner based on action-specific comparison metrics
+        
+        Args:
+            comparison: Comparison metrics between two methods
+            method1_name: Name of first method
+            method2_name: Name of second method
+        
+        Returns:
+            Winner information
+        """
+        # Count wins for each method across different metrics
+        method1_wins = 0
+        method2_wins = 0
+        
+        metrics_to_check = ['bleu_scores_mean', 'meteor_scores_mean', 'rouge_l_f1_scores_mean', 
+                           'exact_matches_rate', 'llm_evaluation_scores_mean']
+        
+        for metric in metrics_to_check:
+            metric_comparison = comparison.get(metric, {})
+            winner = metric_comparison.get('winner', 'tie')
+            if winner == method1_name:
+                method1_wins += 1
+            elif winner == method2_name:
+                method2_wins += 1
+        
+        # Determine overall winner
+        if method1_wins > method2_wins:
+            overall_winner = method1_name
+        elif method2_wins > method1_wins:
+            overall_winner = method2_name
+        else:
+            overall_winner = "tie"
+        
+        total_comparisons = method1_wins + method2_wins
+        method1_win_rate = method1_wins / total_comparisons if total_comparisons > 0 else 0
+        method2_win_rate = method2_wins / total_comparisons if total_comparisons > 0 else 0
+        
+        return {
+            'overall_winner': overall_winner,
+            f'{method1_name}_wins': method1_wins,
+            f'{method2_name}_wins': method2_wins,
+            f'{method1_name}_win_rate': method1_win_rate,
+            f'{method2_name}_win_rate': method2_win_rate,
+            'total_metrics_compared': len(metrics_to_check)
+        }
+    
+    def compare_action_methods_flexible(self,
+                                      method1_answers: List[Dict],
+                                      method2_answers: List[Dict],
+                                      questions: List[Dict],
+                                      method1_name: str = "method1",
+                                      method2_name: str = "method2") -> Dict:
+        """
+        Compare two methods for action-specific questions with ground truth - flexible version
+        
+        Args:
+            method1_answers: First method answers
+            method2_answers: Second method answers
+            questions: Questions with ground truth
+            method1_name: Name of first method
+            method2_name: Name of second method
+        
+        Returns:
+            Comparison results for action-specific questions
+        """
+        print(f"Comparing {method1_name} vs {method2_name} on action-specific questions with ground truth...")
+        
+        # Evaluate both methods with detailed error tracking
+        method1_results = self.evaluate_action_specific_answers(method1_answers, questions)
+        if method1_results.get('error'):
+            return {"error": f"Failed to evaluate {method1_name}: {method1_results.get('error')}"}
+        
+        method2_results = self.evaluate_action_specific_answers(method2_answers, questions)
+        if method2_results.get('error'):
+            return {"error": f"Failed to evaluate {method2_name}: {method2_results.get('error')}"}
+        
+        # Check if aggregate metrics exist
+        if 'aggregate_metrics' not in method1_results:
+            return {"error": f"{method1_name} results missing aggregate_metrics"}
+        
+        if 'aggregate_metrics' not in method2_results:
+            return {"error": f"{method2_name} results missing aggregate_metrics"}
+        
+        # Compare aggregate metrics
+        try:
+            comparison = self._compare_action_metrics(
+                method1_results['aggregate_metrics'],
+                method2_results['aggregate_metrics']
+            )
+        except Exception as e:
+            return {"error": f"Failed to compare metrics: {e}"}
+        
+        # Determine winner
+        try:
+            winner = self._determine_action_winner(comparison, method1_name, method2_name)
+        except Exception as e:
+            return {"error": f"Failed to determine winner: {e}"}
+        
+        return {
+            f'{method1_name}_results': method1_results,
+            f'{method2_name}_results': method2_results,
+            'comparison': comparison,
+            'winner': winner
+        }
+    
+    def _compare_action_metrics(self, method1_metrics: Dict, method2_metrics: Dict) -> Dict:
+        """
+        Compare action-specific metrics between two methods
+        
+        Args:
+            method1_metrics: Aggregate metrics from first method
+            method2_metrics: Aggregate metrics from second method
+            
+        Returns:
+            Detailed comparison results
+        """
+        
+        comparison = {}
+        
+        # List of metrics to compare
+        metrics_to_compare = [
+            'bleu_scores_mean', 'meteor_scores_mean', 'rouge_l_f1_scores_mean', 
+            'rouge_1_f1_scores_mean', 'rouge_2_f1_scores_mean', 'semantic_similarity_scores_mean',
+            'exact_matches_rate', 'llm_evaluation_scores_mean'
+        ]
+        
+        for metric in metrics_to_compare:
+            method1_value = method1_metrics.get(metric, 0)
+            method2_value = method2_metrics.get(metric, 0)
+            
+            # Determine winner for this metric
+            if method1_value > method2_value:
+                winner = "method1"  # Use generic names here
+            elif method2_value > method1_value:
+                winner = "method2"
+            else:
+                winner = "tie"
+            
+            comparison[metric] = {
+                'method1_score': method1_value,
+                'method2_score': method2_value,
+                'winner': winner,
+                'difference': abs(method1_value - method2_value)
+            }
+        
+        return comparison
+    
 
 
 if __name__ == "__main__":

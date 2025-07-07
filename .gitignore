@@ -172,6 +172,7 @@ nbs_prev/
 
 # Ignore embeddings_cache.json
 embeddings_cache.json
+embedding_cache/
 
 # Ignore graph_cache directory
 graph_cache/

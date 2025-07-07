@@ -1,0 +1,1301 @@
+[
+  {
+    "id": "root_cause_analysis_001",
+    "category": "root_cause_analysis",
+    "question": "What are the most frequent underlying causes of leakage issues that result in repeated maintenance actions?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "root_cause_analysis_002",
+    "category": "root_cause_analysis",
+    "question": "Which maintenance oversights consistently lead to engine problems and how can these be mitigated effectively?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "root_cause_analysis_003",
+    "category": "root_cause_analysis",
+    "question": "What patterns emerge in incidents involving structural damage, and how do these correlate with maintenance actions taken?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "root_cause_analysis_004",
+    "category": "root_cause_analysis",
+    "question": "How do multiple factors combine to create recurring fastener issues, and what preventive measures can be implemented?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "root_cause_analysis_005",
+    "category": "root_cause_analysis",
+    "question": "What are the common denominators in leakage issues that escalate into significant aircraft downtime?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "root_cause_analysis_006",
+    "category": "root_cause_analysis",
+    "question": "Which specific maintenance actions are most often associated with successful resolutions of engine problems, and why?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "root_cause_analysis_007",
+    "category": "root_cause_analysis",
+    "question": "What role do inspection and repair procedures play in preventing structural damage, and where are the gaps?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "root_cause_analysis_008",
+    "category": "root_cause_analysis",
+    "question": "How does the combination of replacement and tightening action affect the recurrence of fastener issues over time?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "predictive_maintenance_001",
+    "category": "predictive_maintenance",
+    "question": "Based on historical patterns, what early warning signs indicate an increased likelihood of engine problems developing into more severe failures?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "predictive_maintenance_002",
+    "category": "predictive_maintenance",
+    "question": "Which component combinations show the highest risk of recurring leakage issues and what preventive measures can be implemented to mitigate this risk?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "predictive_maintenance_003",
+    "category": "predictive_maintenance",
+    "question": "What maintenance intervals would prevent fastener issues from escalating into structural damage, considering current failure patterns?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "predictive_maintenance_004",
+    "category": "predictive_maintenance",
+    "question": "How can we predict when structural damage is likely to occur by analyzing previous repair and inspection data?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "predictive_maintenance_005",
+    "category": "predictive_maintenance",
+    "question": "What indicators suggest imminent leakage issues, and how can these be monitored in real-time to prevent in-flight incidents?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "predictive_maintenance_006",
+    "category": "predictive_maintenance",
+    "question": "What correlations exist between specific maintenance actions and the reduction in recurrence of engine problems across different aircraft types?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "predictive_maintenance_007",
+    "category": "predictive_maintenance",
+    "question": "How do inspection practices correlate with the early detection of fastener issues, and what improvements can be made to enhance their effectiveness?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "predictive_maintenance_008",
+    "category": "predictive_maintenance",
+    "question": "What predictive models can be developed to forecast the probability of 'other problems' leading to major failures, using current data on maintenance actions?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "safety_recommendations_001",
+    "category": "safety_recommendations",
+    "question": "What procedural changes could most effectively reduce the incidence of leakage issues and engine problems?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "safety_recommendations_002",
+    "category": "safety_recommendations",
+    "question": "How can targeted training for maintenance crews specifically address the root causes of fastener issues and structural damage?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "safety_recommendations_003",
+    "category": "safety_recommendations",
+    "question": "What inspection protocols should be enhanced or introduced to better identify early signs of engine problems before they escalate?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "safety_recommendations_004",
+    "category": "safety_recommendations",
+    "question": "In what ways can communication between maintenance teams and flight crews be improved to proactively address and reduce leakage issues?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "safety_recommendations_005",
+    "category": "safety_recommendations",
+    "question": "What specific safety measures could be implemented to significantly lower the frequency of structural damage occurrences?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "safety_recommendations_006",
+    "category": "safety_recommendations",
+    "question": "Which maintenance actions are most effective at preventing the recurrence of fastener issues, and how can these be prioritized?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "safety_recommendations_007",
+    "category": "safety_recommendations",
+    "question": "What role does the timing and scheduling of maintenance checks play in the prevention of engine problems, and how can it be optimized?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "safety_recommendations_008",
+    "category": "safety_recommendations",
+    "question": "How can data analytics tools be utilized to predict and prevent 'other problems' through pattern recognition in maintenance logs?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "system_level_understanding_001",
+    "category": "system_level_understanding",
+    "question": "How do engine problems and fastener issues correlate with specific maintenance actions, and what patterns emerge in their resolutions?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "system_level_understanding_002",
+    "category": "system_level_understanding",
+    "question": "What are the relationships between leakage issues and the frequency of inspections, and how can this inform proactive maintenance strategies?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "system_level_understanding_003",
+    "category": "system_level_understanding",
+    "question": "How does the distribution of common problems vary with aircraft type and age, and what implications does this have for targeted maintenance interventions?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "system_level_understanding_004",
+    "category": "system_level_understanding",
+    "question": "What are the systemic factors that contribute to the high incidence of structural damage, and how can predictive analytics enhance prevention efforts?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "system_level_understanding_005",
+    "category": "system_level_understanding",
+    "question": "How do different maintenance actions like replacement and repair influence the recurrence rates of similar problems in the aircraft fleet?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "system_level_understanding_006",
+    "category": "system_level_understanding",
+    "question": "What patterns exist between the types of problems reported and the subsequent choice of maintenance actions, and how can this guide resource allocation?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "system_level_understanding_007",
+    "category": "system_level_understanding",
+    "question": "How do seasonal variations and environmental conditions impact the prevalence of leakage issues, and what preventive measures could mitigate these effects?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "system_level_understanding_008",
+    "category": "system_level_understanding",
+    "question": "What insights can be gleaned from comparing the effectiveness of tightening versus replacement in resolving fastener issues, and how should this influence future maintenance protocols?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "comparative_analysis_001",
+    "category": "comparative_analysis",
+    "question": "How do failure patterns such as engine problems and leakage issues differ between commercial and cargo aircraft operations?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "comparative_analysis_002",
+    "category": "comparative_analysis",
+    "question": "What are the key differences in maintenance actions taken for structural damage versus fastener issues across various aircraft models?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "comparative_analysis_003",
+    "category": "comparative_analysis",
+    "question": "Which aircraft types show the most variation in the frequency of leakage issues, and how does this impact overall maintenance strategies?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "comparative_analysis_004",
+    "category": "comparative_analysis",
+    "question": "How do incident rates of engine problems compare between different airline operators, and what maintenance practices contribute to these differences?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "comparative_analysis_005",
+    "category": "comparative_analysis",
+    "question": "What factors distinguish aircraft with high incidence of fastener issues from those with lower incidence, and how can this inform targeted maintenance interventions?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "comparative_analysis_006",
+    "category": "comparative_analysis",
+    "question": "In what ways do maintenance actions such as replacement and repair differ in their effectiveness across different failure patterns like engine problems and structural damage?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "comparative_analysis_007",
+    "category": "comparative_analysis",
+    "question": "How do seasonal variations impact the frequency of recurring issues like leakage and structural damage across different fleet types?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "comparative_analysis_008",
+    "category": "comparative_analysis",
+    "question": "What are the comparative impacts on safety outcomes between relying more on inspections versus replacements in addressing common problems such as leakage issues and engine problems?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "trend_analysis_001",
+    "category": "trend_analysis",
+    "question": "What trends are emerging in the frequency of engine problems compared to other common problems over the past year?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "trend_analysis_002",
+    "category": "trend_analysis",
+    "question": "How have maintenance actions evolved in response to leakage issues, and what does this imply for future preventive measures?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "trend_analysis_003",
+    "category": "trend_analysis",
+    "question": "What seasonal variations exist in the occurrence of fastener issues, and how might these affect maintenance schedules?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "trend_analysis_004",
+    "category": "trend_analysis",
+    "question": "How do failure rates correlate with the types of maintenance actions taken, and what does this indicate about the effectiveness of current strategies?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "trend_analysis_005",
+    "category": "trend_analysis",
+    "question": "What long-term patterns suggest a need for more frequent inspections to mitigate structural damage?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "trend_analysis_006",
+    "category": "trend_analysis",
+    "question": "What trends can be observed in the relationship between the rise in other problems and the corresponding maintenance actions?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "trend_analysis_007",
+    "category": "trend_analysis",
+    "question": "How have the types of problems identified in aircraft evolved over time, and what implications does this have for prioritizing maintenance resources?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "trend_analysis_008",
+    "category": "trend_analysis",
+    "question": "What patterns in maintenance data indicate a potential shift in focus from reactive to proactive safety measures in aviation?",
+    "type": "analytical",
+    "complexity": "medium",
+    "requires_synthesis": true
+  },
+  {
+    "id": "global_001",
+    "category": "global_sensemaking",
+    "question": "What are the underlying patterns that contribute to the most frequent maintenance problems, such as leakage issues and engine problems?",
+    "type": "global",
+    "complexity": "high",
+    "requires_synthesis": true,
+    "data_scope": "entire_dataset"
+  },
+  {
+    "id": "global_002",
+    "category": "global_sensemaking",
+    "question": "How do maintenance anomalies correlate with specific aircraft types or models, and what does this reveal about design vulnerabilities?",
+    "type": "global",
+    "complexity": "high",
+    "requires_synthesis": true,
+    "data_scope": "entire_dataset"
+  },
+  {
+    "id": "global_003",
+    "category": "global_sensemaking",
+    "question": "What are the systemic factors contributing to structural damage, and how do they interact to increase risk?",
+    "type": "global",
+    "complexity": "high",
+    "requires_synthesis": true,
+    "data_scope": "entire_dataset"
+  },
+  {
+    "id": "global_004",
+    "category": "global_sensemaking",
+    "question": "How do predictive maintenance strategies differ in their effectiveness across different regions or airline operations?",
+    "type": "global",
+    "complexity": "high",
+    "requires_synthesis": true,
+    "data_scope": "entire_dataset"
+  },
+  {
+    "id": "global_005",
+    "category": "global_sensemaking",
+    "question": "What are the common root causes identified in the dataset that lead to major maintenance issues, and how can they be mitigated?",
+    "type": "global",
+    "complexity": "high",
+    "requires_synthesis": true,
+    "data_scope": "entire_dataset"
+  },
+  {
+    "id": "global_006",
+    "category": "global_sensemaking",
+    "question": "Which maintenance problems have the strongest correlation with safety incidents, and what does this imply for prioritizing safety recommendations?",
+    "type": "global",
+    "complexity": "high",
+    "requires_synthesis": true,
+    "data_scope": "entire_dataset"
+  },
+  {
+    "id": "global_007",
+    "category": "global_sensemaking",
+    "question": "What are the emerging trends in fastener issues, and how do they relate to other maintenance problems over time?",
+    "type": "global",
+    "complexity": "high",
+    "requires_synthesis": true,
+    "data_scope": "entire_dataset"
+  },
+  {
+    "id": "global_008",
+    "category": "global_sensemaking",
+    "question": "How do the frequencies of different maintenance problems vary based on aircraft age, and what does this indicate about lifecycle management?",
+    "type": "global",
+    "complexity": "high",
+    "requires_synthesis": true,
+    "data_scope": "entire_dataset"
+  },
+  {
+    "id": "global_009",
+    "category": "global_sensemaking",
+    "question": "What are the cross-cutting maintenance themes that suggest a need for system-level changes in maintenance protocols?",
+    "type": "global",
+    "complexity": "high",
+    "requires_synthesis": true,
+    "data_scope": "entire_dataset"
+  },
+  {
+    "id": "global_010",
+    "category": "global_sensemaking",
+    "question": "How do maintenance issues influence aircraft annotation discrepancies, and what systemic improvements are suggested?",
+    "type": "global",
+    "complexity": "high",
+    "requires_synthesis": true,
+    "data_scope": "entire_dataset"
+  },
+  {
+    "id": "global_011",
+    "category": "global_sensemaking",
+    "question": "Which factors contribute most significantly to successful predictive maintenance interventions, and how can they be optimized globally?",
+    "type": "global",
+    "complexity": "high",
+    "requires_synthesis": true,
+    "data_scope": "entire_dataset"
+  },
+  {
+    "id": "global_012",
+    "category": "global_sensemaking",
+    "question": "What are the overarching themes in safety recommendations, and how do they align with identified root causes and predictive strategies?",
+    "type": "global",
+    "complexity": "high",
+    "requires_synthesis": true,
+    "data_scope": "entire_dataset"
+  },
+  {
+    "id": "global_013",
+    "category": "global_sensemaking",
+    "question": "How do maintenance patterns differ between high-traffic and low-traffic routes, and what implications does this have for resource allocation?",
+    "type": "global",
+    "complexity": "high",
+    "requires_synthesis": true,
+    "data_scope": "entire_dataset"
+  },
+  {
+    "id": "global_014",
+    "category": "global_sensemaking",
+    "question": "What systemic relationships exist between various maintenance issues, and how do they inform a holistic understanding of aircraft safety?",
+    "type": "global",
+    "complexity": "high",
+    "requires_synthesis": true,
+    "data_scope": "entire_dataset"
+  },
+  {
+    "id": "global_015",
+    "category": "global_sensemaking",
+    "question": "What patterns in maintenance data suggest opportunities for technological innovation to enhance safety and efficiency?",
+    "type": "global",
+    "complexity": "high",
+    "requires_synthesis": true,
+    "data_scope": "entire_dataset"
+  },
+  {
+    "id": "maintenance_narratives_001",
+    "category": "context_specific",
+    "context": "maintenance_narratives",
+    "question": "1. What common maintenance oversights or pilot errors contribute to the repeated operation of aircraft with known inoperative systems, such as the alternator issue in the Southern Wisconsin Regional record?",
+    "type": "contextual",
+    "complexity": "medium",
+    "data_scope": "maintenance_narratives"
+  },
+  {
+    "id": "maintenance_narratives_002",
+    "category": "context_specific",
+    "context": "maintenance_narratives",
+    "question": "2. How do pilot decision-making processes, such as continuing flights with known mechanical issues, impact the likelihood of subsequent mechanical failures or emergency situations?",
+    "type": "contextual",
+    "complexity": "medium",
+    "data_scope": "maintenance_narratives"
+  },
+  {
+    "id": "maintenance_narratives_003",
+    "category": "context_specific",
+    "context": "maintenance_narratives",
+    "question": "3. What are the recurring themes or patterns regarding the causes of landing gear failures, as indicated by incidents like the one at Chisholm-Hibbing, and how can they be addressed through better maintenance protocols?",
+    "type": "contextual",
+    "complexity": "medium",
+    "data_scope": "maintenance_narratives"
+  },
+  {
+    "id": "maintenance_narratives_004",
+    "category": "context_specific",
+    "context": "maintenance_narratives",
+    "question": "4. How does the lack of pre-flight checks and systems verification, such as ensuring generators are turned on, correlate with in-flight mechanical failures or emergencies?",
+    "type": "contextual",
+    "complexity": "medium",
+    "data_scope": "maintenance_narratives"
+  },
+  {
+    "id": "maintenance_narratives_005",
+    "category": "context_specific",
+    "context": "maintenance_narratives",
+    "question": "5. What role does fuel management and system operation play in engine reliability, as suggested by incidents involving rough running engines and fuel pump issues?",
+    "type": "contextual",
+    "complexity": "medium",
+    "data_scope": "maintenance_narratives"
+  },
+  {
+    "id": "maintenance_narratives_006",
+    "category": "context_specific",
+    "context": "maintenance_narratives",
+    "question": "6. How do pilot training and experience levels, such as those mentioned in records with private and airline transport pilots, influence the frequency and severity of maintenance-related incidents?",
+    "type": "contextual",
+    "complexity": "medium",
+    "data_scope": "maintenance_narratives"
+  },
+  {
+    "id": "maintenance_narratives_007",
+    "category": "context_specific",
+    "context": "maintenance_narratives",
+    "question": "7. What preventive maintenance strategies could be implemented to address the root causes of engine failures during critical phases of flight, such as go-arounds and precautionary landings?",
+    "type": "contextual",
+    "complexity": "medium",
+    "data_scope": "maintenance_narratives"
+  },
+  {
+    "id": "maintenance_narratives_008",
+    "category": "context_specific",
+    "context": "maintenance_narratives",
+    "question": "8. How does the interaction between electrical system failures and other aircraft systems contribute to broader operational risks, and what redundant systems could mitigate these risks?",
+    "type": "contextual",
+    "complexity": "medium",
+    "data_scope": "maintenance_narratives"
+  },
+  {
+    "id": "maintenance_narratives_009",
+    "category": "context_specific",
+    "context": "maintenance_narratives",
+    "question": "9. What are the commonalities in decision-making errors that lead to continued operation of aircraft with known deficiencies, and how can these be mitigated through improved pilot training and awareness programs?",
+    "type": "contextual",
+    "complexity": "medium",
+    "data_scope": "maintenance_narratives"
+  },
+  {
+    "id": "maintenance_narratives_010",
+    "category": "context_specific",
+    "context": "maintenance_narratives",
+    "question": "10. How can maintenance data from various incidents be systematically analyzed to develop predictive maintenance models that prevent similar failures in future operations?",
+    "type": "contextual",
+    "complexity": "medium",
+    "data_scope": "maintenance_narratives"
+  },
+  {
+    "id": "action_001",
+    "category": "action_specific",
+    "question": "What action could be taken when: #2 & 3 intakes leaking on r/h engine?",
+    "ground_truth_answer": "REMOVED & REPLACED GASKETS.",
+    "original_problem": "#2 & 3 INTAKES LEAKING ON R/H ENGINE.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_002",
+    "category": "action_specific",
+    "question": "What action could be taken when: replace l/h engine torquemeter hoses?",
+    "ground_truth_answer": "LEAK CHECKED GOOD.",
+    "original_problem": "REPLACE L/H ENGINE TORQUEMETER HOSES.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_003",
+    "category": "action_specific",
+    "question": "What action could be taken when: cyl #3 rocker cover is leaking?",
+    "ground_truth_answer": "REMOVED & REPLACED CYL #3 ROCKER COVER GASKET.",
+    "original_problem": "CYL #3 ROCKER COVER IS LEAKING.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_004",
+    "category": "action_specific",
+    "question": "What action could be taken when: eng died after landing?",
+    "ground_truth_answer": "STARTED A/C USING FLOODED START PROCEDURE. A/C RAN NORM",
+    "original_problem": "ENG DIED AFTER LANDING.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_005",
+    "category": "action_specific",
+    "question": "What action could be taken when: engine overspeed, 2750 - 2760 rpm for 3-4 seconds?",
+    "ground_truth_answer": "RESEARCHED FDM CARD DATA, FOUND MAX RPM OF 2739.8; WHIC",
+    "original_problem": "ENGINE OVERSPEED, 2750 - 2760 RPM FOR 3-4 SECONDS.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_006",
+    "category": "action_specific",
+    "question": "What action could be taken when: l/h eng #2 & 4 intake tube gaskets leaking?",
+    "ground_truth_answer": "REMOVED & REPLACED W/ NEW GASKETS.",
+    "original_problem": "L/H ENG #2 & 4 INTAKE TUBE GASKETS LEAKING.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_007",
+    "category": "action_specific",
+    "question": "What action could be taken when: 2 baffle screws missing, above starter?",
+    "ground_truth_answer": "INSTALLED SCREWS.",
+    "original_problem": "2 BAFFLE SCREWS MISSING, ABOVE STARTER.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_008",
+    "category": "action_specific",
+    "question": "What action could be taken when: #4 rocker cover gasket leaking?",
+    "ground_truth_answer": "REMOVED & REPLACED ROCKER COVER GASKET.",
+    "original_problem": "#4 ROCKER COVER GASKET LEAKING.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 2
+  },
+  {
+    "id": "action_009",
+    "category": "action_specific",
+    "question": "What action could be taken when: #2 intake gasket leaking?",
+    "ground_truth_answer": "REPLACED #2 INTAKE GASKET W/ NEW.",
+    "original_problem": "#2 INTAKE GASKET LEAKING.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 2
+  },
+  {
+    "id": "action_010",
+    "category": "action_specific",
+    "question": "What action could be taken when: cyl #2 intake gasket leaking?",
+    "ground_truth_answer": "REMOVED & REPLACED INTAKE GASKET.",
+    "original_problem": "CYL #2 INTAKE GASKET LEAKING.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_011",
+    "category": "action_specific",
+    "question": "What action could be taken when: #2 rocker cover gasket is leaking?",
+    "ground_truth_answer": "REPLACED GASKET W/ NEW.",
+    "original_problem": "#2 ROCKER COVER GASKET IS LEAKING.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_012",
+    "category": "action_specific",
+    "question": "What action could be taken when: oil seeping from top of case halves?",
+    "ground_truth_answer": "CLEANED & SEALED LEAKING BOLT HOLE.",
+    "original_problem": "OIL SEEPING FROM TOP OF CASE HALVES.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_013",
+    "category": "action_specific",
+    "question": "What action could be taken when: #4 cyl compression test was 35/80?",
+    "ground_truth_answer": "STAKED VALVES - NO CHANGE IN COMPRESSION.",
+    "original_problem": "#4 CYL COMPRESSION TEST WAS 35/80.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_014",
+    "category": "action_specific",
+    "question": "What action could be taken when: rear r/h engine baffle mount bracket rivets sheared?",
+    "ground_truth_answer": "DRILLED OUT SHEARED RIVET, INSTALLED NEW, REPAIR DONE I",
+    "original_problem": "REAR R/H ENGINE BAFFLE MOUNT BRACKET RIVETS SHEARED.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_015",
+    "category": "action_specific",
+    "question": "What action could be taken when: #2 & 4 rocker covers are leaking?",
+    "ground_truth_answer": "REMOVED & REPLACED GASKET.",
+    "original_problem": "#2 & 4 ROCKER COVERS ARE LEAKING.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_016",
+    "category": "action_specific",
+    "question": "What action could be taken when: front & l/h engine baffle cracked?",
+    "ground_truth_answer": "STOP DRILLED CRACK.",
+    "original_problem": "FRONT & L/H ENGINE BAFFLE CRACKED.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_017",
+    "category": "action_specific",
+    "question": "What action could be taken when: cyl #2 & 4 intakes are leaking?",
+    "ground_truth_answer": "REPLACED INTAKE GASKETS.",
+    "original_problem": "CYL #2 & 4 INTAKES ARE LEAKING.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_018",
+    "category": "action_specific",
+    "question": "What action could be taken when: #3 baffle cracked?",
+    "ground_truth_answer": "STOP DRILLED CRACK IN #3 ENG BAFFLE.",
+    "original_problem": "#3 BAFFLE CRACKED.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_019",
+    "category": "action_specific",
+    "question": "What action could be taken when: baffle plug missing?",
+    "ground_truth_answer": "INSTALLED PLUG.",
+    "original_problem": "BAFFLE PLUG MISSING.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_020",
+    "category": "action_specific",
+    "question": "What action could be taken when: while taxiing, engine quit & could not restart?",
+    "ground_truth_answer": "STARTED A/C SEVERAL TIMES USING NORMAL PROCEDURES. PERF",
+    "original_problem": "WHILE TAXIING, ENGINE QUIT & COULD NOT RESTART.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_021",
+    "category": "action_specific",
+    "question": "What action could be taken when: #1 intake leaking?",
+    "ground_truth_answer": "REMOVED & REPLACED INTAKE GASKET.",
+    "original_problem": "#1 INTAKE LEAKING.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 2
+  },
+  {
+    "id": "action_022",
+    "category": "action_specific",
+    "question": "What action could be taken when: engine did not start?",
+    "ground_truth_answer": "STARTED A/C NORMALLY.",
+    "original_problem": "ENGINE DID NOT START.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_023",
+    "category": "action_specific",
+    "question": "What action could be taken when: #2 intake on r/h engine leaking?",
+    "ground_truth_answer": "REMOVED & REPLACED W/ NEW GASKET.",
+    "original_problem": "#2 INTAKE ON R/H ENGINE LEAKING.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_024",
+    "category": "action_specific",
+    "question": "What action could be taken when: l/h engine #3 rocker shaft plug worn?",
+    "ground_truth_answer": "REPLACED PLUGS.",
+    "original_problem": "L/H ENGINE #3 ROCKER SHAFT PLUG WORN.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_025",
+    "category": "action_specific",
+    "question": "What action could be taken when: baffle bracket cracked on #3 cylinder?",
+    "ground_truth_answer": "REMOVED BAFFLE SECTION & OIL PRESSURE LINE. REPLACED BR",
+    "original_problem": "BAFFLE BRACKET CRACKED ON #3 CYLINDER.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_026",
+    "category": "action_specific",
+    "question": "What action could be taken when: middle & r/h engine cowl need new chafe tape?",
+    "ground_truth_answer": "REMOVED & REPLACED CHAFE TAPE AS NEEDED.",
+    "original_problem": "MIDDLE & R/H ENGINE COWL NEED NEW CHAFE TAPE.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_027",
+    "category": "action_specific",
+    "question": "What action could be taken when: l/h eng #3 baffle (aft) seal loose?",
+    "ground_truth_answer": "SECURED #3 BAFFLE SEAL, L/H.",
+    "original_problem": "L/H ENG #3 BAFFLE (AFT) SEAL LOOSE.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_028",
+    "category": "action_specific",
+    "question": "What action could be taken when: muffler missing nut?",
+    "ground_truth_answer": "REPLACED NUT.",
+    "original_problem": "MUFFLER MISSING NUT.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_029",
+    "category": "action_specific",
+    "question": "What action could be taken when: power at idle, engine quit. restarted & tested idle w/ full?",
+    "ground_truth_answer": "RAN UP A/C ENGINE. ADJUSTED IDLE SPEED. IDLE MIXTURE CH",
+    "original_problem": "POWER AT IDLE, ENGINE QUIT. RESTARTED & TESTED IDLE W/ FULL",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_030",
+    "category": "action_specific",
+    "question": "What action could be taken when: l/h side baffle is cracked?",
+    "ground_truth_answer": "REPLACED L/H SIDE BAFFLE W/ SERVICEABLE PART.",
+    "original_problem": "L/H SIDE BAFFLE IS CRACKED.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_031",
+    "category": "action_specific",
+    "question": "What action could be taken when: cyl #4 rocker cover gasket leaking?",
+    "ground_truth_answer": "REMOVED & REPLACED ROCKER COVER GASKET.",
+    "original_problem": "CYL #4 ROCKER COVER GASKET LEAKING.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 2
+  },
+  {
+    "id": "action_032",
+    "category": "action_specific",
+    "question": "What action could be taken when: r/h baffle plug needs to be replaced?",
+    "ground_truth_answer": "INSTALLED NEW BAFFLE PLUG.",
+    "original_problem": "R/H BAFFLE PLUG NEEDS TO BE REPLACED.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_033",
+    "category": "action_specific",
+    "question": "What action could be taken when: l/h cooling baffle connecting rod broken?",
+    "ground_truth_answer": "INSTALLED NEW CONNECTING ROD ON COOLING BAFFLE.",
+    "original_problem": "L/H COOLING BAFFLE CONNECTING ROD BROKEN.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_034",
+    "category": "action_specific",
+    "question": "What action could be taken when: #4 cyl has no compression?",
+    "ground_truth_answer": "INSTALLED NEW GASKET, LEAK CK GOOD.",
+    "original_problem": "#4 CYL HAS NO COMPRESSION.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_035",
+    "category": "action_specific",
+    "question": "What action could be taken when: #3 baffle needs to be patched. button plug hole has worn too?",
+    "ground_truth_answer": "INSTALLED RIVETED PATCH & REPLACED BOTH BAFFLE PLUGS.",
+    "original_problem": "#3 BAFFLE NEEDS TO BE PATCHED. BUTTON PLUG HOLE HAS WORN TOO",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_036",
+    "category": "action_specific",
+    "question": "What action could be taken when: l/h engine baffle seal above #4 cylinder is torn?",
+    "ground_truth_answer": "INSTALLED NEW SEAL.",
+    "original_problem": "L/H ENGINE BAFFLE SEAL ABOVE #4 CYLINDER IS TORN.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_037",
+    "category": "action_specific",
+    "question": "What action could be taken when: l/h eng #2, 3 rocker cover gaskets are leaking?",
+    "ground_truth_answer": "REMOVED & REPLACED ROCKER COVER GASKETS.",
+    "original_problem": "L/H ENG #2, 3 ROCKER COVER GASKETS ARE LEAKING.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_038",
+    "category": "action_specific",
+    "question": "What action could be taken when: #1 rocker cover leaking on l/h engine?",
+    "ground_truth_answer": "REMOVED & REPLACED GAKSET.",
+    "original_problem": "#1 ROCKER COVER LEAKING ON L/H ENGINE.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_039",
+    "category": "action_specific",
+    "question": "What action could be taken when: cyl #3 aft baffle has sheared rivet?",
+    "ground_truth_answer": "REMOVED AFT BAFFLE & OIL PSI LINE. REPLACED RIVET. INST",
+    "original_problem": "CYL #3 AFT BAFFLE HAS SHEARED RIVET.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_040",
+    "category": "action_specific",
+    "question": "What action could be taken when: l/h eng corner bracket on l/h rear baffle is cracked?",
+    "ground_truth_answer": "REMOVED & REPLACED BRACKET.",
+    "original_problem": "L/H ENG CORNER BRACKET ON L/H REAR BAFFLE IS CRACKED.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_041",
+    "category": "action_specific",
+    "question": "What action could be taken when: hardware missing from aft r/h baffle?",
+    "ground_truth_answer": "INSTALLED NEW HARDWARE.",
+    "original_problem": "HARDWARE MISSING FROM AFT R/H BAFFLE.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_042",
+    "category": "action_specific",
+    "question": "What action could be taken when: bolt on top of engine case shows signs of leaking?",
+    "ground_truth_answer": "SEALED BOLT W/ HIGH TEMP RTV.",
+    "original_problem": "BOLT ON TOP OF ENGINE CASE SHOWS SIGNS OF LEAKING.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_043",
+    "category": "action_specific",
+    "question": "What action could be taken when: l/h eng #1 rocker cover gasket leaking?",
+    "ground_truth_answer": "REMOVED OLD GASKET & REPLACED W/ NEW.",
+    "original_problem": "L/H ENG #1 ROCKER COVER GASKET LEAKING.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_044",
+    "category": "action_specific",
+    "question": "What action could be taken when: l/h eng baffle tie rod wire hitting both o/b clamps?",
+    "ground_truth_answer": "DAMAGE NEG. ADJUSTED TOWARD I/B & ADJ CLAMPS OUT OF THE",
+    "original_problem": "L/H ENG BAFFLE TIE ROD WIRE HITTING BOTH O/B CLAMPS.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_045",
+    "category": "action_specific",
+    "question": "What action could be taken when: sniffler valves dirty?",
+    "ground_truth_answer": "CLEANED SNIFFLER VALVES.",
+    "original_problem": "SNIFFLER VALVES DIRTY.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 2
+  },
+  {
+    "id": "action_046",
+    "category": "action_specific",
+    "question": "What action could be taken when: #1 & 3 cylinder lower baffle is cracked?",
+    "ground_truth_answer": "REMOVED #1 CYL INTAKE TUBE, REMOVED & REPLACED BAFFLE.",
+    "original_problem": "#1 & 3 CYLINDER LOWER BAFFLE IS CRACKED.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_047",
+    "category": "action_specific",
+    "question": "What action could be taken when: #1 cyl has low compression (30/80)?",
+    "ground_truth_answer": "REMOVED ROCKER COVER & STAKED VALVE W/ NO EFFECT.",
+    "original_problem": "#1 CYL HAS LOW COMPRESSION (30/80).",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_048",
+    "category": "action_specific",
+    "question": "What action could be taken when: prop overspeed in down draft = 2730 rpm, 2-3 secs?",
+    "ground_truth_answer": "PULLED & ANALYZED SD CARD TO FIND TOP OVERSPEED OF 2722",
+    "original_problem": "PROP OVERSPEED IN DOWN DRAFT = 2730 RPM, 2-3 SECS.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_049",
+    "category": "action_specific",
+    "question": "What action could be taken when: r/h engine #4 cyl aft baffle has screw missing?",
+    "ground_truth_answer": "REPLACED SCREW.",
+    "original_problem": "R/H ENGINE #4 CYL AFT BAFFLE HAS SCREW MISSING.",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "action_050",
+    "category": "action_specific",
+    "question": "What action could be taken when: l/h eng oil cooler hose is positioned too close to oil filte?",
+    "ground_truth_answer": "LEAK CK GOOD.",
+    "original_problem": "L/H ENG OIL COOLER HOSE IS POSITIONED TOO CLOSE TO OIL FILTE",
+    "type": "actionable",
+    "complexity": "low",
+    "requires_synthesis": false,
+    "data_scope": "specific_incident",
+    "frequency": 1
+  },
+  {
+    "id": "aircraft_problems_actions_001",
+    "category": "context_specific",
+    "context": "aircraft_problems_actions",
+    "question": "1. What are the common factors contributing to gasket leaks across different engine components, such as intake and rocker covers, and what preventive measures can be implemented to address these issues?",
+    "type": "contextual",
+    "complexity": "medium",
+    "data_scope": "aircraft_problems_actions"
+  },
+  {
+    "id": "aircraft_problems_actions_002",
+    "category": "context_specific",
+    "context": "aircraft_problems_actions",
+    "question": "2. How frequently do incidents of missing or loose screws, such as the baffle screw, occur, and what inspection protocols can be enhanced to ensure such components are secured properly during routine checks?",
+    "type": "contextual",
+    "complexity": "medium",
+    "data_scope": "aircraft_problems_actions"
+  },
+  {
+    "id": "aircraft_problems_actions_003",
+    "category": "context_specific",
+    "context": "aircraft_problems_actions",
+    "question": "3. What environmental or operational conditions lead to the rough engine incidents, and how can regular maintenance practices be adjusted to detect and rectify these issues before they manifest during operations?",
+    "type": "contextual",
+    "complexity": "medium",
+    "data_scope": "aircraft_problems_actions"
+  },
+  {
+    "id": "aircraft_problems_actions_004",
+    "category": "context_specific",
+    "context": "aircraft_problems_actions",
+    "question": "4. To what extent do cleanliness and maintenance of oil coolers affect engine performance and longevity, and how can regular cleaning schedules be optimized to prevent related engine problems?",
+    "type": "contextual",
+    "complexity": "medium",
+    "data_scope": "aircraft_problems_actions"
+  },
+  {
+    "id": "aircraft_problems_actions_005",
+    "category": "context_specific",
+    "context": "aircraft_problems_actions",
+    "question": "5. Are there any recurring patterns in the types of engine components that experience leakage, and how can material improvements or redesigns help mitigate these leakage issues?",
+    "type": "contextual",
+    "complexity": "medium",
+    "data_scope": "aircraft_problems_actions"
+  },
+  {
+    "id": "aircraft_problems_actions_006",
+    "category": "context_specific",
+    "context": "aircraft_problems_actions",
+    "question": "6. How do engine temperature fluctuations impact the integrity of gaskets and seals, and what monitoring systems can be implemented to detect early signs of wear or failure?",
+    "type": "contextual",
+    "complexity": "medium",
+    "data_scope": "aircraft_problems_actions"
+  },
+  {
+    "id": "aircraft_problems_actions_007",
+    "category": "context_specific",
+    "context": "aircraft_problems_actions",
+    "question": "7. What historical data correlates missing or loose components, like screws, with specific maintenance routines or personnel, and how can training or procedural adjustments reduce these occurrences?",
+    "type": "contextual",
+    "complexity": "medium",
+    "data_scope": "aircraft_problems_actions"
+  },
+  {
+    "id": "aircraft_problems_actions_008",
+    "category": "context_specific",
+    "context": "aircraft_problems_actions",
+    "question": "8. How do the frequencies of different types of engine problems vary with aircraft usage patterns, and what predictive maintenance strategies can be implemented to address the most common issues preemptively?",
+    "type": "contextual",
+    "complexity": "medium",
+    "data_scope": "aircraft_problems_actions"
+  },
+  {
+    "id": "aircraft_problems_actions_009",
+    "category": "context_specific",
+    "context": "aircraft_problems_actions",
+    "question": "9. What are the implications of not finding defects after reports of rough engine operation, and how can diagnostic technologies be improved to better identify subtle or intermittent issues?",
+    "type": "contextual",
+    "complexity": "medium",
+    "data_scope": "aircraft_problems_actions"
+  },
+  {
+    "id": "aircraft_problems_actions_010",
+    "category": "context_specific",
+    "context": "aircraft_problems_actions",
+    "question": "10. What role do manufacturer guidelines and maintenance documentation play in the recurrence of specific problems, and how can these resources be enhanced to provide clearer guidance and preventive strategies?",
+    "type": "contextual",
+    "complexity": "medium",
+    "data_scope": "aircraft_problems_actions"
+  }
+]

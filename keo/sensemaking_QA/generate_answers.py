@@ -7,12 +7,14 @@ Uses both vanilla LLM and GraphRAG approaches with the knowledge graph
 import os
 import json
 import pandas as pd
+import argparse
 from datetime import datetime
 from data_analyzer import AviationDataAnalyzer
 from question_generator import SensemakingQuestionGenerator
 from answer_generator import SensemakingAnswerGenerator
+import random
 
-def generate_aviation_answers():
+def generate_aviation_answers(question_files, output_file, sample_size=None, answer_model="gpt-4o-mini", kg_path="../kg/output/knowledge_graph.gml"):
     """Generate comprehensive answers for aviation maintenance questions using RAG"""
     
     print("=" * 70)
@@ -33,9 +35,6 @@ def generate_aviation_answers():
         'aircraft_annotation': "../../OMIn_dataset/data/MaintNet_data/Aircraft_Annotation_DataFile.csv"
     }
     
-    # Knowledge graph path
-    kg_path = "../kg/knowledge_graph.gml"
-    
     print("\n" + "=" * 70)
     print("STEP 1: LOADING DATA AND KNOWLEDGE GRAPH")
     print("=" * 70)
@@ -48,7 +47,7 @@ def generate_aviation_answers():
     
     # Initialize answer generator
     print("Initializing answer generator...")
-    answer_generator = SensemakingAnswerGenerator(openai_api_key)
+    answer_generator = SensemakingAnswerGenerator(openai_api_key, model=answer_model)
     
     # Load knowledge graph
     print(f"Loading knowledge graph from: {kg_path}")
@@ -61,10 +60,6 @@ def generate_aviation_answers():
     print("=" * 70)
     
     # Check if we have existing questions
-    question_files = [
-        "output/aviation_sensemaking_questions_20250625_173716.json"
-    ]
-    
     questions = None
     questions_source = None
     
@@ -105,9 +100,18 @@ def generate_aviation_answers():
         print(f"✓ Generated {len(questions)} new questions")
     
     # Use a sample for testing (to make it faster)
-    sample_size = min(10, len(questions))
-    sample_questions = questions[:sample_size]
-    print(f"Using sample of {len(sample_questions)} questions for answer generation")
+    if sample_size is None:
+        sample_questions = questions
+        print(f"Using all {len(sample_questions)} questions for answer generation")
+    else:
+        if sample_size > len(questions):
+            print(f"Requested sample size {sample_size} exceeds available questions ({len(questions)}). Using all questions instead.")
+            sample_size = len(questions)
+        elif sample_size <= 0:
+            print(f"Invalid sample size {sample_size}. Using all questions instead.")
+            sample_size = len(questions)
+        sample_questions = random.sample(questions, sample_size)
+        print(f"Using sample of {len(sample_questions)} questions for answer generation")
     
     print("\n" + "=" * 70)
     print("STEP 3: GENERATING ANSWERS")
@@ -118,10 +122,17 @@ def generate_aviation_answers():
     # Generate vanilla LLM answers
     print("Generating vanilla LLM answers...")
     vanilla_answers = answer_generator.generate_vanilla_answers(
+        sample_questions
+    )
+    print(f"✓ Generated {len(vanilla_answers)} vanilla answers")
+    
+    # Generate text-chunk RAG answers
+    print("Generating text-chunk RAG answers...")
+    textchunkrag_answers = answer_generator.generate_textchunkrag_answers(
         sample_questions, 
         datasets
     )
-    print(f"✓ Generated {len(vanilla_answers)} vanilla answers")
+    print(f"✓ Generated {len(textchunkrag_answers)} text-chunk RAG answers")
     
     # Generate GraphRAG answers (if knowledge graph is loaded)
     graphrag_answers = []
@@ -151,6 +162,7 @@ def generate_aviation_answers():
             'question_category': question.get('category', 'unknown'),
             'question_type': question.get('type', 'unknown'),
             'vanilla_answer': vanilla_answers[i] if i < len(vanilla_answers) else None,
+            'textchunkrag_answer': textchunkrag_answers[i] if i < len(textchunkrag_answers) else None,
             'graphrag_answer': graphrag_answers[i] if i < len(graphrag_answers) else None,
             'ground_truth': question.get('ground_truth_answer', None),
             'original_problem': question.get('original_problem', None)
@@ -158,17 +170,15 @@ def generate_aviation_answers():
         all_results.append(result)
     
     # Create output directory
-    output_dir = "./output"
-    os.makedirs(output_dir, exist_ok=True)
+    output_dir = os.path.dirname(output_file)
+    if output_dir:
+        os.makedirs(output_dir, exist_ok=True)
     
     # Save results
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    results_file = f"{output_dir}/aviation_answers_{timestamp}.json"
-    
-    with open(results_file, 'w') as f:
+    with open(output_file, 'w') as f:
         json.dump(all_results, f, indent=2)
     
-    print(f"✓ Results saved to {results_file}")
+    print(f"✓ Results saved to {output_file}")
     
     # Save summary CSV for easy review
     summary_data = []
@@ -177,14 +187,18 @@ def generate_aviation_answers():
             'question_id': result['question_id'],
             'question': result['question'],
             'category': result['question_category'],
+            'type': result['question_type'],
             'vanilla_answer': result['vanilla_answer']['answer'] if result['vanilla_answer'] else '',
+            'textchunkrag_answer': result['textchunkrag_answer']['answer'] if result['textchunkrag_answer'] else '',
             'graphrag_answer': result['graphrag_answer']['answer'] if result['graphrag_answer'] else '',
             'ground_truth': result['ground_truth'] or '',
             'has_ground_truth': bool(result['ground_truth'])
         })
     
     summary_df = pd.DataFrame(summary_data)
-    summary_file = f"{output_dir}/aviation_answers_summary_{timestamp}.csv"
+    # Create summary file in same directory as output file
+    base_name = os.path.splitext(output_file)[0]
+    summary_file = f"{base_name}_summary.csv"
     summary_df.to_csv(summary_file, index=False)
     print(f"✓ Summary saved to {summary_file}")
     
@@ -197,12 +211,16 @@ def generate_aviation_answers():
         print(f"\nQuestion {i+1}:")
         print(f"Q: {result['question']}")
         print(f"Category: {result['question_category']}")
+        print(f"Type: {result['question_type']}")
         
         if result['ground_truth']:
             print(f"Ground Truth: {result['ground_truth']}")
         
         if result['vanilla_answer']:
             print(f"Vanilla Answer: {result['vanilla_answer']['answer'][:200]}...")
+        
+        if result['textchunkrag_answer']:
+            print(f"TextChunk RAG Answer: {result['textchunkrag_answer']['answer'][:200]}...")
         
         if result['graphrag_answer']:
             print(f"GraphRAG Answer: {result['graphrag_answer']['answer'][:200]}...")
@@ -214,18 +232,64 @@ def generate_aviation_answers():
     print("=" * 70)
     print(f"Total questions processed: {len(all_results)}")
     print(f"Vanilla answers: {len([r for r in all_results if r['vanilla_answer']])}")
+    print(f"TextChunk RAG answers: {len([r for r in all_results if r['textchunkrag_answer']])}")
     print(f"GraphRAG answers: {len([r for r in all_results if r['graphrag_answer']])}")
     print(f"Questions with ground truth: {len([r for r in all_results if r['ground_truth']])}")
-    print(f"Results saved to: {results_file}")
+    print(f"Results saved to: {output_file}")
     print(f"Summary saved to: {summary_file}")
+    
+    # Clean up and save cache
+    answer_generator.cleanup()
     
     return all_results
 
-if __name__ == "__main__":
+def main():
+    """Main function to handle command-line arguments"""
+    parser = argparse.ArgumentParser(
+        description="Generate RAG-based answers for aviation maintenance sensemaking questions"
+    )
+    parser.add_argument(
+        '--question-files', 
+        nargs='+', 
+        required=True,
+        help='Path(s) to question files (JSON format). Required.'
+    )
+    parser.add_argument(
+        '--output-file',
+        required=True,
+        help='Path to output file for generated answers (JSON format). Required.'
+    )
+    parser.add_argument(
+        '--sample-size',
+        type=int,
+        help='Number of questions to sample for answer generation. If not provided, uses all questions.'
+    )
+    parser.add_argument(
+        '--answer-model',
+        default="gpt-4o-mini",
+        help='OpenAI model to use for answer generation (default: gpt-4o-mini)'
+    )
+    parser.add_argument(
+        '--kg-path',
+        default="../kg/output/knowledge_graph.gml",
+        help='Path to knowledge graph file (default: ../kg/output/knowledge_graph.gml)'
+    )
+    
+    args = parser.parse_args()
+    
     try:
-        results = generate_aviation_answers()
+        results = generate_aviation_answers(
+            question_files=args.question_files,
+            output_file=args.output_file,
+            sample_size=args.sample_size,
+            answer_model=args.answer_model,
+            kg_path=args.kg_path
+        )
         print("\n✅ Answer generation completed successfully!")
     except Exception as e:
         print(f"\n❌ Error in answer generation: {e}")
         import traceback
         traceback.print_exc()
+
+if __name__ == "__main__":
+    main()

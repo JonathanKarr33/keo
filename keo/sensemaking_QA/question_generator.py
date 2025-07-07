@@ -577,53 +577,9 @@ Generate exactly {num_questions} questions, each on a new line without numbering
         
         # Remove trailing periods and clean up
         problem_clean = problem.rstrip('.').rstrip(',')
-        
-        # Create question based on problem structure
-        if any(keyword in problem_lower for keyword in ['is leaking', 'are leaking', 'leak']):
-            # For leaking issues
-            component_part = problem_clean.lower().replace('is leaking', '').replace('are leaking', '').replace('leaking', '').strip()
-            if component_part:
-                return f"What should be done when {component_part} is leaking?"
-            else:
-                return f"What should be done when there is a leak?"
-        
-        elif any(keyword in problem_lower for keyword in ['loose', 'loosened']):
-            # For loose components
-            component_part = problem_clean.lower().replace('loose', '').replace('loosened', '').strip()
-            if component_part:
-                return f"What should be done when {component_part} are loose?"
-            else:
-                return f"What should be done when components are loose?"
-        
-        elif any(keyword in problem_lower for keyword in ['cracked', 'crack']):
-            # For cracked components
-            component_part = problem_clean.lower().replace('cracked', '').replace('crack', '').strip()
-            if component_part:
-                return f"What should be done when {component_part} is cracked?"
-            else:
-                return f"What should be done when there is a crack?"
-        
-        elif any(keyword in problem_lower for keyword in ['fouled', 'fouling']):
-            # For fouled components
-            component_part = problem_clean.lower().replace('fouled', '').replace('fouling', '').strip()
-            if component_part:
-                return f"What should be done when {component_part} is fouled?"
-            else:
-                return f"What should be done when components are fouled?"
-        
-        elif any(keyword in problem_lower for keyword in ['failed', 'failure', 'malfunction']):
-            # For failures
-            component_part = problem_clean.lower()
-            for term in ['failed', 'failure', 'malfunction']:
-                component_part = component_part.replace(term, '').strip()
-            if component_part:
-                return f"What should be done when {component_part} fails?"
-            else:
-                return f"What should be done when there is a component failure?"
-        
-        else:
-            # Generic case - create question from the problem description
-            return f"What should be done when: {problem_clean.lower()}?"
+
+        # Generic case - create question from the problem description
+        return f"What action could be taken when: {problem_clean.lower()}?"
     
 
 if __name__ == "__main__":

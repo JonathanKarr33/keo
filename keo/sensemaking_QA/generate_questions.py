@@ -6,11 +6,12 @@ Uses only the data designated for question generation (excludes KG construction 
 
 import os
 import json
+import argparse
 from datetime import datetime
 from data_analyzer import AviationDataAnalyzer
 from question_generator import SensemakingQuestionGenerator
 
-def generate_aviation_sensemaking_questions():
+def generate_aviation_sensemaking_questions(output_file, question_model="gpt-4o"):
     """Generate comprehensive sensemaking questions for aviation maintenance"""
     
     print("=" * 70)
@@ -63,7 +64,7 @@ def generate_aviation_sensemaking_questions():
     print("=" * 70)
     
     # Initialize question generator
-    generator = SensemakingQuestionGenerator(openai_api_key, model="gpt-4o")
+    generator = SensemakingQuestionGenerator(openai_api_key, model=question_model)
     
     all_questions = []
     
@@ -140,25 +141,26 @@ def generate_aviation_sensemaking_questions():
     print("=" * 70)
     
     # Create output directory
-    output_dir = "./output"
-    os.makedirs(output_dir, exist_ok=True)
+    output_dir = os.path.dirname(output_file)
+    if output_dir:
+        os.makedirs(output_dir, exist_ok=True)
     
     # Save questions in multiple formats
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     
-    # Save as JSON
-    json_file = f"{output_dir}/aviation_sensemaking_questions_{timestamp}.json"
-    generator.save_questions(json_file, format='json')
+    # Save as JSON (using provided output file path)
+    generator.save_questions(output_file, format='json')
     
-    # Save as CSV
-    csv_file = f"{output_dir}/aviation_sensemaking_questions_{timestamp}.csv"
+    # Save as CSV (same path and name but with .csv extension)
+    base_name = os.path.splitext(output_file)[0]
+    csv_file = f"{base_name}.csv"
     generator.save_questions(csv_file, format='csv')
     
-    # Save analysis results
-    analysis_file = f"{output_dir}/aviation_analysis_results_{timestamp}.json"
+    # Save analysis results (with timestamp)
+    analysis_file = f"{base_name}_analysis_{timestamp}.json"
     analyzer.save_analysis_results(analysis_file)
     
-    # Save generation metadata
+    # Save generation metadata (with timestamp)
     metadata = {
         'generation_timestamp': datetime.now().isoformat(),
         'data_sources': {
@@ -174,15 +176,15 @@ def generate_aviation_sensemaking_questions():
             'Maintenance_sample_100_05.csv'
         ],
         'question_summary': summary,
-        'openai_model': 'gpt-4o',
+        'openai_model': question_model,
         'data_separation_enforced': True
     }
     
-    metadata_file = f"{output_dir}/generation_metadata_{timestamp}.json"
+    metadata_file = f"{base_name}_metadata_{timestamp}.json"
     with open(metadata_file, 'w') as f:
         json.dump(metadata, f, indent=2)
     
-    print(f"✓ Questions saved to: {json_file}")
+    print(f"✓ Questions saved to: {output_file}")
     print(f"✓ Questions saved to: {csv_file}")
     print(f"✓ Analysis results saved to: {analysis_file}")
     print(f"✓ Metadata saved to: {metadata_file}")
@@ -197,10 +199,33 @@ def generate_aviation_sensemaking_questions():
     
     return all_questions, summary
 
-if __name__ == "__main__":
+def main():
+    """Main function to handle command-line arguments"""
+    parser = argparse.ArgumentParser(
+        description="Generate sensemaking questions for aviation maintenance data"
+    )
+    parser.add_argument(
+        '--output-file',
+        required=True,
+        help='Path to output JSON file for generated questions. Required.'
+    )
+    parser.add_argument(
+        '--question-model',
+        default="gpt-4o",
+        help='OpenAI model to use for question generation (default: gpt-4o)'
+    )
+    
+    args = parser.parse_args()
+    
     try:
-        questions, summary = generate_aviation_sensemaking_questions()
+        questions, summary = generate_aviation_sensemaking_questions(
+            output_file=args.output_file,
+            question_model=args.question_model
+        )
         print(f"\n🎉 SUCCESS: Generated {summary['total_questions']} sensemaking questions!")
     except Exception as e:
         print(f"\n❌ ERROR: {e}")
         raise
+
+if __name__ == "__main__":
+    main()
