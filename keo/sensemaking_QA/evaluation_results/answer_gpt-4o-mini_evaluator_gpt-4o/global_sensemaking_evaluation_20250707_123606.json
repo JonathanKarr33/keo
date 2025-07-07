@@ -1,0 +1,114 @@
+{
+  "vanilla_global": {
+    "global_questions_evaluated": 2,
+    "global_metrics": {
+      "global_perspective": 4.0,
+      "theme_identification": 5.0,
+      "synthesis_quality": 4.0,
+      "strategic_value": 5.0,
+      "pattern_recognition": 4.5,
+      "total_evaluated": 2
+    },
+    "individual_evaluations": [
+      {
+        "question_id": "global_007",
+        "global_metrics": {
+          "global_perspective": 4.0,
+          "theme_identification": 5.0,
+          "synthesis_quality": 4.0,
+          "strategic_value": 5.0,
+          "pattern_recognition": 4.0
+        },
+        "evaluation_text": "Global Perspective: 4 - The answer effectively demonstrates an understanding of dataset-wide patterns by identifying trends in fastener issues across various contexts, such as material degradation, improper installation, and inspection challenges. It also considers environmental factors and technological advancements, indicating a broad view of the factors influencing fastener issues.\n\nTheme Identification: 5 - Major themes and patterns are clearly identified, including material degradation, improper installation, and inspection challenges. The answer also highlights the correlation between maintenance practices and fastener issues, as well as the impact of environmental factors and technological integration.\n\nSynthesis Quality: 4 - The answer synthesizes information from multiple sources, such as incident reports and maintenance data, to provide a comprehensive overview of fastener issues. It effectively combines examples and case studies to illustrate the identified trends, although it could benefit from more explicit integration of diverse data sources.\n\nStrategic Value: 5 - The answer provides actionable insights that are highly valuable for high-level decision-making. Recommendations such as enhanced training programs, material innovation, and the adoption of advanced inspection technologies offer strategic guidance for improving aviation safety and maintenance practices.\n\nPattern Recognition: 4 - The answer identifies complex relationships and dependencies, such as the correlation between maintenance practices and fastener issues, and the impact of environmental factors. It also recognizes the role of technological integration in reducing incidents, although further exploration of interdependencies could enhance this aspect.\n\nGlobal Sensemaking Assessment: The answer successfully demonstrates global sensemaking capability by providing a well-rounded analysis of emerging trends in fastener issues and their relation to other maintenance problems. It effectively identifies overarching themes, synthesizes information from various sources, and offers strategic insights for decision-making. While there is room for improvement in integrating diverse data sources and exploring interdependencies, the answer provides a strong foundation for understanding and addressing fastener-related challenges in aviation maintenance.",
+        "evaluator_model": "gpt-4o"
+      },
+      {
+        "question_id": "global_014",
+        "global_metrics": {
+          "global_perspective": 4.0,
+          "theme_identification": 5.0,
+          "synthesis_quality": 4.0,
+          "strategic_value": 5.0,
+          "pattern_recognition": 5.0
+        },
+        "evaluation_text": "Global Perspective: 4 - The answer effectively demonstrates an understanding of dataset-wide patterns by discussing the interconnectedness of various maintenance domains such as scheduled maintenance, unscheduled repairs, human factors, and regulatory compliance. It highlights the broader implications of these relationships on aircraft safety, indicating a global perspective on the issue.\n\nTheme Identification: 5 - Major themes and patterns are clearly identified, such as feedback loops, resource allocation, and the importance of data management. The answer provides specific examples and patterns that illustrate these themes, making them easily identifiable and relevant to the question.\n\nSynthesis Quality: 4 - The answer synthesizes information from multiple sources, including regulatory directives, safety reporting systems, and industry practices. It integrates these elements to provide a comprehensive view of the systemic relationships in aviation maintenance, though there could be more explicit references to diverse data sources to strengthen the synthesis.\n\nStrategic Value: 5 - The answer provides actionable insights that are valuable for high-level decision-making. It suggests strategic improvements such as enhanced training programs, adherence to maintenance schedules, investment in predictive maintenance, and fostering a reporting culture, all of which are critical for improving aviation safety.\n\nPattern Recognition: 5 - Complex relationships and dependencies are well-identified, such as the feedback loops between maintenance practices and regulatory oversight, and the impact of resource allocation on maintenance outcomes. The answer effectively recognizes these patterns and their implications for aircraft safety.\n\nGlobal Sensemaking Assessment: The answer successfully demonstrates global sensemaking capability. It provides a comprehensive analysis of systemic relationships in aviation maintenance, identifies key themes and patterns, synthesizes information across multiple sources, and offers strategic insights for improving aircraft safety. The evaluation shows a strong understanding of the interconnectedness of maintenance issues and their impact on aviation safety.",
+        "evaluator_model": "gpt-4o"
+      }
+    ]
+  },
+  "textchunk_global": {
+    "global_questions_evaluated": 2,
+    "global_metrics": {
+      "global_perspective": 4.0,
+      "theme_identification": 5.0,
+      "synthesis_quality": 4.0,
+      "strategic_value": 5.0,
+      "pattern_recognition": 4.5,
+      "total_evaluated": 2
+    },
+    "individual_evaluations": [
+      {
+        "question_id": "global_007",
+        "global_metrics": {
+          "global_perspective": 4.0,
+          "theme_identification": 5.0,
+          "synthesis_quality": 4.0,
+          "strategic_value": 5.0,
+          "pattern_recognition": 4.0
+        },
+        "evaluation_text": "Global Perspective: 4 - The answer demonstrates a solid understanding of dataset-wide patterns by identifying recurring issues related to fasteners in aviation maintenance. It effectively highlights how these issues are symptomatic of broader systemic problems in maintenance practices, such as inadequate training and procedural adherence.\n\nTheme Identification: 5 - Major themes and patterns are clearly identified, including loose fasteners post-maintenance, improper installation, failure to attach fasteners, and material fatigue. The answer effectively categorizes these issues and relates them to overarching maintenance challenges.\n\nSynthesis Quality: 4 - The synthesis of information across multiple sources is well-executed, with the answer drawing on specific incidents to illustrate broader trends. However, it could benefit from a more explicit connection between individual incidents and the overall dataset to strengthen the synthesis.\n\nStrategic Value: 5 - The answer provides actionable insights that are highly valuable for high-level decision-making. Recommendations such as enhanced training programs, standardized inspection checklists, and the use of technology are strategic and can significantly impact safety outcomes.\n\nPattern Recognition: 4 - Complex relationships and dependencies are identified, particularly the link between fastener issues and broader maintenance problems. The answer effectively recognizes the systemic nature of these issues, though it could delve deeper into the interdependencies between different maintenance practices.\n\nGlobal Sensemaking Assessment: The answer successfully demonstrates global sensemaking capability by identifying and analyzing overarching patterns in aviation maintenance data related to fastener issues. It provides strategic insights and actionable recommendations, making it a valuable resource for decision-makers aiming to enhance aviation safety. Overall, the answer effectively synthesizes information and recognizes complex relationships, though there is room for improvement in explicitly connecting individual incidents to the broader dataset.",
+        "evaluator_model": "gpt-4o"
+      },
+      {
+        "question_id": "global_014",
+        "global_metrics": {
+          "global_perspective": 4.0,
+          "theme_identification": 5.0,
+          "synthesis_quality": 4.0,
+          "strategic_value": 5.0,
+          "pattern_recognition": 5.0
+        },
+        "evaluation_text": "Global Perspective: 4 - The answer demonstrates a solid understanding of dataset-wide patterns by identifying systemic relationships between maintenance issues and their impact on aircraft safety. It effectively connects specific incidents to broader operational and safety concerns, although it could benefit from more explicit references to diverse data sources.\n\nTheme Identification: 5 - Major themes and patterns are clearly identified, such as maintenance quality, component interdependencies, human factors, and the importance of a holistic safety approach. The answer effectively highlights these themes as critical to understanding the systemic nature of maintenance issues in aviation.\n\nSynthesis Quality: 4 - The answer synthesizes information across multiple sources, such as maintenance practices, human factors, and safety protocols. However, it could improve by integrating more varied examples or data points to strengthen the synthesis and provide a more comprehensive view.\n\nStrategic Value: 5 - The insights provided are highly useful for high-level decision-making. The answer suggests actionable improvements in maintenance practices, communication protocols, and safety culture, which are valuable for strategic planning and policy development in aviation safety.\n\nPattern Recognition: 5 - Complex relationships and dependencies are well-identified, such as the cascading effects of component failures and the interplay between human factors and maintenance outcomes. The answer effectively recognizes these patterns and their implications for safety.\n\nGlobal Sensemaking Assessment: The answer successfully demonstrates global sensemaking capability. It provides a comprehensive analysis of systemic relationships in aviation maintenance data, identifies key themes, and offers strategic insights for improving safety. The evaluation could be further enhanced by incorporating a wider range of data sources and examples to bolster the synthesis.",
+        "evaluator_model": "gpt-4o"
+      }
+    ]
+  },
+  "graphrag_global": {
+    "global_questions_evaluated": 2,
+    "global_metrics": {
+      "global_perspective": 4.0,
+      "theme_identification": 4.5,
+      "synthesis_quality": 4.5,
+      "strategic_value": 5.0,
+      "pattern_recognition": 4.0,
+      "total_evaluated": 2
+    },
+    "individual_evaluations": [
+      {
+        "question_id": "global_007",
+        "global_metrics": {
+          "global_perspective": 4.0,
+          "theme_identification": 5.0,
+          "synthesis_quality": 4.0,
+          "strategic_value": 5.0,
+          "pattern_recognition": 4.0
+        },
+        "evaluation_text": "Global Perspective: 4 - The answer effectively demonstrates an understanding of dataset-wide patterns by identifying fastener issues as a significant contributor to broader maintenance problems in aviation. It connects specific incidents to systemic issues, indicating a comprehensive view of the data.\n\nTheme Identification: 5 - Major themes, such as the critical role of fasteners in maintenance and the systemic nature of related issues, are clearly identified. The answer highlights specific incidents and their implications, providing a coherent narrative of the emerging trends.\n\nSynthesis Quality: 4 - The synthesis of information from multiple sources, including incident reports and community insights, is well-executed. The answer integrates these diverse inputs to form a cohesive understanding of the problem, though it could benefit from more explicit connections between different data sources.\n\nStrategic Value: 5 - The answer offers strategic recommendations that are actionable and relevant for high-level decision-making. It suggests improvements in training, checklists, audits, and feedback mechanisms, which are crucial for addressing the identified issues.\n\nPattern Recognition: 4 - The answer identifies complex relationships and dependencies, such as the causal links between fastener issues and other maintenance problems. However, it could further elaborate on the interactions between different types of maintenance challenges to enhance understanding.\n\nGlobal Sensemaking Assessment: The answer successfully demonstrates global sensemaking capability by providing a comprehensive analysis of fastener issues within the context of aviation maintenance. It identifies overarching themes, synthesizes information from multiple sources, and offers strategic insights, making it a valuable resource for decision-makers in the aviation industry.",
+        "evaluator_model": "gpt-4o"
+      },
+      {
+        "question_id": "global_014",
+        "global_metrics": {
+          "global_perspective": 4.0,
+          "theme_identification": 4.0,
+          "synthesis_quality": 5.0,
+          "strategic_value": 5.0,
+          "pattern_recognition": 4.0
+        },
+        "evaluation_text": "Global Perspective: 4 - The answer effectively demonstrates an understanding of dataset-wide patterns by identifying systemic relationships between maintenance issues and aircraft safety. It leverages graph-structured knowledge to explore these patterns, although it could benefit from more explicit examples of global trends across different datasets.\n\nTheme Identification: 4 - Major themes such as the impact of maintenance on structural integrity, brake problems, and the role of human factors are clearly identified. The answer highlights key areas of concern and their implications for safety, but it could further emphasize how these themes interconnect on a broader scale.\n\nSynthesis Quality: 5 - The answer excels in synthesizing information from multiple sources, integrating insights from different communities and knowledge paths. It effectively combines technical, operational, and human factors to provide a comprehensive view of the systemic issues affecting aircraft safety.\n\nStrategic Value: 5 - The insights provided are highly valuable for high-level decision-making. The strategic recommendations are practical and actionable, addressing both immediate and long-term safety concerns. The focus on enhanced protocols, training, audits, and data-driven decision-making reflects a deep understanding of the systemic issues.\n\nPattern Recognition: 4 - The answer identifies complex relationships and dependencies, such as feedback loops and maintenance quality impacts. While it recognizes these patterns, there is room for deeper exploration of how these dependencies evolve over time and across different contexts.\n\nGlobal Sensemaking Assessment: The answer successfully demonstrates global sensemaking capability by providing a well-rounded analysis of systemic relationships in aviation maintenance data. It synthesizes information effectively and offers strategic insights, although there is potential for further exploration of global trends and deeper pattern recognition. Overall, it provides a robust framework for understanding and addressing aircraft safety issues.",
+        "evaluator_model": "gpt-4o"
+      }
+    ]
+  },
+  "timestamp": "20250707_123606"
+}

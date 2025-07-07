@@ -1,189 +1,274 @@
 # Aviation Maintenance Sensemaking QA System
 
-This directory contains a comprehensive system for generating and evaluating sensemaking questions and answers for aviation maintenance data, following the GraphRAG methodology.
+This directory contains a comprehensive question-answering system for aviation maintenance sensemaking using Knowledge Graph-enhanced Retrieval-Augmented Generation (GraphRAG). The system generates and evaluates questions and answers for aviation maintenance scenarios using multiple methodologies.
 
 ## Overview
 
-The system implements a GraphRAG-inspired approach to create and evaluate sensemaking questions about aviation maintenance failures, following Microsoft Research's methodology for global sensemaking benchmarks.
+The system implements a complete pipeline for:
+1. **Data Sampling**: Randomly sampling aviation maintenance data
+2. **Question Generation**: Creating sensemaking and actionable questions
+3. **Answer Generation**: Using vanilla LLM, text-chunk RAG, and GraphRAG methods
+4. **Evaluation**: Multi-faceted evaluation including direct assessment, pairwise comparison, and NLP metrics
 
-## Files Description
+## System Architecture
 
-### Core Components
-
-1. **`data_analyzer.py`** - Analyzes OMIn aviation maintenance datasets to extract patterns and themes
-2. **`question_generator.py`** - Generates sensemaking questions using OpenAI API
-3. **`answer_generator.py`** - Generates answers using both vanilla LLM and GraphRAG approaches
-4. **`evaluator.py`** - Evaluates questions and answers using GraphRAG-style qualitative metrics
-5. **`main_pipeline.py`** - Orchestrates the complete workflow
-
-### Question Categories
-
-The system generates questions in these categories based on GraphRAG methodology:
-
-1. **Root Cause Analysis** - Understanding underlying causes of maintenance failures
-2. **Predictive Maintenance** - Identifying early warning signs and prevention strategies
-3. **Safety Recommendations** - Developing actionable safety improvements
-4. **System-Level Understanding** - Holistic view of aviation maintenance ecosystem
-5. **Comparative Analysis** - Comparing across different contexts
-6. **Trend Analysis** - Temporal and evolving patterns
-7. **Global Sensemaking** - Dataset-wide themes and patterns
-
-### Evaluation Metrics
-
-Following GraphRAG's evaluation framework:
-
-- **Comprehensiveness** - Completeness within question context
-- **Human Enfranchisement** - Provision of supporting source material
-- **Diversity** - Multiple viewpoints and angles
-- **Faithfulness** - Factual accuracy and grounding
+```
+Data Sampling → Question Generation → Answer Generation → Evaluation
+     ↓                ↓                     ↓               ↓
+Aviation Data → Sensemaking QA → Multi-method Answers → Comprehensive Metrics
+```
 
 ## Quick Start
 
-### Prerequisites
+Run the complete pipeline using the provided shell script:
 
 ```bash
-pip install pandas numpy networkx openai tqdm matplotlib
-export OPENAI_API_KEY="your-openai-api-key"
+chmod +x main.sh
+./main.sh
 ```
 
-### Basic Usage
+## Pipeline Steps
 
-1. **Run the complete pipeline:**
+### 1. Data Sampling (Optional)
 ```bash
-python main_pipeline.py
+python sample_aviation_data.py
 ```
+- Randomly samples 5×100 datapoints from the aviation dataset
+- Used for knowledge graph construction
+- **Note**: Currently commented out in main.sh
 
-2. **Run with custom settings:**
+### 2. Question Generation (Optional)
 ```bash
-python main_pipeline.py --output-dir ./results --sample 20
+python generate_questions.py \
+    --output-file ./output/aviation_sensemaking_questions.json \
+    --question-model gpt-4o
 ```
+- Generates two types of questions:
+  - **Sensemaking questions**: From OMIn dataset for broad understanding
+  - **Actionable questions**: From MaintNet dataset for specific maintenance actions
+- Uses all MaintNet and OMIn datasets plus randomly sampled datapoints
+- **Note**: Currently commented out in main.sh
 
-3. **Skip certain steps:**
+### 3. Answer Generation
 ```bash
-python main_pipeline.py --skip-analysis --skip-evaluation
+python generate_answers.py \
+    --question-files ./output/aviation_sensemaking_questions.json \
+    --output-file ./output/answers_gpt-4o-mini_sample20.json \
+    --kg-path ../kg/output/knowledge_graph.gml \
+    --answer-model gpt-4o-mini \
+    --sample-size 20
 ```
 
-### Individual Components
+**Parameters:**
+- `--question-files`: Input questions JSON file
+- `--output-file`: Output answers JSON file
+- `--kg-path`: Path to knowledge graph file (.gml format)
+- `--answer-model`: LLM model for answer generation
+- `--sample-size`: Number of questions to process (20 for demo)
 
-1. **Data Analysis:**
-```python
-from data_analyzer import AviationDataAnalyzer
+**Answer Generation Methods:**
+1. **Vanilla LLM**: Direct LLM response without external context
+2. **Text-chunk RAG**: Traditional RAG with text chunking
+3. **GraphRAG**: Knowledge graph-enhanced RAG with:
+   - Graph context retrieval using weighted maximum spanning trees
+   - Community-based summaries
+   - Multi-hop entity expansion
+   - Real relationship names (cleaned of technical IDs)
 
-data_paths = {
-    'faa_sample': "../../OMIn_dataset/data/FAA_data/FAA_sample_100.csv",
-    'maintenance_text': "../../OMIn_dataset/data/FAA_data/Maintenance_text_data.csv",
-    'aircraft_annotation': "../../OMIn_dataset/data/MaintNet_data/Aircraft_Annotation_DataFile.csv"
-}
-
-analyzer = AviationDataAnalyzer(data_paths)
-analyzer.load_datasets()
-analyzer.analyze_failure_patterns()
+### 4. Evaluation
+```bash
+python run_evaluation.py \
+    --questions-file ./output/aviation_sensemaking_questions.json \
+    --answers-file ./output/answers_gpt-4o-mini_sample20.json \
+    --output-dir ./evaluation_results/answer_gpt-4o-mini_evaluator_gpt-4o \
+    --evaluation-model gpt-4o \
+    --sample-size 20
 ```
 
-2. **Question Generation:**
-```python
-from question_generator import SensemakingQuestionGenerator
+**Parameters:**
+- `--questions-file`: Input questions JSON file
+- `--answers-file`: Generated answers JSON file
+- `--output-dir`: Directory for evaluation results
+- `--evaluation-model`: LLM model for evaluation
+- `--sample-size`: Number of answers to evaluate (20 for demo)
 
-generator = SensemakingQuestionGenerator(api_key="your-key")
-questions = generator.generate_comprehensive_questions(analyzer)
+**Evaluation Methods:**
+1. **Direct Evaluation**: Individual answer quality assessment using GraphRAG-style metrics:
+   - Comprehensiveness
+   - Human Enfranchisement
+   - Diversity
+   - Faithfulness
+
+2. **Pairwise Comparison**: Head-to-head comparison between different answer generation methods
+
+3. **NLP Metrics for Actionable Questions**: Ground truth-based evaluation using:
+   - BLEU Score
+   - METEOR Score
+   - ROUGE-L F1
+   - Semantic Similarity
+   - Exact Match Rate
+   - LLM-based evaluation
+
+## Key Features
+
+### GraphRAG Enhancements
+- **Weighted Graph Traversal**: Uses maximum spanning trees for context selection
+- **Community Summaries**: DFS-based narrative generation from graph communities
+- **Clean Output**: Removes technical/incident IDs, uses human-readable relationship names
+- **Targeted Text Chunking**: Focuses on specific columns (e.g., 'c119') for relevant content
+
+### Evaluation Capabilities
+- **Multi-dimensional Assessment**: Covers quality, accuracy, and utility
+- **Method Comparison**: Direct comparison between vanilla, text-chunk, and graph RAG
+- **Ground Truth Validation**: For actionable questions with known correct answers
+- **Comprehensive Metrics**: Both qualitative (LLM-based) and quantitative (NLP-based) evaluation
+
+## File Structure
+
 ```
-
-3. **Answer Generation:**
-```python
-from answer_generator import SensemakingAnswerGenerator
-
-answer_gen = SensemakingAnswerGenerator(api_key="your-key")
-vanilla_answers = answer_gen.generate_vanilla_answers(questions, datasets)
-```
-
-4. **Evaluation:**
-```python
-from evaluator import SensemakingEvaluator
-
-evaluator = SensemakingEvaluator(api_key="your-key")
-comparison_results = evaluator.compare_answer_methods(vanilla_answers, graphrag_answers, questions)
+sensemaking_QA/
+├── main.sh                          # Main pipeline script
+├── README.md                        # This file
+├── sample_aviation_data.py          # Data sampling script
+├── generate_questions.py            # Question generation
+├── question_generator.py            # Question generation logic
+├── generate_answers.py              # Answer generation
+├── answer_generator.py              # Answer generation logic
+├── run_evaluation.py                # Evaluation runner
+├── evaluator.py                     # Evaluation logic
+├── data_analyzer.py                 # Data analysis utilities
+├── output/                          # Generated files
+│   ├── aviation_sensemaking_questions.json
+│   └── answers_gpt-4o-mini_sample20.json
+└── evaluation_results/              # Evaluation outputs
+    └── answer_gpt-4o-mini_evaluator_gpt-4o/
 ```
 
 ## Configuration
 
-Create a custom configuration file:
+### Demo vs Full Experiment
+The current configuration uses small sample sizes for demonstration:
+- **Question Generation**: All available data
+- **Answer Generation**: 20 questions (`--sample-size 20`)
+- **Evaluation**: 20 answers (`--sample-size 20`)
 
-```json
-{
-    "data_paths": {
-        "faa_sample": "path/to/FAA_sample_100.csv",
-        "maintenance_text": "path/to/Maintenance_text_data.csv", 
-        "aircraft_annotation": "path/to/Aircraft_Annotation_DataFile.csv"
-    },
-    "knowledge_graph_path": "path/to/knowledge_graph.gml",
-    "output_dir": "./output",
-    "model": "gpt-4o",
-    "questions_per_category": 8,
-    "global_questions": 15,
-    "context_questions": 10
-}
+For full experiments, remove the `--sample-size` parameters or increase the values.
+
+### Model Selection
+- **Question Generation**: GPT-4o (higher quality for question formulation)
+- **Answer Generation**: GPT-4o-mini (cost-effective for bulk generation)
+- **Evaluation**: GPT-4o (higher quality for assessment)
+
+## Dependencies
+
+Ensure you have the required dependencies:
+```bash
+pip install openai pandas numpy networkx tqdm
+pip install nltk rouge-score # For NLP metrics
 ```
 
-Then run: `python main_pipeline.py --config config.json`
+## Knowledge Graph Requirements
+
+The system requires a knowledge graph file in GML format at:
+```
+../kg/output/knowledge_graph.gml
+```
+
+This graph should contain aviation maintenance entities and relationships.
 
 ## Output Files
 
-The system generates:
+### Questions File Format
+```json
+{
+  "questions": [
+    {
+      "id": "question_id",
+      "question": "What are the main...",
+      "category": "sensemaking|action_specific",
+      "type": "global|local",
+      "ground_truth_answer": "..." // For action_specific only
+    }
+  ]
+}
+```
 
-- **Analysis Results:** `analysis_results.json`
-- **Questions:** `aviation_sensemaking_questions.json/csv`
-- **Vanilla Answers:** `vanilla_answers.json`
-- **GraphRAG Answers:** `graphrag_answers.json` (if knowledge graph available)
-- **Evaluations:** `evaluation_results.json`
-- **Complete Results:** `complete_pipeline_results.json`
-- **Summary Report:** `pipeline_report.txt`
-
-## GraphRAG Integration
-
-To use GraphRAG capabilities:
-
-1. Ensure you have a knowledge graph file (`.gml` format)
-2. Place it in the specified path in config
-3. The system will automatically use it for GraphRAG answer generation
-
-Without a knowledge graph, the system will still work but only generate vanilla LLM answers.
-
-## Example Questions Generated
-
-### Root Cause Analysis
-- "What are the most frequent underlying causes of engine failures across different aircraft types?"
-- "Which maintenance oversights consistently lead to emergency landings?"
-
-### Global Sensemaking
-- "What are the top 5 most critical safety patterns across the entire maintenance dataset?"
-- "How do different maintenance philosophies impact overall aviation safety?"
-
-### Predictive Maintenance
-- "Based on historical patterns, what early warning signs indicate potential hydraulic system failures?"
-- "Which component combinations show the highest risk of cascade failures?"
+### Answers File Format
+```json
+{
+  "answers": [
+    {
+      "question_id": "question_id",
+      "method": "vanilla|text_chunk|graph_rag",
+      "answer": "The main factors are...",
+      "generation_time": 1.23
+    }
+  ]
+}
+```
 
 ## Evaluation Results
 
-The system provides comprehensive evaluation including:
+Evaluation generates comprehensive reports including:
+- Individual answer assessments
+- Method comparison matrices
+- Aggregate performance metrics
+- Statistical significance tests
+- Detailed scoring breakdowns
 
-- Individual question quality scores
-- Answer quality comparisons between vanilla LLM and GraphRAG
-- Pairwise comparisons with win rates
-- Global sensemaking capability assessment
-- Detailed explanations for all evaluations
+## Usage Examples
 
-## Notes
+### Custom Question Generation
+```bash
+python generate_questions.py \
+    --output-file ./custom_questions.json \
+    --question-model gpt-4o \
+    --num-questions 50
+```
 
-- The system uses OpenAI's API and requires proper API key setup
-- Processing time depends on the number of questions generated and API rate limits
-- The system implements rate limiting to avoid API quota issues
-- All intermediate results are saved for inspection and debugging
+### Single Method Answer Generation
+```bash
+python generate_answers.py \
+    --question-files ./questions.json \
+    --output-file ./vanilla_answers.json \
+    --answer-model gpt-4o \
+    --methods vanilla
+```
 
-## Extending the System
+### Targeted Evaluation
+```bash
+python run_evaluation.py \
+    --questions-file ./questions.json \
+    --answers-file ./answers.json \
+    --output-dir ./eval_results \
+    --evaluation-model gpt-4o \
+    --eval-types direct_evaluation
+```
 
-The modular design allows easy extension:
+## Performance Notes
 
-- Add new question categories in `question_generator.py`
-- Implement new evaluation metrics in `evaluator.py`
-- Add new data analysis methods in `data_analyzer.py`
-- Modify the pipeline flow in `main_pipeline.py`
+- **Runtime**: Full pipeline can take several hours depending on sample size
+- **API Costs**: Monitor OpenAI API usage, especially with GPT-4o models
+- **Memory**: Knowledge graph processing may require significant RAM for large graphs
+- **Rate Limiting**: Built-in delays prevent API rate limit issues
+
+## Troubleshooting
+
+### Common Issues
+1. **Missing Knowledge Graph**: Ensure the KG file exists at the specified path
+2. **API Key**: Set `OPENAI_API_KEY` environment variable
+3. **Memory Issues**: Reduce sample size or use smaller knowledge graphs
+4. **Rate Limits**: Increase sleep intervals in the code if needed
+
+### Debug Mode
+For troubleshooting, debug prints have been removed from the evaluation code for clean output. To add debugging, modify the evaluator.py file as needed.
+
+## Research Context
+
+This system is designed for aviation maintenance sensemaking research, comparing different RAG approaches for:
+- Safety incident analysis
+- Maintenance procedure understanding
+- Cross-domain knowledge synthesis
+- Actionable insight generation
+
+The GraphRAG approach specifically addresses limitations in traditional RAG systems by leveraging structured knowledge representations and community-based context selection.

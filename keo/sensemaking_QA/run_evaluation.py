@@ -7,10 +7,11 @@ Includes action-specific evaluation with ground truth metrics
 import os
 import json
 import pandas as pd
+import argparse
 from datetime import datetime
 from evaluator import SensemakingEvaluator
 
-def run_comprehensive_evaluation():
+def run_comprehensive_evaluation(questions_file, answers_file, output_dir, sample_size=None, evaluation_model="gpt-4o"):
     """Run comprehensive evaluation including action-specific ground truth evaluation"""
     
     print("=" * 70)
@@ -26,7 +27,7 @@ def run_comprehensive_evaluation():
     print("✓ OpenAI API key verified")
     
     # Initialize evaluator
-    evaluator = SensemakingEvaluator(openai_api_key)
+    evaluator = SensemakingEvaluator(openai_api_key, model=evaluation_model)
     print("✓ Evaluator initialized")
     
     # Load questions and answers
@@ -35,19 +36,8 @@ def run_comprehensive_evaluation():
     print("=" * 70)
     
     # Load questions
-    questions_file = None
-    for filename in ["./output/aviation_sensemaking_questions_20250625_173716.json"]:
-        try:
-            import glob
-            files = glob.glob(filename) if '*' in filename else [filename]
-            if files:
-                questions_file = files[-1]  # Get most recent
-                break
-        except:
-            continue
-    
-    if not questions_file:
-        print("ERROR: No questions file found")
+    if not os.path.exists(questions_file):
+        print(f"ERROR: Questions file not found: {questions_file}")
         return
     
     with open(questions_file, 'r') as f:
@@ -66,25 +56,16 @@ def run_comprehensive_evaluation():
         print(f"  - {category}: {count}")
     
     # Load answers
-    answers_file = None
-    for filename in ["./output/aviation_answers_20250625_181025.json"]:
-        try:
-            files = glob.glob(filename) if '*' in filename else [filename]
-            if files:
-                answers_file = files[-1]  # Get most recent
-                break
-        except:
-            continue
-    
-    if not answers_file:
-        print("ERROR: No answers file found. Run generate_answers.py first.")
+    if not os.path.exists(answers_file):
+        print(f"ERROR: Answers file not found: {answers_file}")
         return
     
     with open(answers_file, 'r') as f:
         answers_data = json.load(f)
     
-    # Extract vanilla and GraphRAG answers
+    # Extract vanilla, text-chunk RAG, and GraphRAG answers
     vanilla_answers = []
+    textchunkrag_answers = []
     graphrag_answers = []
     
     for answer_result in answers_data:
@@ -95,6 +76,13 @@ def run_comprehensive_evaluation():
                 'method': 'vanilla'
             })
         
+        if answer_result.get('textchunkrag_answer'):
+            textchunkrag_answers.append({
+                'question_id': answer_result['question_id'],
+                'answer': answer_result['textchunkrag_answer']['answer'],
+                'method': 'textchunkrag'
+            })
+        
         if answer_result.get('graphrag_answer'):
             graphrag_answers.append({
                 'question_id': answer_result['question_id'],
@@ -102,10 +90,9 @@ def run_comprehensive_evaluation():
                 'method': 'graphrag'
             })
     
-    print(f"✓ Loaded {len(vanilla_answers)} vanilla answers and {len(graphrag_answers)} GraphRAG answers")
+    print(f"✓ Loaded {len(vanilla_answers)} vanilla answers, {len(textchunkrag_answers)} text-chunk RAG answers, and {len(graphrag_answers)} GraphRAG answers")
     
     # Create output directory
-    output_dir = "./evaluation_results"
     os.makedirs(output_dir, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     
@@ -119,7 +106,13 @@ def run_comprehensive_evaluation():
     print("=" * 70)
     
     # Evaluate question quality (sample)
-    sample_questions = questions[:10]  # Evaluate sample for demo
+    if sample_size is None:
+        sample_questions = questions
+        print(f"Evaluating all {len(sample_questions)} questions")
+    else:
+        sample_questions = questions[:sample_size]
+        print(f"Evaluating sample of {len(sample_questions)} questions")
+    
     question_evaluations = evaluator.evaluate_questions(sample_questions)
     
     question_eval_file = f"{output_dir}/question_evaluations_{timestamp}.json"
@@ -139,39 +132,84 @@ def run_comprehensive_evaluation():
     if action_questions:
         print(f"Found {len(action_questions)} action-specific questions with ground truth")
         
-        # Evaluate action-specific answers with ground truth metrics
-        action_evaluation = evaluator.compare_action_specific_methods(
-            vanilla_answers, graphrag_answers, action_questions
+        # Evaluate action-specific answers with ground truth metrics - Three-way comparison
+        print("Performing three-way comparison: Vanilla vs Text-chunk RAG vs GraphRAG")
+        
+        # Vanilla vs Text-chunk RAG
+        vanilla_vs_textchunk = evaluator.compare_action_methods_flexible(
+            vanilla_answers, textchunkrag_answers, action_questions,
+            "vanilla", "textchunkrag"
         )
         
-        if not action_evaluation.get('error'):
+        # Vanilla vs GraphRAG
+        vanilla_vs_graphrag = evaluator.compare_action_methods_flexible(
+            vanilla_answers, graphrag_answers, action_questions,
+            "vanilla", "graphrag"
+        )
+        
+        # Text-chunk RAG vs GraphRAG
+        textchunk_vs_graphrag = evaluator.compare_action_methods_flexible(
+            textchunkrag_answers, graphrag_answers, action_questions,
+            "textchunkrag", "graphrag"
+        )
+        
+        # Combine results
+        action_evaluation = {
+            'vanilla_vs_textchunk': vanilla_vs_textchunk,
+            'vanilla_vs_graphrag': vanilla_vs_graphrag,
+            'textchunk_vs_graphrag': textchunk_vs_graphrag,
+            'timestamp': timestamp
+        }
+        # Debug: Check which comparison failed
+        print("Checking comparison results...")
+        for name, comparison in [('vanilla_vs_textchunk', vanilla_vs_textchunk), 
+                                ('vanilla_vs_graphrag', vanilla_vs_graphrag), 
+                                ('textchunk_vs_graphrag', textchunk_vs_graphrag)]:
+            if comparison.get('error'):
+                print(f"❌ {name} failed: {comparison.get('error')}")
+            else:
+                print(f"✓ {name} succeeded")
+        if not any(comparison.get('error') for comparison in [vanilla_vs_textchunk, vanilla_vs_graphrag, textchunk_vs_graphrag]):
             action_eval_file = f"{output_dir}/action_specific_evaluation_{timestamp}.json"
             evaluator.save_evaluation_results(action_evaluation, action_eval_file)
             print(f"✓ Action-specific evaluation saved to {action_eval_file}")
             
-            # Display action-specific results
+            # Display comprehensive action-specific results
             print("\nAction-Specific Evaluation Summary:")
-            print("-" * 50)
+            print("=" * 50)
             
-            vanilla_metrics = action_evaluation['vanilla_results']['aggregate_metrics']
-            graphrag_metrics = action_evaluation['graphrag_results']['aggregate_metrics']
-            winner = action_evaluation['winner']
+            # Extract metrics for each method
+            vanilla_metrics = vanilla_vs_textchunk['vanilla_results']['aggregate_metrics']
+            textchunk_metrics = vanilla_vs_textchunk['textchunkrag_results']['aggregate_metrics']
+            graphrag_metrics = vanilla_vs_graphrag['graphrag_results']['aggregate_metrics']
             
             print(f"Questions Evaluated: {vanilla_metrics.get('total_evaluated', 0)}")
-            print("\nNLP Metrics Comparison:")
-            print(f"                    Vanilla    GraphRAG   Winner")
-            print(f"BLEU Score:         {vanilla_metrics.get('bleu_scores_mean', 0):.3f}      {graphrag_metrics.get('bleu_scores_mean', 0):.3f}      {action_evaluation['comparison'].get('bleu_scores_mean', {}).get('winner', 'N/A')}")
-            print(f"METEOR Score:       {vanilla_metrics.get('meteor_scores_mean', 0):.3f}      {graphrag_metrics.get('meteor_scores_mean', 0):.3f}      {action_evaluation['comparison'].get('meteor_scores_mean', {}).get('winner', 'N/A')}")
-            print(f"ROUGE-L F1:         {vanilla_metrics.get('rouge_l_f1_scores_mean', 0):.3f}      {graphrag_metrics.get('rouge_l_f1_scores_mean', 0):.3f}      {action_evaluation['comparison'].get('rouge_l_f1_scores_mean', {}).get('winner', 'N/A')}")
-            print(f"Exact Match Rate:   {vanilla_metrics.get('exact_matches_rate', 0):.3f}      {graphrag_metrics.get('exact_matches_rate', 0):.3f}      {action_evaluation['comparison'].get('exact_matches_rate', {}).get('winner', 'N/A')}")
-            print(f"LLM Evaluation:     {vanilla_metrics.get('llm_evaluation_scores_mean', 0):.3f}      {graphrag_metrics.get('llm_evaluation_scores_mean', 0):.3f}      {action_evaluation['comparison'].get('llm_evaluation_scores_mean', {}).get('winner', 'N/A')}")
+            print("\nThree-Way NLP Metrics Comparison:")
+            print(f"                    Vanilla    TextChunk  GraphRAG")
+            print(f"BLEU Score:         {vanilla_metrics.get('bleu_scores_mean', 0):.3f}      {textchunk_metrics.get('bleu_scores_mean', 0):.3f}      {graphrag_metrics.get('bleu_scores_mean', 0):.3f}")
+            print(f"METEOR Score:       {vanilla_metrics.get('meteor_scores_mean', 0):.3f}      {textchunk_metrics.get('meteor_scores_mean', 0):.3f}      {graphrag_metrics.get('meteor_scores_mean', 0):.3f}")
+            print(f"ROUGE-L F1:         {vanilla_metrics.get('rouge_l_f1_scores_mean', 0):.3f}      {textchunk_metrics.get('rouge_l_f1_scores_mean', 0):.3f}      {graphrag_metrics.get('rouge_l_f1_scores_mean', 0):.3f}")
+            print(f"Exact Match Rate:   {vanilla_metrics.get('exact_matches_rate', 0):.3f}      {textchunk_metrics.get('exact_matches_rate', 0):.3f}      {graphrag_metrics.get('exact_matches_rate', 0):.3f}")
+            print(f"LLM Evaluation:     {vanilla_metrics.get('llm_evaluation_scores_mean', 0):.3f}      {textchunk_metrics.get('llm_evaluation_scores_mean', 0):.3f}      {graphrag_metrics.get('llm_evaluation_scores_mean', 0):.3f}")
             
-            print(f"\nOverall Winner: {winner.get('overall_winner', 'Unknown')}")
-            print(f"GraphRAG Win Rate: {winner.get('graphrag_win_rate', 0):.1%}")
-            print(f"Vanilla Win Rate: {winner.get('vanilla_win_rate', 0):.1%}")
+            # Determine overall best method
+            methods = {
+                'Vanilla': vanilla_metrics,
+                'TextChunk RAG': textchunk_metrics, 
+                'GraphRAG': graphrag_metrics
+            }
+            
+            best_method = max(methods.items(), key=lambda x: x[1].get('llm_evaluation_scores_mean', 0))
+            print(f"\nBest Performing Method: {best_method[0]} (LLM Score: {best_method[1].get('llm_evaluation_scores_mean', 0):.3f})")
+            
+            # Show pairwise winners
+            print("\nPairwise Comparisons:")
+            print(f"Vanilla vs TextChunk: {vanilla_vs_textchunk.get('winner', {}).get('overall_winner', 'N/A')}")
+            print(f"Vanilla vs GraphRAG: {vanilla_vs_graphrag.get('winner', {}).get('overall_winner', 'N/A')}")
+            print(f"TextChunk vs GraphRAG: {textchunk_vs_graphrag.get('winner', {}).get('overall_winner', 'N/A')}")
             
         else:
-            print("Error in action-specific evaluation:", action_evaluation.get('error'))
+            print("Error in action-specific evaluation - some comparisons failed")
     
     else:
         print("No action-specific questions found")
@@ -186,27 +224,70 @@ def run_comprehensive_evaluation():
     if global_questions:
         print(f"Found {len(global_questions)} global sensemaking questions")
         
-        # Evaluate global sensemaking capability
-        global_evaluation = evaluator.evaluate_global_sensemaking_capability(
-            global_questions[:5], graphrag_answers  # Sample for demo
+        # Evaluate global sensemaking capability for all three methods
+        if sample_size is None:
+            sample_global = global_questions
+            print(f"Evaluating all {len(sample_global)} global questions")
+        else:
+            sample_global = global_questions[:sample_size]
+            print(f"Evaluating sample of {len(sample_global)} global questions")
+        
+        # Evaluate Vanilla LLM
+        vanilla_global = evaluator.evaluate_global_sensemaking_capability(
+            sample_global, vanilla_answers
         )
         
-        if not global_evaluation.get('error'):
+        # Evaluate Text-chunk RAG
+        textchunk_global = evaluator.evaluate_global_sensemaking_capability(
+            sample_global, textchunkrag_answers
+        )
+        
+        # Evaluate GraphRAG
+        graphrag_global = evaluator.evaluate_global_sensemaking_capability(
+            sample_global, graphrag_answers
+        )
+        
+        # Combine global evaluation results
+        global_evaluation = {
+            'vanilla_global': vanilla_global,
+            'textchunk_global': textchunk_global,
+            'graphrag_global': graphrag_global,
+            'timestamp': timestamp
+        }
+        
+        if not any(eval_result.get('error') for eval_result in [vanilla_global, textchunk_global, graphrag_global]):
             global_eval_file = f"{output_dir}/global_sensemaking_evaluation_{timestamp}.json"
             evaluator.save_evaluation_results(global_evaluation, global_eval_file)
             print(f"✓ Global sensemaking evaluation saved to {global_eval_file}")
             
-            global_metrics = global_evaluation.get('global_metrics', {})
-            print(f"\nGlobal Sensemaking Results:")
-            print(f"Questions Evaluated: {global_evaluation.get('global_questions_evaluated', 0)}")
-            if global_metrics:
-                print(f"Average Scores:")
-                print(f"  Global Perspective: {global_metrics.get('global_perspective', 0):.2f}/5.0")
-                print(f"  Theme Identification: {global_metrics.get('theme_identification', 0):.2f}/5.0")
-                print(f"  Synthesis Quality: {global_metrics.get('synthesis_quality', 0):.2f}/5.0")
-                print(f"  Overall Global Score: {global_metrics.get('overall_global_score', 0):.2f}/5.0")
+            print(f"\nGlobal Sensemaking Results (3-way comparison):")
+            print("=" * 60)
+            print(f"Questions Evaluated: {len(sample_global)}")
+            print()
+            
+            # Compare metrics across all three methods
+            methods_global = {
+                'Vanilla': vanilla_global.get('global_metrics', {}),
+                'TextChunk RAG': textchunk_global.get('global_metrics', {}),
+                'GraphRAG': graphrag_global.get('global_metrics', {})
+            }
+            
+            print(f"                     Vanilla    TextChunk  GraphRAG")
+            for metric in ['global_perspective', 'theme_identification', 'synthesis_quality', 'overall_global_score']:
+                vanilla_score = methods_global['Vanilla'].get(metric, 0)
+                textchunk_score = methods_global['TextChunk RAG'].get(metric, 0)
+                graphrag_score = methods_global['GraphRAG'].get(metric, 0)
+                
+                metric_name = metric.replace('_', ' ').title()[:19]
+                print(f"{metric_name:<20} {vanilla_score:.2f}       {textchunk_score:.2f}       {graphrag_score:.2f}")
+            
+            # Determine best method for global sensemaking
+            best_global = max(methods_global.items(), 
+                            key=lambda x: x[1].get('overall_global_score', 0))
+            print(f"\nBest Global Sensemaking Method: {best_global[0]} (Score: {best_global[1].get('overall_global_score', 0):.2f}/5.0)")
+            
         else:
-            print("Error in global evaluation:", global_evaluation.get('error'))
+            print("Error in global evaluation: Some methods failed")
     
     else:
         print("No global sensemaking questions found")
@@ -220,18 +301,48 @@ def run_comprehensive_evaluation():
                            if q.get('category') != 'action_specific' and q.get('type') != 'global']
     
     if non_action_questions:
-        print(f"Comparing methods on {len(non_action_questions[:10])} standard questions")
+        if sample_size is None:
+            sample_standard = non_action_questions
+            print(f"Comparing methods on all {len(sample_standard)} standard questions")
+        else:
+            sample_standard = non_action_questions[:sample_size]
+            print(f"Comparing methods on sample of {len(sample_standard)} standard questions")
         
-        standard_comparison = evaluator.compare_answer_methods(
-            vanilla_answers, graphrag_answers, non_action_questions[:10]  # Sample
+        # Three-way standard comparison
+        vanilla_vs_textchunk_std = evaluator.compare_answer_methods(
+            vanilla_answers, textchunkrag_answers, sample_standard,
+            "vanilla", "textchunkrag"
         )
+        
+        vanilla_vs_graphrag_std = evaluator.compare_answer_methods(
+            vanilla_answers, graphrag_answers, sample_standard,
+            "vanilla", "graphrag"
+        )
+        
+        textchunk_vs_graphrag_std = evaluator.compare_answer_methods(
+            textchunkrag_answers, graphrag_answers, sample_standard,
+            "textchunkrag", "graphrag"
+        )
+        
+        standard_comparison = {
+            'vanilla_vs_textchunk': vanilla_vs_textchunk_std,
+            'vanilla_vs_graphrag': vanilla_vs_graphrag_std,
+            'textchunk_vs_graphrag': textchunk_vs_graphrag_std,
+            'timestamp': timestamp,
+            'questions_evaluated': len(sample_standard)
+        }
         
         standard_eval_file = f"{output_dir}/standard_method_comparison_{timestamp}.json"
         evaluator.save_evaluation_results(standard_comparison, standard_eval_file)
         print(f"✓ Standard method comparison saved to {standard_eval_file}")
         
         print("\nStandard Evaluation Summary:")
-        print(standard_comparison.get('evaluation_summary', 'No summary available'))
+        print("=" * 50)
+        print(f"Questions Evaluated: {len(sample_standard)}")
+        print("\nPairwise Standard Comparisons:")
+        print(f"Vanilla vs TextChunk: {vanilla_vs_textchunk_std.get('evaluation_summary', 'N/A')}")
+        print(f"Vanilla vs GraphRAG: {vanilla_vs_graphrag_std.get('evaluation_summary', 'N/A')}")
+        print(f"TextChunk vs GraphRAG: {textchunk_vs_graphrag_std.get('evaluation_summary', 'N/A')}")
     
     print("\n" + "=" * 70)
     print("EVALUATION COMPLETE!")
@@ -252,8 +363,56 @@ def run_comprehensive_evaluation():
     print(f"  Global Sensemaking: {len(global_questions) if 'global_questions' in locals() else 0}")
     print(f"  Standard Questions: {len(non_action_questions) if 'non_action_questions' in locals() else 0}")
     print(f"  Vanilla Answers: {len(vanilla_answers)}")
+    print(f"  TextChunk RAG Answers: {len(textchunkrag_answers)}")
     print(f"  GraphRAG Answers: {len(graphrag_answers)}")
+    print("\nThree-way evaluation completed across all question types!")
 
+def main():
+    """Main function to handle command-line arguments"""
+    parser = argparse.ArgumentParser(
+        description="Run comprehensive evaluation for aviation sensemaking QA"
+    )
+    parser.add_argument(
+        '--questions-file',
+        required=True,
+        help='Path to questions file (JSON format). Required.'
+    )
+    parser.add_argument(
+        '--answers-file',
+        required=True,
+        help='Path to answers file (JSON format). Required.'
+    )
+    parser.add_argument(
+        '--output-dir',
+        required=True,
+        help='Output directory for evaluation results. Required.'
+    )
+    parser.add_argument(
+        '--sample-size',
+        type=int,
+        help='Number of questions to sample for evaluation. If not provided, evaluates all questions.'
+    )
+    parser.add_argument(
+        '--evaluation-model',
+        default="gpt-4o",
+        help='OpenAI model to use for evaluation (default: gpt-4o)'
+    )
+    
+    args = parser.parse_args()
+    
+    try:
+        run_comprehensive_evaluation(
+            questions_file=args.questions_file,
+            answers_file=args.answers_file,
+            output_dir=args.output_dir,
+            sample_size=args.sample_size,
+            evaluation_model=args.evaluation_model
+        )
+        print("\n✅ Evaluation completed successfully!")
+    except Exception as e:
+        print(f"\n❌ Error in evaluation: {e}")
+        import traceback
+        traceback.print_exc()
 
 if __name__ == "__main__":
-    run_comprehensive_evaluation()
+    main()
