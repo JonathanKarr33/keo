@@ -189,7 +189,7 @@ def main():
         print("WARNING: Large models may require significant GPU memory. If you encounter OOM errors, run each model separately and merge results.")
 
     if args.all:
-        input_file = "../../OMIn_dataset/data/FAA_data/faa.json"
+        input_file = "../../OMIn_dataset/data/FAA_data/Maintenance_Text_data_nona.csv"
     else:
         input_file = "../../OMIn_dataset/data/FAA_data/FAA_sample_100.csv"
 
@@ -205,22 +205,49 @@ def main():
         with open(input_file, 'r', encoding='utf-8') as f:
             data = json.load(f)
         for key, value in data.items():
-            # value should be a list, get the first string
+            # Extract c5 from key (format: "faa/index_c5")
+            if '_' in key:
+                c5 = key.split('_')[-1]
+            else:
+                c5 = key  # fallback
+                
+            # Get text from value
             if isinstance(value, list) and value and isinstance(value[0], str):
                 text = value[0].upper()
             else:
-                text = value[0].upper()
-            rows.append({'c119': text})
+                text = str(value).upper()
+                
+            rows.append({'c5': c5, 'c119': text})
     else:
         with open(input_file, newline='', encoding='utf-8') as f:
             reader = csv.DictReader(f)
             for row in reader:
+                # Always ensure we have c5 column - extract from existing or create new
+                if 'c5' in row:
+                    # Use existing c5 value
+                    c5_value = row['c5']
+                else:
+                    # Try to find c5 in other column names
+                    c5_col = None
+                    for col in row.keys():
+                        if 'c5' in col.lower():
+                            c5_col = col
+                            break
+                    if c5_col:
+                        c5_value = row[c5_col]
+                    else:
+                        # Create a dummy c5 column if not found
+                        c5_value = f"dummy_{len(rows)}"
+                
+                # Always set c5 in the row
+                row['c5'] = c5_value
+                
                 if 'c119' in row:
                     row['c119'] = row['c119'].upper()
                 rows.append(row)
 
     # Prepare output
-    fieldnames = ["c119"] + [f"{shortname}_triplets" for shortname, _ in models] + [f"{shortname}_triplets_clean" for shortname, _ in models]
+    fieldnames = ["c5", "c119"] + [f"{shortname}_triplets" for shortname, _ in models] + [f"{shortname}_triplets_clean" for shortname, _ in models]
     with open(output_csv, 'w', newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
@@ -239,6 +266,7 @@ def main():
                 triplet_outputs[f"{shortname}_triplets"] = raw_output
                 triplet_outputs[f"{shortname}_triplets_clean"] = extract_triplets_only(raw_output)
             writer.writerow({
+                "c5": row['c5'],  # Always use the c5 value we ensured exists
                 "c119": text,
                 **triplet_outputs
             })
@@ -259,8 +287,16 @@ if __name__ == "__main__":
                        - Mistral-Small-Instruct-2409 (mistralai/Mistral-Small-Instruct-2409)
       --all         Process all rows from the JSON file (../../OMIn_dataset/data/FAA_data/faa.json) instead of the default 100-row CSV (../../OMIn_dataset/data/FAA_data/FAA_sample_100.csv)
 
+    Output Format:
+      The output CSV will include the following columns:
+      - c5: Document identifier (extracted from input data)
+      - c119: Input text
+      - {model}_triplets: Raw triplet output from each model
+      - {model}_triplets_clean: Cleaned triplet output from each model
+
     Notes:
       - Output CSV columns will match the models used.
       - Large models require significant GPU memory. If you encounter OOM errors, run each model separately and merge results.
+      - c5 column is automatically extracted from JSON keys or CSV columns.
     """
     main() 
