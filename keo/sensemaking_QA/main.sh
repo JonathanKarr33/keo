@@ -10,18 +10,19 @@
 
 # Generate answers for the questions using vanillation, textchunk RAG, and graph RAG methods
 # Note: The sample size is set to 20 for demonstration purposes; ignore for full experiment
-python generate_answers.py \
-    --question-files ./output/aviation_sensemaking_questions.json \
-    --output-file ./output/answers_gpt-4o-mini_sample20.json \
-    --kg-path ../kg/output/knowledge_graph.gml \
-    --answer-model gpt-4o-mini \
-    --sample-size 20
+# python generate_answers.py \
+#     --question-files ./output/aviation_sensemaking_questions.json \
+#     --output-file ./output/answers_gemma-3-4b-it_sample20.json \
+#     --kg-path ../kg/output/knowledge_graph.gml \
+#     --answer-model google/gemma-3-4b-it \
+#     --provider huggingface \
+#     --API-provider featherless-ai \
+#     --sample-size 20
 
 # Evaluate the generated answers using three-way evaluation (direct evaluation, pairwise standard comparison, and three-way NLP metrics for actionable questions)
-# Note: The sample size is set to 50 for demonstration purposes; ignore for full experiment
 python run_evaluation.py \
     --questions-file ./output/aviation_sensemaking_questions.json \
-    --answers-file ./output/answers_gpt-4o-mini_sample20.json \
-    --output-dir ./evaluation_results/answer_gpt-4o-mini_evaluator_gpt-4o \
-    --evaluation-model gpt-4o \
-    --sample-size 20
+    --answers-file ./output/answers_gemma-3-4b-it_sample20.json \
+    --output-dir ./evaluation_results/answer_gemma-3-4b-it_evaluator_gpt-4o \
+    --provider openai \
+    --evaluation-model gpt-4o

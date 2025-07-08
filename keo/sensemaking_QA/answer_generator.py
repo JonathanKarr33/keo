@@ -18,24 +18,48 @@ import pickle
 sys.path.append('..')
 from graph_rag.KEO_GraphRAG import GraphRetriever
 
+try:
+    from huggingface_hub import InferenceClient
+    HUGGINGFACE_AVAILABLE = True
+except ImportError:
+    HUGGINGFACE_AVAILABLE = False
+
 
 class SensemakingAnswerGenerator:
-    def __init__(self, api_key: str, model: str = "gpt-4o", cache_dir: str = "./embedding_cache"):
+    def __init__(self, api_key: str, model: str = "gpt-4o", cache_dir: str = "./embedding_cache", provider: str = "openai", API_provider: str = "auto"):
         """
         Initialize the answer generator
         
         Args:
-            api_key: OpenAI API key
+            api_key: API key (OpenAI or HuggingFace)
             model: Model to use for generation
             cache_dir: Directory to store embedding cache files
+            provider: Provider to use ("openai" or "huggingface")
+            API_provider: API provider for HuggingFace InferenceClient (only used when provider="huggingface")
         """
-        self.client = OpenAI(api_key=api_key)
+        self.provider = provider
         self.model = model
-        self.knowledge_graph = None
-        self.graph_retriever = None
         self.cache_dir = cache_dir
         self.embedding_cache = {}
         self.chunk_cache = {}
+        
+        # Initialize the appropriate client based on provider
+        if provider == "openai":
+            self.client = OpenAI(api_key=api_key)
+        elif provider == "huggingface":
+            if not HUGGINGFACE_AVAILABLE:
+                raise ImportError("huggingface_hub is not installed. Please install it with: pip install huggingface_hub")
+            self.client = InferenceClient(
+                provider=API_provider,
+                api_key=api_key,
+            )
+        else:
+            raise ValueError(f"Unsupported provider: {provider}. Supported providers: 'openai', 'huggingface'")
+        
+        self.embedding_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        
+        self.knowledge_graph = None
+        self.graph_retriever = None
         
         # Create cache directory if it doesn't exist
         os.makedirs(cache_dir, exist_ok=True)
@@ -54,6 +78,40 @@ class SensemakingAnswerGenerator:
         except Exception as e:
             print(f"Error loading knowledge graph: {e}")
             return False
+
+    def _create_chat_completion(self, messages: List[Dict], max_tokens: int = 1000, temperature: float = 0.3) -> str:
+        """
+        Create a chat completion using the configured provider
+        
+        Args:
+            messages: List of message dictionaries with 'role' and 'content' keys
+            max_tokens: Maximum number of tokens to generate
+            temperature: Temperature for generation
+            
+        Returns:
+            Generated text response
+        """
+        if self.provider == "openai":
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=messages,
+                max_tokens=max_tokens,
+                temperature=temperature
+            )
+            return response.choices[0].message.content.strip()
+        
+        elif self.provider == "huggingface":
+            # Use the HuggingFace InferenceClient chat completions API
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=messages,
+                max_tokens=max_tokens,
+                temperature=temperature
+            )
+            return response.choices[0].message.content.strip()
+        
+        else:
+            raise ValueError(f"Unsupported provider: {self.provider}")
 
     def generate_vanilla_answers(self, 
                                questions: List[Dict]) -> List[Dict]:
@@ -97,16 +155,13 @@ Question: {question}
 
 Provide a comprehensive, analytical answer that:
 1. Directly addresses the question
-2. Uses specific examples from the data when relevant
-3. Identifies patterns and relationships
-4. Provides actionable insights
-5. Maintains focus on aviation safety and maintenance
+2. Provides actionable insights
+3. Maintains focus on aviation safety and maintenance
 
 Answer:
 """
                 
-                response = self.client.chat.completions.create(
-                    model=self.model,
+                answer = self._create_chat_completion(
                     messages=[
                         {"role": "system", "content": "You are an expert aviation safety analyst with deep knowledge of maintenance practices, failure analysis, and safety recommendations."},
                         {"role": "user", "content": prompt}
@@ -114,8 +169,6 @@ Answer:
                     max_tokens=300 if question_type == 'actionable' else 1000,
                     temperature=0.3
                 )
-                
-                answer = response.choices[0].message.content.strip()
                 
                 answers.append({
                     'question_id': question_data.get('id', ''),
@@ -176,7 +229,7 @@ You are an expert aviation maintenance technician. Answer the following question
 
 Question: {question}
 
-Context from Aviation Maintenance Data:
+Context from Aviation Maintenance Records:
 {relevant_context}
 
 Provide a brief, specific answer that:
@@ -197,21 +250,19 @@ You are an expert aviation safety analyst. Answer the following question based o
 
 Question: {question}
 
-Context from Aviation Maintenance Data:
+Context from Aviation Maintenance Records:
 {relevant_context}
 
 Provide a comprehensive, analytical answer that:
 1. Directly addresses the question
-2. Uses specific examples from the data when relevant
-3. Identifies patterns and relationships
-4. Provides actionable insights
-5. Maintains focus on aviation safety and maintenance
+2. Uses specific information from the context when relevant
+3. Provides actionable insights
+4. Maintains focus on aviation safety and maintenance
 
 Answer:
 """
                 
-                response = self.client.chat.completions.create(
-                    model=self.model,
+                answer = self._create_chat_completion(
                     messages=[
                         {"role": "system", "content": "You are an expert aviation safety analyst with deep knowledge of maintenance practices, failure analysis, and safety recommendations."},
                         {"role": "user", "content": prompt}
@@ -219,8 +270,6 @@ Answer:
                     max_tokens=300 if question_type == 'actionable' else 1000,
                     temperature=0.3
                 )
-                
-                answer = response.choices[0].message.content.strip()
                 
                 answers.append({
                     'question_id': question_data.get('id', ''),
@@ -295,20 +344,20 @@ You are an expert aviation maintenance technician using graph-based knowledge re
 
 Question: {question}
 
-Graph-Based Knowledge Context:
+Knowledge Graph-Based Context:
 {graph_context}
 
-Community Insights:
+Knowledge Graph-Based Community Insights:
 {community_context}
 
-Supporting Data Context:
+Relevant Aviation Maintenance Records:
 {dataset_context}
 
 Provide a brief, specific answer that:
 1. States the exact maintenance action to take
 2. Is clear and actionable
 3. Follows standard aviation maintenance procedures, and only gives the action to take, not the reasoning or background information
-4. Uses relevant graph-based insights when applicable
+4. Uses relevant knowledge graph-based insights when applicable
 
 One example:
 Q: what should be done when: engine oil leak detected?
@@ -322,29 +371,27 @@ You are an expert aviation safety analyst using graph-based knowledge retrieval.
 
 Question: {question}
 
-Graph-Based Knowledge Context:
+Knowledge Graph-Based Context:
 {graph_context}
 
-Community Insights:
+Knowledge Graph-Based Community Insights:
 {community_context}
 
-Supporting Data Context:
+Relevant Aviation Maintenance Records:
 {dataset_context}
 
-Provide a comprehensive answer that:
-1. Leverages the graph-structured relationships and patterns
-2. Synthesizes information from multiple knowledge sources
-3. Identifies complex interactions and dependencies
-4. Provides evidence-based insights with graph provenance
-5. Offers strategic recommendations based on systemic understanding
+Provide a comprehensive, analytical answer that:
+1. Directly addresses the question
+2. Uses specific information from the context when relevant
+3. Provides actionable insights
+4. Maintains focus on aviation safety and maintenance
 
 Ensure your answer demonstrates the value of graph-based reasoning for this complex question.
 
 Answer:
 """
                 
-                response = self.client.chat.completions.create(
-                    model=self.model,
+                answer = self._create_chat_completion(
                     messages=[
                         {"role": "system", "content": "You are an expert aviation safety analyst specializing in graph-based knowledge analysis and systemic pattern recognition in maintenance data."},
                         {"role": "user", "content": prompt}
@@ -352,8 +399,6 @@ Answer:
                     max_tokens=300 if question_type == 'actionable' else 1200,
                     temperature=0.3
                 )
-                
-                answer = response.choices[0].message.content.strip()
                 
                 answers.append({
                     'question_id': question_data.get('id', ''),
@@ -432,8 +477,7 @@ Rate each answer on these dimensions (1-5 scale) and provide an overall assessme
 Analysis:
 """
                 
-                response = self.client.chat.completions.create(
-                    model=self.model,
+                analysis = self._create_chat_completion(
                     messages=[
                         {"role": "system", "content": "You are an expert evaluator of aviation safety analysis, skilled in assessing the quality and utility of analytical responses."},
                         {"role": "user", "content": prompt}
@@ -441,8 +485,6 @@ Analysis:
                     max_tokens=800,
                     temperature=0.2
                 )
-                
-                analysis = response.choices[0].message.content.strip()
                 
                 comparisons.append({
                     'question_id': question_id,
@@ -582,7 +624,8 @@ Analysis:
         
         try:
             # Generate question embedding
-            question_response = self.client.embeddings.create(
+            
+            question_response = self.embedding_client.embeddings.create(
                 model="text-embedding-3-small",
                 input=question,
                 encoding_format="float"
@@ -1168,7 +1211,8 @@ Analysis:
             return self.embedding_cache[cache_key]
         
         try:
-            response = self.client.embeddings.create(
+            openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+            response = self.embedding_client.embeddings.create(
                 model="text-embedding-3-small",
                 input=text,
                 encoding_format="float"

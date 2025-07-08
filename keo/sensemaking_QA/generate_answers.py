@@ -2,6 +2,18 @@
 """
 Generate RAG-based Answers for Aviation Maintenance Sensemaking Questions
 Uses both vanilla LLM and GraphRAG approaches with the knowledge graph
+
+Supports both OpenAI and HuggingFace providers for answer generation:
+- OpenAI: Uses OpenAI's GPT models (requires OPENAI_API_KEY)
+- HuggingFace: Uses HuggingFace's InferenceClient (requires HF_TOKEN)
+
+Usage examples:
+    # Using OpenAI (default)
+    python generate_answers.py --question-files questions.json --output-file answers.json
+
+    # Using HuggingFace with custom API provider
+    python generate_answers.py --question-files questions.json --output-file answers.json \
+        --provider huggingface --answer-model google/gemma-3-4b-it --API-provider featherless-ai
 """
 
 import os
@@ -14,7 +26,7 @@ from question_generator import SensemakingQuestionGenerator
 from answer_generator import SensemakingAnswerGenerator
 import random
 
-def generate_aviation_answers(question_files, output_file, sample_size=None, answer_model="gpt-4o-mini", kg_path="../kg/output/knowledge_graph.gml"):
+def generate_aviation_answers(question_files, output_file, sample_size=None, answer_model=None, kg_path="../kg/output/knowledge_graph.gml", provider="openai", API_provider="featherless-ai"):
     """Generate comprehensive answers for aviation maintenance questions using RAG"""
     
     print("=" * 70)
@@ -23,11 +35,28 @@ def generate_aviation_answers(question_files, output_file, sample_size=None, ans
     print(f"Started at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print()
     
-    # Verify OpenAI API key
-    openai_api_key = os.getenv("OPENAI_API_KEY")
-    if not openai_api_key:
-        raise ValueError("OPENAI_API_KEY environment variable not set")
-    print("✓ OpenAI API key verified")
+    # Set default model based on provider if not specified
+    if answer_model is None:
+        if provider == "openai":
+            answer_model = "gpt-4o-mini"
+        elif provider == "huggingface":
+            answer_model = "google/gemma-3-4b-it"
+    
+    # Verify API key based on provider
+    if provider == "openai":
+        openai_api_key = os.getenv("OPENAI_API_KEY")
+        if not openai_api_key:
+            raise ValueError("OPENAI_API_KEY environment variable not set")
+        api_key = openai_api_key
+        print("✓ OpenAI API key verified")
+    elif provider == "huggingface":
+        hf_token = os.getenv("HF_TOKEN")
+        if not hf_token:
+            raise ValueError("HF_TOKEN environment variable not set")
+        api_key = hf_token
+        print("✓ HuggingFace token verified")
+    else:
+        raise ValueError(f"Unsupported provider: {provider}. Supported providers: 'openai', 'huggingface'")
     
     # Data paths - using only question generation datasets (excludes KG files)
     data_paths = {
@@ -46,8 +75,10 @@ def generate_aviation_answers(question_files, output_file, sample_size=None, ans
     datasets = analyzer.datasets
     
     # Initialize answer generator
-    print("Initializing answer generator...")
-    answer_generator = SensemakingAnswerGenerator(openai_api_key, model=answer_model)
+    print(f"Initializing answer generator with provider: {provider}")
+    if provider == "huggingface":
+        print(f"Using HuggingFace API provider: {API_provider}")
+    answer_generator = SensemakingAnswerGenerator(api_key, model=answer_model, provider=provider, API_provider=API_provider)
     
     # Load knowledge graph
     print(f"Loading knowledge graph from: {kg_path}")
@@ -81,7 +112,7 @@ def generate_aviation_answers(question_files, output_file, sample_size=None, ans
         print("No existing questions found. Generating new questions...")
         analyzer.analyze_failure_patterns()  # Run basic analysis
         
-        question_generator = SensemakingQuestionGenerator(openai_api_key)
+        question_generator = SensemakingQuestionGenerator(api_key)
         
         # Generate action-specific questions (practical and fast)
         print("Generating action-specific questions...")
@@ -266,13 +297,23 @@ def main():
     )
     parser.add_argument(
         '--answer-model',
-        default="gpt-4o-mini",
-        help='OpenAI model to use for answer generation (default: gpt-4o-mini)'
+        help='Model to use for answer generation (default: gpt-4o-mini for OpenAI, google/gemma-3-4b-it for HuggingFace)'
     )
     parser.add_argument(
         '--kg-path',
         default="../kg/output/knowledge_graph.gml",
         help='Path to knowledge graph file (default: ../kg/output/knowledge_graph.gml)'
+    )
+    parser.add_argument(
+        '--provider',
+        default="openai",
+        choices=["openai", "huggingface"],
+        help='Provider for answer generation (default: openai)'
+    )
+    parser.add_argument(
+        '--API-provider',
+        default="featherless-ai",
+        help='API provider for HuggingFace InferenceClient (only used when provider=huggingface, default: featherless-ai)'
     )
     
     args = parser.parse_args()
@@ -283,7 +324,9 @@ def main():
             output_file=args.output_file,
             sample_size=args.sample_size,
             answer_model=args.answer_model,
-            kg_path=args.kg_path
+            kg_path=args.kg_path,
+            provider=args.provider,
+            API_provider=args.API_provider
         )
         print("\n✅ Answer generation completed successfully!")
     except Exception as e:

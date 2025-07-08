@@ -1,0 +1,150 @@
+{
+  "vanilla_global": {
+    "global_questions_evaluated": 3,
+    "global_metrics": {
+      "global_perspective": 4.0,
+      "theme_identification": 4.666666666666667,
+      "synthesis_quality": 3.6666666666666665,
+      "strategic_value": 4.666666666666667,
+      "pattern_recognition": 4.0,
+      "total_evaluated": 3
+    },
+    "individual_evaluations": [
+      {
+        "question_id": "global_004",
+        "global_metrics": {
+          "global_perspective": 4.0,
+          "theme_identification": 4.0,
+          "synthesis_quality": 3.0,
+          "strategic_value": 4.0,
+          "pattern_recognition": 3.0
+        },
+        "evaluation_text": "Global Perspective: 4 - The answer provides a broad overview of predictive maintenance (PdM) strategies across different regions, highlighting variations in implementation and effectiveness. It acknowledges regional differences in regulatory environments, technological infrastructure, and operational challenges, which are crucial for understanding global patterns.\n\nTheme Identification: 4 - Major themes such as regulatory influence, technological infrastructure, and cultural factors are clearly identified. The answer effectively categorizes regions by their specific challenges and advancements in PdM, which helps in understanding the overarching themes affecting PdM effectiveness globally.\n\nSynthesis Quality: 3 - While the answer integrates information from various regions and operational contexts, it could benefit from deeper integration of specific examples or case studies to enhance the synthesis. The discussion is somewhat segmented by region, which could be more cohesively tied together to illustrate global trends.\n\nStrategic Value: 4 - The answer provides actionable insights and recommendations, such as standardizing data definitions and addressing regional challenges. These insights are valuable for high-level decision-making, particularly for stakeholders looking to implement or improve PdM strategies across different regions.\n\nPattern Recognition: 3 - The answer identifies some complex relationships, such as the impact of regulatory environments and technological maturity on PdM effectiveness. However, it could delve deeper into interdependencies, such as how cultural factors and labor relations interact with technological adoption.\n\nGlobal Sensemaking Assessment: The answer demonstrates a solid capability for global sensemaking, effectively identifying and analyzing regional differences in PdM strategies. It provides valuable insights for decision-makers but could enhance its synthesis and pattern recognition by integrating more specific examples and exploring interdependencies in greater depth. Overall, it successfully addresses the global sensemaking question but has room for improvement in certain areas.",
+        "evaluator_model": "gpt-4o"
+      },
+      {
+        "question_id": "global_014",
+        "global_metrics": {
+          "global_perspective": 4.0,
+          "theme_identification": 5.0,
+          "synthesis_quality": 4.0,
+          "strategic_value": 5.0,
+          "pattern_recognition": 5.0
+        },
+        "evaluation_text": "Global Perspective: 4 - The answer effectively highlights the interconnected nature of various maintenance systems and their impact on aircraft safety, demonstrating an understanding of dataset-wide patterns. However, it could benefit from more explicit references to specific data sources or studies that support these observations.\n\nTheme Identification: 5 - Major themes such as mechanical systems, structural integrity, avionics, human factors, and systemic relationships are clearly identified and well-articulated. The answer successfully categorizes and explains these themes in the context of aviation safety.\n\nSynthesis Quality: 4 - The answer synthesizes information from multiple areas of aviation maintenance, providing a comprehensive overview. It could be improved by integrating more specific examples or case studies that illustrate these systemic relationships in practice.\n\nStrategic Value: 5 - The answer offers actionable insights and recommendations that are valuable for high-level decision-making in aviation safety management. It emphasizes the importance of proactive maintenance strategies and systemic analysis, which are crucial for enhancing safety.\n\nPattern Recognition: 5 - Complex relationships and dependencies between different maintenance issues are well-recognized and explained. The answer effectively illustrates how minor issues can escalate into significant safety concerns through systemic failures.\n\nGlobal Sensemaking Assessment: The answer successfully demonstrates global sensemaking capability by providing a holistic view of aviation maintenance issues and their systemic relationships. It identifies key themes, synthesizes information across multiple domains, and offers strategic insights that are valuable for improving aircraft safety. Overall, it effectively addresses the complexities of the topic and provides a comprehensive understanding of the interconnected nature of maintenance systems.",
+        "evaluator_model": "gpt-4o"
+      },
+      {
+        "question_id": "global_010",
+        "global_metrics": {
+          "global_perspective": 4.0,
+          "theme_identification": 5.0,
+          "synthesis_quality": 4.0,
+          "strategic_value": 5.0,
+          "pattern_recognition": 4.0
+        },
+        "evaluation_text": "Global Perspective: 4 - The answer effectively covers a broad range of factors influencing aircraft annotation discrepancies, demonstrating an understanding of how maintenance issues impact aviation safety on a global scale. However, it could benefit from more explicit references to international standards or practices to enhance the global perspective.\n\nTheme Identification: 5 - Major themes such as incomplete work orders, missed inspections, improper parts management, and communication breakdowns are clearly identified. The answer also highlights systemic issues like deferred maintenance and human factors, which are critical to understanding the broader context.\n\nSynthesis Quality: 4 - The answer synthesizes information from various aspects of aviation maintenance, including procedural, human, and technological factors. It integrates these elements into a cohesive narrative, though it could improve by incorporating more diverse data sources or case studies to strengthen the synthesis.\n\nStrategic Value: 5 - The answer provides actionable insights and recommendations that are valuable for high-level decision-making. It suggests systemic improvements like enhanced root cause analysis, standardized procedures, and digital maintenance tracking systems, which are crucial for strategic planning and implementation.\n\nPattern Recognition: 4 - The answer identifies complex relationships and dependencies, such as the link between poor communication and annotation discrepancies, and the impact of inadequate tooling. It could further enhance pattern recognition by exploring more nuanced interactions between these factors and their cumulative effects on safety.\n\nGlobal Sensemaking Assessment: The answer demonstrates a strong global sensemaking capability by effectively identifying and synthesizing key themes and patterns related to aviation maintenance and safety. It provides strategic insights that are valuable for decision-makers, although it could be improved by incorporating a wider range of global data and examples. Overall, it is a well-rounded analysis that addresses the complexities of the issue.",
+        "evaluator_model": "gpt-4o"
+      }
+    ]
+  },
+  "textchunk_global": {
+    "global_questions_evaluated": 3,
+    "global_metrics": {
+      "global_perspective": 2.6666666666666665,
+      "theme_identification": 2.6666666666666665,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.6666666666666665,
+      "pattern_recognition": 2.3333333333333335,
+      "total_evaluated": 3
+    },
+    "individual_evaluations": [
+      {
+        "question_id": "global_004",
+        "global_metrics": {
+          "global_perspective": 3.0,
+          "theme_identification": 3.0,
+          "synthesis_quality": 2.0,
+          "strategic_value": 3.0,
+          "pattern_recognition": 2.0
+        },
+        "evaluation_text": "Global Perspective: 3 - The answer attempts to address global patterns by discussing regional differences and operational variations in predictive maintenance strategies. However, the analysis is limited by the sparse data and relies on assumptions rather than comprehensive evidence from a wide dataset.\n\nTheme Identification: 3 - Some major themes, such as regulatory environment, maintenance culture, and workforce skill, are identified. However, the themes are not deeply explored or supported by extensive data, which limits the depth of the analysis.\n\nSynthesis Quality: 2 - The synthesis of information is limited due to the reliance on a small and fragmented dataset. The answer does not effectively integrate multiple sources or datasets to provide a holistic view of the situation.\n\nStrategic Value: 3 - The answer provides some strategic insights, such as the need for root cause analysis and data standardization, which could be valuable for decision-making. However, the insights are somewhat generic and not strongly supported by data.\n\nPattern Recognition: 2 - The answer identifies some potential patterns, such as the frequency of maintenance runs and emergency situations, but it lacks a detailed exploration of complex relationships and dependencies due to the limited data.\n\nGlobal Sensemaking Assessment: The answer demonstrates a moderate level of global sensemaking capability. It identifies some relevant themes and provides strategic recommendations, but it is constrained by the limited dataset and lacks comprehensive synthesis and pattern recognition. To improve, the analysis would benefit from a more extensive dataset and a deeper exploration of the identified themes and patterns.",
+        "evaluator_model": "gpt-4o"
+      },
+      {
+        "question_id": "global_014",
+        "global_metrics": {
+          "global_perspective": 4.0,
+          "theme_identification": 4.0,
+          "synthesis_quality": 3.0,
+          "strategic_value": 4.0,
+          "pattern_recognition": 4.0
+        },
+        "evaluation_text": "Global Perspective: 4 - The answer effectively identifies dataset-wide patterns, such as systemic maintenance issues and their implications for aircraft safety. It connects various maintenance failures to broader systemic weaknesses, demonstrating a solid understanding of the interconnected nature of these issues.\n\nTheme Identification: 4 - Major themes, such as insufficient inspection procedures, pressure to expedite maintenance, and lack of diagnostic capability, are clearly identified. The answer highlights critical systemic relationships and their impact on safety, though it could benefit from a more explicit connection to broader industry trends.\n\nSynthesis Quality: 3 - The synthesis of information across multiple sources is adequate, but the answer could improve by integrating more diverse data points or perspectives to strengthen its conclusions. The focus is primarily on the provided data, with limited reference to external benchmarks or industry standards.\n\nStrategic Value: 4 - The answer provides actionable insights and recommendations that are valuable for high-level decision-making. It suggests specific policy changes and training enhancements that could mitigate identified risks, offering strategic guidance for improving maintenance processes and safety outcomes.\n\nPattern Recognition: 4 - The answer effectively identifies complex relationships and dependencies, such as the cascading effects of maintenance failures on aircraft safety. It recognizes the potential for component degradation and systemic weaknesses, demonstrating strong pattern recognition skills.\n\nGlobal Sensemaking Assessment: The answer demonstrates a good level of global sensemaking capability, effectively identifying systemic issues and providing strategic recommendations. While it could benefit from broader integration of external data and industry trends, it offers valuable insights into the systemic relationships affecting aircraft safety. Overall, it successfully addresses the global sensemaking question by synthesizing data to inform a holistic understanding of maintenance-related safety challenges.",
+        "evaluator_model": "gpt-4o"
+      },
+      {
+        "question_id": "global_010",
+        "global_metrics": {
+          "global_perspective": 1.0,
+          "theme_identification": 1.0,
+          "synthesis_quality": 1.0,
+          "strategic_value": 1.0,
+          "pattern_recognition": 1.0
+        },
+        "evaluation_text": "Global Perspective: 1 - The answer does not demonstrate any understanding of dataset-wide patterns as it fails to provide any content related to the question. The error message indicates a technical issue rather than an analysis of the data.\n\nTheme Identification: 1 - No themes or patterns are identified in the answer. The response is an error message, which does not address the question or provide any thematic insights.\n\nSynthesis Quality: 1 - There is no synthesis of information across multiple sources. The answer does not contain any analysis or integration of data, as it is merely an error message.\n\nStrategic Value: 1 - The answer provides no insights useful for high-level decision making. It does not offer any information or recommendations that could be used to improve systemic issues related to aircraft annotation discrepancies.\n\nPattern Recognition: 1 - The answer does not identify any complex relationships or dependencies. It lacks any analysis or recognition of patterns due to the absence of content.\n\nGlobal Sensemaking Assessment: The answer does not demonstrate global sensemaking capability. It fails to provide any analysis, insights, or synthesis related to the question about maintenance issues and aircraft annotation discrepancies. The response is purely a technical error message, indicating a failure to access or process the necessary data for analysis.",
+        "evaluator_model": "gpt-4o"
+      }
+    ]
+  },
+  "graphrag_global": {
+    "global_questions_evaluated": 3,
+    "global_metrics": {
+      "global_perspective": 3.0,
+      "theme_identification": 3.3333333333333335,
+      "synthesis_quality": 2.3333333333333335,
+      "strategic_value": 3.0,
+      "pattern_recognition": 3.3333333333333335,
+      "total_evaluated": 3
+    },
+    "individual_evaluations": [
+      {
+        "question_id": "global_004",
+        "global_metrics": {
+          "global_perspective": 2.0,
+          "theme_identification": 3.0,
+          "synthesis_quality": 2.0,
+          "strategic_value": 2.0,
+          "pattern_recognition": 2.0
+        },
+        "evaluation_text": "Global Perspective: 2 - The answer attempts to address global patterns by discussing regional variations and operational differences, but it lacks a comprehensive view of dataset-wide patterns. The analysis is limited by sparse data and does not effectively leverage the knowledge graph to provide a broad perspective on predictive maintenance strategies across different regions or airline operations.\n\nTheme Identification: 3 - Some themes, such as regional variations, operational differences, and potential systemic issues, are identified. However, the themes are not clearly articulated or fully developed, and the analysis does not convincingly connect these themes to the effectiveness of predictive maintenance strategies.\n\nSynthesis Quality: 2 - The synthesis of information is weak, as the answer primarily focuses on isolated events and lacks integration across multiple data sources. The narrative is fragmented, and the repetitive section on \"Maintenance records\" suggests a lack of coherence in synthesizing the available data.\n\nStrategic Value: 2 - The answer provides limited strategic insights for high-level decision-making. While it suggests areas for further investigation, such as expanding data collection and analyzing maintenance records, it does not offer actionable recommendations or a clear path forward for improving predictive maintenance strategies.\n\nPattern Recognition: 2 - The answer attempts to identify complex relationships, such as geographic influences and operational differences, but it falls short in recognizing and articulating these patterns effectively. The analysis lacks depth and fails to uncover meaningful dependencies or correlations that could inform predictive maintenance strategies.\n\nGlobal Sensemaking Assessment: The answer does not successfully demonstrate global sensemaking capability. It lacks a comprehensive understanding of dataset-wide patterns, fails to clearly identify major themes, and does not effectively synthesize information across multiple sources. The strategic value and pattern recognition are limited, resulting in an overall weak analysis of predictive maintenance effectiveness across different regions and airline operations.",
+        "evaluator_model": "gpt-4o"
+      },
+      {
+        "question_id": "global_014",
+        "global_metrics": {
+          "global_perspective": 4.0,
+          "theme_identification": 4.0,
+          "synthesis_quality": 3.0,
+          "strategic_value": 4.0,
+          "pattern_recognition": 5.0
+        },
+        "evaluation_text": "Global Perspective: 4 - The answer effectively uses a graph-based approach to highlight systemic relationships across the dataset, demonstrating an understanding of how maintenance issues can cascade through aircraft systems. However, it could benefit from a broader discussion of how these patterns compare across different datasets or contexts.\n\nTheme Identification: 4 - Major themes such as aircraft-component interdependence, maintenance and incident correlation, and the importance of operational context are clearly identified. The answer could be improved by explicitly linking these themes to broader industry trends or safety standards.\n\nSynthesis Quality: 3 - The answer synthesizes information from multiple sources, such as specific aircraft incidents and maintenance procedures, but it lacks a cohesive narrative that ties all these elements together into a unified understanding. More explicit connections between the identified themes would enhance the synthesis quality.\n\nStrategic Value: 4 - The insights provided, such as the need for improved diagnostic techniques and type-specific risk assessments, are valuable for high-level decision-making in aviation safety. However, the recommendations could be more actionable with specific examples or strategies for implementation.\n\nPattern Recognition: 5 - The answer excels in identifying complex relationships and dependencies, such as latent failure propagation and the impact of operational context on safety. The use of graph-based reasoning is particularly effective in uncovering these patterns.\n\nGlobal Sensemaking Assessment: The answer demonstrates a strong global sensemaking capability by effectively identifying and analyzing systemic relationships within the dataset. It provides valuable insights for improving aviation safety, though it could be enhanced by a more cohesive synthesis and broader contextualization. Overall, it is a well-rounded response that leverages advanced analytical techniques to inform strategic decision-making.",
+        "evaluator_model": "gpt-4o"
+      },
+      {
+        "question_id": "global_010",
+        "global_metrics": {
+          "global_perspective": 3.0,
+          "theme_identification": 3.0,
+          "synthesis_quality": 2.0,
+          "strategic_value": 3.0,
+          "pattern_recognition": 3.0
+        },
+        "evaluation_text": "Global Perspective: 3 - The answer attempts to address dataset-wide patterns by discussing how maintenance issues can lead to annotation discrepancies. However, it lacks a comprehensive view of the entire dataset and does not fully explore how these patterns manifest across different types of aircraft or maintenance scenarios.\n\nTheme Identification: 3 - The answer identifies some major themes, such as the impact of maintenance on annotation discrepancies and the need for systemic improvements. However, it could benefit from a clearer articulation of these themes and a more structured approach to identifying additional patterns.\n\nSynthesis Quality: 2 - The synthesis of information across multiple sources is limited. While the answer references specific examples, it does not effectively integrate these examples into a cohesive narrative that spans the entire dataset. The repetitive text at the end suggests a lack of thorough synthesis.\n\nStrategic Value: 3 - The answer provides some insights that could be useful for high-level decision-making, such as the suggestion for dynamic annotation generation and enhanced task interdependency mapping. However, the strategic recommendations are not fully developed or supported by detailed analysis.\n\nPattern Recognition: 3 - The answer recognizes some complex relationships, such as the cascading effects of maintenance issues on annotations. However, it does not delve deeply into the dependencies and interconnections that could provide a more nuanced understanding of the systemic issues.\n\nGlobal Sensemaking Assessment: The answer demonstrates a moderate level of global sensemaking capability. It identifies some relevant patterns and themes but lacks depth in its analysis and synthesis. To improve, the answer should provide a more comprehensive view of the dataset, better integrate examples into a cohesive narrative, and offer more detailed strategic insights.",
+        "evaluator_model": "gpt-4o"
+      }
+    ]
+  },
+  "timestamp": "20250708_180631"
+}

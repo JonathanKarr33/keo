@@ -1,0 +1,11 @@
+pandas
+networkx
+matplotlib
+scipy
+tqdm
+transformers
+torch
+accelerate
+torchvision
+openai
+huggingface_hub

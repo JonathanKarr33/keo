@@ -16,6 +16,12 @@ from dataclasses import dataclass
 import re
 from collections import Counter
 
+try:
+    from huggingface_hub import InferenceClient
+    HUGGINGFACE_AVAILABLE = True
+except ImportError:
+    HUGGINGFACE_AVAILABLE = False
+
 # NLP evaluation metrics imports
 try:
     from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
@@ -75,16 +81,31 @@ class GroundTruthEvaluation:
 
 
 class SensemakingEvaluator:
-    def __init__(self, api_key: str, model: str = "gpt-4o"):
+    def __init__(self, api_key: str, model: str = "gpt-4o", provider: str = "openai", API_provider: str = "auto"):
         """
         Initialize the evaluator with GraphRAG-style metrics
         
         Args:
-            api_key: OpenAI API key
+            api_key: API key (OpenAI or HuggingFace)
             model: Model to use for evaluation
+            provider: Provider to use ("openai" or "huggingface")
+            API_provider: API provider for HuggingFace InferenceClient (only used when provider="huggingface")
         """
-        self.client = OpenAI(api_key=api_key)
+        self.provider = provider
         self.model = model
+        
+        # Initialize the appropriate client based on provider
+        if provider == "openai":
+            self.client = OpenAI(api_key=api_key)
+        elif provider == "huggingface":
+            if not HUGGINGFACE_AVAILABLE:
+                raise ImportError("huggingface_hub is not installed. Please install it with: pip install huggingface_hub")
+            self.client = InferenceClient(
+                provider=API_provider,
+                api_key=api_key,
+            )
+        else:
+            raise ValueError(f"Unsupported provider: {provider}. Supported providers: 'openai', 'huggingface'")
         
         # GraphRAG evaluation criteria
         self.evaluation_criteria = {
@@ -106,6 +127,40 @@ class SensemakingEvaluator:
             }
         }
     
+    def _create_chat_completion(self, messages: List[Dict], max_tokens: int = 1000, temperature: float = 0.3) -> str:
+        """
+        Create a chat completion using the configured provider
+        
+        Args:
+            messages: List of message dictionaries with 'role' and 'content' keys
+            max_tokens: Maximum number of tokens to generate
+            temperature: Temperature for generation
+            
+        Returns:
+            Generated text response
+        """
+        if self.provider == "openai":
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=messages,
+                max_tokens=max_tokens,
+                temperature=temperature
+            )
+            return response.choices[0].message.content.strip()
+        
+        elif self.provider == "huggingface":
+            # Use the HuggingFace InferenceClient chat completions API
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=messages,
+                max_tokens=max_tokens,
+                temperature=temperature
+            )
+            return response.choices[0].message.content.strip()
+        
+        else:
+            raise ValueError(f"Unsupported provider: {self.provider}")
+
     def evaluate_questions(self, questions: List[Dict]) -> List[Dict]:
         """
         Evaluate the quality of generated sensemaking questions
@@ -404,8 +459,7 @@ Overall Assessment: [overall score 1-5] - [explanation]
 Suggestions: [any improvements needed]
 """
         
-        response = self.client.chat.completions.create(
-            model=self.model,
+        evaluation_text = self._create_chat_completion(
             messages=[
                 {"role": "system", "content": "You are an expert evaluator of research questions in aviation safety and maintenance, with deep knowledge of what makes effective sensemaking questions."},
                 {"role": "user", "content": prompt}
@@ -413,8 +467,6 @@ Suggestions: [any improvements needed]
             max_tokens=600,
             temperature=0.2
         )
-        
-        evaluation_text = response.choices[0].message.content.strip()
         
         # Parse scores (simplified parsing)
         scores = self._parse_question_scores(evaluation_text)
@@ -476,8 +528,7 @@ Strengths: [key strengths]
 Weaknesses: [areas for improvement]
 """
         
-        response = self.client.chat.completions.create(
-            model=self.model,
+        evaluation_text = self._create_chat_completion(
             messages=[
                 {"role": "system", "content": "You are an expert evaluator of analytical responses in aviation safety, using GraphRAG evaluation methodology to assess answer quality."},
                 {"role": "user", "content": prompt}
@@ -485,8 +536,6 @@ Weaknesses: [areas for improvement]
             max_tokens=800,
             temperature=0.2
         )
-        
-        evaluation_text = response.choices[0].message.content.strip()
         
         # Parse scores
         metrics = self._parse_answer_scores(evaluation_text)
@@ -532,8 +581,7 @@ Pattern Recognition: [score] - [explanation]
 Global Sensemaking Assessment: [overall evaluation of global capability]
 """
         
-        response = self.client.chat.completions.create(
-            model=self.model,
+        evaluation_text = self._create_chat_completion(
             messages=[
                 {"role": "system", "content": "You are an expert in evaluating global sensemaking capabilities in data analysis systems, particularly for aviation safety applications."},
                 {"role": "user", "content": prompt}
@@ -541,8 +589,6 @@ Global Sensemaking Assessment: [overall evaluation of global capability]
             max_tokens=700,
             temperature=0.2
         )
-        
-        evaluation_text = response.choices[0].message.content.strip()
         
         # Parse global sensemaking scores
         global_scores = self._parse_global_scores(evaluation_text)
@@ -740,8 +786,7 @@ Improvement Suggestions: [suggestions if any]
 """
         
         try:
-            response = self.client.chat.completions.create(
-                model=self.model,
+            evaluation_text = self._create_chat_completion(
                 messages=[
                     {"role": "system", "content": "You are an expert aviation maintenance evaluator with deep knowledge of proper maintenance procedures and safety standards."},
                     {"role": "user", "content": prompt}
@@ -749,8 +794,6 @@ Improvement Suggestions: [suggestions if any]
                 max_tokens=700,
                 temperature=0.2
             )
-            
-            evaluation_text = response.choices[0].message.content.strip()
             
             # Parse LLM evaluation scores
             llm_scores = self._parse_action_llm_scores(evaluation_text)
@@ -1060,8 +1103,7 @@ Overall Preference: [A/B/Tie] - [explanation]
 """
         
         try:
-            response = self.client.chat.completions.create(
-                model=self.model,
+            comparison_text = self._create_chat_completion(
                 messages=[
                     {"role": "system", "content": "You are an expert evaluator comparing analytical responses for aviation safety questions."},
                     {"role": "user", "content": prompt}
@@ -1069,8 +1111,6 @@ Overall Preference: [A/B/Tie] - [explanation]
                 max_tokens=500,
                 temperature=0.2
             )
-            
-            comparison_text = response.choices[0].message.content.strip()
             
             # Parse comparison results
             comparison_scores = self._parse_comparison_scores(comparison_text, method1_name, method2_name)

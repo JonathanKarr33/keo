@@ -2,6 +2,18 @@
 """
 Comprehensive Evaluation Script for Aviation Sensemaking QA
 Includes action-specific evaluation with ground truth metrics
+
+Supports both OpenAI and HuggingFace providers for evaluation:
+- OpenAI: Uses OpenAI's GPT models (requires OPENAI_API_KEY)
+- HuggingFace: Uses HuggingFace's InferenceClient (requires HF_TOKEN)
+
+Usage examples:
+    # Using OpenAI (default)
+    python run_evaluation.py --questions-file questions.json --answers-file answers.json --output-dir results
+
+    # Using HuggingFace
+    python run_evaluation.py --questions-file questions.json --answers-file answers.json --output-dir results \
+        --provider huggingface --evaluation-model google/gemma-3-4b-it
 """
 
 import os
@@ -11,7 +23,7 @@ import argparse
 from datetime import datetime
 from evaluator import SensemakingEvaluator
 
-def run_comprehensive_evaluation(questions_file, answers_file, output_dir, sample_size=None, evaluation_model="gpt-4o"):
+def run_comprehensive_evaluation(questions_file, answers_file, output_dir, evaluation_model=None, provider="openai", API_provider="featherless-ai"):
     """Run comprehensive evaluation including action-specific ground truth evaluation"""
     
     print("=" * 70)
@@ -20,14 +32,34 @@ def run_comprehensive_evaluation(questions_file, answers_file, output_dir, sampl
     print(f"Started at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print()
     
-    # Verify OpenAI API key
-    openai_api_key = os.getenv("OPENAI_API_KEY")
-    if not openai_api_key:
-        raise ValueError("OPENAI_API_KEY environment variable not set")
-    print("✓ OpenAI API key verified")
+    # Set default model based on provider if not specified
+    if evaluation_model is None:
+        if provider == "openai":
+            evaluation_model = "gpt-4o"
+        elif provider == "huggingface":
+            evaluation_model = "google/gemma-3-4b-it"
+    
+    # Verify API key based on provider
+    if provider == "openai":
+        openai_api_key = os.getenv("OPENAI_API_KEY")
+        if not openai_api_key:
+            raise ValueError("OPENAI_API_KEY environment variable not set")
+        api_key = openai_api_key
+        print("✓ OpenAI API key verified")
+    elif provider == "huggingface":
+        hf_token = os.getenv("HF_TOKEN")
+        if not hf_token:
+            raise ValueError("HF_TOKEN environment variable not set")
+        api_key = hf_token
+        print("✓ HuggingFace token verified")
+    else:
+        raise ValueError(f"Unsupported provider: {provider}. Supported providers: 'openai', 'huggingface'")
     
     # Initialize evaluator
-    evaluator = SensemakingEvaluator(openai_api_key, model=evaluation_model)
+    print(f"Initializing evaluator with provider: {provider}")
+    if provider == "huggingface":
+        print(f"Using HuggingFace API provider: {API_provider}")
+    evaluator = SensemakingEvaluator(api_key, model=evaluation_model, provider=provider, API_provider=API_provider)
     print("✓ Evaluator initialized")
     
     # Load questions and answers
@@ -105,15 +137,17 @@ def run_comprehensive_evaluation(questions_file, answers_file, output_dir, sampl
     print("STEP 2: QUESTION QUALITY EVALUATION")
     print("=" * 70)
     
-    # Evaluate question quality (sample)
-    if sample_size is None:
-        sample_questions = questions
-        print(f"Evaluating all {len(sample_questions)} questions")
-    else:
-        sample_questions = questions[:sample_size]
-        print(f"Evaluating sample of {len(sample_questions)} questions")
+    # Get unique question IDs from answers file
+    answered_question_ids = set()
+    for answer_result in answers_data:
+        answered_question_ids.add(answer_result['question_id'])
     
-    question_evaluations = evaluator.evaluate_questions(sample_questions)
+    # Filter questions to only those that have been answered
+    answered_questions = [q for q in questions if q.get('id') in answered_question_ids]
+    print(f"Found {len(answered_questions)} questions that have been answered out of {len(questions)} total questions")
+    
+    # Evaluate question quality for answered questions only
+    question_evaluations = evaluator.evaluate_questions(answered_questions)
     
     question_eval_file = f"{output_dir}/question_evaluations_{timestamp}.json"
     evaluator.save_evaluation_results(
@@ -126,11 +160,11 @@ def run_comprehensive_evaluation(questions_file, answers_file, output_dir, sampl
     print("STEP 3: ACTION-SPECIFIC EVALUATION WITH GROUND TRUTH")
     print("=" * 70)
     
-    # Filter action-specific questions
-    action_questions = [q for q in questions if q.get('category') == 'action_specific']
+    # Filter action-specific questions that have been answered
+    action_questions = [q for q in questions if q.get('category') == 'action_specific' and q.get('id') in answered_question_ids]
     
     if action_questions:
-        print(f"Found {len(action_questions)} action-specific questions with ground truth")
+        print(f"Found {len(action_questions)} answered action-specific questions with ground truth")
         
         # Evaluate action-specific answers with ground truth metrics - Three-way comparison
         print("Performing three-way comparison: Vanilla vs Text-chunk RAG vs GraphRAG")
@@ -215,36 +249,31 @@ def run_comprehensive_evaluation(questions_file, answers_file, output_dir, sampl
         print("No action-specific questions found")
     
     print("\n" + "=" * 70)
-    print("STEP 4: GLOBAL SENSEMAKING EVALUATION")
+    print("STEP 4: OTHER SENSEMAKING QUESTION EVALUATION")
     print("=" * 70)
     
-    # Filter global questions
-    global_questions = [q for q in questions if q.get('type') == 'global']
+    # Filter global questions that have been answered
+    global_questions = [q for q in questions if q.get('id') in answered_question_ids]
     
     if global_questions:
-        print(f"Found {len(global_questions)} global sensemaking questions")
+        print(f"Found {len(global_questions)} answered global sensemaking questions")
         
         # Evaluate global sensemaking capability for all three methods
-        if sample_size is None:
-            sample_global = global_questions
-            print(f"Evaluating all {len(sample_global)} global questions")
-        else:
-            sample_global = global_questions[:sample_size]
-            print(f"Evaluating sample of {len(sample_global)} global questions")
+        print(f"Evaluating all {len(global_questions)} global questions")
         
         # Evaluate Vanilla LLM
         vanilla_global = evaluator.evaluate_global_sensemaking_capability(
-            sample_global, vanilla_answers
+            global_questions, vanilla_answers
         )
         
         # Evaluate Text-chunk RAG
         textchunk_global = evaluator.evaluate_global_sensemaking_capability(
-            sample_global, textchunkrag_answers
+            global_questions, textchunkrag_answers
         )
         
         # Evaluate GraphRAG
         graphrag_global = evaluator.evaluate_global_sensemaking_capability(
-            sample_global, graphrag_answers
+            global_questions, graphrag_answers
         )
         
         # Combine global evaluation results
@@ -262,7 +291,7 @@ def run_comprehensive_evaluation(questions_file, answers_file, output_dir, sampl
             
             print(f"\nGlobal Sensemaking Results (3-way comparison):")
             print("=" * 60)
-            print(f"Questions Evaluated: {len(sample_global)}")
+            print(f"Questions Evaluated: {len(global_questions)}")
             print()
             
             # Compare metrics across all three methods
@@ -296,31 +325,26 @@ def run_comprehensive_evaluation(questions_file, answers_file, output_dir, sampl
     print("STEP 5: STANDARD METHOD COMPARISON")
     print("=" * 70)
     
-    # Standard comparison for non-action questions
+    # Standard comparison for non-action questions that have been answered
     non_action_questions = [q for q in questions 
-                           if q.get('category') != 'action_specific' and q.get('type') != 'global']
+                           if q.get('category') != 'action_specific' and q.get('type') != 'global' and q.get('question_id') in answered_question_ids]
     
     if non_action_questions:
-        if sample_size is None:
-            sample_standard = non_action_questions
-            print(f"Comparing methods on all {len(sample_standard)} standard questions")
-        else:
-            sample_standard = non_action_questions[:sample_size]
-            print(f"Comparing methods on sample of {len(sample_standard)} standard questions")
+        print(f"Comparing methods on all {len(non_action_questions)} answered standard questions")
         
         # Three-way standard comparison
         vanilla_vs_textchunk_std = evaluator.compare_answer_methods(
-            vanilla_answers, textchunkrag_answers, sample_standard,
+            vanilla_answers, textchunkrag_answers, non_action_questions,
             "vanilla", "textchunkrag"
         )
         
         vanilla_vs_graphrag_std = evaluator.compare_answer_methods(
-            vanilla_answers, graphrag_answers, sample_standard,
+            vanilla_answers, graphrag_answers, non_action_questions,
             "vanilla", "graphrag"
         )
         
         textchunk_vs_graphrag_std = evaluator.compare_answer_methods(
-            textchunkrag_answers, graphrag_answers, sample_standard,
+            textchunkrag_answers, graphrag_answers, non_action_questions,
             "textchunkrag", "graphrag"
         )
         
@@ -329,7 +353,7 @@ def run_comprehensive_evaluation(questions_file, answers_file, output_dir, sampl
             'vanilla_vs_graphrag': vanilla_vs_graphrag_std,
             'textchunk_vs_graphrag': textchunk_vs_graphrag_std,
             'timestamp': timestamp,
-            'questions_evaluated': len(sample_standard)
+            'questions_evaluated': len(non_action_questions)
         }
         
         standard_eval_file = f"{output_dir}/standard_method_comparison_{timestamp}.json"
@@ -338,7 +362,7 @@ def run_comprehensive_evaluation(questions_file, answers_file, output_dir, sampl
         
         print("\nStandard Evaluation Summary:")
         print("=" * 50)
-        print(f"Questions Evaluated: {len(sample_standard)}")
+        print(f"Questions Evaluated: {len(non_action_questions)}")
         print("\nPairwise Standard Comparisons:")
         print(f"Vanilla vs TextChunk: {vanilla_vs_textchunk_std.get('evaluation_summary', 'N/A')}")
         print(f"Vanilla vs GraphRAG: {vanilla_vs_graphrag_std.get('evaluation_summary', 'N/A')}")
@@ -388,14 +412,19 @@ def main():
         help='Output directory for evaluation results. Required.'
     )
     parser.add_argument(
-        '--sample-size',
-        type=int,
-        help='Number of questions to sample for evaluation. If not provided, evaluates all questions.'
+        '--evaluation-model',
+        help='Model to use for evaluation (default: gpt-4o for OpenAI, google/gemma-3-4b-it for HuggingFace)'
     )
     parser.add_argument(
-        '--evaluation-model',
-        default="gpt-4o",
-        help='OpenAI model to use for evaluation (default: gpt-4o)'
+        '--provider',
+        default="openai",
+        choices=["openai", "huggingface"],
+        help='Provider for evaluation (default: openai)'
+    )
+    parser.add_argument(
+        '--API-provider',
+        default="featherless-ai",
+        help='API provider for HuggingFace InferenceClient (only used when provider=huggingface, default: featherless-ai)'
     )
     
     args = parser.parse_args()
@@ -405,8 +434,9 @@ def main():
             questions_file=args.questions_file,
             answers_file=args.answers_file,
             output_dir=args.output_dir,
-            sample_size=args.sample_size,
-            evaluation_model=args.evaluation_model
+            evaluation_model=args.evaluation_model,
+            provider=args.provider,
+            API_provider=args.API_provider
         )
         print("\n✅ Evaluation completed successfully!")
     except Exception as e:
