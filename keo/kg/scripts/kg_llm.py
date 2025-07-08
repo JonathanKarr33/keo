@@ -182,7 +182,7 @@ def build_kg(input_csv, model, subset=None, start=0, output_prefix='../output/kg
 # CONFIGURATION SECTION
 # =====================
 input_csv = 'output/all_kg_llm_triplets_gemma3_phi4mini.csv'  # Path to the LLM triplet CSV
-model = 'phi4mini_instruct'  # Model shortname (e.g., 'gemma3_4b_it', 'phi4mini_instruct')
+model = 'gemma3_4b_it'  # Model shortname (e.g., 'gemma3_4b_it', 'phi4mini_instruct')
 subset = 500  # Number of rows to use (None for all, or e.g., 100)
 start = 0  # Row index to start from (0 means start at the first row)
 output_prefix = 'output/kg_llm'  # Prefix for output files (subfolder for each model will be created)
