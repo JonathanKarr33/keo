@@ -3,6 +3,8 @@ import re
 from collections import Counter
 import argparse
 from difflib import SequenceMatcher
+import os
+import pandas as pd
 
 def parse_triplets(triplet_string):
     """Parse triplet string into list of (entity1, relation, entity2) tuples"""
@@ -87,7 +89,6 @@ def compute_soft_f1(pred, gold):
 
 def compare_annotations(model_output_file):
     """Compare strict vs loose gold standards and model outputs using clean triplets columns"""
-    import os
     os.makedirs('output', exist_ok=True)
     # Load data
     strict_gs = pd.read_csv('output/re_gs_strict.csv')
@@ -161,6 +162,30 @@ def compare_annotations(model_output_file):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Compare gold standard and model triplet outputs.")
-    parser.add_argument('--model_output', type=str, default='output/100_kg_llm_triplets_gemma3_phi4mini.csv', help='Model output CSV file to compare (default: clean 100-row LLM triplets)')
+    parser.add_argument('--model_output', type=str, default=None, help='Model output CSV file to compare (default: compare all available: gemma3, phi4mini, gpt4o)')
     args = parser.parse_args()
-    compare_annotations(args.model_output) 
+
+    # List of default files to compare
+    default_files = [
+        ('gemma3_phi4mini', 'output/100_kg_llm_triplets_gemma3_phi4mini.csv'),
+        ('gpt4o', 'output/100_kg_llm_triplets_gpt4o.csv'),
+    ]
+    if args.model_output:
+        compare_annotations(args.model_output)
+    else:
+        all_stats = []
+        for label, file in default_files:
+            if os.path.exists(file):
+                print(f"Comparing: {file}")
+                compare_annotations(file)
+                stats = pd.read_csv('output/compare_gs_detailed_stats.csv')
+                stats['source_file'] = file
+                all_stats.append(stats)
+            else:
+                print(f"File not found: {file} (skipping)")
+        if all_stats:
+            combined = pd.concat(all_stats, ignore_index=True)
+            combined.to_csv('output/compare_gs_detailed_stats.csv', index=False)
+            print('\nDetailed stats saved to output/compare_gs_detailed_stats.csv')
+        else:
+            print('No model output files found to compare.') 

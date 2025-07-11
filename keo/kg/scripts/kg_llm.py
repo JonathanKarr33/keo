@@ -2,6 +2,12 @@ import pandas as pd
 import networkx as nx
 import os
 import matplotlib.pyplot as plt
+import openai
+from openai import OpenAI
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv(os.path.join(os.path.dirname(__file__), '..', '.env'))
 
 # Parse triplet string into tuples (entity1, relation, entity2)
 def parse_triplets(triplet_string):
@@ -19,13 +25,18 @@ def parse_triplets(triplet_string):
 def build_kg(input_csv, model, subset=None, start=0, output_prefix='../output/kg_llm', n_gold_standard_matched=None):
     """
     input_csv: path to the LLM triplet CSV (must have c5 column)
-    model: model shortname (e.g., 'gemma3_4b_it')
+    model: model shortname (e.g., 'gemma3_4b_it', 'gpt4o')
     subset: number of rows to use (None for all)
     start: row index to start from (0 means start at the first row)
     output_prefix: prefix for output files
     n_gold_standard_matched: if set, use only this many rows that match the gold standard (by c5)
     """
-    col = f"{model}_triplets_clean"
+    # Handle GPT-4o model differently
+    if model == 'gpt4o':
+        col = f"{model}_triplets_clean"
+    else:
+        col = f"{model}_triplets_clean"
+    
     df = pd.read_csv(input_csv)
 
     original_total_rows = len(df)  # Save before filtering
@@ -75,20 +86,6 @@ def build_kg(input_csv, model, subset=None, start=0, output_prefix='../output/kg
         gs_folder = f"total{filtered_total_rows}"
     model_folder = os.path.join(output_prefix, gs_folder, model)
     os.makedirs(model_folder, exist_ok=True)
-
-    # Write debug file and matched/unmatched c5 if gold standard matching
-    #if n_gold_standard_matched is not None:
-    #    debug_rows = [
-    #        {'c5': row['c5'], 'c119': row['c119'], 'match': row['is_gs']} for _, row in df.iterrows()
-    #    ]
-    #    debug_path = os.path.join(model_folder, 'llm_gs_matching_debug.csv')
-    #    pd.DataFrame(debug_rows).to_csv(debug_path, index=False)
-    #    with open(os.path.join(model_folder, 'matched_c5.txt'), 'w') as f:
-    #        for line in matched_c5:
-    #            f.write(str(line) + '\n')
-    #    with open(os.path.join(model_folder, 'unmatched_c5.txt'), 'w') as f:
-    #        for line in unmatched_c5:
-    #            f.write(str(line) + '\n')
 
     # Build the knowledge graph
     G = nx.DiGraph()
@@ -181,14 +178,21 @@ def build_kg(input_csv, model, subset=None, start=0, output_prefix='../output/kg
 # =====================
 # CONFIGURATION SECTION
 # =====================
-input_csv = 'output/all_kg_llm_triplets_gemma3_phi4mini.csv'  # Path to the LLM triplet CSV
-model = 'gemma3_4b_it'  # Model shortname (e.g., 'gemma3_4b_it', 'phi4mini_instruct')
-subset = 500  # Number of rows to use (None for all, or e.g., 100)
+input_csv = 'output/100_kg_llm_triplets_gpt4o.csv'  # Path to the LLM triplet CSV
+model = 'gpt4o'  # Model shortname (e.g., 'gemma3_4b_it', 'phi4mini_instruct', 'gpt4o')
+subset = 10  # Number of rows to use (None for all, or e.g., 100)
 start = 0  # Row index to start from (0 means start at the first row)
 output_prefix = 'output/kg_llm'  # Prefix for output files (subfolder for each model will be created)
-n_gold_standard_matched = 100  # Set to an integer to use only that many rows that match the gold standard (None-100)
+n_gold_standard_matched = 10  # Set to an integer to use only that many rows that match the gold standard (None-100)
 
 if __name__ == "__main__":
+    # Check for GPT-4o model and verify OpenAI API key
+    if model == 'gpt4o':
+        openai_api_key = os.getenv("OPENAI_API_KEY")
+        if not openai_api_key:
+            raise ValueError("OPENAI_API_KEY environment variable not set. Please set it with your OpenAI API key.")
+        print("✓ OpenAI API key verified for GPT-4o")
+    
     os.makedirs(output_prefix, exist_ok=True)
     build_kg(input_csv, model, subset, start, output_prefix, n_gold_standard_matched)
     print("\n=== c5-based matching complete ===")

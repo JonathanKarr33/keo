@@ -1,0 +1,5 @@
+Rows matched to gold standard: 10
+Unique GS matches in filtered LLM: 10
+Total rows used for KG: 10
+Number of nodes in KG: 35
+Number of edges in KG: 22

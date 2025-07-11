@@ -5,7 +5,6 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline, AutoProc
 import torch
 import argparse
 import re
-import json
 import warnings
 
 try:
@@ -174,13 +173,50 @@ def generate_triplets(prompt, tokenizer_or_processor, model, shortname, max_new_
         triplet_text = extract_triplets_only(triplet_text)
         return triplet_text
 
+# --- GPT-4o integration ---
+def generate_triplets_with_gpt4o(text, client, max_tokens=256):
+    prompt = PROMPT_TEMPLATE.format(text=text)
+    try:
+        response = client.chat.completions.create(
+            model="gpt-4o",
+            messages=[
+                {"role": "system", "content": "You are a helpful assistant that extracts knowledge graph triplets from text."},
+                {"role": "user", "content": prompt}
+            ],
+            max_tokens=max_tokens,
+            temperature=0.1
+        )
+        response_text = response.choices[0].message.content.strip()
+        triplets = extract_triplets_only(response_text)
+        return triplets
+    except Exception as e:
+        print(f"Error generating triplets: {str(e)}")
+        return ""
+# --- end GPT-4o integration ---
+
 def main():
     parser = argparse.ArgumentParser(description="Extract triplets using selected LLMs.")
-    parser.add_argument('--size', choices=['small', 'large'], default='small', help='Model size set to use: small (default) or large')
-    parser.add_argument('--all', action='store_true', help='If set, process all rows from the JSON file; otherwise, use the default 100-row CSV')
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument('--size', choices=['small', 'large'], default='small', help='Model size set to use: small (default) or large')
+    group.add_argument('--gpt4o', action='store_true', help='Use OpenAI GPT-4o API for triplet extraction')
+    parser.add_argument('--gpt4o-test-n', nargs='?', type=int, default=None, help='For --gpt4o: number of rows to process. If omitted, defaults to 100. If flag is present with no value, defaults to 10. If a value is given, uses that value. Cannot be used with --all.')
+    parser.add_argument('--all', action='store_true', help='If set, process all rows from the CSV file; otherwise, use the default 100-row CSV')
     args = parser.parse_args()
 
-    if args.size == 'small':
+    if args.gpt4o:
+        # Only import openai/dotenv if needed
+        import importlib
+        openai = importlib.import_module('openai')
+        dotenv = importlib.import_module('dotenv')
+        os_path = os.path
+        dotenv.load_dotenv(os_path.join(os_path.dirname(os_path.dirname(__file__)), '.env'))
+        openai_api_key = os.getenv("OPENAI_API_KEY")
+        if not openai_api_key:
+            raise ValueError("OPENAI_API_KEY environment variable not set. Please create a .env file in the kg directory with your OpenAI API key.")
+        print("✓ OpenAI API key verified")
+        client = openai.OpenAI(api_key=openai_api_key)
+        output_csv = "output/all_kg_llm_triplets_gpt4o.csv" if args.all else "output/100_kg_llm_triplets_gpt4o.csv"
+    elif args.size == 'small':
         models = SMALL_MODELS
         output_csv = "output/all_kg_llm_triplets_gemma3_phi4mini.csv" if args.all else "output/100_kg_llm_triplets_gemma3_phi4mini.csv"
     else:
@@ -193,89 +229,119 @@ def main():
     else:
         input_file = "../../OMIn_dataset/data/FAA_data/FAA_sample_100.csv"
 
-    # Load models
-    model_objs = {}
-    for shortname, modelname in models:
-        print(f"Loading {modelname}...")
-        model_objs[shortname] = load_model_and_tokenizer(modelname, shortname)
 
-    # Read input CSV or JSON
     rows = []
-    if input_file.endswith('.json'):
-        with open(input_file, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-        for key, value in data.items():
-            # Extract c5 from key (format: "faa/index_c5")
-            if '_' in key:
-                c5 = key.split('_')[-1]
+    with open(input_file, newline='', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            if 'c5' in row:
+                c5_value = row['c5']
             else:
-                c5 = key  # fallback
-                
-            # Get text from value
-            if isinstance(value, list) and value and isinstance(value[0], str):
-                text = value[0].upper()
-            else:
-                text = str(value).upper()
-                
-            rows.append({'c5': c5, 'c119': text})
-    else:
-        with open(input_file, newline='', encoding='utf-8') as f:
-            reader = csv.DictReader(f)
-            for row in reader:
-                # Always ensure we have c5 column - extract from existing or create new
-                if 'c5' in row:
-                    # Use existing c5 value
-                    c5_value = row['c5']
+                c5_col = None
+                for col in row.keys():
+                    if 'c5' in col.lower():
+                        c5_col = col
+                        break
+                if c5_col:
+                    c5_value = row[c5_col]
                 else:
-                    # Try to find c5 in other column names
-                    c5_col = None
-                    for col in row.keys():
-                        if 'c5' in col.lower():
-                            c5_col = col
-                            break
-                    if c5_col:
-                        c5_value = row[c5_col]
-                    else:
-                        # Create a dummy c5 column if not found
-                        c5_value = f"dummy_{len(rows)}"
-                
-                # Always set c5 in the row
-                row['c5'] = c5_value
-                
-                if 'c119' in row:
-                    row['c119'] = row['c119'].upper()
-                rows.append(row)
-
-    # Prepare output
-    fieldnames = ["c5", "c119"] + [f"{shortname}_triplets" for shortname, _ in models] + [f"{shortname}_triplets_clean" for shortname, _ in models]
-    with open(output_csv, 'w', newline='', encoding='utf-8') as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
-        for row in tqdm(rows, desc="Processing rows"):
-            # For CSV: use c119; for JSON: use the first value
+                    c5_value = f"dummy_{len(rows)}"
+            row['c5'] = c5_value
             if 'c119' in row:
-                text = row['c119']
-            else:
-                # For JSON, get the first value
-                text = next(iter(row.values()))
-            prompt = PROMPT_TEMPLATE.format(text=text)
-            triplet_outputs = {}
-            for shortname, _ in models:
-                tokenizer_or_processor, model = model_objs[shortname]
-                raw_output = generate_triplets(prompt, tokenizer_or_processor, model, shortname)
-                triplet_outputs[f"{shortname}_triplets"] = raw_output
-                triplet_outputs[f"{shortname}_triplets_clean"] = extract_triplets_only(raw_output)
-            writer.writerow({
-                "c5": row['c5'],  # Always use the c5 value we ensured exists
-                "c119": text,
-                **triplet_outputs
-            })
-            f.flush()  # Ensure the file is saved after each row
+                row['c119'] = row['c119'].upper()
+            rows.append(row)
+
+    # Determine number of rows for GPT-4o
+    if args.gpt4o:
+        if args.all and args.gpt4o_test_n is not None:
+            print("Error: --gpt4o-test-n cannot be used with --all. If you want to process all rows, use only --gpt4o --all.")
+            exit(1)
+        if args.all:
+            gpt4o_n = None  # None means all rows
+        elif args.gpt4o_test_n is None:
+            gpt4o_n = 100
+        elif args.gpt4o_test_n is not None and not isinstance(args.gpt4o_test_n, int):
+            gpt4o_n = 10
+        else:
+            gpt4o_n = args.gpt4o_test_n
+        fieldnames = ["c5", "c119", "gpt4o_triplets", "gpt4o_triplets_clean"]
+        total_prompt_tokens = 0
+        total_completion_tokens = 0
+        with open(output_csv, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            if gpt4o_n is not None:
+                rows = rows[:gpt4o_n]
+            for row in tqdm(rows, desc=f"Processing rows (gpt4o-test-n={gpt4o_n})"):
+                text = row['c119'] if 'c119' in row else next(iter(row.values()))
+                # Call the API and get usage
+                try:
+                    response = client.chat.completions.create(
+                        model="gpt-4o",
+                        messages=[
+                            {"role": "system", "content": "You are a helpful assistant that extracts knowledge graph triplets from text."},
+                            {"role": "user", "content": PROMPT_TEMPLATE.format(text=text)}
+                        ],
+                        max_tokens=256,
+                        temperature=0.1
+                    )
+                    response_text = response.choices[0].message.content.strip()
+                    triplets = extract_triplets_only(response_text)
+                    usage = getattr(response, 'usage', None)
+                    if usage:
+                        total_prompt_tokens += usage.prompt_tokens
+                        total_completion_tokens += usage.completion_tokens
+                except Exception as e:
+                    print(f"Error generating triplets: {str(e)}")
+                    triplets = ""
+                writer.writerow({
+                    "c5": row['c5'],
+                    "c119": text,
+                    "gpt4o_triplets": triplets,
+                    "gpt4o_triplets_clean": triplets
+                })
+                f.flush()
+        # Pricing as of July 2024: $5/million input, $15/million output tokens
+        input_cost = total_prompt_tokens * 0.000005
+        output_cost = total_completion_tokens * 0.000015
+        total_cost = input_cost + output_cost
+        n_rows = gpt4o_n if gpt4o_n is not None else len(rows)
+        print(f"\n--- GPT-4o Cost Estimation ({n_rows} rows) ---")
+        print(f"Total prompt tokens: {total_prompt_tokens}")
+        print(f"Total completion tokens: {total_completion_tokens}")
+        print(f"Estimated input cost: ${input_cost:.4f}")
+        print(f"Estimated output cost: ${output_cost:.4f}")
+        print(f"Estimated total cost: ${total_cost:.4f}")
+    else:
+        # Load models
+        model_objs = {}
+        for shortname, modelname in models:
+            print(f"Loading {modelname}...")
+            model_objs[shortname] = load_model_and_tokenizer(modelname, shortname)
+        fieldnames = ["c5", "c119"] + [f"{shortname}_triplets" for shortname, _ in models] + [f"{shortname}_triplets_clean" for shortname, _ in models]
+        with open(output_csv, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            for row in tqdm(rows, desc="Processing rows"):
+                text = row['c119'] if 'c119' in row else next(iter(row.values()))
+                prompt = PROMPT_TEMPLATE.format(text=text)
+                triplet_outputs = {}
+                for shortname, _ in models:
+                    tokenizer_or_processor, model = model_objs[shortname]
+                    raw_output = generate_triplets(prompt, tokenizer_or_processor, model, shortname)
+                    triplet_outputs[f"{shortname}_triplets"] = raw_output
+                    triplet_outputs[f"{shortname}_triplets_clean"] = extract_triplets_only(raw_output)
+                writer.writerow({
+                    "c5": row['c5'],
+                    "c119": text,
+                    **triplet_outputs
+                })
+                f.flush()
 
 if __name__ == "__main__":
     """
     Usage:
-      python generate_kg_triplets.py [--size small|large] [--all]
+      python generate_kg_triplets.py [--size small|large|--gpt4o] [--all] [--gpt4o-test-n [N]]
 
     Options:
       --size small   Use small models (default):
@@ -285,7 +351,13 @@ if __name__ == "__main__":
                        - Gemma 12B (google/gemma-3-12b-it)
                        - Phi 12B (microsoft/phi-4)
                        - Mistral-Small-Instruct-2409 (mistralai/Mistral-Small-Instruct-2409)
-      --all         Process all rows from the JSON file (../../OMIn_dataset/data/FAA_data/faa.json) instead of the default 100-row CSV (../../OMIn_dataset/data/FAA_data/FAA_sample_100.csv)
+      --gpt4o        Use OpenAI GPT-4o API for triplet extraction
+      --gpt4o-test-n [N]  For --gpt4o: number of rows to process. If omitted, defaults to 100. If flag is present with no value, defaults to 10. If a value is given, uses that value. Cannot be used with --all.
+      --all          Process all rows from the full CSV file (../../OMIn_dataset/data/FAA_data/Maintenance_Text_data_nona.csv) instead of the default 100-row CSV (../../OMIn_dataset/data/FAA_data/FAA_sample_100.csv). If used with --gpt4o, processes all rows. Cannot be combined with --gpt4o-test-n.
+
+    Input:
+      - Only CSV files are supported as input.
+      - The input CSV must have a 'c5' column (document identifier) and a 'c119' column (input text).
 
     Output Format:
       The output CSV will include the following columns:
@@ -297,6 +369,8 @@ if __name__ == "__main__":
     Notes:
       - Output CSV columns will match the models used.
       - Large models require significant GPU memory. If you encounter OOM errors, run each model separately and merge results.
-      - c5 column is automatically extracted from JSON keys or CSV columns.
+      - c5 column is automatically extracted from CSV columns.
+      - Only CSV input is supported (JSON input is no longer supported).
+      - For --gpt4o: If --all is provided, all rows are processed. If --gpt4o-test-n is provided, that number of rows is processed. If neither is provided, 100 rows are processed by default. --all and --gpt4o-test-n cannot be used together.
     """
     main() 
