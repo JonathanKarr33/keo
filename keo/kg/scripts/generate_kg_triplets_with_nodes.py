@@ -18,6 +18,10 @@ except ImportError:
     AutoProcessor = None
     Gemma3ForConditionalGeneration = None
 
+#Allow to recompile for models
+import torch
+    torch._dynamo.config.recompile_limit = float('inf')
+
 # --- CONFIG ---
 GS_CSV = "../../OMIn_dataset/data/FAA_data/FAA_sample_100.csv"
 NON_GS_CSV = "../../OMIn_dataset/data/FAA_data/Maintenance_Text_data_nona.csv"
