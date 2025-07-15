@@ -21,7 +21,6 @@ except ImportError:
 # --- CONFIG ---
 GS_CSV = "../../OMIn_dataset/data/FAA_data/FAA_sample_100.csv"
 NON_GS_CSV = "../../OMIn_dataset/data/FAA_data/Maintenance_Text_data_nona.csv"
-OUTPUT_DIR = "output/kg_llm/gpt4o_with_nodes_batches/"
 
 SMALL_MODELS = [
     ("gemma3_4b_it", "google/gemma-3-4b-it"),
@@ -196,7 +195,7 @@ def main():
     group.add_argument('--gpt4o', action='store_true', help='Use OpenAI GPT-4o API for triplet extraction')
     parser.add_argument('--gpt4o-test-n', nargs='?', type=int, default=None, help='For --gpt4o: number of rows to process. If omitted, defaults to 100. If flag is present with no value, defaults to 10. If a value is given, uses that value. Cannot be used with --all.')
     parser.add_argument('--all', action='store_true', help='If set, process all rows from the CSV file; otherwise, use the default 100-row CSV')
-    parser.add_argument('--output-dir', type=str, default=OUTPUT_DIR, help='Directory to write batch outputs')
+    parser.add_argument('--output-dir', type=str, default=None, help='Directory to write batch outputs')
     parser.add_argument('--batches', type=str, default=None, help='Comma-separated list of batches to process (e.g., 100,200,cum_200). If omitted, processes all batches.')
     args = parser.parse_args()
 
@@ -350,46 +349,49 @@ def main():
             print(f"Estimated total cost: ${total_cost:.4f}")
             print(f"Batch {batch_name} saved to {output_csv}")
         else:
-            batch_dir = os.path.join(args.output_dir, batch_name)
-            os.makedirs(batch_dir, exist_ok=True)
-            output_csv = os.path.join(batch_dir, f"llm_with_existing_nodes_{args.size}_{batch_name}.csv")
-            batch_csv_paths[batch_name] = output_csv
-            print(f"Processing batch {batch_name} ({len(all_rows[start:end])} rows)...")
-            fieldnames = ["c5", "c119"] + [f"{shortname}_triplets" for shortname, _ in models] + [f"{shortname}_triplets_clean" for shortname, _ in models]
-            batch_rows = all_rows[start:end] if batch_name == "100" else non_gs_rows[start-100:end-100]
-            results = []
-            for row in tqdm(batch_rows, desc=f"Batch {batch_name}"):
-                text = row['c119'] if 'c119' in row else next(iter(row.values()))
-                current_nodes = tuple(sorted(all_nodes_so_far))
-                if current_nodes != last_nodes:
-                    node_str_cache = ', '.join(current_nodes) if current_nodes else '(none)'
-                    last_nodes = current_nodes
-                prompt = PROMPT_TEMPLATE.format(text=text, node_list=node_str_cache)
-                triplet_outputs = {}
-                for shortname, _ in models:
+            # For each model, create separate output directories
+            for shortname, _ in models:
+                model_output_dir = os.path.join(args.output_dir, f"{shortname}_with_nodes_batches")
+                batch_dir = os.path.join(model_output_dir, batch_name)
+                os.makedirs(batch_dir, exist_ok=True)
+                output_csv = os.path.join(batch_dir, f"llm_with_existing_nodes_{shortname}_{batch_name}.csv")
+                batch_csv_paths[(shortname, batch_name)] = output_csv
+                print(f"Processing batch {batch_name} for model {shortname} ({len(all_rows[start:end])} rows)...")
+                fieldnames = ["c5", "c119", f"{shortname}_triplets", f"{shortname}_triplets_clean"]
+                batch_rows = all_rows[start:end] if batch_name == "100" else non_gs_rows[start-100:end-100]
+                results = []
+                last_nodes = None
+                node_str_cache = None
+                for row in tqdm(batch_rows, desc=f"Batch {batch_name} [{shortname}]"):
+                    text = row['c119'] if 'c119' in row else next(iter(row.values()))
+                    current_nodes = tuple(sorted(all_nodes_so_far))
+                    if current_nodes != last_nodes:
+                        node_str_cache = ', '.join(current_nodes) if current_nodes else '(none)'
+                        last_nodes = current_nodes
+                    prompt = PROMPT_TEMPLATE.format(text=text, node_list=node_str_cache)
                     tokenizer_or_processor, model = model_objs[shortname]
                     try:
                         raw_output = generate_triplets(prompt, tokenizer_or_processor, model, shortname)
                     except Exception as e:
                         raw_output = ""
-                    triplet_outputs[f"{shortname}_triplets"] = raw_output
-                    triplet_outputs[f"{shortname}_triplets_clean"] = extract_triplets_only(raw_output)
+                    triplets_clean = extract_triplets_only(raw_output)
                     for e1, rel, e2 in parse_triplets(raw_output):
                         all_nodes_so_far.add(e1)
                         all_nodes_so_far.add(e2)
                         all_triplets_so_far.add(f"<{e1}, {rel}, {e2}>")
-                row_out = {
-                    "c5": row['c5'],
-                    "c119": text,
-                    **triplet_outputs
-                }
-                results.append(row_out)
-            with open(output_csv, 'w', newline='', encoding='utf-8') as f:
-                writer = csv.DictWriter(f, fieldnames=fieldnames)
-                writer.writeheader()
-                for row_out in results:
-                    writer.writerow(row_out)
-            print(f"Batch {batch_name} saved to {output_csv}")
+                    row_out = {
+                        "c5": row['c5'],
+                        "c119": text,
+                        f"{shortname}_triplets": raw_output,
+                        f"{shortname}_triplets_clean": triplets_clean
+                    }
+                    results.append(row_out)
+                with open(output_csv, 'w', newline='', encoding='utf-8') as f:
+                    writer = csv.DictWriter(f, fieldnames=fieldnames)
+                    writer.writeheader()
+                    for row_out in results:
+                        writer.writerow(row_out)
+                print(f"Batch {batch_name} for model {shortname} saved to {output_csv}")
 
     # Now create cumulative CSVs by concatenating previous batch CSVs
     def concat_csvs(csv_paths, out_path):
@@ -420,13 +422,17 @@ def main():
             os.makedirs(batch_dir, exist_ok=True)
             out_csv = os.path.join(batch_dir, f"gpt4o_withprevnodes_{cum_name}.csv")
             part_paths = [os.path.join(args.output_dir, p, f"gpt4o_withprevnodes_{p}.csv") for p in parts]
+            concat_csvs(part_paths, out_csv)
+            print(f"Cumulative batch {cum_name} saved to {out_csv}")
         else:
-            batch_dir = os.path.join(args.output_dir, cum_name)
-            os.makedirs(batch_dir, exist_ok=True)
-            out_csv = os.path.join(batch_dir, f"llm_with_existing_nodes_{args.size}_{cum_name}.csv")
-            part_paths = [os.path.join(args.output_dir, p, f"llm_with_existing_nodes_{args.size}_{p}.csv") for p in parts]
-        concat_csvs(part_paths, out_csv)
-        print(f"Cumulative batch {cum_name} saved to {out_csv}")
+            for shortname, _ in models:
+                model_output_dir = os.path.join(args.output_dir, f"{shortname}_with_nodes_batches")
+                batch_dir = os.path.join(model_output_dir, cum_name)
+                os.makedirs(batch_dir, exist_ok=True)
+                out_csv = os.path.join(batch_dir, f"llm_with_existing_nodes_{shortname}_{cum_name}.csv")
+                part_paths = [os.path.join(model_output_dir, p, f"llm_with_existing_nodes_{shortname}_{p}.csv") for p in parts]
+                concat_csvs(part_paths, out_csv)
+                print(f"Cumulative batch {cum_name} for model {shortname} saved to {out_csv}")
 
 if __name__ == "__main__":
     """
