@@ -124,7 +124,7 @@ if graph:  # Only if graph was loaded successfully
     visualize_graph(graph)
 
 class GraphRetriever:
-    def __init__(self, graph: nx.Graph, openai_api_key: str):
+    def __init__(self, graph: nx.Graph, openai_api_key: str, cache_dir: str):
         """
         Initialize the graph retriever with weights for hybrid search.
 
@@ -134,6 +134,7 @@ class GraphRetriever:
         """
         self.graph = graph
         self.openai_client = OpenAI(api_key=openai_api_key)
+        self.cache_dir = cache_dir
 
         # Configuration for hybrid search
         self.config = {
@@ -162,8 +163,8 @@ class GraphRetriever:
         """
         try:
             # Load cache if exists
-            if os.path.exists('embeddings_cache.json'):
-                with open('embeddings_cache.json', 'r') as f:
+            if os.path.exists(self.cache_dir):
+                with open(self.cache_dir, 'r') as f:
                     self.embeddings = json.load(f)
                 print("Loaded embeddings from cache")
 
@@ -182,7 +183,8 @@ class GraphRetriever:
                     self.embeddings[node] = response.data[0].embedding
 
                 # Save updated cache
-                with open('embeddings_cache.json', 'w') as f:
+                os.makedirs(os.path.dirname(self.cache_dir), exist_ok=True)
+                with open(self.cache_dir, 'w') as f:
                     json.dump(self.embeddings, f)
 
             print("Embeddings generated successfully")

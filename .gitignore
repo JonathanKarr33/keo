@@ -170,9 +170,9 @@ cython_debug/
 nbs/.last_checked
 nbs_prev/
 
-# Ignore embeddings_cache.json
-embeddings_cache.json
-embedding_cache/
+# # Ignore text chunk cache
+# text_chunk_cache/
 
-# Ignore graph_cache directory
-graph_cache/
+# # Ignore graph_cache directory
+# kg_cache/
+.DS_Store
