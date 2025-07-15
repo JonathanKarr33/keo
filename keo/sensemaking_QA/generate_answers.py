@@ -82,7 +82,8 @@ def generate_aviation_answers(question_files, output_file, sample_size=None, ans
     
     # Load knowledge graph
     print(f"Loading knowledge graph from: {kg_path}")
-    kg_loaded = answer_generator.load_knowledge_graph(kg_path)
+    if os.path.exists(kg_path):
+        kg_loaded = answer_generator.load_knowledge_graph(kg_path)
     if not kg_loaded:
         print("WARNING: Knowledge graph could not be loaded. GraphRAG answers will be skipped.")
     

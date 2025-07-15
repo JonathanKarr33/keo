@@ -12,17 +12,16 @@
 # Note: The sample size is set to 20 for demonstration purposes; ignore for full experiment
 # python generate_answers.py \
 #     --question-files ./output/aviation_sensemaking_questions.json \
-#     --output-file ./output/answers_gemma-3-4b-it_sample20.json \
+#     --output-file ./output/answers_gemma-3-27b-it.json \
 #     --kg-path ../kg/output/knowledge_graph.gml \
-#     --answer-model google/gemma-3-4b-it \
+#     --answer-model google/gemma-3-27b-it \
 #     --provider huggingface \
-#     --API-provider featherless-ai \
-#     --sample-size 20
+#     --API-provider nebius
 
 # Evaluate the generated answers using three-way evaluation (direct evaluation, pairwise standard comparison, and three-way NLP metrics for actionable questions)
-python run_evaluation.py \
-    --questions-file ./output/aviation_sensemaking_questions.json \
-    --answers-file ./output/answers_gemma-3-4b-it_sample20.json \
-    --output-dir ./evaluation_results/answer_gemma-3-4b-it_evaluator_gpt-4o \
-    --provider openai \
-    --evaluation-model gpt-4o
+# python run_evaluation.py \
+#     --questions-file ./output/aviation_sensemaking_questions.json \
+#     --answers-file ./output/answers_phi-4_sample20.json \
+#     --output-dir ./evaluation_results/answer_phi-4_sample20_evaluator_gpt-4o \
+#     --provider openai \
+#     --evaluation-model gpt-4o

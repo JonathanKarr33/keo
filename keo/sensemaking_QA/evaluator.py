@@ -180,7 +180,7 @@ class SensemakingEvaluator:
                 evaluations.append(evaluation)
                 
                 # Rate limiting
-                time.sleep(0.3)
+                #time.sleep(0.3)
                 
             except Exception as e:
                 print(f"Error evaluating question {question_data.get('id', '')}: {e}")
@@ -226,7 +226,7 @@ class SensemakingEvaluator:
                 evaluations.append(evaluation)
                 
                 # Rate limiting
-                time.sleep(0.5)
+                #time.sleep(0.5)
                 
             except Exception as e:
                 print(f"Error evaluating answer {answer_data.get('question_id', '')}: {e}")
@@ -292,7 +292,7 @@ class SensemakingEvaluator:
         print("Evaluating global sensemaking capability...")
         
         # Filter for global questions
-        global_questions = [q for q in questions if q.get('type') == 'global']
+        global_questions = [q for q in questions if q.get('type') != 'action_specific']
         global_answers = [a for a in answers if any(
             a.get('question_id') == q.get('id') for q in global_questions
         )]
@@ -312,7 +312,7 @@ class SensemakingEvaluator:
                     evaluation = self._evaluate_global_sensemaking_answer(answer, question)
                     global_evaluations.append(evaluation)
                 
-                time.sleep(0.5)
+                #time.sleep(0.5)
                 
             except Exception as e:
                 print(f"Error evaluating global answer {answer.get('question_id', '')}: {e}")
@@ -365,7 +365,7 @@ class SensemakingEvaluator:
                     evaluation = self._evaluate_single_action_answer(answer, question)
                     evaluations.append(evaluation)
                 
-                time.sleep(0.3)
+                #time.sleep(0.3)
                 
             except Exception as e:
                 print(f"Error evaluating action answer {answer.get('question_id', '')}: {e}")
@@ -639,7 +639,7 @@ Global Sensemaking Assessment: [overall evaluation of global capability]
                     evaluation = self._evaluate_single_action_answer(answer, question)
                     evaluations.append(evaluation)
                 
-                time.sleep(0.3)
+                #time.sleep(0.3)
                 
             except Exception as e:
                 print(f"Error evaluating action answer {answer.get('question_id', '')}: {e}")
@@ -1064,7 +1064,7 @@ Improvement Suggestions: [suggestions if any]
                 comparison = self._compare_answer_pair(method1_answer, method2_answer, question, method1_name, method2_name)
                 comparisons.append(comparison)
                 
-                time.sleep(0.5)
+                #time.sleep(0.5)
                 
             except Exception as e:
                 print(f"Error in pairwise comparison for {question_id}: {e}")
