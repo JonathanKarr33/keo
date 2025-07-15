@@ -26,7 +26,7 @@ except ImportError:
 
 
 class SensemakingAnswerGenerator:
-    def __init__(self, api_key: str, model: str = "gpt-4o", cache_dir: str = "./embedding_cache", provider: str = "openai", API_provider: str = "auto"):
+    def __init__(self, api_key: str, model: str = "gpt-4o", cache_dir: str = "./text_chunk_cache", provider: str = "openai", API_provider: str = "auto"):
         """
         Initialize the answer generator
         
@@ -71,7 +71,16 @@ class SensemakingAnswerGenerator:
         """Load aviation maintenance knowledge graph"""
         try:
             self.knowledge_graph = nx.read_gml(graph_path)
-            self.graph_retriever = GraphRetriever(self.knowledge_graph, os.getenv("OPENAI_API_KEY"))
+            kg_cache_dir = './kg_cache/temp_cache.json'
+            # if using ground truth knowledge graph
+            if "kg/output/knowledge_graph.gml" in graph_path:
+                kg_cache_dir = './kg_cache/kg_gs100_cache.json'
+            else:
+                graph_dir = os.path.dirname(graph_path)
+                parts = graph_dir.split('/')
+                if len(parts) >= 2:
+                    kg_cache_dir = f'./kg_cache/{parts[-2]}/{parts[-1]}/kg_cache.json'
+            self.graph_retriever = GraphRetriever(self.knowledge_graph, os.getenv("OPENAI_API_KEY"), kg_cache_dir)
             self.graph_retriever.generate_embeddings()
             print(f"Knowledge graph loaded: {self.knowledge_graph.number_of_nodes()} nodes, {self.knowledge_graph.number_of_edges()} edges")
             return True
@@ -139,11 +148,7 @@ Question: {question}
 Provide a brief, specific answer that:
 1. States the exact maintenance action to take
 2. Is clear and actionable
-3. Follows standard aviation maintenance procedures, and only gives the action to take, not the reasoning or background information
-
-One example:
-Q: what should be done when: engine oil leak detected?
-A: Check the oil level, inspect for leaks, and replace any damaged seals or gaskets.
+3. Follows standard aviation maintenance procedures, and only gives the action to take
 
 Answer:
 """
@@ -153,7 +158,7 @@ You are an expert aviation safety analyst. Answer the following question about a
 
 Question: {question}
 
-Provide a comprehensive, analytical answer that:
+Provide a simple and concise answer that:
 1. Directly addresses the question
 2. Provides actionable insights
 3. Maintains focus on aviation safety and maintenance
@@ -180,7 +185,7 @@ Answer:
                 })
                 
                 # Rate limiting
-                time.sleep(0.5)
+                #time.sleep(0.5)
                 
             except Exception as e:
                 print(f"Error generating vanilla answer for question {question_data.get('id', '')}: {e}")
@@ -225,39 +230,43 @@ Answer:
                 
                 if question_type == 'actionable':
                     prompt = f"""
-You are an expert aviation maintenance technician. Answer the following question with a direct, concise action based on the provided aviation maintenance data context.
+You are an expert aviation maintenance technician. Answer the following question with a direct, concise action based on your own knowledge and the provided aviation maintenance records.
 
 Question: {question}
 
-Context from Aviation Maintenance Records:
+Possibly Related Aviation Maintenance Records:
 {relevant_context}
 
-Provide a brief, specific answer that:
+Provide a brief answer that:
 1. States the exact maintenance action to take
 2. Is clear and actionable
-3. Follows standard aviation maintenance procedures, and only gives the action to take, not the reasoning or background information
-4. Uses information from the context when relevant
+3. Directly gives the action to take, not the reasoning or background information
+4. Uses information from the Aviation Maintenance Records if they are relevant to the question, but not solely based on them, also use your own knowledge
 
 One example:
-Q: what should be done when: engine oil leak detected?
-A: Check the oil level, inspect for leaks, and replace any damaged seals or gaskets.
+Q: What action could be taken when: #2 & 4 rocker covers are leaking?
+A: Remove & replace #4 gaskets.
 
 Answer:
 """
                 else:
                     prompt = f"""
-You are an expert aviation safety analyst. Answer the following question based on the provided aviation maintenance data context.
+You are an expert aviation safety analyst. Answer the following question by using your own knowledge and the provided aviation maintenance records.
 
 Question: {question}
 
-Context from Aviation Maintenance Records:
+Possibly Related Aviation Maintenance Records:
 {relevant_context}
 
-Provide a comprehensive, analytical answer that:
+Provide a concise and simple answer that:
 1. Directly addresses the question
-2. Uses specific information from the context when relevant
-3. Provides actionable insights
+2. Uses specific information from the Aviation Maintenance records if they are relevant, but do not rely solely on them, also use your own knowledge, and the answer should be high-level and analytical
+3. Provides actionable insights, but not specific analysis or reasoning on the records
 4. Maintains focus on aviation safety and maintenance
+
+One example:
+Q: To what extent does the inspection and maintenance of aircraft wiring systems influence avionics reliability and flight safety?
+A: Regular inspections help identify potential issues such as wear, corrosion, or insulation damage that could lead to electrical failures. Proper maintenance practices, including timely repairs and replacements, significantly reduce the risk of in-flight malfunctions, thereby enhancing overall safety.
 
 Answer:
 """
@@ -282,7 +291,7 @@ Answer:
                 })
                 
                 # Rate limiting
-                time.sleep(0.5)
+                #time.sleep(0.5)
                 
             except Exception as e:
                 print(f"Error generating vanilla answer for question {question_data.get('id', '')}: {e}")
@@ -340,11 +349,11 @@ Answer:
                 
                 if question_type == 'actionable':
                     prompt = f"""
-You are an expert aviation maintenance technician using graph-based knowledge retrieval. Answer the following question with a direct, concise action based on the provided graph-structured knowledge and data context.
+You are an expert aviation maintenance technician. Answer the following question with a direct, concise action based on your own knowledge and the provided aviation maintenance records.
 
 Question: {question}
 
-Knowledge Graph-Based Context:
+Knowledge Graph-Based Context (which shows related importance entities in Aviation Maintenance Records and their relationships):
 {graph_context}
 
 Knowledge Graph-Based Community Insights:
@@ -353,25 +362,25 @@ Knowledge Graph-Based Community Insights:
 Relevant Aviation Maintenance Records:
 {dataset_context}
 
-Provide a brief, specific answer that:
+Provide a brief answer that:
 1. States the exact maintenance action to take
 2. Is clear and actionable
-3. Follows standard aviation maintenance procedures, and only gives the action to take, not the reasoning or background information
-4. Uses relevant knowledge graph-based insights when applicable
+3. Directly gives the action to take, not the reasoning or background information
+4. Uses information from the Aviation Maintenance Records if they are relevant to the question, but not solely based on them, also use your own knowledge
 
 One example:
-Q: what should be done when: engine oil leak detected?
-A: Check the oil level, inspect for leaks, and replace any damaged seals or gaskets.
+Q: What action could be taken when: #2 & 4 rocker covers are leaking?
+A: Remove & replace #4 gaskets.
 
 Answer:
 """
                 else:
                     prompt = f"""
-You are an expert aviation safety analyst using graph-based knowledge retrieval. Answer the following question using the provided graph-structured knowledge and data context.
+You are an expert aviation safety analyst. Answer the following question by using your own knowledge and the provided aviation maintenance records.
 
 Question: {question}
 
-Knowledge Graph-Based Context:
+Knowledge Graph-Based Context (which shows related importance entities in Aviation Maintenance Records and their relationships):
 {graph_context}
 
 Knowledge Graph-Based Community Insights:
@@ -380,13 +389,15 @@ Knowledge Graph-Based Community Insights:
 Relevant Aviation Maintenance Records:
 {dataset_context}
 
-Provide a comprehensive, analytical answer that:
+Provide a comprehensive and analytical answer that:
 1. Directly addresses the question
-2. Uses specific information from the context when relevant
-3. Provides actionable insights
+2. Uses specific information from the Aviation Maintenance records if they are relevant, but do not rely solely on them, the answer should be high-level and analytical, and you should also use your own knowledge
+3. Provides actionable insights, but not specific analysis or reasoning on the records
 4. Maintains focus on aviation safety and maintenance
 
-Ensure your answer demonstrates the value of graph-based reasoning for this complex question.
+One example:
+Q: To what extent does the inspection and maintenance of aircraft wiring systems influence avionics reliability and flight safety?
+A: Regular inspections help identify potential issues such as wear, corrosion, or insulation damage that could lead to electrical failures. Proper maintenance practices, including timely repairs and replacements, significantly reduce the risk of in-flight malfunctions, thereby enhancing overall safety.
 
 Answer:
 """
@@ -412,7 +423,7 @@ Answer:
                 })
                 
                 # Rate limiting
-                time.sleep(0.5)
+                #time.sleep(0.5)
                 
             except Exception as e:
                 print(f"Error generating GraphRAG answer for question {question_data.get('id', '')}: {e}")
@@ -497,7 +508,7 @@ Analysis:
                 })
                 
                 # Rate limiting
-                time.sleep(0.5)
+                #time.sleep(0.5)
                 
             except Exception as e:
                 print(f"Error generating comparison for question {question_id}: {e}")
@@ -598,11 +609,6 @@ Analysis:
         
         context = "\n".join(context_parts)
         return context[:max_chars] if len(context) > max_chars else context
-        
-        context = "\n".join(context_parts)
-        return context[:max_chars] if len(context) > max_chars else context
-    
-
     
     def _retrieve_graph_context(self, 
                               question: str, 
@@ -1211,7 +1217,6 @@ Analysis:
             return self.embedding_cache[cache_key]
         
         try:
-            openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
             response = self.embedding_client.embeddings.create(
                 model="text-embedding-3-small",
                 input=text,

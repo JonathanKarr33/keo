@@ -129,7 +129,7 @@ class SensemakingQuestionGenerator:
             all_questions.extend(category_questions)
             
             # Rate limiting
-            time.sleep(1)
+            #time.sleep(1)
         
         self.generated_questions = all_questions
         return all_questions
