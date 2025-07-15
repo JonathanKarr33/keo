@@ -20,7 +20,7 @@ except ImportError:
 
 #Allow to recompile for models
 import torch
-    torch._dynamo.config.recompile_limit = float('inf')
+torch._dynamo.config.recompile_limit = float('inf')
 
 # --- CONFIG ---
 GS_CSV = "../../OMIn_dataset/data/FAA_data/FAA_sample_100.csv"
