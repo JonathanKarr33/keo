@@ -195,7 +195,7 @@ def main():
     group.add_argument('--gpt4o', action='store_true', help='Use OpenAI GPT-4o API for triplet extraction')
     parser.add_argument('--gpt4o-test-n', nargs='?', type=int, default=None, help='For --gpt4o: number of rows to process. If omitted, defaults to 100. If flag is present with no value, defaults to 10. If a value is given, uses that value. Cannot be used with --all.')
     parser.add_argument('--all', action='store_true', help='If set, process all rows from the CSV file; otherwise, use the default 100-row CSV')
-    parser.add_argument('--output-dir', type=str, default=None, help='Directory to write batch outputs')
+    parser.add_argument('--output-dir', type=str, default="output/kg_llm", help='Directory to write batch outputs')
     parser.add_argument('--batches', type=str, default=None, help='Comma-separated list of batches to process (e.g., 100,200,cum_200). If omitted, processes all batches.')
     args = parser.parse_args()
 
