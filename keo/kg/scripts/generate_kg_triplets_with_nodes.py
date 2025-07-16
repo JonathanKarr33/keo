@@ -9,6 +9,10 @@ import torch
 import concurrent.futures
 import logging
 
+# Set PyTorch CUDA allocator config to avoid fragmentation
+if 'PYTORCH_CUDA_ALLOC_CONF' not in os.environ:
+    os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
+
 try:
     from transformers import AutoTokenizer, AutoModelForCausalLM, AutoProcessor
     from transformers import Gemma3ForConditionalGeneration
