@@ -205,6 +205,7 @@ def main():
     parser.add_argument('--all', action='store_true', help='If set, process all rows from the CSV file; otherwise, use the default 100-row CSV')
     parser.add_argument('--output-dir', type=str, default="output/kg_llm", help='Directory to write batch outputs')
     parser.add_argument('--batches', type=str, default=None, help='Comma-separated list of batches to process (e.g., 100,200,cum_200). If omitted, processes all batches.')
+    parser.add_argument('--model-shortname', type=str, default=None, help='If set, only run the specified model shortname (e.g., gemma3_4b_it or phi4mini_instruct)')
     args = parser.parse_args()
 
     if args.gpt4o and args.all and args.gpt4o_test_n is not None:
@@ -263,6 +264,11 @@ def main():
             models = SMALL_MODELS
         else:
             models = LARGE_MODELS
+        # Filter models if --model-shortname is provided
+        if args.model_shortname:
+            models = [m for m in models if m[0] == args.model_shortname]
+            if not models:
+                raise ValueError(f"Model shortname '{args.model_shortname}' not found in the selected size group.")
         model_objs = {}
         for shortname, modelname in models:
             print(f"Loading {modelname}...")
@@ -279,11 +285,13 @@ def main():
         if batch_name.startswith("cum_"):
             continue  # We'll handle cumulative after all batches
         if args.gpt4o:
-            batch_dir = os.path.join(args.output_dir, batch_name)
+            shortname = "gpt4o"
+            model_output_dir = os.path.join(args.output_dir, f"{shortname}_with_nodes_batches")
+            batch_dir = os.path.join(model_output_dir, batch_name)
             os.makedirs(batch_dir, exist_ok=True)
-            output_csv = os.path.join(batch_dir, f"gpt4o_withprevnodes_{batch_name}.csv")
+            output_csv = os.path.join(batch_dir, f"{shortname}_withprevnodes_{batch_name}.csv")
             batch_csv_paths[batch_name] = output_csv
-            print(f"Processing batch {batch_name} ({len(all_rows[start:end])} rows)...")
+            print(f"Processing batch {batch_name} for model {shortname} ({len(all_rows[start:end])} rows)...")
             batch_rows = all_rows[start:end]
             import importlib
             openai = importlib.import_module('openai')
@@ -294,16 +302,15 @@ def main():
             if not openai_api_key:
                 raise ValueError("OPENAI_API_KEY environment variable not set. Please create a .env file in the kg directory with your OpenAI API key.")
             client = openai.OpenAI(api_key=openai_api_key)
-            fieldnames = ["c5", "c119", "gpt4o_triplets", "gpt4o_triplets_clean"]
+            fieldnames = ["c5", "c119", f"{shortname}_triplets", f"{shortname}_triplets_clean"]
             total_prompt_tokens = 0
             total_completion_tokens = 0
             results = []
             node_str_cache = None
             last_nodes = None
-            # Apply row limit for gpt4o if needed
             if (args.gpt4o and 'gpt4o_n' in locals() and gpt4o_n is not None) and (len(batch_rows) > gpt4o_n):
                 batch_rows = batch_rows[:gpt4o_n]
-            for row in tqdm(batch_rows, desc=f"Batch {batch_name}"):
+            for row in tqdm(batch_rows, desc=f"Batch {batch_name} [{shortname}]"):
                 text = row['c119'] if 'c119' in row else next(iter(row.values()))
                 current_nodes = tuple(sorted(all_nodes_so_far))
                 if current_nodes != last_nodes:
@@ -336,8 +343,8 @@ def main():
                 row_out = {
                     "c5": row['c5'],
                     "c119": text,
-                    "gpt4o_triplets": triplets,
-                    "gpt4o_triplets_clean": triplets
+                    f"{shortname}_triplets": triplets,
+                    f"{shortname}_triplets_clean": triplets
                 }
                 results.append(row_out)
             with open(output_csv, 'w', newline='', encoding='utf-8') as f:
@@ -355,14 +362,13 @@ def main():
             print(f"Estimated input cost: ${input_cost:.4f}")
             print(f"Estimated output cost: ${output_cost:.4f}")
             print(f"Estimated total cost: ${total_cost:.4f}")
-            print(f"Batch {batch_name} saved to {output_csv}")
+            print(f"Batch {batch_name} for model {shortname} saved to {output_csv}")
         else:
-            # For each model, create separate output directories
             for shortname, _ in models:
                 model_output_dir = os.path.join(args.output_dir, f"{shortname}_with_nodes_batches")
                 batch_dir = os.path.join(model_output_dir, batch_name)
                 os.makedirs(batch_dir, exist_ok=True)
-                output_csv = os.path.join(batch_dir, f"llm_with_existing_nodes_{shortname}_{batch_name}.csv")
+                output_csv = os.path.join(batch_dir, f"{shortname}_withprevnodes_{batch_name}.csv")
                 batch_csv_paths[(shortname, batch_name)] = output_csv
                 print(f"Processing batch {batch_name} for model {shortname} ({len(all_rows[start:end])} rows)...")
                 fieldnames = ["c5", "c119", f"{shortname}_triplets", f"{shortname}_triplets_clean"]
@@ -415,7 +421,35 @@ def main():
                         writer.writerow(header)
                     for row in reader:
                         writer.writerow(row)
-    # Cumulative logic
+
+    # Helper to build a batch or cumulative batch recursively if missing
+    def ensure_batch_exists(batch_name, models=None):
+        # Determine which shortnames to process
+        if args.gpt4o:
+            shortnames = ["gpt4o"]
+        else:
+            shortnames = [shortname for shortname, _ in models]
+        for shortname in shortnames:
+            model_output_dir = os.path.join(args.output_dir, f"{shortname}_with_nodes_batches")
+            batch_dir = os.path.join(model_output_dir, batch_name)
+            out_csv = os.path.join(batch_dir, f"{shortname}_withprevnodes_{batch_name}.csv")
+            if os.path.exists(out_csv):
+                continue
+            if batch_name in cum_deps:
+                # Build dependencies first
+                for dep in cum_deps[batch_name]:
+                    if args.gpt4o:
+                        ensure_batch_exists(dep)
+                    else:
+                        ensure_batch_exists(dep, models=[(shortname, None)])
+                os.makedirs(batch_dir, exist_ok=True)
+                part_paths = [os.path.join(model_output_dir, p, f"{shortname}_withprevnodes_{p}.csv") for p in cum_deps[batch_name]]
+                concat_csvs(part_paths, out_csv)
+                print(f"Cumulative batch {batch_name} for model {shortname} saved to {out_csv}")
+            else:
+                raise FileNotFoundError(f"Base batch {batch_name} for model {shortname} does not exist. Please run the script to generate it.")
+
+    # Cumulative logic (auto-build dependencies)
     cum_map = [
         ("cum_200", ["100", "200"]),
         ("cum_300", ["cum_200", "300"]),
@@ -425,22 +459,11 @@ def main():
     for cum_name, parts in cum_map:
         if cum_name not in selected_batches:
             continue
+        # Ensure all dependencies are built recursively
         if args.gpt4o:
-            batch_dir = os.path.join(args.output_dir, cum_name)
-            os.makedirs(batch_dir, exist_ok=True)
-            out_csv = os.path.join(batch_dir, f"gpt4o_withprevnodes_{cum_name}.csv")
-            part_paths = [os.path.join(args.output_dir, p, f"gpt4o_withprevnodes_{p}.csv") for p in parts]
-            concat_csvs(part_paths, out_csv)
-            print(f"Cumulative batch {cum_name} saved to {out_csv}")
+            ensure_batch_exists(cum_name)
         else:
-            for shortname, _ in models:
-                model_output_dir = os.path.join(args.output_dir, f"{shortname}_with_nodes_batches")
-                batch_dir = os.path.join(model_output_dir, cum_name)
-                os.makedirs(batch_dir, exist_ok=True)
-                out_csv = os.path.join(batch_dir, f"llm_with_existing_nodes_{shortname}_{cum_name}.csv")
-                part_paths = [os.path.join(model_output_dir, p, f"llm_with_existing_nodes_{shortname}_{p}.csv") for p in parts]
-                concat_csvs(part_paths, out_csv)
-                print(f"Cumulative batch {cum_name} for model {shortname} saved to {out_csv}")
+            ensure_batch_exists(cum_name, models=models)
 
 if __name__ == "__main__":
     """
