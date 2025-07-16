@@ -9,3 +9,5 @@ accelerate
 torchvision
 openai
 python-dotenv
+sentence_transformers
+spacy
