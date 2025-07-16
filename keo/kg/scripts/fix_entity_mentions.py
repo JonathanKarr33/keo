@@ -101,10 +101,12 @@ def find_csvs_to_fix(root_dir):
     files = []
     for dirpath, _, filenames in os.walk(root_dir):
         parent = os.path.basename(os.path.dirname(dirpath))
-        if not parent.endswith("with_node_batches") and not parent.endswith("with_nodes_batches"):
+        # Accept any parent directory ending with _with_nodes_batches
+        if not parent.endswith("_with_nodes_batches"):
             continue
         for f in filenames:
-            if f.endswith('.csv') and not f.endswith('_with_entity_mentions_fixed.csv'):
+            # Accept any file ending with _withprevnodes_<batch>.csv and not already fixed
+            if f.endswith('.csv') and '_withprevnodes_' in f and not f.endswith('_with_entity_mentions_fixed.csv'):
                 fixed_name = f.replace('.csv', '_with_entity_mentions_fixed.csv')
                 if fixed_name not in filenames:
                     files.append(os.path.join(dirpath, f))
@@ -137,8 +139,9 @@ def main():
     for f in files:
         base = os.path.basename(f)
         out_dir = args.output_dir or os.path.dirname(f)
-        out_path = os.path.join(out_dir, base.replace('.csv', '_with_entity_mentions_fixed.csv'))
-        replacements_path = os.path.join(out_dir, base.replace('.csv', '_entity_mention_replacements.csv'))
+        # Shorten output filenames
+        out_path = os.path.join(out_dir, base.replace('.csv', '_fixed.csv'))
+        replacements_path = os.path.join(out_dir, base.replace('.csv', '_replacements.csv'))
         # Skip if already processed, unless --force is set
         if os.path.exists(out_path) and not args.force:
             print(f"Skipping {f} (already fixed)")

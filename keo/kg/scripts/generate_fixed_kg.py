@@ -32,22 +32,26 @@ def process_triplet_csv(csv_path):
     edge_rel = defaultdict(set)
     edge_rows = defaultdict(set)
     edge_weight = defaultdict(int)
+    # Find all triplet columns ending with _triplets_clean
+    triplet_cols = [col for col in df.columns if col.endswith('_triplets_clean')]
     for idx, row in df.iterrows():
         c5 = str(row.get('c5', ''))
-        triplet_str = row.get('gpt4o_triplets_clean', '')
-        triplets = parse_triplets(triplet_str)
-        for e1, rel, e2 in triplets:
-            G.add_node(e1)
-            G.add_node(e2)
-            G.add_edge(e1, e2)
-            node_c5[e1].add(c5)
-            node_c5[e2].add(c5)
-            node_count[e1] += 1
-            node_count[e2] += 1
-            edge_c5[(e1, e2)].add(c5)
-            edge_rel[(e1, e2)].add(rel)
-            edge_rows[(e1, e2)].add(idx)
-            edge_weight[(e1, e2)] += 1
+        # Combine triplets from all triplet columns
+        triplet_strs = [row.get(col, '') for col in triplet_cols if pd.notna(row.get(col, ''))]
+        for triplet_str in triplet_strs:
+            triplets = parse_triplets(triplet_str)
+            for e1, rel, e2 in triplets:
+                G.add_node(e1)
+                G.add_node(e2)
+                G.add_edge(e1, e2)
+                node_c5[e1].add(c5)
+                node_c5[e2].add(c5)
+                node_count[e1] += 1
+                node_count[e2] += 1
+                edge_c5[(e1, e2)].add(c5)
+                edge_rel[(e1, e2)].add(rel)
+                edge_rows[(e1, e2)].add(idx)
+                edge_weight[(e1, e2)] += 1
     # Save GML
     base = os.path.splitext(csv_path)[0]
     gml_path = base + '.gml'
@@ -96,7 +100,7 @@ def process_triplet_csv(csv_path):
 
 def main():
     root = os.path.join('output', 'kg_llm')
-    pattern = os.path.join(root, '**', '*_with_entity_mentions_fixed.csv')
+    pattern = os.path.join(root, '**', '*_fixed.csv')
     files = glob.glob(pattern, recursive=True)
     print(f"Found {len(files)} files.")
     for f in files:
