@@ -9,6 +9,7 @@ import torch
 import concurrent.futures
 import logging
 import gc
+import time
 
 # Set PyTorch CUDA allocator config to avoid fragmentation
 if 'PYTORCH_CUDA_ALLOC_CONF' not in os.environ:
@@ -365,6 +366,7 @@ def main():
             print(f"Estimated total cost: ${total_cost:.4f}")
             print(f"Batch {batch_name} for model {shortname} saved to {output_csv}")
         else:
+            max_retries = 3
             for shortname, _ in models:
                 model_output_dir = os.path.join(args.output_dir, f"{shortname}_with_nodes_batches")
                 batch_dir = os.path.join(model_output_dir, batch_name)
@@ -385,10 +387,21 @@ def main():
                         last_nodes = current_nodes
                     prompt = PROMPT_TEMPLATE.format(text=text, node_list=node_str_cache)
                     tokenizer_or_processor, model = model_objs[shortname]
-                    try:
-                        raw_output = generate_triplets(prompt, tokenizer_or_processor, model, shortname)
-                    except Exception as e:
-                        raw_output = ""
+                    for attempt in range(max_retries):
+                        try:
+                            raw_output = generate_triplets(prompt, tokenizer_or_processor, model, shortname)
+                            break  # Success, exit retry loop
+                        except RuntimeError as e:
+                            if 'out of memory' in str(e).lower():
+                                print(f'CUDA OOM, attempt {attempt+1}/{max_retries}, waiting and retrying...')
+                                torch.cuda.empty_cache()
+                                time.sleep(10)
+                                if attempt == max_retries - 1:
+                                    print('Max retries reached, exiting script.')
+                                    import sys
+                                    sys.exit(1)
+                            else:
+                                raise
                     triplets_clean = extract_triplets_only(raw_output)
                     for e1, rel, e2 in parse_triplets(raw_output):
                         all_nodes_so_far.add(e1)
