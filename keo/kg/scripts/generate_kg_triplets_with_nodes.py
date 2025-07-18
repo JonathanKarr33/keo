@@ -8,6 +8,7 @@ import warnings
 import torch
 import concurrent.futures
 import logging
+import gc
 
 # Set PyTorch CUDA allocator config to avoid fragmentation
 if 'PYTORCH_CUDA_ALLOC_CONF' not in os.environ:
@@ -400,6 +401,10 @@ def main():
                         f"{shortname}_triplets_clean": triplets_clean
                     }
                     results.append(row_out)
+                    # --- Memory cleanup to prevent CUDA OOM ---
+                    del raw_output, triplets_clean
+                    gc.collect()
+                    torch.cuda.empty_cache()
                 with open(output_csv, 'w', newline='', encoding='utf-8') as f:
                     writer = csv.DictWriter(f, fieldnames=fieldnames)
                     writer.writeheader()
