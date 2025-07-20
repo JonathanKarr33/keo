@@ -10,118 +10,118 @@ import networkx as nx
 # OpenAI
 from openai import OpenAI
 
-openai_api_key = os.getenv("OPENAI_API_KEY")
-if not openai_api_key:
-    raise ValueError("OPENAI_API_KEY environment variable not set. Please set it with your OpenAI API key.")
-model_name = "gpt-4o"
+# openai_api_key = os.getenv("OPENAI_API_KEY")
+# if not openai_api_key:
+#     raise ValueError("OPENAI_API_KEY environment variable not set. Please set it with your OpenAI API key.")
+# model_name = "gpt-4o"
 
-def load_aviation_graph(graph_path: str = 'knowledge_graph.gml') -> nx.Graph:
-    """
-    Load the existing aviation maintenance knowledge graph.
+# def load_aviation_graph(graph_path: str = 'knowledge_graph.gml') -> nx.Graph:
+#     """
+#     Load the existing aviation maintenance knowledge graph.
 
-    Args:
-        graph_path (str): Path to the .gml graph file
+#     Args:
+#         graph_path (str): Path to the .gml graph file
 
-    Returns:
-        nx.Graph: Loaded NetworkX graph
-    """
-    try:
-        graph = nx.read_gml(graph_path)
-        print(f"Graph loaded successfully!")
-        print(f"Number of nodes: {graph.number_of_nodes()}")
-        print(f"Number of edges: {graph.number_of_edges()}")
-        return graph
-    except Exception as e:
-        print(f"Error loading graph: {e}")
-        return None
+#     Returns:
+#         nx.Graph: Loaded NetworkX graph
+#     """
+#     try:
+#         graph = nx.read_gml(graph_path)
+#         print(f"Graph loaded successfully!")
+#         print(f"Number of nodes: {graph.number_of_nodes()}")
+#         print(f"Number of edges: {graph.number_of_edges()}")
+#         return graph
+#     except Exception as e:
+#         print(f"Error loading graph: {e}")
+#         return None
 
-# Load the graph
-graph = load_aviation_graph()
+# # Load the graph
+# graph = load_aviation_graph()
 
-# Print sample of nodes and edges if graph loaded successfully
-if graph:
-    print("\nSample of nodes:")
-    for node in list(graph.nodes())[:5]:
-        print(f"Node: {node}")
-        print(f"Attributes: {graph.nodes[node]}\n")
+# # Print sample of nodes and edges if graph loaded successfully
+# if graph:
+#     print("\nSample of nodes:")
+#     for node in list(graph.nodes())[:5]:
+#         print(f"Node: {node}")
+#         print(f"Attributes: {graph.nodes[node]}\n")
 
-    print("\nSample of edges:")
-    for edge in list(graph.edges(data=True))[:5]:
-        print(f"Edge: {edge}")
+#     print("\nSample of edges:")
+#     for edge in list(graph.edges(data=True))[:5]:
+#         print(f"Edge: {edge}")
 
 
-def visualize_graph(graph: nx.Graph,
-                   max_nodes: int = 100,
-                   node_size: int = 1000,
-                   font_size: int = 12,
-                   figure_size: tuple = (15, 10)):
-    """
-    Visualize the aviation maintenance knowledge graph.
+# def visualize_graph(graph: nx.Graph,
+#                    max_nodes: int = 100,
+#                    node_size: int = 1000,
+#                    font_size: int = 12,
+#                    figure_size: tuple = (15, 10)):
+#     """
+#     Visualize the aviation maintenance knowledge graph.
 
-    Args:
-        graph (nx.Graph): The loaded knowledge graph
-        max_nodes (int): Maximum number of nodes to display for readability
-        node_size (int): Size of nodes in visualization
-        font_size (int): Size of label font
-        figure_size (tuple): Size of the figure (width, height)
-    """
-    try:
-        # Create subset if graph is too large
-        if graph.number_of_nodes() > max_nodes:
-            print(f"Graph too large, showing first {max_nodes} nodes")
-            nodes = list(graph.nodes())[:max_nodes]
-            graph_vis = graph.subgraph(nodes)
-        else:
-            graph_vis = graph
+#     Args:
+#         graph (nx.Graph): The loaded knowledge graph
+#         max_nodes (int): Maximum number of nodes to display for readability
+#         node_size (int): Size of nodes in visualization
+#         font_size (int): Size of label font
+#         figure_size (tuple): Size of the figure (width, height)
+#     """
+#     try:
+#         # Create subset if graph is too large
+#         if graph.number_of_nodes() > max_nodes:
+#             print(f"Graph too large, showing first {max_nodes} nodes")
+#             nodes = list(graph.nodes())[:max_nodes]
+#             graph_vis = graph.subgraph(nodes)
+#         else:
+#             graph_vis = graph
 
-        # Setup the visualization
-        plt.figure(figsize=figure_size)
-        pos = nx.spring_layout(graph_vis, k=1, iterations=50)
+#         # Setup the visualization
+#         plt.figure(figsize=figure_size)
+#         pos = nx.spring_layout(graph_vis, k=1, iterations=50)
 
-        # Draw nodes
-        nx.draw_networkx_nodes(graph_vis, pos,
-                             node_color='lightblue',
-                             node_size=node_size,
-                             alpha=0.7)
+#         # Draw nodes
+#         nx.draw_networkx_nodes(graph_vis, pos,
+#                              node_color='lightblue',
+#                              node_size=node_size,
+#                              alpha=0.7)
 
-        # Draw edges with relationship types
-        edge_labels = {}
-        for u, v, data in graph_vis.edges(data=True):
-            # Get relationship type from edge data
-            rel_type = data.get('relationship', '')
-            if rel_type:
-                edge_labels[(u, v)] = rel_type
+#         # Draw edges with relationship types
+#         edge_labels = {}
+#         for u, v, data in graph_vis.edges(data=True):
+#             # Get relationship type from edge data
+#             rel_type = data.get('relationship', '')
+#             if rel_type:
+#                 edge_labels[(u, v)] = rel_type
 
-        nx.draw_networkx_edges(graph_vis, pos,
-                             edge_color='gray',
-                             arrows=True,
-                             arrowsize=20)
+#         nx.draw_networkx_edges(graph_vis, pos,
+#                              edge_color='gray',
+#                              arrows=True,
+#                              arrowsize=20)
 
-        # Add labels
-        nx.draw_networkx_labels(graph_vis, pos,
-                              font_size=font_size)
-        nx.draw_networkx_edge_labels(graph_vis, pos,
-                                   edge_labels=edge_labels,
-                                   font_size=font_size-2)
+#         # Add labels
+#         nx.draw_networkx_labels(graph_vis, pos,
+#                               font_size=font_size)
+#         nx.draw_networkx_edge_labels(graph_vis, pos,
+#                                    edge_labels=edge_labels,
+#                                    font_size=font_size-2)
 
-        plt.title("Aviation Maintenance Knowledge Graph")
-        plt.axis('off')
-        plt.tight_layout()
+#         plt.title("Aviation Maintenance Knowledge Graph")
+#         plt.axis('off')
+#         plt.tight_layout()
 
-        # Show graph statistics
-        print(f"\nGraph Statistics:")
-        print(f"Total nodes: {graph.number_of_nodes()}")
-        print(f"Total edges: {graph.number_of_edges()}")
-        print(f"Average degree: {sum(dict(graph.degree()).values())/graph.number_of_nodes():.2f}")
+#         # Show graph statistics
+#         print(f"\nGraph Statistics:")
+#         print(f"Total nodes: {graph.number_of_nodes()}")
+#         print(f"Total edges: {graph.number_of_edges()}")
+#         print(f"Average degree: {sum(dict(graph.degree()).values())/graph.number_of_nodes():.2f}")
 
-        plt.show()
+#         plt.show()
 
-    except Exception as e:
-        print(f"Error visualizing graph: {e}")
+#     except Exception as e:
+#         print(f"Error visualizing graph: {e}")
 
-# Example usage
-if graph:  # Only if graph was loaded successfully
-    visualize_graph(graph)
+# # Example usage
+# if graph:  # Only if graph was loaded successfully
+#     visualize_graph(graph)
 
 class GraphRetriever:
     def __init__(self, graph: nx.Graph, openai_api_key: str, cache_dir: str):
