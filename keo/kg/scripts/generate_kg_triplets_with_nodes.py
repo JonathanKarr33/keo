@@ -126,7 +126,7 @@ def load_model_and_tokenizer(model_name, shortname, cpu_only=False):
             tokenizer.pad_token = tokenizer.eos_token
         model = AutoModelForCausalLM.from_pretrained(
             model_name,
-            torch_dtype=torch.float16 if torch.cuda.is_available() and not cpu_only else torch.float32,
+            load_in_8bit=True if torch.cuda.is_available() else False,
             device_map="cpu" if cpu_only else "auto",
             trust_remote_code=True
         )
