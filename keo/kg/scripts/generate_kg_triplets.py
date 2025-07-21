@@ -6,6 +6,7 @@ import torch
 import argparse
 import re
 import warnings
+import gc
 
 try:
     from transformers import Gemma3ForConditionalGeneration
@@ -331,6 +332,10 @@ def main():
                     raw_output = generate_triplets(prompt, tokenizer_or_processor, model, shortname)
                     triplet_outputs[f"{shortname}_triplets"] = raw_output
                     triplet_outputs[f"{shortname}_triplets_clean"] = extract_triplets_only(raw_output)
+                    # Explicitly clear memory after each generation
+                    del raw_output
+                    gc.collect()
+                    torch.cuda.empty_cache()
                 writer.writerow({
                     "c5": row['c5'],
                     "c119": text,
