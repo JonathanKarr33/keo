@@ -111,13 +111,26 @@ def read_rows(csv_path, skip_c5=None, n=None):
                 break
     return rows
 
+def print_vram_usage():
+    import torch
+    if torch.cuda.is_available():
+        for i in range(torch.cuda.device_count()):
+            allocated = torch.cuda.memory_allocated(i) / 1024**3
+            reserved = torch.cuda.memory_reserved(i) / 1024**3
+            print(f"GPU {i}: Allocated: {allocated:.2f} GB, Reserved: {reserved:.2f} GB")
+    else:
+        print("No CUDA devices available.")
+
 def load_model_and_tokenizer(model_name, shortname, cpu_only=False):
+    # Always use 8-bit quantization and device_map="auto" for multi-GPU
     if shortname.startswith("gemma3"):
         if Gemma3ForConditionalGeneration is None:
             raise ImportError("transformers >=4.50.0 required for Gemma3 support.")
         processor = AutoProcessor.from_pretrained(model_name, use_fast=True)
         model = Gemma3ForConditionalGeneration.from_pretrained(
-            model_name, device_map="cpu" if cpu_only else "auto"
+            model_name,
+            load_in_8bit=True,
+            device_map="auto"
         ).eval()
         return processor, model
     else:
@@ -126,8 +139,8 @@ def load_model_and_tokenizer(model_name, shortname, cpu_only=False):
             tokenizer.pad_token = tokenizer.eos_token
         model = AutoModelForCausalLM.from_pretrained(
             model_name,
-            load_in_8bit=True if torch.cuda.is_available() else False,
-            device_map="cpu" if cpu_only else "auto",
+            load_in_8bit=True,
+            device_map="auto",
             trust_remote_code=True
         )
         return tokenizer, model
@@ -399,6 +412,9 @@ def main():
                         last_nodes = current_nodes
                     prompt = PROMPT_TEMPLATE.format(text=text, node_list=node_str_cache)
                     tokenizer_or_processor, model = model_objs[shortname]
+                    # Token count before generation
+                    prompt_tokens = tokenizer_or_processor(prompt, return_tensors="pt")["input_ids"].shape[-1]
+                    print(f"Prompt tokens: {prompt_tokens}")
                     for attempt in range(max_retries):
                         try:
                             raw_output = generate_triplets(prompt, tokenizer_or_processor, model, shortname)
@@ -414,6 +430,10 @@ def main():
                                     sys.exit(1)
                             else:
                                 raise
+                    # Token count after generation (output tokens)
+                    output_tokens = tokenizer_or_processor(raw_output, return_tensors="pt")["input_ids"].shape[-1]
+                    print(f"Output tokens: {output_tokens - prompt_tokens}")
+                    print_vram_usage()
                     triplets_clean = extract_triplets_only(raw_output)
                     for e1, rel, e2 in parse_triplets(raw_output):
                         all_nodes_so_far.add(e1)
