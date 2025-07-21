@@ -11,6 +11,7 @@ import logging
 import gc
 import time
 import requests
+from transformers import BitsAndBytesConfig
 
 # Load environment variables from .env if present
 try:
@@ -122,28 +123,31 @@ def print_vram_usage():
         print("No CUDA devices available.")
 
 def load_model_and_tokenizer(model_name, shortname, cpu_only=False):
-    # Always use 8-bit quantization and device_map="auto" for multi-GPU
+    quant_config = BitsAndBytesConfig(
+        load_in_8bit=True,
+    )
     if shortname.startswith("gemma3"):
         if Gemma3ForConditionalGeneration is None:
             raise ImportError("transformers >=4.50.0 required for Gemma3 support.")
         processor = AutoProcessor.from_pretrained(model_name, use_fast=True)
+        tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
         model = Gemma3ForConditionalGeneration.from_pretrained(
             model_name,
-            load_in_8bit=True,
+            quantization_config=quant_config,
             device_map="auto"
         ).eval()
-        return processor, model
+        return (processor, tokenizer, model)
     else:
         tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
         if tokenizer.pad_token is None:
             tokenizer.pad_token = tokenizer.eos_token
         model = AutoModelForCausalLM.from_pretrained(
             model_name,
-            load_in_8bit=True,
+            quantization_config=quant_config,
             device_map="auto",
             trust_remote_code=True
         )
-        return tokenizer, model
+        return (tokenizer, model)
 
 def generate_triplets(prompt, tokenizer_or_processor, model, shortname, max_new_tokens=256, temperature=0.1):
     if shortname.startswith("gemma3"):
@@ -411,13 +415,19 @@ def main():
                         node_str_cache = ', '.join(current_nodes) if current_nodes else '(none)'
                         last_nodes = current_nodes
                     prompt = PROMPT_TEMPLATE.format(text=text, node_list=node_str_cache)
-                    tokenizer_or_processor, model = model_objs[shortname]
+                    if shortname.startswith("gemma3"):
+                        processor, tokenizer, model = model_objs[shortname]
+                    else:
+                        tokenizer, model = model_objs[shortname]
                     # Token count before generation
-                    prompt_tokens = tokenizer_or_processor(prompt, return_tensors="pt")["input_ids"].shape[-1]
+                    prompt_tokens = tokenizer(prompt, return_tensors="pt")["input_ids"].shape[-1]
                     print(f"Prompt tokens: {prompt_tokens}")
                     for attempt in range(max_retries):
                         try:
-                            raw_output = generate_triplets(prompt, tokenizer_or_processor, model, shortname)
+                            if shortname.startswith("gemma3"):
+                                raw_output = generate_triplets(prompt, processor, model, shortname)
+                            else:
+                                raw_output = generate_triplets(prompt, tokenizer, model, shortname)
                             break  # Success, exit retry loop
                         except RuntimeError as e:
                             if 'out of memory' in str(e).lower():
@@ -431,7 +441,7 @@ def main():
                             else:
                                 raise
                     # Token count after generation (output tokens)
-                    output_tokens = tokenizer_or_processor(raw_output, return_tensors="pt")["input_ids"].shape[-1]
+                    output_tokens = tokenizer(raw_output, return_tensors="pt")["input_ids"].shape[-1]
                     print(f"Output tokens: {output_tokens - prompt_tokens}")
                     print_vram_usage()
                     triplets_clean = extract_triplets_only(raw_output)
