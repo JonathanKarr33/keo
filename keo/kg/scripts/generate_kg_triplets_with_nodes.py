@@ -10,6 +10,14 @@ import concurrent.futures
 import logging
 import gc
 import time
+import requests
+
+# Load environment variables from .env if present
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 
 # Set PyTorch CUDA allocator config to avoid fragmentation
 if 'PYTORCH_CUDA_ALLOC_CONF' not in os.environ:
@@ -103,13 +111,13 @@ def read_rows(csv_path, skip_c5=None, n=None):
                 break
     return rows
 
-def load_model_and_tokenizer(model_name, shortname):
+def load_model_and_tokenizer(model_name, shortname, cpu_only=False):
     if shortname.startswith("gemma3"):
         if Gemma3ForConditionalGeneration is None:
             raise ImportError("transformers >=4.50.0 required for Gemma3 support.")
         processor = AutoProcessor.from_pretrained(model_name, use_fast=True)
         model = Gemma3ForConditionalGeneration.from_pretrained(
-            model_name, device_map="auto"
+            model_name, device_map="cpu" if cpu_only else "auto"
         ).eval()
         return processor, model
     else:
@@ -117,7 +125,10 @@ def load_model_and_tokenizer(model_name, shortname):
         if tokenizer.pad_token is None:
             tokenizer.pad_token = tokenizer.eos_token
         model = AutoModelForCausalLM.from_pretrained(
-            model_name, torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32, device_map="auto", trust_remote_code=True
+            model_name,
+            torch_dtype=torch.float16 if torch.cuda.is_available() and not cpu_only else torch.float32,
+            device_map="cpu" if cpu_only else "auto",
+            trust_remote_code=True
         )
         return tokenizer, model
 
@@ -203,6 +214,7 @@ def main():
     group = parser.add_mutually_exclusive_group()
     group.add_argument('--size', choices=['small', 'large'], default='small', help='Model size set to use: small (default) or large')
     group.add_argument('--gpt4o', action='store_true', help='Use OpenAI GPT-4o API for triplet extraction')
+    parser.add_argument('--cpu-only', action='store_true', help='Force all local models to run on CPU (device_map="cpu")')
     parser.add_argument('--gpt4o-test-n', nargs='?', type=int, default=None, help='For --gpt4o: number of rows to process. If omitted, defaults to 100. If flag is present with no value, defaults to 10. If a value is given, uses that value. Cannot be used with --all.')
     parser.add_argument('--all', action='store_true', help='If set, process all rows from the CSV file; otherwise, use the default 100-row CSV')
     parser.add_argument('--output-dir', type=str, default="output/kg_llm", help='Directory to write batch outputs')
@@ -273,8 +285,8 @@ def main():
                 raise ValueError(f"Model shortname '{args.model_shortname}' not found in the selected size group.")
         model_objs = {}
         for shortname, modelname in models:
-            print(f"Loading {modelname}...")
-            model_objs[shortname] = load_model_and_tokenizer(modelname, shortname)
+            print(f"Loading {modelname}... (cpu_only={args.cpu_only})")
+            model_objs[shortname] = load_model_and_tokenizer(modelname, shortname, cpu_only=args.cpu_only)
 
     # For cumulative node and triplet tracking
     all_nodes_so_far = set()
