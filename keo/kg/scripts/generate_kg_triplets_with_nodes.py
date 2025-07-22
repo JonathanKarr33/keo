@@ -121,16 +121,19 @@ def print_vram_usage():
     else:
         print("No CUDA devices available.")
 
-def load_model_and_tokenizer(model_name, shortname, cpu_only=False):
+def load_model_and_tokenizer(model_name, shortname, gpu_index=0, cpu_only=False):
     if shortname.startswith("gemma3"):
         if Gemma3ForConditionalGeneration is None:
             raise ImportError("transformers >=4.50.0 required for Gemma3 support.")
         processor = AutoProcessor.from_pretrained(model_name, use_fast=True)
         tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
-        model = Gemma3ForConditionalGeneration.from_pretrained(
-            model_name,
-            device_map="auto"
-        ).eval()
+        model = Gemma3ForConditionalGeneration.from_pretrained(model_name)
+        if cpu_only or not torch.cuda.is_available():
+            device = "cpu"
+        else:
+            device = f"cuda:{gpu_index}"
+        print(f"Placing Gemma model on device: {device}")
+        model = model.to(device)
         return (processor, tokenizer, model)
     else:
         tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
@@ -140,6 +143,12 @@ def load_model_and_tokenizer(model_name, shortname, cpu_only=False):
             model_name,
             trust_remote_code=True
         )
+        if cpu_only or not torch.cuda.is_available():
+            device = "cpu"
+        else:
+            device = f"cuda:{gpu_index}"
+        print(f"Placing model {model_name} on device: {device}")
+        model = model.to(device)
         return (tokenizer, model)
 
 def generate_triplets(prompt, tokenizer_or_processor, model, shortname, max_new_tokens=256, temperature=0.1):
@@ -249,6 +258,7 @@ def main():
     group.add_argument('--size', choices=['small', 'large'], default='small', help='Model size set to use: small (default) or large')
     group.add_argument('--gpt4o', action='store_true', help='Use OpenAI GPT-4o API for triplet extraction')
     parser.add_argument('--cpu-only', action='store_true', help='Force all local models to run on CPU (device_map="cpu")')
+    parser.add_argument('--gpu', type=int, default=0, help='GPU index to use for model (default: 0)')
     parser.add_argument('--gpt4o-test-n', nargs='?', type=int, default=None, help='For --gpt4o: number of rows to process. If omitted, defaults to 100. If flag is present with no value, defaults to 10. If a value is given, uses that value. Cannot be used with --all.')
     parser.add_argument('--all', action='store_true', help='If set, process all rows from the CSV file; otherwise, use the default 100-row CSV')
     parser.add_argument('--output-dir', type=str, default="output/kg_llm", help='Directory to write batch outputs')
@@ -319,8 +329,8 @@ def main():
                 raise ValueError(f"Model shortname '{args.model_shortname}' not found in the selected size group.")
         model_objs = {}
         for shortname, modelname in models:
-            print(f"Loading {modelname}... (cpu_only={args.cpu_only})")
-            model_objs[shortname] = load_model_and_tokenizer(modelname, shortname, cpu_only=args.cpu_only)
+            print(f"Loading {modelname}... (cpu_only={args.cpu_only}, gpu={args.gpu})")
+            model_objs[shortname] = load_model_and_tokenizer(modelname, shortname, gpu_index=args.gpu, cpu_only=args.cpu_only)
 
     # For cumulative node and triplet tracking
     all_nodes_so_far = set()
