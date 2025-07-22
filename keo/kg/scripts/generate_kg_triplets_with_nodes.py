@@ -11,7 +11,6 @@ import logging
 import gc
 import time
 import requests
-from transformers import BitsAndBytesConfig
 
 # Load environment variables from .env if present
 try:
@@ -123,9 +122,6 @@ def print_vram_usage():
         print("No CUDA devices available.")
 
 def load_model_and_tokenizer(model_name, shortname, cpu_only=False):
-    quant_config = BitsAndBytesConfig(
-        load_in_8bit=True,
-    )
     if shortname.startswith("gemma3"):
         if Gemma3ForConditionalGeneration is None:
             raise ImportError("transformers >=4.50.0 required for Gemma3 support.")
@@ -133,7 +129,7 @@ def load_model_and_tokenizer(model_name, shortname, cpu_only=False):
         tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
         model = Gemma3ForConditionalGeneration.from_pretrained(
             model_name,
-            quantization_config=quant_config,
+            torch_dtype=torch.float16,
             device_map="auto"
         ).eval()
         return (processor, tokenizer, model)
@@ -143,7 +139,6 @@ def load_model_and_tokenizer(model_name, shortname, cpu_only=False):
             tokenizer.pad_token = tokenizer.eos_token
         model = AutoModelForCausalLM.from_pretrained(
             model_name,
-            quantization_config=quant_config,
             device_map="auto",
             trust_remote_code=True
         )
@@ -320,8 +315,11 @@ def main():
             model_output_dir = os.path.join(args.output_dir, f"{shortname}_with_nodes_batches")
             batch_dir = os.path.join(model_output_dir, batch_name)
             os.makedirs(batch_dir, exist_ok=True)
-            output_csv = os.path.join(batch_dir, f"{shortname}_withprevnodes_{batch_name}.csv")
+            output_csv = os.path.join(batch_dir, f"llm_with_existing_nodes_{shortname}_{batch_name}.csv")
             batch_csv_paths[batch_name] = output_csv
+            if os.path.exists(output_csv):
+                print(f"Batch {batch_name} for model {shortname} already exists at {output_csv}, skipping.")
+                continue
             print(f"Processing batch {batch_name} for model {shortname} ({len(all_rows[start:end])} rows)...")
             batch_rows = all_rows[start:end]
             import importlib
@@ -400,8 +398,11 @@ def main():
                 model_output_dir = os.path.join(args.output_dir, f"{shortname}_with_nodes_batches")
                 batch_dir = os.path.join(model_output_dir, batch_name)
                 os.makedirs(batch_dir, exist_ok=True)
-                output_csv = os.path.join(batch_dir, f"{shortname}_withprevnodes_{batch_name}.csv")
+                output_csv = os.path.join(batch_dir, f"llm_with_existing_nodes_{shortname}_{batch_name}.csv")
                 batch_csv_paths[(shortname, batch_name)] = output_csv
+                if os.path.exists(output_csv):
+                    print(f"Batch {batch_name} for model {shortname} already exists at {output_csv}, skipping.")
+                    continue
                 print(f"Processing batch {batch_name} for model {shortname} ({len(all_rows[start:end])} rows)...")
                 fieldnames = ["c5", "c119", f"{shortname}_triplets", f"{shortname}_triplets_clean"]
                 batch_rows = all_rows[start:end] if batch_name == "100" else non_gs_rows[start-100:end-100]
@@ -492,7 +493,7 @@ def main():
         for shortname in shortnames:
             model_output_dir = os.path.join(args.output_dir, f"{shortname}_with_nodes_batches")
             batch_dir = os.path.join(model_output_dir, batch_name)
-            out_csv = os.path.join(batch_dir, f"{shortname}_withprevnodes_{batch_name}.csv")
+            out_csv = os.path.join(batch_dir, f"llm_with_existing_nodes_{shortname}_{batch_name}.csv")
             if os.path.exists(out_csv):
                 continue
             if batch_name in cum_deps:
@@ -503,7 +504,7 @@ def main():
                     else:
                         ensure_batch_exists(dep, models=[(shortname, None)])
                 os.makedirs(batch_dir, exist_ok=True)
-                part_paths = [os.path.join(model_output_dir, p, f"{shortname}_withprevnodes_{p}.csv") for p in cum_deps[batch_name]]
+                part_paths = [os.path.join(model_output_dir, p, f"llm_with_existing_nodes_{shortname}_{p}.csv") for p in cum_deps[batch_name]]
                 concat_csvs(part_paths, out_csv)
                 print(f"Cumulative batch {batch_name} for model {shortname} saved to {out_csv}")
             else:
