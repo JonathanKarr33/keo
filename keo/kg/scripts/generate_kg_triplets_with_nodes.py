@@ -221,6 +221,27 @@ def generate_triplets(prompt, tokenizer_or_processor, model, shortname, max_new_
         triplet_text = extract_triplets_only(decoded)
         return triplet_text
 
+def read_nodes_from_csv(csv_path, triplet_col=None):
+    nodes = set()
+    triplets = set()
+    if not os.path.exists(csv_path):
+        return nodes, triplets
+    with open(csv_path, newline='', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        if triplet_col is None:
+            # Try to infer triplet column
+            for col in reader.fieldnames:
+                if col.endswith('_triplets_clean'):
+                    triplet_col = col
+                    break
+        for row in reader:
+            triplet_str = row.get(triplet_col, '') if triplet_col else ''
+            for e1, rel, e2 in parse_triplets(triplet_str):
+                nodes.add(e1)
+                nodes.add(e2)
+                triplets.add(f"<{e1}, {rel}, {e2}>")
+    return nodes, triplets
+
 def main():
     parser = argparse.ArgumentParser(description="Extract triplets using selected LLMs, dynamically building the set of known nodes from previous batches. Generates 9 batch files: 100 GS, 100 next, ... up to 500, and cumulative 200, 300, 400, 500.")
     group = parser.add_mutually_exclusive_group()
@@ -319,6 +340,10 @@ def main():
             batch_csv_paths[batch_name] = output_csv
             if os.path.exists(output_csv):
                 print(f"Batch {batch_name} for model {shortname} already exists at {output_csv}, skipping.")
+                # Read nodes from CSV to update all_nodes_so_far and all_triplets_so_far
+                nodes, triplets = read_nodes_from_csv(output_csv, triplet_col=f"{shortname}_triplets_clean")
+                all_nodes_so_far.update(nodes)
+                all_triplets_so_far.update(triplets)
                 continue
             print(f"Processing batch {batch_name} for model {shortname} ({len(all_rows[start:end])} rows)...")
             batch_rows = all_rows[start:end]
@@ -402,6 +427,10 @@ def main():
                 batch_csv_paths[(shortname, batch_name)] = output_csv
                 if os.path.exists(output_csv):
                     print(f"Batch {batch_name} for model {shortname} already exists at {output_csv}, skipping.")
+                    # Read nodes from CSV to update all_nodes_so_far and all_triplets_so_far
+                    nodes, triplets = read_nodes_from_csv(output_csv, triplet_col=f"{shortname}_triplets_clean")
+                    all_nodes_so_far.update(nodes)
+                    all_triplets_so_far.update(triplets)
                     continue
                 print(f"Processing batch {batch_name} for model {shortname} ({len(all_rows[start:end])} rows)...")
                 fieldnames = ["c5", "c119", f"{shortname}_triplets", f"{shortname}_triplets_clean"]
