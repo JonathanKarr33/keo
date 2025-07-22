@@ -129,8 +129,7 @@ def load_model_and_tokenizer(model_name, shortname, cpu_only=False):
         tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
         model = Gemma3ForConditionalGeneration.from_pretrained(
             model_name,
-            torch_dtype=torch.float16,
-            device_map="auto"
+            torch_dtype=torch.float16
         ).eval()
         return (processor, tokenizer, model)
     else:
@@ -139,7 +138,6 @@ def load_model_and_tokenizer(model_name, shortname, cpu_only=False):
             tokenizer.pad_token = tokenizer.eos_token
         model = AutoModelForCausalLM.from_pretrained(
             model_name,
-            device_map="auto",
             trust_remote_code=True
         )
         return (tokenizer, model)
