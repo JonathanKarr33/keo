@@ -129,7 +129,7 @@ def load_model_and_tokenizer(model_name, shortname, cpu_only=False):
         tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
         model = Gemma3ForConditionalGeneration.from_pretrained(
             model_name,
-            torch_dtype=torch.float16
+            device_map="auto"
         ).eval()
         return (processor, tokenizer, model)
     else:
@@ -241,6 +241,9 @@ def read_nodes_from_csv(csv_path, triplet_col=None):
     return nodes, triplets
 
 def main():
+    print("CUDA available:", torch.cuda.is_available())
+    print("CUDA device count:", torch.cuda.device_count())
+    print("CUDA device name:", torch.cuda.get_device_name(0) if torch.cuda.is_available() else "No GPU")
     parser = argparse.ArgumentParser(description="Extract triplets using selected LLMs, dynamically building the set of known nodes from previous batches. Generates 9 batch files: 100 GS, 100 next, ... up to 500, and cumulative 200, 300, 400, 500.")
     group = parser.add_mutually_exclusive_group()
     group.add_argument('--size', choices=['small', 'large'], default='small', help='Model size set to use: small (default) or large')
