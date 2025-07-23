@@ -1,0 +1,4 @@
+File: output/kg_llm/gemma3_4b_it_with_nodes_batches/100/llm_with_existing_nodes_gemma3_4b_it_100_fixed.csv
+Number of nodes: 327
+Number of edges: 278
+Total rows used: 100
