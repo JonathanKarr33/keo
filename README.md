@@ -125,7 +125,6 @@ KEO works with the **Operations and Maintenance Intelligence (OMIn) Dataset**, w
 - **Structured Metadata**: Aircraft details, failure codes, dates
 - **Domain-Specific**: Aviation terminology and maintenance procedures
 
-For more information about the OMIn dataset and prior work, see the [Prior Work Documentation](prior_work.md).
 
 ## 🛠️ Advanced Features
 
