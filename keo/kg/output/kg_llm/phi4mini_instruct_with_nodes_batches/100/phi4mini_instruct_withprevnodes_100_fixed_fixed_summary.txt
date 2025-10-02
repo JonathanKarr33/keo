@@ -1,0 +1,4 @@
+File: output/kg_llm/phi4mini_instruct_with_nodes_batches/100/phi4mini_instruct_withprevnodes_100_fixed_fixed.csv
+Number of nodes: 226
+Number of edges: 182
+Total rows used: 100

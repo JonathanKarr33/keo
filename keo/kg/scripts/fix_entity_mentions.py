@@ -105,8 +105,15 @@ def find_csvs_to_fix(root_dir):
         if not parent.endswith("_with_nodes_batches"):
             continue
         for f in filenames:
-            # Accept any file ending with _withprevnodes_<batch>.csv and not already fixed
-            if f.endswith('.csv') and '_withprevnodes_' in f and not f.endswith('_with_entity_mentions_fixed.csv'):
+            # Accept any file ending with _withprevnodes_<batch>.csv or starting with llm_with_existing_nodes_
+            if (
+                f.endswith('.csv')
+                and (
+                    '_withprevnodes_' in f
+                    or f.startswith('llm_with_existing_nodes_')
+                )
+                and not f.endswith('_with_entity_mentions_fixed.csv')
+            ):
                 fixed_name = f.replace('.csv', '_with_entity_mentions_fixed.csv')
                 if fixed_name not in filenames:
                     files.append(os.path.join(dirpath, f))
