@@ -11,23 +11,17 @@
 
 ### Installation
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/nd-crane/trusted_ke.git
-   cd trusted_ke
-   ```
-
-2. **Install dependencies:**
+1. **Install dependencies:**
    ```bash
    pip install -e .
    ```
 
-3. **Set up OpenAI API key:**
+2. **Set up OpenAI API key:**
    ```bash
    export OPENAI_API_KEY="your-openai-api-key-here"
    ```
 
-4. **For knowledge graph generation (optional):**
+3. **For knowledge graph generation (optional):**
    ```bash
    cd keo/kg
    pip install -r requirements.txt
