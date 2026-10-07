@@ -1,0 +1,259 @@
+{
+  "generated_at": "2026-09-17T16:39:28.981903",
+  "dod_gap": {
+    "title": "DoD gap KEO addresses",
+    "gaps": [
+      {
+        "gap": "Data gravity / accreditation",
+        "problem": "Sensitive maintenance & military-adjacent text cannot freely hit commercial LLM APIs (FedRAMP/ITAR/FISMA).",
+        "keo": "Operational answers on local Gemma/Phi/Mistral; GPT-4o only offline for KG/Q/judge; optional local embeddings."
+      },
+      {
+        "gap": "Gov API capacity vs mission tempo",
+        "problem": "Army Enterprise LLM Workspace / Azure OpenAI Gov help but are limited relative to volume and classification needs.",
+        "keo": "On-prem / air-gapped path with structured retrieval so smaller local models punch above weight."
+      },
+      {
+        "gap": "Wrong retrieval for the wrong job",
+        "problem": "One RAG style fails: graphs help corpus sensemaking; chunks help procedural action.",
+        "keo": "Dual benchmark + task router (sensemaking\u2192KG, action\u2192chunks, mixed\u2192hybrid)."
+      },
+      {
+        "gap": "Auditability for safety decisions",
+        "problem": "Black-box answers are unacceptable for airworthiness / maintenance advice.",
+        "keo": "Evidence cards with triple/chunk IDs and retrieval confidence for human verification."
+      },
+      {
+        "gap": "Rare but critical faults",
+        "problem": "Frequency-weighted graphs bury low-count, high-severity relations.",
+        "keo": "Rarity/severity edge weights + MST ablations."
+      }
+    ],
+    "why_others_should_use": [
+      "Any org with regulated data (defense, aviation, energy, healthcare) that cannot ship prompts to public APIs.",
+      "Teams that need both dashboard-style sensemaking and step-level procedures from the same corpus.",
+      "Operators who need citation-like evidence, not just fluent text.",
+      "Researchers needing an OMIn-grounded aviation QA split that exposes the graph-vs-chunk tradeoff."
+    ]
+  },
+  "question_mix": {
+    "n": 133,
+    "by_type": {
+      "analytical": 48,
+      "global": 15,
+      "contextual": 20,
+      "actionable": 50
+    },
+    "by_category": {
+      "root_cause_analysis": 8,
+      "predictive_maintenance": 8,
+      "safety_recommendations": 8,
+      "system_level_understanding": 8,
+      "comparative_analysis": 8,
+      "trend_analysis": 8,
+      "global_sensemaking": 15,
+      "context_specific": 20,
+      "action_specific": 50
+    },
+    "implication": "Benchmark is dual-use: ~63% sensemaking-like (analytical/contextual/global) vs ~37% actionable \u2014 a single retrieval policy cannot dominate both."
+  },
+  "sensemaking_runs_mined": 78,
+  "sensemaking_by_model": {
+    "prefer_filter": "gs100+gpt-4o_eval",
+    "by_model": {
+      "gemma-3-27b-it": {
+        "n_runs": 1,
+        "keo_overall_mean": 4.30843373493976,
+        "textchunk_overall_mean": 3.698795180722892,
+        "vanilla_overall_mean": 4.118072289156626,
+        "keo_minus_chunk": 0.6096385542168679,
+        "keo_pairwise_winrate_vs_chunk_mean": 100.0
+      },
+      "mistral-nemo-12b-it": {
+        "n_runs": 1,
+        "keo_overall_mean": 3.8674698795180724,
+        "textchunk_overall_mean": 3.387951807228916,
+        "vanilla_overall_mean": 3.8433734939759034,
+        "keo_minus_chunk": 0.47951807228915655,
+        "keo_pairwise_winrate_vs_chunk_mean": 89.39393939393939
+      },
+      "phi-4-14b": {
+        "n_runs": 1,
+        "keo_overall_mean": 4.089156626506024,
+        "textchunk_overall_mean": 3.681927710843374,
+        "vanilla_overall_mean": 3.901204819277109,
+        "keo_minus_chunk": 0.40722891566265007,
+        "keo_pairwise_winrate_vs_chunk_mean": 85.96491228070175
+      }
+    }
+  },
+  "oracle_router_from_paper_tables": {
+    "gemma-3-it": {
+      "always_keo": 4.141,
+      "always_textchunk": 4.015,
+      "oracle_routed": 4.133,
+      "gain_vs_always_keo": -0.008,
+      "gain_vs_always_chunk": 0.119
+    },
+    "phi-4": {
+      "always_keo": 4.041,
+      "always_textchunk": 4.002,
+      "oracle_routed": 4.12,
+      "gain_vs_always_keo": 0.079,
+      "gain_vs_always_chunk": 0.119
+    },
+    "mistral-nemo-it": {
+      "always_keo": 3.799,
+      "always_textchunk": 3.795,
+      "oracle_routed": 3.814,
+      "gain_vs_always_keo": 0.015,
+      "gain_vs_always_chunk": 0.019
+    }
+  },
+  "rarity_demo": {
+    "n_edges": 278,
+    "n_severity_critical": 5,
+    "n_severity_safety": 60,
+    "top20pct_edge_count": 55,
+    "freq_top5": [
+      {
+        "head": "1147 AM LOCAL TIME",
+        "tail": "1147 AM",
+        "freq": 1.0,
+        "severity_term": null,
+        "severity": 1.0,
+        "rarity_score": 0.5
+      },
+      {
+        "head": "1535 MST",
+        "tail": "1535",
+        "freq": 1.0,
+        "severity_term": null,
+        "severity": 1.0,
+        "rarity_score": 0.5
+      },
+      {
+        "head": "1825 EASTERN STANDARD TIME",
+        "tail": "1825",
+        "freq": 1.0,
+        "severity_term": null,
+        "severity": 1.0,
+        "rarity_score": 0.5
+      },
+      {
+        "head": "1900 HOURS PACIFIC DAYLIGHT TIME",
+        "tail": "1900",
+        "freq": 1.0,
+        "severity_term": null,
+        "severity": 1.0,
+        "rarity_score": 0.5
+      },
+      {
+        "head": "1900 HOURS PACIFIC DAYLIGHT TIME",
+        "tail": "1900 HOURS",
+        "freq": 1.0,
+        "severity_term": null,
+        "severity": 1.0,
+        "rarity_score": 0.5
+      }
+    ],
+    "critical_top_by_freq": [
+      {
+        "head": "NR2 ENGINE FIRE",
+        "tail": "FIRE",
+        "freq": 1.0,
+        "severity_term": "fire",
+        "severity": 3.0,
+        "rarity_score": 1.5
+      },
+      {
+        "head": "ENGINE OVERHEAT",
+        "tail": "AIR INTAKE PLUGS",
+        "freq": 1.0,
+        "severity_term": "overheat",
+        "severity": 2.0,
+        "rarity_score": 1.0
+      },
+      {
+        "head": "ENGINE OVERHEAT",
+        "tail": "HOT OIL SMELL",
+        "freq": 1.0,
+        "severity_term": "overheat",
+        "severity": 2.0,
+        "rarity_score": 1.0
+      },
+      {
+        "head": "HOT OIL SMELL",
+        "tail": "ENGINE OVERHEAT",
+        "freq": 1.0,
+        "severity_term": "overheat",
+        "severity": 2.0,
+        "rarity_score": 1.0
+      },
+      {
+        "head": "AIR INTAKE PLUGS",
+        "tail": "ENGINE OVERHEAT",
+        "freq": 1.0,
+        "severity_term": "overheat",
+        "severity": 2.0,
+        "rarity_score": 1.0
+      }
+    ],
+    "critical_top_by_rarity": [
+      {
+        "head": "NR2 ENGINE FIRE",
+        "tail": "FIRE",
+        "freq": 1.0,
+        "severity_term": "fire",
+        "severity": 3.0,
+        "rarity_score": 1.5
+      },
+      {
+        "head": "ENGINE OVERHEAT",
+        "tail": "AIR INTAKE PLUGS",
+        "freq": 1.0,
+        "severity_term": "overheat",
+        "severity": 2.0,
+        "rarity_score": 1.0
+      },
+      {
+        "head": "ENGINE OVERHEAT",
+        "tail": "HOT OIL SMELL",
+        "freq": 1.0,
+        "severity_term": "overheat",
+        "severity": 2.0,
+        "rarity_score": 1.0
+      },
+      {
+        "head": "HOT OIL SMELL",
+        "tail": "ENGINE OVERHEAT",
+        "freq": 1.0,
+        "severity_term": "overheat",
+        "severity": 2.0,
+        "rarity_score": 1.0
+      },
+      {
+        "head": "AIR INTAKE PLUGS",
+        "tail": "ENGINE OVERHEAT",
+        "freq": 1.0,
+        "severity_term": "overheat",
+        "severity": 2.0,
+        "rarity_score": 1.0
+      }
+    ],
+    "critical_buried_outside_top20pct_freq": 4,
+    "safety_buried_outside_top20pct_freq": 51,
+    "critical_buried_in_bottom_80pct_freq": 4,
+    "safety_buried_in_bottom_80pct_freq": 51,
+    "takeaway": "4/5 high-severity edges and 51/60 safety-relevant edges fall outside the top 20% by frequency \u2014 frequency-only MST can under-prioritize rare but safety-critical relations."
+  },
+  "headline_takeaways": [
+    "gemma-3-27b-it: KEO beats text-chunk on sensemaking by 0.61 overall (mean over mined runs).",
+    "mistral-nemo-12b-it: KEO beats text-chunk on sensemaking by 0.48 overall (mean over mined runs).",
+    "phi-4-14b: KEO beats text-chunk on sensemaking by 0.41 overall (mean over mined runs).",
+    "gemma-3-it: oracle task routing scores 4.133 vs always-KEO 4.141 (-0.008) and always-chunk 4.015 (+0.119).",
+    "phi-4: oracle task routing scores 4.12 vs always-KEO 4.041 (+0.079) and always-chunk 4.002 (+0.119).",
+    "mistral-nemo-it: oracle task routing scores 3.814 vs always-KEO 3.799 (+0.015) and always-chunk 3.795 (+0.019).",
+    "4/5 high-severity edges and 51/60 safety-relevant edges fall outside the top 20% by frequency \u2014 frequency-only MST can under-prioritize rare but safety-critical relations."
+  ]
+}

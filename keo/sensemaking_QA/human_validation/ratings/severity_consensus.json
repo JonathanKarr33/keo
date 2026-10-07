@@ -1,0 +1,1017 @@
+{
+  "updated_at": "2026-09-29T19:03:35",
+  "n_items": 100,
+  "n_consensus_agree": 0,
+  "n_adjudicated": 0,
+  "n_conference": 0,
+  "n_open_disagreement": 0,
+  "classes": [
+    "catastrophic",
+    "hazardous",
+    "major",
+    "minor",
+    "none"
+  ],
+  "items": [
+    {
+      "item_num": 0,
+      "head": "LOOSE B-NUT",
+      "relation": "PART OF",
+      "tail": "OIL LINE",
+      "ann1_class": "minor",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 1,
+      "head": "BRAKE FAILURE",
+      "relation": "HAS CAUSE",
+      "tail": "OVER RAN RUNWAY INTO A DITCH",
+      "ann1_class": "catastrophic",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 2,
+      "head": "CRASH",
+      "relation": "HAS CAUSE",
+      "tail": "UNABLE TO CLIMB",
+      "ann1_class": "catastrophic",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 3,
+      "head": "ICING",
+      "relation": "HAS CAUSE",
+      "tail": "LOST CONTROL",
+      "ann1_class": "catastrophic",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 4,
+      "head": "ENGINE",
+      "relation": "EVENT DISTANCE",
+      "tail": "200 FEET",
+      "ann1_class": "none",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 5,
+      "head": "VIBRATION",
+      "relation": "EVENT DISTANCE",
+      "tail": "INFLIGHT",
+      "ann1_class": "hazardous",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 6,
+      "head": "RUNUP",
+      "relation": "FOLLOWED BY",
+      "tail": "HYDRAULIC ON",
+      "ann1_class": "major",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 7,
+      "head": "OIL LEAK",
+      "relation": "HAS EFFECT",
+      "tail": "FORCED LANDING",
+      "ann1_class": "hazardous",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 8,
+      "head": "AIRCRAFT CRASHED",
+      "relation": "FOLLOWED BY",
+      "tail": "EMERGENCY LANDING",
+      "ann1_class": "catastrophic",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 9,
+      "head": "CRASHED AND BURNED",
+      "relation": "INSTANCE OF",
+      "tail": "AIRPLANE",
+      "ann1_class": "catastrophic",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 10,
+      "head": "AUTO THROTTLE SYSTEM",
+      "relation": "HAS CAUSE",
+      "tail": "LOST POWER",
+      "ann1_class": "hazardous",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 11,
+      "head": "ACFT N42807",
+      "relation": "INSTANCE OF",
+      "tail": "DMGD",
+      "ann1_class": "none",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 12,
+      "head": "DOOR",
+      "relation": "HAS EFFECT",
+      "tail": "TEARING LOOSE",
+      "ann1_class": "catastrophic",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 13,
+      "head": "WATER IN FUEL",
+      "relation": "HAS CAUSE",
+      "tail": "ENGINE TO QUIT",
+      "ann1_class": "catastrophic",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 14,
+      "head": "ENGINE STOPPED",
+      "relation": "HAS EFFECT",
+      "tail": "FOUND WATER IN FUEL",
+      "ann1_class": "hazardous",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 15,
+      "head": "EMERGENCY PROCEDURES",
+      "relation": "NOT FOLLOWED BY",
+      "tail": "NOSE GEAR COLLAPSED",
+      "ann1_class": "catastrophic",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 16,
+      "head": "LOOSE BATTERY POST",
+      "relation": "HAS CAUSE",
+      "tail": "LOSS OF ALTERNATOR",
+      "ann1_class": "major",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 17,
+      "head": "RIGHT TANK",
+      "relation": "NOT FUELED",
+      "tail": "FUEL LEAK",
+      "ann1_class": "hazardous",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 18,
+      "head": "BRAKE DISC PADS",
+      "relation": "INSTANCE OF",
+      "tail": "TOTALLY WORN",
+      "ann1_class": "hazardous",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 19,
+      "head": "LANDING GEAR COLLAPSED AT TOUCHDOWN",
+      "relation": "HAS EFFECT",
+      "tail": "COLLAPSED",
+      "ann1_class": "catastrophic",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 20,
+      "head": "PRECAUTIONARY LANDING",
+      "relation": "HAS CAUSE",
+      "tail": "INSTRUMENT LIGHT INOPERATIVE",
+      "ann1_class": "major",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 21,
+      "head": "GENERATOR CIRCUIT BREAKERS",
+      "relation": "INSTANCE OF",
+      "tail": "OUT",
+      "ann1_class": "none",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 22,
+      "head": "RUDDER PEDAL",
+      "relation": "PART OF",
+      "tail": "LANDED",
+      "ann1_class": "none",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 23,
+      "head": "ALTERNATOR BELT",
+      "relation": "HAS CAUSE",
+      "tail": "ELECTRICAL SYSTEM FAILED",
+      "ann1_class": "hazardous",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 24,
+      "head": "ENGINE",
+      "relation": "QUIT",
+      "tail": "BASE",
+      "ann1_class": "major",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 25,
+      "head": "ENGINE STOPPED",
+      "relation": "HAS CAUSE",
+      "tail": "VACUUM IN THE TANK",
+      "ann1_class": "major",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 26,
+      "head": "ENGINE QUIT",
+      "relation": "HAS EFFECT",
+      "tail": "LANDED ON FREEWAY",
+      "ann1_class": "major",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 27,
+      "head": "LOSS OF OIL PREESURE",
+      "relation": "HAS CAUSE",
+      "tail": "ENGINE SHUTDOWN",
+      "ann1_class": "major",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 28,
+      "head": "ENGINE FAILED",
+      "relation": "HAS CAUSE",
+      "tail": "WATER IN FUEL",
+      "ann1_class": "hazardous",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 29,
+      "head": "ENGINE FALURE",
+      "relation": "FOLLOWED BY",
+      "tail": "TOTAL ELECTRICAL FAILURE",
+      "ann1_class": "catastrophic",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 30,
+      "head": "NIGHT FLIGHT",
+      "relation": "FOLLOWED BY",
+      "tail": "BATTERY DISCHARING",
+      "ann1_class": "major",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 31,
+      "head": "SMOKE",
+      "relation": "HAS EFFECT",
+      "tail": "NR2 ENGINE FIRE",
+      "ann1_class": "catastrophic",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 32,
+      "head": "VIBRATION",
+      "relation": "LOCATION",
+      "tail": "NEAR",
+      "ann1_class": "major",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 33,
+      "head": "DAMAGED",
+      "relation": "HAS CAUSE",
+      "tail": "PREVIOUS HARD LANDING",
+      "ann1_class": "major",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 34,
+      "head": "ENGINE QUIT",
+      "relation": "EVENT DISTANCE",
+      "tail": "LIFTOFF",
+      "ann1_class": "catastrophic",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 35,
+      "head": "CRASH",
+      "relation": "TIME PERIOD",
+      "tail": "TAKEOFF",
+      "ann1_class": "catastrophic",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 36,
+      "head": "REPORTED PROBLEM",
+      "relation": "INSTANCE OF",
+      "tail": "STALLED AND CRASHED",
+      "ann1_class": "catastrophic",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 37,
+      "head": "ELECTRICAL FAILURE",
+      "relation": "HAS EFFECT",
+      "tail": "COLLAPSED",
+      "ann1_class": "hazardous",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 38,
+      "head": "SMOKE",
+      "relation": "LOCATION",
+      "tail": "ENGINE COWL",
+      "ann1_class": "hazardous",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 39,
+      "head": "FUMES",
+      "relation": "INSTANCE OF",
+      "tail": "EMERGENCY LANDING",
+      "ann1_class": "hazardous",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 40,
+      "head": "CRASH LANDING",
+      "relation": "HAS EFFECT",
+      "tail": "AVOIDING TREES",
+      "ann1_class": "hazardous",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 41,
+      "head": "LANDING GEAR SWITCH",
+      "relation": "HAS EFFECT",
+      "tail": "NOSE GEAR COLLAPSED",
+      "ann1_class": "major",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 42,
+      "head": "AIRCRAFT",
+      "relation": "HAS CAUSE",
+      "tail": "ELECTRICAL FAILURE",
+      "ann1_class": "major",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 43,
+      "head": "BEGAN GO",
+      "relation": "EVENT DISTANCE",
+      "tail": "BELOW VMC",
+      "ann1_class": "none",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 44,
+      "head": "WATER IN TANKS",
+      "relation": "HAS CAUSE",
+      "tail": "ENGINE TO STOP",
+      "ann1_class": "major",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 45,
+      "head": "SMOKE AND FUMES",
+      "relation": "LOCATION",
+      "tail": "COCKPIT",
+      "ann1_class": "catastrophic",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 46,
+      "head": "UNSCHEDULED LANDING",
+      "relation": "HAS CAUSE",
+      "tail": "FAILED TO REMOVE NOSE DOWNLOCK PIN",
+      "ann1_class": "hazardous",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 47,
+      "head": "CRASH",
+      "relation": "LOCATION",
+      "tail": "OFF END RWY",
+      "ann1_class": "catastrophic",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 48,
+      "head": "SYSTEM",
+      "relation": "NEEDED TO BE PURGED OF AIR",
+      "tail": "BRAKE FAILURE",
+      "ann1_class": "catastrophic",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 49,
+      "head": "TAKE OFF",
+      "relation": "FOLLOWED BY",
+      "tail": "PLANE CRASHED",
+      "ann1_class": "catastrophic",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 50,
+      "head": "RUDDER & AIL CTL CABLES",
+      "relation": "PART OF",
+      "tail": "RUDDER",
+      "ann1_class": "none",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 51,
+      "head": "SMOKE IN COCKPIT",
+      "relation": "HAS CAUSE",
+      "tail": "LIFTOFF",
+      "ann1_class": "catastrophic",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 52,
+      "head": "SMOKE AND FUMES",
+      "relation": "HAS CAUSE",
+      "tail": "GRASS AND DIRT IN ENGINE COMPARTMENT",
+      "ann1_class": "hazardous",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 53,
+      "head": "GEAR COLLAPSED",
+      "relation": "EVENT DISTANCE",
+      "tail": "200 FEET",
+      "ann1_class": "hazardous",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 54,
+      "head": "HYDRAULIC PUMP",
+      "relation": "SHUT DOWN BY",
+      "tail": "ENGINE",
+      "ann1_class": "hazardous",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 55,
+      "head": "ELECTRICAL EMERGENCY",
+      "relation": "FOLLOWED BY",
+      "tail": "JUMP START",
+      "ann1_class": "minor",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 56,
+      "head": "ENGINE COWLING",
+      "relation": "PART OF",
+      "tail": "COWLING",
+      "ann1_class": "hazardous",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 57,
+      "head": "OIL LEAK",
+      "relation": "HAS CAUSE",
+      "tail": "DIPSTICK NOT BEING SECURED",
+      "ann1_class": "hazardous",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 58,
+      "head": "CRASH",
+      "relation": "EVENT DISTANCE",
+      "tail": "EMERGENCY LANDING",
+      "ann1_class": "catastrophic",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 59,
+      "head": "ENGINE",
+      "relation": "HAS CAUSE",
+      "tail": "BACKFIRED",
+      "ann1_class": "hazardous",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 60,
+      "head": "ENGINE OVERHEATED",
+      "relation": "HAS CAUSE",
+      "tail": "DUST COVER PLATE NOT REMOVED",
+      "ann1_class": "hazardous",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 61,
+      "head": "AIRCRAFT CRASHED",
+      "relation": "HAS CAUSE",
+      "tail": "REBUILDING",
+      "ann1_class": "catastrophic",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 62,
+      "head": "ICING",
+      "relation": "INFLUENCED BY",
+      "tail": "ICING FORECAST",
+      "ann1_class": "major",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 63,
+      "head": "CRASH",
+      "relation": "HAS CAUSE",
+      "tail": "PILOT ABORTED TAKEOFF",
+      "ann1_class": "catastrophic",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 64,
+      "head": "RETURNED",
+      "relation": "FOLLOWS",
+      "tail": "FAILED TO SEE WARNING LIGHT",
+      "ann1_class": "major",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 65,
+      "head": "ENGINE",
+      "relation": "EQUIPPED WITH",
+      "tail": "HYDRAULIC PUMP",
+      "ann1_class": "none",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 66,
+      "head": "ENGINE SHUTDOWN",
+      "relation": "HAS CAUSE",
+      "tail": "SMOKE",
+      "ann1_class": "hazardous",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 67,
+      "head": "PLT",
+      "relation": "PREOCCUPIED WITH",
+      "tail": "PREV NOSE WHEEL VIBRATION",
+      "ann1_class": "hazardous",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 68,
+      "head": "LANDED",
+      "relation": "INSTANCE OF",
+      "tail": "EVENT",
+      "ann1_class": "none",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 69,
+      "head": "FOUND LOOSE OIL CAP",
+      "relation": "HAS CAUSE",
+      "tail": "OIL LEAK",
+      "ann1_class": "major",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 70,
+      "head": "CRASH",
+      "relation": "INSTANCE OF",
+      "tail": "FORCED LANDING",
+      "ann1_class": "catastrophic",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 71,
+      "head": "HYDRAULIC SYSTEM",
+      "relation": "HAS EFFECT",
+      "tail": "LOW ON FLUID",
+      "ann1_class": "minor",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 72,
+      "head": "WATER",
+      "relation": "LOCATION",
+      "tail": "RIGHT TANK",
+      "ann1_class": "major",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 73,
+      "head": "BRAKES",
+      "relation": "WORN OUT",
+      "tail": "BRAKE RESERVOIR",
+      "ann1_class": "minor",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 74,
+      "head": "CRASHED AND BURNED",
+      "relation": "EVENT DISTANCE",
+      "tail": "GRASS RUNWAY",
+      "ann1_class": "catastrophic",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 75,
+      "head": "DRAINING OF SUMPS",
+      "relation": "HAS CAUSE",
+      "tail": "ENGINE QUIT",
+      "ann1_class": "minor",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 76,
+      "head": "ENGINE",
+      "relation": "EVENT DISTANCE",
+      "tail": "CRUISE",
+      "ann1_class": "none",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 77,
+      "head": "WING FUEL TANK SUMPS",
+      "relation": "HAS EFFECT",
+      "tail": "ENGINE QUIT",
+      "ann1_class": "hazardous",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 78,
+      "head": "SKIDS",
+      "relation": "HAS CAUSE",
+      "tail": "HIGH WIND",
+      "ann1_class": "major",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 79,
+      "head": "FUEL CAP O RINGS",
+      "relation": "INSTANCE OF",
+      "tail": "WORN",
+      "ann1_class": "minor",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 80,
+      "head": "AIRCRAFT",
+      "relation": "INSTANCE OF",
+      "tail": "PILOT",
+      "ann1_class": "none",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 81,
+      "head": "LOOSE COWLING",
+      "relation": "HAS EFFECT",
+      "tail": "CRACKED WINDSHIELD",
+      "ann1_class": "major",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 82,
+      "head": "FIRE",
+      "relation": "HAS EFFECT",
+      "tail": "EXPLODED",
+      "ann1_class": "hazardous",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 83,
+      "head": "NOSE BAGGAGE DOOR",
+      "relation": "OPENED ON",
+      "tail": "TAKEOFF",
+      "ann1_class": "hazardous",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 84,
+      "head": "CRASHED",
+      "relation": "HAS CAUSE",
+      "tail": "TAKEOFF",
+      "ann1_class": "catastrophic",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 85,
+      "head": "ENGINE STOPPED",
+      "relation": "HAS EFFECT",
+      "tail": "CRASHED",
+      "ann1_class": "catastrophic",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 86,
+      "head": "PUSHING AND PULLING ENGINE CONTROLS",
+      "relation": "FOLLOWED BY",
+      "tail": "USED BOOST PUMP",
+      "ann1_class": "minor",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 87,
+      "head": "NOSE GEAR COLLAPSED",
+      "relation": "HAS CAUSE",
+      "tail": "LANDING GEAR SWITCH IMPROPERLY PLACED",
+      "ann1_class": "hazardous",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 88,
+      "head": "PILOT",
+      "relation": "HAD",
+      "tail": "ELECTRICAL FAILURE",
+      "ann1_class": "major",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 89,
+      "head": "ELECTRICAL FAILURE",
+      "relation": "FOLLOWED BY",
+      "tail": "FINAL",
+      "ann1_class": "major",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 90,
+      "head": "CRASHED",
+      "relation": "EVENT DISTANCE",
+      "tail": "OFF END OF STRIP",
+      "ann1_class": "catastrophic",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 91,
+      "head": "ICING",
+      "relation": "FOLLOWED BY",
+      "tail": "ALTIMETER NOT IFR CERTIFIED",
+      "ann1_class": "major",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 92,
+      "head": "ENGINE FAILED ON TAKEOFF",
+      "relation": "HAS CAUSE",
+      "tail": "WATER IN FUEL",
+      "ann1_class": "hazardous",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 93,
+      "head": "PILOT",
+      "relation": "MADE",
+      "tail": "HARD LANDING",
+      "ann1_class": "major",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 94,
+      "head": "ENGINE OVERHEAT",
+      "relation": "HAS CAUSE",
+      "tail": "HOT OIL SMELL",
+      "ann1_class": "major",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 95,
+      "head": "NOSE GEAR COLLAPSED",
+      "relation": "EVENT DISTANCE",
+      "tail": "START-UP",
+      "ann1_class": "major",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 96,
+      "head": "PILOT",
+      "relation": "USED BY",
+      "tail": "ALTIMETER",
+      "ann1_class": "minor",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 97,
+      "head": "ENGINE QUIT",
+      "relation": "HAS CAUSE",
+      "tail": "OUT OF FUEL",
+      "ann1_class": "major",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 98,
+      "head": "SMOKE IN COCKPIT",
+      "relation": "HAS CAUSE",
+      "tail": "FIRE",
+      "ann1_class": "catastrophic",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    },
+    {
+      "item_num": 99,
+      "head": "CIRCUIT BREAKER HYDRAULIC PUMP",
+      "relation": "PART OF",
+      "tail": "TAXIING",
+      "ann1_class": "minor",
+      "ann2_class": null,
+      "final_class": null,
+      "source": "incomplete_primaries"
+    }
+  ]
+}

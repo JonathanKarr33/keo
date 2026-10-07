@@ -1,0 +1,1119 @@
+[
+  {
+    "question_id": "system_level_understanding_005",
+    "question": "How do different maintenance actions like replacement and repair influence the recurrence rates of similar problems in the aircraft fleet?",
+    "question_category": "system_level_understanding",
+    "question_type": "analytical",
+    "ground_truth": null,
+    "original_problem": null,
+    "ablation": {
+      "method": "keo",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "selection": {
+        "selector": "mst",
+        "use_mst": true
+      },
+      "use_mst": true,
+      "edge_weight": "tfidf",
+      "embedding_backend": "local",
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "provider": "local",
+      "answer_model": "mlx-community/Phi-4-mini-instruct-4bit",
+      "answer_model_exact": "mlx-community/Phi-4-mini-instruct-4bit",
+      "kg_path": "../kg/output/kg_llm/gpt4o_with_nodes_batches/100/gpt4o_withprevnodes_100_with_entity_mentions_fixed.gml",
+      "corpus_csv": null,
+      "text_column": null
+    },
+    "vanilla_answer": null,
+    "textchunkrag_answer": null,
+    "keo_answer": {
+      "question_id": "system_level_understanding_005",
+      "question": "How do different maintenance actions like replacement and repair influence the recurrence rates of similar problems in the aircraft fleet?",
+      "category": "system_level_understanding",
+      "answer": "The maintenance actions like replacement and repair significantly influence the recurrence rates of similar problems in the aircraft fleet by ensuring components are either upgraded to newer standards or repaired to restore their original functionality. This process directly impacts flight safety and reliability in several ways:\n\n1. **Replacement**:\n   - Replacing components that are worn-out or ineffective (e.g., worn-out brakes leading to incidents like striking) directly removes the risk associated with those components failing during flight operations. This proactive approach minimizes recurrence rates of issues associated with those components.\n   - Newer components often come with improved designs and materials that enhance reliability and reduce maintenance needs over time.\n\n2. **Repair**:\n   - Repairing components (e.g., addressing an oil leak in an engine or rectifying an rpm loss due to faulty brakes) restores the original condition of the components, ensuring they function correctly until they require replacement again. This maintenance practice helps maintain operational reliability and safety until components reach a point where they can no longer be effectively repaired.\n   - Regular maintenance checks (e.g., during an annual inspection) help identify issues early, allowing maintenance teams to fix problems before they lead to failures or safety incidents.\n\nThe maintenance records provided (e.g., incidents following an abort due to pilot error, collisions resulting from pilot error, and incidents shortly after takeoff) underline the importance of comprehensive maintenance practices in preventing recurrence of issues and enhancing flight safety.\n\n**Actionable Insights**:\n- Consistent maintenance checks and adherence to maintenance schedules (e.g., returning an aircraft to service after a repair) are crucial in identifying and rectifying issues before they lead to safety incidents.\n- Training maintenance personnel on recognizing early signs of wear and damage can lead to more timely maintenance actions, further reducing recurrence rates.\n- Leveraging data from maintenance records to identify common issues and focusing maintenance efforts on preventing recurrence can enhance flight safety and reliability.\n\nIn summary, maintenance actions such as replacement and repair are fundamental in managing recurrence rates of issues within an aircraft fleet, thereby directly influencing flight safety and reliability. Regular maintenance checks and data-driven maintenance planning are key elements in ensuring these outcomes.",
+      "method": "keo",
+      "use_mst": true,
+      "edge_weight": "tfidf",
+      "embedding_backend": "local",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "graph_nodes_used": 13,
+      "model": "mlx-community/Phi-4-mini-instruct-4bit",
+      "model_exact": "mlx-community/Phi-4-mini-instruct-4bit",
+      "model_provider": "local",
+      "graph_available": true,
+      "evidence": {
+        "seed_nodes": [
+          {
+            "id": "ANNUAL INSPECTION",
+            "sim": 0.3125224843876063
+          },
+          {
+            "id": "WORN OUT & INEFFECTIVE BRAKES",
+            "sim": 0.299584331843694
+          },
+          {
+            "id": "BRAKE PROBLEMS",
+            "sim": 0.2018746131159877
+          },
+          {
+            "id": "COMPRESSOR STALL",
+            "sim": 0.20025240415889986
+          },
+          {
+            "id": "CRACKED WINDSHIELD",
+            "sim": 0.20011676767654507
+          },
+          {
+            "id": "AIRCRAFT",
+            "sim": 0.19974361250931436
+          },
+          {
+            "id": "POWER FAILURE",
+            "sim": 0.19837449833318835
+          },
+          {
+            "id": "AIRCRAFT TOOK OFF",
+            "sim": 0.18980835765132772
+          },
+          {
+            "id": "FUEL EXHAUSTION",
+            "sim": 0.1862288269626432
+          },
+          {
+            "id": "PARKED AIRCRAFT",
+            "sim": 0.16938908097891875
+          }
+        ],
+        "triples": [
+          {
+            "id": "79090e541272",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "DESCENT",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "574dc8acb619",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "NOSED OVER IN FURROWS",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "8e89afa40e6f",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "PARKING",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "db36ff6aa465",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "ANNUAL INSPECTION",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "f647a3c3d752",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "RPM LOSS",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "6eb5871a57cf",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "BRAKE PROBLEMS",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "e808ff057284",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "FERRY FLIGHT",
+            "weight": 4.178073120099303
+          },
+          {
+            "id": "314603b16db4",
+            "head": "RAN OUT OF FUEL",
+            "relation": "related_to",
+            "tail": "FERRY FLIGHT",
+            "weight": 5.185524630370436
+          },
+          {
+            "id": "e97b29245778",
+            "head": "WORN OUT & INEFFECTIVE BRAKES",
+            "relation": "related_to",
+            "tail": "STRUCK",
+            "weight": 5.388257184424518
+          },
+          {
+            "id": "9d5f0c8ff95c",
+            "head": "FUEL SIPHONED",
+            "relation": "related_to",
+            "tail": "FUEL EXHAUSTION",
+            "weight": 5.388257184424518
+          },
+          {
+            "id": "c9debc0cd2d8",
+            "head": "AIRCRAFT TOOK OFF",
+            "relation": "related_to",
+            "tail": "SHORTLY AFTER",
+            "weight": 5.185524630370436
+          }
+        ],
+        "confidence": 0.21578949776181258,
+        "use_mst": true,
+        "edge_weight": "tfidf",
+        "embedding_backend": "local",
+        "controls": {
+          "shuffle_edges": false,
+          "strip_relations": false,
+          "dedup_chunks": false,
+          "match_context_budget": false,
+          "control_seed": null
+        },
+        "selection": {
+          "selector": "mst",
+          "use_mst": true
+        }
+      }
+    },
+    "community_answer": null,
+    "hybrid_answer": null,
+    "routed_answer": null,
+    "graphrag_answer": {
+      "question_id": "system_level_understanding_005",
+      "question": "How do different maintenance actions like replacement and repair influence the recurrence rates of similar problems in the aircraft fleet?",
+      "category": "system_level_understanding",
+      "answer": "The maintenance actions like replacement and repair significantly influence the recurrence rates of similar problems in the aircraft fleet by ensuring components are either upgraded to newer standards or repaired to restore their original functionality. This process directly impacts flight safety and reliability in several ways:\n\n1. **Replacement**:\n   - Replacing components that are worn-out or ineffective (e.g., worn-out brakes leading to incidents like striking) directly removes the risk associated with those components failing during flight operations. This proactive approach minimizes recurrence rates of issues associated with those components.\n   - Newer components often come with improved designs and materials that enhance reliability and reduce maintenance needs over time.\n\n2. **Repair**:\n   - Repairing components (e.g., addressing an oil leak in an engine or rectifying an rpm loss due to faulty brakes) restores the original condition of the components, ensuring they function correctly until they require replacement again. This maintenance practice helps maintain operational reliability and safety until components reach a point where they can no longer be effectively repaired.\n   - Regular maintenance checks (e.g., during an annual inspection) help identify issues early, allowing maintenance teams to fix problems before they lead to failures or safety incidents.\n\nThe maintenance records provided (e.g., incidents following an abort due to pilot error, collisions resulting from pilot error, and incidents shortly after takeoff) underline the importance of comprehensive maintenance practices in preventing recurrence of issues and enhancing flight safety.\n\n**Actionable Insights**:\n- Consistent maintenance checks and adherence to maintenance schedules (e.g., returning an aircraft to service after a repair) are crucial in identifying and rectifying issues before they lead to safety incidents.\n- Training maintenance personnel on recognizing early signs of wear and damage can lead to more timely maintenance actions, further reducing recurrence rates.\n- Leveraging data from maintenance records to identify common issues and focusing maintenance efforts on preventing recurrence can enhance flight safety and reliability.\n\nIn summary, maintenance actions such as replacement and repair are fundamental in managing recurrence rates of issues within an aircraft fleet, thereby directly influencing flight safety and reliability. Regular maintenance checks and data-driven maintenance planning are key elements in ensuring these outcomes.",
+      "method": "keo",
+      "use_mst": true,
+      "edge_weight": "tfidf",
+      "embedding_backend": "local",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "graph_nodes_used": 13,
+      "model": "mlx-community/Phi-4-mini-instruct-4bit",
+      "model_exact": "mlx-community/Phi-4-mini-instruct-4bit",
+      "model_provider": "local",
+      "graph_available": true,
+      "evidence": {
+        "seed_nodes": [
+          {
+            "id": "ANNUAL INSPECTION",
+            "sim": 0.3125224843876063
+          },
+          {
+            "id": "WORN OUT & INEFFECTIVE BRAKES",
+            "sim": 0.299584331843694
+          },
+          {
+            "id": "BRAKE PROBLEMS",
+            "sim": 0.2018746131159877
+          },
+          {
+            "id": "COMPRESSOR STALL",
+            "sim": 0.20025240415889986
+          },
+          {
+            "id": "CRACKED WINDSHIELD",
+            "sim": 0.20011676767654507
+          },
+          {
+            "id": "AIRCRAFT",
+            "sim": 0.19974361250931436
+          },
+          {
+            "id": "POWER FAILURE",
+            "sim": 0.19837449833318835
+          },
+          {
+            "id": "AIRCRAFT TOOK OFF",
+            "sim": 0.18980835765132772
+          },
+          {
+            "id": "FUEL EXHAUSTION",
+            "sim": 0.1862288269626432
+          },
+          {
+            "id": "PARKED AIRCRAFT",
+            "sim": 0.16938908097891875
+          }
+        ],
+        "triples": [
+          {
+            "id": "79090e541272",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "DESCENT",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "574dc8acb619",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "NOSED OVER IN FURROWS",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "8e89afa40e6f",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "PARKING",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "db36ff6aa465",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "ANNUAL INSPECTION",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "f647a3c3d752",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "RPM LOSS",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "6eb5871a57cf",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "BRAKE PROBLEMS",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "e808ff057284",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "FERRY FLIGHT",
+            "weight": 4.178073120099303
+          },
+          {
+            "id": "314603b16db4",
+            "head": "RAN OUT OF FUEL",
+            "relation": "related_to",
+            "tail": "FERRY FLIGHT",
+            "weight": 5.185524630370436
+          },
+          {
+            "id": "e97b29245778",
+            "head": "WORN OUT & INEFFECTIVE BRAKES",
+            "relation": "related_to",
+            "tail": "STRUCK",
+            "weight": 5.388257184424518
+          },
+          {
+            "id": "9d5f0c8ff95c",
+            "head": "FUEL SIPHONED",
+            "relation": "related_to",
+            "tail": "FUEL EXHAUSTION",
+            "weight": 5.388257184424518
+          },
+          {
+            "id": "c9debc0cd2d8",
+            "head": "AIRCRAFT TOOK OFF",
+            "relation": "related_to",
+            "tail": "SHORTLY AFTER",
+            "weight": 5.185524630370436
+          }
+        ],
+        "confidence": 0.21578949776181258,
+        "use_mst": true,
+        "edge_weight": "tfidf",
+        "embedding_backend": "local",
+        "controls": {
+          "shuffle_edges": false,
+          "strip_relations": false,
+          "dedup_chunks": false,
+          "match_context_budget": false,
+          "control_seed": null
+        },
+        "selection": {
+          "selector": "mst",
+          "use_mst": true
+        }
+      }
+    },
+    "risk_answer": null,
+    "chunk_tok_answer": null,
+    "chunk_sum_answer": null,
+    "chunk_dedup_answer": null,
+    "keo_shuf_answer": null,
+    "keo_norel_answer": null
+  },
+  {
+    "question_id": "root_cause_analysis_007",
+    "question": "What role do inspection and repair procedures play in preventing structural damage, and where are the gaps?",
+    "question_category": "root_cause_analysis",
+    "question_type": "analytical",
+    "ground_truth": null,
+    "original_problem": null,
+    "ablation": {
+      "method": "keo",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "selection": {
+        "selector": "mst",
+        "use_mst": true
+      },
+      "use_mst": true,
+      "edge_weight": "tfidf",
+      "embedding_backend": "local",
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "provider": "local",
+      "answer_model": "mlx-community/Phi-4-mini-instruct-4bit",
+      "answer_model_exact": "mlx-community/Phi-4-mini-instruct-4bit",
+      "kg_path": "../kg/output/kg_llm/gpt4o_with_nodes_batches/100/gpt4o_withprevnodes_100_with_entity_mentions_fixed.gml",
+      "corpus_csv": null,
+      "text_column": null
+    },
+    "vanilla_answer": null,
+    "textchunkrag_answer": null,
+    "keo_answer": {
+      "question_id": "root_cause_analysis_007",
+      "question": "What role do inspection and repair procedures play in preventing structural damage, and where are the gaps?",
+      "category": "root_cause_analysis",
+      "answer": "The role of inspection and repair procedures is crucial in preventing structural damage to aircraft and ensuring flight safety. These procedures help identify issues early on, allowing maintenance teams to address problems before they escalate into more serious issues that could compromise flight safety.\n\nOne gap observed from the maintenance records is the tampering of the elevator trim inspection panel, which indicates a possible lapse in maintenance oversight or a compromised maintenance culture. This gap could lead to undetected issues with flight control surfaces, potentially resulting in loss of control incidents.\n\nFurthermore, incidents like an engine cowling door coming off due to improper fastening during takeoff reflect a gap in maintenance procedures, specifically related to fastener integrity checks. This gap could lead to engine cowling failure, posing a risk of engine fires or loss of engine power during flight.\n\nThe maintenance records also hint at a gap concerning debris maintenance on the runway, which directly affects aircraft safety during takeoff and landing phases. This gap suggests a need for improved coordination and communication between maintenance teams responsible for different parts of the aircraft maintenance process.\n\nTo close these gaps, maintenance procedures should be reviewed and revised to include:\n- Enhanced tamper-evident measures on maintenance panels to prevent unauthorized access or tampering.\n- Implementation of stricter fastener inspection routines to prevent issues like cowling door detachment.\n- Improvement of coordination efforts between different maintenance teams to ensure comprehensive maintenance coverage, avoiding maintenance neglect on components such as the elevator trim or runway debris maintenance.\n\nBy addressing these gaps through improved maintenance procedures and oversight, flight safety can be significantly enhanced, preventing structural damage and ensuring compliance with safety regulations and standards. Regular audits and updates to maintenance procedures will further solidify flight safety measures against possible incidents resulting from maintenance gaps.",
+      "method": "keo",
+      "use_mst": true,
+      "edge_weight": "tfidf",
+      "embedding_backend": "local",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "graph_nodes_used": 10,
+      "model": "mlx-community/Phi-4-mini-instruct-4bit",
+      "model_exact": "mlx-community/Phi-4-mini-instruct-4bit",
+      "model_provider": "local",
+      "graph_available": true,
+      "evidence": {
+        "seed_nodes": [
+          {
+            "id": "ANNUAL INSPECTION",
+            "sim": 0.46936622464911226
+          },
+          {
+            "id": "DAMAGED",
+            "sim": 0.333424147686692
+          },
+          {
+            "id": "9 INCH TEAR IN FUSELAGE",
+            "sim": 0.312233282873531
+          },
+          {
+            "id": "CRACKED WINDSHIELD",
+            "sim": 0.2805100581610588
+          },
+          {
+            "id": "WORN OUT & INEFFECTIVE BRAKES",
+            "sim": 0.2800704926485576
+          },
+          {
+            "id": "NOT FASTENED",
+            "sim": 0.24469011859001458
+          },
+          {
+            "id": "CRACKED ENGINE CASE",
+            "sim": 0.24417978408652347
+          },
+          {
+            "id": "BRAKE PROBLEMS",
+            "sim": 0.23592829229955217
+          },
+          {
+            "id": "POWER FAILURE",
+            "sim": 0.22862418326608253
+          },
+          {
+            "id": "INOPERATIVE BRAKES",
+            "sim": 0.21517805116864372
+          }
+        ],
+        "triples": [
+          {
+            "id": "79090e541272",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "DESCENT",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "574dc8acb619",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "NOSED OVER IN FURROWS",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "8e89afa40e6f",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "PARKING",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "db36ff6aa465",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "ANNUAL INSPECTION",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "f647a3c3d752",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "RPM LOSS",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "6eb5871a57cf",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "BRAKE PROBLEMS",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "e808ff057284",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "FERRY FLIGHT",
+            "weight": 4.178073120099303
+          },
+          {
+            "id": "314603b16db4",
+            "head": "RAN OUT OF FUEL",
+            "relation": "related_to",
+            "tail": "FERRY FLIGHT",
+            "weight": 5.185524630370436
+          },
+          {
+            "id": "ba29deff605b",
+            "head": "DAMAGED",
+            "relation": "related_to",
+            "tail": "FLOATS",
+            "weight": 5.185524630370436
+          },
+          {
+            "id": "869320482235",
+            "head": "DAMAGED",
+            "relation": "related_to",
+            "tail": "LONGERON",
+            "weight": 5.185524630370436
+          },
+          {
+            "id": "e97b29245778",
+            "head": "WORN OUT & INEFFECTIVE BRAKES",
+            "relation": "related_to",
+            "tail": "STRUCK",
+            "weight": 5.388257184424518
+          }
+        ],
+        "confidence": 0.2844204635429769,
+        "use_mst": true,
+        "edge_weight": "tfidf",
+        "embedding_backend": "local",
+        "controls": {
+          "shuffle_edges": false,
+          "strip_relations": false,
+          "dedup_chunks": false,
+          "match_context_budget": false,
+          "control_seed": null
+        },
+        "selection": {
+          "selector": "mst",
+          "use_mst": true
+        }
+      }
+    },
+    "community_answer": null,
+    "hybrid_answer": null,
+    "routed_answer": null,
+    "graphrag_answer": {
+      "question_id": "root_cause_analysis_007",
+      "question": "What role do inspection and repair procedures play in preventing structural damage, and where are the gaps?",
+      "category": "root_cause_analysis",
+      "answer": "The role of inspection and repair procedures is crucial in preventing structural damage to aircraft and ensuring flight safety. These procedures help identify issues early on, allowing maintenance teams to address problems before they escalate into more serious issues that could compromise flight safety.\n\nOne gap observed from the maintenance records is the tampering of the elevator trim inspection panel, which indicates a possible lapse in maintenance oversight or a compromised maintenance culture. This gap could lead to undetected issues with flight control surfaces, potentially resulting in loss of control incidents.\n\nFurthermore, incidents like an engine cowling door coming off due to improper fastening during takeoff reflect a gap in maintenance procedures, specifically related to fastener integrity checks. This gap could lead to engine cowling failure, posing a risk of engine fires or loss of engine power during flight.\n\nThe maintenance records also hint at a gap concerning debris maintenance on the runway, which directly affects aircraft safety during takeoff and landing phases. This gap suggests a need for improved coordination and communication between maintenance teams responsible for different parts of the aircraft maintenance process.\n\nTo close these gaps, maintenance procedures should be reviewed and revised to include:\n- Enhanced tamper-evident measures on maintenance panels to prevent unauthorized access or tampering.\n- Implementation of stricter fastener inspection routines to prevent issues like cowling door detachment.\n- Improvement of coordination efforts between different maintenance teams to ensure comprehensive maintenance coverage, avoiding maintenance neglect on components such as the elevator trim or runway debris maintenance.\n\nBy addressing these gaps through improved maintenance procedures and oversight, flight safety can be significantly enhanced, preventing structural damage and ensuring compliance with safety regulations and standards. Regular audits and updates to maintenance procedures will further solidify flight safety measures against possible incidents resulting from maintenance gaps.",
+      "method": "keo",
+      "use_mst": true,
+      "edge_weight": "tfidf",
+      "embedding_backend": "local",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "graph_nodes_used": 10,
+      "model": "mlx-community/Phi-4-mini-instruct-4bit",
+      "model_exact": "mlx-community/Phi-4-mini-instruct-4bit",
+      "model_provider": "local",
+      "graph_available": true,
+      "evidence": {
+        "seed_nodes": [
+          {
+            "id": "ANNUAL INSPECTION",
+            "sim": 0.46936622464911226
+          },
+          {
+            "id": "DAMAGED",
+            "sim": 0.333424147686692
+          },
+          {
+            "id": "9 INCH TEAR IN FUSELAGE",
+            "sim": 0.312233282873531
+          },
+          {
+            "id": "CRACKED WINDSHIELD",
+            "sim": 0.2805100581610588
+          },
+          {
+            "id": "WORN OUT & INEFFECTIVE BRAKES",
+            "sim": 0.2800704926485576
+          },
+          {
+            "id": "NOT FASTENED",
+            "sim": 0.24469011859001458
+          },
+          {
+            "id": "CRACKED ENGINE CASE",
+            "sim": 0.24417978408652347
+          },
+          {
+            "id": "BRAKE PROBLEMS",
+            "sim": 0.23592829229955217
+          },
+          {
+            "id": "POWER FAILURE",
+            "sim": 0.22862418326608253
+          },
+          {
+            "id": "INOPERATIVE BRAKES",
+            "sim": 0.21517805116864372
+          }
+        ],
+        "triples": [
+          {
+            "id": "79090e541272",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "DESCENT",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "574dc8acb619",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "NOSED OVER IN FURROWS",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "8e89afa40e6f",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "PARKING",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "db36ff6aa465",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "ANNUAL INSPECTION",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "f647a3c3d752",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "RPM LOSS",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "6eb5871a57cf",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "BRAKE PROBLEMS",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "e808ff057284",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "FERRY FLIGHT",
+            "weight": 4.178073120099303
+          },
+          {
+            "id": "314603b16db4",
+            "head": "RAN OUT OF FUEL",
+            "relation": "related_to",
+            "tail": "FERRY FLIGHT",
+            "weight": 5.185524630370436
+          },
+          {
+            "id": "ba29deff605b",
+            "head": "DAMAGED",
+            "relation": "related_to",
+            "tail": "FLOATS",
+            "weight": 5.185524630370436
+          },
+          {
+            "id": "869320482235",
+            "head": "DAMAGED",
+            "relation": "related_to",
+            "tail": "LONGERON",
+            "weight": 5.185524630370436
+          },
+          {
+            "id": "e97b29245778",
+            "head": "WORN OUT & INEFFECTIVE BRAKES",
+            "relation": "related_to",
+            "tail": "STRUCK",
+            "weight": 5.388257184424518
+          }
+        ],
+        "confidence": 0.2844204635429769,
+        "use_mst": true,
+        "edge_weight": "tfidf",
+        "embedding_backend": "local",
+        "controls": {
+          "shuffle_edges": false,
+          "strip_relations": false,
+          "dedup_chunks": false,
+          "match_context_budget": false,
+          "control_seed": null
+        },
+        "selection": {
+          "selector": "mst",
+          "use_mst": true
+        }
+      }
+    },
+    "risk_answer": null,
+    "chunk_tok_answer": null,
+    "chunk_sum_answer": null,
+    "chunk_dedup_answer": null,
+    "keo_shuf_answer": null,
+    "keo_norel_answer": null
+  },
+  {
+    "question_id": "maintenance_narratives_008",
+    "question": "8. How does the interaction between electrical system failures and other aircraft systems contribute to broader operational risks, and what redundant systems could mitigate these risks?",
+    "question_category": "context_specific",
+    "question_type": "contextual",
+    "ground_truth": null,
+    "original_problem": null,
+    "ablation": {
+      "method": "keo",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "selection": {
+        "selector": "mst",
+        "use_mst": true
+      },
+      "use_mst": true,
+      "edge_weight": "tfidf",
+      "embedding_backend": "local",
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "provider": "local",
+      "answer_model": "mlx-community/Phi-4-mini-instruct-4bit",
+      "answer_model_exact": "mlx-community/Phi-4-mini-instruct-4bit",
+      "kg_path": "../kg/output/kg_llm/gpt4o_with_nodes_batches/100/gpt4o_withprevnodes_100_with_entity_mentions_fixed.gml",
+      "corpus_csv": null,
+      "text_column": null
+    },
+    "vanilla_answer": null,
+    "textchunkrag_answer": null,
+    "keo_answer": {
+      "question_id": "maintenance_narratives_008",
+      "question": "8. How does the interaction between electrical system failures and other aircraft systems contribute to broader operational risks, and what redundant systems could mitigate these risks?",
+      "category": "context_specific",
+      "answer": "The interaction between electrical system failures and other aircraft systems can pose considerable operational risks to flight safety. Electrical failures can lead to simultaneous failures of interconnected systems, such as flight control computers, hydraulic pumps, or environmental control systems, resulting in compromised flight operations.\n\nOne specific maintenance record mentions a pilot experiencing an electrical system failure while en route, necessitating an emergency landing due to gear collapse (Maintenance Record #1). This highlights how an electrical failure can not only disable primary flight control systems but also lead to secondary failures, such as hydraulic pump failure resulting in gear collapse.\n\nTo mitigate these risks, redundant systems are crucial:\n1. Independent Power Sources: Using separate electrical buses for different parts of the aircraft (e.g., separate AC bus for flight control computers and separate DC buses for auxiliary components) can prevent simultaneous failures.\n2. Redundant Communication Systems: Having separate communication radios (VHF and HF) ensures that a failure in one system does not compromise communication entirely.\n3. Independent Hydraulic Power Units: Using separate hydraulic circuits for flight control and landing gear can prevent simultaneous failures, as one circuit's failure does not impact the other.\n4. Independent Electrical Power Units (APUs): Having separate electrical power units (APUs) can provide auxiliary power independently of the main AC system, ensuring that flight control computers and other critical systems remain operational even during an electrical failure on the main AC system.\n\nFurthermore, regular maintenance checks on electrical wiring, relays, and components involved in flight control and auxiliary systems can identify potential issues early, preventing simultaneous failures and enhancing flight safety.\n\nTo summarize, addressing simultaneous failures through redundant systems and regular maintenance checks on electrical components significantly reduces operational risks and enhances flight safety in aviation operations.",
+      "method": "keo",
+      "use_mst": true,
+      "edge_weight": "tfidf",
+      "embedding_backend": "local",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "graph_nodes_used": 16,
+      "model": "mlx-community/Phi-4-mini-instruct-4bit",
+      "model_exact": "mlx-community/Phi-4-mini-instruct-4bit",
+      "model_provider": "local",
+      "graph_available": true,
+      "evidence": {
+        "seed_nodes": [
+          {
+            "id": "POWER FAILURE",
+            "sim": 0.4710362162522206
+          },
+          {
+            "id": "FAILURE",
+            "sim": 0.3586775254901644
+          },
+          {
+            "id": "POWER LOSS",
+            "sim": 0.3357503652064991
+          },
+          {
+            "id": "AIRCRAFT",
+            "sim": 0.3259377728507474
+          },
+          {
+            "id": "AIRCRAFT TOOK OFF",
+            "sim": 0.2918833195693886
+          },
+          {
+            "id": "INFLIGHT",
+            "sim": 0.25914644718891533
+          },
+          {
+            "id": "PASSENGERS ONBOARD",
+            "sim": 0.2469111826358361
+          },
+          {
+            "id": "WORN OUT & INEFFECTIVE BRAKES",
+            "sim": 0.24435538897227405
+          },
+          {
+            "id": "PARKED AIRCRAFT",
+            "sim": 0.24122833619234882
+          },
+          {
+            "id": "EMERGENCY OFF AIRPORT LANDING",
+            "sim": 0.23898737089146851
+          }
+        ],
+        "triples": [
+          {
+            "id": "79090e541272",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "DESCENT",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "574dc8acb619",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "NOSED OVER IN FURROWS",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "8e89afa40e6f",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "PARKING",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "db36ff6aa465",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "ANNUAL INSPECTION",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "f647a3c3d752",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "RPM LOSS",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "e808ff057284",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "FERRY FLIGHT",
+            "weight": 4.178073120099303
+          },
+          {
+            "id": "314603b16db4",
+            "head": "RAN OUT OF FUEL",
+            "relation": "related_to",
+            "tail": "FERRY FLIGHT",
+            "weight": 5.185524630370436
+          },
+          {
+            "id": "e97b29245778",
+            "head": "WORN OUT & INEFFECTIVE BRAKES",
+            "relation": "related_to",
+            "tail": "STRUCK",
+            "weight": 5.388257184424518
+          },
+          {
+            "id": "17b238c7fe67",
+            "head": "FAILURE",
+            "relation": "related_to",
+            "tail": "AFTER TAKEOFF",
+            "weight": 4.838951040090462
+          },
+          {
+            "id": "b927e38c1771",
+            "head": "UNABLE TO STAY AIRBORNE",
+            "relation": "related_to",
+            "tail": "AFTER TAKEOFF",
+            "weight": 5.041683594144545
+          },
+          {
+            "id": "666caf46dd2d",
+            "head": "NEAR THE BLO",
+            "relation": "related_to",
+            "tail": "EMERGENCY OFF AIRPORT LANDING",
+            "weight": 5.185524630370436
+          },
+          {
+            "id": "722638177a9d",
+            "head": "MARCH 14, 1995",
+            "relation": "related_to",
+            "tail": "EMERGENCY OFF AIRPORT LANDING",
+            "weight": 5.185524630370436
+          },
+          {
+            "id": "c9debc0cd2d8",
+            "head": "AIRCRAFT TOOK OFF",
+            "relation": "related_to",
+            "tail": "SHORTLY AFTER",
+            "weight": 5.185524630370436
+          }
+        ],
+        "confidence": 0.30139139252498626,
+        "use_mst": true,
+        "edge_weight": "tfidf",
+        "embedding_backend": "local",
+        "controls": {
+          "shuffle_edges": false,
+          "strip_relations": false,
+          "dedup_chunks": false,
+          "match_context_budget": false,
+          "control_seed": null
+        },
+        "selection": {
+          "selector": "mst",
+          "use_mst": true
+        }
+      }
+    },
+    "community_answer": null,
+    "hybrid_answer": null,
+    "routed_answer": null,
+    "graphrag_answer": {
+      "question_id": "maintenance_narratives_008",
+      "question": "8. How does the interaction between electrical system failures and other aircraft systems contribute to broader operational risks, and what redundant systems could mitigate these risks?",
+      "category": "context_specific",
+      "answer": "The interaction between electrical system failures and other aircraft systems can pose considerable operational risks to flight safety. Electrical failures can lead to simultaneous failures of interconnected systems, such as flight control computers, hydraulic pumps, or environmental control systems, resulting in compromised flight operations.\n\nOne specific maintenance record mentions a pilot experiencing an electrical system failure while en route, necessitating an emergency landing due to gear collapse (Maintenance Record #1). This highlights how an electrical failure can not only disable primary flight control systems but also lead to secondary failures, such as hydraulic pump failure resulting in gear collapse.\n\nTo mitigate these risks, redundant systems are crucial:\n1. Independent Power Sources: Using separate electrical buses for different parts of the aircraft (e.g., separate AC bus for flight control computers and separate DC buses for auxiliary components) can prevent simultaneous failures.\n2. Redundant Communication Systems: Having separate communication radios (VHF and HF) ensures that a failure in one system does not compromise communication entirely.\n3. Independent Hydraulic Power Units: Using separate hydraulic circuits for flight control and landing gear can prevent simultaneous failures, as one circuit's failure does not impact the other.\n4. Independent Electrical Power Units (APUs): Having separate electrical power units (APUs) can provide auxiliary power independently of the main AC system, ensuring that flight control computers and other critical systems remain operational even during an electrical failure on the main AC system.\n\nFurthermore, regular maintenance checks on electrical wiring, relays, and components involved in flight control and auxiliary systems can identify potential issues early, preventing simultaneous failures and enhancing flight safety.\n\nTo summarize, addressing simultaneous failures through redundant systems and regular maintenance checks on electrical components significantly reduces operational risks and enhances flight safety in aviation operations.",
+      "method": "keo",
+      "use_mst": true,
+      "edge_weight": "tfidf",
+      "embedding_backend": "local",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "graph_nodes_used": 16,
+      "model": "mlx-community/Phi-4-mini-instruct-4bit",
+      "model_exact": "mlx-community/Phi-4-mini-instruct-4bit",
+      "model_provider": "local",
+      "graph_available": true,
+      "evidence": {
+        "seed_nodes": [
+          {
+            "id": "POWER FAILURE",
+            "sim": 0.4710362162522206
+          },
+          {
+            "id": "FAILURE",
+            "sim": 0.3586775254901644
+          },
+          {
+            "id": "POWER LOSS",
+            "sim": 0.3357503652064991
+          },
+          {
+            "id": "AIRCRAFT",
+            "sim": 0.3259377728507474
+          },
+          {
+            "id": "AIRCRAFT TOOK OFF",
+            "sim": 0.2918833195693886
+          },
+          {
+            "id": "INFLIGHT",
+            "sim": 0.25914644718891533
+          },
+          {
+            "id": "PASSENGERS ONBOARD",
+            "sim": 0.2469111826358361
+          },
+          {
+            "id": "WORN OUT & INEFFECTIVE BRAKES",
+            "sim": 0.24435538897227405
+          },
+          {
+            "id": "PARKED AIRCRAFT",
+            "sim": 0.24122833619234882
+          },
+          {
+            "id": "EMERGENCY OFF AIRPORT LANDING",
+            "sim": 0.23898737089146851
+          }
+        ],
+        "triples": [
+          {
+            "id": "79090e541272",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "DESCENT",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "574dc8acb619",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "NOSED OVER IN FURROWS",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "8e89afa40e6f",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "PARKING",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "db36ff6aa465",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "ANNUAL INSPECTION",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "f647a3c3d752",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "RPM LOSS",
+            "weight": 4.380805674153385
+          },
+          {
+            "id": "e808ff057284",
+            "head": "AIRCRAFT",
+            "relation": "related_to",
+            "tail": "FERRY FLIGHT",
+            "weight": 4.178073120099303
+          },
+          {
+            "id": "314603b16db4",
+            "head": "RAN OUT OF FUEL",
+            "relation": "related_to",
+            "tail": "FERRY FLIGHT",
+            "weight": 5.185524630370436
+          },
+          {
+            "id": "e97b29245778",
+            "head": "WORN OUT & INEFFECTIVE BRAKES",
+            "relation": "related_to",
+            "tail": "STRUCK",
+            "weight": 5.388257184424518
+          },
+          {
+            "id": "17b238c7fe67",
+            "head": "FAILURE",
+            "relation": "related_to",
+            "tail": "AFTER TAKEOFF",
+            "weight": 4.838951040090462
+          },
+          {
+            "id": "b927e38c1771",
+            "head": "UNABLE TO STAY AIRBORNE",
+            "relation": "related_to",
+            "tail": "AFTER TAKEOFF",
+            "weight": 5.041683594144545
+          },
+          {
+            "id": "666caf46dd2d",
+            "head": "NEAR THE BLO",
+            "relation": "related_to",
+            "tail": "EMERGENCY OFF AIRPORT LANDING",
+            "weight": 5.185524630370436
+          },
+          {
+            "id": "722638177a9d",
+            "head": "MARCH 14, 1995",
+            "relation": "related_to",
+            "tail": "EMERGENCY OFF AIRPORT LANDING",
+            "weight": 5.185524630370436
+          },
+          {
+            "id": "c9debc0cd2d8",
+            "head": "AIRCRAFT TOOK OFF",
+            "relation": "related_to",
+            "tail": "SHORTLY AFTER",
+            "weight": 5.185524630370436
+          }
+        ],
+        "confidence": 0.30139139252498626,
+        "use_mst": true,
+        "edge_weight": "tfidf",
+        "embedding_backend": "local",
+        "controls": {
+          "shuffle_edges": false,
+          "strip_relations": false,
+          "dedup_chunks": false,
+          "match_context_budget": false,
+          "control_seed": null
+        },
+        "selection": {
+          "selector": "mst",
+          "use_mst": true
+        }
+      }
+    },
+    "risk_answer": null,
+    "chunk_tok_answer": null,
+    "chunk_sum_answer": null,
+    "chunk_dedup_answer": null,
+    "keo_shuf_answer": null,
+    "keo_norel_answer": null
+  }
+]

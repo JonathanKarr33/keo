@@ -1,0 +1,1062 @@
+[
+  {
+    "question_id": "system_level_understanding_005",
+    "question": "How do different maintenance actions like replacement and repair influence the recurrence rates of similar problems in the aircraft fleet?",
+    "question_category": "system_level_understanding",
+    "question_type": "analytical",
+    "ground_truth": null,
+    "original_problem": null,
+    "ablation": {
+      "method": "keo_shuf",
+      "controls": {
+        "shuffle_edges": true,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": 13
+      },
+      "selection": {
+        "selector": "mst",
+        "use_mst": true
+      },
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "local",
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "provider": "local",
+      "answer_model": "mlx-community/phi-4-4bit",
+      "answer_model_exact": "mlx-community/phi-4-4bit",
+      "kg_path": "../kg/output/kg_llm/gpt4o_with_nodes_batches/100/gpt4o_withprevnodes_100_with_entity_mentions_fixed.gml",
+      "corpus_csv": null,
+      "text_column": null
+    },
+    "vanilla_answer": null,
+    "textchunkrag_answer": null,
+    "keo_answer": null,
+    "community_answer": null,
+    "hybrid_answer": null,
+    "routed_answer": null,
+    "graphrag_answer": null,
+    "risk_answer": null,
+    "chunk_tok_answer": null,
+    "chunk_sum_answer": null,
+    "chunk_dedup_answer": null,
+    "keo_shuf_answer": {
+      "question_id": "system_level_understanding_005",
+      "question": "How do different maintenance actions like replacement and repair influence the recurrence rates of similar problems in the aircraft fleet?",
+      "category": "system_level_understanding",
+      "answer": "To understand how different maintenance actions like replacement and repair influence the recurrence rates of similar problems in an aircraft fleet, we need to consider both the nature of the maintenance actions and the systemic patterns observed in maintenance data.\n\n1. **Nature of Maintenance Actions:**\n   - **Replacement:** This involves removing and installing new components. Replacement is often more definitive as it eliminates the possibility of the same issue recurring due to wear or fatigue of the original part. For instance, replacing a faulty engine-driven fuel pump filter, as noted in the maintenance records, can prevent future issues related to fuel contamination.\n   - **Repair:** This typically involves fixing the existing component. While repairs can be effective, they may not address underlying issues such as material fatigue or design flaws, potentially leading to recurrence. For example, repairing an oil leak might temporarily resolve the problem, but if the root cause (e.g., a crack in the oil line) is not addressed, the issue may recur.\n\n2. **Systemic Patterns in Maintenance Data:**\n   - The knowledge graph highlights recurring issues such as oil leaks, loose cowling, and fuel contamination. These problems often stem from systemic issues like inadequate inspection procedures or recurring design vulnerabilities.\n   - Community insights suggest that certain components, like the engine-driven fuel pump filter, are critical nodes in the maintenance network. Frequent issues with these components indicate a need for more robust maintenance strategies, such as more frequent replacements or design reviews.\n\n3. **Influence on Recurrence Rates:**\n   - **Replacement** tends to lower recurrence rates more effectively than repair, especially for components that are prone to wear and fatigue. This is because new parts are less likely to have the same defects or wear patterns as the old ones.\n   - **Repair** can be effective if it addresses the root cause of the problem. However, if repairs are superficial or if the underlying issue is not resolved, recurrence is likely. For example, if an oil leak is repaired without addressing a potential crack in the oil line, the problem may reappear.\n\n4. **Actionable Insights:**\n   - Implement a proactive maintenance strategy that prioritizes replacement of critical components known to have high failure rates or those that are difficult to inspect thoroughly.\n   - Enhance root cause analysis procedures to ensure that repairs address the underlying issues rather than just the symptoms.\n   - Regularly review and update maintenance protocols to incorporate lessons learned from past maintenance actions and their outcomes.\n\nBy focusing on these strategies, aviation maintenance can significantly reduce the recurrence of similar problems, thereby enhancing overall fleet safety and reliability.",
+      "method": "keo_shuf",
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "local",
+      "controls": {
+        "shuffle_edges": true,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": 13
+      },
+      "graph_nodes_used": 7,
+      "model": "mlx-community/phi-4-4bit",
+      "model_exact": "mlx-community/phi-4-4bit",
+      "model_provider": "local",
+      "graph_available": true,
+      "evidence": {
+        "seed_nodes": [
+          {
+            "id": "ANNUAL INSPECTION",
+            "sim": 0.3125224843876063
+          },
+          {
+            "id": "WORN OUT & INEFFECTIVE BRAKES",
+            "sim": 0.299584331843694
+          },
+          {
+            "id": "BRAKE PROBLEMS",
+            "sim": 0.2018746131159877
+          },
+          {
+            "id": "COMPRESSOR STALL",
+            "sim": 0.20025240415889986
+          },
+          {
+            "id": "CRACKED WINDSHIELD",
+            "sim": 0.20011676767654507
+          },
+          {
+            "id": "AIRCRAFT",
+            "sim": 0.19974361250931436
+          },
+          {
+            "id": "POWER FAILURE",
+            "sim": 0.19837449833318835
+          },
+          {
+            "id": "AIRCRAFT TOOK OFF",
+            "sim": 0.18980835765132772
+          },
+          {
+            "id": "FUEL EXHAUSTION",
+            "sim": 0.1862288269626432
+          },
+          {
+            "id": "PARKED AIRCRAFT",
+            "sim": 0.16938908097891875
+          }
+        ],
+        "triples": [
+          {
+            "id": "956005f01895",
+            "head": "ACFT",
+            "relation": "related_to",
+            "tail": "AIRCRAFT",
+            "weight": 1.0
+          },
+          {
+            "id": "616ecae83314",
+            "head": "ACFT",
+            "relation": "related_to",
+            "tail": "BRAKE PROBLEMS",
+            "weight": 1.0
+          },
+          {
+            "id": "de885393a2b6",
+            "head": "PARKED AIRCRAFT",
+            "relation": "related_to",
+            "tail": "FUEL CONTAMINATION",
+            "weight": 1.0
+          },
+          {
+            "id": "d45b1527a46a",
+            "head": "LOUD POP",
+            "relation": "related_to",
+            "tail": "LEFT FUEL CAP LEAKED",
+            "weight": 1.0
+          },
+          {
+            "id": "3dfffe86198b",
+            "head": "LOOSE COWLING",
+            "relation": "related_to",
+            "tail": "ENGINE",
+            "weight": 1.0
+          },
+          {
+            "id": "528ad8d3a017",
+            "head": "LEFT FUEL CAP LEAKED",
+            "relation": "related_to",
+            "tail": "FORCED LANDING",
+            "weight": 1.0
+          },
+          {
+            "id": "98bd4773b89f",
+            "head": "DESCENT",
+            "relation": "related_to",
+            "tail": "ENGINE",
+            "weight": 1.0
+          },
+          {
+            "id": "56483bafc991",
+            "head": "DESCENT",
+            "relation": "related_to",
+            "tail": "STALLED",
+            "weight": 1.0
+          },
+          {
+            "id": "96d39d8239dc",
+            "head": "CLIMBOUT",
+            "relation": "related_to",
+            "tail": "ENGINE",
+            "weight": 1.0
+          },
+          {
+            "id": "f744ed54e08d",
+            "head": "CRASHED",
+            "relation": "related_to",
+            "tail": "WATER IN SUMP",
+            "weight": 1.0
+          },
+          {
+            "id": "a488fe7ec385",
+            "head": "CRASHED",
+            "relation": "related_to",
+            "tail": "STRUCK",
+            "weight": 1.0
+          },
+          {
+            "id": "443a6578900a",
+            "head": "CRASHED",
+            "relation": "related_to",
+            "tail": "SKYWAY AIRLINE",
+            "weight": 1.0
+          },
+          {
+            "id": "964128f24327",
+            "head": "CRASHED",
+            "relation": "related_to",
+            "tail": "LANDED HARD",
+            "weight": 1.0
+          },
+          {
+            "id": "4cb8d25383c2",
+            "head": "CRASHED",
+            "relation": "related_to",
+            "tail": "ENGINE",
+            "weight": 1.0
+          },
+          {
+            "id": "3dd600723476",
+            "head": "CRASHED",
+            "relation": "related_to",
+            "tail": "DAMAGED",
+            "weight": 1.0
+          },
+          {
+            "id": "95298b83f6a4",
+            "head": "CRASHED",
+            "relation": "related_to",
+            "tail": "AIRCRAFT",
+            "weight": 1.0
+          },
+          {
+            "id": "0e69f113f513",
+            "head": "SEAT PIN",
+            "relation": "related_to",
+            "tail": "NO LOCKING PINS",
+            "weight": 1.0
+          },
+          {
+            "id": "8c0553f792f0",
+            "head": "SEAT PIN",
+            "relation": "related_to",
+            "tail": "AIRCRAFT",
+            "weight": 1.0
+          },
+          {
+            "id": "4bfbcf410f2e",
+            "head": "CANOPY",
+            "relation": "related_to",
+            "tail": "ENGINE DRIVEN FUEL PUMP FILTER",
+            "weight": 1.0
+          },
+          {
+            "id": "95801c605332",
+            "head": "CANOPY",
+            "relation": "related_to",
+            "tail": "AIRCRAFT",
+            "weight": 1.0
+          },
+          {
+            "id": "45c75dd78bc6",
+            "head": "NO LOCKING PINS",
+            "relation": "related_to",
+            "tail": "LOST CONTROL",
+            "weight": 1.0
+          },
+          {
+            "id": "9570bc3b5110",
+            "head": "ENGINE",
+            "relation": "related_to",
+            "tail": "FUEL EXHAUSTION",
+            "weight": 1.0
+          },
+          {
+            "id": "d79a06eb6471",
+            "head": "ENGINE",
+            "relation": "related_to",
+            "tail": "BAD OIL LEAK",
+            "weight": 1.0
+          },
+          {
+            "id": "db45e26bf70a",
+            "head": "ENGINE",
+            "relation": "related_to",
+            "tail": "STARTED CUTTING OUT",
+            "weight": 1.0
+          },
+          {
+            "id": "fd2c021b2ca4",
+            "head": "ENGINE",
+            "relation": "related_to",
+            "tail": "FUEL CONTAMINATION",
+            "weight": 1.0
+          },
+          {
+            "id": "da52a505fc7a",
+            "head": "ENGINE",
+            "relation": "related_to",
+            "tail": "3 MILES FROM AIRPORT",
+            "weight": 1.0
+          },
+          {
+            "id": "eba2c1b2c05b",
+            "head": "ENGINE",
+            "relation": "related_to",
+            "tail": "AFTER LIFTOFF",
+            "weight": 1.0
+          },
+          {
+            "id": "a4c01bfeb46b",
+            "head": "DAMAGED",
+            "relation": "related_to",
+            "tail": "LANDED OFF AIRPORT",
+            "weight": 1.0
+          },
+          {
+            "id": "8a5438abbb67",
+            "head": "DAMAGED",
+            "relation": "related_to",
+            "tail": "FORCED LANDING",
+            "weight": 1.0
+          },
+          {
+            "id": "175889a6a618",
+            "head": "LANDED HARD",
+            "relation": "related_to",
+            "tail": "OIL FILLER CAP",
+            "weight": 1.0
+          },
+          {
+            "id": "e07475c9834e",
+            "head": "TEST FLIGHT",
+            "relation": "related_to",
+            "tail": "PASSENGERS ONBOARD",
+            "weight": 1.0
+          },
+          {
+            "id": "7d810fff3964",
+            "head": "TEST FLIGHT",
+            "relation": "related_to",
+            "tail": "FORCED LANDING",
+            "weight": 1.0
+          },
+          {
+            "id": "e409ae7f78bf",
+            "head": "ENGINE DRIVEN FUEL PUMP FILTER",
+            "relation": "related_to",
+            "tail": "AIRCRAFT TOOK OFF",
+            "weight": 1.0
+          },
+          {
+            "id": "93e16bacdc83",
+            "head": "WORN OUT & INEFFECTIVE BRAKES",
+            "relation": "related_to",
+            "tail": "2500 FT SOD STRIP",
+            "weight": 1.0
+          }
+        ],
+        "confidence": 0.21578949776181258,
+        "use_mst": true,
+        "edge_weight": "freq",
+        "embedding_backend": "local",
+        "controls": {
+          "shuffle_edges": true,
+          "strip_relations": false,
+          "dedup_chunks": false,
+          "match_context_budget": false,
+          "control_seed": 13
+        },
+        "selection": {
+          "selector": "mst",
+          "use_mst": true
+        }
+      }
+    },
+    "keo_norel_answer": null
+  },
+  {
+    "question_id": "root_cause_analysis_007",
+    "question": "What role do inspection and repair procedures play in preventing structural damage, and where are the gaps?",
+    "question_category": "root_cause_analysis",
+    "question_type": "analytical",
+    "ground_truth": null,
+    "original_problem": null,
+    "ablation": {
+      "method": "keo_shuf",
+      "controls": {
+        "shuffle_edges": true,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": 13
+      },
+      "selection": {
+        "selector": "mst",
+        "use_mst": true
+      },
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "local",
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "provider": "local",
+      "answer_model": "mlx-community/phi-4-4bit",
+      "answer_model_exact": "mlx-community/phi-4-4bit",
+      "kg_path": "../kg/output/kg_llm/gpt4o_with_nodes_batches/100/gpt4o_withprevnodes_100_with_entity_mentions_fixed.gml",
+      "corpus_csv": null,
+      "text_column": null
+    },
+    "vanilla_answer": null,
+    "textchunkrag_answer": null,
+    "keo_answer": null,
+    "community_answer": null,
+    "hybrid_answer": null,
+    "routed_answer": null,
+    "graphrag_answer": null,
+    "risk_answer": null,
+    "chunk_tok_answer": null,
+    "chunk_sum_answer": null,
+    "chunk_dedup_answer": null,
+    "keo_shuf_answer": {
+      "question_id": "root_cause_analysis_007",
+      "question": "What role do inspection and repair procedures play in preventing structural damage, and where are the gaps?",
+      "category": "root_cause_analysis",
+      "answer": "Inspection and repair procedures play a critical role in preventing structural damage in aircraft by ensuring that all components are in optimal condition and any potential issues are identified and addressed before they can lead to more serious problems. These procedures are essential for maintaining the structural integrity of the aircraft, which is vital for safe flight operations.\n\n**Role of Inspection and Repair Procedures:**\n\n1. **Early Detection of Issues:** Regular inspections allow maintenance teams to detect early signs of wear, fatigue, or damage. For instance, the knowledge graph highlights issues such as a \"9 Inch Tear In Fuselage\" and \"Worn Out & Ineffective Brakes,\" which could have been identified and repaired during routine inspections, preventing further damage or failure.\n\n2. **Prevention of Catastrophic Failures:** By identifying and repairing minor issues before they escalate, inspections and repairs prevent catastrophic failures. The maintenance records mention incidents like \"ELEVATOR TRIM INSPECTION PANEL TAMPERED WITH, LOOSE,\" which could lead to loss of control if not addressed.\n\n3. **Compliance with Safety Standards:** Adhering to inspection and repair procedures ensures compliance with aviation safety standards and regulations, which are designed to maintain high safety levels.\n\n**Gaps in Inspection and Repair Procedures:**\n\n1. **Inconsistent Inspection Practices:** The knowledge graph indicates instances where inspections were not thorough or were skipped, such as \"Failed To Visually Check Fuel\" and \"Oil Filler Cap\" issues. This inconsistency can lead to undetected problems that compromise safety.\n\n2. **Lack of Comprehensive Checks:** Some records suggest that inspections may not cover all critical areas, as seen with the \"ENGINE COWLING INSPECTION DOOR CAME OFF ON TAKEOFF.\" This indicates a gap in ensuring all components are secure and functional.\n\n3. **Inadequate Response to Identified Issues:** Even when issues are identified, the response may be inadequate. For example, the \"VIBRATION ON TAKEOFF, ABORTED\" incident suggests that the problem was not fully resolved, leading to further complications.\n\n**Actionable Insights:**\n\n- **Enhance Training and Awareness:** Ensure that maintenance personnel are well-trained in identifying potential issues and understand the importance of thorough inspections.\n\n- **Implement Standardized Inspection Protocols:** Develop and enforce standardized inspection protocols that cover all critical components and systems to ensure no area is overlooked.\n\n- **Improve Documentation and Follow-Up:** Maintain detailed records of inspections and repairs, and ensure that any identified issues are followed up with appropriate corrective actions.\n\n- **Foster a Safety Culture:** Encourage a culture of safety where all personnel feel responsible for reporting and addressing potential issues, regardless of their perceived severity.\n\nBy addressing these gaps and reinforcing the role of inspection and repair procedures, aviation safety can be significantly enhanced, reducing the risk of structural damage and ensuring the safe operation of aircraft.",
+      "method": "keo_shuf",
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "local",
+      "controls": {
+        "shuffle_edges": true,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": 13
+      },
+      "graph_nodes_used": 7,
+      "model": "mlx-community/phi-4-4bit",
+      "model_exact": "mlx-community/phi-4-4bit",
+      "model_provider": "local",
+      "graph_available": true,
+      "evidence": {
+        "seed_nodes": [
+          {
+            "id": "ANNUAL INSPECTION",
+            "sim": 0.46936622464911226
+          },
+          {
+            "id": "DAMAGED",
+            "sim": 0.333424147686692
+          },
+          {
+            "id": "9 INCH TEAR IN FUSELAGE",
+            "sim": 0.312233282873531
+          },
+          {
+            "id": "CRACKED WINDSHIELD",
+            "sim": 0.2805100581610588
+          },
+          {
+            "id": "WORN OUT & INEFFECTIVE BRAKES",
+            "sim": 0.2800704926485576
+          },
+          {
+            "id": "NOT FASTENED",
+            "sim": 0.24469011859001458
+          },
+          {
+            "id": "CRACKED ENGINE CASE",
+            "sim": 0.24417978408652347
+          },
+          {
+            "id": "BRAKE PROBLEMS",
+            "sim": 0.23592829229955217
+          },
+          {
+            "id": "POWER FAILURE",
+            "sim": 0.22862418326608253
+          },
+          {
+            "id": "INOPERATIVE BRAKES",
+            "sim": 0.21517805116864372
+          }
+        ],
+        "triples": [
+          {
+            "id": "956005f01895",
+            "head": "ACFT",
+            "relation": "related_to",
+            "tail": "AIRCRAFT",
+            "weight": 1.0
+          },
+          {
+            "id": "616ecae83314",
+            "head": "ACFT",
+            "relation": "related_to",
+            "tail": "BRAKE PROBLEMS",
+            "weight": 1.0
+          },
+          {
+            "id": "f744ed54e08d",
+            "head": "CRASHED",
+            "relation": "related_to",
+            "tail": "WATER IN SUMP",
+            "weight": 1.0
+          },
+          {
+            "id": "a488fe7ec385",
+            "head": "CRASHED",
+            "relation": "related_to",
+            "tail": "STRUCK",
+            "weight": 1.0
+          },
+          {
+            "id": "443a6578900a",
+            "head": "CRASHED",
+            "relation": "related_to",
+            "tail": "SKYWAY AIRLINE",
+            "weight": 1.0
+          },
+          {
+            "id": "964128f24327",
+            "head": "CRASHED",
+            "relation": "related_to",
+            "tail": "LANDED HARD",
+            "weight": 1.0
+          },
+          {
+            "id": "3dd600723476",
+            "head": "CRASHED",
+            "relation": "related_to",
+            "tail": "DAMAGED",
+            "weight": 1.0
+          },
+          {
+            "id": "95298b83f6a4",
+            "head": "CRASHED",
+            "relation": "related_to",
+            "tail": "AIRCRAFT",
+            "weight": 1.0
+          },
+          {
+            "id": "8c0553f792f0",
+            "head": "SEAT PIN",
+            "relation": "related_to",
+            "tail": "AIRCRAFT",
+            "weight": 1.0
+          },
+          {
+            "id": "95801c605332",
+            "head": "CANOPY",
+            "relation": "related_to",
+            "tail": "AIRCRAFT",
+            "weight": 1.0
+          },
+          {
+            "id": "3a53d832cd30",
+            "head": "FAILED TO VISUALLY CHECK FUEL",
+            "relation": "related_to",
+            "tail": "LANDED OFF AIRPORT",
+            "weight": 1.0
+          },
+          {
+            "id": "232f70288848",
+            "head": "9 INCH TEAR IN FUSELAGE",
+            "relation": "related_to",
+            "tail": "OIL FILLER CAP",
+            "weight": 1.0
+          },
+          {
+            "id": "a4c01bfeb46b",
+            "head": "DAMAGED",
+            "relation": "related_to",
+            "tail": "LANDED OFF AIRPORT",
+            "weight": 1.0
+          },
+          {
+            "id": "8a5438abbb67",
+            "head": "DAMAGED",
+            "relation": "related_to",
+            "tail": "FORCED LANDING",
+            "weight": 1.0
+          },
+          {
+            "id": "175889a6a618",
+            "head": "LANDED HARD",
+            "relation": "related_to",
+            "tail": "OIL FILLER CAP",
+            "weight": 1.0
+          },
+          {
+            "id": "59a08ec979ec",
+            "head": "ICING",
+            "relation": "related_to",
+            "tail": "LANDED OFF AIRPORT",
+            "weight": 1.0
+          },
+          {
+            "id": "4bbc7b881197",
+            "head": "STALLED",
+            "relation": "related_to",
+            "tail": "AIRCRAFT",
+            "weight": 1.0
+          },
+          {
+            "id": "d4b104630243",
+            "head": "RAN OUT OF FUEL",
+            "relation": "related_to",
+            "tail": "LANDED OFF AIRPORT",
+            "weight": 1.0
+          },
+          {
+            "id": "f7f2e482b4d4",
+            "head": "AFTER LIFTOFF",
+            "relation": "related_to",
+            "tail": "AIRCRAFT",
+            "weight": 1.0
+          },
+          {
+            "id": "93e16bacdc83",
+            "head": "WORN OUT & INEFFECTIVE BRAKES",
+            "relation": "related_to",
+            "tail": "2500 FT SOD STRIP",
+            "weight": 1.0
+          }
+        ],
+        "confidence": 0.2844204635429769,
+        "use_mst": true,
+        "edge_weight": "freq",
+        "embedding_backend": "local",
+        "controls": {
+          "shuffle_edges": true,
+          "strip_relations": false,
+          "dedup_chunks": false,
+          "match_context_budget": false,
+          "control_seed": 13
+        },
+        "selection": {
+          "selector": "mst",
+          "use_mst": true
+        }
+      }
+    },
+    "keo_norel_answer": null
+  },
+  {
+    "question_id": "maintenance_narratives_008",
+    "question": "8. How does the interaction between electrical system failures and other aircraft systems contribute to broader operational risks, and what redundant systems could mitigate these risks?",
+    "question_category": "context_specific",
+    "question_type": "contextual",
+    "ground_truth": null,
+    "original_problem": null,
+    "ablation": {
+      "method": "keo_shuf",
+      "controls": {
+        "shuffle_edges": true,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": 13
+      },
+      "selection": {
+        "selector": "mst",
+        "use_mst": true
+      },
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "local",
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "provider": "local",
+      "answer_model": "mlx-community/phi-4-4bit",
+      "answer_model_exact": "mlx-community/phi-4-4bit",
+      "kg_path": "../kg/output/kg_llm/gpt4o_with_nodes_batches/100/gpt4o_withprevnodes_100_with_entity_mentions_fixed.gml",
+      "corpus_csv": null,
+      "text_column": null
+    },
+    "vanilla_answer": null,
+    "textchunkrag_answer": null,
+    "keo_answer": null,
+    "community_answer": null,
+    "hybrid_answer": null,
+    "routed_answer": null,
+    "graphrag_answer": null,
+    "risk_answer": null,
+    "chunk_tok_answer": null,
+    "chunk_sum_answer": null,
+    "chunk_dedup_answer": null,
+    "keo_shuf_answer": {
+      "question_id": "maintenance_narratives_008",
+      "question": "8. How does the interaction between electrical system failures and other aircraft systems contribute to broader operational risks, and what redundant systems could mitigate these risks?",
+      "category": "context_specific",
+      "answer": "The interaction between electrical system failures and other aircraft systems can significantly contribute to broader operational risks by creating a cascade of failures that compromise critical functions such as navigation, communication, and flight control. Electrical systems are integral to the operation of various aircraft components, including avionics, lighting, and hydraulic systems. When an electrical failure occurs, it can lead to the malfunction of these dependent systems, potentially resulting in loss of control, communication breakdowns, or navigation errors.\n\nFor instance, an electrical failure can prevent the extension of landing gear, as highlighted in the maintenance records where a gear collapse occurred due to a partial extension failure. This situation not only poses a risk during landing but also underscores the interdependence of electrical systems with mechanical components. Furthermore, electrical failures can lead to the loss of critical flight instruments, making it challenging for pilots to maintain situational awareness and execute safe flight operations.\n\nTo mitigate these risks, implementing redundant systems is crucial. Redundancy in electrical systems can be achieved through the use of dual or multiple independent power sources, such as having both an engine-driven generator and an auxiliary power unit (APU) capable of supplying power. Additionally, incorporating backup systems for critical avionics and flight controls can ensure continued operation even if the primary system fails. For example, having a secondary flight control system that operates independently of the primary system can provide a fail-safe mechanism.\n\nMoreover, regular maintenance and inspection protocols should be enhanced to detect early signs of electrical wear and tear, such as corrosion or insulation degradation. Implementing advanced diagnostic tools that continuously monitor the health of electrical systems can provide real-time alerts to maintenance crews, allowing for proactive interventions before failures occur.\n\nIn summary, the interplay between electrical system failures and other aircraft systems can lead to significant operational risks. By integrating redundant systems and enhancing maintenance practices, these risks can be effectively mitigated, thereby improving overall aviation safety.",
+      "method": "keo_shuf",
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "local",
+      "controls": {
+        "shuffle_edges": true,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": 13
+      },
+      "graph_nodes_used": 4,
+      "model": "mlx-community/phi-4-4bit",
+      "model_exact": "mlx-community/phi-4-4bit",
+      "model_provider": "local",
+      "graph_available": true,
+      "evidence": {
+        "seed_nodes": [
+          {
+            "id": "POWER FAILURE",
+            "sim": 0.4710362162522206
+          },
+          {
+            "id": "FAILURE",
+            "sim": 0.3586775254901644
+          },
+          {
+            "id": "POWER LOSS",
+            "sim": 0.3357503652064991
+          },
+          {
+            "id": "AIRCRAFT",
+            "sim": 0.3259377728507474
+          },
+          {
+            "id": "AIRCRAFT TOOK OFF",
+            "sim": 0.2918833195693886
+          },
+          {
+            "id": "INFLIGHT",
+            "sim": 0.25914644718891533
+          },
+          {
+            "id": "PASSENGERS ONBOARD",
+            "sim": 0.2469111826358361
+          },
+          {
+            "id": "WORN OUT & INEFFECTIVE BRAKES",
+            "sim": 0.24435538897227405
+          },
+          {
+            "id": "PARKED AIRCRAFT",
+            "sim": 0.24122833619234882
+          },
+          {
+            "id": "EMERGENCY OFF AIRPORT LANDING",
+            "sim": 0.23898737089146851
+          }
+        ],
+        "triples": [
+          {
+            "id": "d45b1527a46a",
+            "head": "LOUD POP",
+            "relation": "related_to",
+            "tail": "LEFT FUEL CAP LEAKED",
+            "weight": 1.0
+          },
+          {
+            "id": "0e4a1bca0d3b",
+            "head": "LOOSE COWLING",
+            "relation": "related_to",
+            "tail": "MISREAD",
+            "weight": 1.0
+          },
+          {
+            "id": "3dfffe86198b",
+            "head": "LOOSE COWLING",
+            "relation": "related_to",
+            "tail": "ENGINE",
+            "weight": 1.0
+          },
+          {
+            "id": "de885393a2b6",
+            "head": "PARKED AIRCRAFT",
+            "relation": "related_to",
+            "tail": "FUEL CONTAMINATION",
+            "weight": 1.0
+          },
+          {
+            "id": "528ad8d3a017",
+            "head": "LEFT FUEL CAP LEAKED",
+            "relation": "related_to",
+            "tail": "FORCED LANDING",
+            "weight": 1.0
+          },
+          {
+            "id": "4b63c9855221",
+            "head": "SKYWAY AIRLINE FLIGHT",
+            "relation": "related_to",
+            "tail": "WORN OUT & INEFFECTIVE BRAKES",
+            "weight": 1.0
+          },
+          {
+            "id": "2266dd46307a",
+            "head": "SKYWAY AIRLINE FLIGHT",
+            "relation": "related_to",
+            "tail": "CLIMBOUT",
+            "weight": 1.0
+          },
+          {
+            "id": "5f0bcfd591cf",
+            "head": "2500 FT SOD STRIP",
+            "relation": "related_to",
+            "tail": "WORN OUT & INEFFECTIVE BRAKES",
+            "weight": 1.0
+          },
+          {
+            "id": "98bd4773b89f",
+            "head": "DESCENT",
+            "relation": "related_to",
+            "tail": "ENGINE",
+            "weight": 1.0
+          },
+          {
+            "id": "56483bafc991",
+            "head": "DESCENT",
+            "relation": "related_to",
+            "tail": "STALLED",
+            "weight": 1.0
+          },
+          {
+            "id": "567c14d6b43b",
+            "head": "EMERGENCY OFF AIRPORT LANDING",
+            "relation": "related_to",
+            "tail": "ENGINE",
+            "weight": 1.0
+          },
+          {
+            "id": "15766c3c6018",
+            "head": "EMERGENCY OFF AIRPORT LANDING",
+            "relation": "related_to",
+            "tail": "SEA ICE",
+            "weight": 1.0
+          },
+          {
+            "id": "af17cdc729d4",
+            "head": "CLIMBOUT",
+            "relation": "related_to",
+            "tail": "CITY STREET",
+            "weight": 1.0
+          },
+          {
+            "id": "7f1efe0e6be3",
+            "head": "CLIMBOUT",
+            "relation": "related_to",
+            "tail": "ALTIMETER",
+            "weight": 1.0
+          },
+          {
+            "id": "96d39d8239dc",
+            "head": "CLIMBOUT",
+            "relation": "related_to",
+            "tail": "ENGINE",
+            "weight": 1.0
+          },
+          {
+            "id": "f744ed54e08d",
+            "head": "CRASHED",
+            "relation": "related_to",
+            "tail": "WATER IN SUMP",
+            "weight": 1.0
+          },
+          {
+            "id": "a488fe7ec385",
+            "head": "CRASHED",
+            "relation": "related_to",
+            "tail": "STRUCK",
+            "weight": 1.0
+          },
+          {
+            "id": "443a6578900a",
+            "head": "CRASHED",
+            "relation": "related_to",
+            "tail": "SKYWAY AIRLINE",
+            "weight": 1.0
+          },
+          {
+            "id": "964128f24327",
+            "head": "CRASHED",
+            "relation": "related_to",
+            "tail": "LANDED HARD",
+            "weight": 1.0
+          },
+          {
+            "id": "4cb8d25383c2",
+            "head": "CRASHED",
+            "relation": "related_to",
+            "tail": "ENGINE",
+            "weight": 1.0
+          },
+          {
+            "id": "3dd600723476",
+            "head": "CRASHED",
+            "relation": "related_to",
+            "tail": "DAMAGED",
+            "weight": 1.0
+          },
+          {
+            "id": "95298b83f6a4",
+            "head": "CRASHED",
+            "relation": "related_to",
+            "tail": "AIRCRAFT",
+            "weight": 1.0
+          },
+          {
+            "id": "0e69f113f513",
+            "head": "SEAT PIN",
+            "relation": "related_to",
+            "tail": "NO LOCKING PINS",
+            "weight": 1.0
+          },
+          {
+            "id": "8c0553f792f0",
+            "head": "SEAT PIN",
+            "relation": "related_to",
+            "tail": "AIRCRAFT",
+            "weight": 1.0
+          },
+          {
+            "id": "3810c222062e",
+            "head": "ALTIMETER",
+            "relation": "related_to",
+            "tail": "LOST CONTROL",
+            "weight": 1.0
+          },
+          {
+            "id": "4bfbcf410f2e",
+            "head": "CANOPY",
+            "relation": "related_to",
+            "tail": "ENGINE DRIVEN FUEL PUMP FILTER",
+            "weight": 1.0
+          },
+          {
+            "id": "95801c605332",
+            "head": "CANOPY",
+            "relation": "related_to",
+            "tail": "AIRCRAFT",
+            "weight": 1.0
+          },
+          {
+            "id": "e97286a0ea9a",
+            "head": "AFTER TAKEOFF",
+            "relation": "related_to",
+            "tail": "LOST CONTROL",
+            "weight": 1.0
+          },
+          {
+            "id": "9570bc3b5110",
+            "head": "ENGINE",
+            "relation": "related_to",
+            "tail": "FUEL EXHAUSTION",
+            "weight": 1.0
+          },
+          {
+            "id": "d79a06eb6471",
+            "head": "ENGINE",
+            "relation": "related_to",
+            "tail": "BAD OIL LEAK",
+            "weight": 1.0
+          },
+          {
+            "id": "db45e26bf70a",
+            "head": "ENGINE",
+            "relation": "related_to",
+            "tail": "STARTED CUTTING OUT",
+            "weight": 1.0
+          },
+          {
+            "id": "fd2c021b2ca4",
+            "head": "ENGINE",
+            "relation": "related_to",
+            "tail": "FUEL CONTAMINATION",
+            "weight": 1.0
+          },
+          {
+            "id": "da52a505fc7a",
+            "head": "ENGINE",
+            "relation": "related_to",
+            "tail": "3 MILES FROM AIRPORT",
+            "weight": 1.0
+          },
+          {
+            "id": "eba2c1b2c05b",
+            "head": "ENGINE",
+            "relation": "related_to",
+            "tail": "AFTER LIFTOFF",
+            "weight": 1.0
+          },
+          {
+            "id": "a4c01bfeb46b",
+            "head": "DAMAGED",
+            "relation": "related_to",
+            "tail": "LANDED OFF AIRPORT",
+            "weight": 1.0
+          },
+          {
+            "id": "8a5438abbb67",
+            "head": "DAMAGED",
+            "relation": "related_to",
+            "tail": "FORCED LANDING",
+            "weight": 1.0
+          },
+          {
+            "id": "2be4ed1985fe",
+            "head": "FUEL CONTAMINATION",
+            "relation": "related_to",
+            "tail": "FRONT BAGGAGE DOOR",
+            "weight": 1.0
+          },
+          {
+            "id": "175889a6a618",
+            "head": "LANDED HARD",
+            "relation": "related_to",
+            "tail": "OIL FILLER CAP",
+            "weight": 1.0
+          },
+          {
+            "id": "3e567955dc1a",
+            "head": "FAILURE",
+            "relation": "related_to",
+            "tail": "RAN OUT OF FUEL",
+            "weight": 1.0
+          },
+          {
+            "id": "e07475c9834e",
+            "head": "TEST FLIGHT",
+            "relation": "related_to",
+            "tail": "PASSENGERS ONBOARD",
+            "weight": 1.0
+          },
+          {
+            "id": "7d810fff3964",
+            "head": "TEST FLIGHT",
+            "relation": "related_to",
+            "tail": "FORCED LANDING",
+            "weight": 1.0
+          },
+          {
+            "id": "e409ae7f78bf",
+            "head": "ENGINE DRIVEN FUEL PUMP FILTER",
+            "relation": "related_to",
+            "tail": "AIRCRAFT TOOK OFF",
+            "weight": 1.0
+          },
+          {
+            "id": "d4b104630243",
+            "head": "RAN OUT OF FUEL",
+            "relation": "related_to",
+            "tail": "LANDED OFF AIRPORT",
+            "weight": 1.0
+          }
+        ],
+        "confidence": 0.30139139252498626,
+        "use_mst": true,
+        "edge_weight": "freq",
+        "embedding_backend": "local",
+        "controls": {
+          "shuffle_edges": true,
+          "strip_relations": false,
+          "dedup_chunks": false,
+          "match_context_budget": false,
+          "control_seed": 13
+        },
+        "selection": {
+          "selector": "mst",
+          "use_mst": true
+        }
+      }
+    },
+    "keo_norel_answer": null
+  }
+]

@@ -1,0 +1,4596 @@
+{
+  "instructions": "Assign human_class using the airworthiness failure-condition classes (catastrophic, hazardous, major, minor, none) for the worst plausible outcome of the fact in this triple. Ignore prior_class when it looks wrong; disagreement with the lexicon is the measurement we want.",
+  "classes": [
+    "catastrophic",
+    "hazardous",
+    "major",
+    "minor",
+    "none"
+  ],
+  "n_items": 320,
+  "n_candidates_total": 1468,
+  "sampling": {
+    "scheme": "stratified by prior_class, over-sampling safety classes",
+    "seed": 17,
+    "allocation": {
+      "catastrophic": {
+        "stratum_size": 56,
+        "sampled": 56
+      },
+      "hazardous": {
+        "stratum_size": 111,
+        "sampled": 64
+      },
+      "major": {
+        "stratum_size": 19,
+        "sampled": 19
+      },
+      "minor": {
+        "stratum_size": 49,
+        "sampled": 49
+      },
+      "none": {
+        "stratum_size": 1233,
+        "sampled": 132
+      }
+    },
+    "note": "Weight by sampling_weight for corpus-level rates; raw sample means over-represent the safety classes by construction."
+  },
+  "items": [
+    {
+      "head": "AIRCRAFT CRASHED",
+      "relation": "related_to",
+      "tail": "TAKEOFF",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "PILOT",
+      "relation": "related_to",
+      "tail": "HARD LANDING",
+      "prior_class": "major",
+      "prior_multiplier": 2.0,
+      "matched_terms": [
+        "hard landing"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "major",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "ATTEMPTED TAKEOFF",
+      "relation": "related_to",
+      "tail": "2500 FT",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "AIRCRAFT CRASHED",
+      "relation": "related_to",
+      "tail": "FIRST TEST FLIGHT",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "WATER IN FUEL",
+      "relation": "related_to",
+      "tail": "LOST POWER",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "water in fuel"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "CRASHED AND BURNED",
+      "relation": "related_to",
+      "tail": "AIRPLANE",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "HYDRAULIC RESERVOIR",
+      "relation": "related_to",
+      "tail": "BRAKES",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "hydraulic"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "SKYWAY AIRLINE FLIGHT",
+      "relation": "related_to",
+      "tail": "BEECH 1900D",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "AIRCRAFT",
+      "relation": "related_to",
+      "tail": "SERVICE",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "SEAT RETAINERS",
+      "relation": "related_to",
+      "tail": "MISSING",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "DEPARTED",
+      "relation": "related_to",
+      "tail": "TAXIED BACK INTO POSITION",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "major",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "OIL LEAK",
+      "relation": "related_to",
+      "tail": "FORCED LANDING",
+      "prior_class": "major",
+      "prior_multiplier": 2.0,
+      "matched_terms": [
+        "oil leak"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "major",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "ICE & WATER",
+      "relation": "related_to",
+      "tail": "LOWEST POINT",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ENGINE FAILURE",
+      "relation": "related_to",
+      "tail": "FORCED LANDING",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "engine failure"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "FLIGHT",
+      "relation": "related_to",
+      "tail": "VFR",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "CRASHED",
+      "relation": "related_to",
+      "tail": "SHORT OF RWY",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "DOOR POPPED OPEN",
+      "relation": "related_to",
+      "tail": "TAKEOFF",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "EMERGENCY PROCEDURES",
+      "relation": "related_to",
+      "tail": "NOSE GEAR COLLAPSED",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "gear collapse"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "STUDENT",
+      "relation": "related_to",
+      "tail": "PLANE",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "WINGTIP",
+      "relation": "related_to",
+      "tail": "CAUGHT ON FIRE",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "fire"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "WATER IN FUEL",
+      "relation": "related_to",
+      "tail": "PROBABLY",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "water in fuel"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "ENGINE FAILURE",
+      "relation": "related_to",
+      "tail": "TAKEOFF",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "engine failure"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "THROTTLE FRICTION",
+      "relation": "related_to",
+      "tail": "LOOSE",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "loose"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "OIL ADDED",
+      "relation": "related_to",
+      "tail": "ENGINE",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "major",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "FOUND WATER IN FUEL",
+      "relation": "related_to",
+      "tail": "FORCED LANDING",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "water in fuel"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "TAILWHEEL",
+      "relation": "related_to",
+      "tail": "Jammed",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "CRASHED",
+      "relation": "related_to",
+      "tail": "BAD OIL LEAK",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash",
+        "oil leak"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "HYDRAULIC PUMP",
+      "relation": "related_to",
+      "tail": "ENGINE",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "hydraulic"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "ICE",
+      "relation": "related_to",
+      "tail": "FUEL SYSTEM",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "DC-10",
+      "relation": "related_to",
+      "tail": "GATE B-52",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "VIBRATION",
+      "relation": "related_to",
+      "tail": "APU DOOR STRUCK A MAIN ROTOR BLADE",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "rotor",
+        "vibration"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "SUITCASE",
+      "relation": "related_to",
+      "tail": "BAGGAGE DOOR",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "OIL FILLER CAP",
+      "relation": "related_to",
+      "tail": "LOOSE",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "loose"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "ENGINE",
+      "relation": "related_to",
+      "tail": "CRUISE",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "OVERSHOT",
+      "relation": "related_to",
+      "tail": "AIRPORT LANDING",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "BRAKE DISC PADS",
+      "relation": "related_to",
+      "tail": "TOTALLY WORN",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "worn"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "FLT",
+      "relation": "related_to",
+      "tail": "SPRINGFIELD",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ELECTRIC POWER LOSS",
+      "relation": "related_to",
+      "tail": "GEAR WAS EXTENDED",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "power loss"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "CRASHED",
+      "relation": "related_to",
+      "tail": "TREES",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "GEAR COLLAPSED",
+      "relation": "related_to",
+      "tail": "DAMAGE",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "gear collapse"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "ENGINE STOPPED",
+      "relation": "related_to",
+      "tail": "CARBURETOR ICE OR FUEL CONTAMINATION",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "fuel contamination"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "AIRCRAFT CRASHED",
+      "relation": "related_to",
+      "tail": "REBUILDING",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "CRASH LANDING",
+      "relation": "related_to",
+      "tail": "AVOIDING TREES",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "PRECAUTIONARY LANDING",
+      "relation": "related_to",
+      "tail": "INSTRUMENT LIGHT INOPERATIVE",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "light inoperative"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "WATER IN FUEL",
+      "relation": "related_to",
+      "tail": "MISREAD",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "water in fuel"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "GEAR LIGHT",
+      "relation": "related_to",
+      "tail": "GEAR LIGHT",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ENGINE",
+      "relation": "related_to",
+      "tail": "FOUND WATER IN FUEL",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "water in fuel"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "ALTERNATOR",
+      "relation": "related_to",
+      "tail": "ELECTRICAL FAILURE",
+      "prior_class": "minor",
+      "prior_multiplier": 1.4,
+      "matched_terms": [
+        "electrical"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "PILOT",
+      "relation": "related_to",
+      "tail": "BACKFIRE",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "fire"
+      ],
+      "human_class": "major",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "CREW",
+      "relation": "related_to",
+      "tail": "LOCATION",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "NOT SERVICED FOR 5 MONTHS",
+      "relation": "related_to",
+      "tail": "5 MONTHS",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "major",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "FUEL LOST",
+      "relation": "related_to",
+      "tail": "FUEL CAPS",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "RT BRAKE PUCK 70",
+      "relation": "related_to",
+      "tail": "WORN",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "worn"
+      ],
+      "human_class": "major",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "ICING",
+      "relation": "related_to",
+      "tail": "ALTIMETER NOT IFR CERTIFIED",
+      "prior_class": "major",
+      "prior_multiplier": 1.6,
+      "matched_terms": [
+        "icing"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "major",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "CRASH",
+      "relation": "related_to",
+      "tail": "PILOT ABORTED TAKEOFF",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "EXPLOSION",
+      "relation": "related_to",
+      "tail": "LIFTING LOGS",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "explosion"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "CABLE HIT TAILROTOR",
+      "relation": "related_to",
+      "tail": "MADE HARD AUTOROTATE LANDING",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "rotor"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "ENGINE",
+      "relation": "related_to",
+      "tail": "ZA",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "BRAKE FAILURE",
+      "relation": "related_to",
+      "tail": "OVER RAN RUNWAY INTO A DITCH",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "brake failure"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "ENGINE",
+      "relation": "related_to",
+      "tail": "PLANE CRASHED",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "ENGINE STOPPED",
+      "relation": "related_to",
+      "tail": "TAKEOFF",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ENGINE",
+      "relation": "related_to",
+      "tail": "HYDRAULIC PUMP",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "hydraulic"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "FUEL CAP",
+      "relation": "related_to",
+      "tail": "NEWLY INSTALLED",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "GEAR COLLAPSED",
+      "relation": "related_to",
+      "tail": "LANDING ROLL",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "gear collapse"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "PILOTS SEAT",
+      "relation": "related_to",
+      "tail": "SLID AFT",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "TAKE OFF",
+      "relation": "related_to",
+      "tail": "CRASHLANDED",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "ENGINE QUIT",
+      "relation": "related_to",
+      "tail": "LIFTOFF",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "engine quit"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "CRASHED AND BURNED",
+      "relation": "related_to",
+      "tail": "GRASS RUNWAY",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "PILOT",
+      "relation": "related_to",
+      "tail": "GEAR SAFE LIGHTS",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "CONNECTING ROD BENT BY",
+      "relation": "related_to",
+      "tail": "BROKE",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ENGINE",
+      "relation": "related_to",
+      "tail": "200 FEET",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ALTERNATOR BELT",
+      "relation": "related_to",
+      "tail": "ELECTRICAL SYSTEM FAILED",
+      "prior_class": "minor",
+      "prior_multiplier": 1.4,
+      "matched_terms": [
+        "electrical"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "LOOSE NOSE GEAR DOOR",
+      "relation": "related_to",
+      "tail": "JAMMED AND BROKE MECHANISM",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "loose"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "ENGINE STOPPED",
+      "relation": "related_to",
+      "tail": "WATER CONTAMINATION",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "FUEL STRAINER",
+      "relation": "related_to",
+      "tail": "RAN OUT OF FUEL",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ENGINE LOST POWER",
+      "relation": "related_to",
+      "tail": "TAKEOFF RUNWAY",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "AIRPLANES",
+      "relation": "related_to",
+      "tail": "TAXI",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "N759TY",
+      "relation": "related_to",
+      "tail": "HOT SPRINGS",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ICING",
+      "relation": "related_to",
+      "tail": "LOST CONTROL",
+      "prior_class": "major",
+      "prior_multiplier": 1.6,
+      "matched_terms": [
+        "icing"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "major",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "TIE DOWN STRAP",
+      "relation": "related_to",
+      "tail": "TRAILER",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "LOOSE B-NUT",
+      "relation": "related_to",
+      "tail": "OIL LINE",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "loose"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "PILOTS",
+      "relation": "related_to",
+      "tail": "FLIGHT",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "PRIMER",
+      "relation": "related_to",
+      "tail": "MIXTURE FULL RICH",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "EXTENDED GEAR",
+      "relation": "related_to",
+      "tail": "ELECTRICAL FAILURE",
+      "prior_class": "minor",
+      "prior_multiplier": 1.4,
+      "matched_terms": [
+        "electrical"
+      ],
+      "human_class": "minor",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "ACFT",
+      "relation": "related_to",
+      "tail": "FLIGHT",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "CRASHED",
+      "relation": "related_to",
+      "tail": "",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "CRASHED",
+      "relation": "related_to",
+      "tail": "HIT TREES",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "NOSE GEAR COLLAPSED",
+      "relation": "related_to",
+      "tail": "LANDING GEAR SWITCH IMPROPERLY PLACED",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "gear collapse"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "TANK CAP",
+      "relation": "related_to",
+      "tail": "CAPTAIN",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "HYDRAULIC RESERVOIR",
+      "relation": "related_to",
+      "tail": "LANDING GEAR",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "hydraulic"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "CRASHED",
+      "relation": "related_to",
+      "tail": "IMPROPER PREFLIGHT",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "N4754R",
+      "relation": "related_to",
+      "tail": "PILOT IN COMMAND",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "TURBOCHARGERS",
+      "relation": "related_to",
+      "tail": "TKOF",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "DEPARTED",
+      "relation": "related_to",
+      "tail": "DAMAGED WING",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "REPORTED PROBLEM",
+      "relation": "related_to",
+      "tail": "STALLED AND CRASHED",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "ELEVATOR CONTROL",
+      "relation": "related_to",
+      "tail": "JAMMED",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "LOOSE COWLING",
+      "relation": "related_to",
+      "tail": "DENTED STABILIZER",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "loose"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "VIBRATION",
+      "relation": "related_to",
+      "tail": "NEAR",
+      "prior_class": "major",
+      "prior_multiplier": 2.0,
+      "matched_terms": [
+        "vibration"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "major",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "ELECTRICAL FAILURE",
+      "relation": "related_to",
+      "tail": "FINAL",
+      "prior_class": "minor",
+      "prior_multiplier": 1.4,
+      "matched_terms": [
+        "electrical"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "FUEL SYSTEM",
+      "relation": "related_to",
+      "tail": "FROZEN WATER",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "frozen"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "CRASH",
+      "relation": "related_to",
+      "tail": "END OF RUNWAY",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "ELECTRIC POWER LOSS",
+      "relation": "related_to",
+      "tail": "PILOT ERROR",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "power loss"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "ELECTRIC POWER LOSS",
+      "relation": "related_to",
+      "tail": "FORCED LANDING",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "power loss"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "TAKEOFF",
+      "relation": "related_to",
+      "tail": "BETHEL AIRPORT",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "SEAT CAME LOOSE",
+      "relation": "related_to",
+      "tail": "PILOT'S FEET RELEASE BRAKES",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "loose"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "CRASHED",
+      "relation": "related_to",
+      "tail": "TAKEOFF",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "INBOARD END OF AILERON PUSH ROD",
+      "relation": "related_to",
+      "tail": "CONTROL PROBLEMS",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "LANDING",
+      "relation": "related_to",
+      "tail": "GENERATORS NOT TURNED ON",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "NOSE WHEEL STEERING",
+      "relation": "related_to",
+      "tail": "WINGTIP HIT HANGAR",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "LANDING",
+      "relation": "related_to",
+      "tail": "OIL COMING FROM ENGINES",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "LANDED",
+      "relation": "related_to",
+      "tail": "APPROACH",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ENGINE STOPPED",
+      "relation": "related_to",
+      "tail": "CRASHED",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "AIRCRAFT CRASHED",
+      "relation": "related_to",
+      "tail": "TREES",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "LOOSE OIL FILLER CAP",
+      "relation": "related_to",
+      "tail": "LOOSE OIL FILLER CAP",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "loose"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "LINEBOY",
+      "relation": "related_to",
+      "tail": "NORMAN",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "WATER IN FUEL",
+      "relation": "related_to",
+      "tail": "LOSS OF ENGINE POWER",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "water in fuel"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "ENGINE QUIT",
+      "relation": "related_to",
+      "tail": "LANDED ON REMAINING RUNWAY GEAR UP",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "engine quit"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "MIXTURE CONTROL",
+      "relation": "related_to",
+      "tail": "WHILEEMPTING TO LEAN MIXTURE",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "AIRCRAFT",
+      "relation": "related_to",
+      "tail": "-23",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ROCKS",
+      "relation": "related_to",
+      "tail": "END",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "TIRED TAXI",
+      "relation": "related_to",
+      "tail": "TAXI",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "LANDING",
+      "relation": "related_to",
+      "tail": "LANDING LIGHT INOPERATIVE",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "light inoperative"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "BROKEN EXHAUST PIPE",
+      "relation": "related_to",
+      "tail": "FIRE",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "fire"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "GEAR COLLAPSED",
+      "relation": "related_to",
+      "tail": "GEAR HANDLE DOWN",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "gear collapse"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "FUEL VALVE",
+      "relation": "related_to",
+      "tail": "ON",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ACFT",
+      "relation": "related_to",
+      "tail": "ENG",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "FUEL CAP O RINGS",
+      "relation": "related_to",
+      "tail": "WORN",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "worn"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "LOOSE DZUS FASTENER",
+      "relation": "related_to",
+      "tail": "PRECAUTIONARY LANDING",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "loose"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "LOAD",
+      "relation": "related_to",
+      "tail": "FROZEN",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "frozen"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "SMOKE",
+      "relation": "related_to",
+      "tail": "NR2 ENGINE FIRE",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "fire",
+        "smoke"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "LOST CONTROL",
+      "relation": "related_to",
+      "tail": "NEGLECTED TO CONNECT RIGHT AILERON",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ENGINE",
+      "relation": "related_to",
+      "tail": "FORCED LANDING",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ICING",
+      "relation": "related_to",
+      "tail": "ICING FORECAST",
+      "prior_class": "major",
+      "prior_multiplier": 1.6,
+      "matched_terms": [
+        "icing"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "major",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "ENGINE COWLING",
+      "relation": "related_to",
+      "tail": "COWLING",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "CENTER ENGINE",
+      "relation": "related_to",
+      "tail": "WATER FOUND IN FUEL TANKS",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "TAXING",
+      "relation": "related_to",
+      "tail": "UNLIGHTED",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "INEFFECTIVE BRAKES",
+      "relation": "related_to",
+      "tail": "WORN OUT",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "worn"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "PILOT",
+      "relation": "related_to",
+      "tail": "GEAR COLLAPSED",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "gear collapse"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "GEAR WARNING HORN",
+      "relation": "related_to",
+      "tail": "PROBLEM",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "LANDING MADE ON FROZEN LAKE",
+      "relation": "related_to",
+      "tail": "ENGINE QUIT",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "engine quit",
+        "frozen"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "NOSE GEAR COLLAPSED ON LANDING ROLL",
+      "relation": "related_to",
+      "tail": "LANDING ROLL",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "gear collapse"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "FLEXIBLE HOSE",
+      "relation": "related_to",
+      "tail": "CARBURATOR",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "FLIGHT",
+      "relation": "related_to",
+      "tail": "WATER IN FUEL",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "water in fuel"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "FIRE",
+      "relation": "related_to",
+      "tail": "FIREMEN",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "fire"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "TETHERED",
+      "relation": "related_to",
+      "tail": "TIE DOWN STRAP",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "minor",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ENGINE FALURE",
+      "relation": "related_to",
+      "tail": "TOTAL ELECTRICAL FAILURE",
+      "prior_class": "minor",
+      "prior_multiplier": 1.4,
+      "matched_terms": [
+        "electrical"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "ONE ENGINE QUIT ON TAKEOFF",
+      "relation": "related_to",
+      "tail": "FUEL STARVATION",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "engine quit",
+        "fuel starvation"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "ENGINE",
+      "relation": "related_to",
+      "tail": "TAKEOFF",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "WATER IN FUEL SYSTEM",
+      "relation": "related_to",
+      "tail": "FUEL STORAGE TANK",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "water in fuel"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "BROKE",
+      "relation": "related_to",
+      "tail": "BROKE PORP SHAFT",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "LANDING GEAR COLLAPSED AT TOUCHDOWN",
+      "relation": "related_to",
+      "tail": "COLLAPSED",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "gear collapse"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "BOOST PUMP",
+      "relation": "related_to",
+      "tail": "PILOT",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "LANDED",
+      "relation": "related_to",
+      "tail": "MARSHY AREA",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "major",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "RIGHT TANK",
+      "relation": "related_to",
+      "tail": "FUEL LEAK",
+      "prior_class": "major",
+      "prior_multiplier": 2.0,
+      "matched_terms": [
+        "fuel leak"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "major",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "LOSS OF OIL PREESURE",
+      "relation": "related_to",
+      "tail": "ENGINE SHUTDOWN",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "engine shutdown"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "FORWARD CARGO DOOR",
+      "relation": "related_to",
+      "tail": "AIRCRAFT",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "RUDDER & AIL CTL CABLES",
+      "relation": "related_to",
+      "tail": "LOOSE",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "loose"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "REPORTED PROBLEM",
+      "relation": "related_to",
+      "tail": "BELT NOT FASTENED",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "CRASHED",
+      "relation": "related_to",
+      "tail": "CRACKED ENGINE CASE",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "MAIN GEAR",
+      "relation": "related_to",
+      "tail": "COCKPIT DOOR",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ENGINE QUIT",
+      "relation": "related_to",
+      "tail": "IMPROPER PREFLIGHT",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "engine quit"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "FIRE",
+      "relation": "related_to",
+      "tail": "EXPLODED",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "fire"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "FUEL CONTAMINATION",
+      "relation": "related_to",
+      "tail": "ENGINE DRIVEN FUEL PUMP FILTER",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "fuel contamination"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "FUEL CAP O RINGS",
+      "relation": "related_to",
+      "tail": "DID NOT SEAL",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "seal"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "CRASH",
+      "relation": "related_to",
+      "tail": "EMERGENCY LANDING",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "FORCED LANDING",
+      "relation": "related_to",
+      "tail": "FUEL CONTAMINATION",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "fuel contamination"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "FORWARD CARGO DOOR",
+      "relation": "related_to",
+      "tail": "DOOR WAS NOT LATCHED",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "LANDING",
+      "relation": "related_to",
+      "tail": "OIL CAP",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "SPARKS",
+      "relation": "related_to",
+      "tail": "ROTOR",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "rotor"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "PILOT",
+      "relation": "related_to",
+      "tail": "ELECTRICAL POWER",
+      "prior_class": "minor",
+      "prior_multiplier": 1.4,
+      "matched_terms": [
+        "electrical"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "SMOKE IN COCKPIT",
+      "relation": "related_to",
+      "tail": "FIRE",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "fire",
+        "smoke"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "PLANE",
+      "relation": "related_to",
+      "tail": "CRASHED",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "PILOT",
+      "relation": "related_to",
+      "tail": "INOPERATIVE RADIO",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "GEAR RETRACTION",
+      "relation": "related_to",
+      "tail": "TAKEOFF ROLL FAILURE",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ELECTRICAL FAILURE",
+      "relation": "related_to",
+      "tail": "MANUAL GEAR EXTENSION",
+      "prior_class": "minor",
+      "prior_multiplier": 1.4,
+      "matched_terms": [
+        "electrical"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "LOOSE WHEEL FAIRING",
+      "relation": "related_to",
+      "tail": "RAN OFF SIDE OF RUNWAY",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "loose"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "PILOT",
+      "relation": "related_to",
+      "tail": "AIRCRAFT",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "GEAR COLLAPSED",
+      "relation": "related_to",
+      "tail": "BROKEN EXTENSION CABLE",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "gear collapse"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "TAXIING AIRCRAFT",
+      "relation": "related_to",
+      "tail": "PARKED AIRCRAFT",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ELECTRICAL FAILURE",
+      "relation": "related_to",
+      "tail": "COLLAPSED",
+      "prior_class": "minor",
+      "prior_multiplier": 1.4,
+      "matched_terms": [
+        "electrical"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "COCKPIT DOOR",
+      "relation": "related_to",
+      "tail": "ROTATION",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "CIRCUIT BREAKER HYDRAULIC PUMP",
+      "relation": "related_to",
+      "tail": "TAXIING",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "hydraulic"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "FAILED TO USE EMERGENCY GEAR EXTENSION",
+      "relation": "related_to",
+      "tail": "GEAR COLLAPSED",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "gear collapse"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "ENGINE QUIT",
+      "relation": "related_to",
+      "tail": "OUT OF FUEL",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "engine quit"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "LANDED SHORT OF RUNWAY",
+      "relation": "related_to",
+      "tail": "FOUND WATER IN FUEL",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "water in fuel"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "IFR DUAL FLIGHT",
+      "relation": "related_to",
+      "tail": "ELECTRIC POWER LOSS",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "power loss"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "ENGINE STOPPAGE",
+      "relation": "related_to",
+      "tail": "TAKEOFF",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "PRIMER UNLOCKED",
+      "relation": "related_to",
+      "tail": "ROUGH ENGINE",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "major",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ENGINE STOPPED",
+      "relation": "related_to",
+      "tail": "SPRAY RUN",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "GEAR COLLAPSED",
+      "relation": "related_to",
+      "tail": "COLLAPSED",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "gear collapse"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "SYSTEM",
+      "relation": "related_to",
+      "tail": "BRAKE FAILURE",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "brake failure"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "RPM LOSS",
+      "relation": "related_to",
+      "tail": "COULD NOT MAINTAIN ALTITUDE",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "AIRCRAFT",
+      "relation": "related_to",
+      "tail": "ANNUAL INSPECTION",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "NOSE GEAR COLLAPSED",
+      "relation": "related_to",
+      "tail": "EARLIER COLLAPSE",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "gear collapse"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "CRASH",
+      "relation": "related_to",
+      "tail": "UNABLE TO CLIMB",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "BARRICADE",
+      "relation": "related_to",
+      "tail": "TAXI",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "PLT",
+      "relation": "related_to",
+      "tail": "SPCL VFR CLRNCE",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "STUDENT PILOT",
+      "relation": "related_to",
+      "tail": "1ST LANDING APPROCH",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "FOUND LOOSE OIL CAP",
+      "relation": "related_to",
+      "tail": "OIL LEAK",
+      "prior_class": "major",
+      "prior_multiplier": 2.0,
+      "matched_terms": [
+        "loose",
+        "oil leak"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "major",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "CRASH",
+      "relation": "related_to",
+      "tail": "DITCH",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "MISSING FUEL CAP",
+      "relation": "related_to",
+      "tail": "FUEL STARVATION",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "fuel starvation"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "CRASH",
+      "relation": "related_to",
+      "tail": "OFF END RWY",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "CARGO DOOR",
+      "relation": "related_to",
+      "tail": "FLIGHT",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ENGINE QUIT",
+      "relation": "related_to",
+      "tail": "FORCED LANDING",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "engine quit"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "NR2 ENGINE FIRE",
+      "relation": "related_to",
+      "tail": "GATE",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "fire"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "HOLE",
+      "relation": "related_to",
+      "tail": "LOOSE GRAVEL",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "loose"
+      ],
+      "human_class": "major",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "ENGINE",
+      "relation": "related_to",
+      "tail": "BACKFIRED",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "fire"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "POWER LOSS",
+      "relation": "related_to",
+      "tail": "ALTITUDE",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "power loss"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "AIRCRAFT CRASHED",
+      "relation": "related_to",
+      "tail": "EMERGENCY LANDING",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "PILOT FAILED TO RELEASE BRAKES",
+      "relation": "related_to",
+      "tail": "TIRES BLOWN ON LANDING",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ENGINE SHUTDOWN",
+      "relation": "related_to",
+      "tail": "SMOKE",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "engine shutdown",
+        "smoke"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "ENGINE COWLING",
+      "relation": "related_to",
+      "tail": "ENGINE",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "major",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "WATER DRAINED",
+      "relation": "related_to",
+      "tail": "FLT. TWO & ONE HALF QUARTS",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "minor",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "MAIN ROTOR",
+      "relation": "related_to",
+      "tail": "TAIL ROTOR",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "rotor"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "FUEL LEVER",
+      "relation": "related_to",
+      "tail": "NR2 ENGINE FIRE",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "fire"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "PILOT",
+      "relation": "related_to",
+      "tail": "TAKEOFF",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "minor",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "VIBRATION",
+      "relation": "related_to",
+      "tail": "INFLIGHT",
+      "prior_class": "major",
+      "prior_multiplier": 2.0,
+      "matched_terms": [
+        "vibration"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "major",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "R RUDDER CABLE",
+      "relation": "related_to",
+      "tail": "CABLES",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "CARBURETOR BOWL",
+      "relation": "related_to",
+      "tail": "ICE",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "LANDING LIGHT",
+      "relation": "related_to",
+      "tail": "PILOT TAXIED OFF RAMP AT NIGHT",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "major",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ENGINE OVERHEATED",
+      "relation": "related_to",
+      "tail": "DUST COVER PLATE NOT REMOVED",
+      "prior_class": "major",
+      "prior_multiplier": 2.0,
+      "matched_terms": [
+        "overheat"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "major",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "ENGINE",
+      "relation": "related_to",
+      "tail": "FUEL STARVATION",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "fuel starvation"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "PILOT",
+      "relation": "related_to",
+      "tail": "ELECTRICAL FAILURE",
+      "prior_class": "minor",
+      "prior_multiplier": 1.4,
+      "matched_terms": [
+        "electrical"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "PILOT",
+      "relation": "related_to",
+      "tail": "LANDING",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ILLEGAL SOLO",
+      "relation": "related_to",
+      "tail": "LOST DIRECTIONAL CONTROL",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "LOST DIRECTIONAL CONTROL",
+      "relation": "related_to",
+      "tail": "SEAT NOT LATCHED",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ENGINE FIRE",
+      "relation": "related_to",
+      "tail": "BIRDS NEST",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "fire"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "LANDED",
+      "relation": "related_to",
+      "tail": "SAFELY",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "TAKE OFF",
+      "relation": "related_to",
+      "tail": "PLANE CRASHED",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "AN175-16",
+      "relation": "related_to",
+      "tail": "PULLED THROUGH TORQUE LINK CENTER SCISSORS",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ELECTRICAL EMERGENCY",
+      "relation": "related_to",
+      "tail": "JUMP START",
+      "prior_class": "minor",
+      "prior_multiplier": 1.4,
+      "matched_terms": [
+        "electrical"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "CRASH",
+      "relation": "related_to",
+      "tail": "TAKEOFF",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "HELICOPTER",
+      "relation": "related_to",
+      "tail": "ROLLED OVER",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ENGINE STOPPED",
+      "relation": "related_to",
+      "tail": "FUEL STARVATION",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "fuel starvation"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "LEFT GENERATOR",
+      "relation": "related_to",
+      "tail": "FLIGHT",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ENGINE FAILED",
+      "relation": "related_to",
+      "tail": "WATER AND TRASH IN FUEL",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "OIL FILLER CAP",
+      "relation": "related_to",
+      "tail": "OIL FILLER CAP",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "DAMAGED",
+      "relation": "related_to",
+      "tail": "PREVIOUS HARD LANDING",
+      "prior_class": "major",
+      "prior_multiplier": 2.0,
+      "matched_terms": [
+        "hard landing"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "major",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "LANDING GEAR COLLAPSED AT TOUCHDOWN",
+      "relation": "related_to",
+      "tail": "TOUCHDOWN",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "gear collapse"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "ELEVATOR CONTROL",
+      "relation": "related_to",
+      "tail": "STICK BOOT NOT FASTENED TO FLOOR",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "UP ELEVATOR",
+      "relation": "related_to",
+      "tail": "FLIGHT",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "DIVED INTO OCEAN",
+      "relation": "related_to",
+      "tail": "STALLED",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ACFT",
+      "relation": "related_to",
+      "tail": "CRASH",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "AIRCRAFT",
+      "relation": "related_to",
+      "tail": "ELECTRICAL FAILURE",
+      "prior_class": "minor",
+      "prior_multiplier": 1.4,
+      "matched_terms": [
+        "electrical"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "CREW",
+      "relation": "related_to",
+      "tail": "COWLING LOOSE",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "loose"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "CREW",
+      "relation": "related_to",
+      "tail": "FLAMEOUT",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "flame"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "LANDING LIGHT",
+      "relation": "related_to",
+      "tail": "NIGHT",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "major",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "SKID",
+      "relation": "related_to",
+      "tail": "TIE DOWN STRAPS",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "major",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "AIRPLANES",
+      "relation": "related_to",
+      "tail": "INOPERATIVE",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "OIL LEAK",
+      "relation": "related_to",
+      "tail": "DIPSTICK NOT BEING SECURED",
+      "prior_class": "major",
+      "prior_multiplier": 2.0,
+      "matched_terms": [
+        "oil leak"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "major",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "ENGINE FAILED",
+      "relation": "related_to",
+      "tail": "TAKEOFF",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "GEAR COLLAPSED",
+      "relation": "related_to",
+      "tail": "TOUCHDOWN",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "gear collapse"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "AIRCRAFT TAXI LIGHT",
+      "relation": "related_to",
+      "tail": "INOPERATIVE",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "minor",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "SMOKE AND FUMES",
+      "relation": "related_to",
+      "tail": "COCKPIT",
+      "prior_class": "major",
+      "prior_multiplier": 2.0,
+      "matched_terms": [
+        "fumes",
+        "smoke"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "major",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "LANDING",
+      "relation": "related_to",
+      "tail": "WATER IN FUEL SYSTEM",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "water in fuel"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "GEAR RETRACTION",
+      "relation": "related_to",
+      "tail": "TOWBAR",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ENGINE FLAMED OUT",
+      "relation": "related_to",
+      "tail": "TAXI",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "flame"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "ELECTRICAL PWR FAILURE",
+      "relation": "related_to",
+      "tail": "PLT",
+      "prior_class": "minor",
+      "prior_multiplier": 1.4,
+      "matched_terms": [
+        "electrical"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "GEAR COLLAPSED",
+      "relation": "related_to",
+      "tail": "PILOT FAILED TO USE EMERGENCY EXTENSION",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "gear collapse"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "ICE",
+      "relation": "related_to",
+      "tail": "TRIM HINGES",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "major",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "WATER IN FUEL",
+      "relation": "related_to",
+      "tail": "ENGINE FAILED",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "water in fuel"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "TIE DOWN STRAP",
+      "relation": "related_to",
+      "tail": "LEFT SKID",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "minor",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ELECTRICAL SYSTEM FAILURE",
+      "relation": "related_to",
+      "tail": "CORRODED BATTERY LEAD",
+      "prior_class": "minor",
+      "prior_multiplier": 1.4,
+      "matched_terms": [
+        "electrical"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "ENGINE STOPPED",
+      "relation": "related_to",
+      "tail": "VACUUM IN THE TANK",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ENGINE",
+      "relation": "related_to",
+      "tail": "WATER IN FUEL",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "water in fuel"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "ELECTRICAL EMERGENCY",
+      "relation": "related_to",
+      "tail": "TAKEOFF",
+      "prior_class": "minor",
+      "prior_multiplier": 1.4,
+      "matched_terms": [
+        "electrical"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "PILOT",
+      "relation": "related_to",
+      "tail": "BEACH",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ACFT",
+      "relation": "related_to",
+      "tail": "CRASHED",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "SMOKE",
+      "relation": "related_to",
+      "tail": "ENGINE COWL",
+      "prior_class": "major",
+      "prior_multiplier": 2.0,
+      "matched_terms": [
+        "smoke"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "major",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "PLT",
+      "relation": "related_to",
+      "tail": "PREV NOSE WHEEL VIBRATION",
+      "prior_class": "major",
+      "prior_multiplier": 2.0,
+      "matched_terms": [
+        "vibration"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "major",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "FAILURE",
+      "relation": "related_to",
+      "tail": "WATER IN FUEL",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "water in fuel"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "LINKAGE",
+      "relation": "related_to",
+      "tail": "FLAT STRUT",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ROPE BROKE",
+      "relation": "related_to",
+      "tail": "AERO TOW TAKE OFF",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ANTENNA",
+      "relation": "related_to",
+      "tail": "CRACKED",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "major",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ENGINE OVERHEAT",
+      "relation": "related_to",
+      "tail": "HOT OIL SMELL",
+      "prior_class": "major",
+      "prior_multiplier": 2.0,
+      "matched_terms": [
+        "overheat"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "major",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "PROP",
+      "relation": "related_to",
+      "tail": "GROUND",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ENGINE FAILED",
+      "relation": "related_to",
+      "tail": "WATER IN FUEL",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "water in fuel"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "HOOK RELEASE ELECTRICAL PLUG",
+      "relation": "related_to",
+      "tail": "DISCONNECTED",
+      "prior_class": "minor",
+      "prior_multiplier": 1.4,
+      "matched_terms": [
+        "electrical"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "WATER IN FUEL",
+      "relation": "related_to",
+      "tail": "SEVERE RAIN",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "water in fuel"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "RUNUP",
+      "relation": "related_to",
+      "tail": "HYDRAULIC ON",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "hydraulic"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "LOOSE BATTERY POST",
+      "relation": "related_to",
+      "tail": "LOSS OF ALTERNATOR",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "loose"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "LOOSE COWLING",
+      "relation": "related_to",
+      "tail": "CRACKED WINDSHIELD",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "loose"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "CRASH",
+      "relation": "related_to",
+      "tail": "FORCED LANDING",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "FUEL LINES",
+      "relation": "related_to",
+      "tail": "PLANE CRASHED",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "RIGHT BRAKE",
+      "relation": "related_to",
+      "tail": "BRAKE WORN OUT",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "worn"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "ENGINE",
+      "relation": "related_to",
+      "tail": "BASE",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "AIRCRAFT",
+      "relation": "related_to",
+      "tail": "CRASH",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "PLT",
+      "relation": "related_to",
+      "tail": "DRG",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "PILOT",
+      "relation": "related_to",
+      "tail": "OIL FILLER CAP",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "PILOT",
+      "relation": "related_to",
+      "tail": "FROST",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ELECTRICAL PROBLEM",
+      "relation": "related_to",
+      "tail": "PILOT LANDED",
+      "prior_class": "minor",
+      "prior_multiplier": 1.4,
+      "matched_terms": [
+        "electrical"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "DOOR",
+      "relation": "related_to",
+      "tail": "TEARING LOOSE",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "loose"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "SMOKE IN COCKPIT",
+      "relation": "related_to",
+      "tail": "LIFTOFF",
+      "prior_class": "major",
+      "prior_multiplier": 2.0,
+      "matched_terms": [
+        "smoke"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "major",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "SMOKE AND FUMES",
+      "relation": "related_to",
+      "tail": "GRASS AND DIRT IN ENGINE COMPARTMENT",
+      "prior_class": "major",
+      "prior_multiplier": 2.0,
+      "matched_terms": [
+        "fumes",
+        "smoke"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "major",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "NOSE GEAR",
+      "relation": "related_to",
+      "tail": "GEAR",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ENGINE SHUTDOWN",
+      "relation": "related_to",
+      "tail": "NACELLE",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "engine shutdown"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "NR2 ENGINE FIRE",
+      "relation": "related_to",
+      "tail": "LOADING PASSENGERS",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "fire"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "ACFT N42807",
+      "relation": "related_to",
+      "tail": "TOTAL HYD FAILURE",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "EXPLOSION",
+      "relation": "related_to",
+      "tail": "ENGINE START",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "explosion"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "FUEL",
+      "relation": "related_to",
+      "tail": "CONTAMINATED WITH WATER",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ENGINE QUIT",
+      "relation": "related_to",
+      "tail": "AFTER TAKEOFF",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "engine quit"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "DENSITY ALT",
+      "relation": "related_to",
+      "tail": "7200FT",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "CRASH",
+      "relation": "related_to",
+      "tail": "ENGINE FAILURE",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash",
+        "engine failure"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "NOSE GEAR COLLAPSED",
+      "relation": "related_to",
+      "tail": "WAITING FOR TAKEOFF",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "gear collapse"
+      ],
+      "human_class": "hazardous",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "OIL FILLER CAP",
+      "relation": "related_to",
+      "tail": "OIL COMING OUT",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ENGINE STOPPED",
+      "relation": "related_to",
+      "tail": "PILOT",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "CRASHED",
+      "relation": "related_to",
+      "tail": "SHORTLY AFTER",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "BAGGAGE DOOR",
+      "relation": "related_to",
+      "tail": "PILOT",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ENGINE QUIT",
+      "relation": "related_to",
+      "tail": "SNOW PACKED IN ENGINE COWL",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "engine quit"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "HYDRAULIC RESERVOIR",
+      "relation": "related_to",
+      "tail": "FLUID",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "hydraulic"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "N759TY",
+      "relation": "related_to",
+      "tail": "FAYETTEVILLE",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "none",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "FUEL CONTAMINATION",
+      "relation": "related_to",
+      "tail": "AIRFRAME FUEL FILTER",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "fuel contamination"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "CRASHED",
+      "relation": "related_to",
+      "tail": "FIELD AIRSTRIP",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "CRASHED",
+      "relation": "related_to",
+      "tail": "OFF END OF STRIP",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "ENGINE SHUT DOWN",
+      "relation": "related_to",
+      "tail": "COWL HAD NOT BEEN PROPERLY SECURED",
+      "prior_class": "none",
+      "prior_multiplier": 1.0,
+      "matched_terms": [],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "none",
+      "sampling_weight": 9.340909090909092
+    },
+    {
+      "head": "ENGINE FAILED",
+      "relation": "related_to",
+      "tail": "AIRCRAFT CRASHED",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "FUMES",
+      "relation": "related_to",
+      "tail": "EMERGENCY LANDING",
+      "prior_class": "major",
+      "prior_multiplier": 2.0,
+      "matched_terms": [
+        "fumes"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "major",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "ENGINE STOPPED",
+      "relation": "related_to",
+      "tail": "EMERGENCY CRASH LANDING",
+      "prior_class": "catastrophic",
+      "prior_multiplier": 3.0,
+      "matched_terms": [
+        "crash"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "catastrophic",
+      "sampling_weight": 1.0
+    },
+    {
+      "head": "WATER IN FUEL",
+      "relation": "related_to",
+      "tail": "ENGINE STOPPAGE",
+      "prior_class": "hazardous",
+      "prior_multiplier": 2.5,
+      "matched_terms": [
+        "water in fuel"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "hazardous",
+      "sampling_weight": 1.734375
+    },
+    {
+      "head": "HYDRAULIC SYSTEM",
+      "relation": "related_to",
+      "tail": "LOW ON FLUID",
+      "prior_class": "minor",
+      "prior_multiplier": 1.5,
+      "matched_terms": [
+        "hydraulic"
+      ],
+      "human_class": "catastrophic",
+      "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+      "notes": "llm_proxy_adjudication",
+      "sampling_stratum": "minor",
+      "sampling_weight": 1.0
+    }
+  ],
+  "adjudication": {
+    "kind": "llm_proxy_not_expert",
+    "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+    "model_requested": "claude-haiku-4-5-20251001",
+    "n_labeled": 320,
+    "n_pending": 0,
+    "note": "Labels come from Claude Code with no prior_class in the prompt. Do not cite as expert adjudication; use for non-circular recall until humans replace human_class."
+  }
+}

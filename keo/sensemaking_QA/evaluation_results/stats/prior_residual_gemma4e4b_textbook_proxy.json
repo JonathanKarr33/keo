@@ -1,0 +1,4995 @@
+{
+  "cohort": "gemma4e4b_textbook_proxy",
+  "n_questions": 83,
+  "prior_note": "Gemma-4 answers scored against the Phi-4 closed book. This is a cross-model textbook proxy, not Gemma's own prior. Do not pool with the Phi-4 cohort.",
+  "formula": "u(e|q,a0) = spec(e,q) * sev(e) * idf(e) * (1 - pi(e,a0))",
+  "effects": {
+    "delta_keo_minus_chunk": {
+      "n": 83,
+      "mean": -0.2783132530120482,
+      "ci95_low": -0.4289156626506023,
+      "ci95_high": -0.13734939759036147
+    },
+    "E_top_keo_minus_shuf": {
+      "n": 83,
+      "mean": -0.028915662650602424,
+      "ci95_low": -0.15063253012048194,
+      "ci95_high": 0.09280120481927692
+    },
+    "E_rel_keo_minus_norel": {
+      "n": 83,
+      "mean": 0.012048192771084338,
+      "ci95_low": -0.11207831325301205,
+      "ci95_high": 0.1337349397590361
+    },
+    "E_bag_norel_minus_chunk": {
+      "n": 83,
+      "mean": -0.29036144578313255,
+      "ci95_low": -0.43376506024096384,
+      "ci95_high": -0.1602409638554217
+    }
+  },
+  "correlations_vs_delta": {
+    "Pi": {
+      "n": 83,
+      "spearman_rho_vs_delta": 0.10867319465580454,
+      "p_perm": 0.33033393321335736,
+      "reading": "higher \u2192 graph advantage"
+    },
+    "seed_entropy": {
+      "n": 83,
+      "spearman_rho_vs_delta": 0.09135719959320564,
+      "p_perm": 0.41971605678864227,
+      "reading": "higher \u2192 graph advantage"
+    },
+    "citation": {
+      "n": 83,
+      "spearman_rho_vs_delta": -0.11749782950325159,
+      "p_perm": 0.28894221155768846,
+      "reading": "higher \u2192 chunk advantage"
+    },
+    "echo_graph": {
+      "n": 83,
+      "spearman_rho_vs_delta": 0.187000193437476,
+      "p_perm": 0.09558088382323535,
+      "reading": "higher \u2192 graph advantage"
+    },
+    "echo_gap": {
+      "n": 83,
+      "spearman_rho_vs_delta": -0.10796472740398204,
+      "p_perm": 0.3251349730053989,
+      "reading": "higher \u2192 chunk advantage"
+    },
+    "mst_prior_mass": {
+      "n": 83,
+      "spearman_rho_vs_delta": -0.10906009343359065,
+      "p_perm": 0.3343331333733253,
+      "reading": "higher \u2192 chunk advantage"
+    }
+  },
+  "tertiles_Pi": {
+    "low_Pi": {
+      "n": 33,
+      "mean": -0.34242424242424246,
+      "ci95_low": -0.5697727272727274,
+      "ci95_high": -0.13333333333333336
+    },
+    "mid_Pi": {
+      "n": 22,
+      "mean": -0.390909090909091,
+      "ci95_low": -0.6454545454545454,
+      "ci95_high": -0.15454545454545446
+    },
+    "high_Pi": {
+      "n": 28,
+      "mean": -0.11428571428571428,
+      "ci95_low": -0.3714285714285714,
+      "ci95_high": 0.15714285714285717
+    }
+  },
+  "router_loo_Pi": {
+    "n": 83,
+    "policy_mean": 2.5325301204819275,
+    "always_keo": 2.2686746987951807,
+    "always_chunk": 2.546987951807229,
+    "oracle": 2.6843373493975897,
+    "gap_closed": -0.10526315789474075,
+    "folds_abstained": 0,
+    "heldout_routed_chunk": 68
+  },
+  "router_loo_seed_entropy": {
+    "n": 83,
+    "policy_mean": 2.5421686746987953,
+    "always_keo": 2.2686746987951807,
+    "always_chunk": 2.546987951807229,
+    "oracle": 2.6843373493975897,
+    "gap_closed": -0.03508771929824692,
+    "folds_abstained": 0,
+    "heldout_routed_chunk": 69
+  },
+  "criterion_effects": {
+    "global_perspective": {
+      "delta": {
+        "n": 83,
+        "mean": -0.27710843373493976,
+        "ci95_low": -0.42168674698795183,
+        "ci95_high": -0.13253012048192772
+      },
+      "E_top": {
+        "n": 83,
+        "mean": 0.018072289156626505,
+        "ci95_low": -0.11460843373493974,
+        "ci95_high": 0.1566265060240964
+      },
+      "E_rel": {
+        "n": 83,
+        "mean": 0.03614457831325301,
+        "ci95_low": -0.10843373493975904,
+        "ci95_high": 0.18072289156626506
+      }
+    },
+    "theme_identification": {
+      "delta": {
+        "n": 83,
+        "mean": -0.3072289156626506,
+        "ci95_low": -0.5060240963855421,
+        "ci95_high": -0.1144578313253012
+      },
+      "E_top": {
+        "n": 83,
+        "mean": -0.024096385542168676,
+        "ci95_low": -0.20481927710843373,
+        "ci95_high": 0.14457831325301204
+      },
+      "E_rel": {
+        "n": 83,
+        "mean": 0.024096385542168676,
+        "ci95_low": -0.1566265060240964,
+        "ci95_high": 0.19879518072289157
+      }
+    },
+    "synthesis_quality": {
+      "delta": {
+        "n": 83,
+        "mean": -0.20481927710843373,
+        "ci95_low": -0.3433734939759036,
+        "ci95_high": -0.060240963855421686
+      },
+      "E_top": {
+        "n": 83,
+        "mean": 0.05421686746987952,
+        "ci95_low": -0.0783132530120482,
+        "ci95_high": 0.1927710843373494
+      },
+      "E_rel": {
+        "n": 83,
+        "mean": 0.05421686746987952,
+        "ci95_low": -0.07228915662650602,
+        "ci95_high": 0.18072289156626506
+      }
+    },
+    "strategic_value": {
+      "delta": {
+        "n": 83,
+        "mean": -0.3493975903614458,
+        "ci95_low": -0.5481927710843374,
+        "ci95_high": -0.15060240963855423
+      },
+      "E_top": {
+        "n": 83,
+        "mean": -0.12650602409638553,
+        "ci95_low": -0.30120481927710846,
+        "ci95_high": 0.060240963855421686
+      },
+      "E_rel": {
+        "n": 83,
+        "mean": -0.024096385542168676,
+        "ci95_low": -0.19879518072289157,
+        "ci95_high": 0.16265060240963855
+      }
+    },
+    "pattern_recognition": {
+      "delta": {
+        "n": 83,
+        "mean": -0.25301204819277107,
+        "ci95_low": -0.39759036144578314,
+        "ci95_high": -0.10843373493975904
+      },
+      "E_top": {
+        "n": 83,
+        "mean": -0.06626506024096386,
+        "ci95_low": -0.21084337349397592,
+        "ci95_high": 0.08433734939759036
+      },
+      "E_rel": {
+        "n": 83,
+        "mean": -0.030120481927710843,
+        "ci95_low": -0.18674698795180722,
+        "ci95_high": 0.13253012048192772
+      }
+    }
+  },
+  "rerank": {
+    "mean_mst_prior_mass": 0.21504841414572962,
+    "mean_residual_prior_mass": 0.2888337776769134,
+    "mean_prior_mass_dropped": {
+      "n": 83,
+      "mean": -0.0737853635311838,
+      "ci95_low": -0.09074876850493767,
+      "ci95_high": -0.057505369966548626
+    },
+    "reading": "Re-ranking the same retrieved edges by residual utility raises prior-mass. The closed-book residual does not select a less parametric neighborhood, and \u03a0 does not predict the winner."
+  },
+  "entity_yield": {
+    "n_derangements": 40,
+    "formula": "Y(a,E_q) = C(a,E_q) - E_pi[C(a,E_pi(q))]",
+    "reading": "Y is the citation surplus of the retrieved neighborhood over a deranged one. It is the part of the answer that required this graph. E_top and E_rel near zero mean the surplus is names, not edges.",
+    "lift": {
+      "n": 83,
+      "mean": 0.028096237499672157,
+      "p_signflip": 0.002999400119976005
+    },
+    "mean_citation_own": 0.30286971117812284,
+    "mean_citation_cross": 0.2747734736784506,
+    "correlations_Y": {
+      "overall": {
+        "spearman_rho": 0.058833978124399396,
+        "p_perm": 0.6056788642271546,
+        "n": 83
+      },
+      "global_perspective": {
+        "spearman_rho": 0.12366914017525875,
+        "p_perm": 0.26654669066186765,
+        "n": 83
+      },
+      "theme_identification": {
+        "spearman_rho": 0.03913393467507294,
+        "p_perm": 0.7264547090581883,
+        "n": 83
+      },
+      "synthesis_quality": {
+        "spearman_rho": 0.03548851419017848,
+        "p_perm": 0.7436512697460508,
+        "n": 83
+      },
+      "strategic_value": {
+        "spearman_rho": 0.0747007002616779,
+        "p_perm": 0.5130973805238952,
+        "n": 83
+      },
+      "pattern_recognition": {
+        "spearman_rho": 0.10397412147049398,
+        "p_perm": 0.34873025394921014,
+        "n": 83
+      }
+    },
+    "tertiles_Y": {
+      "low_Y": {
+        "n": 27,
+        "mean_Y": -0.05468563707865707,
+        "mean_overall": 2.348148148148148,
+        "mean_theme": 2.814814814814815,
+        "mean_pattern": 2.0,
+        "mean_synthesis": 2.1666666666666665
+      },
+      "mid_Y": {
+        "n": 28,
+        "mean_Y": 0.02407942327965224,
+        "mean_overall": 2.085714285714286,
+        "mean_theme": 2.392857142857143,
+        "mean_pattern": 1.75,
+        "mean_synthesis": 1.9285714285714286
+      },
+      "high_Y": {
+        "n": 28,
+        "mean_Y": 0.11193843077736666,
+        "mean_overall": 2.375,
+        "mean_theme": 2.8214285714285716,
+        "mean_pattern": 2.0714285714285716,
+        "mean_synthesis": 2.125
+      }
+    },
+    "copy_utility": "u(v) = sev(v) / (1 + content_tokens(v)); similarity does not predict copying",
+    "correlation_vs_delta": {
+      "spearman_rho": -0.09823400089976048,
+      "p_perm": 0.3815236952609478,
+      "n": 83,
+      "reading": "Y versus KEO minus length-matched chunks. A null means name-yield does not pick the winner."
+    },
+    "seed_copy": {
+      "n_seeds": 768,
+      "rho_sim": 0.19319244667494737,
+      "p_sim": 0.0001999600079984003,
+      "rho_severity": 0.07668539869574602,
+      "p_severity": 0.03719256148770246,
+      "mean_copy_marked": 0.3466666666666667,
+      "n_marked": 175,
+      "mean_copy_unmarked": 0.27001124227093876,
+      "n_unmarked": 593
+    },
+    "checks": {
+      "n": 83,
+      "rho_Y_length": 0.07274158424536363,
+      "p_Y_length": 0.5158968206358728,
+      "partial_rho_theme_given_length": 0.018895593714591496,
+      "p_partial_theme": 0.8668266346730654,
+      "partial_rho_overall_given_length": 0.04637764852614287,
+      "p_partial_overall": 0.6844631073785243,
+      "tertile_mean_chars": {
+        "low_Y": 3192.703703703704,
+        "mid_Y": 3202.214285714286,
+        "high_Y": 3302.1071428571427
+      },
+      "citation_graph": 0.30286971117812284,
+      "citation_chunk_same_entities": 0.15959591830568234,
+      "citation_gap_graph_minus_chunk": {
+        "n": 83,
+        "mean": 0.1432737928724404,
+        "p_signflip": 0.0001999600079984003
+      },
+      "hazard_channel": {
+        "n": 82,
+        "mean_citation_marked": 0.3302302203216838,
+        "mean_citation_unmarked": 0.28658734653414986,
+        "rho_marked_theme": 0.1586637411560959,
+        "p_marked_theme": 0.14577084583083383,
+        "rho_unmarked_theme": 0.13211573791375747,
+        "p_unmarked_theme": 0.22515496900619877,
+        "rho_contrast_theme": 0.09391687000211066,
+        "p_contrast_theme": 0.39392121575684863
+      }
+    }
+  },
+  "entity_yield_per_question": [
+    {
+      "question_id": "aircraft_problems_actions_001",
+      "citation_own": 0.3686507936507937,
+      "citation_cross": 0.21605961573790583,
+      "Y": 0.15259117791288784,
+      "overall": 2.2,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "aircraft_problems_actions_002",
+      "citation_own": 0.07291666666666666,
+      "citation_cross": 0.2214563301282051,
+      "Y": -0.14853966346153843,
+      "overall": 1.4,
+      "global_perspective": 1.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 1.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 1.0
+    },
+    {
+      "question_id": "aircraft_problems_actions_003",
+      "citation_own": 0.340909090909091,
+      "citation_cross": 0.3837730210451114,
+      "Y": -0.04286393013602041,
+      "overall": 2.2,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "aircraft_problems_actions_004",
+      "citation_own": 0.16512345679012344,
+      "citation_cross": 0.18191312826032585,
+      "Y": -0.01678967147020241,
+      "overall": 1.8,
+      "global_perspective": 2.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 1.0
+    },
+    {
+      "question_id": "aircraft_problems_actions_005",
+      "citation_own": 0.35,
+      "citation_cross": 0.24630027983806704,
+      "Y": 0.10369972016193293,
+      "overall": 2.2,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "aircraft_problems_actions_006",
+      "citation_own": 0.2198581560283688,
+      "citation_cross": 0.17065327503889277,
+      "Y": 0.049204880989476035,
+      "overall": 2.2,
+      "global_perspective": 2.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "aircraft_problems_actions_007",
+      "citation_own": 0.046875,
+      "citation_cross": 0.0545142021956538,
+      "Y": -0.007639202195653803,
+      "overall": 2.0,
+      "global_perspective": 2.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "aircraft_problems_actions_008",
+      "citation_own": 0.3148148148148148,
+      "citation_cross": 0.3430808845144248,
+      "Y": -0.028266069699609986,
+      "overall": 2.2,
+      "global_perspective": 2.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "aircraft_problems_actions_009",
+      "citation_own": 0.4027777777777778,
+      "citation_cross": 0.41626852661284097,
+      "Y": -0.013490748835063182,
+      "overall": 2.4,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.5,
+      "strategic_value": 2.5,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "aircraft_problems_actions_010",
+      "citation_own": 0.48817204301075273,
+      "citation_cross": 0.4340717675355448,
+      "Y": 0.05410027547520796,
+      "overall": 2.0,
+      "global_perspective": 2.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "comparative_analysis_001",
+      "citation_own": 0.1616161616161616,
+      "citation_cross": 0.14135153053911503,
+      "Y": 0.02026463107704657,
+      "overall": 1.6,
+      "global_perspective": 1.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 1.0
+    },
+    {
+      "question_id": "comparative_analysis_002",
+      "citation_own": 0.06,
+      "citation_cross": 0.11177494483676549,
+      "Y": -0.051774944836765494,
+      "overall": 1.6,
+      "global_perspective": 1.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 1.0
+    },
+    {
+      "question_id": "comparative_analysis_003",
+      "citation_own": 0.2579365079365079,
+      "citation_cross": 0.217057849456424,
+      "Y": 0.0408786584800839,
+      "overall": 2.2,
+      "global_perspective": 2.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "comparative_analysis_004",
+      "citation_own": 0.25219298245614036,
+      "citation_cross": 0.21818189540918748,
+      "Y": 0.03401108704695288,
+      "overall": 1.4,
+      "global_perspective": 1.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 1.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 1.0
+    },
+    {
+      "question_id": "comparative_analysis_005",
+      "citation_own": 0.08641975308641976,
+      "citation_cross": 0.11479114979972824,
+      "Y": -0.028371396713308475,
+      "overall": 3.2,
+      "global_perspective": 3.0,
+      "theme_identification": 4.0,
+      "synthesis_quality": 3.0,
+      "strategic_value": 4.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "comparative_analysis_006",
+      "citation_own": 0.1568627450980392,
+      "citation_cross": 0.036053969692673646,
+      "Y": 0.12080877540536557,
+      "overall": 1.4,
+      "global_perspective": 1.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 1.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 1.0
+    },
+    {
+      "question_id": "comparative_analysis_007",
+      "citation_own": 0.15151515151515152,
+      "citation_cross": 0.25970147907647906,
+      "Y": -0.10818632756132754,
+      "overall": 2.4,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "comparative_analysis_008",
+      "citation_own": 0.15384615384615385,
+      "citation_cross": 0.13890613437488436,
+      "Y": 0.014940019471269494,
+      "overall": 2.0,
+      "global_perspective": 2.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "global_001",
+      "citation_own": 0.38657407407407407,
+      "citation_cross": 0.2832944102244993,
+      "Y": 0.10327966384957477,
+      "overall": 3.0,
+      "global_perspective": 3.0,
+      "theme_identification": 4.0,
+      "synthesis_quality": 3.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "global_002",
+      "citation_own": 0.19777777777777775,
+      "citation_cross": 0.25023758289150394,
+      "Y": -0.05245980511372619,
+      "overall": 1.6,
+      "global_perspective": 1.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 1.0
+    },
+    {
+      "question_id": "global_003",
+      "citation_own": 0.44000000000000006,
+      "citation_cross": 0.33108940620782723,
+      "Y": 0.10891059379217283,
+      "overall": 2.2,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "global_004",
+      "citation_own": 0.3,
+      "citation_cross": 0.24322807072955532,
+      "Y": 0.056771929270444665,
+      "overall": 2.2,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "global_005",
+      "citation_own": 0.557843137254902,
+      "citation_cross": 0.4926178905857214,
+      "Y": 0.06522524666918056,
+      "overall": 2.0,
+      "global_perspective": 2.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "global_006",
+      "citation_own": 0.578125,
+      "citation_cross": 0.560038692203815,
+      "Y": 0.01808630779618503,
+      "overall": 2.4,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "global_007",
+      "citation_own": 0.40555555555555556,
+      "citation_cross": 0.3522451057823459,
+      "Y": 0.053310449773209645,
+      "overall": 2.0,
+      "global_perspective": 2.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "global_008",
+      "citation_own": 0.06976744186046512,
+      "citation_cross": 0.07528363351639214,
+      "Y": -0.005516191655927025,
+      "overall": 1.8,
+      "global_perspective": 2.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 1.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "global_009",
+      "citation_own": 0.7763157894736842,
+      "citation_cross": 0.6238250874977849,
+      "Y": 0.1524907019758993,
+      "overall": 3.3,
+      "global_perspective": 3.0,
+      "theme_identification": 4.0,
+      "synthesis_quality": 2.5,
+      "strategic_value": 4.0,
+      "pattern_recognition": 3.0
+    },
+    {
+      "question_id": "global_010",
+      "citation_own": 0.13333333333333333,
+      "citation_cross": 0.10070581422989422,
+      "Y": 0.03262751910343911,
+      "overall": 1.8,
+      "global_perspective": 2.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 1.0
+    },
+    {
+      "question_id": "global_011",
+      "citation_own": 0.38235294117647056,
+      "citation_cross": 0.40642889180395514,
+      "Y": -0.024075950627484577,
+      "overall": 2.4,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "global_012",
+      "citation_own": 0.47559523809523807,
+      "citation_cross": 0.40824139672056337,
+      "Y": 0.0673538413746747,
+      "overall": 3.0,
+      "global_perspective": 3.0,
+      "theme_identification": 4.0,
+      "synthesis_quality": 3.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "global_013",
+      "citation_own": 0.0,
+      "citation_cross": 0.0666437728937729,
+      "Y": -0.0666437728937729,
+      "overall": 2.2,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "global_014",
+      "citation_own": 0.22444444444444445,
+      "citation_cross": 0.31984499859378107,
+      "Y": -0.09540055414933662,
+      "overall": 2.6,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 3.0
+    },
+    {
+      "question_id": "global_015",
+      "citation_own": 0.445,
+      "citation_cross": 0.41511415692007797,
+      "Y": 0.029885843079922036,
+      "overall": 2.4,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "maintenance_narratives_001",
+      "citation_own": 0.125,
+      "citation_cross": 0.11276219629112431,
+      "Y": 0.012237803708875686,
+      "overall": 2.4,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "maintenance_narratives_002",
+      "citation_own": 0.30797101449275366,
+      "citation_cross": 0.24790633504836582,
+      "Y": 0.06006467944438784,
+      "overall": 2.4,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "maintenance_narratives_003",
+      "citation_own": 0.18410852713178294,
+      "citation_cross": 0.26289787349442656,
+      "Y": -0.07878934636264362,
+      "overall": 2.4,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "maintenance_narratives_004",
+      "citation_own": 0.41203703703703703,
+      "citation_cross": 0.35881325132519987,
+      "Y": 0.05322378571183717,
+      "overall": 1.6,
+      "global_perspective": 2.0,
+      "theme_identification": 1.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 1.0
+    },
+    {
+      "question_id": "maintenance_narratives_005",
+      "citation_own": 0.37421383647798745,
+      "citation_cross": 0.3808333318347206,
+      "Y": -0.006619495356733174,
+      "overall": 2.2,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "maintenance_narratives_006",
+      "citation_own": 0.3847826086956522,
+      "citation_cross": 0.29867211818325323,
+      "Y": 0.08611049051239894,
+      "overall": 2.0,
+      "global_perspective": 2.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "maintenance_narratives_007",
+      "citation_own": 0.41388888888888886,
+      "citation_cross": 0.36978606578606577,
+      "Y": 0.0441028231028231,
+      "overall": 2.2,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "maintenance_narratives_008",
+      "citation_own": 0.28735632183908044,
+      "citation_cross": 0.15247808537404547,
+      "Y": 0.13487823646503497,
+      "overall": 3.4,
+      "global_perspective": 3.0,
+      "theme_identification": 4.0,
+      "synthesis_quality": 3.0,
+      "strategic_value": 4.0,
+      "pattern_recognition": 3.0
+    },
+    {
+      "question_id": "maintenance_narratives_009",
+      "citation_own": 0.16666666666666666,
+      "citation_cross": 0.11765953523399378,
+      "Y": 0.04900713143267288,
+      "overall": 2.6,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 4.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "maintenance_narratives_010",
+      "citation_own": 0.6212121212121212,
+      "citation_cross": 0.5187727000145944,
+      "Y": 0.1024394211975268,
+      "overall": 3.6,
+      "global_perspective": 4.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 3.0,
+      "strategic_value": 4.0,
+      "pattern_recognition": 4.0
+    },
+    {
+      "question_id": "predictive_maintenance_001",
+      "citation_own": 0.2916666666666667,
+      "citation_cross": 0.2560429531310172,
+      "Y": 0.03562371353564947,
+      "overall": 2.4,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "predictive_maintenance_002",
+      "citation_own": 0.6208333333333335,
+      "citation_cross": 0.3180834672210124,
+      "Y": 0.3027498661123211,
+      "overall": 2.4,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "predictive_maintenance_003",
+      "citation_own": 0.041666666666666664,
+      "citation_cross": 0.03994678932178932,
+      "Y": 0.0017198773448773436,
+      "overall": 1.6,
+      "global_perspective": 1.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 1.0
+    },
+    {
+      "question_id": "predictive_maintenance_004",
+      "citation_own": 0.140625,
+      "citation_cross": 0.09353710893907466,
+      "Y": 0.04708789106092534,
+      "overall": 3.0,
+      "global_perspective": 3.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 3.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 3.0
+    },
+    {
+      "question_id": "predictive_maintenance_005",
+      "citation_own": 0.40416666666666673,
+      "citation_cross": 0.3866774542385955,
+      "Y": 0.01748921242807122,
+      "overall": 1.8,
+      "global_perspective": 2.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 1.0
+    },
+    {
+      "question_id": "predictive_maintenance_006",
+      "citation_own": 0.22333333333333336,
+      "citation_cross": 0.28508469498692757,
+      "Y": -0.06175136165359421,
+      "overall": 2.2,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "predictive_maintenance_007",
+      "citation_own": 0.11764705882352941,
+      "citation_cross": 0.13238302139037433,
+      "Y": -0.014735962566844923,
+      "overall": 2.0,
+      "global_perspective": 2.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "predictive_maintenance_008",
+      "citation_own": 0.23245614035087717,
+      "citation_cross": 0.25218389706918254,
+      "Y": -0.019727756718305373,
+      "overall": 2.0,
+      "global_perspective": 2.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "root_cause_analysis_001",
+      "citation_own": 0.37307692307692314,
+      "citation_cross": 0.15519070512820515,
+      "Y": 0.217886217948718,
+      "overall": 1.4,
+      "global_perspective": 1.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 1.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 1.0
+    },
+    {
+      "question_id": "root_cause_analysis_002",
+      "citation_own": 0.39903846153846145,
+      "citation_cross": 0.33220661177537686,
+      "Y": 0.0668318497630846,
+      "overall": 2.2,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "root_cause_analysis_003",
+      "citation_own": 0.3194444444444444,
+      "citation_cross": 0.2695554923358232,
+      "Y": 0.04988895210862121,
+      "overall": 2.2,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "root_cause_analysis_004",
+      "citation_own": 0.12407407407407407,
+      "citation_cross": 0.18138616557734205,
+      "Y": -0.05731209150326798,
+      "overall": 2.8,
+      "global_perspective": 2.0,
+      "theme_identification": 4.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 3.0
+    },
+    {
+      "question_id": "root_cause_analysis_005",
+      "citation_own": 0.5304597701149426,
+      "citation_cross": 0.3633641215145821,
+      "Y": 0.16709564860036052,
+      "overall": 3.4,
+      "global_perspective": 3.0,
+      "theme_identification": 4.0,
+      "synthesis_quality": 3.0,
+      "strategic_value": 4.0,
+      "pattern_recognition": 3.0
+    },
+    {
+      "question_id": "root_cause_analysis_006",
+      "citation_own": 0.25666666666666665,
+      "citation_cross": 0.25916774407150517,
+      "Y": -0.0025010774048385143,
+      "overall": 2.4,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "root_cause_analysis_007",
+      "citation_own": 0.265625,
+      "citation_cross": 0.21731735637446845,
+      "Y": 0.048307643625531554,
+      "overall": 1.8,
+      "global_perspective": 2.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 1.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "root_cause_analysis_008",
+      "citation_own": 0.0,
+      "citation_cross": 0.06596153846153846,
+      "Y": -0.06596153846153846,
+      "overall": 1.8,
+      "global_perspective": 2.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 1.0
+    },
+    {
+      "question_id": "safety_recommendations_001",
+      "citation_own": 0.39798850574712635,
+      "citation_cross": 0.4122907435641213,
+      "Y": -0.014302237816994967,
+      "overall": 2.0,
+      "global_perspective": 2.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "safety_recommendations_002",
+      "citation_own": 0.1865079365079365,
+      "citation_cross": 0.21306352480208476,
+      "Y": -0.026555588294148252,
+      "overall": 2.4,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "safety_recommendations_003",
+      "citation_own": 0.2270114942528736,
+      "citation_cross": 0.2407695575954964,
+      "Y": -0.013758063342622806,
+      "overall": 4.2,
+      "global_perspective": 4.0,
+      "theme_identification": 4.0,
+      "synthesis_quality": 4.0,
+      "strategic_value": 5.0,
+      "pattern_recognition": 4.0
+    },
+    {
+      "question_id": "safety_recommendations_004",
+      "citation_own": 0.10942028985507246,
+      "citation_cross": 0.1479954819142883,
+      "Y": -0.038575192059215835,
+      "overall": 2.4,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "safety_recommendations_005",
+      "citation_own": 0.14814814814814814,
+      "citation_cross": 0.25649509803921566,
+      "Y": -0.10834694989106752,
+      "overall": 2.8,
+      "global_perspective": 3.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 3.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "safety_recommendations_006",
+      "citation_own": 0.1568627450980392,
+      "citation_cross": 0.2774464584181876,
+      "Y": -0.12058371332014839,
+      "overall": 2.4,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "safety_recommendations_007",
+      "citation_own": 0.49707602339181284,
+      "citation_cross": 0.4480108054057338,
+      "Y": 0.049065217986079046,
+      "overall": 2.4,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "safety_recommendations_008",
+      "citation_own": 0.2881578947368421,
+      "citation_cross": 0.26673353760235063,
+      "Y": 0.02142435713449148,
+      "overall": 2.2,
+      "global_perspective": 2.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "system_level_understanding_001",
+      "citation_own": 0.3620689655172414,
+      "citation_cross": 0.33728985356407304,
+      "Y": 0.024779111953168342,
+      "overall": 2.4,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "system_level_understanding_002",
+      "citation_own": 0.4808333333333333,
+      "citation_cross": 0.40902443207377426,
+      "Y": 0.07180890125955902,
+      "overall": 2.2,
+      "global_perspective": 2.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "system_level_understanding_003",
+      "citation_own": 0.3148148148148148,
+      "citation_cross": 0.3040987831214124,
+      "Y": 0.010716031693402406,
+      "overall": 2.2,
+      "global_perspective": 2.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "system_level_understanding_004",
+      "citation_own": 0.28939393939393937,
+      "citation_cross": 0.2047090848965849,
+      "Y": 0.08468485449735447,
+      "overall": 2.4,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "system_level_understanding_005",
+      "citation_own": 0.0625,
+      "citation_cross": 0.0802241088032857,
+      "Y": -0.017724108803285704,
+      "overall": 2.6,
+      "global_perspective": 2.0,
+      "theme_identification": 4.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "system_level_understanding_006",
+      "citation_own": 0.6470588235294118,
+      "citation_cross": 0.5447290537668327,
+      "Y": 0.10232976976257913,
+      "overall": 2.2,
+      "global_perspective": 2.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "system_level_understanding_007",
+      "citation_own": 0.6351190476190476,
+      "citation_cross": 0.47578633061445946,
+      "Y": 0.15933271700458812,
+      "overall": 2.4,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "system_level_understanding_008",
+      "citation_own": 0.0625,
+      "citation_cross": 0.06970753205128205,
+      "Y": -0.007207532051282051,
+      "overall": 1.6,
+      "global_perspective": 1.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 1.0
+    },
+    {
+      "question_id": "trend_analysis_001",
+      "citation_own": 0.44545454545454544,
+      "citation_cross": 0.4085226931277127,
+      "Y": 0.036931852326832715,
+      "overall": 2.2,
+      "global_perspective": 2.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "trend_analysis_002",
+      "citation_own": 0.3711538461538462,
+      "citation_cross": 0.3420629613442113,
+      "Y": 0.029090884809634898,
+      "overall": 1.8,
+      "global_perspective": 2.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 1.0
+    },
+    {
+      "question_id": "trend_analysis_003",
+      "citation_own": 0.29310344827586204,
+      "citation_cross": 0.27109094090775127,
+      "Y": 0.02201250736811078,
+      "overall": 1.4,
+      "global_perspective": 1.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 1.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 1.0
+    },
+    {
+      "question_id": "trend_analysis_004",
+      "citation_own": 0.421875,
+      "citation_cross": 0.3445732096743126,
+      "Y": 0.0773017903256874,
+      "overall": 2.4,
+      "global_perspective": 2.0,
+      "theme_identification": 3.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "trend_analysis_005",
+      "citation_own": 0.12878787878787878,
+      "citation_cross": 0.2826741314241314,
+      "Y": -0.1538862526362526,
+      "overall": 3.4,
+      "global_perspective": 3.0,
+      "theme_identification": 4.0,
+      "synthesis_quality": 3.0,
+      "strategic_value": 4.0,
+      "pattern_recognition": 3.0
+    },
+    {
+      "question_id": "trend_analysis_006",
+      "citation_own": 0.7058823529411765,
+      "citation_cross": 0.46340872240504594,
+      "Y": 0.24247363053613058,
+      "overall": 2.2,
+      "global_perspective": 2.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "trend_analysis_007",
+      "citation_own": 0.3541666666666667,
+      "citation_cross": 0.3475935249231445,
+      "Y": 0.006573141743522193,
+      "overall": 2.0,
+      "global_perspective": 2.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 2.0,
+      "pattern_recognition": 2.0
+    },
+    {
+      "question_id": "trend_analysis_008",
+      "citation_own": 0.5111111111111112,
+      "citation_cross": 0.39447823625558504,
+      "Y": 0.11663287485552615,
+      "overall": 2.6,
+      "global_perspective": 2.0,
+      "theme_identification": 4.0,
+      "synthesis_quality": 2.0,
+      "strategic_value": 3.0,
+      "pattern_recognition": 2.0
+    }
+  ],
+  "per_question": [
+    {
+      "question_id": "aircraft_problems_actions_001",
+      "delta": 0.20000000000000018,
+      "keo": 2.2,
+      "chunk": 2.0,
+      "E_top": 0.8000000000000003,
+      "E_rel": 0.40000000000000013,
+      "E_bag": -0.19999999999999996,
+      "Pi": 0.08333333333333333,
+      "seed_entropy": 0.9837679920303407,
+      "citation": 0.3686507936507937,
+      "echo_graph": 0.22388059701492538,
+      "echo_chunk": 0.29347826086956524,
+      "echo_gap": -0.06959766385463986,
+      "mst_prior_mass": 0.3371212121212121,
+      "residual_prior_mass": 0.4090909090909091,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "theme_identification": {
+          "delta": 1.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "aircraft_problems_actions_002",
+      "delta": -0.6000000000000001,
+      "keo": 1.4,
+      "chunk": 2.0,
+      "E_top": -0.6000000000000001,
+      "E_rel": -0.8000000000000003,
+      "E_bag": 0.20000000000000018,
+      "Pi": 0.08333333333333333,
+      "seed_entropy": 0.9912589270134519,
+      "citation": 0.07291666666666666,
+      "echo_graph": 0.2088607594936709,
+      "echo_chunk": 0.22641509433962265,
+      "echo_gap": -0.017554334845951758,
+      "mst_prior_mass": 0.0,
+      "residual_prior_mass": 0.0,
+      "criteria": {
+        "global_perspective": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "pattern_recognition": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        }
+      }
+    },
+    {
+      "question_id": "aircraft_problems_actions_003",
+      "delta": -0.7999999999999998,
+      "keo": 2.2,
+      "chunk": 3.0,
+      "E_top": 0.40000000000000013,
+      "E_rel": 0.0,
+      "E_bag": -0.7999999999999998,
+      "Pi": 0.40476190476190477,
+      "seed_entropy": 0.9854692422444387,
+      "citation": 0.340909090909091,
+      "echo_graph": 0.16756756756756758,
+      "echo_chunk": 0.2625,
+      "echo_gap": -0.09493243243243243,
+      "mst_prior_mass": 0.25555555555555554,
+      "residual_prior_mass": 0.3777777777777777,
+      "criteria": {
+        "global_perspective": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "synthesis_quality": {
+          "delta": -1.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": -2.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "aircraft_problems_actions_004",
+      "delta": -0.40000000000000013,
+      "keo": 1.8,
+      "chunk": 2.2,
+      "E_top": -0.40000000000000013,
+      "E_rel": -0.19999999999999996,
+      "E_bag": -0.20000000000000018,
+      "Pi": 0.125,
+      "seed_entropy": 0.9904284630406447,
+      "citation": 0.16512345679012344,
+      "echo_graph": 0.14666666666666667,
+      "echo_chunk": 0.22340425531914893,
+      "echo_gap": -0.07673758865248226,
+      "mst_prior_mass": 0.30459770114942525,
+      "residual_prior_mass": 0.3928571428571428,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        }
+      }
+    },
+    {
+      "question_id": "aircraft_problems_actions_005",
+      "delta": -0.7999999999999998,
+      "keo": 2.2,
+      "chunk": 3.0,
+      "E_top": -0.3999999999999999,
+      "E_rel": 0.20000000000000018,
+      "E_bag": -1.0,
+      "Pi": 0.14285714285714285,
+      "seed_entropy": 0.9922301045074848,
+      "citation": 0.35,
+      "echo_graph": 0.19072164948453607,
+      "echo_chunk": 0.23711340206185566,
+      "echo_gap": -0.04639175257731959,
+      "mst_prior_mass": 0.2528735632183908,
+      "residual_prior_mass": 0.35714285714285715,
+      "criteria": {
+        "global_perspective": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": 1.0
+        },
+        "synthesis_quality": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "aircraft_problems_actions_006",
+      "delta": 0.20000000000000018,
+      "keo": 2.2,
+      "chunk": 2.0,
+      "E_top": 0.0,
+      "E_rel": 0.20000000000000018,
+      "E_bag": 0.0,
+      "Pi": 0.21428571428571427,
+      "seed_entropy": 0.9974127525503189,
+      "citation": 0.2198581560283688,
+      "echo_graph": 0.22346368715083798,
+      "echo_chunk": 0.3157894736842105,
+      "echo_gap": -0.09232578653337253,
+      "mst_prior_mass": 0.4047619047619047,
+      "residual_prior_mass": 0.4047619047619047,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 1.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "aircraft_problems_actions_007",
+      "delta": 0.3999999999999999,
+      "keo": 2.0,
+      "chunk": 1.6,
+      "E_top": 0.0,
+      "E_rel": -0.20000000000000018,
+      "E_bag": 0.6000000000000001,
+      "Pi": 0.05,
+      "seed_entropy": 0.9955162255322372,
+      "citation": 0.046875,
+      "echo_graph": 0.1377245508982036,
+      "echo_chunk": 0.19696969696969696,
+      "echo_gap": -0.059245146071493365,
+      "mst_prior_mass": 0.0606060606060606,
+      "residual_prior_mass": 0.06666666666666667,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "pattern_recognition": {
+          "delta": 1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "aircraft_problems_actions_008",
+      "delta": 0.20000000000000018,
+      "keo": 2.2,
+      "chunk": 2.0,
+      "E_top": 0.0,
+      "E_rel": -0.19999999999999973,
+      "E_bag": 0.3999999999999999,
+      "Pi": 0.08333333333333333,
+      "seed_entropy": 0.9971396186306203,
+      "citation": 0.3148148148148148,
+      "echo_graph": 0.23369565217391305,
+      "echo_chunk": 0.26666666666666666,
+      "echo_gap": -0.03297101449275361,
+      "mst_prior_mass": 0.41944444444444445,
+      "residual_prior_mass": 0.4222222222222222,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "aircraft_problems_actions_009",
+      "delta": 0.19999999999999973,
+      "keo": 2.4,
+      "chunk": 2.2,
+      "E_top": 0.19999999999999973,
+      "E_rel": 0.3999999999999999,
+      "E_bag": -0.20000000000000018,
+      "Pi": 0.0,
+      "seed_entropy": 0.9859142203402843,
+      "citation": 0.4027777777777778,
+      "echo_graph": 0.18181818181818182,
+      "echo_chunk": 0.26881720430107525,
+      "echo_gap": -0.08699902248289343,
+      "mst_prior_mass": 0.21264367816091956,
+      "residual_prior_mass": 0.41666666666666663,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 1.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        },
+        "synthesis_quality": {
+          "delta": 0.5,
+          "E_top": 0.5,
+          "E_rel": 0.5
+        },
+        "strategic_value": {
+          "delta": -0.5,
+          "E_top": 0.5,
+          "E_rel": 0.5
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "aircraft_problems_actions_010",
+      "delta": -0.20000000000000018,
+      "keo": 2.0,
+      "chunk": 2.2,
+      "E_top": 0.0,
+      "E_rel": -0.3999999999999999,
+      "E_bag": 0.19999999999999973,
+      "Pi": 0.0,
+      "seed_entropy": 0.9906045976312329,
+      "citation": 0.48817204301075273,
+      "echo_graph": 0.18274111675126903,
+      "echo_chunk": 0.22916666666666666,
+      "echo_gap": -0.04642554991539763,
+      "mst_prior_mass": 0.12179487179487179,
+      "residual_prior_mass": 0.05128205128205128,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "comparative_analysis_001",
+      "delta": -0.6000000000000001,
+      "keo": 1.6,
+      "chunk": 2.2,
+      "E_top": -0.6000000000000001,
+      "E_rel": -0.19999999999999996,
+      "E_bag": -0.40000000000000013,
+      "Pi": 0.14814814814814814,
+      "seed_entropy": 0.997571562009829,
+      "citation": 0.1616161616161616,
+      "echo_graph": 0.21649484536082475,
+      "echo_chunk": 0.2736842105263158,
+      "echo_gap": -0.05718936516549106,
+      "mst_prior_mass": 0.33229166666666665,
+      "residual_prior_mass": 0.425,
+      "criteria": {
+        "global_perspective": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        },
+        "strategic_value": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        }
+      }
+    },
+    {
+      "question_id": "comparative_analysis_002",
+      "delta": 0.20000000000000018,
+      "keo": 1.6,
+      "chunk": 1.4,
+      "E_top": 0.20000000000000018,
+      "E_rel": -0.6000000000000001,
+      "E_bag": 0.8000000000000003,
+      "Pi": 0.18333333333333332,
+      "seed_entropy": 0.994885378193121,
+      "citation": 0.06,
+      "echo_graph": 0.20903954802259886,
+      "echo_chunk": 0.2641509433962264,
+      "echo_gap": -0.05511139537362755,
+      "mst_prior_mass": 0.3181818181818181,
+      "residual_prior_mass": 0.4333333333333333,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 1.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        }
+      }
+    },
+    {
+      "question_id": "comparative_analysis_003",
+      "delta": 0.0,
+      "keo": 2.2,
+      "chunk": 2.2,
+      "E_top": 0.20000000000000018,
+      "E_rel": 0.0,
+      "E_bag": 0.0,
+      "Pi": 0.037037037037037035,
+      "seed_entropy": 0.993021354886391,
+      "citation": 0.2579365079365079,
+      "echo_graph": 0.18181818181818182,
+      "echo_chunk": 0.18181818181818182,
+      "echo_gap": 0.0,
+      "mst_prior_mass": 0.33333333333333326,
+      "residual_prior_mass": 0.4583333333333333,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "comparative_analysis_004",
+      "delta": -0.8000000000000003,
+      "keo": 1.4,
+      "chunk": 2.2,
+      "E_top": 0.0,
+      "E_rel": -0.8000000000000003,
+      "E_bag": 0.0,
+      "Pi": 0.15,
+      "seed_entropy": 0.9995494773258969,
+      "citation": 0.25219298245614036,
+      "echo_graph": 0.20105820105820105,
+      "echo_chunk": 0.22,
+      "echo_gap": -0.018941798941798954,
+      "mst_prior_mass": 0.2285714285714286,
+      "residual_prior_mass": 0.29047619047619044,
+      "criteria": {
+        "global_perspective": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "theme_identification": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "synthesis_quality": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        }
+      }
+    },
+    {
+      "question_id": "comparative_analysis_005",
+      "delta": 0.40000000000000036,
+      "keo": 3.2,
+      "chunk": 2.8,
+      "E_top": 1.2000000000000002,
+      "E_rel": 0.6000000000000001,
+      "E_bag": -0.19999999999999973,
+      "Pi": 0.05555555555555555,
+      "seed_entropy": 0.9975311948213393,
+      "citation": 0.08641975308641976,
+      "echo_graph": 0.20512820512820512,
+      "echo_chunk": 0.28865979381443296,
+      "echo_gap": -0.08353158868622784,
+      "mst_prior_mass": 0.23611111111111108,
+      "residual_prior_mass": 0.47222222222222215,
+      "criteria": {
+        "global_perspective": {
+          "delta": 1.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "synthesis_quality": {
+          "delta": 1.0,
+          "E_top": 2.0,
+          "E_rel": 1.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": 2.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "comparative_analysis_006",
+      "delta": -1.2000000000000002,
+      "keo": 1.4,
+      "chunk": 2.6,
+      "E_top": -0.8000000000000003,
+      "E_rel": -0.40000000000000013,
+      "E_bag": -0.8,
+      "Pi": 0.0,
+      "seed_entropy": 0.9920199841344493,
+      "citation": 0.1568627450980392,
+      "echo_graph": 0.1910828025477707,
+      "echo_chunk": 0.28735632183908044,
+      "echo_gap": -0.09627351929130973,
+      "mst_prior_mass": 0.282051282051282,
+      "residual_prior_mass": 0.38888888888888884,
+      "criteria": {
+        "global_perspective": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        },
+        "theme_identification": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        },
+        "strategic_value": {
+          "delta": -2.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "comparative_analysis_007",
+      "delta": 0.19999999999999973,
+      "keo": 2.4,
+      "chunk": 2.2,
+      "E_top": 0.19999999999999973,
+      "E_rel": 0.0,
+      "E_bag": 0.19999999999999973,
+      "Pi": 0.0,
+      "seed_entropy": 0.9852819576638964,
+      "citation": 0.15151515151515152,
+      "echo_graph": 0.21195652173913043,
+      "echo_chunk": 0.4050632911392405,
+      "echo_gap": -0.19310676940011007,
+      "mst_prior_mass": 0.0,
+      "residual_prior_mass": 0.0,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 1.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "comparative_analysis_008",
+      "delta": -0.3999999999999999,
+      "keo": 2.0,
+      "chunk": 2.4,
+      "E_top": 0.0,
+      "E_rel": 0.3999999999999999,
+      "E_bag": -0.7999999999999998,
+      "Pi": 0.18333333333333332,
+      "seed_entropy": 0.9784857916046468,
+      "citation": 0.15384615384615385,
+      "echo_graph": 0.16265060240963855,
+      "echo_chunk": 0.22727272727272727,
+      "echo_gap": -0.06462212486308871,
+      "mst_prior_mass": 0.09375,
+      "residual_prior_mass": 0.125,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        },
+        "theme_identification": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        },
+        "strategic_value": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        }
+      }
+    },
+    {
+      "question_id": "global_001",
+      "delta": -0.3999999999999999,
+      "keo": 3.0,
+      "chunk": 3.4,
+      "E_top": 0.7999999999999998,
+      "E_rel": -0.2999999999999998,
+      "E_bag": -0.10000000000000009,
+      "Pi": 0.0,
+      "seed_entropy": 0.9952722613722825,
+      "citation": 0.38657407407407407,
+      "echo_graph": 0.1864406779661017,
+      "echo_chunk": 0.15702479338842976,
+      "echo_gap": 0.02941588457767194,
+      "mst_prior_mass": 0.25641025641025633,
+      "residual_prior_mass": 0.3333333333333333,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": -1.0,
+          "E_top": 1.0,
+          "E_rel": -0.5
+        },
+        "pattern_recognition": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        }
+      }
+    },
+    {
+      "question_id": "global_002",
+      "delta": -1.7999999999999998,
+      "keo": 1.6,
+      "chunk": 3.4,
+      "E_top": -0.8999999999999999,
+      "E_rel": -0.3999999999999999,
+      "E_bag": -1.4,
+      "Pi": 0.09259259259259259,
+      "seed_entropy": 0.9939930880449036,
+      "citation": 0.19777777777777775,
+      "echo_graph": 0.11494252873563218,
+      "echo_chunk": 0.2597402597402597,
+      "echo_gap": -0.14479773100462753,
+      "mst_prior_mass": 0.2380952380952381,
+      "residual_prior_mass": 0.42857142857142855,
+      "criteria": {
+        "global_perspective": {
+          "delta": -2.0,
+          "E_top": -1.5,
+          "E_rel": -1.0
+        },
+        "theme_identification": {
+          "delta": -2.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": -1.0,
+          "E_top": -0.5,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": -2.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": -2.0,
+          "E_top": -1.5,
+          "E_rel": -1.0
+        }
+      }
+    },
+    {
+      "question_id": "global_003",
+      "delta": 0.0,
+      "keo": 2.2,
+      "chunk": 2.2,
+      "E_top": 0.0,
+      "E_rel": 0.20000000000000018,
+      "E_bag": -0.20000000000000018,
+      "Pi": 0.18333333333333332,
+      "seed_entropy": 0.9943725477942491,
+      "citation": 0.44000000000000006,
+      "echo_graph": 0.1751412429378531,
+      "echo_chunk": 0.2072072072072072,
+      "echo_gap": -0.0320659642693541,
+      "mst_prior_mass": 0.0,
+      "residual_prior_mass": 0.0,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "global_004",
+      "delta": -1.1999999999999997,
+      "keo": 2.2,
+      "chunk": 3.4,
+      "E_top": 0.20000000000000018,
+      "E_rel": -0.19999999999999973,
+      "E_bag": -1.0,
+      "Pi": 0.18333333333333332,
+      "seed_entropy": 0.9978866861376544,
+      "citation": 0.3,
+      "echo_graph": 0.16145833333333334,
+      "echo_chunk": 0.22535211267605634,
+      "echo_gap": -0.063893779342723,
+      "mst_prior_mass": 0.23555555555555557,
+      "residual_prior_mass": 0.3142857142857142,
+      "criteria": {
+        "global_perspective": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "synthesis_quality": {
+          "delta": -1.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "strategic_value": {
+          "delta": -2.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "pattern_recognition": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "global_005",
+      "delta": -1.0,
+      "keo": 2.0,
+      "chunk": 3.0,
+      "E_top": -0.7999999999999998,
+      "E_rel": 0.3999999999999999,
+      "E_bag": -1.4,
+      "Pi": 0.1,
+      "seed_entropy": 0.9905404461768764,
+      "citation": 0.557843137254902,
+      "echo_graph": 0.1907514450867052,
+      "echo_chunk": 0.2644628099173554,
+      "echo_gap": -0.07371136483065019,
+      "mst_prior_mass": 0.26388888888888884,
+      "residual_prior_mass": 0.3333333333333333,
+      "criteria": {
+        "global_perspective": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        },
+        "theme_identification": {
+          "delta": -2.0,
+          "E_top": -2.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        }
+      }
+    },
+    {
+      "question_id": "global_006",
+      "delta": 0.0,
+      "keo": 2.4,
+      "chunk": 2.4,
+      "E_top": -0.8000000000000003,
+      "E_rel": 0.0,
+      "E_bag": 0.0,
+      "Pi": 0.4166666666666667,
+      "seed_entropy": 0.993626122455797,
+      "citation": 0.578125,
+      "echo_graph": 0.18354430379746836,
+      "echo_chunk": 0.2926829268292683,
+      "echo_gap": -0.10913862303179991,
+      "mst_prior_mass": 0.2909090909090909,
+      "residual_prior_mass": 0.25666666666666665,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "global_007",
+      "delta": 0.0,
+      "keo": 2.0,
+      "chunk": 2.0,
+      "E_top": 0.0,
+      "E_rel": 0.19999999999999996,
+      "E_bag": -0.19999999999999996,
+      "Pi": 0.05,
+      "seed_entropy": 0.9981857683606962,
+      "citation": 0.40555555555555556,
+      "echo_graph": 0.1797752808988764,
+      "echo_chunk": 0.2077922077922078,
+      "echo_gap": -0.028016926893331406,
+      "mst_prior_mass": 0.30769230769230765,
+      "residual_prior_mass": 0.38888888888888884,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        }
+      }
+    },
+    {
+      "question_id": "global_008",
+      "delta": -0.5999999999999999,
+      "keo": 1.8,
+      "chunk": 2.4,
+      "E_top": -0.5999999999999999,
+      "E_rel": -0.19999999999999996,
+      "E_bag": -0.3999999999999999,
+      "Pi": 0.05555555555555555,
+      "seed_entropy": 0.9837577068200334,
+      "citation": 0.06976744186046512,
+      "echo_graph": 0.20540540540540542,
+      "echo_chunk": 0.25773195876288657,
+      "echo_gap": -0.052326553357481154,
+      "mst_prior_mass": 0.18253968253968256,
+      "residual_prior_mass": 0.38333333333333336,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        },
+        "strategic_value": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "global_009",
+      "delta": -0.10000000000000009,
+      "keo": 3.3,
+      "chunk": 3.4,
+      "E_top": 0.8999999999999999,
+      "E_rel": -0.10000000000000009,
+      "E_bag": 0.0,
+      "Pi": 0.0,
+      "seed_entropy": 0.987193305792358,
+      "citation": 0.7763157894736842,
+      "echo_graph": 0.14857142857142858,
+      "echo_chunk": 0.22058823529411764,
+      "echo_gap": -0.07201680672268906,
+      "mst_prior_mass": 0.20238095238095236,
+      "residual_prior_mass": 0.35714285714285715,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": -0.5,
+          "E_top": 0.5,
+          "E_rel": -0.5
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": 2.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "global_010",
+      "delta": -0.5999999999999999,
+      "keo": 1.8,
+      "chunk": 2.4,
+      "E_top": -0.40000000000000013,
+      "E_rel": -0.40000000000000013,
+      "E_bag": -0.19999999999999973,
+      "Pi": 0.09259259259259259,
+      "seed_entropy": 0.9960733281451081,
+      "citation": 0.13333333333333333,
+      "echo_graph": 0.15544041450777202,
+      "echo_chunk": 0.2631578947368421,
+      "echo_gap": -0.10771748022907007,
+      "mst_prior_mass": 0.33333333333333326,
+      "residual_prior_mass": 0.4404761904761904,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        }
+      }
+    },
+    {
+      "question_id": "global_011",
+      "delta": -1.0,
+      "keo": 2.4,
+      "chunk": 3.4,
+      "E_top": -1.0,
+      "E_rel": -0.8000000000000003,
+      "E_bag": -0.19999999999999973,
+      "Pi": 0.03333333333333333,
+      "seed_entropy": 0.9841118730911221,
+      "citation": 0.38235294117647056,
+      "echo_graph": 0.21,
+      "echo_chunk": 0.2682926829268293,
+      "echo_gap": -0.05829268292682929,
+      "mst_prior_mass": 0.2916666666666667,
+      "residual_prior_mass": 0.4444444444444444,
+      "criteria": {
+        "global_perspective": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        },
+        "theme_identification": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -0.5
+        },
+        "synthesis_quality": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -0.5
+        },
+        "strategic_value": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        },
+        "pattern_recognition": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        }
+      }
+    },
+    {
+      "question_id": "global_012",
+      "delta": -0.20000000000000018,
+      "keo": 3.0,
+      "chunk": 3.2,
+      "E_top": -0.20000000000000018,
+      "E_rel": 0.0,
+      "E_bag": -0.20000000000000018,
+      "Pi": 0.0,
+      "seed_entropy": 0.9904327960447797,
+      "citation": 0.475595238095238,
+      "echo_graph": 0.21649484536082475,
+      "echo_chunk": 0.2535211267605634,
+      "echo_gap": -0.037026281399738625,
+      "mst_prior_mass": 0.0,
+      "residual_prior_mass": 0.0,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.5
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": -1.0,
+          "E_rel": -0.5
+        }
+      }
+    },
+    {
+      "question_id": "global_013",
+      "delta": -0.19999999999999973,
+      "keo": 2.2,
+      "chunk": 2.4,
+      "E_top": -0.19999999999999973,
+      "E_rel": -0.3999999999999999,
+      "E_bag": 0.20000000000000018,
+      "Pi": 0.0,
+      "seed_entropy": 0.9971627533184197,
+      "citation": 0.0,
+      "echo_graph": 0.23369565217391305,
+      "echo_chunk": 0.3488372093023256,
+      "echo_gap": -0.11514155712841254,
+      "mst_prior_mass": 0.0,
+      "residual_prior_mass": 0.0,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "global_014",
+      "delta": 0.20000000000000018,
+      "keo": 2.6,
+      "chunk": 2.4,
+      "E_top": -0.6000000000000001,
+      "E_rel": 0.6000000000000001,
+      "E_bag": -0.3999999999999999,
+      "Pi": 0.05555555555555555,
+      "seed_entropy": 0.9964277199858075,
+      "citation": 0.22444444444444445,
+      "echo_graph": 0.1702127659574468,
+      "echo_chunk": 0.29523809523809524,
+      "echo_gap": -0.12502532928064844,
+      "mst_prior_mass": 0.2619047619047619,
+      "residual_prior_mass": 0.42857142857142855,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        },
+        "pattern_recognition": {
+          "delta": 1.0,
+          "E_top": 0.0,
+          "E_rel": 2.0
+        }
+      }
+    },
+    {
+      "question_id": "global_015",
+      "delta": -1.2000000000000002,
+      "keo": 2.4,
+      "chunk": 3.6,
+      "E_top": -0.6000000000000001,
+      "E_rel": -0.8000000000000003,
+      "E_bag": -0.3999999999999999,
+      "Pi": 0.05,
+      "seed_entropy": 0.9957095225008001,
+      "citation": 0.4450000000000001,
+      "echo_graph": 0.16990291262135923,
+      "echo_chunk": 0.2903225806451613,
+      "echo_gap": -0.12041966802380208,
+      "mst_prior_mass": 0.03333333333333333,
+      "residual_prior_mass": 0.0,
+      "criteria": {
+        "global_perspective": {
+          "delta": -2.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        },
+        "theme_identification": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "synthesis_quality": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "pattern_recognition": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        }
+      }
+    },
+    {
+      "question_id": "maintenance_narratives_001",
+      "delta": 0.0,
+      "keo": 2.4,
+      "chunk": 2.4,
+      "E_top": 0.19999999999999973,
+      "E_rel": 0.0,
+      "E_bag": 0.0,
+      "Pi": 0.15,
+      "seed_entropy": 0.9976676075094958,
+      "citation": 0.125,
+      "echo_graph": 0.1893491124260355,
+      "echo_chunk": 0.25609756097560976,
+      "echo_gap": -0.06674844854957426,
+      "mst_prior_mass": 0.11904761904761904,
+      "residual_prior_mass": 0.27777777777777773,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "maintenance_narratives_002",
+      "delta": 0.19999999999999973,
+      "keo": 2.4,
+      "chunk": 2.2,
+      "E_top": 0.5999999999999999,
+      "E_rel": 0.0,
+      "E_bag": 0.19999999999999973,
+      "Pi": 0.3148148148148148,
+      "seed_entropy": 0.9976892082558014,
+      "citation": 0.30797101449275366,
+      "echo_graph": 0.16753926701570682,
+      "echo_chunk": 0.2537313432835821,
+      "echo_gap": -0.08619207626787528,
+      "mst_prior_mass": 0.35916666666666663,
+      "residual_prior_mass": 0.3816666666666667,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 1.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "maintenance_narratives_003",
+      "delta": -1.0,
+      "keo": 2.4,
+      "chunk": 3.4,
+      "E_top": 0.0,
+      "E_rel": 0.0,
+      "E_bag": -1.0,
+      "Pi": 0.18333333333333332,
+      "seed_entropy": 0.9952125525939216,
+      "citation": 0.18410852713178294,
+      "echo_graph": 0.193717277486911,
+      "echo_chunk": 0.20512820512820512,
+      "echo_gap": -0.011410927641294116,
+      "mst_prior_mass": 0.09572649572649573,
+      "residual_prior_mass": 0.11754385964912281,
+      "criteria": {
+        "global_perspective": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": -1.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "maintenance_narratives_004",
+      "delta": -0.3999999999999999,
+      "keo": 1.6,
+      "chunk": 2.0,
+      "E_top": -0.6000000000000001,
+      "E_rel": 0.0,
+      "E_bag": -0.3999999999999999,
+      "Pi": 0.23333333333333334,
+      "seed_entropy": 0.9970414155450299,
+      "citation": 0.41203703703703703,
+      "echo_graph": 0.12422360248447205,
+      "echo_chunk": 0.1935483870967742,
+      "echo_gap": -0.06932478461230214,
+      "mst_prior_mass": 0.35256410256410253,
+      "residual_prior_mass": 0.4444444444444444,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        },
+        "theme_identification": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "maintenance_narratives_005",
+      "delta": -1.0,
+      "keo": 2.2,
+      "chunk": 3.2,
+      "E_top": -0.3999999999999999,
+      "E_rel": 0.6000000000000001,
+      "E_bag": -1.6,
+      "Pi": 0.2222222222222222,
+      "seed_entropy": 0.9969174004234105,
+      "citation": 0.37421383647798745,
+      "echo_graph": 0.1694915254237288,
+      "echo_chunk": 0.23076923076923078,
+      "echo_gap": -0.061277705345501976,
+      "mst_prior_mass": 0.37499999999999994,
+      "residual_prior_mass": 0.47222222222222215,
+      "criteria": {
+        "global_perspective": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        },
+        "theme_identification": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": 1.0
+        },
+        "synthesis_quality": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        }
+      }
+    },
+    {
+      "question_id": "maintenance_narratives_006",
+      "delta": -0.20000000000000018,
+      "keo": 2.0,
+      "chunk": 2.2,
+      "E_top": -0.3999999999999999,
+      "E_rel": -0.3999999999999999,
+      "E_bag": 0.19999999999999973,
+      "Pi": 0.14814814814814814,
+      "seed_entropy": 0.9954462351113779,
+      "citation": 0.38478260869565223,
+      "echo_graph": 0.195,
+      "echo_chunk": 0.2736842105263158,
+      "echo_gap": -0.0786842105263158,
+      "mst_prior_mass": 0.305,
+      "residual_prior_mass": 0.42666666666666664,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "maintenance_narratives_007",
+      "delta": 0.40000000000000013,
+      "keo": 2.2,
+      "chunk": 1.8,
+      "E_top": -0.19999999999999973,
+      "E_rel": 0.6000000000000001,
+      "E_bag": -0.19999999999999996,
+      "Pi": 0.15,
+      "seed_entropy": 0.9946070458605496,
+      "citation": 0.4138888888888889,
+      "echo_graph": 0.2569832402234637,
+      "echo_chunk": 0.3150684931506849,
+      "echo_gap": -0.05808525292722122,
+      "mst_prior_mass": 0.06666666666666667,
+      "residual_prior_mass": 0.13333333333333333,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        },
+        "theme_identification": {
+          "delta": 1.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": 1.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        }
+      }
+    },
+    {
+      "question_id": "maintenance_narratives_008",
+      "delta": 1.0,
+      "keo": 3.4,
+      "chunk": 2.4,
+      "E_top": 1.0,
+      "E_rel": 1.1999999999999997,
+      "E_bag": -0.19999999999999973,
+      "Pi": 0.3333333333333333,
+      "seed_entropy": 0.988995406699978,
+      "citation": 0.28735632183908044,
+      "echo_graph": 0.2774566473988439,
+      "echo_chunk": 0.4126984126984127,
+      "echo_gap": -0.13524176529956877,
+      "mst_prior_mass": 0.3461538461538461,
+      "residual_prior_mass": 0.4444444444444444,
+      "criteria": {
+        "global_perspective": {
+          "delta": 1.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "theme_identification": {
+          "delta": 1.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "synthesis_quality": {
+          "delta": 1.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "strategic_value": {
+          "delta": 2.0,
+          "E_top": 1.0,
+          "E_rel": 2.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        }
+      }
+    },
+    {
+      "question_id": "maintenance_narratives_009",
+      "delta": 0.3999999999999999,
+      "keo": 2.6,
+      "chunk": 2.2,
+      "E_top": 0.3999999999999999,
+      "E_rel": 0.20000000000000018,
+      "E_bag": 0.19999999999999973,
+      "Pi": 0.10416666666666666,
+      "seed_entropy": 0.994489612071437,
+      "citation": 0.16666666666666666,
+      "echo_graph": 0.17613636363636365,
+      "echo_chunk": 0.29577464788732394,
+      "echo_gap": -0.11963828425096029,
+      "mst_prior_mass": 0.3490740740740741,
+      "residual_prior_mass": 0.4111111111111111,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 2.0,
+          "E_top": 2.0,
+          "E_rel": 1.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "maintenance_narratives_010",
+      "delta": 0.6000000000000001,
+      "keo": 3.6,
+      "chunk": 3.0,
+      "E_top": 0.6000000000000001,
+      "E_rel": 0.8000000000000003,
+      "E_bag": -0.20000000000000018,
+      "Pi": 0.05,
+      "seed_entropy": 0.9892139703351549,
+      "citation": 0.6212121212121212,
+      "echo_graph": 0.19230769230769232,
+      "echo_chunk": 0.1935483870967742,
+      "echo_gap": -0.0012406947890818698,
+      "mst_prior_mass": 0.22549019607843135,
+      "residual_prior_mass": 0.4375,
+      "criteria": {
+        "global_perspective": {
+          "delta": 1.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "theme_identification": {
+          "delta": -0.5,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        },
+        "strategic_value": {
+          "delta": 1.5,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "pattern_recognition": {
+          "delta": 1.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        }
+      }
+    },
+    {
+      "question_id": "predictive_maintenance_001",
+      "delta": 0.3999999999999999,
+      "keo": 2.4,
+      "chunk": 2.0,
+      "E_top": 0.3999999999999999,
+      "E_rel": 0.19999999999999973,
+      "E_bag": 0.20000000000000018,
+      "Pi": 0.40625,
+      "seed_entropy": 0.9976319387432361,
+      "citation": 0.29166666666666663,
+      "echo_graph": 0.22560975609756098,
+      "echo_chunk": 0.27941176470588236,
+      "echo_gap": -0.05380200860832138,
+      "mst_prior_mass": 0.28611111111111115,
+      "residual_prior_mass": 0.3444444444444444,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 1.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 1.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "predictive_maintenance_002",
+      "delta": 0.19999999999999973,
+      "keo": 2.4,
+      "chunk": 2.2,
+      "E_top": -1.0,
+      "E_rel": -0.6000000000000001,
+      "E_bag": 0.7999999999999998,
+      "Pi": 0.18333333333333332,
+      "seed_entropy": 0.9804021230491559,
+      "citation": 0.6208333333333333,
+      "echo_graph": 0.16230366492146597,
+      "echo_chunk": 0.3333333333333333,
+      "echo_gap": -0.17102966841186734,
+      "mst_prior_mass": 0.10144927536231883,
+      "residual_prior_mass": 0.0,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        },
+        "strategic_value": {
+          "delta": 1.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        }
+      }
+    },
+    {
+      "question_id": "predictive_maintenance_003",
+      "delta": -0.7999999999999998,
+      "keo": 1.6,
+      "chunk": 2.4,
+      "E_top": -0.7999999999999998,
+      "E_rel": -0.3999999999999999,
+      "E_bag": -0.3999999999999999,
+      "Pi": 0.2037037037037037,
+      "seed_entropy": 0.9927666079338798,
+      "citation": 0.041666666666666664,
+      "echo_graph": 0.16470588235294117,
+      "echo_chunk": 0.2222222222222222,
+      "echo_gap": -0.057516339869281036,
+      "mst_prior_mass": 0.2916666666666667,
+      "residual_prior_mass": 0.16666666666666666,
+      "criteria": {
+        "global_perspective": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        },
+        "theme_identification": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": -1.0,
+          "E_top": -2.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        }
+      }
+    },
+    {
+      "question_id": "predictive_maintenance_004",
+      "delta": -1.4000000000000004,
+      "keo": 3.0,
+      "chunk": 4.4,
+      "E_top": -0.20000000000000018,
+      "E_rel": 1.0,
+      "E_bag": -2.4000000000000004,
+      "Pi": 0.1,
+      "seed_entropy": 0.9841999130132204,
+      "citation": 0.140625,
+      "echo_graph": 0.1683673469387755,
+      "echo_chunk": 0.21153846153846154,
+      "echo_gap": -0.043171114599686033,
+      "mst_prior_mass": 0.34848484848484845,
+      "residual_prior_mass": 0.5,
+      "criteria": {
+        "global_perspective": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        },
+        "theme_identification": {
+          "delta": -2.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        },
+        "synthesis_quality": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        },
+        "strategic_value": {
+          "delta": -2.0,
+          "E_top": -1.0,
+          "E_rel": 1.0
+        },
+        "pattern_recognition": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        }
+      }
+    },
+    {
+      "question_id": "predictive_maintenance_005",
+      "delta": 0.0,
+      "keo": 1.8,
+      "chunk": 1.8,
+      "E_top": -0.40000000000000013,
+      "E_rel": -0.5999999999999999,
+      "E_bag": 0.5999999999999999,
+      "Pi": 0.2333333333333333,
+      "seed_entropy": 0.995508786326163,
+      "citation": 0.40416666666666673,
+      "echo_graph": 0.17733990147783252,
+      "echo_chunk": 0.3157894736842105,
+      "echo_gap": -0.138449572206378,
+      "mst_prior_mass": 0.17857142857142858,
+      "residual_prior_mass": 0.1111111111111111,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        }
+      }
+    },
+    {
+      "question_id": "predictive_maintenance_006",
+      "delta": -0.3999999999999999,
+      "keo": 2.2,
+      "chunk": 2.6,
+      "E_top": 0.6000000000000001,
+      "E_rel": 0.8000000000000003,
+      "E_bag": -1.2000000000000002,
+      "Pi": 0.041666666666666664,
+      "seed_entropy": 0.9967683467563815,
+      "citation": 0.22333333333333336,
+      "echo_graph": 0.17297297297297298,
+      "echo_chunk": 0.2,
+      "echo_gap": -0.02702702702702703,
+      "mst_prior_mass": 0.31182795698924737,
+      "residual_prior_mass": 0.4388888888888889,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "theme_identification": {
+          "delta": -1.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        }
+      }
+    },
+    {
+      "question_id": "predictive_maintenance_007",
+      "delta": 0.0,
+      "keo": 2.0,
+      "chunk": 2.0,
+      "E_top": -0.20000000000000018,
+      "E_rel": -0.3999999999999999,
+      "E_bag": 0.3999999999999999,
+      "Pi": 0.0,
+      "seed_entropy": 0.9711562161877201,
+      "citation": 0.11764705882352941,
+      "echo_graph": 0.2079207920792079,
+      "echo_chunk": 0.30303030303030304,
+      "echo_gap": -0.09510951095109513,
+      "mst_prior_mass": 0.26388888888888884,
+      "residual_prior_mass": 0.38888888888888884,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "predictive_maintenance_008",
+      "delta": 0.0,
+      "keo": 2.0,
+      "chunk": 2.0,
+      "E_top": 0.0,
+      "E_rel": -0.3999999999999999,
+      "E_bag": 0.3999999999999999,
+      "Pi": 0.15,
+      "seed_entropy": 0.9864091361358689,
+      "citation": 0.23245614035087717,
+      "echo_graph": 0.11538461538461539,
+      "echo_chunk": 0.3246753246753247,
+      "echo_gap": -0.20929070929070928,
+      "mst_prior_mass": 0.18434343434343434,
+      "residual_prior_mass": 0.2864583333333333,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "root_cause_analysis_001",
+      "delta": -1.0,
+      "keo": 1.4,
+      "chunk": 2.4,
+      "E_top": -1.2000000000000002,
+      "E_rel": -0.20000000000000018,
+      "E_bag": -0.7999999999999998,
+      "Pi": 0.2,
+      "seed_entropy": 0.9912059213497937,
+      "citation": 0.37307692307692314,
+      "echo_graph": 0.15151515151515152,
+      "echo_chunk": 0.2463768115942029,
+      "echo_gap": -0.09486166007905139,
+      "mst_prior_mass": 0.15625,
+      "residual_prior_mass": 0.20833333333333331,
+      "criteria": {
+        "global_perspective": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        },
+        "strategic_value": {
+          "delta": -1.0,
+          "E_top": -2.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "root_cause_analysis_002",
+      "delta": -0.5999999999999996,
+      "keo": 2.2,
+      "chunk": 2.8,
+      "E_top": -0.19999999999999973,
+      "E_rel": -1.1999999999999997,
+      "E_bag": 0.6000000000000001,
+      "Pi": 0.16666666666666666,
+      "seed_entropy": 0.9966075333692861,
+      "citation": 0.39903846153846145,
+      "echo_graph": 0.20202020202020202,
+      "echo_chunk": 0.29245283018867924,
+      "echo_gap": -0.09043262816847722,
+      "mst_prior_mass": 0.25892857142857145,
+      "residual_prior_mass": 0.36904761904761907,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "theme_identification": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "strategic_value": {
+          "delta": -2.0,
+          "E_top": -1.0,
+          "E_rel": -2.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        }
+      }
+    },
+    {
+      "question_id": "root_cause_analysis_003",
+      "delta": -1.0,
+      "keo": 2.2,
+      "chunk": 3.2,
+      "E_top": 0.0,
+      "E_rel": -0.19999999999999973,
+      "E_bag": -0.8000000000000003,
+      "Pi": 0.05,
+      "seed_entropy": 0.9947080385516116,
+      "citation": 0.3194444444444444,
+      "echo_graph": 0.18316831683168316,
+      "echo_chunk": 0.30357142857142855,
+      "echo_gap": -0.12040311173974538,
+      "mst_prior_mass": 0.2948717948717948,
+      "residual_prior_mass": 0.49999999999999994,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": -2.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "pattern_recognition": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "root_cause_analysis_004",
+      "delta": 0.19999999999999973,
+      "keo": 2.8,
+      "chunk": 2.6,
+      "E_top": 0.19999999999999973,
+      "E_rel": 0.19999999999999973,
+      "E_bag": 0.0,
+      "Pi": 0.05,
+      "seed_entropy": 0.994832508025513,
+      "citation": 0.12407407407407407,
+      "echo_graph": 0.20304568527918782,
+      "echo_chunk": 0.30851063829787234,
+      "echo_gap": -0.10546495301868453,
+      "mst_prior_mass": 0.0,
+      "residual_prior_mass": 0.0,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": 1.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        }
+      }
+    },
+    {
+      "question_id": "root_cause_analysis_005",
+      "delta": 0.0,
+      "keo": 3.4,
+      "chunk": 3.4,
+      "E_top": 1.0,
+      "E_rel": 1.0,
+      "E_bag": -1.0,
+      "Pi": 0.2037037037037037,
+      "seed_entropy": 0.9954509786404045,
+      "citation": 0.5304597701149426,
+      "echo_graph": 0.12745098039215685,
+      "echo_chunk": 0.2,
+      "echo_gap": -0.07254901960784316,
+      "mst_prior_mass": 0.24358974358974358,
+      "residual_prior_mass": 0.4166666666666667,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        }
+      }
+    },
+    {
+      "question_id": "root_cause_analysis_006",
+      "delta": 0.7999999999999998,
+      "keo": 2.4,
+      "chunk": 1.6,
+      "E_top": 1.0,
+      "E_rel": 0.19999999999999973,
+      "E_bag": 0.6000000000000001,
+      "Pi": 0.16666666666666666,
+      "seed_entropy": 0.9977137229327989,
+      "citation": 0.25666666666666665,
+      "echo_graph": 0.13541666666666666,
+      "echo_chunk": 0.2608695652173913,
+      "echo_gap": -0.12545289855072464,
+      "mst_prior_mass": 0.37345679012345684,
+      "residual_prior_mass": 0.3974358974358974,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 1.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "synthesis_quality": {
+          "delta": 1.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 1.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": 1.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "root_cause_analysis_007",
+      "delta": -0.40000000000000013,
+      "keo": 1.8,
+      "chunk": 2.2,
+      "E_top": 0.19999999999999996,
+      "E_rel": 0.0,
+      "E_bag": -0.40000000000000013,
+      "Pi": 0.05,
+      "seed_entropy": 0.9876428558507728,
+      "citation": 0.265625,
+      "echo_graph": 0.22872340425531915,
+      "echo_chunk": 0.23255813953488372,
+      "echo_gap": -0.0038347352795645717,
+      "mst_prior_mass": 0.3181818181818181,
+      "residual_prior_mass": 0.3666666666666666,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "strategic_value": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "root_cause_analysis_008",
+      "delta": -0.19999999999999996,
+      "keo": 1.8,
+      "chunk": 2.0,
+      "E_top": 0.40000000000000013,
+      "E_rel": -0.40000000000000013,
+      "E_bag": 0.20000000000000018,
+      "Pi": 0.08333333333333333,
+      "seed_entropy": 0.9975351841989445,
+      "citation": 0.0,
+      "echo_graph": 0.1497326203208556,
+      "echo_chunk": 0.24675324675324675,
+      "echo_gap": -0.09702062643239115,
+      "mst_prior_mass": 0.08333333333333333,
+      "residual_prior_mass": 0.0,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "pattern_recognition": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        }
+      }
+    },
+    {
+      "question_id": "safety_recommendations_001",
+      "delta": -1.6,
+      "keo": 2.0,
+      "chunk": 3.6,
+      "E_top": -0.6000000000000001,
+      "E_rel": -0.3999999999999999,
+      "E_bag": -1.2000000000000002,
+      "Pi": 0.0,
+      "seed_entropy": 0.9934882908132758,
+      "citation": 0.3979885057471264,
+      "echo_graph": 0.21052631578947367,
+      "echo_chunk": 0.16666666666666666,
+      "echo_gap": 0.043859649122807015,
+      "mst_prior_mass": 0.29301075268817206,
+      "residual_prior_mass": 0.39999999999999997,
+      "criteria": {
+        "global_perspective": {
+          "delta": -2.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": -2.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        },
+        "synthesis_quality": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": -2.0,
+          "E_top": -2.0,
+          "E_rel": -1.0
+        },
+        "pattern_recognition": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "safety_recommendations_002",
+      "delta": 0.19999999999999973,
+      "keo": 2.4,
+      "chunk": 2.2,
+      "E_top": 0.3999999999999999,
+      "E_rel": 0.19999999999999973,
+      "E_bag": 0.0,
+      "Pi": 0.05,
+      "seed_entropy": 0.9989337687695582,
+      "citation": 0.1865079365079365,
+      "echo_graph": 0.1568627450980392,
+      "echo_chunk": 0.2625,
+      "echo_gap": -0.1056372549019608,
+      "mst_prior_mass": 0.041666666666666664,
+      "residual_prior_mass": 0.08333333333333333,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 1.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "safety_recommendations_003",
+      "delta": 2.0,
+      "keo": 4.2,
+      "chunk": 2.2,
+      "E_top": 1.6,
+      "E_rel": 2.0,
+      "E_bag": 0.0,
+      "Pi": 0.15625,
+      "seed_entropy": 0.9913401716425646,
+      "citation": 0.2270114942528736,
+      "echo_graph": 0.19607843137254902,
+      "echo_chunk": 0.3188405797101449,
+      "echo_gap": -0.12276214833759588,
+      "mst_prior_mass": 0.22849462365591391,
+      "residual_prior_mass": 0.3888888888888889,
+      "criteria": {
+        "global_perspective": {
+          "delta": 2.0,
+          "E_top": 2.0,
+          "E_rel": 2.0
+        },
+        "theme_identification": {
+          "delta": 2.0,
+          "E_top": 1.0,
+          "E_rel": 2.0
+        },
+        "synthesis_quality": {
+          "delta": 2.0,
+          "E_top": 2.0,
+          "E_rel": 2.0
+        },
+        "strategic_value": {
+          "delta": 2.0,
+          "E_top": 1.0,
+          "E_rel": 2.0
+        },
+        "pattern_recognition": {
+          "delta": 2.0,
+          "E_top": 2.0,
+          "E_rel": 2.0
+        }
+      }
+    },
+    {
+      "question_id": "safety_recommendations_004",
+      "delta": 0.3999999999999999,
+      "keo": 2.4,
+      "chunk": 2.0,
+      "E_top": 0.19999999999999973,
+      "E_rel": 1.2,
+      "E_bag": -0.8,
+      "Pi": 0.0,
+      "seed_entropy": 0.9929754267624652,
+      "citation": 0.10942028985507246,
+      "echo_graph": 0.15025906735751296,
+      "echo_chunk": 0.13333333333333333,
+      "echo_gap": 0.01692573402417963,
+      "mst_prior_mass": 0.05555555555555555,
+      "residual_prior_mass": 0.1111111111111111,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        },
+        "theme_identification": {
+          "delta": 1.0,
+          "E_top": 1.0,
+          "E_rel": 2.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        },
+        "strategic_value": {
+          "delta": 1.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        }
+      }
+    },
+    {
+      "question_id": "safety_recommendations_005",
+      "delta": 0.3999999999999999,
+      "keo": 2.8,
+      "chunk": 2.4,
+      "E_top": 0.5999999999999996,
+      "E_rel": 0.5999999999999996,
+      "E_bag": -0.19999999999999973,
+      "Pi": 0.03333333333333333,
+      "seed_entropy": 0.9948829487368284,
+      "citation": 0.14814814814814814,
+      "echo_graph": 0.2014388489208633,
+      "echo_chunk": 0.2,
+      "echo_gap": 0.0014388489208632949,
+      "mst_prior_mass": 0.05,
+      "residual_prior_mass": 0.1,
+      "criteria": {
+        "global_perspective": {
+          "delta": 1.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "synthesis_quality": {
+          "delta": 1.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "safety_recommendations_006",
+      "delta": 0.0,
+      "keo": 2.4,
+      "chunk": 2.4,
+      "E_top": 1.0,
+      "E_rel": 1.2,
+      "E_bag": -1.2,
+      "Pi": 0.05,
+      "seed_entropy": 0.9961983149190164,
+      "citation": 0.1568627450980392,
+      "echo_graph": 0.22959183673469388,
+      "echo_chunk": 0.38028169014084506,
+      "echo_gap": -0.15068985340615118,
+      "mst_prior_mass": 0.0,
+      "residual_prior_mass": 0.0,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 2.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        }
+      }
+    },
+    {
+      "question_id": "safety_recommendations_007",
+      "delta": 0.19999999999999973,
+      "keo": 2.4,
+      "chunk": 2.2,
+      "E_top": 0.0,
+      "E_rel": 0.19999999999999973,
+      "E_bag": 0.0,
+      "Pi": 0.0,
+      "seed_entropy": 0.9955974040829895,
+      "citation": 0.49707602339181284,
+      "echo_graph": 0.17032967032967034,
+      "echo_chunk": 0.2222222222222222,
+      "echo_gap": -0.051892551892551875,
+      "mst_prior_mass": 0.30729166666666663,
+      "residual_prior_mass": 0.3958333333333333,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "safety_recommendations_008",
+      "delta": -2.0,
+      "keo": 2.2,
+      "chunk": 4.2,
+      "E_top": -1.1999999999999997,
+      "E_rel": -1.0,
+      "E_bag": -1.0,
+      "Pi": 0.0,
+      "seed_entropy": 0.9821363728671317,
+      "citation": 0.2881578947368421,
+      "echo_graph": 0.19306930693069307,
+      "echo_chunk": 0.20967741935483872,
+      "echo_gap": -0.016608112424145643,
+      "mst_prior_mass": 0.2738095238095238,
+      "residual_prior_mass": 0.4761904761904762,
+      "criteria": {
+        "global_perspective": {
+          "delta": -2.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        },
+        "theme_identification": {
+          "delta": -2.0,
+          "E_top": -2.0,
+          "E_rel": -1.0
+        },
+        "synthesis_quality": {
+          "delta": -2.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        },
+        "strategic_value": {
+          "delta": -2.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": -2.0,
+          "E_top": -1.0,
+          "E_rel": -2.0
+        }
+      }
+    },
+    {
+      "question_id": "system_level_understanding_001",
+      "delta": -1.0,
+      "keo": 2.4,
+      "chunk": 3.4,
+      "E_top": 0.3999999999999999,
+      "E_rel": 0.19999999999999973,
+      "E_bag": -1.1999999999999997,
+      "Pi": 0.125,
+      "seed_entropy": 0.9978082564869127,
+      "citation": 0.3620689655172414,
+      "echo_graph": 0.16363636363636364,
+      "echo_chunk": 0.13978494623655913,
+      "echo_gap": 0.02385141739980451,
+      "mst_prior_mass": 0.32795698924731187,
+      "residual_prior_mass": 0.43333333333333335,
+      "criteria": {
+        "global_perspective": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": -1.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": -1.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "pattern_recognition": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "system_level_understanding_002",
+      "delta": -0.19999999999999973,
+      "keo": 2.2,
+      "chunk": 2.4,
+      "E_top": -0.19999999999999973,
+      "E_rel": 0.20000000000000018,
+      "E_bag": -0.3999999999999999,
+      "Pi": 0.13333333333333333,
+      "seed_entropy": 0.9699232324504082,
+      "citation": 0.4808333333333333,
+      "echo_graph": 0.20238095238095238,
+      "echo_chunk": 0.18627450980392157,
+      "echo_gap": 0.01610644257703081,
+      "mst_prior_mass": 0.21666666666666665,
+      "residual_prior_mass": 0.29166666666666663,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "system_level_understanding_003",
+      "delta": -1.0,
+      "keo": 2.2,
+      "chunk": 3.2,
+      "E_top": -0.19999999999999973,
+      "E_rel": -0.19999999999999973,
+      "E_bag": -0.8000000000000003,
+      "Pi": 0.0,
+      "seed_entropy": 0.9951360453269944,
+      "citation": 0.3148148148148148,
+      "echo_graph": 0.20588235294117646,
+      "echo_chunk": 0.3181818181818182,
+      "echo_gap": -0.11229946524064172,
+      "mst_prior_mass": 0.30769230769230765,
+      "residual_prior_mass": 0.5,
+      "criteria": {
+        "global_perspective": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": -2.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        },
+        "synthesis_quality": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "system_level_understanding_004",
+      "delta": 0.19999999999999973,
+      "keo": 2.4,
+      "chunk": 2.2,
+      "E_top": -1.0,
+      "E_rel": 0.19999999999999973,
+      "E_bag": 0.0,
+      "Pi": 0.11666666666666665,
+      "seed_entropy": 0.9981498068168275,
+      "citation": 0.2893939393939394,
+      "echo_graph": 0.21025641025641026,
+      "echo_chunk": 0.2727272727272727,
+      "echo_gap": -0.06247086247086245,
+      "mst_prior_mass": 0.027777777777777776,
+      "residual_prior_mass": 0.05555555555555555,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 1.0,
+          "E_top": -1.0,
+          "E_rel": 1.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "system_level_understanding_005",
+      "delta": 0.20000000000000018,
+      "keo": 2.6,
+      "chunk": 2.4,
+      "E_top": 0.3999999999999999,
+      "E_rel": 0.20000000000000018,
+      "E_bag": 0.0,
+      "Pi": 0.05555555555555555,
+      "seed_entropy": 0.9908208744372337,
+      "citation": 0.0625,
+      "echo_graph": 0.17901234567901234,
+      "echo_chunk": 0.2765957446808511,
+      "echo_gap": -0.09758339900183874,
+      "mst_prior_mass": 0.3181818181818181,
+      "residual_prior_mass": 0.5,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 1.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "system_level_understanding_006",
+      "delta": -1.1999999999999997,
+      "keo": 2.2,
+      "chunk": 3.4,
+      "E_top": -0.7999999999999998,
+      "E_rel": -1.1999999999999997,
+      "E_bag": 0.0,
+      "Pi": 0.0,
+      "seed_entropy": 0.9925111274063568,
+      "citation": 0.6470588235294118,
+      "echo_graph": 0.14857142857142858,
+      "echo_chunk": 0.26666666666666666,
+      "echo_gap": -0.11809523809523809,
+      "mst_prior_mass": 0.3194444444444444,
+      "residual_prior_mass": 0.5,
+      "criteria": {
+        "global_perspective": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "theme_identification": {
+          "delta": -2.0,
+          "E_top": -2.0,
+          "E_rel": -2.0
+        },
+        "synthesis_quality": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "strategic_value": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        },
+        "pattern_recognition": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        }
+      }
+    },
+    {
+      "question_id": "system_level_understanding_007",
+      "delta": 0.3999999999999999,
+      "keo": 2.4,
+      "chunk": 2.0,
+      "E_top": 0.19999999999999973,
+      "E_rel": 0.19999999999999973,
+      "E_bag": 0.20000000000000018,
+      "Pi": 0.0,
+      "seed_entropy": 0.9743246164191526,
+      "citation": 0.6351190476190476,
+      "echo_graph": 0.18592964824120603,
+      "echo_chunk": 0.24691358024691357,
+      "echo_gap": -0.060983932005707536,
+      "mst_prior_mass": 0.03623188405797101,
+      "residual_prior_mass": 0.07575757575757575,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": 1.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 1.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "system_level_understanding_008",
+      "delta": -0.6000000000000001,
+      "keo": 1.6,
+      "chunk": 2.2,
+      "E_top": -0.6000000000000001,
+      "E_rel": -0.3999999999999999,
+      "E_bag": -0.20000000000000018,
+      "Pi": 0.0,
+      "seed_entropy": 0.996997064726218,
+      "citation": 0.0625,
+      "echo_graph": 0.1686746987951807,
+      "echo_chunk": 0.26582278481012656,
+      "echo_gap": -0.09714808601494584,
+      "mst_prior_mass": 0.0,
+      "residual_prior_mass": 0.0,
+      "criteria": {
+        "global_perspective": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        },
+        "theme_identification": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -1.0
+        }
+      }
+    },
+    {
+      "question_id": "trend_analysis_001",
+      "delta": 0.0,
+      "keo": 2.2,
+      "chunk": 2.2,
+      "E_top": 0.6000000000000001,
+      "E_rel": 0.40000000000000013,
+      "E_bag": -0.40000000000000013,
+      "Pi": 0.07142857142857142,
+      "seed_entropy": 0.9980476681059874,
+      "citation": 0.44545454545454544,
+      "echo_graph": 0.14583333333333334,
+      "echo_chunk": 0.203125,
+      "echo_gap": -0.05729166666666666,
+      "mst_prior_mass": 0.3494623655913979,
+      "residual_prior_mass": 0.4111111111111111,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 1.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        }
+      }
+    },
+    {
+      "question_id": "trend_analysis_002",
+      "delta": -0.9999999999999998,
+      "keo": 1.8,
+      "chunk": 2.8,
+      "E_top": -0.40000000000000013,
+      "E_rel": 0.0,
+      "E_bag": -0.9999999999999998,
+      "Pi": 0.2833333333333333,
+      "seed_entropy": 0.9837432169750769,
+      "citation": 0.3711538461538462,
+      "echo_graph": 0.1793478260869565,
+      "echo_chunk": 0.2328767123287671,
+      "echo_gap": -0.0535288862418106,
+      "mst_prior_mass": 0.21874999999999997,
+      "residual_prior_mass": 0.29166666666666663,
+      "criteria": {
+        "global_perspective": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "synthesis_quality": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        },
+        "strategic_value": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "trend_analysis_003",
+      "delta": -1.0,
+      "keo": 1.4,
+      "chunk": 2.4,
+      "E_top": -0.8000000000000003,
+      "E_rel": 0.19999999999999996,
+      "E_bag": -1.2,
+      "Pi": 0.05555555555555555,
+      "seed_entropy": 0.9947521762657067,
+      "citation": 0.29310344827586204,
+      "echo_graph": 0.20108695652173914,
+      "echo_chunk": 0.3246753246753247,
+      "echo_gap": -0.12358836815358554,
+      "mst_prior_mass": 0.2833333333333333,
+      "residual_prior_mass": 0.39999999999999997,
+      "criteria": {
+        "global_perspective": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        },
+        "synthesis_quality": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "trend_analysis_004",
+      "delta": -1.0,
+      "keo": 2.4,
+      "chunk": 3.4,
+      "E_top": 0.0,
+      "E_rel": 0.3999999999999999,
+      "E_bag": -1.4,
+      "Pi": 0.0,
+      "seed_entropy": 0.9753129570306853,
+      "citation": 0.421875,
+      "echo_graph": 0.1793478260869565,
+      "echo_chunk": 0.17647058823529413,
+      "echo_gap": 0.002877237851662384,
+      "mst_prior_mass": 0.27777777777777773,
+      "residual_prior_mass": 0.3611111111111111,
+      "criteria": {
+        "global_perspective": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        },
+        "synthesis_quality": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 1.0
+        },
+        "pattern_recognition": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "trend_analysis_005",
+      "delta": 0.7999999999999998,
+      "keo": 3.4,
+      "chunk": 2.6,
+      "E_top": 1.0,
+      "E_rel": 1.0,
+      "E_bag": -0.20000000000000018,
+      "Pi": 0.2333333333333333,
+      "seed_entropy": 0.9634599199097579,
+      "citation": 0.12878787878787878,
+      "echo_graph": 0.2543352601156069,
+      "echo_chunk": 0.19444444444444445,
+      "echo_gap": 0.05989081567116247,
+      "mst_prior_mass": 0.0,
+      "residual_prior_mass": 0.0,
+      "criteria": {
+        "global_perspective": {
+          "delta": 1.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "theme_identification": {
+          "delta": 1.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "synthesis_quality": {
+          "delta": 1.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        },
+        "pattern_recognition": {
+          "delta": 1.0,
+          "E_top": 1.0,
+          "E_rel": 1.0
+        }
+      }
+    },
+    {
+      "question_id": "trend_analysis_006",
+      "delta": -1.0,
+      "keo": 2.2,
+      "chunk": 3.2,
+      "E_top": 0.0,
+      "E_rel": -0.19999999999999973,
+      "E_bag": -0.8000000000000003,
+      "Pi": 0.05,
+      "seed_entropy": 0.9918426047082856,
+      "citation": 0.7058823529411765,
+      "echo_graph": 0.11695906432748537,
+      "echo_chunk": 0.17045454545454544,
+      "echo_gap": -0.05349548112706007,
+      "mst_prior_mass": 0.05555555555555555,
+      "residual_prior_mass": 0.05555555555555555,
+      "criteria": {
+        "global_perspective": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "theme_identification": {
+          "delta": -2.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "synthesis_quality": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        },
+        "pattern_recognition": {
+          "delta": -1.0,
+          "E_top": 0.0,
+          "E_rel": 0.0
+        }
+      }
+    },
+    {
+      "question_id": "trend_analysis_007",
+      "delta": -0.3999999999999999,
+      "keo": 2.0,
+      "chunk": 2.4,
+      "E_top": -0.3999999999999999,
+      "E_rel": -1.4,
+      "E_bag": 1.0,
+      "Pi": 0.16666666666666666,
+      "seed_entropy": 0.9966826691363497,
+      "citation": 0.3541666666666667,
+      "echo_graph": 0.19298245614035087,
+      "echo_chunk": 0.2112676056338028,
+      "echo_gap": -0.018285149493451947,
+      "mst_prior_mass": 0.46969696969696967,
+      "residual_prior_mass": 0.5,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "theme_identification": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -2.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "strategic_value": {
+          "delta": -1.0,
+          "E_top": -1.0,
+          "E_rel": -2.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        }
+      }
+    },
+    {
+      "question_id": "trend_analysis_008",
+      "delta": 0.20000000000000018,
+      "keo": 2.6,
+      "chunk": 2.4,
+      "E_top": 0.20000000000000018,
+      "E_rel": -0.7999999999999998,
+      "E_bag": 1.0,
+      "Pi": 0.05,
+      "seed_entropy": 0.997555996066643,
+      "citation": 0.5111111111111112,
+      "echo_graph": 0.14432989690721648,
+      "echo_chunk": 0.21951219512195122,
+      "echo_gap": -0.07518229821473474,
+      "mst_prior_mass": 0.010416666666666666,
+      "residual_prior_mass": 0.0,
+      "criteria": {
+        "global_perspective": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "theme_identification": {
+          "delta": 1.0,
+          "E_top": 1.0,
+          "E_rel": 0.0
+        },
+        "synthesis_quality": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "strategic_value": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        },
+        "pattern_recognition": {
+          "delta": 0.0,
+          "E_top": 0.0,
+          "E_rel": -1.0
+        }
+      }
+    }
+  ]
+}

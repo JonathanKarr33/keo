@@ -1,0 +1,4291 @@
+{
+  "pooled": {
+    "runs": 78,
+    "pair": [
+      "textchunkrag",
+      "graphrag"
+    ],
+    "length_ratio_graph_over_chunk": {
+      "median": 1.6663394792222885,
+      "min": 1.5505544287501367,
+      "max": 4.5371901776985455
+    },
+    "score_gap": {
+      "median": 0.4012048192771086,
+      "mean": 0.40715905279097064
+    },
+    "within_question_length_score_spearman": {
+      "median": 0.23598175535831223,
+      "min": -0.00621361447965203,
+      "max": 0.5452515742405366
+    },
+    "longer_answer_win_rate": {
+      "median": 0.930952380952381,
+      "n_runs": 78
+    },
+    "runs_where_arm_and_length_are_separable": "20/78",
+    "length_matched": {
+      "n_runs": 13,
+      "median_n_per_subsample": 8.0,
+      "median_gap_full_sample": 0.3135802469135803,
+      "median_gap_length_matched": 0.07999999999999999,
+      "point_estimate_shrinkage": 0.7448818897637797,
+      "significant_runs": 1,
+      "underpowered_runs": 12,
+      "median_mde_80": 0.2826378491684335
+    }
+  },
+  "runs": [
+    {
+      "run": "answer_gemma-3-27b-it_evaluator_gpt-4o_kg_gpt-4o100",
+      "answers_file": "output/kg_gpt-4o/answers_gemma-3-27b-it_kg_gpt-4o100.json",
+      "eval_file": "evaluation_results/answer_gemma-3-27b-it_evaluator_gpt-4o_kg_gpt-4o100/global_sensemaking_evaluation_20250715_173801.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 81,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1057.7283950617284,
+            "median": 1043.0
+          },
+          "graphrag": {
+            "mean": 4626.20987654321,
+            "median": 4607.0
+          },
+          "ratio_hi_over_lo": 4.373721929128344
+        },
+        "score": {
+          "textchunkrag": 3.7185185185185192,
+          "graphrag": 4.3432098765432094,
+          "gap": 0.6246913580246914
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.2067615291498485,
+          "pearson_within_question_diffs": 0.2665794872458938,
+          "spearman_pooled": 0.6359207319081849
+        },
+        "longer_answer_wins": {
+          "wins": 59,
+          "ties": 20,
+          "losses": 2,
+          "rate_excluding_ties": 0.9672131147540983
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.6246913580246916,
+          "gap_adjusted_for_log_length": -0.4749876097838486,
+          "log_length_coefficient": 0.7387558017775959,
+          "share_of_gap_absorbed_by_length": 1.7603556599306664
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9915366768402338,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_gemma-3-27b-it_evaluator_gpt-4o_kg_gpt-4o300",
+      "answers_file": "output/kg_gpt-4o/answers_gemma-3-27b-it_kg_gpt-4o300.json",
+      "eval_file": "evaluation_results/answer_gemma-3-27b-it_evaluator_gpt-4o_kg_gpt-4o300/global_sensemaking_evaluation_20250715_190745.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1047.5301204819277,
+            "median": 1016.0
+          },
+          "graphrag": {
+            "mean": 4752.843373493976,
+            "median": 4735.0
+          },
+          "ratio_hi_over_lo": 4.5371901776985455
+        },
+        "score": {
+          "textchunkrag": 3.6915662650602408,
+          "graphrag": 4.339759036144578,
+          "gap": 0.6481927710843375
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.11858931804358035,
+          "pearson_within_question_diffs": 0.15912347863734244,
+          "spearman_pooled": 0.599768135388157
+        },
+        "longer_answer_wins": {
+          "wins": 62,
+          "ties": 20,
+          "losses": 1,
+          "rate_excluding_ties": 0.9841269841269841
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.6481927710843377,
+          "gap_adjusted_for_log_length": 0.007831448707113794,
+          "log_length_coefficient": 0.4195513808517125,
+          "share_of_gap_absorbed_by_length": 0.9879180252288021
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9914342525130738,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_gemma-3-27b-it_evaluator_gpt-4o_kg_gpt-4ocum200",
+      "answers_file": "output/kg_gpt-4o/answers_gemma-3-27b-it_kg_gpt-4ocum_200.json",
+      "eval_file": "evaluation_results/answer_gemma-3-27b-it_evaluator_gpt-4o_kg_gpt-4ocum200/global_sensemaking_evaluation_20250715_203923.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1037.421686746988,
+            "median": 1013.0
+          },
+          "graphrag": {
+            "mean": 4695.168674698795,
+            "median": 4659.0
+          },
+          "ratio_hi_over_lo": 4.525805402643254
+        },
+        "score": {
+          "textchunkrag": 3.706024096385542,
+          "graphrag": 4.3518072289156615,
+          "gap": 0.6457831325301205
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.11766792211447263,
+          "pearson_within_question_diffs": 0.12277947048817808,
+          "spearman_pooled": 0.6159150197253878
+        },
+        "longer_answer_wins": {
+          "wins": 61,
+          "ties": 22,
+          "losses": 0,
+          "rate_excluding_ties": 1.0
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.6457831325301209,
+          "gap_adjusted_for_log_length": 0.1280146652983358,
+          "log_length_coefficient": 0.3402803430925625,
+          "share_of_gap_absorbed_by_length": 0.801768335452204
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9935768103443685,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_gemma-3-27b-it_evaluator_gpt-4o_kg_gpt-4ocum300",
+      "answers_file": "output/kg_gpt-4o/answers_gemma-3-27b-it_kg_gpt-4ocum_300.json",
+      "eval_file": "evaluation_results/answer_gemma-3-27b-it_evaluator_gpt-4o_kg_gpt-4ocum300/global_sensemaking_evaluation_20250715_220354.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1060.1927710843374,
+            "median": 1028.0
+          },
+          "graphrag": {
+            "mean": 4610.180722891566,
+            "median": 4620.0
+          },
+          "ratio_hi_over_lo": 4.348436292558752
+        },
+        "score": {
+          "textchunkrag": 3.7277108433734942,
+          "graphrag": 4.301204819277107,
+          "gap": 0.5734939759036145
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.1492168448861448,
+          "pearson_within_question_diffs": 0.14047181451277146,
+          "spearman_pooled": 0.5610301292376448
+        },
+        "longer_answer_wins": {
+          "wins": 58,
+          "ties": 24,
+          "losses": 1,
+          "rate_excluding_ties": 0.9830508474576272
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.5734939759036148,
+          "gap_adjusted_for_log_length": 0.003050046170842701,
+          "log_length_coefficient": 0.38510806102328865,
+          "share_of_gap_absorbed_by_length": 0.9946816421810936
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9920656282458746,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_gemma-3-27b-it_evaluator_gpt-4o_kg_gpt-4ocum400",
+      "answers_file": "output/kg_gpt-4o/answers_gemma-3-27b-it_kg_gpt-4ocum_400.json",
+      "eval_file": "evaluation_results/answer_gemma-3-27b-it_evaluator_gpt-4o_kg_gpt-4ocum400/global_sensemaking_evaluation_20250715_233959.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1040.6144578313254,
+            "median": 1061.0
+          },
+          "graphrag": {
+            "mean": 4612.6024096385545,
+            "median": 4642.0
+          },
+          "ratio_hi_over_lo": 4.432575748804576
+        },
+        "score": {
+          "textchunkrag": 3.64578313253012,
+          "graphrag": 4.3759036144578305,
+          "gap": 0.7301204819277111
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.1878180296444185,
+          "pearson_within_question_diffs": 0.20885829005576137,
+          "spearman_pooled": 0.7091781349479576
+        },
+        "longer_answer_wins": {
+          "wins": 69,
+          "ties": 14,
+          "losses": 0,
+          "rate_excluding_ties": 1.0
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.7301204819277114,
+          "gap_adjusted_for_log_length": -0.0316316945855718,
+          "log_length_coefficient": 0.5074534633814222,
+          "share_of_gap_absorbed_by_length": 1.0433239381287533
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9908018818502462,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_gemma-3-27b-it_evaluator_gpt-4o_kg_gpt-4ocum500",
+      "answers_file": "output/kg_gpt-4o/answers_gemma-3-27b-it_kg_gpt-4ocum_500.json",
+      "eval_file": "evaluation_results/answer_gemma-3-27b-it_evaluator_gpt-4o_kg_gpt-4ocum500/global_sensemaking_evaluation_20250716_010209.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 82,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1030.3292682926829,
+            "median": 1012.0
+          },
+          "graphrag": {
+            "mean": 4619.329268292683,
+            "median": 4643.5
+          },
+          "ratio_hi_over_lo": 4.483352468427095
+        },
+        "score": {
+          "textchunkrag": 3.678048780487805,
+          "graphrag": 4.368292682926828,
+          "gap": 0.6902439024390244
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.11233747997347941,
+          "pearson_within_question_diffs": 0.14637452159538816,
+          "spearman_pooled": 0.6418661902195621
+        },
+        "longer_answer_wins": {
+          "wins": 63,
+          "ties": 17,
+          "losses": 2,
+          "rate_excluding_ties": 0.9692307692307692
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.6902439024390241,
+          "gap_adjusted_for_log_length": 0.10897468931928193,
+          "log_length_coefficient": 0.3840422184187937,
+          "share_of_gap_absorbed_by_length": 0.8421214748377894
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9904818180443878,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_gemma-3-27b-it_evaluator_gpt-4o_kg_gs100",
+      "answers_file": "output/answers_gemma-3-27b-it_kg_gs100.json",
+      "eval_file": "evaluation_results/answer_gemma-3-27b-it_evaluator_gpt-4o_kg_gs100/global_sensemaking_evaluation_20250715_155853.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1028.0843373493976,
+            "median": 1009.0
+          },
+          "graphrag": {
+            "mean": 4472.879518072289,
+            "median": 4538.0
+          },
+          "ratio_hi_over_lo": 4.350693183016723
+        },
+        "score": {
+          "textchunkrag": 3.6987951807228914,
+          "graphrag": 4.308433734939758,
+          "gap": 0.6096385542168675
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.12307624043585541,
+          "pearson_within_question_diffs": 0.2081519705958469,
+          "spearman_pooled": 0.5699503646567258
+        },
+        "longer_answer_wins": {
+          "wins": 63,
+          "ties": 20,
+          "losses": 0,
+          "rate_excluding_ties": 1.0
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.6096385542168679,
+          "gap_adjusted_for_log_length": -0.14862896461779682,
+          "log_length_coefficient": 0.511573059771589,
+          "share_of_gap_absorbed_by_length": 1.2437984992742515
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9910462070330004,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_gemma-3-27b-it_evaluator_gpt-4o_kg_phi4mini-it100",
+      "answers_file": "output/kg_phi4mini-it/answers_gemma-3-27b-it_kg_phi4mini-it100.json",
+      "eval_file": "evaluation_results/answer_gemma-3-27b-it_evaluator_gpt-4o_kg_phi4mini-it100/global_sensemaking_evaluation_20250717_125342.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 82,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1048.3292682926829,
+            "median": 1031.5
+          },
+          "graphrag": {
+            "mean": 4613.317073170731,
+            "median": 4660.5
+          },
+          "ratio_hi_over_lo": 4.400637483568512
+        },
+        "score": {
+          "textchunkrag": 3.7146341463414636,
+          "graphrag": 4.309756097560974,
+          "gap": 0.5951219512195123
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.20349018244519787,
+          "pearson_within_question_diffs": 0.17031018975270756,
+          "spearman_pooled": 0.5394415465107816
+        },
+        "longer_answer_wins": {
+          "wins": 55,
+          "ties": 25,
+          "losses": 2,
+          "rate_excluding_ties": 0.9649122807017544
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.5951219512195121,
+          "gap_adjusted_for_log_length": -0.09827842031949494,
+          "log_length_coefficient": 0.4638955823441347,
+          "share_of_gap_absorbed_by_length": 1.165139968569643
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9909437394018523,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_gemma-3-27b-it_evaluator_gpt-4o_kg_phi4mini-it300",
+      "answers_file": "output/kg_phi4mini-it/answers_gemma-3-27b-it_kg_phi4mini-it300.json",
+      "eval_file": "evaluation_results/answer_gemma-3-27b-it_evaluator_gpt-4o_kg_phi4mini-it300/global_sensemaking_evaluation_20250717_143303.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1057.7469879518073,
+            "median": 1056.0
+          },
+          "graphrag": {
+            "mean": 4587.566265060241,
+            "median": 4565.0
+          },
+          "ratio_hi_over_lo": 4.337111159204036
+        },
+        "score": {
+          "textchunkrag": 3.689156626506024,
+          "graphrag": 4.3831325301204815,
+          "gap": 0.693975903614458
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.22397543767336517,
+          "pearson_within_question_diffs": 0.24056295529991775,
+          "spearman_pooled": 0.6461584619233773
+        },
+        "longer_answer_wins": {
+          "wins": 66,
+          "ties": 16,
+          "losses": 1,
+          "rate_excluding_ties": 0.9850746268656716
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.6939759036144582,
+          "gap_adjusted_for_log_length": -0.16190456431857952,
+          "log_length_coefficient": 0.5778177058600065,
+          "share_of_gap_absorbed_by_length": 1.2332999798340643
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.989863763738073,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_gemma-3-27b-it_evaluator_gpt-4o_kg_phi4mini-itcum200",
+      "answers_file": "output/kg_phi4mini-it/answers_gemma-3-27b-it_kg_phi4mini-itcum_200.json",
+      "eval_file": "evaluation_results/answer_gemma-3-27b-it_evaluator_gpt-4o_kg_phi4mini-itcum200/global_sensemaking_evaluation_20250717_161242.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1061.313253012048,
+            "median": 1053.0
+          },
+          "graphrag": {
+            "mean": 4558.542168674699,
+            "median": 4546.0
+          },
+          "ratio_hi_over_lo": 4.295190091838935
+        },
+        "score": {
+          "textchunkrag": 3.7228915662650603,
+          "graphrag": 4.327710843373493,
+          "gap": 0.6048192771084339
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.14083938106791932,
+          "pearson_within_question_diffs": 0.1621147613162027,
+          "spearman_pooled": 0.5165884972019857
+        },
+        "longer_answer_wins": {
+          "wins": 54,
+          "ties": 28,
+          "losses": 1,
+          "rate_excluding_ties": 0.9818181818181818
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.6048192771084342,
+          "gap_adjusted_for_log_length": 0.0007083947123689441,
+          "log_length_coefficient": 0.41123171479650206,
+          "share_of_gap_absorbed_by_length": 0.9988287497783541
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9899847257478585,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_gemma-3-27b-it_evaluator_gpt-4o_kg_phi4mini-itcum300",
+      "answers_file": "output/kg_phi4mini-it/answers_gemma-3-27b-it_kg_phi4mini-itcum_300.json",
+      "eval_file": "evaluation_results/answer_gemma-3-27b-it_evaluator_gpt-4o_kg_phi4mini-itcum300/global_sensemaking_evaluation_20250717_175058.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1041.9277108433735,
+            "median": 1021.0
+          },
+          "graphrag": {
+            "mean": 4518.879518072289,
+            "median": 4477.0
+          },
+          "ratio_hi_over_lo": 4.337037465309899
+        },
+        "score": {
+          "textchunkrag": 3.7060240963855424,
+          "graphrag": 4.286746987951806,
+          "gap": 0.5807228915662652
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.2825241459137518,
+          "pearson_within_question_diffs": 0.3180167043778452,
+          "spearman_pooled": 0.5647744095678061
+        },
+        "longer_answer_wins": {
+          "wins": 57,
+          "ties": 23,
+          "losses": 3,
+          "rate_excluding_ties": 0.95
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.5807228915662656,
+          "gap_adjusted_for_log_length": -0.67452543809338,
+          "log_length_coefficient": 0.8470137933314406,
+          "share_of_gap_absorbed_by_length": 2.1615272066753213
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9886096482177138,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_gemma-3-27b-it_evaluator_gpt-4o_kg_phi4mini-itcum400",
+      "answers_file": "output/kg_phi4mini-it/answers_gemma-3-27b-it_kg_phi4mini-itcum_400.json",
+      "eval_file": "evaluation_results/answer_gemma-3-27b-it_evaluator_gpt-4o_kg_phi4mini-itcum400/global_sensemaking_evaluation_20250717_192526.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1035.7228915662652,
+            "median": 1027.0
+          },
+          "graphrag": {
+            "mean": 4535.77108433735,
+            "median": 4563.0
+          },
+          "ratio_hi_over_lo": 4.379328796603269
+        },
+        "score": {
+          "textchunkrag": 3.7036144578313244,
+          "graphrag": 4.272289156626505,
+          "gap": 0.568674698795181
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.26242827195834634,
+          "pearson_within_question_diffs": 0.2298816518691321,
+          "spearman_pooled": 0.5443729785979318
+        },
+        "longer_answer_wins": {
+          "wins": 56,
+          "ties": 21,
+          "losses": 6,
+          "rate_excluding_ties": 0.9032258064516129
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.5686746987951811,
+          "gap_adjusted_for_log_length": -0.5404559664915066,
+          "log_length_coefficient": 0.7458168208139467,
+          "share_of_gap_absorbed_by_length": 1.9503780766693861
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9918914885393183,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_gemma-3-27b-it_evaluator_gpt-4o_kg_phi4mini-itcum500",
+      "answers_file": "output/kg_phi4mini-it/answers_gemma-3-27b-it_kg_phi4mini-itcum_500.json",
+      "eval_file": "evaluation_results/answer_gemma-3-27b-it_evaluator_gpt-4o_kg_phi4mini-itcum500/global_sensemaking_evaluation_20250717_205800.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1063.313253012048,
+            "median": 1049.0
+          },
+          "graphrag": {
+            "mean": 4534.578313253012,
+            "median": 4610.0
+          },
+          "ratio_hi_over_lo": 4.264574245085265
+        },
+        "score": {
+          "textchunkrag": 3.744578313253012,
+          "graphrag": 4.262650602409638,
+          "gap": 0.5180722891566266
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.16172452024033965,
+          "pearson_within_question_diffs": 0.22140547379738343,
+          "spearman_pooled": 0.5548575871898773
+        },
+        "longer_answer_wins": {
+          "wins": 56,
+          "ties": 21,
+          "losses": 6,
+          "rate_excluding_ties": 0.9032258064516129
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.5180722891566268,
+          "gap_adjusted_for_log_length": -0.2770998134906652,
+          "log_length_coefficient": 0.5411572161954776,
+          "share_of_gap_absorbed_by_length": 1.5348670818540744
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.986383055377434,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_gemma-3-27b-it_evaluator_llama-3.3-70b_kg_gpt-4o100",
+      "answers_file": "output/kg_gpt-4o/answers_gemma-3-27b-it_kg_gpt-4o100.json",
+      "eval_file": "evaluation_results/answer_gemma-3-27b-it_evaluator_llama-3.3-70b_kg_gpt-4o100/global_sensemaking_evaluation_20250718_205237.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 80,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1057.0625,
+            "median": 1038.5
+          },
+          "graphrag": {
+            "mean": 4623.9125,
+            "median": 4601.0
+          },
+          "ratio_hi_over_lo": 4.374303789984037
+        },
+        "score": {
+          "textchunkrag": 4.275,
+          "graphrag": 4.8875,
+          "gap": 0.6124999999999998
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.3151132063254311,
+          "pearson_within_question_diffs": 0.4254425113678366,
+          "spearman_pooled": 0.7472570730472612
+        },
+        "longer_answer_wins": {
+          "wins": 74,
+          "ties": 6,
+          "losses": 0,
+          "rate_excluding_ties": 1.0
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.6124999999999995,
+          "gap_adjusted_for_log_length": -0.4939709469618326,
+          "log_length_coefficient": 0.7431743219902174,
+          "share_of_gap_absorbed_by_length": 1.8064831787131967
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9914370111039611,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_gemma-3-27b-it_evaluator_llama-3.3-70b_kg_gpt-4o300",
+      "answers_file": "output/kg_gpt-4o/answers_gemma-3-27b-it_kg_gpt-4o300.json",
+      "eval_file": "evaluation_results/answer_gemma-3-27b-it_evaluator_llama-3.3-70b_kg_gpt-4o300/global_sensemaking_evaluation_20250718_212223.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1047.5301204819277,
+            "median": 1016.0
+          },
+          "graphrag": {
+            "mean": 4752.843373493976,
+            "median": 4735.0
+          },
+          "ratio_hi_over_lo": 4.5371901776985455
+        },
+        "score": {
+          "textchunkrag": 4.3036144578313245,
+          "graphrag": 4.9156626506024095,
+          "gap": 0.6120481927710842
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.2693430738818265,
+          "pearson_within_question_diffs": 0.3006843982900319,
+          "spearman_pooled": 0.8058504680519359
+        },
+        "longer_answer_wins": {
+          "wins": 79,
+          "ties": 4,
+          "losses": 0,
+          "rate_excluding_ties": 1.0
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.6120481927710841,
+          "gap_adjusted_for_log_length": -0.06892838400212195,
+          "log_length_coefficient": 0.44616164832105204,
+          "share_of_gap_absorbed_by_length": 1.1126192100822072
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9914342525130738,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_gemma-3-27b-it_evaluator_llama-3.3-70b_kg_gpt-4ocum200",
+      "answers_file": "output/kg_gpt-4o/answers_gemma-3-27b-it_kg_gpt-4ocum_200.json",
+      "eval_file": "evaluation_results/answer_gemma-3-27b-it_evaluator_llama-3.3-70b_kg_gpt-4ocum200/global_sensemaking_evaluation_20250719_004409.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1037.421686746988,
+            "median": 1013.0
+          },
+          "graphrag": {
+            "mean": 4695.168674698795,
+            "median": 4659.0
+          },
+          "ratio_hi_over_lo": 4.525805402643254
+        },
+        "score": {
+          "textchunkrag": 4.306024096385541,
+          "graphrag": 4.925301204819277,
+          "gap": 0.6192771084337347
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.13879579878739898,
+          "pearson_within_question_diffs": 0.26101750353487974,
+          "spearman_pooled": 0.7566509885647509
+        },
+        "longer_answer_wins": {
+          "wins": 80,
+          "ties": 3,
+          "losses": 0,
+          "rate_excluding_ties": 1.0
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.6192771084337346,
+          "gap_adjusted_for_log_length": 0.029900379226479805,
+          "log_length_coefficient": 0.38734169482676695,
+          "share_of_gap_absorbed_by_length": 0.9517172864630773
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9935768103443685,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_gemma-3-27b-it_evaluator_llama-3.3-70b_kg_gpt-4ocum300",
+      "answers_file": "output/kg_gpt-4o/answers_gemma-3-27b-it_kg_gpt-4ocum_300.json",
+      "eval_file": "evaluation_results/answer_gemma-3-27b-it_evaluator_llama-3.3-70b_kg_gpt-4ocum300/global_sensemaking_evaluation_20250719_011330.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1060.1927710843374,
+            "median": 1028.0
+          },
+          "graphrag": {
+            "mean": 4610.180722891566,
+            "median": 4620.0
+          },
+          "ratio_hi_over_lo": 4.348436292558752
+        },
+        "score": {
+          "textchunkrag": 4.32289156626506,
+          "graphrag": 4.901204819277108,
+          "gap": 0.5783132530120481
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.23546504787453199,
+          "pearson_within_question_diffs": 0.27425768830195935,
+          "spearman_pooled": 0.7437028531604112
+        },
+        "longer_answer_wins": {
+          "wins": 78,
+          "ties": 5,
+          "losses": 0,
+          "rate_excluding_ties": 1.0
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.5783132530120477,
+          "gap_adjusted_for_log_length": 0.057818575800508816,
+          "log_length_coefficient": 0.35138720120622324,
+          "share_of_gap_absorbed_by_length": 0.9000220460116201
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9920656282458746,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_gemma-3-27b-it_evaluator_llama-3.3-70b_kg_gpt-4ocum400",
+      "answers_file": "output/kg_gpt-4o/answers_gemma-3-27b-it_kg_gpt-4ocum_400.json",
+      "eval_file": "evaluation_results/answer_gemma-3-27b-it_evaluator_llama-3.3-70b_kg_gpt-4ocum400/global_sensemaking_evaluation_20250719_014310.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1040.6144578313254,
+            "median": 1061.0
+          },
+          "graphrag": {
+            "mean": 4612.6024096385545,
+            "median": 4642.0
+          },
+          "ratio_hi_over_lo": 4.432575748804576
+        },
+        "score": {
+          "textchunkrag": 4.296385542168673,
+          "graphrag": 4.910843373493976,
+          "gap": 0.6144578313253011
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.4540503513035086,
+          "pearson_within_question_diffs": 0.40321512978540364,
+          "spearman_pooled": 0.8024912943728126
+        },
+        "longer_answer_wins": {
+          "wins": 77,
+          "ties": 4,
+          "losses": 2,
+          "rate_excluding_ties": 0.9746835443037974
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.6144578313253006,
+          "gap_adjusted_for_log_length": -0.34590177730981964,
+          "log_length_coefficient": 0.6397589984241036,
+          "share_of_gap_absorbed_by_length": 1.562938186602256
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9908018818502462,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_gemma-3-27b-it_evaluator_llama-3.3-70b_kg_gpt-4ocum500",
+      "answers_file": "output/kg_gpt-4o/answers_gemma-3-27b-it_kg_gpt-4ocum_500.json",
+      "eval_file": "evaluation_results/answer_gemma-3-27b-it_evaluator_llama-3.3-70b_kg_gpt-4ocum500/global_sensemaking_evaluation_20250719_021306.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 82,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1030.3292682926829,
+            "median": 1012.0
+          },
+          "graphrag": {
+            "mean": 4619.329268292683,
+            "median": 4643.5
+          },
+          "ratio_hi_over_lo": 4.483352468427095
+        },
+        "score": {
+          "textchunkrag": 4.27560975609756,
+          "graphrag": 4.926829268292683,
+          "gap": 0.6512195121951216
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.12172329447184703,
+          "pearson_within_question_diffs": 0.33779340244153955,
+          "spearman_pooled": 0.7489527600477752
+        },
+        "longer_answer_wins": {
+          "wins": 76,
+          "ties": 5,
+          "losses": 1,
+          "rate_excluding_ties": 0.987012987012987
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.6512195121951213,
+          "gap_adjusted_for_log_length": -0.21381878707670837,
+          "log_length_coefficient": 0.5715273060593661,
+          "share_of_gap_absorbed_by_length": 1.328335965173972
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9904818180443878,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_gemma-3-27b-it_evaluator_llama-3.3-70b_kg_gs100",
+      "answers_file": "output/answers_gemma-3-27b-it_kg_gs100.json",
+      "eval_file": "evaluation_results/answer_gemma-3-27b-it_evaluator_llama-3.3-70b_kg_gs100/global_sensemaking_evaluation_20250718_202244.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1028.0843373493976,
+            "median": 1009.0
+          },
+          "graphrag": {
+            "mean": 4472.879518072289,
+            "median": 4538.0
+          },
+          "ratio_hi_over_lo": 4.350693183016723
+        },
+        "score": {
+          "textchunkrag": 4.289156626506022,
+          "graphrag": 4.874698795180723,
+          "gap": 0.5855421686746987
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.35707396497486055,
+          "pearson_within_question_diffs": 0.4528700964928687,
+          "spearman_pooled": 0.7439753224464157
+        },
+        "longer_answer_wins": {
+          "wins": 72,
+          "ties": 11,
+          "losses": 0,
+          "rate_excluding_ties": 1.0
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.5855421686746983,
+          "gap_adjusted_for_log_length": -0.6438703895613245,
+          "log_length_coefficient": 0.8294359556703549,
+          "share_of_gap_absorbed_by_length": 2.099614039785802
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9910462070330004,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_gemma-3-27b-it_evaluator_llama-3.3-70b_kg_phi4mini-it100",
+      "answers_file": "output/kg_phi4mini-it/answers_gemma-3-27b-it_kg_phi4mini-it100.json",
+      "eval_file": "evaluation_results/answer_gemma-3-27b-it_evaluator_llama-3.3-70b_kg_phi4mini-it100/global_sensemaking_evaluation_20250719_212009.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 82,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1048.3292682926829,
+            "median": 1031.5
+          },
+          "graphrag": {
+            "mean": 4613.317073170731,
+            "median": 4660.5
+          },
+          "ratio_hi_over_lo": 4.400637483568512
+        },
+        "score": {
+          "textchunkrag": 4.290243902439024,
+          "graphrag": 4.84390243902439,
+          "gap": 0.5536585365853658
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.08949382957475831,
+          "pearson_within_question_diffs": 0.1430654632270596,
+          "spearman_pooled": 0.6920040775760986
+        },
+        "longer_answer_wins": {
+          "wins": 66,
+          "ties": 16,
+          "losses": 0,
+          "rate_excluding_ties": 1.0
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.5536585365853652,
+          "gap_adjusted_for_log_length": 0.1413752625469089,
+          "log_length_coefficient": 0.2758238924451703,
+          "share_of_gap_absorbed_by_length": 0.7446526094967721
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9909437394018523,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_gemma-3-27b-it_evaluator_llama-3.3-70b_kg_phi4mini-it300",
+      "answers_file": "output/kg_phi4mini-it/answers_gemma-3-27b-it_kg_phi4mini-it300.json",
+      "eval_file": "evaluation_results/answer_gemma-3-27b-it_evaluator_llama-3.3-70b_kg_phi4mini-it300/global_sensemaking_evaluation_20250719_215015.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 82,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1058.4756097560976,
+            "median": 1061.0
+          },
+          "graphrag": {
+            "mean": 4579.280487804878,
+            "median": 4561.5
+          },
+          "ratio_hi_over_lo": 4.3262975977878915
+        },
+        "score": {
+          "textchunkrag": 4.263414634146341,
+          "graphrag": 4.909756097560976,
+          "gap": 0.6463414634146338
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.26901694856902475,
+          "pearson_within_question_diffs": 0.3269533812396947,
+          "spearman_pooled": 0.7502438653914313
+        },
+        "longer_answer_wins": {
+          "wins": 76,
+          "ties": 6,
+          "losses": 0,
+          "rate_excluding_ties": 1.0
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.6463414634146333,
+          "gap_adjusted_for_log_length": -0.12872517857127158,
+          "log_length_coefficient": 0.524045334688474,
+          "share_of_gap_absorbed_by_length": 1.199159710242345
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9898025203468254,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_gemma-3-27b-it_evaluator_llama-3.3-70b_kg_phi4mini-itcum200",
+      "answers_file": "output/kg_phi4mini-it/answers_gemma-3-27b-it_kg_phi4mini-itcum_200.json",
+      "eval_file": "evaluation_results/answer_gemma-3-27b-it_evaluator_llama-3.3-70b_kg_phi4mini-itcum200/global_sensemaking_evaluation_20250719_222021.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1061.313253012048,
+            "median": 1053.0
+          },
+          "graphrag": {
+            "mean": 4558.542168674699,
+            "median": 4546.0
+          },
+          "ratio_hi_over_lo": 4.295190091838935
+        },
+        "score": {
+          "textchunkrag": 4.325301204819276,
+          "graphrag": 4.814457831325301,
+          "gap": 0.48915662650602393
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.23449260666969787,
+          "pearson_within_question_diffs": 0.2920711288644594,
+          "spearman_pooled": 0.6494296772799638
+        },
+        "longer_answer_wins": {
+          "wins": 66,
+          "ties": 17,
+          "losses": 0,
+          "rate_excluding_ties": 1.0
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.4891566265060237,
+          "gap_adjusted_for_log_length": -0.16936724797525834,
+          "log_length_coefficient": 0.4482718488090887,
+          "share_of_gap_absorbed_by_length": 1.3462433887178928
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9899847257478585,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_gemma-3-27b-it_evaluator_llama-3.3-70b_kg_phi4mini-itcum300",
+      "answers_file": "output/kg_phi4mini-it/answers_gemma-3-27b-it_kg_phi4mini-itcum_300.json",
+      "eval_file": "evaluation_results/answer_gemma-3-27b-it_evaluator_llama-3.3-70b_kg_phi4mini-itcum300/global_sensemaking_evaluation_20250719_225021.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1041.9277108433735,
+            "median": 1021.0
+          },
+          "graphrag": {
+            "mean": 4518.879518072289,
+            "median": 4477.0
+          },
+          "ratio_hi_over_lo": 4.337037465309899
+        },
+        "score": {
+          "textchunkrag": 4.2795180722891555,
+          "graphrag": 4.877108433734939,
+          "gap": 0.5975903614457829
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.2429723796082958,
+          "pearson_within_question_diffs": 0.32322300297536477,
+          "spearman_pooled": 0.747368531079611
+        },
+        "longer_answer_wins": {
+          "wins": 74,
+          "ties": 9,
+          "losses": 0,
+          "rate_excluding_ties": 1.0
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.5975903614457828,
+          "gap_adjusted_for_log_length": -0.16114055250227924,
+          "log_length_coefficient": 0.5119748294867134,
+          "share_of_gap_absorbed_by_length": 1.2696505213243787
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9886096482177138,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_gemma-3-27b-it_evaluator_llama-3.3-70b_kg_phi4mini-itcum400",
+      "answers_file": "output/kg_phi4mini-it/answers_gemma-3-27b-it_kg_phi4mini-itcum_400.json",
+      "eval_file": "evaluation_results/answer_gemma-3-27b-it_evaluator_llama-3.3-70b_kg_phi4mini-itcum400/global_sensemaking_evaluation_20250719_232033.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1035.7228915662652,
+            "median": 1027.0
+          },
+          "graphrag": {
+            "mean": 4535.77108433735,
+            "median": 4563.0
+          },
+          "ratio_hi_over_lo": 4.379328796603269
+        },
+        "score": {
+          "textchunkrag": 4.272289156626505,
+          "graphrag": 4.840963855421687,
+          "gap": 0.5686746987951805
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.3067727753798028,
+          "pearson_within_question_diffs": 0.3760861156651207,
+          "spearman_pooled": 0.7117268296440735
+        },
+        "longer_answer_wins": {
+          "wins": 70,
+          "ties": 13,
+          "losses": 0,
+          "rate_excluding_ties": 1.0
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.5686746987951803,
+          "gap_adjusted_for_log_length": -0.49983092541102164,
+          "log_length_coefficient": 0.7184991747219488,
+          "share_of_gap_absorbed_by_length": 1.878939974769382
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9918914885393183,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_gemma-3-27b-it_evaluator_llama-3.3-70b_kg_phi4mini-itcum500",
+      "answers_file": "output/kg_phi4mini-it/answers_gemma-3-27b-it_kg_phi4mini-itcum_500.json",
+      "eval_file": "evaluation_results/answer_gemma-3-27b-it_evaluator_llama-3.3-70b_kg_phi4mini-itcum500/global_sensemaking_evaluation_20250719_235031.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1063.313253012048,
+            "median": 1049.0
+          },
+          "graphrag": {
+            "mean": 4534.578313253012,
+            "median": 4610.0
+          },
+          "ratio_hi_over_lo": 4.264574245085265
+        },
+        "score": {
+          "textchunkrag": 4.306024096385541,
+          "graphrag": 4.838554216867469,
+          "gap": 0.5325301204819275
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.38180669145373336,
+          "pearson_within_question_diffs": 0.4472729093397426,
+          "spearman_pooled": 0.7270934453804143
+        },
+        "longer_answer_wins": {
+          "wins": 68,
+          "ties": 15,
+          "losses": 0,
+          "rate_excluding_ties": 1.0
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.5325301204819274,
+          "gap_adjusted_for_log_length": -0.40333901037783715,
+          "log_length_coefficient": 0.636909081560164,
+          "share_of_gap_absorbed_by_length": 1.7574013090805543
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.986383055377434,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_mistral-nemo-12b-it_evaluator_gpt-4o_kg_gpt-4o100",
+      "answers_file": "output/kg_gpt-4o/answers_mistral-nemo-12b-it_kg_gpt-4o100.json",
+      "eval_file": "evaluation_results/answer_mistral-nemo-12b-it_evaluator_gpt-4o_kg_gpt-4o100/global_sensemaking_evaluation_20250716_152813.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 81,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1641.1851851851852,
+            "median": 1712.0
+          },
+          "graphrag": {
+            "mean": 2735.2098765432097,
+            "median": 2720.0
+          },
+          "ratio_hi_over_lo": 1.66660648733225
+        },
+        "score": {
+          "textchunkrag": 3.4814814814814814,
+          "graphrag": 3.7950617283950616,
+          "gap": 0.3135802469135803
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.18481028894786142,
+          "pearson_within_question_diffs": 0.2048338119386197,
+          "spearman_pooled": 0.34040831551213824
+        },
+        "longer_answer_wins": {
+          "wins": 48,
+          "ties": 17,
+          "losses": 16,
+          "rate_excluding_ties": 0.75
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.3135802469135802,
+          "gap_adjusted_for_log_length": 0.06892061724305583,
+          "log_length_coefficient": 0.4532991322571203,
+          "share_of_gap_absorbed_by_length": 0.7802137796579716
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.8736707019803309,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": true
+        },
+        "length_matched_subsample": {
+          "n_pairs": 8,
+          "mean_reference": 3.575,
+          "mean_arm": 3.6500000000000004,
+          "mean_diff": 0.0749999999999999,
+          "sd_diff": 0.6840008354213781,
+          "ci95": [
+            -0.3750000000000003,
+            0.4750000000000001
+          ],
+          "p_value": 0.8318336332733454,
+          "cohens_dz": 0.10964898888434282,
+          "cliffs_delta": 0.0625,
+          "wins": 5,
+          "ties": 0,
+          "losses": 3,
+          "mde_80": 0.6775096354541443,
+          "underpowered": true,
+          "degenerate": false,
+          "n_matched": 8,
+          "tolerance_log_chars": 0.2
+        }
+      }
+    },
+    {
+      "run": "answer_mistral-nemo-12b-it_evaluator_gpt-4o_kg_gpt-4o300",
+      "answers_file": "output/kg_gpt-4o/answers_mistral-nemo-12b-it_kg_gpt-4o300.json",
+      "eval_file": "evaluation_results/answer_mistral-nemo-12b-it_evaluator_gpt-4o_kg_gpt-4o300/global_sensemaking_evaluation_20250716_172201.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1620.4819277108434,
+            "median": 1643.0
+          },
+          "graphrag": {
+            "mean": 2739.5421686746986,
+            "median": 2689.0
+          },
+          "ratio_hi_over_lo": 1.6905724907063195
+        },
+        "score": {
+          "textchunkrag": 3.455421686746988,
+          "graphrag": 3.8698795180722896,
+          "gap": 0.4144578313253013
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.2539360198718438,
+          "pearson_within_question_diffs": 0.3554506248678638,
+          "spearman_pooled": 0.3864694513917856
+        },
+        "longer_answer_wins": {
+          "wins": 55,
+          "ties": 19,
+          "losses": 9,
+          "rate_excluding_ties": 0.859375
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.4144578313253014,
+          "gap_adjusted_for_log_length": 0.019996394501019497,
+          "log_length_coefficient": 0.7095777099940296,
+          "share_of_gap_absorbed_by_length": 0.9517528853609123
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.8686107636827731,
+          "share_of_questions_where_graph_arm_longer": 0.9879518072289156,
+          "separable": true
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_mistral-nemo-12b-it_evaluator_gpt-4o_kg_gpt-4ocum200",
+      "answers_file": "output/kg_gpt-4o/answers_mistral-nemo-12b-it_kg_gpt-4ocum_200.json",
+      "eval_file": "evaluation_results/answer_mistral-nemo-12b-it_evaluator_gpt-4o_kg_gpt-4ocum200/global_sensemaking_evaluation_20250716_190922.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1557.855421686747,
+            "median": 1635.0
+          },
+          "graphrag": {
+            "mean": 2661.975903614458,
+            "median": 2642.0
+          },
+          "ratio_hi_over_lo": 1.7087438709378047
+        },
+        "score": {
+          "textchunkrag": 3.4819277108433737,
+          "graphrag": 3.9036144578313254,
+          "gap": 0.4216867469879519
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.24170779563894607,
+          "pearson_within_question_diffs": 0.32211217823077914,
+          "spearman_pooled": 0.34245092675789646
+        },
+        "longer_answer_wins": {
+          "wins": 54,
+          "ties": 21,
+          "losses": 8,
+          "rate_excluding_ties": 0.8709677419354839
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.421686746987952,
+          "gap_adjusted_for_log_length": 0.06025329347650128,
+          "log_length_coefficient": 0.6359763524787326,
+          "share_of_gap_absorbed_by_length": 0.8571136183271542
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.888879202893261,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": true
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_mistral-nemo-12b-it_evaluator_gpt-4o_kg_gpt-4ocum300",
+      "answers_file": "output/kg_gpt-4o/answers_mistral-nemo-12b-it_kg_gpt-4ocum_300.json",
+      "eval_file": "evaluation_results/answer_mistral-nemo-12b-it_evaluator_gpt-4o_kg_gpt-4ocum300/global_sensemaking_evaluation_20250716_205117.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1642.3373493975903,
+            "median": 1660.0
+          },
+          "graphrag": {
+            "mean": 2672.0,
+            "median": 2628.0
+          },
+          "ratio_hi_over_lo": 1.6269495429669734
+        },
+        "score": {
+          "textchunkrag": 3.4578313253012047,
+          "graphrag": 3.8843373493975895,
+          "gap": 0.4265060240963857
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.42337927909832745,
+          "pearson_within_question_diffs": 0.4521351187961747,
+          "spearman_pooled": 0.3701519699130944
+        },
+        "longer_answer_wins": {
+          "wins": 55,
+          "ties": 21,
+          "losses": 7,
+          "rate_excluding_ties": 0.8870967741935484
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.4265060240963856,
+          "gap_adjusted_for_log_length": -0.07686242699953799,
+          "log_length_coefficient": 0.9857121933837232,
+          "share_of_gap_absorbed_by_length": 1.1802141649989166
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9056858843496227,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_mistral-nemo-12b-it_evaluator_gpt-4o_kg_gpt-4ocum400",
+      "answers_file": "output/kg_gpt-4o/answers_mistral-nemo-12b-it_kg_gpt-4ocum_400.json",
+      "eval_file": "evaluation_results/answer_mistral-nemo-12b-it_evaluator_gpt-4o_kg_gpt-4ocum400/global_sensemaking_evaluation_20250716_223621.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1618.9638554216867,
+            "median": 1712.0
+          },
+          "graphrag": {
+            "mean": 2694.8313253012047,
+            "median": 2763.0
+          },
+          "ratio_hi_over_lo": 1.664540759373093
+        },
+        "score": {
+          "textchunkrag": 3.3638554216867473,
+          "graphrag": 3.8771084337349393,
+          "gap": 0.5132530120481927
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.2785549031645107,
+          "pearson_within_question_diffs": 0.40007594405128255,
+          "spearman_pooled": 0.44324869208686035
+        },
+        "longer_answer_wins": {
+          "wins": 58,
+          "ties": 14,
+          "losses": 11,
+          "rate_excluding_ties": 0.8405797101449275
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.513253012048193,
+          "gap_adjusted_for_log_length": 0.10600315847483313,
+          "log_length_coefficient": 0.7485954110317583,
+          "share_of_gap_absorbed_by_length": 0.7934680245678134
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.8470766945495118,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": true
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_mistral-nemo-12b-it_evaluator_gpt-4o_kg_gpt-4ocum500",
+      "answers_file": "output/kg_gpt-4o/answers_mistral-nemo-12b-it_kg_gpt-4ocum_500.json",
+      "eval_file": "evaluation_results/answer_mistral-nemo-12b-it_evaluator_gpt-4o_kg_gpt-4ocum500/global_sensemaking_evaluation_20250717_001753.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1598.9397590361446,
+            "median": 1643.0
+          },
+          "graphrag": {
+            "mean": 2698.9518072289156,
+            "median": 2731.0
+          },
+          "ratio_hi_over_lo": 1.687963409488215
+        },
+        "score": {
+          "textchunkrag": 3.4457831325301207,
+          "graphrag": 3.857831325301204,
+          "gap": 0.4120481927710844
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.35101564617163394,
+          "pearson_within_question_diffs": 0.4294117120367799,
+          "spearman_pooled": 0.38018617710337954
+        },
+        "longer_answer_wins": {
+          "wins": 53,
+          "ties": 19,
+          "losses": 11,
+          "rate_excluding_ties": 0.828125
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.41204819277108456,
+          "gap_adjusted_for_log_length": -0.08061189591144902,
+          "log_length_coefficient": 0.8904229286810634,
+          "share_of_gap_absorbed_by_length": 1.1956370573289552
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.8776369813875008,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": true
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_mistral-nemo-12b-it_evaluator_gpt-4o_kg_gs100",
+      "answers_file": "output/answers_mistral-nemo-12b-it_kg_gs100.json",
+      "eval_file": "evaluation_results/answer_mistral-nemo-12b-it_evaluator_gpt-4o_kg_gs100/global_sensemaking_evaluation_20250716_133927.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1614.8072289156626,
+            "median": 1641.0
+          },
+          "graphrag": {
+            "mean": 2699.759036144578,
+            "median": 2652.0
+          },
+          "ratio_hi_over_lo": 1.6718769818472121
+        },
+        "score": {
+          "textchunkrag": 3.3879518072289163,
+          "graphrag": 3.8674698795180715,
+          "gap": 0.47951807228915666
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.18634158390651254,
+          "pearson_within_question_diffs": 0.14462065314202827,
+          "spearman_pooled": 0.40769564878133846
+        },
+        "longer_answer_wins": {
+          "wins": 59,
+          "ties": 17,
+          "losses": 7,
+          "rate_excluding_ties": 0.8939393939393939
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.47951807228915677,
+          "gap_adjusted_for_log_length": 0.32760826489578637,
+          "log_length_coefficient": 0.28102268875091513,
+          "share_of_gap_absorbed_by_length": 0.3167968345138126
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.8801615497363844,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": true
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_mistral-nemo-12b-it_evaluator_gpt-4o_kg_phi4mini-it100",
+      "answers_file": "output/kg_phi4mini-it/answers_mistral-nemo-12b-it_kg_phi4mini-it100.json",
+      "eval_file": "evaluation_results/answer_mistral-nemo-12b-it_evaluator_gpt-4o_kg_phi4mini-it100/global_sensemaking_evaluation_20250718_074952.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1678.9518072289156,
+            "median": 1680.0
+          },
+          "graphrag": {
+            "mean": 2628.9518072289156,
+            "median": 2626.0
+          },
+          "ratio_hi_over_lo": 1.5658292250615344
+        },
+        "score": {
+          "textchunkrag": 3.4578313253012056,
+          "graphrag": 3.809638554216868,
+          "gap": 0.35180722891566274
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.2767215556213752,
+          "pearson_within_question_diffs": 0.3414304109206149,
+          "spearman_pooled": 0.4235475154046285
+        },
+        "longer_answer_wins": {
+          "wins": 48,
+          "ties": 24,
+          "losses": 11,
+          "rate_excluding_ties": 0.8135593220338984
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.35180722891566263,
+          "gap_adjusted_for_log_length": 0.015500731514485928,
+          "log_length_coefficient": 0.7189954150953625,
+          "share_of_gap_absorbed_by_length": 0.9559397015170434
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.8815792502083258,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": true
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_mistral-nemo-12b-it_evaluator_gpt-4o_kg_phi4mini-it300",
+      "answers_file": "output/kg_phi4mini-it/answers_mistral-nemo-12b-it_kg_phi4mini-it300.json",
+      "eval_file": "evaluation_results/answer_mistral-nemo-12b-it_evaluator_gpt-4o_kg_phi4mini-it300/global_sensemaking_evaluation_20250718_095051.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1612.686746987952,
+            "median": 1643.0
+          },
+          "graphrag": {
+            "mean": 2634.2168674698796,
+            "median": 2660.0
+          },
+          "ratio_hi_over_lo": 1.6334336921847101
+        },
+        "score": {
+          "textchunkrag": 3.428915662650602,
+          "graphrag": 3.891566265060242,
+          "gap": 0.46265060240963873
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.2620252151656936,
+          "pearson_within_question_diffs": 0.33859256647949515,
+          "spearman_pooled": 0.3887711513880167
+        },
+        "longer_answer_wins": {
+          "wins": 55,
+          "ties": 20,
+          "losses": 8,
+          "rate_excluding_ties": 0.873015873015873
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.46265060240963873,
+          "gap_adjusted_for_log_length": 0.06654051314085405,
+          "log_length_coefficient": 0.7767085703510888,
+          "share_of_gap_absorbed_by_length": 0.8561754533674248
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.8889481462687475,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": true
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_mistral-nemo-12b-it_evaluator_gpt-4o_kg_phi4mini-itcum200",
+      "answers_file": "output/kg_phi4mini-it/answers_mistral-nemo-12b-it_kg_phi4mini-itcum_200.json",
+      "eval_file": "evaluation_results/answer_mistral-nemo-12b-it_evaluator_gpt-4o_kg_phi4mini-itcum200/global_sensemaking_evaluation_20250718_115625.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 81,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1572.1975308641975,
+            "median": 1621.0
+          },
+          "graphrag": {
+            "mean": 2619.814814814815,
+            "median": 2611.0
+          },
+          "ratio_hi_over_lo": 1.6663394792222885
+        },
+        "score": {
+          "textchunkrag": 3.4864197530864196,
+          "graphrag": 3.8419753086419757,
+          "gap": 0.3555555555555556
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.2568209998404818,
+          "pearson_within_question_diffs": 0.3279849125850694,
+          "spearman_pooled": 0.3400571429929788
+        },
+        "longer_answer_wins": {
+          "wins": 47,
+          "ties": 23,
+          "losses": 11,
+          "rate_excluding_ties": 0.8103448275862069
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.3555555555555557,
+          "gap_adjusted_for_log_length": 0.010696029328510069,
+          "log_length_coefficient": 0.6326263568401871,
+          "share_of_gap_absorbed_by_length": 0.9699174175135654
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.8646135287068903,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": true
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_mistral-nemo-12b-it_evaluator_gpt-4o_kg_phi4mini-itcum300",
+      "answers_file": "output/kg_phi4mini-it/answers_mistral-nemo-12b-it_kg_phi4mini-itcum_300.json",
+      "eval_file": "evaluation_results/answer_mistral-nemo-12b-it_evaluator_gpt-4o_kg_phi4mini-itcum300/global_sensemaking_evaluation_20250718_134836.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1635.9638554216867,
+            "median": 1695.0
+          },
+          "graphrag": {
+            "mean": 2683.710843373494,
+            "median": 2619.0
+          },
+          "ratio_hi_over_lo": 1.6404462937732445
+        },
+        "score": {
+          "textchunkrag": 3.4674698795180725,
+          "graphrag": 3.8,
+          "gap": 0.3325301204819278
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.23564456638887823,
+          "pearson_within_question_diffs": 0.26915947687437713,
+          "spearman_pooled": 0.3653260454557551
+        },
+        "longer_answer_wins": {
+          "wins": 50,
+          "ties": 21,
+          "losses": 12,
+          "rate_excluding_ties": 0.8064516129032258
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.3325301204819279,
+          "gap_adjusted_for_log_length": 0.024734037052260373,
+          "log_length_coefficient": 0.5896770292131508,
+          "share_of_gap_absorbed_by_length": 0.9256186566906663
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.8660176942557055,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": true
+        },
+        "length_matched_subsample": {
+          "n_pairs": 8,
+          "mean_reference": 3.625,
+          "mean_arm": 3.875,
+          "mean_diff": 0.25000000000000017,
+          "sd_diff": 0.8468428763016533,
+          "ci95": [
+            -0.275,
+            0.8000000000000003
+          ],
+          "p_value": 0.4383123375324935,
+          "cohens_dz": 0.29521415010515817,
+          "cliffs_delta": 0.34375,
+          "wins": 4,
+          "ties": 2,
+          "losses": 2,
+          "mde_80": 0.838806297738829,
+          "underpowered": true,
+          "degenerate": false,
+          "n_matched": 8,
+          "tolerance_log_chars": 0.2
+        }
+      }
+    },
+    {
+      "run": "answer_mistral-nemo-12b-it_evaluator_gpt-4o_kg_phi4mini-itcum400",
+      "answers_file": "output/kg_phi4mini-it/answers_mistral-nemo-12b-it_kg_phi4mini-itcum_400.json",
+      "eval_file": "evaluation_results/answer_mistral-nemo-12b-it_evaluator_gpt-4o_kg_phi4mini-itcum400/global_sensemaking_evaluation_20250718_154650.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1632.4096385542168,
+            "median": 1660.0
+          },
+          "graphrag": {
+            "mean": 2621.144578313253,
+            "median": 2621.0
+          },
+          "ratio_hi_over_lo": 1.605690456860285
+        },
+        "score": {
+          "textchunkrag": 3.4578313253012047,
+          "graphrag": 3.756626506024097,
+          "gap": 0.29879518072289163
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.2406778368455789,
+          "pearson_within_question_diffs": 0.42680775236642515,
+          "spearman_pooled": 0.3818596948377122
+        },
+        "longer_answer_wins": {
+          "wins": 44,
+          "ties": 26,
+          "losses": 13,
+          "rate_excluding_ties": 0.7719298245614035
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.2987951807228917,
+          "gap_adjusted_for_log_length": -0.23446971944881226,
+          "log_length_coefficient": 1.0894831709177122,
+          "share_of_gap_absorbed_by_length": 1.7847172062198149
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9037443363671854,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_mistral-nemo-12b-it_evaluator_gpt-4o_kg_phi4mini-itcum500",
+      "answers_file": "output/kg_phi4mini-it/answers_mistral-nemo-12b-it_kg_phi4mini-itcum_500.json",
+      "eval_file": "evaluation_results/answer_mistral-nemo-12b-it_evaluator_gpt-4o_kg_phi4mini-itcum500/global_sensemaking_evaluation_20250718_173728.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1650.5180722891566,
+            "median": 1669.0
+          },
+          "graphrag": {
+            "mean": 2679.397590361446,
+            "median": 2683.0
+          },
+          "ratio_hi_over_lo": 1.623367617323513
+        },
+        "score": {
+          "textchunkrag": 3.489156626506024,
+          "graphrag": 3.75421686746988,
+          "gap": 0.26506024096385544
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.2944212900826524,
+          "pearson_within_question_diffs": 0.441944895126473,
+          "spearman_pooled": 0.3344793124158439
+        },
+        "longer_answer_wins": {
+          "wins": 45,
+          "ties": 25,
+          "losses": 13,
+          "rate_excluding_ties": 0.7758620689655172
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.26506024096385555,
+          "gap_adjusted_for_log_length": -0.30912164255368707,
+          "log_length_coefficient": 1.139537750808816,
+          "share_of_gap_absorbed_by_length": 2.166231651452546
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9077331983092959,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_mistral-nemo-12b-it_evaluator_llama-3.3-70b_kg_gpt-4o100",
+      "answers_file": "output/kg_gpt-4o/answers_mistral-nemo-12b-it_kg_gpt-4o100.json",
+      "eval_file": "evaluation_results/answer_mistral-nemo-12b-it_evaluator_llama-3.3-70b_kg_gpt-4o100/global_sensemaking_evaluation_20250719_182033.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 81,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1641.1851851851852,
+            "median": 1712.0
+          },
+          "graphrag": {
+            "mean": 2735.2098765432097,
+            "median": 2720.0
+          },
+          "ratio_hi_over_lo": 1.66660648733225
+        },
+        "score": {
+          "textchunkrag": 4.108641975308641,
+          "graphrag": 4.377777777777777,
+          "gap": 0.2691358024691359
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.14719292988330354,
+          "pearson_within_question_diffs": 0.42707103909031724,
+          "spearman_pooled": 0.4556877665159285
+        },
+        "longer_answer_wins": {
+          "wins": 38,
+          "ties": 38,
+          "losses": 5,
+          "rate_excluding_ties": 0.8837209302325582
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.26913580246913577,
+          "gap_adjusted_for_log_length": -0.11661583599913956,
+          "log_length_coefficient": 0.7147108136308036,
+          "share_of_gap_absorbed_by_length": 1.433297372290381
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.8736707019803309,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": true
+        },
+        "length_matched_subsample": {
+          "n_pairs": 8,
+          "mean_reference": 4.225,
+          "mean_arm": 4.425000000000001,
+          "mean_diff": 0.20000000000000007,
+          "sd_diff": 0.18516401995451018,
+          "ci95": [
+            0.10000000000000009,
+            0.32499999999999996
+          ],
+          "p_value": 0.03059388122375525,
+          "cohens_dz": 1.0801234497346444,
+          "cliffs_delta": 0.671875,
+          "wins": 6,
+          "ties": 2,
+          "losses": 0,
+          "mde_80": 0.1834068047319277,
+          "underpowered": false,
+          "degenerate": false,
+          "n_matched": 8,
+          "tolerance_log_chars": 0.2
+        }
+      }
+    },
+    {
+      "run": "answer_mistral-nemo-12b-it_evaluator_llama-3.3-70b_kg_gpt-4o300",
+      "answers_file": "output/kg_gpt-4o/answers_mistral-nemo-12b-it_kg_gpt-4o300.json",
+      "eval_file": "evaluation_results/answer_mistral-nemo-12b-it_evaluator_llama-3.3-70b_kg_gpt-4o300/global_sensemaking_evaluation_20250719_185139.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1620.4819277108434,
+            "median": 1643.0
+          },
+          "graphrag": {
+            "mean": 2739.5421686746986,
+            "median": 2689.0
+          },
+          "ratio_hi_over_lo": 1.6905724907063195
+        },
+        "score": {
+          "textchunkrag": 4.113253012048192,
+          "graphrag": 4.390361445783133,
+          "gap": 0.2771084337349398
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.39776762568975454,
+          "pearson_within_question_diffs": 0.4941834281300554,
+          "spearman_pooled": 0.45075594568514027
+        },
+        "longer_answer_wins": {
+          "wins": 36,
+          "ties": 40,
+          "losses": 7,
+          "rate_excluding_ties": 0.8372093023255814
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.2771084337349399,
+          "gap_adjusted_for_log_length": -0.1839214335257522,
+          "log_length_coefficient": 0.829324458389124,
+          "share_of_gap_absorbed_by_length": 1.663716477505975
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.8686107636827731,
+          "share_of_questions_where_graph_arm_longer": 0.9879518072289156,
+          "separable": true
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_mistral-nemo-12b-it_evaluator_llama-3.3-70b_kg_gpt-4ocum200",
+      "answers_file": "output/kg_gpt-4o/answers_mistral-nemo-12b-it_kg_gpt-4ocum_200.json",
+      "eval_file": "evaluation_results/answer_mistral-nemo-12b-it_evaluator_llama-3.3-70b_kg_gpt-4ocum200/global_sensemaking_evaluation_20250719_192124.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1557.855421686747,
+            "median": 1635.0
+          },
+          "graphrag": {
+            "mean": 2661.975903614458,
+            "median": 2642.0
+          },
+          "ratio_hi_over_lo": 1.7087438709378047
+        },
+        "score": {
+          "textchunkrag": 4.132530120481927,
+          "graphrag": 4.416867469879517,
+          "gap": 0.2843373493975904
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.5452515742405366,
+          "pearson_within_question_diffs": 0.6708906957639649,
+          "spearman_pooled": 0.4531932717575484
+        },
+        "longer_answer_wins": {
+          "wins": 36,
+          "ties": 42,
+          "losses": 5,
+          "rate_excluding_ties": 0.8780487804878049
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.2843373493975905,
+          "gap_adjusted_for_log_length": -0.291603064271003,
+          "log_length_coefficient": 1.0134216408898078,
+          "share_of_gap_absorbed_by_length": 2.0255531497666626
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.888879202893261,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": true
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_mistral-nemo-12b-it_evaluator_llama-3.3-70b_kg_gpt-4ocum300",
+      "answers_file": "output/kg_gpt-4o/answers_mistral-nemo-12b-it_kg_gpt-4ocum_300.json",
+      "eval_file": "evaluation_results/answer_mistral-nemo-12b-it_evaluator_llama-3.3-70b_kg_gpt-4ocum300/global_sensemaking_evaluation_20250719_195101.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1642.3373493975903,
+            "median": 1660.0
+          },
+          "graphrag": {
+            "mean": 2672.0,
+            "median": 2628.0
+          },
+          "ratio_hi_over_lo": 1.6269495429669734
+        },
+        "score": {
+          "textchunkrag": 4.09156626506024,
+          "graphrag": 4.402409638554216,
+          "gap": 0.31084337349397595
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.3325476572042559,
+          "pearson_within_question_diffs": 0.43382292987897453,
+          "spearman_pooled": 0.41361340999949
+        },
+        "longer_answer_wins": {
+          "wins": 39,
+          "ties": 41,
+          "losses": 3,
+          "rate_excluding_ties": 0.9285714285714286
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.310843373493976,
+          "gap_adjusted_for_log_length": -0.12764968221368217,
+          "log_length_coefficient": 0.8586711200991815,
+          "share_of_gap_absorbed_by_length": 1.4106559544083572
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9056858843496227,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_mistral-nemo-12b-it_evaluator_llama-3.3-70b_kg_gpt-4ocum400",
+      "answers_file": "output/kg_gpt-4o/answers_mistral-nemo-12b-it_kg_gpt-4ocum_400.json",
+      "eval_file": "evaluation_results/answer_mistral-nemo-12b-it_evaluator_llama-3.3-70b_kg_gpt-4ocum400/global_sensemaking_evaluation_20250719_202045.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1618.9638554216867,
+            "median": 1712.0
+          },
+          "graphrag": {
+            "mean": 2694.8313253012047,
+            "median": 2763.0
+          },
+          "ratio_hi_over_lo": 1.664540759373093
+        },
+        "score": {
+          "textchunkrag": 4.11566265060241,
+          "graphrag": 4.371084337349397,
+          "gap": 0.255421686746988
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.3132420018554677,
+          "pearson_within_question_diffs": 0.5077004557246082,
+          "spearman_pooled": 0.4173609688636351
+        },
+        "longer_answer_wins": {
+          "wins": 34,
+          "ties": 44,
+          "losses": 5,
+          "rate_excluding_ties": 0.8717948717948718
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.2554216867469882,
+          "gap_adjusted_for_log_length": -0.15838017031449747,
+          "log_length_coefficient": 0.7606391225303346,
+          "share_of_gap_absorbed_by_length": 1.6200733083067584
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.8470766945495118,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": true
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_mistral-nemo-12b-it_evaluator_llama-3.3-70b_kg_gpt-4ocum500",
+      "answers_file": "output/kg_gpt-4o/answers_mistral-nemo-12b-it_kg_gpt-4ocum_500.json",
+      "eval_file": "evaluation_results/answer_mistral-nemo-12b-it_evaluator_llama-3.3-70b_kg_gpt-4ocum500/global_sensemaking_evaluation_20250719_205041.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1598.9397590361446,
+            "median": 1643.0
+          },
+          "graphrag": {
+            "mean": 2698.9518072289156,
+            "median": 2731.0
+          },
+          "ratio_hi_over_lo": 1.687963409488215
+        },
+        "score": {
+          "textchunkrag": 4.113253012048192,
+          "graphrag": 4.385542168674698,
+          "gap": 0.2722891566265061
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.2792317585065647,
+          "pearson_within_question_diffs": 0.5281672892914957,
+          "spearman_pooled": 0.3501910043499689
+        },
+        "longer_answer_wins": {
+          "wins": 36,
+          "ties": 42,
+          "losses": 5,
+          "rate_excluding_ties": 0.8780487804878049
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.2722891566265061,
+          "gap_adjusted_for_log_length": -0.17159024499613632,
+          "log_length_coefficient": 0.8022577956963775,
+          "share_of_gap_absorbed_by_length": 1.6301765634813854
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.8776369813875008,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": true
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_mistral-nemo-12b-it_evaluator_llama-3.3-70b_kg_gs100",
+      "answers_file": "output/answers_mistral-nemo-12b-it_kg_gs100.json",
+      "eval_file": "evaluation_results/answer_mistral-nemo-12b-it_evaluator_llama-3.3-70b_kg_gs100/global_sensemaking_evaluation_20250719_174958.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1614.8072289156626,
+            "median": 1641.0
+          },
+          "graphrag": {
+            "mean": 2699.759036144578,
+            "median": 2652.0
+          },
+          "ratio_hi_over_lo": 1.6718769818472121
+        },
+        "score": {
+          "textchunkrag": 4.13012048192771,
+          "graphrag": 4.387951807228914,
+          "gap": 0.25783132530120495
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.4032149525991048,
+          "pearson_within_question_diffs": 0.5214454948056165,
+          "spearman_pooled": 0.5262905242267951
+        },
+        "longer_answer_wins": {
+          "wins": 41,
+          "ties": 41,
+          "losses": 1,
+          "rate_excluding_ties": 0.9761904761904762
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.25783132530120495,
+          "gap_adjusted_for_log_length": -0.13987033963762832,
+          "log_length_coefficient": 0.7357207090152894,
+          "share_of_gap_absorbed_by_length": 1.542487765884259
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.8801615497363844,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": true
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_mistral-nemo-12b-it_evaluator_llama-3.3-70b_kg_phi4mini-it100",
+      "answers_file": "output/kg_phi4mini-it/answers_mistral-nemo-12b-it_kg_phi4mini-it100.json",
+      "eval_file": "evaluation_results/answer_mistral-nemo-12b-it_evaluator_llama-3.3-70b_kg_phi4mini-it100/global_sensemaking_evaluation_20250720_032605.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1678.9518072289156,
+            "median": 1680.0
+          },
+          "graphrag": {
+            "mean": 2628.9518072289156,
+            "median": 2626.0
+          },
+          "ratio_hi_over_lo": 1.5658292250615344
+        },
+        "score": {
+          "textchunkrag": 4.108433734939759,
+          "graphrag": 4.385542168674697,
+          "gap": 0.2771084337349398
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.1720976119159244,
+          "pearson_within_question_diffs": 0.3323301878306316,
+          "spearman_pooled": 0.4808329578084079
+        },
+        "longer_answer_wins": {
+          "wins": 39,
+          "ties": 41,
+          "losses": 3,
+          "rate_excluding_ties": 0.9285714285714286
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.2771084337349398,
+          "gap_adjusted_for_log_length": 0.011619832717964771,
+          "log_length_coefficient": 0.5675926227008993,
+          "share_of_gap_absorbed_by_length": 0.9580675601916924
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.8815792502083258,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": true
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_mistral-nemo-12b-it_evaluator_llama-3.3-70b_kg_phi4mini-it300",
+      "answers_file": "output/kg_phi4mini-it/answers_mistral-nemo-12b-it_kg_phi4mini-it300.json",
+      "eval_file": "evaluation_results/answer_mistral-nemo-12b-it_evaluator_llama-3.3-70b_kg_phi4mini-it300/global_sensemaking_evaluation_20250720_035558.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1612.686746987952,
+            "median": 1643.0
+          },
+          "graphrag": {
+            "mean": 2634.2168674698796,
+            "median": 2660.0
+          },
+          "ratio_hi_over_lo": 1.6334336921847101
+        },
+        "score": {
+          "textchunkrag": 4.040963855421687,
+          "graphrag": 4.390361445783131,
+          "gap": 0.34939759036144585
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.231795299998803,
+          "pearson_within_question_diffs": 0.3943334209478951,
+          "spearman_pooled": 0.48606841729318134
+        },
+        "longer_answer_wins": {
+          "wins": 42,
+          "ties": 38,
+          "losses": 3,
+          "rate_excluding_ties": 0.9333333333333333
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.3493975903614459,
+          "gap_adjusted_for_log_length": -0.0661517293952341,
+          "log_length_coefficient": 0.8148257941482664,
+          "share_of_gap_absorbed_by_length": 1.1893308117173942
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.8889481462687475,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": true
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_mistral-nemo-12b-it_evaluator_llama-3.3-70b_kg_phi4mini-itcum200",
+      "answers_file": "output/kg_phi4mini-it/answers_mistral-nemo-12b-it_kg_phi4mini-itcum_200.json",
+      "eval_file": "evaluation_results/answer_mistral-nemo-12b-it_evaluator_llama-3.3-70b_kg_phi4mini-itcum200/global_sensemaking_evaluation_20250720_042526.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 81,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1572.1975308641975,
+            "median": 1621.0
+          },
+          "graphrag": {
+            "mean": 2619.814814814815,
+            "median": 2611.0
+          },
+          "ratio_hi_over_lo": 1.6663394792222885
+        },
+        "score": {
+          "textchunkrag": 4.069135802469136,
+          "graphrag": 4.42469135802469,
+          "gap": 0.3555555555555556
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.44657916812787596,
+          "pearson_within_question_diffs": 0.49766177529614547,
+          "spearman_pooled": 0.5468274148536307
+        },
+        "longer_answer_wins": {
+          "wins": 41,
+          "ties": 39,
+          "losses": 1,
+          "rate_excluding_ties": 0.9761904761904762
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.35555555555555574,
+          "gap_adjusted_for_log_length": -0.050835526202696164,
+          "log_length_coefficient": 0.7455027045876133,
+          "share_of_gap_absorbed_by_length": 1.142974917445083
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.8646135287068903,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": true
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_mistral-nemo-12b-it_evaluator_llama-3.3-70b_kg_phi4mini-itcum300",
+      "answers_file": "output/kg_phi4mini-it/answers_mistral-nemo-12b-it_kg_phi4mini-itcum_300.json",
+      "eval_file": "evaluation_results/answer_mistral-nemo-12b-it_evaluator_llama-3.3-70b_kg_phi4mini-itcum300/global_sensemaking_evaluation_20250720_045514.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1635.9638554216867,
+            "median": 1695.0
+          },
+          "graphrag": {
+            "mean": 2683.710843373494,
+            "median": 2619.0
+          },
+          "ratio_hi_over_lo": 1.6404462937732445
+        },
+        "score": {
+          "textchunkrag": 4.110843373493975,
+          "graphrag": 4.390361445783132,
+          "gap": 0.2795180722891567
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.30763238327292053,
+          "pearson_within_question_diffs": 0.41204453278961717,
+          "spearman_pooled": 0.5059947912569985
+        },
+        "longer_answer_wins": {
+          "wins": 40,
+          "ties": 39,
+          "losses": 4,
+          "rate_excluding_ties": 0.9090909090909091
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.27951807228915676,
+          "gap_adjusted_for_log_length": -0.08382992610715567,
+          "log_length_coefficient": 0.6961036211945202,
+          "share_of_gap_absorbed_by_length": 1.299908787366117
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.8660176942557055,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": true
+        },
+        "length_matched_subsample": {
+          "n_pairs": 8,
+          "mean_reference": 4.375,
+          "mean_arm": 4.45,
+          "mean_diff": 0.07499999999999996,
+          "sd_diff": 0.14880476182856883,
+          "ci95": [
+            0.0,
+            0.17499999999999993
+          ],
+          "p_value": 0.5010997800439912,
+          "cohens_dz": 0.5040161287741856,
+          "cliffs_delta": 0.234375,
+          "wins": 2,
+          "ties": 6,
+          "losses": 0,
+          "mde_80": 0.147392597668695,
+          "underpowered": true,
+          "degenerate": false,
+          "n_matched": 8,
+          "tolerance_log_chars": 0.2
+        }
+      }
+    },
+    {
+      "run": "answer_mistral-nemo-12b-it_evaluator_llama-3.3-70b_kg_phi4mini-itcum400",
+      "answers_file": "output/kg_phi4mini-it/answers_mistral-nemo-12b-it_kg_phi4mini-itcum_400.json",
+      "eval_file": "evaluation_results/answer_mistral-nemo-12b-it_evaluator_llama-3.3-70b_kg_phi4mini-itcum400/global_sensemaking_evaluation_20250720_052453.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1632.4096385542168,
+            "median": 1660.0
+          },
+          "graphrag": {
+            "mean": 2621.144578313253,
+            "median": 2621.0
+          },
+          "ratio_hi_over_lo": 1.605690456860285
+        },
+        "score": {
+          "textchunkrag": 4.151807228915661,
+          "graphrag": 4.366265060240962,
+          "gap": 0.2144578313253013
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.32829722245468684,
+          "pearson_within_question_diffs": 0.5174541180548625,
+          "spearman_pooled": 0.4229527213882006
+        },
+        "longer_answer_wins": {
+          "wins": 32,
+          "ties": 47,
+          "losses": 4,
+          "rate_excluding_ties": 0.8888888888888888
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.21445783132530138,
+          "gap_adjusted_for_log_length": -0.30189532852799134,
+          "log_length_coefficient": 1.0549317566732965,
+          "share_of_gap_absorbed_by_length": 2.407714172349621
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9037443363671854,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_mistral-nemo-12b-it_evaluator_llama-3.3-70b_kg_phi4mini-itcum500",
+      "answers_file": "output/kg_phi4mini-it/answers_mistral-nemo-12b-it_kg_phi4mini-itcum_500.json",
+      "eval_file": "evaluation_results/answer_mistral-nemo-12b-it_evaluator_llama-3.3-70b_kg_phi4mini-itcum500/global_sensemaking_evaluation_20250720_055433.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1650.5180722891566,
+            "median": 1669.0
+          },
+          "graphrag": {
+            "mean": 2679.397590361446,
+            "median": 2683.0
+          },
+          "ratio_hi_over_lo": 1.623367617323513
+        },
+        "score": {
+          "textchunkrag": 4.096385542168674,
+          "graphrag": 4.409638554216866,
+          "gap": 0.31325301204819284
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.12976180122673991,
+          "pearson_within_question_diffs": 0.29481893576226653,
+          "spearman_pooled": 0.43182540901124705
+        },
+        "longer_answer_wins": {
+          "wins": 36,
+          "ties": 44,
+          "losses": 3,
+          "rate_excluding_ties": 0.9230769230769231
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.313253012048193,
+          "gap_adjusted_for_log_length": -0.012866694566577736,
+          "log_length_coefficient": 0.6472264758574061,
+          "share_of_gap_absorbed_by_length": 1.0410744480394596
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9077331983092959,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_phi-4-14b_evaluator_gpt-4o_kg_gpt-4o100",
+      "answers_file": "output/kg_gpt-4o/answers_phi-4-14b_kg_gpt-4o100.json",
+      "eval_file": "evaluation_results/answer_phi-4-14b_evaluator_gpt-4o_kg_gpt-4o100/global_sensemaking_evaluation_20250716_034324.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1916.8915662650602,
+            "median": 1935.0
+          },
+          "graphrag": {
+            "mean": 3192.289156626506,
+            "median": 3165.0
+          },
+          "ratio_hi_over_lo": 1.665346758683109
+        },
+        "score": {
+          "textchunkrag": 3.727710843373493,
+          "graphrag": 4.084337349397589,
+          "gap": 0.3566265060240965
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.14621431483256955,
+          "pearson_within_question_diffs": 0.09707280229598132,
+          "spearman_pooled": 0.38937274210100564
+        },
+        "longer_answer_wins": {
+          "wins": 51,
+          "ties": 23,
+          "losses": 9,
+          "rate_excluding_ties": 0.85
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.3566265060240965,
+          "gap_adjusted_for_log_length": 0.22329096995082542,
+          "log_length_coefficient": 0.25573659510069574,
+          "share_of_gap_absorbed_by_length": 0.37388005047572626
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9262641518622364,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_phi-4-14b_evaluator_gpt-4o_kg_gpt-4o300",
+      "answers_file": "output/kg_gpt-4o/answers_phi-4-14b_kg_gpt-4o300.json",
+      "eval_file": "evaluation_results/answer_phi-4-14b_evaluator_gpt-4o_kg_gpt-4o300/global_sensemaking_evaluation_20250716_050602.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1956.2409638554218,
+            "median": 1974.0
+          },
+          "graphrag": {
+            "mean": 3212.2289156626507,
+            "median": 3189.0
+          },
+          "ratio_hi_over_lo": 1.6420415352778872
+        },
+        "score": {
+          "textchunkrag": 3.6650602409638546,
+          "graphrag": 4.036144578313253,
+          "gap": 0.37108433734939766
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.29666465723063407,
+          "pearson_within_question_diffs": 0.34071476919113963,
+          "spearman_pooled": 0.39208546001574723
+        },
+        "longer_answer_wins": {
+          "wins": 51,
+          "ties": 28,
+          "losses": 4,
+          "rate_excluding_ties": 0.9272727272727272
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.3710843373493977,
+          "gap_adjusted_for_log_length": -0.03364858408459065,
+          "log_length_coefficient": 0.7996362465970333,
+          "share_of_gap_absorbed_by_length": 1.0906763791889942
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9188181490461724,
+          "share_of_questions_where_graph_arm_longer": 0.9879518072289156,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_phi-4-14b_evaluator_gpt-4o_kg_gpt-4ocum200",
+      "answers_file": "output/kg_gpt-4o/answers_phi-4-14b_kg_gpt-4ocum_200.json",
+      "eval_file": "evaluation_results/answer_phi-4-14b_evaluator_gpt-4o_kg_gpt-4ocum200/global_sensemaking_evaluation_20250716_063254.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1969.3975903614457,
+            "median": 1954.0
+          },
+          "graphrag": {
+            "mean": 3138.4337349397592,
+            "median": 3085.0
+          },
+          "ratio_hi_over_lo": 1.593600880949468
+        },
+        "score": {
+          "textchunkrag": 3.7036144578313244,
+          "graphrag": 4.086746987951806,
+          "gap": 0.38313253012048204
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.1783340314366875,
+          "pearson_within_question_diffs": 0.2127671795149768,
+          "spearman_pooled": 0.4224208515683281
+        },
+        "longer_answer_wins": {
+          "wins": 44,
+          "ties": 32,
+          "losses": 7,
+          "rate_excluding_ties": 0.8627450980392157
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.38313253012048204,
+          "gap_adjusted_for_log_length": 0.1154139137161249,
+          "log_length_coefficient": 0.5641138183023796,
+          "share_of_gap_absorbed_by_length": 0.6987624264642024
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.911097348487473,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": {
+          "n_pairs": 10,
+          "mean_reference": 3.7399999999999998,
+          "mean_arm": 3.9200000000000004,
+          "mean_diff": 0.18000000000000002,
+          "sd_diff": 0.3190262963734774,
+          "ci95": [
+            0.0,
+            0.3800000000000001
+          ],
+          "p_value": 0.18156368726254749,
+          "cohens_dz": 0.5642168123635732,
+          "cliffs_delta": 0.17,
+          "wins": 4,
+          "ties": 5,
+          "losses": 1,
+          "mde_80": 0.2826378491684335,
+          "underpowered": true,
+          "degenerate": false,
+          "n_matched": 10,
+          "tolerance_log_chars": 0.2
+        }
+      }
+    },
+    {
+      "run": "answer_phi-4-14b_evaluator_gpt-4o_kg_gpt-4ocum300",
+      "answers_file": "output/kg_gpt-4o/answers_phi-4-14b_kg_gpt-4ocum_300.json",
+      "eval_file": "evaluation_results/answer_phi-4-14b_evaluator_gpt-4o_kg_gpt-4ocum300/global_sensemaking_evaluation_20250716_075803.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1942.855421686747,
+            "median": 1927.0
+          },
+          "graphrag": {
+            "mean": 3144.3614457831327,
+            "median": 3109.0
+          },
+          "ratio_hi_over_lo": 1.6184227661434853
+        },
+        "score": {
+          "textchunkrag": 3.710843373493976,
+          "graphrag": 4.106024096385542,
+          "gap": 0.3951807228915664
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.23631894432774622,
+          "pearson_within_question_diffs": 0.2550388994453333,
+          "spearman_pooled": 0.4592633409954563
+        },
+        "longer_answer_wins": {
+          "wins": 48,
+          "ties": 31,
+          "losses": 4,
+          "rate_excluding_ties": 0.9230769230769231
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.3951807228915665,
+          "gap_adjusted_for_log_length": 0.09853099725694363,
+          "log_length_coefficient": 0.6028203267078855,
+          "share_of_gap_absorbed_by_length": 0.7506685130388319
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9138906728476321,
+          "share_of_questions_where_graph_arm_longer": 0.9879518072289156,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_phi-4-14b_evaluator_gpt-4o_kg_gpt-4ocum400",
+      "answers_file": "output/kg_gpt-4o/answers_phi-4-14b_kg_gpt-4ocum_400.json",
+      "eval_file": "evaluation_results/answer_phi-4-14b_evaluator_gpt-4o_kg_gpt-4ocum400/global_sensemaking_evaluation_20250716_093113.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 82,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1969.341463414634,
+            "median": 1950.0
+          },
+          "graphrag": {
+            "mean": 3128.439024390244,
+            "median": 3138.0
+          },
+          "ratio_hi_over_lo": 1.588571145486296
+        },
+        "score": {
+          "textchunkrag": 3.6707317073170738,
+          "graphrag": 4.146341463414633,
+          "gap": 0.4756097560975612
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.15851099691725112,
+          "pearson_within_question_diffs": 0.19448021884044964,
+          "spearman_pooled": 0.4447990395804782
+        },
+        "longer_answer_wins": {
+          "wins": 53,
+          "ties": 26,
+          "losses": 3,
+          "rate_excluding_ties": 0.9464285714285714
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.47560975609756073,
+          "gap_adjusted_for_log_length": 0.2566448167752729,
+          "log_length_coefficient": 0.45545362897807107,
+          "share_of_gap_absorbed_by_length": 0.46038782113916954
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9132304359074537,
+          "share_of_questions_where_graph_arm_longer": 0.9878048780487805,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_phi-4-14b_evaluator_gpt-4o_kg_gpt-4ocum500",
+      "answers_file": "output/kg_gpt-4o/answers_phi-4-14b_kg_gpt-4ocum_500.json",
+      "eval_file": "evaluation_results/answer_phi-4-14b_evaluator_gpt-4o_kg_gpt-4ocum500/global_sensemaking_evaluation_20250716_114632.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 82,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1911.0,
+            "median": 1898.0
+          },
+          "graphrag": {
+            "mean": 3175.5975609756097,
+            "median": 3157.5
+          },
+          "ratio_hi_over_lo": 1.6617464997255937
+        },
+        "score": {
+          "textchunkrag": 3.678048780487805,
+          "graphrag": 4.13170731707317,
+          "gap": 0.45365853658536587
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.0917870710639473,
+          "pearson_within_question_diffs": 0.07907084564390367,
+          "spearman_pooled": 0.41816532745060053
+        },
+        "longer_answer_wins": {
+          "wins": 50,
+          "ties": 27,
+          "losses": 5,
+          "rate_excluding_ties": 0.9090909090909091
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.4536585365853658,
+          "gap_adjusted_for_log_length": 0.3474116651124344,
+          "log_length_coefficient": 0.20429970549094525,
+          "share_of_gap_absorbed_by_length": 0.23420009303173062
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.920167568630229,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_phi-4-14b_evaluator_gpt-4o_kg_gs100",
+      "answers_file": "output/answers_phi-4-14b_kg_gs100.json",
+      "eval_file": "evaluation_results/answer_phi-4-14b_evaluator_gpt-4o_kg_gs100/global_sensemaking_evaluation_20250716_022228.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1906.4819277108434,
+            "median": 1927.0
+          },
+          "graphrag": {
+            "mean": 3207.1686746987953,
+            "median": 3150.0
+          },
+          "ratio_hi_over_lo": 1.6822444671949848
+        },
+        "score": {
+          "textchunkrag": 3.6819277108433726,
+          "graphrag": 4.089156626506024,
+          "gap": 0.40722891566265074
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.28334444793644065,
+          "pearson_within_question_diffs": 0.260558223803734,
+          "spearman_pooled": 0.46610576955947036
+        },
+        "longer_answer_wins": {
+          "wins": 49,
+          "ties": 26,
+          "losses": 8,
+          "rate_excluding_ties": 0.8596491228070176
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.40722891566265074,
+          "gap_adjusted_for_log_length": 0.0826989514711288,
+          "log_length_coefficient": 0.6115019869909998,
+          "share_of_gap_absorbed_by_length": 0.796922693133027
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9187050338812107,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": {
+          "n_pairs": 8,
+          "mean_reference": 3.6,
+          "mean_arm": 4.050000000000001,
+          "mean_diff": 0.4500000000000001,
+          "sd_diff": 0.6480740698407861,
+          "ci95": [
+            0.10000000000000003,
+            0.9000000000000002
+          ],
+          "p_value": 0.1275744851029794,
+          "cohens_dz": 0.6943650748294137,
+          "cliffs_delta": 0.453125,
+          "wins": 4,
+          "ties": 4,
+          "losses": 0,
+          "mde_80": 0.6419238165617474,
+          "underpowered": true,
+          "degenerate": false,
+          "n_matched": 8,
+          "tolerance_log_chars": 0.2
+        }
+      }
+    },
+    {
+      "run": "answer_phi-4-14b_evaluator_gpt-4o_kg_phi4mini-it100",
+      "answers_file": "output/kg_phi4mini-it/answers_phi-4-14b_kg_phi4mini-it100.json",
+      "eval_file": "evaluation_results/answer_phi-4-14b_evaluator_gpt-4o_kg_phi4mini-it100/global_sensemaking_evaluation_20250717_222559.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1954.855421686747,
+            "median": 1958.0
+          },
+          "graphrag": {
+            "mean": 3136.409638554217,
+            "median": 3196.0
+          },
+          "ratio_hi_over_lo": 1.6044202572525625
+        },
+        "score": {
+          "textchunkrag": 3.710843373493976,
+          "graphrag": 4.0120481927710845,
+          "gap": 0.30120481927710857
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.2894240415036891,
+          "pearson_within_question_diffs": 0.23797029857969737,
+          "spearman_pooled": 0.35950436601081137
+        },
+        "longer_answer_wins": {
+          "wins": 45,
+          "ties": 28,
+          "losses": 10,
+          "rate_excluding_ties": 0.8181818181818182
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.3012048192771086,
+          "gap_adjusted_for_log_length": 0.013672672963949287,
+          "log_length_coefficient": 0.5969528119623164,
+          "share_of_gap_absorbed_by_length": 0.9546067257596884
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9072871001674898,
+          "share_of_questions_where_graph_arm_longer": 0.9879518072289156,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_phi-4-14b_evaluator_gpt-4o_kg_phi4mini-it300",
+      "answers_file": "output/kg_phi4mini-it/answers_phi-4-14b_kg_phi4mini-it300.json",
+      "eval_file": "evaluation_results/answer_phi-4-14b_evaluator_gpt-4o_kg_phi4mini-it300/global_sensemaking_evaluation_20250717_235319.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1932.9518072289156,
+            "median": 1936.0
+          },
+          "graphrag": {
+            "mean": 3174.4819277108436,
+            "median": 3106.0
+          },
+          "ratio_hi_over_lo": 1.6422975036619194
+        },
+        "score": {
+          "textchunkrag": 3.7686746987951802,
+          "graphrag": 4.110843373493975,
+          "gap": 0.3421686746987953
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.11201110975705919,
+          "pearson_within_question_diffs": 0.13198053207031343,
+          "spearman_pooled": 0.3611028979182038
+        },
+        "longer_answer_wins": {
+          "wins": 48,
+          "ties": 29,
+          "losses": 6,
+          "rate_excluding_ties": 0.8888888888888888
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.3421686746987953,
+          "gap_adjusted_for_log_length": 0.1767674156235514,
+          "log_length_coefficient": 0.3267693499604565,
+          "share_of_gap_absorbed_by_length": 0.4833910036353958
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9222005763254685,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_phi-4-14b_evaluator_gpt-4o_kg_phi4mini-itcum200",
+      "answers_file": "output/kg_phi4mini-it/answers_phi-4-14b_kg_phi4mini-itcum_200.json",
+      "eval_file": "evaluation_results/answer_phi-4-14b_evaluator_gpt-4o_kg_phi4mini-itcum200/global_sensemaking_evaluation_20250718_011932.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1974.3734939759036,
+            "median": 1956.0
+          },
+          "graphrag": {
+            "mean": 3151.8072289156626,
+            "median": 3143.0
+          },
+          "ratio_hi_over_lo": 1.5963581554008286
+        },
+        "score": {
+          "textchunkrag": 3.6409638554216874,
+          "graphrag": 4.055421686746987,
+          "gap": 0.4144578313253013
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.22404923703741064,
+          "pearson_within_question_diffs": 0.22654848726459556,
+          "spearman_pooled": 0.42474777568150884
+        },
+        "longer_answer_wins": {
+          "wins": 48,
+          "ties": 28,
+          "losses": 7,
+          "rate_excluding_ties": 0.8727272727272727
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.4144578313253014,
+          "gap_adjusted_for_log_length": 0.14750238692037607,
+          "log_length_coefficient": 0.5558173130768883,
+          "share_of_gap_absorbed_by_length": 0.644107612953744
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9061695762424203,
+          "share_of_questions_where_graph_arm_longer": 0.9879518072289156,
+          "separable": false
+        },
+        "length_matched_subsample": {
+          "n_pairs": 10,
+          "mean_reference": 3.72,
+          "mean_arm": 3.8,
+          "mean_diff": 0.08000000000000003,
+          "sd_diff": 0.5593647190240809,
+          "ci95": [
+            -0.24000000000000007,
+            0.4200000000000001
+          ],
+          "p_value": 0.7844431113777245,
+          "cohens_dz": 0.14301938838683886,
+          "cliffs_delta": 0.12,
+          "wins": 3,
+          "ties": 4,
+          "losses": 3,
+          "mde_80": 0.4955630394197654,
+          "underpowered": true,
+          "degenerate": false,
+          "n_matched": 10,
+          "tolerance_log_chars": 0.2
+        }
+      }
+    },
+    {
+      "run": "answer_phi-4-14b_evaluator_gpt-4o_kg_phi4mini-itcum300",
+      "answers_file": "output/kg_phi4mini-it/answers_phi-4-14b_kg_phi4mini-itcum_300.json",
+      "eval_file": "evaluation_results/answer_phi-4-14b_evaluator_gpt-4o_kg_phi4mini-itcum300/global_sensemaking_evaluation_20250718_025116.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1994.8915662650602,
+            "median": 1981.0
+          },
+          "graphrag": {
+            "mean": 3163.590361445783,
+            "median": 3165.0
+          },
+          "ratio_hi_over_lo": 1.5858457747499637
+        },
+        "score": {
+          "textchunkrag": 3.6795180722891563,
+          "graphrag": 4.1253012048192765,
+          "gap": 0.4457831325301206
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.32806989345436166,
+          "pearson_within_question_diffs": 0.38477450084913145,
+          "spearman_pooled": 0.4455161618406078
+        },
+        "longer_answer_wins": {
+          "wins": 54,
+          "ties": 26,
+          "losses": 3,
+          "rate_excluding_ties": 0.9473684210526315
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.44578313253012064,
+          "gap_adjusted_for_log_length": 0.029913881697156277,
+          "log_length_coefficient": 0.8783807776901361,
+          "share_of_gap_absorbed_by_length": 0.9328958870036765
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9141500601832645,
+          "share_of_questions_where_graph_arm_longer": 0.9759036144578314,
+          "separable": false
+        },
+        "length_matched_subsample": {
+          "n_pairs": 8,
+          "mean_reference": 3.9000000000000004,
+          "mean_arm": 3.85,
+          "mean_diff": -0.04999999999999999,
+          "sd_diff": 0.31622776601683805,
+          "ci95": [
+            -0.2750000000000001,
+            0.10000000000000009
+          ],
+          "p_value": 1.0,
+          "cohens_dz": -0.15811388300841886,
+          "cliffs_delta": 0.03125,
+          "wins": 2,
+          "ties": 5,
+          "losses": 1,
+          "mde_80": 0.31322674970500514,
+          "underpowered": true,
+          "degenerate": false,
+          "n_matched": 8,
+          "tolerance_log_chars": 0.2
+        }
+      }
+    },
+    {
+      "run": "answer_phi-4-14b_evaluator_gpt-4o_kg_phi4mini-itcum400",
+      "answers_file": "output/kg_phi4mini-it/answers_phi-4-14b_kg_phi4mini-itcum_400.json",
+      "eval_file": "evaluation_results/answer_phi-4-14b_evaluator_gpt-4o_kg_phi4mini-itcum400/global_sensemaking_evaluation_20250718_042848.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 2004.132530120482,
+            "median": 2016.0
+          },
+          "graphrag": {
+            "mean": 3141.3132530120483,
+            "median": 3111.0
+          },
+          "ratio_hi_over_lo": 1.5674179256115377
+        },
+        "score": {
+          "textchunkrag": 3.677108433734939,
+          "graphrag": 4.091566265060241,
+          "gap": 0.4144578313253013
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.19851235560086328,
+          "pearson_within_question_diffs": 0.23755073758831088,
+          "spearman_pooled": 0.46088222708638615
+        },
+        "longer_answer_wins": {
+          "wins": 48,
+          "ties": 26,
+          "losses": 9,
+          "rate_excluding_ties": 0.8421052631578947
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.4144578313253014,
+          "gap_adjusted_for_log_length": 0.08714939762994453,
+          "log_length_coefficient": 0.7172392340189586,
+          "share_of_gap_absorbed_by_length": 0.7897267440905409
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9150312809278721,
+          "share_of_questions_where_graph_arm_longer": 0.9879518072289156,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_phi-4-14b_evaluator_gpt-4o_kg_phi4mini-itcum500",
+      "answers_file": "output/kg_phi4mini-it/answers_phi-4-14b_kg_phi4mini-itcum_500.json",
+      "eval_file": "evaluation_results/answer_phi-4-14b_evaluator_gpt-4o_kg_phi4mini-itcum500/global_sensemaking_evaluation_20250718_060148.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 2000.6144578313254,
+            "median": 1948.0
+          },
+          "graphrag": {
+            "mean": 3110.240963855422,
+            "median": 3116.0
+          },
+          "ratio_hi_over_lo": 1.5546428506904506
+        },
+        "score": {
+          "textchunkrag": 3.6867469879518073,
+          "graphrag": 4.009638554216867,
+          "gap": 0.3228915662650603
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.1605468833105957,
+          "pearson_within_question_diffs": 0.18356166429103737,
+          "spearman_pooled": 0.3720906241901108
+        },
+        "longer_answer_wins": {
+          "wins": 46,
+          "ties": 30,
+          "losses": 7,
+          "rate_excluding_ties": 0.8679245283018868
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.32289156626506044,
+          "gap_adjusted_for_log_length": 0.13463523292975696,
+          "log_length_coefficient": 0.41567801689978534,
+          "share_of_gap_absorbed_by_length": 0.5830326741354545
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9013861600324509,
+          "share_of_questions_where_graph_arm_longer": 0.9879518072289156,
+          "separable": false
+        },
+        "length_matched_subsample": {
+          "n_pairs": 10,
+          "mean_reference": 3.7199999999999998,
+          "mean_arm": 3.8,
+          "mean_diff": 0.07999999999999999,
+          "sd_diff": 0.559364719024081,
+          "ci95": [
+            -0.24000000000000013,
+            0.4000000000000002
+          ],
+          "p_value": 0.7356528694261147,
+          "cohens_dz": 0.14301938838683878,
+          "cliffs_delta": 0.22,
+          "wins": 5,
+          "ties": 3,
+          "losses": 2,
+          "mde_80": 0.4955630394197655,
+          "underpowered": true,
+          "degenerate": false,
+          "n_matched": 10,
+          "tolerance_log_chars": 0.2
+        }
+      }
+    },
+    {
+      "run": "answer_phi-4-14b_evaluator_llama-3.3-70b_kg_gpt-4o100",
+      "answers_file": "output/kg_gpt-4o/answers_phi-4-14b_kg_gpt-4o100.json",
+      "eval_file": "evaluation_results/answer_phi-4-14b_evaluator_llama-3.3-70b_kg_gpt-4o100/global_sensemaking_evaluation_20250719_031338.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1916.8915662650602,
+            "median": 1935.0
+          },
+          "graphrag": {
+            "mean": 3192.289156626506,
+            "median": 3165.0
+          },
+          "ratio_hi_over_lo": 1.665346758683109
+        },
+        "score": {
+          "textchunkrag": 4.313253012048191,
+          "graphrag": 4.481927710843372,
+          "gap": 0.1686746987951807
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.256623295885655,
+          "pearson_within_question_diffs": 0.21165507180076423,
+          "spearman_pooled": 0.42548913858299836
+        },
+        "longer_answer_wins": {
+          "wins": 28,
+          "ties": 55,
+          "losses": 0,
+          "rate_excluding_ties": 1.0
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.1686746987951808,
+          "gap_adjusted_for_log_length": 0.02560190651721731,
+          "log_length_coefficient": 0.27441258216871,
+          "share_of_gap_absorbed_by_length": 0.8482172685050688
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9262641518622364,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_phi-4-14b_evaluator_llama-3.3-70b_kg_gpt-4o300",
+      "answers_file": "output/kg_gpt-4o/answers_phi-4-14b_kg_gpt-4o300.json",
+      "eval_file": "evaluation_results/answer_phi-4-14b_evaluator_llama-3.3-70b_kg_gpt-4o300/global_sensemaking_evaluation_20250719_034408.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1956.2409638554218,
+            "median": 1974.0
+          },
+          "graphrag": {
+            "mean": 3212.2289156626507,
+            "median": 3189.0
+          },
+          "ratio_hi_over_lo": 1.6420415352778872
+        },
+        "score": {
+          "textchunkrag": 4.320481927710842,
+          "graphrag": 4.469879518072288,
+          "gap": 0.1493975903614458
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.21242136278421095,
+          "pearson_within_question_diffs": 0.4080892562502332,
+          "spearman_pooled": 0.37993844351286404
+        },
+        "longer_answer_wins": {
+          "wins": 28,
+          "ties": 55,
+          "losses": 0,
+          "rate_excluding_ties": 1.0
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.14939759036144584,
+          "gap_adjusted_for_log_length": -0.14085709908270821,
+          "log_length_coefficient": 0.5734600723903948,
+          "share_of_gap_absorbed_by_length": 1.9428338083761916
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9188181490461724,
+          "share_of_questions_where_graph_arm_longer": 0.9879518072289156,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_phi-4-14b_evaluator_llama-3.3-70b_kg_gpt-4ocum200",
+      "answers_file": "output/kg_gpt-4o/answers_phi-4-14b_kg_gpt-4ocum_200.json",
+      "eval_file": "evaluation_results/answer_phi-4-14b_evaluator_llama-3.3-70b_kg_gpt-4ocum200/global_sensemaking_evaluation_20250719_041506.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1969.3975903614457,
+            "median": 1954.0
+          },
+          "graphrag": {
+            "mean": 3138.4337349397592,
+            "median": 3085.0
+          },
+          "ratio_hi_over_lo": 1.593600880949468
+        },
+        "score": {
+          "textchunkrag": 4.289156626506022,
+          "graphrag": 4.465060240963855,
+          "gap": 0.17590361445783131
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.35705332295782904,
+          "pearson_within_question_diffs": 0.3852387632967067,
+          "spearman_pooled": 0.45327016987342866
+        },
+        "longer_answer_wins": {
+          "wins": 29,
+          "ties": 53,
+          "losses": 1,
+          "rate_excluding_ties": 0.9666666666666667
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.1759036144578314,
+          "gap_adjusted_for_log_length": -0.07405312709989073,
+          "log_length_coefficient": 0.526687511628171,
+          "share_of_gap_absorbed_by_length": 1.4209869554308856
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.911097348487473,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": {
+          "n_pairs": 10,
+          "mean_reference": 4.32,
+          "mean_arm": 4.44,
+          "mean_diff": 0.12000000000000002,
+          "sd_diff": 0.2699794230842212,
+          "ci95": [
+            0.0,
+            0.2800000000000001
+          ],
+          "p_value": 0.496500699860028,
+          "cohens_dz": 0.4444783184923154,
+          "cliffs_delta": 0.28,
+          "wins": 2,
+          "ties": 8,
+          "losses": 0,
+          "mde_80": 0.23918530957375528,
+          "underpowered": true,
+          "degenerate": false,
+          "n_matched": 10,
+          "tolerance_log_chars": 0.2
+        }
+      }
+    },
+    {
+      "run": "answer_phi-4-14b_evaluator_llama-3.3-70b_kg_gpt-4ocum300",
+      "answers_file": "output/kg_gpt-4o/answers_phi-4-14b_kg_gpt-4ocum_300.json",
+      "eval_file": "evaluation_results/answer_phi-4-14b_evaluator_llama-3.3-70b_kg_gpt-4ocum300/global_sensemaking_evaluation_20250719_044543.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1942.855421686747,
+            "median": 1927.0
+          },
+          "graphrag": {
+            "mean": 3144.3614457831327,
+            "median": 3109.0
+          },
+          "ratio_hi_over_lo": 1.6184227661434853
+        },
+        "score": {
+          "textchunkrag": 4.3036144578313245,
+          "graphrag": 4.49879518072289,
+          "gap": 0.1951807228915663
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.22453880269865467,
+          "pearson_within_question_diffs": 0.276288359971911,
+          "spearman_pooled": 0.4432119769127812
+        },
+        "longer_answer_wins": {
+          "wins": 33,
+          "ties": 48,
+          "losses": 2,
+          "rate_excluding_ties": 0.9428571428571428
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.19518072289156638,
+          "gap_adjusted_for_log_length": 0.013036532567160971,
+          "log_length_coefficient": 0.3701342385684183,
+          "share_of_gap_absorbed_by_length": 0.9332078886991135
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9138906728476321,
+          "share_of_questions_where_graph_arm_longer": 0.9879518072289156,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_phi-4-14b_evaluator_llama-3.3-70b_kg_gpt-4ocum400",
+      "answers_file": "output/kg_gpt-4o/answers_phi-4-14b_kg_gpt-4ocum_400.json",
+      "eval_file": "evaluation_results/answer_phi-4-14b_evaluator_llama-3.3-70b_kg_gpt-4ocum400/global_sensemaking_evaluation_20250719_051608.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 82,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1969.341463414634,
+            "median": 1950.0
+          },
+          "graphrag": {
+            "mean": 3128.439024390244,
+            "median": 3138.0
+          },
+          "ratio_hi_over_lo": 1.588571145486296
+        },
+        "score": {
+          "textchunkrag": 4.280487804878048,
+          "graphrag": 4.46341463414634,
+          "gap": 0.18292682926829265
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.3169975783337902,
+          "pearson_within_question_diffs": 0.30187665838101,
+          "spearman_pooled": 0.4792939222043416
+        },
+        "longer_answer_wins": {
+          "wins": 28,
+          "ties": 54,
+          "losses": 0,
+          "rate_excluding_ties": 1.0
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.18292682926829268,
+          "gap_adjusted_for_log_length": -0.06371749616115485,
+          "log_length_coefficient": 0.5130275807230839,
+          "share_of_gap_absorbed_by_length": 1.3483223123476464
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9132304359074537,
+          "share_of_questions_where_graph_arm_longer": 0.9878048780487805,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_phi-4-14b_evaluator_llama-3.3-70b_kg_gpt-4ocum500",
+      "answers_file": "output/kg_gpt-4o/answers_phi-4-14b_kg_gpt-4ocum_500.json",
+      "eval_file": "evaluation_results/answer_phi-4-14b_evaluator_llama-3.3-70b_kg_gpt-4ocum500/global_sensemaking_evaluation_20250719_171924.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 82,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1911.0,
+            "median": 1898.0
+          },
+          "graphrag": {
+            "mean": 3175.5975609756097,
+            "median": 3157.5
+          },
+          "ratio_hi_over_lo": 1.6617464997255937
+        },
+        "score": {
+          "textchunkrag": 4.292682926829268,
+          "graphrag": 4.492682926829268,
+          "gap": 0.19999999999999998
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.22305581183732912,
+          "pearson_within_question_diffs": 0.26080569237579193,
+          "spearman_pooled": 0.45564476823538685
+        },
+        "longer_answer_wins": {
+          "wins": 32,
+          "ties": 48,
+          "losses": 2,
+          "rate_excluding_ties": 0.9411764705882353
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.19999999999999998,
+          "gap_adjusted_for_log_length": 0.008546719346554363,
+          "log_length_coefficient": 0.3681411820463751,
+          "share_of_gap_absorbed_by_length": 0.9572664032672282
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.920167568630229,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_phi-4-14b_evaluator_llama-3.3-70b_kg_gs100",
+      "answers_file": "output/answers_phi-4-14b_kg_gs100.json",
+      "eval_file": "evaluation_results/answer_phi-4-14b_evaluator_llama-3.3-70b_kg_gs100/global_sensemaking_evaluation_20250719_024313.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1906.4819277108434,
+            "median": 1927.0
+          },
+          "graphrag": {
+            "mean": 3207.1686746987953,
+            "median": 3150.0
+          },
+          "ratio_hi_over_lo": 1.6822444671949848
+        },
+        "score": {
+          "textchunkrag": 4.320481927710842,
+          "graphrag": 4.438554216867468,
+          "gap": 0.11807228915662647
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": -0.00621361447965203,
+          "pearson_within_question_diffs": 0.09376899984624756,
+          "spearman_pooled": 0.3435748857253028
+        },
+        "longer_answer_wins": {
+          "wins": 24,
+          "ties": 55,
+          "losses": 4,
+          "rate_excluding_ties": 0.8571428571428571
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.11807228915662651,
+          "gap_adjusted_for_log_length": 0.05902289633265274,
+          "log_length_coefficient": 0.11126498328876146,
+          "share_of_gap_absorbed_by_length": 0.5001122045295738
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9187050338812107,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": {
+          "n_pairs": 8,
+          "mean_reference": 4.375,
+          "mean_arm": 4.425000000000001,
+          "mean_diff": 0.04999999999999993,
+          "sd_diff": 0.27774602993176545,
+          "ci95": [
+            -0.1250000000000001,
+            0.24999999999999978
+          ],
+          "p_value": 0.7566486702659468,
+          "cohens_dz": 0.18002057495577364,
+          "cliffs_delta": 0.09375,
+          "wins": 2,
+          "ties": 5,
+          "losses": 1,
+          "mde_80": 0.2751102070978917,
+          "underpowered": true,
+          "degenerate": false,
+          "n_matched": 8,
+          "tolerance_log_chars": 0.2
+        }
+      }
+    },
+    {
+      "run": "answer_phi-4-14b_evaluator_llama-3.3-70b_kg_phi4mini-it100",
+      "answers_file": "output/kg_phi4mini-it/answers_phi-4-14b_kg_phi4mini-it100.json",
+      "eval_file": "evaluation_results/answer_phi-4-14b_evaluator_llama-3.3-70b_kg_phi4mini-it100/global_sensemaking_evaluation_20250720_002047.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1954.855421686747,
+            "median": 1958.0
+          },
+          "graphrag": {
+            "mean": 3136.409638554217,
+            "median": 3196.0
+          },
+          "ratio_hi_over_lo": 1.6044202572525625
+        },
+        "score": {
+          "textchunkrag": 4.315662650602409,
+          "graphrag": 4.467469879518072,
+          "gap": 0.15180722891566265
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.17957121268962406,
+          "pearson_within_question_diffs": 0.255554492192726,
+          "spearman_pooled": 0.3860251583598106
+        },
+        "longer_answer_wins": {
+          "wins": 28,
+          "ties": 54,
+          "losses": 1,
+          "rate_excluding_ties": 0.9655172413793104
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.1518072289156627,
+          "gap_adjusted_for_log_length": 0.001996421659975365,
+          "log_length_coefficient": 0.31102603239439697,
+          "share_of_gap_absorbed_by_length": 0.986848968430321
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9072871001674898,
+          "share_of_questions_where_graph_arm_longer": 0.9879518072289156,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_phi-4-14b_evaluator_llama-3.3-70b_kg_phi4mini-it300",
+      "answers_file": "output/kg_phi4mini-it/answers_phi-4-14b_kg_phi4mini-it300.json",
+      "eval_file": "evaluation_results/answer_phi-4-14b_evaluator_llama-3.3-70b_kg_phi4mini-it300/global_sensemaking_evaluation_20250720_005111.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 82,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1929.719512195122,
+            "median": 1933.0
+          },
+          "graphrag": {
+            "mean": 3173.0975609756097,
+            "median": 3103.5
+          },
+          "ratio_hi_over_lo": 1.6443309718965855
+        },
+        "score": {
+          "textchunkrag": 4.33170731707317,
+          "graphrag": 4.5024390243902435,
+          "gap": 0.17073170731707313
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.22762342062799876,
+          "pearson_within_question_diffs": 0.3066595693755524,
+          "spearman_pooled": 0.433781691364291
+        },
+        "longer_answer_wins": {
+          "wins": 29,
+          "ties": 52,
+          "losses": 1,
+          "rate_excluding_ties": 0.9666666666666667
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.1707317073170731,
+          "gap_adjusted_for_log_length": -0.038325816553172624,
+          "log_length_coefficient": 0.41199061284314104,
+          "share_of_gap_absorbed_by_length": 1.2244797826685825
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9219075319827243,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_phi-4-14b_evaluator_llama-3.3-70b_kg_phi4mini-itcum200",
+      "answers_file": "output/kg_phi4mini-it/answers_phi-4-14b_kg_phi4mini-itcum_200.json",
+      "eval_file": "evaluation_results/answer_phi-4-14b_evaluator_llama-3.3-70b_kg_phi4mini-itcum200/global_sensemaking_evaluation_20250720_012112.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 82,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1968.5731707317073,
+            "median": 1943.0
+          },
+          "graphrag": {
+            "mean": 3161.5243902439024,
+            "median": 3147.5
+          },
+          "ratio_hi_over_lo": 1.6059979061224237
+        },
+        "score": {
+          "textchunkrag": 4.265853658536584,
+          "graphrag": 4.478048780487804,
+          "gap": 0.2121951219512195
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.3362171910566268,
+          "pearson_within_question_diffs": 0.39322435784699517,
+          "spearman_pooled": 0.5440228512869255
+        },
+        "longer_answer_wins": {
+          "wins": 31,
+          "ties": 51,
+          "losses": 0,
+          "rate_excluding_ties": 1.0
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.21219512195121948,
+          "gap_adjusted_for_log_length": -0.09354161611409163,
+          "log_length_coefficient": 0.628269604194435,
+          "share_of_gap_absorbed_by_length": 1.4408283058250295
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9126132910986454,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": false
+        },
+        "length_matched_subsample": {
+          "n_pairs": 9,
+          "mean_reference": 4.377777777777778,
+          "mean_arm": 4.4,
+          "mean_diff": 0.02222222222222224,
+          "sd_diff": 0.06666666666666672,
+          "ci95": [
+            0.0,
+            0.06666666666666672
+          ],
+          "p_value": 1.0,
+          "cohens_dz": 0.3333333333333333,
+          "cliffs_delta": 0.1111111111111111,
+          "wins": 1,
+          "ties": 8,
+          "losses": 0,
+          "mde_80": 0.062257449307707026,
+          "underpowered": true,
+          "degenerate": false,
+          "n_matched": 9,
+          "tolerance_log_chars": 0.2
+        }
+      }
+    },
+    {
+      "run": "answer_phi-4-14b_evaluator_llama-3.3-70b_kg_phi4mini-itcum300",
+      "answers_file": "output/kg_phi4mini-it/answers_phi-4-14b_kg_phi4mini-itcum_300.json",
+      "eval_file": "evaluation_results/answer_phi-4-14b_evaluator_llama-3.3-70b_kg_phi4mini-itcum300/global_sensemaking_evaluation_20250720_015140.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 82,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 1992.8048780487804,
+            "median": 1967.0
+          },
+          "graphrag": {
+            "mean": 3176.6341463414633,
+            "median": 3170.0
+          },
+          "ratio_hi_over_lo": 1.594051771617404
+        },
+        "score": {
+          "textchunkrag": 4.302439024390243,
+          "graphrag": 4.495121951219511,
+          "gap": 0.19268292682926827
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.13470120390871557,
+          "pearson_within_question_diffs": 0.1954240935694585,
+          "spearman_pooled": 0.5138119506375703
+        },
+        "longer_answer_wins": {
+          "wins": 31,
+          "ties": 51,
+          "losses": 0,
+          "rate_excluding_ties": 1.0
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.1926829268292683,
+          "gap_adjusted_for_log_length": 0.0581943757857746,
+          "log_length_coefficient": 0.2803971735197334,
+          "share_of_gap_absorbed_by_length": 0.6979785560485117
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9205220915480483,
+          "share_of_questions_where_graph_arm_longer": 0.9878048780487805,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_phi-4-14b_evaluator_llama-3.3-70b_kg_phi4mini-itcum400",
+      "answers_file": "output/kg_phi4mini-it/answers_phi-4-14b_kg_phi4mini-itcum_400.json",
+      "eval_file": "evaluation_results/answer_phi-4-14b_evaluator_llama-3.3-70b_kg_phi4mini-itcum400/global_sensemaking_evaluation_20250720_022159.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 82,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 2000.8292682926829,
+            "median": 2012.0
+          },
+          "graphrag": {
+            "mean": 3143.2195121951218,
+            "median": 3113.5
+          },
+          "ratio_hi_over_lo": 1.5709583831094425
+        },
+        "score": {
+          "textchunkrag": 4.336585365853658,
+          "graphrag": 4.458536585365852,
+          "gap": 0.12195121951219512
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.12241154802616334,
+          "pearson_within_question_diffs": 0.08695021267043469,
+          "spearman_pooled": 0.39432814840082303
+        },
+        "longer_answer_wins": {
+          "wins": 24,
+          "ties": 56,
+          "losses": 2,
+          "rate_excluding_ties": 0.9230769230769231
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.1219512195121951,
+          "gap_adjusted_for_log_length": 0.07334208019623718,
+          "log_length_coefficient": 0.10599518904486843,
+          "share_of_gap_absorbed_by_length": 0.398594942390855
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9156296998218811,
+          "share_of_questions_where_graph_arm_longer": 0.9878048780487805,
+          "separable": false
+        },
+        "length_matched_subsample": null
+      }
+    },
+    {
+      "run": "answer_phi-4-14b_evaluator_llama-3.3-70b_kg_phi4mini-itcum500",
+      "answers_file": "output/kg_phi4mini-it/answers_phi-4-14b_kg_phi4mini-itcum_500.json",
+      "eval_file": "evaluation_results/answer_phi-4-14b_evaluator_llama-3.3-70b_kg_phi4mini-itcum500/global_sensemaking_evaluation_20250720_025535.json",
+      "analysis": {
+        "pair": [
+          "textchunkrag",
+          "graphrag"
+        ],
+        "n_questions": 82,
+        "length_chars": {
+          "textchunkrag": {
+            "mean": 2008.219512195122,
+            "median": 1962.0
+          },
+          "graphrag": {
+            "mean": 3113.8536585365855,
+            "median": 3126.5
+          },
+          "ratio_hi_over_lo": 1.5505544287501367
+        },
+        "score": {
+          "textchunkrag": 4.31951219512195,
+          "graphrag": 4.446341463414633,
+          "gap": 0.1268292682926829
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": 0.25562310228349683,
+          "pearson_within_question_diffs": 0.3494075227403857,
+          "spearman_pooled": 0.40027570842862153
+        },
+        "longer_answer_wins": {
+          "wins": 28,
+          "ties": 51,
+          "losses": 3,
+          "rate_excluding_ties": 0.9032258064516129
+        },
+        "fixed_effect_model": {
+          "gap_raw": 0.1268292682926829,
+          "gap_adjusted_for_log_length": -0.046217972384931034,
+          "log_length_coefficient": 0.3848085329301465,
+          "share_of_gap_absorbed_by_length": 1.3644109361119563
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.9006696260990427,
+          "share_of_questions_where_graph_arm_longer": 0.9878048780487805,
+          "separable": false
+        },
+        "length_matched_subsample": {
+          "n_pairs": 10,
+          "mean_reference": 4.38,
+          "mean_arm": 4.4,
+          "mean_diff": 0.020000000000000018,
+          "sd_diff": 0.06324555320336764,
+          "ci95": [
+            0.0,
+            0.06000000000000005
+          ],
+          "p_value": 1.0,
+          "cohens_dz": 0.31622776601683794,
+          "cliffs_delta": 0.1,
+          "wins": 1,
+          "ties": 9,
+          "losses": 0,
+          "mde_80": 0.05603170437693632,
+          "underpowered": true,
+          "degenerate": false,
+          "n_matched": 10,
+          "tolerance_log_chars": 0.2
+        }
+      }
+    }
+  ]
+}

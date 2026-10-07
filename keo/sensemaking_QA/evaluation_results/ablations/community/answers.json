@@ -1,0 +1,203 @@
+[
+  {
+    "question_id": "system_level_understanding_005",
+    "question": "How do different maintenance actions like replacement and repair influence the recurrence rates of similar problems in the aircraft fleet?",
+    "question_category": "system_level_understanding",
+    "question_type": "analytical",
+    "ground_truth": null,
+    "original_problem": null,
+    "ablation": {
+      "method": "community",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "selection": {
+        "selector": "mst",
+        "use_mst": true
+      },
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "local",
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "provider": "local",
+      "answer_model": "mlx-community/Phi-4-mini-instruct-4bit",
+      "answer_model_exact": "mlx-community/Phi-4-mini-instruct-4bit",
+      "kg_path": "../kg/output/kg_llm/gpt4o_with_nodes_batches/100/gpt4o_withprevnodes_100_with_entity_mentions_fixed.gml",
+      "corpus_csv": null,
+      "text_column": null
+    },
+    "vanilla_answer": null,
+    "textchunkrag_answer": null,
+    "keo_answer": null,
+    "community_answer": {
+      "question_id": "system_level_understanding_005",
+      "question": "How do different maintenance actions like replacement and repair influence the recurrence rates of similar problems in the aircraft fleet?",
+      "category": "system_level_understanding",
+      "answer": "The maintenance actions such as replacement and repair play a crucial role in influencing the recurrence rates of similar problems within an aircraft fleet. These maintenance activities directly impact flight safety and operational reliability by addressing and rectifying issues before they can lead to failures or accidents.\n\n1. **Replacement**:\n   - Replacement maintenance actions involve substituting an old or faulty component with a new one. This process is often undertaken after a component has failed or reached the end of its expected service life.\n   - By systematically replacing components that are prone to failure, maintenance teams can reduce the likelihood of recurrence of similar problems. This is because new components typically come with improved designs or materials that enhance reliability.\n   - For instance, replacing an old hydraulic pump with a newer model that has better resistance to wear and corrosion can significantly reduce the recurrence of hydraulic system failures.\n\n2. **Repair**:\n   - Repair maintenance actions involve fixing or restoring a component to a condition where it can function correctly again. This process is often undertaken after minor issues or wear and tear are detected.\n   - Regular maintenance checks and minor repairs help identify and rectify issues before they escalate into major failures. This proactive approach significantly lowers recurrence rates as minor issues are corrected promptly.\n   - For example, repairing a minor crack in an aircraft wing spar can prevent the crack from worsening and lead to a catastrophic failure.\n\nThe maintenance records provided reflect different maintenance actions and their implications on flight operations:\n- The maintenance record of an aircraft returning to service after a right engine oil leak repair indicates that addressing a specific maintenance issue (oil leak) successfully returns the aircraft to operational status, reducing recurrence likelihood.\n- Records of overnight maintenance on an aircraft (e.g., SABB-340B) and flight returns due to a mag. failure demonstrate that comprehensive maintenance checks and repairs are crucial in preventing recurrence of issues like electrical failures, which directly impact flight safety.\n- The maintenance record of an aircraft returning due to a mag. failure needing pilot intervention before repairs indicates that addressing maintenance issues promptly is critical in avoiding recurrence and ensuring flight safety.\n\n**Actionable Insights**:\n- Consistent and thorough maintenance checks should be implemented to identify and rectify issues before they lead to failures.\n- Utilizing data-driven maintenance practices, such as predictive maintenance and condition monitoring, can further enhance reliability and safety by identifying components that are likely to fail before they do so.\n- Training maintenance personnel on advanced maintenance techniques and technologies can improve maintenance quality and reduce recurrence rates.\n- Ensuring compliance with maintenance regulations and standards (e.g., EASA regulations) is crucial in maintaining flight safety and operational reliability.\n\nUltimately, a combination of proactive maintenance actions (replacement and repair), data-driven maintenance practices, and adherence to regulations and standards plays a crucial role in reducing recurrence rates and enhancing flight safety in an aircraft fleet.",
+      "method": "community",
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "local",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "graph_nodes_used": 0,
+      "model": "mlx-community/Phi-4-mini-instruct-4bit",
+      "model_exact": "mlx-community/Phi-4-mini-instruct-4bit",
+      "model_provider": "local",
+      "graph_available": true,
+      "evidence": {}
+    },
+    "hybrid_answer": null,
+    "routed_answer": null,
+    "graphrag_answer": null,
+    "risk_answer": null,
+    "chunk_tok_answer": null,
+    "chunk_sum_answer": null,
+    "chunk_dedup_answer": null,
+    "keo_shuf_answer": null,
+    "keo_norel_answer": null
+  },
+  {
+    "question_id": "root_cause_analysis_007",
+    "question": "What role do inspection and repair procedures play in preventing structural damage, and where are the gaps?",
+    "question_category": "root_cause_analysis",
+    "question_type": "analytical",
+    "ground_truth": null,
+    "original_problem": null,
+    "ablation": {
+      "method": "community",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "selection": {
+        "selector": "mst",
+        "use_mst": true
+      },
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "local",
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "provider": "local",
+      "answer_model": "mlx-community/Phi-4-mini-instruct-4bit",
+      "answer_model_exact": "mlx-community/Phi-4-mini-instruct-4bit",
+      "kg_path": "../kg/output/kg_llm/gpt4o_with_nodes_batches/100/gpt4o_withprevnodes_100_with_entity_mentions_fixed.gml",
+      "corpus_csv": null,
+      "text_column": null
+    },
+    "vanilla_answer": null,
+    "textchunkrag_answer": null,
+    "keo_answer": null,
+    "community_answer": {
+      "question_id": "root_cause_analysis_007",
+      "question": "What role do inspection and repair procedures play in preventing structural damage, and where are the gaps?",
+      "category": "root_cause_analysis",
+      "answer": "The role of inspection and repair procedures is crucial in preventing structural damage to aircraft, as they identify and rectify issues before they compromise flight safety. These procedures involve systematic checks and maintenance tasks aimed at ensuring that all components of an aircraft function correctly and efficiently.\n\nOne gap in these procedures is highlighted by incidents such as vibration issues on takeoff (VIBRATION ON TAKEOFF, ABORTED) and issues stemming from inadequate maintenance (ELEVATOR TRIM INSPECTION PANEL TAMPERED WITH, LOOSE...). These incidents underline the importance of comprehensive inspections, such as vibration checks on takeoff and elevator trim inspections, which can prevent incidents caused by neglected maintenance tasks.\n\nFurthermore, incidents like the engine cowling inspection door coming off on takeoff (ENGINE COWLING INSPECTION DOOR CAME OFF) spotlight a gap in maintenance procedures, specifically related to ensuring parts are correctly fastened and operational before flight. This emphasizes the need for detailed inspections and adherence to maintenance checklists to avoid overlooking crucial maintenance tasks.\n\nThe maintenance records provided reflect incidents that could stem from lapses in maintenance procedures, such as undetected debris during taxi (DURING TAXI INTO POSITION PROP DAMAGE DUE TO UNKNOWN DEBRIS LEFT FROM RUNWAY MAINTENANCE...). This highlights a gap in maintenance procedures concerning thorough inspections and clean-up operations before flight operations.\n\nTo close these gaps, it is imperative to:\n1. Ensure comprehensive maintenance checklists are adhered to, covering all possible maintenance tasks before flight operations.\n2. Enhance inspection procedures to identify and rectify issues such as tampering (ELEVATOR TRIM INSPECTION PANEL TAMPERED WITH), parts not correctly fastened (ENGINE COWLING INSPECTION DOOR CAME OFF), and undetected debris (DURING TAXI INTO POSITION PROP DAMAGE DUE TO UNKNOWN DEBRIS LEFT FROM RUNWAY MAINTENANCE).\n3. Foster a maintenance culture that prioritizes thoroughness and attention to detail in maintenance tasks, thereby preventing incidents that compromise flight safety.\n\nBy addressing these gaps, maintenance procedures can be optimized to enhance flight safety, ensuring that structural damage is prevented, and incidents are minimized before flight operations commence. This emphasizes the importance of regular maintenance checks, comprehensive maintenance checklists, and a maintenance culture that prioritizes flight safety above all.",
+      "method": "community",
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "local",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "graph_nodes_used": 0,
+      "model": "mlx-community/Phi-4-mini-instruct-4bit",
+      "model_exact": "mlx-community/Phi-4-mini-instruct-4bit",
+      "model_provider": "local",
+      "graph_available": true,
+      "evidence": {}
+    },
+    "hybrid_answer": null,
+    "routed_answer": null,
+    "graphrag_answer": null,
+    "risk_answer": null,
+    "chunk_tok_answer": null,
+    "chunk_sum_answer": null,
+    "chunk_dedup_answer": null,
+    "keo_shuf_answer": null,
+    "keo_norel_answer": null
+  },
+  {
+    "question_id": "maintenance_narratives_008",
+    "question": "8. How does the interaction between electrical system failures and other aircraft systems contribute to broader operational risks, and what redundant systems could mitigate these risks?",
+    "question_category": "context_specific",
+    "question_type": "contextual",
+    "ground_truth": null,
+    "original_problem": null,
+    "ablation": {
+      "method": "community",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "selection": {
+        "selector": "mst",
+        "use_mst": true
+      },
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "local",
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "provider": "local",
+      "answer_model": "mlx-community/Phi-4-mini-instruct-4bit",
+      "answer_model_exact": "mlx-community/Phi-4-mini-instruct-4bit",
+      "kg_path": "../kg/output/kg_llm/gpt4o_with_nodes_batches/100/gpt4o_withprevnodes_100_with_entity_mentions_fixed.gml",
+      "corpus_csv": null,
+      "text_column": null
+    },
+    "vanilla_answer": null,
+    "textchunkrag_answer": null,
+    "keo_answer": null,
+    "community_answer": {
+      "question_id": "maintenance_narratives_008",
+      "question": "8. How does the interaction between electrical system failures and other aircraft systems contribute to broader operational risks, and what redundant systems could mitigate these risks?",
+      "category": "context_specific",
+      "answer": "The interaction between electrical system failures and other aircraft systems can pose considerable operational risks, potentially compromising flight safety and reliability. Electrical failures can lead to simultaneous issues with critical components such as flight control systems, landing gear operations, and avionics reliability.\n\nOne specific case from maintenance records illustrates a pilot experiencing an electrical system failure during an en-route flight, resulting in an emergency landing with gear collapse (Record ID: -23). This highlights how an electrical failure can compromise flight control and landing gear operations simultaneously, posing a grave risk to flight safety.\n\nFurthermore, another maintenance record describes an aircraft experiencing a total electrical failure on final approach, leading to partial extension and collapse of landing gear on touchdown (Record ID: final electrical failure). This case emphasizes how simultaneous failures can hinder crucial landing operations, further demonstrating the interconnectedness of different aircraft systems in maintaining flight safety.\n\nTo mitigate these operational risks, incorporating redundant systems is essential:\n\n1. Independent Power Sources: Utilizing separate power supply units (e.g., separate Ground Power Unit (GPU) and Air Start Unit (ASU)) can ensure that a failure in one does not compromise flight control or landing gear operations.\n\n2. Redundant Electrical Systems: Designing redundant electrical circuits and components can provide failover options in case one circuit experiences a fault, preventing simultaneous failures across different systems.\n\n3. Enhanced Avionics Redundancy: Leveraging redundant avionics components (e.g., dual Independent Commuted Power Sources (ICPS) or Independent Commuted Power Source (ICPS) units) can enhance reliability, ensuring flight control operations remain uninterrupted even during simultaneous failures.\n\nTo summarize, addressing simultaneous failures through redundant systems not only mitigates operational risks but significantly enhances flight safety and reliability in aviation maintenance practices. Regular inspections, maintenance, and incorporating redundant components are crucial elements in preventing simultaneous failures and ensuring comprehensive flight safety.",
+      "method": "community",
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "local",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "graph_nodes_used": 0,
+      "model": "mlx-community/Phi-4-mini-instruct-4bit",
+      "model_exact": "mlx-community/Phi-4-mini-instruct-4bit",
+      "model_provider": "local",
+      "graph_available": true,
+      "evidence": {}
+    },
+    "hybrid_answer": null,
+    "routed_answer": null,
+    "graphrag_answer": null,
+    "risk_answer": null,
+    "chunk_tok_answer": null,
+    "chunk_sum_answer": null,
+    "chunk_dedup_answer": null,
+    "keo_shuf_answer": null,
+    "keo_norel_answer": null
+  }
+]

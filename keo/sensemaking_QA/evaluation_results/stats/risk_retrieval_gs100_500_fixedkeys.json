@@ -1,0 +1,314 @@
+{
+  "kg": "../kg/output/kg_llm/gs100_total500/gemma3_4b_it/kg_gemma3_4b_it.gml",
+  "severity_threshold": 1.5,
+  "budgets": [
+    {
+      "budget_tokens": 300,
+      "graph": {
+        "nodes": 1432,
+        "edges": 1468,
+        "candidate_records": 1468
+      },
+      "weight_degeneracy": {
+        "distinct_weights": 7,
+        "std": 0.46148096558780516,
+        "degenerate": false
+      },
+      "severity_prevalence": {
+        "high_severity_total": 222,
+        "share_of_all_edges": 0.15122615803814715,
+        "min_weight": 1.0,
+        "top_quintile_weight_cutoff": 1.0,
+        "quintile_cutoff_identifiable": false,
+        "share_below_top_quintile": null,
+        "high_severity_at_min_weight": 211,
+        "share_at_min_weight": 0.9504504504504504,
+        "mean_weight_high_severity": 1.1036036036036037,
+        "mean_weight_all": 1.0708446866485013
+      },
+      "policies": {
+        "top_weight": {
+          "high_severity_total": 222,
+          "high_severity_retrieved": 7,
+          "high_severity_recall": 0.03153153153153153,
+          "critical_omission_rate": 0.9684684684684685,
+          "mean_severity_of_selection": 1.3088235294117647,
+          "edges_selected": 34,
+          "tokens_used": 300,
+          "entities_covered": 32
+        },
+        "mst": {
+          "high_severity_total": 222,
+          "high_severity_retrieved": 7,
+          "high_severity_recall": 0.03153153153153153,
+          "critical_omission_rate": 0.9684684684684685,
+          "mean_severity_of_selection": 1.3181818181818181,
+          "edges_selected": 33,
+          "tokens_used": 298,
+          "entities_covered": 36
+        },
+        "budgeted_coverage": {
+          "high_severity_total": 222,
+          "high_severity_retrieved": 6,
+          "high_severity_recall": 0.02702702702702703,
+          "critical_omission_rate": 0.972972972972973,
+          "mean_severity_of_selection": 1.211111111111111,
+          "edges_selected": 45,
+          "tokens_used": 299,
+          "entities_covered": 83
+        },
+        "risk_budgeted_coverage": {
+          "high_severity_total": 222,
+          "high_severity_retrieved": 28,
+          "high_severity_recall": 0.12612612612612611,
+          "critical_omission_rate": 0.8738738738738738,
+          "mean_severity_of_selection": 2.230769230769231,
+          "edges_selected": 39,
+          "tokens_used": 300,
+          "entities_covered": 72
+        },
+        "risk_floor_0.25": {
+          "high_severity_total": 222,
+          "high_severity_retrieved": 34,
+          "high_severity_recall": 0.15315315315315314,
+          "critical_omission_rate": 0.8468468468468469,
+          "mean_severity_of_selection": 2.5125,
+          "edges_selected": 40,
+          "tokens_used": 300,
+          "entities_covered": 66
+        }
+      }
+    },
+    {
+      "budget_tokens": 600,
+      "graph": {
+        "nodes": 1432,
+        "edges": 1468,
+        "candidate_records": 1468
+      },
+      "weight_degeneracy": {
+        "distinct_weights": 7,
+        "std": 0.46148096558780516,
+        "degenerate": false
+      },
+      "severity_prevalence": {
+        "high_severity_total": 222,
+        "share_of_all_edges": 0.15122615803814715,
+        "min_weight": 1.0,
+        "top_quintile_weight_cutoff": 1.0,
+        "quintile_cutoff_identifiable": false,
+        "share_below_top_quintile": null,
+        "high_severity_at_min_weight": 211,
+        "share_at_min_weight": 0.9504504504504504,
+        "mean_weight_high_severity": 1.1036036036036037,
+        "mean_weight_all": 1.0708446866485013
+      },
+      "policies": {
+        "top_weight": {
+          "high_severity_total": 222,
+          "high_severity_retrieved": 11,
+          "high_severity_recall": 0.04954954954954955,
+          "critical_omission_rate": 0.9504504504504504,
+          "mean_severity_of_selection": 1.25,
+          "edges_selected": 66,
+          "tokens_used": 600,
+          "entities_covered": 71
+        },
+        "mst": {
+          "high_severity_total": 222,
+          "high_severity_retrieved": 8,
+          "high_severity_recall": 0.036036036036036036,
+          "critical_omission_rate": 0.963963963963964,
+          "mean_severity_of_selection": 1.1818181818181819,
+          "edges_selected": 66,
+          "tokens_used": 599,
+          "entities_covered": 80
+        },
+        "budgeted_coverage": {
+          "high_severity_total": 222,
+          "high_severity_retrieved": 12,
+          "high_severity_recall": 0.05405405405405406,
+          "critical_omission_rate": 0.9459459459459459,
+          "mean_severity_of_selection": 1.1858695652173912,
+          "edges_selected": 92,
+          "tokens_used": 599,
+          "entities_covered": 170
+        },
+        "risk_budgeted_coverage": {
+          "high_severity_total": 222,
+          "high_severity_retrieved": 51,
+          "high_severity_recall": 0.22972972972972974,
+          "critical_omission_rate": 0.7702702702702703,
+          "mean_severity_of_selection": 2.020253164556962,
+          "edges_selected": 79,
+          "tokens_used": 599,
+          "entities_covered": 141
+        },
+        "risk_floor_0.25": {
+          "high_severity_total": 222,
+          "high_severity_retrieved": 61,
+          "high_severity_recall": 0.2747747747747748,
+          "critical_omission_rate": 0.7252252252252251,
+          "mean_severity_of_selection": 2.3194805194805195,
+          "edges_selected": 77,
+          "tokens_used": 599,
+          "entities_covered": 122
+        }
+      }
+    },
+    {
+      "budget_tokens": 1200,
+      "graph": {
+        "nodes": 1432,
+        "edges": 1468,
+        "candidate_records": 1468
+      },
+      "weight_degeneracy": {
+        "distinct_weights": 7,
+        "std": 0.46148096558780516,
+        "degenerate": false
+      },
+      "severity_prevalence": {
+        "high_severity_total": 222,
+        "share_of_all_edges": 0.15122615803814715,
+        "min_weight": 1.0,
+        "top_quintile_weight_cutoff": 1.0,
+        "quintile_cutoff_identifiable": false,
+        "share_below_top_quintile": null,
+        "high_severity_at_min_weight": 211,
+        "share_at_min_weight": 0.9504504504504504,
+        "mean_weight_high_severity": 1.1036036036036037,
+        "mean_weight_all": 1.0708446866485013
+      },
+      "policies": {
+        "top_weight": {
+          "high_severity_total": 222,
+          "high_severity_retrieved": 14,
+          "high_severity_recall": 0.06306306306306306,
+          "critical_omission_rate": 0.9369369369369369,
+          "mean_severity_of_selection": 1.151388888888889,
+          "edges_selected": 144,
+          "tokens_used": 1200,
+          "entities_covered": 143
+        },
+        "mst": {
+          "high_severity_total": 222,
+          "high_severity_retrieved": 11,
+          "high_severity_recall": 0.04954954954954955,
+          "critical_omission_rate": 0.9504504504504504,
+          "mean_severity_of_selection": 1.1193103448275863,
+          "edges_selected": 145,
+          "tokens_used": 1200,
+          "entities_covered": 156
+        },
+        "budgeted_coverage": {
+          "high_severity_total": 222,
+          "high_severity_retrieved": 19,
+          "high_severity_recall": 0.08558558558558559,
+          "critical_omission_rate": 0.9144144144144144,
+          "mean_severity_of_selection": 1.1508670520231215,
+          "edges_selected": 173,
+          "tokens_used": 1200,
+          "entities_covered": 327
+        },
+        "risk_budgeted_coverage": {
+          "high_severity_total": 222,
+          "high_severity_retrieved": 88,
+          "high_severity_recall": 0.3963963963963964,
+          "critical_omission_rate": 0.6036036036036037,
+          "mean_severity_of_selection": 1.8429487179487178,
+          "edges_selected": 156,
+          "tokens_used": 1198,
+          "entities_covered": 266
+        },
+        "risk_floor_0.25": {
+          "high_severity_total": 222,
+          "high_severity_retrieved": 95,
+          "high_severity_recall": 0.42792792792792794,
+          "critical_omission_rate": 0.572072072072072,
+          "mean_severity_of_selection": 1.9462025316455696,
+          "edges_selected": 158,
+          "tokens_used": 1198,
+          "entities_covered": 255
+        }
+      }
+    },
+    {
+      "budget_tokens": 2400,
+      "graph": {
+        "nodes": 1432,
+        "edges": 1468,
+        "candidate_records": 1468
+      },
+      "weight_degeneracy": {
+        "distinct_weights": 7,
+        "std": 0.46148096558780516,
+        "degenerate": false
+      },
+      "severity_prevalence": {
+        "high_severity_total": 222,
+        "share_of_all_edges": 0.15122615803814715,
+        "min_weight": 1.0,
+        "top_quintile_weight_cutoff": 1.0,
+        "quintile_cutoff_identifiable": false,
+        "share_below_top_quintile": null,
+        "high_severity_at_min_weight": 211,
+        "share_at_min_weight": 0.9504504504504504,
+        "mean_weight_high_severity": 1.1036036036036037,
+        "mean_weight_all": 1.0708446866485013
+      },
+      "policies": {
+        "top_weight": {
+          "high_severity_total": 222,
+          "high_severity_retrieved": 31,
+          "high_severity_recall": 0.13963963963963963,
+          "critical_omission_rate": 0.8603603603603603,
+          "mean_severity_of_selection": 1.1618374558303888,
+          "edges_selected": 283,
+          "tokens_used": 2400,
+          "entities_covered": 267
+        },
+        "mst": {
+          "high_severity_total": 222,
+          "high_severity_retrieved": 18,
+          "high_severity_recall": 0.08108108108108109,
+          "critical_omission_rate": 0.9189189189189189,
+          "mean_severity_of_selection": 1.1017730496453901,
+          "edges_selected": 282,
+          "tokens_used": 2400,
+          "entities_covered": 290
+        },
+        "budgeted_coverage": {
+          "high_severity_total": 222,
+          "high_severity_retrieved": 34,
+          "high_severity_recall": 0.15315315315315314,
+          "critical_omission_rate": 0.8468468468468469,
+          "mean_severity_of_selection": 1.1407766990291262,
+          "edges_selected": 309,
+          "tokens_used": 2396,
+          "entities_covered": 588
+        },
+        "risk_budgeted_coverage": {
+          "high_severity_total": 222,
+          "high_severity_retrieved": 122,
+          "high_severity_recall": 0.5495495495495496,
+          "critical_omission_rate": 0.4504504504504504,
+          "mean_severity_of_selection": 1.5966442953020132,
+          "edges_selected": 298,
+          "tokens_used": 2400,
+          "entities_covered": 519
+        },
+        "risk_floor_0.25": {
+          "high_severity_total": 222,
+          "high_severity_retrieved": 141,
+          "high_severity_recall": 0.6351351351351351,
+          "critical_omission_rate": 0.3648648648648649,
+          "mean_severity_of_selection": 1.7193333333333332,
+          "edges_selected": 300,
+          "tokens_used": 2400,
+          "entities_covered": 489
+        }
+      }
+    }
+  ]
+}

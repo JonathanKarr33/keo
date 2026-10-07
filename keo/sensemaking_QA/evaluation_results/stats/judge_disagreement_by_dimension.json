@@ -1,0 +1,134 @@
+{
+  "phi4": {
+    "generator": "phi4",
+    "median_abs_by_dim": {
+      "global_perspective": 0.0,
+      "theme_identification": 0.0,
+      "synthesis_quality": 0.0,
+      "strategic_value": 1.0,
+      "pattern_recognition": 0.0
+    },
+    "mean_abs_by_dim": {
+      "global_perspective": 0.09939759036144578,
+      "theme_identification": 0.4186746987951807,
+      "synthesis_quality": 0.22289156626506024,
+      "strategic_value": 0.572289156626506,
+      "pattern_recognition": 0.25903614457831325
+    },
+    "chunk_tok_delta_by_dim": {
+      "global_perspective": {
+        "haiku_delta": -0.030120481927710843,
+        "sonnet_delta": -0.012048192771084338,
+        "flips": false
+      },
+      "theme_identification": {
+        "haiku_delta": 0.15060240963855423,
+        "sonnet_delta": -0.10843373493975904,
+        "flips": true
+      },
+      "synthesis_quality": {
+        "haiku_delta": -0.012048192771084338,
+        "sonnet_delta": -0.07228915662650602,
+        "flips": false
+      },
+      "strategic_value": {
+        "haiku_delta": 0.1927710843373494,
+        "sonnet_delta": -0.13253012048192772,
+        "flips": true
+      },
+      "pattern_recognition": {
+        "haiku_delta": 0.0,
+        "sonnet_delta": -0.1686746987951807,
+        "flips": false
+      }
+    }
+  },
+  "gemma4e4b": {
+    "generator": "gemma4e4b",
+    "median_abs_by_dim": {
+      "global_perspective": 0.0,
+      "theme_identification": 0.0,
+      "synthesis_quality": 1.0,
+      "strategic_value": 1.0,
+      "pattern_recognition": 0.0
+    },
+    "mean_abs_by_dim": {
+      "global_perspective": 0.26506024096385544,
+      "theme_identification": 0.46686746987951805,
+      "synthesis_quality": 0.5903614457831325,
+      "strategic_value": 0.572289156626506,
+      "pattern_recognition": 0.4397590361445783
+    },
+    "chunk_tok_delta_by_dim": {
+      "global_perspective": {
+        "haiku_delta": 0.27710843373493976,
+        "sonnet_delta": -0.012048192771084338,
+        "flips": false
+      },
+      "theme_identification": {
+        "haiku_delta": 0.3072289156626506,
+        "sonnet_delta": -0.04819277108433735,
+        "flips": true
+      },
+      "synthesis_quality": {
+        "haiku_delta": 0.20481927710843373,
+        "sonnet_delta": -0.13253012048192772,
+        "flips": true
+      },
+      "strategic_value": {
+        "haiku_delta": 0.3493975903614458,
+        "sonnet_delta": -0.012048192771084338,
+        "flips": false
+      },
+      "pattern_recognition": {
+        "haiku_delta": 0.25301204819277107,
+        "sonnet_delta": -0.3373493975903614,
+        "flips": true
+      }
+    }
+  },
+  "gemma4_31b": {
+    "generator": "gemma4_31b",
+    "median_abs_by_dim": {
+      "global_perspective": 0.0,
+      "theme_identification": 1.0,
+      "synthesis_quality": 1.0,
+      "strategic_value": 0.0,
+      "pattern_recognition": 1.0
+    },
+    "mean_abs_by_dim": {
+      "global_perspective": 0.5662650602409639,
+      "theme_identification": 0.6385542168674698,
+      "synthesis_quality": 0.6626506024096386,
+      "strategic_value": 0.5180722891566265,
+      "pattern_recognition": 0.6204819277108434
+    },
+    "chunk_tok_delta_by_dim": {
+      "global_perspective": {
+        "haiku_delta": -0.12048192771084337,
+        "sonnet_delta": 0.12048192771084337,
+        "flips": true
+      },
+      "theme_identification": {
+        "haiku_delta": 0.012048192771084338,
+        "sonnet_delta": 0.03614457831325301,
+        "flips": false
+      },
+      "synthesis_quality": {
+        "haiku_delta": -0.03614457831325301,
+        "sonnet_delta": -0.024096385542168676,
+        "flips": false
+      },
+      "strategic_value": {
+        "haiku_delta": -0.012048192771084338,
+        "sonnet_delta": 0.14457831325301204,
+        "flips": false
+      },
+      "pattern_recognition": {
+        "haiku_delta": -0.20481927710843373,
+        "sonnet_delta": 0.0,
+        "flips": false
+      }
+    }
+  }
+}

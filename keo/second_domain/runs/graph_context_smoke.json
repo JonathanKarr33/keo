@@ -1,0 +1,8 @@
+{
+  "kg": "/Users/jonathankarr/Documents/keo/keo/second_domain/data/pilot_kg.gml",
+  "nodes": 40,
+  "edges": 99,
+  "serialized_edges_mst_on": 37,
+  "serialized_edges_mst_off": 98,
+  "reduction": 0.6224489795918368
+}

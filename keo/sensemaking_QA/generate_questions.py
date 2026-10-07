@@ -11,7 +11,7 @@ from datetime import datetime
 from data_analyzer import AviationDataAnalyzer
 from question_generator import SensemakingQuestionGenerator
 
-def generate_aviation_sensemaking_questions(output_file, question_model="gpt-4o"):
+def generate_aviation_sensemaking_questions(output_file, question_model="gpt-5.6-terra"):
     """Generate comprehensive sensemaking questions for aviation maintenance"""
     
     print("=" * 70)
@@ -161,6 +161,16 @@ def generate_aviation_sensemaking_questions(output_file, question_model="gpt-4o"
     analyzer.save_analysis_results(analysis_file)
     
     # Save generation metadata (with timestamp)
+    from openai import OpenAI
+    from model_provenance import build_run_provenance, package_versions
+
+    oai = OpenAI(api_key=openai_api_key)
+    q_prov = build_run_provenance(
+        role="question_generator",
+        provider="openai",
+        model_id=question_model,
+        client=oai,
+    )
     metadata = {
         'generation_timestamp': datetime.now().isoformat(),
         'data_sources': {
@@ -177,6 +187,9 @@ def generate_aviation_sensemaking_questions(output_file, question_model="gpt-4o"
         ],
         'question_summary': summary,
         'openai_model': question_model,
+        'openai_model_exact': q_prov['llm'].get('exact_id', question_model),
+        'model_provenance': q_prov,
+        'packages': package_versions(),
         'data_separation_enforced': True
     }
     
@@ -188,6 +201,7 @@ def generate_aviation_sensemaking_questions(output_file, question_model="gpt-4o"
     print(f"✓ Questions saved to: {csv_file}")
     print(f"✓ Analysis results saved to: {analysis_file}")
     print(f"✓ Metadata saved to: {metadata_file}")
+    print(f"✓ Question model: requested={question_model} exact={metadata['openai_model_exact']}")
     
     print("\n" + "=" * 70)
     print("QUESTION GENERATION COMPLETED SUCCESSFULLY!")
@@ -211,8 +225,8 @@ def main():
     )
     parser.add_argument(
         '--question-model',
-        default="gpt-4o",
-        help='OpenAI model to use for question generation (default: gpt-4o)'
+        default="gpt-5.6-terra",
+        help='OpenAI model to use for question generation (default: gpt-5.6-terra)'
     )
     
     args = parser.parse_args()

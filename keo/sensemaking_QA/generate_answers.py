@@ -3,17 +3,19 @@
 Generate RAG-based Answers for Aviation Maintenance Sensemaking Questions
 Uses both vanilla LLM and GraphRAG approaches with the knowledge graph
 
-Supports both OpenAI and HuggingFace providers for answer generation:
-- OpenAI: Uses OpenAI's GPT models (requires OPENAI_API_KEY)
-- HuggingFace: Uses HuggingFace's InferenceClient (requires HF_TOKEN)
+Providers for answer generation:
+- huggingface / local: preferred open-weight answerers (DoD story)
+- anthropic: Claude Messages API (optional closed)
+- openai: GPT-5.6 (legacy)
 
 Usage examples:
-    # Using OpenAI (default)
-    python generate_answers.py --question-files questions.json --output-file answers.json
-
-    # Using HuggingFace with custom API provider
+    # HuggingFace open answerer (preferred for paper)
     python generate_answers.py --question-files questions.json --output-file answers.json \
-        --provider huggingface --answer-model google/gemma-3-4b-it --API-provider featherless-ai
+        --provider huggingface --answer-model Qwen/Qwen3.8-27B --API-provider nebius
+
+    # Legacy OpenAI
+    python generate_answers.py --question-files questions.json --output-file answers.json \
+        --provider openai --answer-model gpt-5.6-luna
 """
 
 import os
@@ -26,21 +28,27 @@ from question_generator import SensemakingQuestionGenerator
 from answer_generator import SensemakingAnswerGenerator
 import random
 
-def generate_aviation_answers(question_files, output_file, sample_size=None, answer_model=None, kg_path="../kg/output/knowledge_graph.gml", provider="openai", API_provider="featherless-ai"):
+def generate_aviation_answers(question_files, output_file, sample_size=None, answer_model=None, kg_path="../kg/output/knowledge_graph.gml", provider="openai", API_provider="nebius", use_mst=True, edge_weight="freq", base_url=None, embedding_backend="local"):
     """Generate comprehensive answers for aviation maintenance questions using RAG"""
     
     print("=" * 70)
     print("AVIATION MAINTENANCE SENSEMAKING ANSWER GENERATION")
     print("=" * 70)
     print(f"Started at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"use_mst={use_mst} edge_weight={edge_weight}")
     print()
     
     # Set default model based on provider if not specified
     if answer_model is None:
         if provider == "openai":
-            answer_model = "gpt-4o-mini"
+            answer_model = "gpt-5.6-luna"  # legacy
+        elif provider == "anthropic":
+            from anthropic_client import DEFAULT_ANSWER_MODEL
+            answer_model = DEFAULT_ANSWER_MODEL
+        elif provider == "local":
+            answer_model = "Qwen/Qwen3-30B-A3B-Instruct-2507"
         elif provider == "huggingface":
-            answer_model = "google/gemma-3-4b-it"
+            answer_model = "Qwen/Qwen3.8-27B"
     
     # Verify API key based on provider
     if provider == "openai":
@@ -48,15 +56,27 @@ def generate_aviation_answers(question_files, output_file, sample_size=None, ans
         if not openai_api_key:
             raise ValueError("OPENAI_API_KEY environment variable not set")
         api_key = openai_api_key
-        print("✓ OpenAI API key verified")
+        print("✓ OpenAI API key verified (legacy)")
+    elif provider == "anthropic":
+        anth_key = os.getenv("ANTHROPIC_API_KEY")
+        if not anth_key:
+            raise ValueError("ANTHROPIC_API_KEY environment variable not set")
+        api_key = anth_key
+        print("✓ Anthropic API key verified")
     elif provider == "huggingface":
         hf_token = os.getenv("HF_TOKEN")
         if not hf_token:
             raise ValueError("HF_TOKEN environment variable not set")
         api_key = hf_token
         print("✓ HuggingFace token verified")
+    elif provider == "local":
+        api_key = os.getenv("LOCAL_LLM_API_KEY", "EMPTY")
+        print(f"✓ Local LLM → {base_url or os.getenv('LOCAL_LLM_BASE_URL', 'http://127.0.0.1:8000/v1')}")
     else:
-        raise ValueError(f"Unsupported provider: {provider}. Supported providers: 'openai', 'huggingface'")
+        raise ValueError(
+            f"Unsupported provider: {provider}. "
+            "Supported: 'huggingface', 'local', 'anthropic', 'openai' (legacy)"
+        )
     
     # Data paths - using only question generation datasets (excludes KG files)
     data_paths = {
@@ -78,10 +98,22 @@ def generate_aviation_answers(question_files, output_file, sample_size=None, ans
     print(f"Initializing answer generator with provider: {provider}")
     if provider == "huggingface":
         print(f"Using HuggingFace API provider: {API_provider}")
-    answer_generator = SensemakingAnswerGenerator(api_key, model=answer_model, provider=provider, API_provider=API_provider)
+    answer_generator = SensemakingAnswerGenerator(
+        api_key,
+        model=answer_model,
+        provider=provider,
+        API_provider=API_provider,
+        use_mst=use_mst,
+        edge_weight=edge_weight,
+        embedding_backend=embedding_backend,
+        base_url=base_url,
+        use_completion_cache=True,
+        max_answer_tokens=600,
+    )
     
     # Load knowledge graph
     print(f"Loading knowledge graph from: {kg_path}")
+    kg_loaded = False
     if os.path.exists(kg_path):
         kg_loaded = answer_generator.load_knowledge_graph(kg_path)
     if not kg_loaded:
@@ -211,6 +243,34 @@ def generate_aviation_answers(question_files, output_file, sample_size=None, ans
         json.dump(all_results, f, indent=2)
     
     print(f"✓ Results saved to {output_file}")
+
+    # Exact model provenance for reproducibility
+    meta_path = os.path.splitext(output_file)[0] + "_meta.json"
+    provenance = answer_generator.get_model_provenance()
+    with open(meta_path, "w") as f:
+        json.dump(
+            {
+                "provider": provider,
+                "API_provider": API_provider if provider == "huggingface" else None,
+                "base_url": base_url if provider == "local" else None,
+                "answer_model": answer_model,
+                "answer_model_exact": answer_generator.exact_model_id(),
+                "embedding_backend": embedding_backend,
+                "embedding_model": getattr(answer_generator.embedder, "model", None),
+                "kg_path": kg_path,
+                "use_mst": use_mst,
+                "edge_weight": edge_weight,
+                "n_questions": len(all_results),
+                "timestamp": datetime.now().isoformat(),
+                "model_provenance": provenance,
+            },
+            f,
+            indent=2,
+        )
+    print(
+        f"✓ Model provenance: requested={answer_model} "
+        f"exact={answer_generator.exact_model_id()} → {meta_path}"
+    )
     
     # Save summary CSV for easy review
     summary_data = []
@@ -298,7 +358,7 @@ def main():
     )
     parser.add_argument(
         '--answer-model',
-        help='Model to use for answer generation (default: gpt-4o-mini for OpenAI, google/gemma-3-4b-it for HuggingFace)'
+        help='Answer model (default: Qwen/Qwen3.8-27B HF; gpt-5.6-luna openai legacy; claude-haiku-4-5 anthropic)'
     )
     parser.add_argument(
         '--kg-path',
@@ -307,15 +367,28 @@ def main():
     )
     parser.add_argument(
         '--provider',
-        default="openai",
-        choices=["openai", "huggingface"],
-        help='Provider for answer generation (default: openai)'
+        default="huggingface",
+        choices=["huggingface", "local", "anthropic", "openai"],
+        help='Answer provider (default: huggingface; openai=legacy GPT)'
     )
     parser.add_argument(
         '--API-provider',
-        default="featherless-ai",
-        help='API provider for HuggingFace InferenceClient (only used when provider=huggingface, default: featherless-ai)'
+        default="nebius",
+        help='API provider for HuggingFace InferenceClient (only used when provider=huggingface, default: nebius)'
     )
+    parser.add_argument(
+        '--base-url',
+        default=None,
+        help='OpenAI-compatible base URL for --provider local',
+    )
+    parser.add_argument(
+        '--embedding-backend',
+        default='local',
+        choices=['openai', 'local', 'hash'],
+    )
+    parser.add_argument('--use-mst', dest='use_mst', action='store_true', default=True)
+    parser.add_argument('--no-mst', dest='use_mst', action='store_false')
+    parser.add_argument('--edge-weight', default='freq', choices=['freq', 'tfidf', 'pmi', 'query', 'rarity'])
     
     args = parser.parse_args()
     
@@ -327,7 +400,11 @@ def main():
             answer_model=args.answer_model,
             kg_path=args.kg_path,
             provider=args.provider,
-            API_provider=args.API_provider
+            API_provider=args.API_provider,
+            use_mst=args.use_mst,
+            edge_weight=args.edge_weight,
+            base_url=args.base_url,
+            embedding_backend=args.embedding_backend,
         )
         print("\n✅ Answer generation completed successfully!")
     except Exception as e:

@@ -124,17 +124,45 @@ from openai import OpenAI
 #     visualize_graph(graph)
 
 class GraphRetriever:
-    def __init__(self, graph: nx.Graph, openai_api_key: str, cache_dir: str):
+    def __init__(
+        self,
+        graph: nx.Graph,
+        openai_api_key: str,
+        cache_dir: str,
+        embedding_backend: str = "openai",
+        embedding_model: Optional[str] = None,
+        embedder=None,
+    ):
         """
         Initialize the graph retriever with weights for hybrid search.
 
         Args:
             graph (nx.Graph): Loaded knowledge graph
-            openai_api_key (str): OpenAI API key for embeddings
+            openai_api_key (str): OpenAI API key for embeddings (optional if local/hash)
+            cache_dir: path to JSON embedding cache
+            embedding_backend: openai | local | hash
+            embedding_model: optional model name override
+            embedder: optional EmbeddingBackend instance
         """
         self.graph = graph
-        self.openai_client = OpenAI(api_key=openai_api_key)
         self.cache_dir = cache_dir
+        self.openai_client = None
+        if openai_api_key and embedding_backend == "openai":
+            self.openai_client = OpenAI(api_key=openai_api_key)
+
+        if embedder is not None:
+            self.embedder = embedder
+        else:
+            # Lazy import to avoid circular deps when package layout varies
+            try:
+                from sensemaking_QA.local_embeddings import EmbeddingBackend
+            except ImportError:
+                from local_embeddings import EmbeddingBackend  # type: ignore
+            self.embedder = EmbeddingBackend(
+                backend=embedding_backend,
+                model=embedding_model,
+                openai_api_key=openai_api_key,
+            )
 
         # Configuration for hybrid search
         self.config = {
@@ -142,7 +170,8 @@ class GraphRetriever:
             'path_weight': 0.4,          # β: Weight for path-based relevance
             'edge_weight': 0.2,          # γ: Weight for edge type importance
             'max_path_length': 3,        # Maximum path length to consider
-            'embedding_model': "text-embedding-3-small"
+            'embedding_model': getattr(self.embedder, "model", "text-embedding-3-small"),
+            'embedding_backend': embedding_backend,
         }
 
         # Cache for embeddings
@@ -171,19 +200,14 @@ class GraphRetriever:
             # Generate embeddings for new nodes
             new_nodes = set(self.graph.nodes()) - set(self.embeddings.keys())
             if new_nodes:
-                print(f"Generating embeddings for {len(new_nodes)} new nodes")
+                print(f"Generating embeddings for {len(new_nodes)} new nodes via {self.config['embedding_backend']}")
                 for node in new_nodes:
                     # Include node attributes in embedding context
                     node_context = f"{node} {str(self.graph.nodes[node])}"
-                    response = self.openai_client.embeddings.create(
-                        model=self.config['embedding_model'],
-                        input=node_context,
-                        encoding_format="float"
-                    )
-                    self.embeddings[node] = response.data[0].embedding
+                    self.embeddings[node] = self.embedder.embed(node_context)
 
                 # Save updated cache
-                os.makedirs(os.path.dirname(self.cache_dir), exist_ok=True)
+                os.makedirs(os.path.dirname(self.cache_dir) or ".", exist_ok=True)
                 with open(self.cache_dir, 'w') as f:
                     json.dump(self.embeddings, f)
 
@@ -249,12 +273,7 @@ class GraphRetriever:
         """
         try:
             # Generate query embedding
-            query_response = self.openai_client.embeddings.create(
-                model=self.config['embedding_model'],
-                input=query,
-                encoding_format="float"
-            )
-            query_embedding = query_response.data[0].embedding
+            query_embedding = self.embedder.embed(query)
 
             # Calculate scores for all nodes
             results = []

@@ -1,0 +1,1569 @@
+{
+  "batch_id": "batch001",
+  "annotator": "",
+  "questions": [
+    {
+      "question_id": "comparative_analysis_008",
+      "question": "What are the comparative impacts on safety outcomes between relying more on inspections versus replacements in addressing common problems such as leakage issues and engine problems?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "action_001",
+      "question": "What action could be taken when: #2 & 3 intakes leaking on r/h engine?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "global_007",
+      "question": "What are the emerging trends in fastener issues, and how do they relate to other maintenance problems over time?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "action_022",
+      "question": "What action could be taken when: engine did not start?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "system_level_understanding_007",
+      "question": "How do seasonal variations and environmental conditions impact the prevalence of leakage issues, and what preventive measures could mitigate these effects?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "global_002",
+      "question": "How do maintenance anomalies correlate with specific aircraft types or models, and what does this reveal about design vulnerabilities?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "aircraft_problems_actions_005",
+      "question": "5. Are there any recurring patterns in the types of engine components that experience leakage, and how can material improvements or redesigns help mitigate these leakage issues?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "action_037",
+      "question": "What action could be taken when: l/h eng #2, 3 rocker cover gaskets are leaking?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "global_014",
+      "question": "What systemic relationships exist between various maintenance issues, and how do they inform a holistic understanding of aircraft safety?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "action_031",
+      "question": "What action could be taken when: cyl #4 rocker cover gasket leaking?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "safety_recommendations_008",
+      "question": "How can data analytics tools be utilized to predict and prevent 'other problems' through pattern recognition in maintenance logs?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "aircraft_problems_actions_007",
+      "question": "7. What historical data correlates missing or loose components, like screws, with specific maintenance routines or personnel, and how can training or procedural adjustments reduce these occurrences?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "system_level_understanding_001",
+      "question": "How do engine problems and fastener issues correlate with specific maintenance actions, and what patterns emerge in their resolutions?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "global_004",
+      "question": "How do predictive maintenance strategies differ in their effectiveness across different regions or airline operations?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "global_003",
+      "question": "What are the systemic factors contributing to structural damage, and how do they interact to increase risk?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "aircraft_problems_actions_002",
+      "question": "2. How frequently do incidents of missing or loose screws, such as the baffle screw, occur, and what inspection protocols can be enhanced to ensure such components are secured properly during routine checks?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "action_017",
+      "question": "What action could be taken when: cyl #2 & 4 intakes are leaking?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "global_011",
+      "question": "Which factors contribute most significantly to successful predictive maintenance interventions, and how can they be optimized globally?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "predictive_maintenance_002",
+      "question": "Which component combinations show the highest risk of recurring leakage issues and what preventive measures can be implemented to mitigate this risk?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "global_006",
+      "question": "Which maintenance problems have the strongest correlation with safety incidents, and what does this imply for prioritizing safety recommendations?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "root_cause_analysis_004",
+      "question": "How do multiple factors combine to create recurring fastener issues, and what preventive measures can be implemented?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "maintenance_narratives_006",
+      "question": "6. How do pilot training and experience levels, such as those mentioned in records with private and airline transport pilots, influence the frequency and severity of maintenance-related incidents?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "action_006",
+      "question": "What action could be taken when: l/h eng #2 & 4 intake tube gaskets leaking?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "aircraft_problems_actions_001",
+      "question": "1. What are the common factors contributing to gasket leaks across different engine components, such as intake and rocker covers, and what preventive measures can be implemented to address these issues?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "predictive_maintenance_005",
+      "question": "What indicators suggest imminent leakage issues, and how can these be monitored in real-time to prevent in-flight incidents?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "action_024",
+      "question": "What action could be taken when: l/h engine #3 rocker shaft plug worn?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "global_010",
+      "question": "How do maintenance issues influence aircraft annotation discrepancies, and what systemic improvements are suggested?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "action_002",
+      "question": "What action could be taken when: replace l/h engine torquemeter hoses?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "predictive_maintenance_003",
+      "question": "What maintenance intervals would prevent fastener issues from escalating into structural damage, considering current failure patterns?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "maintenance_narratives_009",
+      "question": "9. What are the commonalities in decision-making errors that lead to continued operation of aircraft with known deficiencies, and how can these be mitigated through improved pilot training and awareness programs?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "maintenance_narratives_001",
+      "question": "1. What common maintenance oversights or pilot errors contribute to the repeated operation of aircraft with known inoperative systems, such as the alternator issue in the Southern Wisconsin Regional record?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "system_level_understanding_006",
+      "question": "What patterns exist between the types of problems reported and the subsequent choice of maintenance actions, and how can this guide resource allocation?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "global_005",
+      "question": "What are the common root causes identified in the dataset that lead to major maintenance issues, and how can they be mitigated?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "action_027",
+      "question": "What action could be taken when: l/h eng #3 baffle (aft) seal loose?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "aircraft_problems_actions_008",
+      "question": "8. How do the frequencies of different types of engine problems vary with aircraft usage patterns, and what predictive maintenance strategies can be implemented to address the most common issues preemptively?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "action_032",
+      "question": "What action could be taken when: r/h baffle plug needs to be replaced?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "aircraft_problems_actions_003",
+      "question": "3. What environmental or operational conditions lead to the rough engine incidents, and how can regular maintenance practices be adjusted to detect and rectify these issues before they manifest during operations?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "safety_recommendations_006",
+      "question": "Which maintenance actions are most effective at preventing the recurrence of fastener issues, and how can these be prioritized?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "aircraft_problems_actions_006",
+      "question": "6. How do engine temperature fluctuations impact the integrity of gaskets and seals, and what monitoring systems can be implemented to detect early signs of wear or failure?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    },
+    {
+      "question_id": "global_015",
+      "question": "What patterns in maintenance data suggest opportunities for technological innovation to enhance safety and efficiency?",
+      "clarity": null,
+      "difficulty": null,
+      "domain_relevance": null,
+      "answerability_without_leak": null,
+      "notes": ""
+    }
+  ],
+  "triples": [
+    {
+      "head": "GREEN LIGHT",
+      "relation": "PART OF",
+      "tail": "NOSE LANDING GEAR",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "WING FUEL TANK SUMPS",
+      "relation": "secondary_of",
+      "tail": "FUEL TANK SUMPS",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "TIE DOWN STRAP",
+      "relation": "PART OF",
+      "tail": "LEFT SKID",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "NO EVIDENCE OF FUEL AT SCENE",
+      "relation": "secondary_of",
+      "tail": "EVIDENCE",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "SELECTED FUEL TANK",
+      "relation": "secondary_of",
+      "tail": "FUEL TANK",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "LOOSE COWLING",
+      "relation": "coreference",
+      "tail": "COWLING",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "INSUFFICIENT NUMBER OF SEATS AND OXYGEN MASKS FOR PASSENGERS ONBOARD",
+      "relation": "secondary_of",
+      "tail": "OXYGEN MASKS",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "SLING LOAD",
+      "relation": "USED BY",
+      "tail": "HELICOPTER",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "WING FUEL TANK SUMPS",
+      "relation": "tertiary_of",
+      "tail": "SUMPS",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "AIR INTAKE PLUGS",
+      "relation": "HAS EFFECT",
+      "tail": "ENGINE OVERHEAT",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "ALL FUEL TANK CAPS",
+      "relation": "secondary_of",
+      "tail": "FUEL TANK CAPS",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "ONE CREWMEMBER",
+      "relation": "secondary_of",
+      "tail": "CREWMEMBER",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "LOGS",
+      "relation": "coreference",
+      "tail": "LOGS",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "CESSNA 207, N1549U",
+      "relation": "secondary_of",
+      "tail": "CESSNA 207",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "FUEL FILTER",
+      "relation": "secondary_of",
+      "tail": "FILTER",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "MAIN ROTOR BLADE",
+      "relation": "secondary_of",
+      "tail": "ROTOR BLADE",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "INITIAL CLIMBOUT",
+      "relation": "secondary_of",
+      "tail": "CLIMBOUT",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "APU DOOR",
+      "relation": "secondary_of",
+      "tail": "DOOR",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "EARLY FUEL EXHAUSTION FROM FUEL SIPHONING",
+      "relation": "secondary_of",
+      "tail": "FUEL EXHAUSTION",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "LEFT ENGINE",
+      "relation": "HAS EFFECT",
+      "tail": "CRACKED ENGINE CASE",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "VIBRATION",
+      "relation": "HAS CAUSE",
+      "tail": "ROTOR BLADE",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "ROUGH ENGINE",
+      "relation": "secondary_of",
+      "tail": "ENGINE",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "RUNWAY CONDITIONS",
+      "relation": "secondary_of",
+      "tail": "CONDITIONS",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "TEST FLIGHT FROM STORAGE",
+      "relation": "secondary_of",
+      "tail": "TEST FLIGHT",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "NOSE BAGGAGE CARGO",
+      "relation": "secondary_of",
+      "tail": "CARGO",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "HYDRO LOCK IN NR5 CYL",
+      "relation": "secondary_of",
+      "tail": "HYDRO LOCK",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "PORP SHAFT",
+      "relation": "secondary_of",
+      "tail": "SHAFT",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "RIGHT TANK",
+      "relation": "secondary_of",
+      "tail": "TANK",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "FUEL CONTAMINATION IN AIRFRAME FUEL FILTER AS WELL AS IN FUEL FILTER AND ENGINE DRIVEN FUEL PUMP FILTER",
+      "relation": "tertiary_of",
+      "tail": "CONTAMINATION",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "TIEDROPE",
+      "relation": "MAINTAINED BY",
+      "tail": "PILOT",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "FLIGHT MANUAL",
+      "relation": "secondary_of",
+      "tail": "MANUAL",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "PILOT ERROR",
+      "relation": "HAS EFFECT",
+      "tail": "FORCED LANDING",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "SELECTED FUEL TANK",
+      "relation": "tertiary_of",
+      "tail": "TANK",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "N759TY, CE-182",
+      "relation": "secondary_of",
+      "tail": "CE-182",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "BARTLESVILLE MUNICIPAL AIRPORT (BVO)",
+      "relation": "secondary_of",
+      "tail": "AIRPORT",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "TRAILER TIE DOWN",
+      "relation": "PART OF",
+      "tail": "SKID",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "WATER IN SUMP",
+      "relation": "secondary_of",
+      "tail": "WATER",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "1147 AM LOCAL TIME",
+      "relation": "secondary_of",
+      "tail": "1147 AM",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "CARBURETOR BOWL",
+      "relation": "secondary_of",
+      "tail": "CARBURETOR",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "ICING",
+      "relation": "HAS EFFECT",
+      "tail": "LOWER ALTITUDE",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "RAMP PERSON",
+      "relation": "secondary_of",
+      "tail": "PERSON",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "HOMEBUILT CIERNIA GLASAIR III",
+      "relation": "secondary_of",
+      "tail": "GLASAIR III",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "N106DA",
+      "relation": "INSTANCE OF",
+      "tail": "AIRCRAFT",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "9 INCH TEAR IN FUSELAGE",
+      "relation": "secondary_of",
+      "tail": "TEAR",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "LOWER ALTITUDE",
+      "relation": "secondary_of",
+      "tail": "ALTITUDE",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "DENTED STABILIZER",
+      "relation": "secondary_of",
+      "tail": "STABILIZER",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "PREVIOUS MAINTENANCE",
+      "relation": "secondary_of",
+      "tail": "MAINTENANCE",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "FUEL TANKS",
+      "relation": "HAS EFFECT",
+      "tail": "ENGINE POWER FAILURE",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "TIE DOWN STRAP ACROSS LEFT SKID",
+      "relation": "tertiary_of",
+      "tail": "STRAP",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "WITNESSES",
+      "relation": "LOCATION",
+      "tail": "GRASS RUNWAY",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "OIL FILLER CAP",
+      "relation": "secondary_of",
+      "tail": "CAP",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "NOSE LANDING GEAR",
+      "relation": "MAINTAINED BY",
+      "tail": "CFI",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "LOOSE COWLING",
+      "relation": "HAS EFFECT",
+      "tail": "DENTED STABILIZER",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "RIGHT AILERON",
+      "relation": "secondary_of",
+      "tail": "AILERON",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "SEVERAL TOUCH AND GO LANDINGS",
+      "relation": "tertiary_of",
+      "tail": "LANDINGS",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "CRACKED ENGINE CASE",
+      "relation": "HAS CAUSE",
+      "tail": "LEFT ENGINE",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "DEMO FLIGHT",
+      "relation": "secondary_of",
+      "tail": "FLIGHT",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "ALL FUEL TANK CAPS",
+      "relation": "tertiary_of",
+      "tail": "CAPS",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "MALFUNCTIONING ENCODING ALTIMETER",
+      "relation": "tertiary_of",
+      "tail": "ALTIMETER",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "FERRY FLIGHT",
+      "relation": "secondary_of",
+      "tail": "FLIGHT",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "TAKEOFF",
+      "relation": "LOCATION",
+      "tail": "2500 FT SOD STRIP",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "DAMAGED PROP",
+      "relation": "secondary_of",
+      "tail": "PROP",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "WING FUEL TANK SUMPS",
+      "relation": "coreference",
+      "tail": "THEY",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "BETHEL AIRPORT",
+      "relation": "secondary_of",
+      "tail": "AIRPORT",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "COPPER TUBE, USED TO HOLD AERIAL BANNERS",
+      "relation": "secondary_of",
+      "tail": "COPPER TUBE",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "FROST",
+      "relation": "PART OF",
+      "tail": "AIRFRAME",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "COPPER TUBE",
+      "relation": "USED BY",
+      "tail": "AERIAL BANNERS",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "NORTHWEST AIRLINES DC-10",
+      "relation": "secondary_of",
+      "tail": "DC-10",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "ATC COMMUNICATION",
+      "relation": "secondary_of",
+      "tail": "COMMUNICATION",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "APU DOOR",
+      "relation": "PART OF",
+      "tail": "SIKORSKY S-70A",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "TRUCK WINDSHIELD",
+      "relation": "secondary_of",
+      "tail": "WINDSHIELD",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "HELICOPTER ENGINE POWER CHECKS",
+      "relation": "MAINTAINED BY",
+      "tail": "PILOT",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "FUEL TANK CAPS",
+      "relation": "MAINTAINED BY",
+      "tail": "PILOT IN COMMAND (PIC)",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "MALFUNCTIONING ENCODING ALTIMETER",
+      "relation": "secondary_of",
+      "tail": "ENCODING ALTIMETER",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "ICE",
+      "relation": "PART OF",
+      "tail": "CARBURETOR BOWL",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "IFR DUAL FLIGHT",
+      "relation": "secondary_of",
+      "tail": "FLIGHT",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "FRONT RANGE AIRPORT",
+      "relation": "secondary_of",
+      "tail": "AIRPORT",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "NOSE HIGH ATTITUDE",
+      "relation": "secondary_of",
+      "tail": "ATTITUDE",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "BELL HELICOPTER MODEL BHT-47-G5, N4754R",
+      "relation": "secondary_of",
+      "tail": "BHT-47-G5",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "HOT OIL SMELL",
+      "relation": "secondary_of",
+      "tail": "SMELL",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "NOSE GEAR",
+      "relation": "secondary_of",
+      "tail": "GEAR",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "WATER IN FUEL",
+      "relation": "secondary_of",
+      "tail": "WATER",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "BRAKE PROBLEMS",
+      "relation": "PART OF",
+      "tail": "AIRCRAFT",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "LEFT ENGINE",
+      "relation": "HAS CAUSE",
+      "tail": "BAD OIL LEAK",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "EMERGENCY OFF AIRPORT LANDING",
+      "relation": "secondary_of",
+      "tail": "LANDING",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "FLY POSITION",
+      "relation": "USED BY",
+      "tail": "TAKEOFF",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "LEFT ENGINE",
+      "relation": "LOCATION",
+      "tail": "H71",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "IMPROPER PREFLIGHT",
+      "relation": "secondary_of",
+      "tail": "PREFLIGHT",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "AIR INTAKE PLUGS",
+      "relation": "secondary_of",
+      "tail": "PLUGS",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "WOODEN WHEEL CHOCK",
+      "relation": "PART OF",
+      "tail": "NOSE BAGGAGE CARGO",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "HELICOPTER",
+      "relation": "LOCATION",
+      "tail": "HELIPAD",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "PILOT",
+      "relation": "coreference",
+      "tail": "PILOT",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "PRIVATE STRIP",
+      "relation": "secondary_of",
+      "tail": "STRIP",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "CRACKED WINDSHIELD",
+      "relation": "secondary_of",
+      "tail": "WINDSHIELD",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "UNCONTROLLED GROUND COLLISION",
+      "relation": "tertiary_of",
+      "tail": "COLLISION",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "BAD OIL LEAK",
+      "relation": "secondary_of",
+      "tail": "OIL LEAK",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "TAXIING AIRCRAFT",
+      "relation": "secondary_of",
+      "tail": "AIRCRAFT",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "EMERGENCY LANDING AREA",
+      "relation": "secondary_of",
+      "tail": "LANDING AREA",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "NEWLY INSTALLED CARPETING",
+      "relation": "secondary_of",
+      "tail": "CARPETING",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "FUEL CONTAMINATION",
+      "relation": "PART OF",
+      "tail": "FUEL FILTER",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "NOSE BAGGAGE DOOR",
+      "relation": "secondary_of",
+      "tail": "BAGGAGE DOOR",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "ONE MAG",
+      "relation": "INSTANCE OF",
+      "tail": "MAG SWITCH",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "FUEL SIPHONING",
+      "relation": "secondary_of",
+      "tail": "SIPHONING",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "LEFT FUEL CAP",
+      "relation": "tertiary_of",
+      "tail": "CAP",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "IMPROPERLY SECURED VENT CAP",
+      "relation": "tertiary_of",
+      "tail": "CAP",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "WATER",
+      "relation": "PART OF",
+      "tail": "FUEL",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "WARNING LIGHT",
+      "relation": "secondary_of",
+      "tail": "LIGHT",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "ENGINE DRIVEN FUEL PUMP FILTER",
+      "relation": "tertiary_of",
+      "tail": "FILTER",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "RUDDER PEDAL",
+      "relation": "secondary_of",
+      "tail": "PEDAL",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "AIRFRAME FUEL FILTER",
+      "relation": "tertiary_of",
+      "tail": "FILTER",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "NO DEFECTS",
+      "relation": "secondary_of",
+      "tail": "DEFECTS",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "MAIN ROTOR BLADE",
+      "relation": "tertiary_of",
+      "tail": "BLADE",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "LEFT PONTOON",
+      "relation": "secondary_of",
+      "tail": "PONTOON",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "WOODEN WHEEL CHOCK",
+      "relation": "secondary_of",
+      "tail": "WHEEL CHOCK",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "AIRPLANE STRUCTURE",
+      "relation": "secondary_of",
+      "tail": "STRUCTURE",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "SAME RUNWAY",
+      "relation": "coreference",
+      "tail": "RUNWAY",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "NOSE BAGGAGE DOOR",
+      "relation": "tertiary_of",
+      "tail": "DOOR",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "BELL HELICOPTER MODEL BHT-47-G5",
+      "relation": "secondary_of",
+      "tail": "BHT-47-G5",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "CRACKED ENGINE CASE",
+      "relation": "tertiary_of",
+      "tail": "CASE",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "PARKED PLANE",
+      "relation": "secondary_of",
+      "tail": "PLANE",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "LOWER ALTITUDE",
+      "relation": "HAS CAUSE",
+      "tail": "ICING",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "HELICOPTER ENGINE",
+      "relation": "secondary_of",
+      "tail": "ENGINE",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "THE PILOT",
+      "relation": "coreference",
+      "tail": "HIS",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "ATC COMMUNICATION",
+      "relation": "LOCATION",
+      "tail": "TCA",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "HELICOPTER ENGINE POWER CHECKS",
+      "relation": "MAINTAINED BY",
+      "tail": "CREWMEMBER",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "ACFT",
+      "relation": "coreference",
+      "tail": "IT",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "POWER LOSS",
+      "relation": "secondary_of",
+      "tail": "LOSS",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "AMATEUR BUILT AIRCRAFT",
+      "relation": "secondary_of",
+      "tail": "AIRCRAFT",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "BELL HELICOPTER",
+      "relation": "secondary_of",
+      "tail": "HELICOPTER",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "ACFT DISPATCHER",
+      "relation": "secondary_of",
+      "tail": "DISPATCHER",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "ANNUAL INSPECTION",
+      "relation": "secondary_of",
+      "tail": "INSPECTION",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "RUDDER CONTROL",
+      "relation": "secondary_of",
+      "tail": "CONTROL",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "ENGINE COWLING",
+      "relation": "secondary_of",
+      "tail": "COWLING",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "PILOT",
+      "relation": "coreference",
+      "tail": "PILOTS",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "TAKEOFF",
+      "relation": "LOCATION",
+      "tail": "BETHEL AIRPORT",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "GROUND STAND BAGGAGE CART WITH INOPERATIVE BRAKES",
+      "relation": "tertiary_of",
+      "tail": "CART",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "BAD OIL LEAK",
+      "relation": "tertiary_of",
+      "tail": "LEAK",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "BHT-47-G5",
+      "relation": "INSTANCE OF",
+      "tail": "HELICOPTER",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "WORN OUT & INEFFECTIVE BRAKES",
+      "relation": "secondary_of",
+      "tail": "BRAKES",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "FRONT BAGGAGE DOOR",
+      "relation": "tertiary_of",
+      "tail": "DOOR",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "ENGINE COWLING",
+      "relation": "coreference",
+      "tail": "COWL",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "UNCONTROLLED GROUND COLLISION",
+      "relation": "secondary_of",
+      "tail": "GROUND COLLISION",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "FUEL CAP",
+      "relation": "secondary_of",
+      "tail": "CAP",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "DEPARTURE FROM A GRASS RUNWAY",
+      "relation": "secondary_of",
+      "tail": "DEPARTURE",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "AUXILIARY FUEL SYSTEM",
+      "relation": "secondary_of",
+      "tail": "FUEL SYSTEM",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "DISPATCHER",
+      "relation": "CONFLICT",
+      "tail": "PILOT",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "BEECH 1900D, N81SK",
+      "relation": "INSTANCE OF",
+      "tail": "SKYWAY AIRLINE FLIGHT",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "PILOTS SEAT",
+      "relation": "secondary_of",
+      "tail": "SEAT",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "LEFT ENGINE",
+      "relation": "secondary_of",
+      "tail": "ENGINE",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    },
+    {
+      "head": "LEFT FUEL CAP",
+      "relation": "secondary_of",
+      "tail": "FUEL CAP",
+      "plausible": null,
+      "relation_fit": null,
+      "notes": ""
+    }
+  ],
+  "answer_preferences": []
+}

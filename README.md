@@ -109,6 +109,16 @@ Advanced question-answering with sensemaking capabilities:
 - **Knowledge Integration**: Combines multiple data sources
 - **Quantitative Evaluation**: Automated scoring and analysis
 
+**Human annotation site** (answer preferences and severity labels):
+
+```bash
+cd keo/sensemaking_QA/human_validation/pref_site
+python3 serve.py
+open http://127.0.0.1:8765/
+```
+
+The server listens on `127.0.0.1:8765`. Annotator 1 signs in with `keo`, Annotator 2 with `eok`, and the adjudicator with `adj`.
+
 ### 5. Vanilla LLM (`vanilla_LLM/`)
 Baseline implementations for comparison:
 

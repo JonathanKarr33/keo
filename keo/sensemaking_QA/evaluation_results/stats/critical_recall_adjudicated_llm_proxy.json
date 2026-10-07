@@ -1,0 +1,1576 @@
+{
+  "batch": "human_validation/ratings/severity_batch001_llm_proxy.json",
+  "kg": "../kg/output/kg_llm/gs100_total500/gemma3_4b_it/kg_gemma3_4b_it.gml",
+  "adjudication": {
+    "kind": "llm_proxy_not_expert",
+    "annotator_id": "llm_proxy:claude-haiku-4-5-20251001",
+    "model_requested": "claude-haiku-4-5-20251001",
+    "n_labeled": 320,
+    "n_pending": 0,
+    "note": "Labels come from Claude Code with no prior_class in the prompt. Do not cite as expert adjudication; use for non-circular recall until humans replace human_class."
+  },
+  "agreement_lexicon_vs_adjudicated": {
+    "n": 320,
+    "accuracy_5way": 0.30625,
+    "cohen_kappa_5way": 0.13344718223957067,
+    "prior_counts": {
+      "catastrophic": 56,
+      "major": 19,
+      "none": 132,
+      "hazardous": 64,
+      "minor": 49
+    },
+    "human_counts": {
+      "catastrophic": 198,
+      "hazardous": 69,
+      "none": 33,
+      "major": 14,
+      "minor": 6
+    },
+    "confusion_prior_rows_human_cols": {
+      "catastrophic": {
+        "catastrophic": 53,
+        "hazardous": 2,
+        "major": 1,
+        "minor": 0,
+        "none": 0
+      },
+      "hazardous": {
+        "catastrophic": 53,
+        "hazardous": 11,
+        "major": 0,
+        "minor": 0,
+        "none": 0
+      },
+      "major": {
+        "catastrophic": 10,
+        "hazardous": 9,
+        "major": 0,
+        "minor": 0,
+        "none": 0
+      },
+      "minor": {
+        "catastrophic": 27,
+        "hazardous": 19,
+        "major": 2,
+        "minor": 1,
+        "none": 0
+      },
+      "none": {
+        "catastrophic": 55,
+        "hazardous": 28,
+        "major": 11,
+        "minor": 5,
+        "none": 33
+      }
+    },
+    "safety_binary": {
+      "tp": 188,
+      "fp": 0,
+      "fn": 99,
+      "tn": 33,
+      "precision": 1.0,
+      "recall": 0.6550522648083623,
+      "lexicon_false_negatives": 99,
+      "lexicon_false_positives": 0
+    }
+  },
+  "critical_recall": {
+    "n_adjudicated": 320,
+    "n_human_high": 285,
+    "n_prior_high": 186,
+    "safety_classes": [
+      "catastrophic",
+      "hazardous",
+      "major",
+      "minor"
+    ],
+    "budgets": [
+      {
+        "budget_tokens": 300,
+        "adjudicated": {
+          "top_weight": {
+            "high_severity_total": 285,
+            "high_severity_retrieved": 7,
+            "high_severity_recall": 0.02456140350877193,
+            "critical_omission_rate": 0.9754385964912281,
+            "edges_selected": 39,
+            "tokens_used": 300,
+            "high_severity_recall_ipw": 0.030215864433747193,
+            "ipw_weight_total": 1157.0156249999998,
+            "ipw_weight_retrieved": 34.96022727272727
+          },
+          "mst": {
+            "high_severity_total": 285,
+            "high_severity_retrieved": 10,
+            "high_severity_recall": 0.03508771929824561,
+            "critical_omission_rate": 0.9649122807017544,
+            "edges_selected": 38,
+            "tokens_used": 296,
+            "high_severity_recall_ipw": 0.04786142836622925,
+            "ipw_weight_total": 1157.0156249999998,
+            "ipw_weight_retrieved": 55.37642045454546
+          },
+          "budgeted_coverage": {
+            "high_severity_total": 285,
+            "high_severity_retrieved": 7,
+            "high_severity_recall": 0.02456140350877193,
+            "critical_omission_rate": 0.9754385964912281,
+            "edges_selected": 47,
+            "tokens_used": 296,
+            "high_severity_recall_ipw": 0.022372163886566522,
+            "ipw_weight_total": 1157.0156249999998,
+            "ipw_weight_retrieved": 25.884943181818187
+          },
+          "risk_budgeted_coverage": {
+            "high_severity_total": 285,
+            "high_severity_retrieved": 24,
+            "high_severity_recall": 0.08421052631578947,
+            "critical_omission_rate": 0.9157894736842105,
+            "edges_selected": 39,
+            "tokens_used": 300,
+            "high_severity_recall_ipw": 0.033664440867779206,
+            "ipw_weight_total": 1157.0156249999998,
+            "ipw_weight_retrieved": 38.95028409090909
+          },
+          "risk_floor_0.25": {
+            "high_severity_total": 285,
+            "high_severity_retrieved": 29,
+            "high_severity_recall": 0.10175438596491228,
+            "critical_omission_rate": 0.8982456140350877,
+            "edges_selected": 40,
+            "tokens_used": 298,
+            "high_severity_recall_ipw": 0.03798590368294214,
+            "ipw_weight_total": 1157.0156249999998,
+            "ipw_weight_retrieved": 43.95028409090909
+          }
+        },
+        "lexicon_prior_on_sample": {
+          "top_weight": {
+            "high_severity_total": 186,
+            "high_severity_retrieved": 4,
+            "high_severity_recall": 0.021505376344086023,
+            "critical_omission_rate": 0.978494623655914,
+            "edges_selected": 39,
+            "tokens_used": 300,
+            "high_severity_recall_ipw": 0.029868819374369325,
+            "ipw_weight_total": 232.265625,
+            "ipw_weight_retrieved": 6.9375
+          },
+          "mst": {
+            "high_severity_total": 186,
+            "high_severity_retrieved": 5,
+            "high_severity_recall": 0.026881720430107527,
+            "critical_omission_rate": 0.9731182795698925,
+            "edges_selected": 38,
+            "tokens_used": 296,
+            "high_severity_recall_ipw": 0.03733602421796166,
+            "ipw_weight_total": 232.265625,
+            "ipw_weight_retrieved": 8.671875
+          },
+          "budgeted_coverage": {
+            "high_severity_total": 186,
+            "high_severity_retrieved": 5,
+            "high_severity_recall": 0.026881720430107527,
+            "critical_omission_rate": 0.9731182795698925,
+            "edges_selected": 47,
+            "tokens_used": 296,
+            "high_severity_recall_ipw": 0.031012445341405986,
+            "ipw_weight_total": 232.265625,
+            "ipw_weight_retrieved": 7.203125
+          },
+          "risk_budgeted_coverage": {
+            "high_severity_total": 186,
+            "high_severity_retrieved": 23,
+            "high_severity_recall": 0.12365591397849462,
+            "critical_omission_rate": 0.8763440860215054,
+            "edges_selected": 39,
+            "tokens_used": 300,
+            "high_severity_recall_ipw": 0.12748065926673394,
+            "ipw_weight_total": 232.265625,
+            "ipw_weight_retrieved": 29.609375
+          },
+          "risk_floor_0.25": {
+            "high_severity_total": 186,
+            "high_severity_retrieved": 28,
+            "high_severity_recall": 0.15053763440860216,
+            "critical_omission_rate": 0.8494623655913979,
+            "edges_selected": 40,
+            "tokens_used": 298,
+            "high_severity_recall_ipw": 0.14900773629330644,
+            "ipw_weight_total": 232.265625,
+            "ipw_weight_retrieved": 34.609375
+          }
+        },
+        "lexicon_full_graph": {
+          "top_weight": {
+            "high_severity_total": 219,
+            "high_severity_retrieved": 7,
+            "high_severity_recall": 0.0319634703196347,
+            "critical_omission_rate": 0.9680365296803652,
+            "mean_severity_of_selection": 1.2692307692307692,
+            "edges_selected": 39,
+            "tokens_used": 300,
+            "entities_covered": 39
+          },
+          "mst": {
+            "high_severity_total": 219,
+            "high_severity_retrieved": 7,
+            "high_severity_recall": 0.0319634703196347,
+            "critical_omission_rate": 0.9680365296803652,
+            "mean_severity_of_selection": 1.2763157894736843,
+            "edges_selected": 38,
+            "tokens_used": 296,
+            "entities_covered": 42
+          },
+          "budgeted_coverage": {
+            "high_severity_total": 219,
+            "high_severity_retrieved": 7,
+            "high_severity_recall": 0.0319634703196347,
+            "critical_omission_rate": 0.9680365296803652,
+            "mean_severity_of_selection": 1.2446808510638299,
+            "edges_selected": 47,
+            "tokens_used": 296,
+            "entities_covered": 84
+          },
+          "risk_budgeted_coverage": {
+            "high_severity_total": 219,
+            "high_severity_retrieved": 26,
+            "high_severity_recall": 0.1187214611872146,
+            "critical_omission_rate": 0.8812785388127854,
+            "mean_severity_of_selection": 2.1538461538461537,
+            "edges_selected": 39,
+            "tokens_used": 300,
+            "entities_covered": 72
+          },
+          "risk_floor_0.25": {
+            "high_severity_total": 219,
+            "high_severity_retrieved": 31,
+            "high_severity_recall": 0.1415525114155251,
+            "critical_omission_rate": 0.8584474885844748,
+            "mean_severity_of_selection": 2.4,
+            "edges_selected": 40,
+            "tokens_used": 298,
+            "entities_covered": 66
+          }
+        }
+      },
+      {
+        "budget_tokens": 600,
+        "adjudicated": {
+          "top_weight": {
+            "high_severity_total": 285,
+            "high_severity_retrieved": 11,
+            "high_severity_recall": 0.03859649122807018,
+            "critical_omission_rate": 0.9614035087719298,
+            "edges_selected": 75,
+            "tokens_used": 599,
+            "high_severity_recall_ipw": 0.05593470662546546,
+            "ipw_weight_total": 1157.0156249999998,
+            "ipw_weight_retrieved": 64.71732954545455
+          },
+          "mst": {
+            "high_severity_total": 285,
+            "high_severity_retrieved": 13,
+            "high_severity_recall": 0.0456140350877193,
+            "critical_omission_rate": 0.9543859649122807,
+            "edges_selected": 74,
+            "tokens_used": 600,
+            "high_severity_recall_ipw": 0.07208126314393788,
+            "ipw_weight_total": 1157.0156249999998,
+            "ipw_weight_retrieved": 83.39914772727273
+          },
+          "budgeted_coverage": {
+            "high_severity_total": 285,
+            "high_severity_retrieved": 14,
+            "high_severity_recall": 0.04912280701754386,
+            "critical_omission_rate": 0.9508771929824561,
+            "edges_selected": 92,
+            "tokens_used": 598,
+            "high_severity_recall_ipw": 0.050683883767382545,
+            "ipw_weight_total": 1157.0156249999998,
+            "ipw_weight_retrieved": 58.64204545454546
+          },
+          "risk_budgeted_coverage": {
+            "high_severity_total": 285,
+            "high_severity_retrieved": 44,
+            "high_severity_recall": 0.1543859649122807,
+            "critical_omission_rate": 0.8456140350877193,
+            "edges_selected": 80,
+            "tokens_used": 600,
+            "high_severity_recall_ipw": 0.05942870752658867,
+            "ipw_weight_total": 1157.0156249999998,
+            "ipw_weight_retrieved": 68.75994318181819
+          },
+          "risk_floor_0.25": {
+            "high_severity_total": 285,
+            "high_severity_retrieved": 53,
+            "high_severity_recall": 0.18596491228070175,
+            "critical_omission_rate": 0.8140350877192982,
+            "edges_selected": 78,
+            "tokens_used": 599,
+            "high_severity_recall_ipw": 0.06720734059388196,
+            "ipw_weight_total": 1157.0156249999998,
+            "ipw_weight_retrieved": 77.75994318181819
+          }
+        },
+        "lexicon_prior_on_sample": {
+          "top_weight": {
+            "high_severity_total": 186,
+            "high_severity_retrieved": 5,
+            "high_severity_recall": 0.026881720430107527,
+            "critical_omission_rate": 0.9731182795698925,
+            "edges_selected": 75,
+            "tokens_used": 599,
+            "high_severity_recall_ipw": 0.03733602421796166,
+            "ipw_weight_total": 232.265625,
+            "ipw_weight_retrieved": 8.671875
+          },
+          "mst": {
+            "high_severity_total": 186,
+            "high_severity_retrieved": 5,
+            "high_severity_recall": 0.026881720430107527,
+            "critical_omission_rate": 0.9731182795698925,
+            "edges_selected": 74,
+            "tokens_used": 600,
+            "high_severity_recall_ipw": 0.03733602421796166,
+            "ipw_weight_total": 232.265625,
+            "ipw_weight_retrieved": 8.671875
+          },
+          "budgeted_coverage": {
+            "high_severity_total": 186,
+            "high_severity_retrieved": 9,
+            "high_severity_recall": 0.04838709677419355,
+            "critical_omission_rate": 0.9516129032258065,
+            "edges_selected": 92,
+            "tokens_used": 598,
+            "high_severity_recall_ipw": 0.05139589640094181,
+            "ipw_weight_total": 232.265625,
+            "ipw_weight_retrieved": 11.9375
+          },
+          "risk_budgeted_coverage": {
+            "high_severity_total": 186,
+            "high_severity_retrieved": 42,
+            "high_severity_recall": 0.22580645161290322,
+            "critical_omission_rate": 0.7741935483870968,
+            "edges_selected": 80,
+            "tokens_used": 600,
+            "high_severity_recall_ipw": 0.21560713084426505,
+            "ipw_weight_total": 232.265625,
+            "ipw_weight_retrieved": 50.078125
+          },
+          "risk_floor_0.25": {
+            "high_severity_total": 186,
+            "high_severity_retrieved": 51,
+            "high_severity_recall": 0.27419354838709675,
+            "critical_omission_rate": 0.7258064516129032,
+            "edges_selected": 78,
+            "tokens_used": 599,
+            "high_severity_recall_ipw": 0.25435586949209554,
+            "ipw_weight_total": 232.265625,
+            "ipw_weight_retrieved": 59.078125
+          }
+        },
+        "lexicon_full_graph": {
+          "top_weight": {
+            "high_severity_total": 219,
+            "high_severity_retrieved": 11,
+            "high_severity_recall": 0.0502283105022831,
+            "critical_omission_rate": 0.9497716894977168,
+            "mean_severity_of_selection": 1.22,
+            "edges_selected": 75,
+            "tokens_used": 599,
+            "entities_covered": 77
+          },
+          "mst": {
+            "high_severity_total": 219,
+            "high_severity_retrieved": 8,
+            "high_severity_recall": 0.0365296803652968,
+            "critical_omission_rate": 0.9634703196347032,
+            "mean_severity_of_selection": 1.162162162162162,
+            "edges_selected": 74,
+            "tokens_used": 600,
+            "entities_covered": 88
+          },
+          "budgeted_coverage": {
+            "high_severity_total": 219,
+            "high_severity_retrieved": 11,
+            "high_severity_recall": 0.0502283105022831,
+            "critical_omission_rate": 0.9497716894977168,
+            "mean_severity_of_selection": 1.190217391304348,
+            "edges_selected": 92,
+            "tokens_used": 598,
+            "entities_covered": 169
+          },
+          "risk_budgeted_coverage": {
+            "high_severity_total": 219,
+            "high_severity_retrieved": 49,
+            "high_severity_recall": 0.2237442922374429,
+            "critical_omission_rate": 0.7762557077625571,
+            "mean_severity_of_selection": 1.9575,
+            "edges_selected": 80,
+            "tokens_used": 600,
+            "entities_covered": 142
+          },
+          "risk_floor_0.25": {
+            "high_severity_total": 219,
+            "high_severity_retrieved": 58,
+            "high_severity_recall": 0.2648401826484018,
+            "critical_omission_rate": 0.7351598173515982,
+            "mean_severity_of_selection": 2.2512820512820513,
+            "edges_selected": 78,
+            "tokens_used": 599,
+            "entities_covered": 123
+          }
+        }
+      },
+      {
+        "budget_tokens": 1200,
+        "adjudicated": {
+          "top_weight": {
+            "high_severity_total": 285,
+            "high_severity_retrieved": 20,
+            "high_severity_recall": 0.07017543859649122,
+            "critical_omission_rate": 0.9298245614035088,
+            "edges_selected": 151,
+            "tokens_used": 1200,
+            "high_severity_recall_ipw": 0.09318399732855029,
+            "ipw_weight_total": 1157.0156249999998,
+            "ipw_weight_retrieved": 107.81534090909092
+          },
+          "mst": {
+            "high_severity_total": 285,
+            "high_severity_retrieved": 21,
+            "high_severity_recall": 0.07368421052631578,
+            "critical_omission_rate": 0.9263157894736842,
+            "edges_selected": 150,
+            "tokens_used": 1199,
+            "high_severity_recall_ipw": 0.1012572755877865,
+            "ipw_weight_total": 1157.0156249999998,
+            "ipw_weight_retrieved": 117.15625000000001
+          },
+          "budgeted_coverage": {
+            "high_severity_total": 285,
+            "high_severity_retrieved": 25,
+            "high_severity_recall": 0.08771929824561403,
+            "critical_omission_rate": 0.9122807017543859,
+            "edges_selected": 172,
+            "tokens_used": 1197,
+            "high_severity_recall_ipw": 0.08966175959653255,
+            "ipw_weight_total": 1157.0156249999998,
+            "ipw_weight_retrieved": 103.74005681818184
+          },
+          "risk_budgeted_coverage": {
+            "high_severity_total": 285,
+            "high_severity_retrieved": 79,
+            "high_severity_recall": 0.2771929824561403,
+            "critical_omission_rate": 0.7228070175438597,
+            "edges_selected": 157,
+            "tokens_used": 1199,
+            "high_severity_recall_ipw": 0.11447947857622535,
+            "ipw_weight_total": 1157.0156249999998,
+            "ipw_weight_retrieved": 132.45454545454547
+          },
+          "risk_floor_0.25": {
+            "high_severity_total": 285,
+            "high_severity_retrieved": 89,
+            "high_severity_recall": 0.312280701754386,
+            "critical_omission_rate": 0.687719298245614,
+            "edges_selected": 157,
+            "tokens_used": 1200,
+            "high_severity_recall_ipw": 0.10933914766512104,
+            "ipw_weight_total": 1157.0156249999998,
+            "ipw_weight_retrieved": 126.50710227272728
+          }
+        },
+        "lexicon_prior_on_sample": {
+          "top_weight": {
+            "high_severity_total": 186,
+            "high_severity_retrieved": 10,
+            "high_severity_recall": 0.053763440860215055,
+            "critical_omission_rate": 0.946236559139785,
+            "edges_selected": 151,
+            "tokens_used": 1200,
+            "high_severity_recall_ipw": 0.06202489068281197,
+            "ipw_weight_total": 232.265625,
+            "ipw_weight_retrieved": 14.40625
+          },
+          "mst": {
+            "high_severity_total": 186,
+            "high_severity_retrieved": 10,
+            "high_severity_recall": 0.053763440860215055,
+            "critical_omission_rate": 0.946236559139785,
+            "edges_selected": 150,
+            "tokens_used": 1199,
+            "high_severity_recall_ipw": 0.06202489068281197,
+            "ipw_weight_total": 232.265625,
+            "ipw_weight_retrieved": 14.40625
+          },
+          "budgeted_coverage": {
+            "high_severity_total": 186,
+            "high_severity_retrieved": 16,
+            "high_severity_recall": 0.08602150537634409,
+            "critical_omission_rate": 0.9139784946236559,
+            "edges_selected": 172,
+            "tokens_used": 1197,
+            "high_severity_recall_ipw": 0.08469559367642113,
+            "ipw_weight_total": 232.265625,
+            "ipw_weight_retrieved": 19.671875
+          },
+          "risk_budgeted_coverage": {
+            "high_severity_total": 186,
+            "high_severity_retrieved": 74,
+            "high_severity_recall": 0.3978494623655914,
+            "critical_omission_rate": 0.6021505376344086,
+            "edges_selected": 157,
+            "tokens_used": 1199,
+            "high_severity_recall_ipw": 0.36918937100571814,
+            "ipw_weight_total": 232.265625,
+            "ipw_weight_retrieved": 85.75
+          },
+          "risk_floor_0.25": {
+            "high_severity_total": 186,
+            "high_severity_retrieved": 86,
+            "high_severity_recall": 0.46236559139784944,
+            "critical_omission_rate": 0.5376344086021505,
+            "edges_selected": 157,
+            "tokens_used": 1200,
+            "high_severity_recall_ipw": 0.42401614530776993,
+            "ipw_weight_total": 232.265625,
+            "ipw_weight_retrieved": 98.484375
+          }
+        },
+        "lexicon_full_graph": {
+          "top_weight": {
+            "high_severity_total": 219,
+            "high_severity_retrieved": 14,
+            "high_severity_recall": 0.0639269406392694,
+            "critical_omission_rate": 0.9360730593607306,
+            "mean_severity_of_selection": 1.1443708609271523,
+            "edges_selected": 151,
+            "tokens_used": 1200,
+            "entities_covered": 149
+          },
+          "mst": {
+            "high_severity_total": 219,
+            "high_severity_retrieved": 11,
+            "high_severity_recall": 0.0502283105022831,
+            "critical_omission_rate": 0.9497716894977168,
+            "mean_severity_of_selection": 1.1153333333333335,
+            "edges_selected": 150,
+            "tokens_used": 1199,
+            "entities_covered": 161
+          },
+          "budgeted_coverage": {
+            "high_severity_total": 219,
+            "high_severity_retrieved": 18,
+            "high_severity_recall": 0.0821917808219178,
+            "critical_omission_rate": 0.9178082191780822,
+            "mean_severity_of_selection": 1.1459302325581395,
+            "edges_selected": 172,
+            "tokens_used": 1197,
+            "entities_covered": 327
+          },
+          "risk_budgeted_coverage": {
+            "high_severity_total": 219,
+            "high_severity_retrieved": 81,
+            "high_severity_recall": 0.3698630136986301,
+            "critical_omission_rate": 0.6301369863013699,
+            "mean_severity_of_selection": 1.7770700636942676,
+            "edges_selected": 157,
+            "tokens_used": 1199,
+            "entities_covered": 271
+          },
+          "risk_floor_0.25": {
+            "high_severity_total": 219,
+            "high_severity_retrieved": 92,
+            "high_severity_recall": 0.4200913242009132,
+            "critical_omission_rate": 0.5799086757990868,
+            "mean_severity_of_selection": 1.929936305732484,
+            "edges_selected": 157,
+            "tokens_used": 1200,
+            "entities_covered": 252
+          }
+        }
+      },
+      {
+        "budget_tokens": 2400,
+        "adjudicated": {
+          "top_weight": {
+            "high_severity_total": 285,
+            "high_severity_retrieved": 37,
+            "high_severity_recall": 0.12982456140350876,
+            "critical_omission_rate": 0.8701754385964913,
+            "edges_selected": 290,
+            "tokens_used": 2400,
+            "high_severity_recall_ipw": 0.1615134450284149,
+            "ipw_weight_total": 1157.0156249999998,
+            "ipw_weight_retrieved": 186.87357954545456
+          },
+          "mst": {
+            "high_severity_total": 285,
+            "high_severity_retrieved": 36,
+            "high_severity_recall": 0.12631578947368421,
+            "critical_omission_rate": 0.8736842105263158,
+            "edges_selected": 287,
+            "tokens_used": 2400,
+            "high_severity_recall_ipw": 0.1653192787576777,
+            "ipw_weight_total": 1157.0156249999998,
+            "ipw_weight_retrieved": 191.27698863636365
+          },
+          "budgeted_coverage": {
+            "high_severity_total": 285,
+            "high_severity_retrieved": 53,
+            "high_severity_recall": 0.18596491228070175,
+            "critical_omission_rate": 0.8140350877192982,
+            "edges_selected": 308,
+            "tokens_used": 2398,
+            "high_severity_recall_ipw": 0.1800122523292317,
+            "ipw_weight_total": 1157.0156249999998,
+            "ipw_weight_retrieved": 208.27698863636368
+          },
+          "risk_budgeted_coverage": {
+            "high_severity_total": 285,
+            "high_severity_retrieved": 110,
+            "high_severity_recall": 0.38596491228070173,
+            "critical_omission_rate": 0.6140350877192983,
+            "edges_selected": 298,
+            "tokens_used": 2398,
+            "high_severity_recall_ipw": 0.1974478815624544,
+            "ipw_weight_total": 1157.0156249999998,
+            "ipw_weight_retrieved": 228.45028409090912
+          },
+          "risk_floor_0.25": {
+            "high_severity_total": 285,
+            "high_severity_retrieved": 124,
+            "high_severity_recall": 0.43508771929824563,
+            "critical_omission_rate": 0.5649122807017544,
+            "edges_selected": 300,
+            "tokens_used": 2400,
+            "high_severity_recall_ipw": 0.19576472090348043,
+            "ipw_weight_total": 1157.0156249999998,
+            "ipw_weight_retrieved": 226.50284090909093
+          }
+        },
+        "lexicon_prior_on_sample": {
+          "top_weight": {
+            "high_severity_total": 186,
+            "high_severity_retrieved": 20,
+            "high_severity_recall": 0.10752688172043011,
+            "critical_omission_rate": 0.8924731182795699,
+            "edges_selected": 290,
+            "tokens_used": 2400,
+            "high_severity_recall_ipw": 0.12088799192734612,
+            "ipw_weight_total": 232.265625,
+            "ipw_weight_retrieved": 28.078125
+          },
+          "mst": {
+            "high_severity_total": 186,
+            "high_severity_retrieved": 18,
+            "high_severity_recall": 0.0967741935483871,
+            "critical_omission_rate": 0.9032258064516129,
+            "edges_selected": 287,
+            "tokens_used": 2400,
+            "high_severity_recall_ipw": 0.09963000336360578,
+            "ipw_weight_total": 232.265625,
+            "ipw_weight_retrieved": 23.140625
+          },
+          "budgeted_coverage": {
+            "high_severity_total": 186,
+            "high_severity_retrieved": 35,
+            "high_severity_recall": 0.1881720430107527,
+            "critical_omission_rate": 0.8118279569892473,
+            "edges_selected": 308,
+            "tokens_used": 2398,
+            "high_severity_recall_ipw": 0.17282206525395225,
+            "ipw_weight_total": 232.265625,
+            "ipw_weight_retrieved": 40.140625
+          },
+          "risk_budgeted_coverage": {
+            "high_severity_total": 186,
+            "high_severity_retrieved": 98,
+            "high_severity_recall": 0.5268817204301075,
+            "critical_omission_rate": 0.4731182795698925,
+            "edges_selected": 298,
+            "tokens_used": 2398,
+            "high_severity_recall_ipw": 0.5009754456777665,
+            "ipw_weight_total": 232.265625,
+            "ipw_weight_retrieved": 116.359375
+          },
+          "risk_floor_0.25": {
+            "high_severity_total": 186,
+            "high_severity_retrieved": 114,
+            "high_severity_recall": 0.6129032258064516,
+            "critical_omission_rate": 0.3870967741935484,
+            "edges_selected": 300,
+            "tokens_used": 2400,
+            "high_severity_recall_ipw": 0.5730238816010763,
+            "ipw_weight_total": 232.265625,
+            "ipw_weight_retrieved": 133.09375
+          }
+        },
+        "lexicon_full_graph": {
+          "top_weight": {
+            "high_severity_total": 219,
+            "high_severity_retrieved": 30,
+            "high_severity_recall": 0.136986301369863,
+            "critical_omission_rate": 0.863013698630137,
+            "mean_severity_of_selection": 1.1510344827586207,
+            "edges_selected": 290,
+            "tokens_used": 2400,
+            "entities_covered": 274
+          },
+          "mst": {
+            "high_severity_total": 219,
+            "high_severity_retrieved": 21,
+            "high_severity_recall": 0.0958904109589041,
+            "critical_omission_rate": 0.904109589041096,
+            "mean_severity_of_selection": 1.1156794425087109,
+            "edges_selected": 287,
+            "tokens_used": 2400,
+            "entities_covered": 295
+          },
+          "budgeted_coverage": {
+            "high_severity_total": 219,
+            "high_severity_retrieved": 38,
+            "high_severity_recall": 0.1735159817351598,
+            "critical_omission_rate": 0.8264840182648402,
+            "mean_severity_of_selection": 1.1623376623376624,
+            "edges_selected": 308,
+            "tokens_used": 2398,
+            "entities_covered": 584
+          },
+          "risk_budgeted_coverage": {
+            "high_severity_total": 219,
+            "high_severity_retrieved": 119,
+            "high_severity_recall": 0.54337899543379,
+            "critical_omission_rate": 0.45662100456621,
+            "mean_severity_of_selection": 1.5865771812080536,
+            "edges_selected": 298,
+            "tokens_used": 2398,
+            "entities_covered": 519
+          },
+          "risk_floor_0.25": {
+            "high_severity_total": 219,
+            "high_severity_retrieved": 138,
+            "high_severity_recall": 0.6301369863013698,
+            "critical_omission_rate": 0.36986301369863017,
+            "mean_severity_of_selection": 1.7093333333333331,
+            "edges_selected": 300,
+            "tokens_used": 2400,
+            "entities_covered": 488
+          }
+        }
+      }
+    ]
+  },
+  "reading": "adjudicated.high_severity_recall is the non-circular number: policies still *select* using the lexicon prior, but recall is scored against independent labels. lexicon_prior_on_sample is the circular baseline on the same 320. lexicon_full_graph is the paper's existing full-KG figure.",
+  "hazard_mention_adjudicated": {
+    "n": 133,
+    "n_adjudicated_phrases": 364,
+    "mean_delta_mentions": -0.7443609022556391,
+    "frac_arm_more": 0.3082706766917293,
+    "frac_ref_more": 0.43609022556390975,
+    "reading": "Mentions of adjudicated safety-triple head/tail strings in answers. Phrase set comes from human_class (or llm_proxy), not the lexicon prior.",
+    "per_question": [
+      {
+        "question_id": "action_001",
+        "n_ref": 3,
+        "n_arm": 1,
+        "delta": -2
+      },
+      {
+        "question_id": "action_002",
+        "n_ref": 3,
+        "n_arm": 3,
+        "delta": 0
+      },
+      {
+        "question_id": "action_003",
+        "n_ref": 2,
+        "n_arm": 2,
+        "delta": 0
+      },
+      {
+        "question_id": "action_004",
+        "n_ref": 3,
+        "n_arm": 3,
+        "delta": 0
+      },
+      {
+        "question_id": "action_005",
+        "n_ref": 3,
+        "n_arm": 4,
+        "delta": 1
+      },
+      {
+        "question_id": "action_006",
+        "n_ref": 2,
+        "n_arm": 2,
+        "delta": 0
+      },
+      {
+        "question_id": "action_007",
+        "n_ref": 3,
+        "n_arm": 4,
+        "delta": 1
+      },
+      {
+        "question_id": "action_008",
+        "n_ref": 2,
+        "n_arm": 1,
+        "delta": -1
+      },
+      {
+        "question_id": "action_009",
+        "n_ref": 1,
+        "n_arm": 2,
+        "delta": 1
+      },
+      {
+        "question_id": "action_010",
+        "n_ref": 1,
+        "n_arm": 3,
+        "delta": 2
+      },
+      {
+        "question_id": "action_011",
+        "n_ref": 1,
+        "n_arm": 2,
+        "delta": 1
+      },
+      {
+        "question_id": "action_012",
+        "n_ref": 8,
+        "n_arm": 4,
+        "delta": -4
+      },
+      {
+        "question_id": "action_013",
+        "n_ref": 5,
+        "n_arm": 0,
+        "delta": -5
+      },
+      {
+        "question_id": "action_014",
+        "n_ref": 3,
+        "n_arm": 3,
+        "delta": 0
+      },
+      {
+        "question_id": "action_015",
+        "n_ref": 2,
+        "n_arm": 2,
+        "delta": 0
+      },
+      {
+        "question_id": "action_016",
+        "n_ref": 3,
+        "n_arm": 8,
+        "delta": 5
+      },
+      {
+        "question_id": "action_017",
+        "n_ref": 1,
+        "n_arm": 1,
+        "delta": 0
+      },
+      {
+        "question_id": "action_018",
+        "n_ref": 2,
+        "n_arm": 5,
+        "delta": 3
+      },
+      {
+        "question_id": "action_019",
+        "n_ref": 8,
+        "n_arm": 5,
+        "delta": -3
+      },
+      {
+        "question_id": "action_020",
+        "n_ref": 8,
+        "n_arm": 13,
+        "delta": 5
+      },
+      {
+        "question_id": "action_021",
+        "n_ref": 5,
+        "n_arm": 3,
+        "delta": -2
+      },
+      {
+        "question_id": "action_022",
+        "n_ref": 5,
+        "n_arm": 6,
+        "delta": 1
+      },
+      {
+        "question_id": "action_023",
+        "n_ref": 2,
+        "n_arm": 5,
+        "delta": 3
+      },
+      {
+        "question_id": "action_024",
+        "n_ref": 3,
+        "n_arm": 3,
+        "delta": 0
+      },
+      {
+        "question_id": "action_025",
+        "n_ref": 6,
+        "n_arm": 2,
+        "delta": -4
+      },
+      {
+        "question_id": "action_026",
+        "n_ref": 5,
+        "n_arm": 7,
+        "delta": 2
+      },
+      {
+        "question_id": "action_027",
+        "n_ref": 2,
+        "n_arm": 4,
+        "delta": 2
+      },
+      {
+        "question_id": "action_028",
+        "n_ref": 4,
+        "n_arm": 4,
+        "delta": 0
+      },
+      {
+        "question_id": "action_029",
+        "n_ref": 4,
+        "n_arm": 5,
+        "delta": 1
+      },
+      {
+        "question_id": "action_030",
+        "n_ref": 4,
+        "n_arm": 1,
+        "delta": -3
+      },
+      {
+        "question_id": "action_031",
+        "n_ref": 2,
+        "n_arm": 2,
+        "delta": 0
+      },
+      {
+        "question_id": "action_032",
+        "n_ref": 1,
+        "n_arm": 0,
+        "delta": -1
+      },
+      {
+        "question_id": "action_033",
+        "n_ref": 3,
+        "n_arm": 3,
+        "delta": 0
+      },
+      {
+        "question_id": "action_034",
+        "n_ref": 1,
+        "n_arm": 1,
+        "delta": 0
+      },
+      {
+        "question_id": "action_035",
+        "n_ref": 2,
+        "n_arm": 3,
+        "delta": 1
+      },
+      {
+        "question_id": "action_036",
+        "n_ref": 5,
+        "n_arm": 4,
+        "delta": -1
+      },
+      {
+        "question_id": "action_037",
+        "n_ref": 3,
+        "n_arm": 1,
+        "delta": -2
+      },
+      {
+        "question_id": "action_038",
+        "n_ref": 2,
+        "n_arm": 2,
+        "delta": 0
+      },
+      {
+        "question_id": "action_039",
+        "n_ref": 3,
+        "n_arm": 3,
+        "delta": 0
+      },
+      {
+        "question_id": "action_040",
+        "n_ref": 2,
+        "n_arm": 2,
+        "delta": 0
+      },
+      {
+        "question_id": "action_041",
+        "n_ref": 1,
+        "n_arm": 1,
+        "delta": 0
+      },
+      {
+        "question_id": "action_042",
+        "n_ref": 3,
+        "n_arm": 2,
+        "delta": -1
+      },
+      {
+        "question_id": "action_043",
+        "n_ref": 1,
+        "n_arm": 3,
+        "delta": 2
+      },
+      {
+        "question_id": "action_044",
+        "n_ref": 4,
+        "n_arm": 0,
+        "delta": -4
+      },
+      {
+        "question_id": "action_045",
+        "n_ref": 2,
+        "n_arm": 4,
+        "delta": 2
+      },
+      {
+        "question_id": "action_046",
+        "n_ref": 0,
+        "n_arm": 4,
+        "delta": 4
+      },
+      {
+        "question_id": "action_047",
+        "n_ref": 1,
+        "n_arm": 1,
+        "delta": 0
+      },
+      {
+        "question_id": "action_048",
+        "n_ref": 3,
+        "n_arm": 5,
+        "delta": 2
+      },
+      {
+        "question_id": "action_049",
+        "n_ref": 4,
+        "n_arm": 4,
+        "delta": 0
+      },
+      {
+        "question_id": "action_050",
+        "n_ref": 3,
+        "n_arm": 2,
+        "delta": -1
+      },
+      {
+        "question_id": "aircraft_problems_actions_001",
+        "n_ref": 13,
+        "n_arm": 6,
+        "delta": -7
+      },
+      {
+        "question_id": "aircraft_problems_actions_002",
+        "n_ref": 11,
+        "n_arm": 10,
+        "delta": -1
+      },
+      {
+        "question_id": "aircraft_problems_actions_003",
+        "n_ref": 15,
+        "n_arm": 15,
+        "delta": 0
+      },
+      {
+        "question_id": "aircraft_problems_actions_004",
+        "n_ref": 16,
+        "n_arm": 16,
+        "delta": 0
+      },
+      {
+        "question_id": "aircraft_problems_actions_005",
+        "n_ref": 21,
+        "n_arm": 22,
+        "delta": 1
+      },
+      {
+        "question_id": "aircraft_problems_actions_006",
+        "n_ref": 12,
+        "n_arm": 11,
+        "delta": -1
+      },
+      {
+        "question_id": "aircraft_problems_actions_007",
+        "n_ref": 12,
+        "n_arm": 12,
+        "delta": 0
+      },
+      {
+        "question_id": "aircraft_problems_actions_008",
+        "n_ref": 14,
+        "n_arm": 14,
+        "delta": 0
+      },
+      {
+        "question_id": "aircraft_problems_actions_009",
+        "n_ref": 13,
+        "n_arm": 8,
+        "delta": -5
+      },
+      {
+        "question_id": "aircraft_problems_actions_010",
+        "n_ref": 13,
+        "n_arm": 7,
+        "delta": -6
+      },
+      {
+        "question_id": "comparative_analysis_001",
+        "n_ref": 15,
+        "n_arm": 17,
+        "delta": 2
+      },
+      {
+        "question_id": "comparative_analysis_002",
+        "n_ref": 14,
+        "n_arm": 13,
+        "delta": -1
+      },
+      {
+        "question_id": "comparative_analysis_003",
+        "n_ref": 16,
+        "n_arm": 15,
+        "delta": -1
+      },
+      {
+        "question_id": "comparative_analysis_004",
+        "n_ref": 15,
+        "n_arm": 15,
+        "delta": 0
+      },
+      {
+        "question_id": "comparative_analysis_005",
+        "n_ref": 8,
+        "n_arm": 16,
+        "delta": 8
+      },
+      {
+        "question_id": "comparative_analysis_006",
+        "n_ref": 12,
+        "n_arm": 12,
+        "delta": 0
+      },
+      {
+        "question_id": "comparative_analysis_007",
+        "n_ref": 17,
+        "n_arm": 11,
+        "delta": -6
+      },
+      {
+        "question_id": "comparative_analysis_008",
+        "n_ref": 14,
+        "n_arm": 13,
+        "delta": -1
+      },
+      {
+        "question_id": "global_001",
+        "n_ref": 24,
+        "n_arm": 22,
+        "delta": -2
+      },
+      {
+        "question_id": "global_002",
+        "n_ref": 26,
+        "n_arm": 19,
+        "delta": -7
+      },
+      {
+        "question_id": "global_003",
+        "n_ref": 21,
+        "n_arm": 16,
+        "delta": -5
+      },
+      {
+        "question_id": "global_004",
+        "n_ref": 10,
+        "n_arm": 2,
+        "delta": -8
+      },
+      {
+        "question_id": "global_005",
+        "n_ref": 23,
+        "n_arm": 24,
+        "delta": 1
+      },
+      {
+        "question_id": "global_006",
+        "n_ref": 24,
+        "n_arm": 21,
+        "delta": -3
+      },
+      {
+        "question_id": "global_007",
+        "n_ref": 26,
+        "n_arm": 14,
+        "delta": -12
+      },
+      {
+        "question_id": "global_008",
+        "n_ref": 15,
+        "n_arm": 12,
+        "delta": -3
+      },
+      {
+        "question_id": "global_009",
+        "n_ref": 22,
+        "n_arm": 22,
+        "delta": 0
+      },
+      {
+        "question_id": "global_010",
+        "n_ref": 4,
+        "n_arm": 9,
+        "delta": 5
+      },
+      {
+        "question_id": "global_011",
+        "n_ref": 8,
+        "n_arm": 11,
+        "delta": 3
+      },
+      {
+        "question_id": "global_012",
+        "n_ref": 22,
+        "n_arm": 18,
+        "delta": -4
+      },
+      {
+        "question_id": "global_013",
+        "n_ref": 13,
+        "n_arm": 14,
+        "delta": 1
+      },
+      {
+        "question_id": "global_014",
+        "n_ref": 22,
+        "n_arm": 20,
+        "delta": -2
+      },
+      {
+        "question_id": "global_015",
+        "n_ref": 24,
+        "n_arm": 20,
+        "delta": -4
+      },
+      {
+        "question_id": "maintenance_narratives_001",
+        "n_ref": 13,
+        "n_arm": 14,
+        "delta": 1
+      },
+      {
+        "question_id": "maintenance_narratives_002",
+        "n_ref": 18,
+        "n_arm": 17,
+        "delta": -1
+      },
+      {
+        "question_id": "maintenance_narratives_003",
+        "n_ref": 18,
+        "n_arm": 18,
+        "delta": 0
+      },
+      {
+        "question_id": "maintenance_narratives_004",
+        "n_ref": 12,
+        "n_arm": 13,
+        "delta": 1
+      },
+      {
+        "question_id": "maintenance_narratives_005",
+        "n_ref": 11,
+        "n_arm": 11,
+        "delta": 0
+      },
+      {
+        "question_id": "maintenance_narratives_006",
+        "n_ref": 12,
+        "n_arm": 15,
+        "delta": 3
+      },
+      {
+        "question_id": "maintenance_narratives_007",
+        "n_ref": 18,
+        "n_arm": 17,
+        "delta": -1
+      },
+      {
+        "question_id": "maintenance_narratives_008",
+        "n_ref": 18,
+        "n_arm": 15,
+        "delta": -3
+      },
+      {
+        "question_id": "maintenance_narratives_009",
+        "n_ref": 11,
+        "n_arm": 11,
+        "delta": 0
+      },
+      {
+        "question_id": "maintenance_narratives_010",
+        "n_ref": 14,
+        "n_arm": 14,
+        "delta": 0
+      },
+      {
+        "question_id": "predictive_maintenance_001",
+        "n_ref": 24,
+        "n_arm": 22,
+        "delta": -2
+      },
+      {
+        "question_id": "predictive_maintenance_002",
+        "n_ref": 19,
+        "n_arm": 17,
+        "delta": -2
+      },
+      {
+        "question_id": "predictive_maintenance_003",
+        "n_ref": 9,
+        "n_arm": 6,
+        "delta": -3
+      },
+      {
+        "question_id": "predictive_maintenance_004",
+        "n_ref": 14,
+        "n_arm": 6,
+        "delta": -8
+      },
+      {
+        "question_id": "predictive_maintenance_005",
+        "n_ref": 13,
+        "n_arm": 13,
+        "delta": 0
+      },
+      {
+        "question_id": "predictive_maintenance_006",
+        "n_ref": 23,
+        "n_arm": 21,
+        "delta": -2
+      },
+      {
+        "question_id": "predictive_maintenance_007",
+        "n_ref": 4,
+        "n_arm": 7,
+        "delta": 3
+      },
+      {
+        "question_id": "predictive_maintenance_008",
+        "n_ref": 17,
+        "n_arm": 8,
+        "delta": -9
+      },
+      {
+        "question_id": "root_cause_analysis_001",
+        "n_ref": 16,
+        "n_arm": 18,
+        "delta": 2
+      },
+      {
+        "question_id": "root_cause_analysis_002",
+        "n_ref": 15,
+        "n_arm": 18,
+        "delta": 3
+      },
+      {
+        "question_id": "root_cause_analysis_003",
+        "n_ref": 24,
+        "n_arm": 17,
+        "delta": -7
+      },
+      {
+        "question_id": "root_cause_analysis_004",
+        "n_ref": 12,
+        "n_arm": 10,
+        "delta": -2
+      },
+      {
+        "question_id": "root_cause_analysis_005",
+        "n_ref": 19,
+        "n_arm": 23,
+        "delta": 4
+      },
+      {
+        "question_id": "root_cause_analysis_006",
+        "n_ref": 21,
+        "n_arm": 18,
+        "delta": -3
+      },
+      {
+        "question_id": "root_cause_analysis_007",
+        "n_ref": 16,
+        "n_arm": 15,
+        "delta": -1
+      },
+      {
+        "question_id": "root_cause_analysis_008",
+        "n_ref": 13,
+        "n_arm": 12,
+        "delta": -1
+      },
+      {
+        "question_id": "safety_recommendations_001",
+        "n_ref": 20,
+        "n_arm": 20,
+        "delta": 0
+      },
+      {
+        "question_id": "safety_recommendations_002",
+        "n_ref": 5,
+        "n_arm": 9,
+        "delta": 4
+      },
+      {
+        "question_id": "safety_recommendations_003",
+        "n_ref": 21,
+        "n_arm": 22,
+        "delta": 1
+      },
+      {
+        "question_id": "safety_recommendations_004",
+        "n_ref": 13,
+        "n_arm": 17,
+        "delta": 4
+      },
+      {
+        "question_id": "safety_recommendations_005",
+        "n_ref": 17,
+        "n_arm": 17,
+        "delta": 0
+      },
+      {
+        "question_id": "safety_recommendations_006",
+        "n_ref": 7,
+        "n_arm": 10,
+        "delta": 3
+      },
+      {
+        "question_id": "safety_recommendations_007",
+        "n_ref": 16,
+        "n_arm": 16,
+        "delta": 0
+      },
+      {
+        "question_id": "safety_recommendations_008",
+        "n_ref": 21,
+        "n_arm": 17,
+        "delta": -4
+      },
+      {
+        "question_id": "system_level_understanding_001",
+        "n_ref": 20,
+        "n_arm": 18,
+        "delta": -2
+      },
+      {
+        "question_id": "system_level_understanding_002",
+        "n_ref": 16,
+        "n_arm": 13,
+        "delta": -3
+      },
+      {
+        "question_id": "system_level_understanding_003",
+        "n_ref": 10,
+        "n_arm": 22,
+        "delta": 12
+      },
+      {
+        "question_id": "system_level_understanding_004",
+        "n_ref": 24,
+        "n_arm": 19,
+        "delta": -5
+      },
+      {
+        "question_id": "system_level_understanding_005",
+        "n_ref": 14,
+        "n_arm": 11,
+        "delta": -3
+      },
+      {
+        "question_id": "system_level_understanding_006",
+        "n_ref": 17,
+        "n_arm": 17,
+        "delta": 0
+      },
+      {
+        "question_id": "system_level_understanding_007",
+        "n_ref": 17,
+        "n_arm": 18,
+        "delta": 1
+      },
+      {
+        "question_id": "system_level_understanding_008",
+        "n_ref": 12,
+        "n_arm": 17,
+        "delta": 5
+      },
+      {
+        "question_id": "trend_analysis_001",
+        "n_ref": 17,
+        "n_arm": 12,
+        "delta": -5
+      },
+      {
+        "question_id": "trend_analysis_002",
+        "n_ref": 13,
+        "n_arm": 12,
+        "delta": -1
+      },
+      {
+        "question_id": "trend_analysis_003",
+        "n_ref": 6,
+        "n_arm": 7,
+        "delta": 1
+      },
+      {
+        "question_id": "trend_analysis_004",
+        "n_ref": 21,
+        "n_arm": 15,
+        "delta": -6
+      },
+      {
+        "question_id": "trend_analysis_005",
+        "n_ref": 21,
+        "n_arm": 11,
+        "delta": -10
+      },
+      {
+        "question_id": "trend_analysis_006",
+        "n_ref": 17,
+        "n_arm": 9,
+        "delta": -8
+      },
+      {
+        "question_id": "trend_analysis_007",
+        "n_ref": 7,
+        "n_arm": 13,
+        "delta": 6
+      },
+      {
+        "question_id": "trend_analysis_008",
+        "n_ref": 21,
+        "n_arm": 13,
+        "delta": -8
+      }
+    ]
+  }
+}

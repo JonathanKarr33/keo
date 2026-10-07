@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "KEOHumanValidationBatch",
+  "type": "object",
+  "required": ["batch_id", "annotator", "questions", "triples"],
+  "properties": {
+    "batch_id": { "type": "string" },
+    "annotator": { "type": "string" },
+    "questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["question_id", "clarity", "difficulty", "domain_relevance"],
+        "properties": {
+          "question_id": { "type": "string" },
+          "clarity": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "difficulty": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "domain_relevance": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "answerability_without_leak": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "triples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["head", "relation", "tail", "plausible"],
+        "properties": {
+          "head": { "type": "string" },
+          "relation": { "type": "string" },
+          "tail": { "type": "string" },
+          "plausible": { "type": "string", "enum": ["yes", "no", "unsure"] },
+          "relation_fit": { "type": "string", "enum": ["yes", "no", "unsure"] },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "answer_preferences": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "question_id": { "type": "string" },
+          "winner": { "type": "string", "enum": ["keo", "textchunk", "tie"] },
+          "rationale": { "type": "string" }
+        }
+      }
+    }
+  }
+}

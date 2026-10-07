@@ -1,0 +1,17 @@
+{
+  "batch_id": "batch001",
+  "annotator": "llm_proxy:claude-haiku-4-5-20251001",
+  "n_questions_rated": 40,
+  "question_means": {
+    "clarity": 3.7,
+    "difficulty": 3.25,
+    "domain_relevance": 4.775,
+    "answerability_without_leak": 3.05
+  },
+  "triple_plausible_counts": {
+    "yes": 133,
+    "no": 12,
+    "unsure": 5
+  },
+  "answer_preference_counts": {}
+}

@@ -1,0 +1,115 @@
+{
+  "role": "judge",
+  "timestamp_utc": "2026-09-29T13:40:45.645321+00:00",
+  "llm": {
+    "requested_id": "claude-haiku-4-5-20251001",
+    "resolved_id": "claude-haiku-4-5-20251001",
+    "exact_id": "claude-haiku-4-5-20251001",
+    "provider": "claude_cli",
+    "billing": "claude_pro_max_subscription",
+    "claude_code_version": "2.1.78 (Claude Code)",
+    "protocol": {
+      "tools": "",
+      "effort": "low",
+      "output_format": "json",
+      "permission_mode": "dontAsk",
+      "pinned_snapshot": true
+    },
+    "note": "Claude Code with pinned snapshot + JSON envelope \u2014 subscription billing; protocol aligned with Messages API judging",
+    "observed_ids": [
+      "claude-haiku-4-5-20251001"
+    ]
+  },
+  "packages": {
+    "python": "3.9.6",
+    "platform": "macOS-15.7.4-arm64-arm-64bit",
+    "openai": "2.48.0",
+    "anthropic": "0.125.0",
+    "huggingface_hub": "0.36.2",
+    "sentence_transformers": "5.1.2",
+    "transformers": "4.57.6",
+    "torch": "2.8.0",
+    "networkx": "3.2.1"
+  },
+  "judge": {
+    "judge_grade": "paper",
+    "reportable_for_paper": true,
+    "provider": "claude_cli",
+    "requested_model": "claude-haiku-4-5-20251001",
+    "policy": "Claude Code + pinned snapshot + JSON envelope (Pro/Max) \u2014 paper-parity with Messages API protocol; subscription billing",
+    "parity": {
+      "pinned_model": true,
+      "tools_disabled": true,
+      "temperature_0": false,
+      "effort_low": true,
+      "json_envelope": true
+    }
+  },
+  "nlp_metrics": {
+    "available": true,
+    "missing": null,
+    "allow_missing_override": false
+  },
+  "judge_parse": {
+    "refuses_imputation": true,
+    "allow_imputation_override": false,
+    "comparison_rubrics": [
+      "action",
+      "answer",
+      "global"
+    ],
+    "alarm_threshold": 0.1,
+    "scale": [
+      1.0,
+      5.0
+    ],
+    "judge_workers": 8,
+    "by_rubric": {
+      "global": {
+        "responses": 83,
+        "criteria_expected": 415,
+        "criteria_parsed": 415,
+        "imputation_rate": 0.0,
+        "imputed_by_criterion": {},
+        "no_number_by_criterion": {},
+        "out_of_range": []
+      }
+    },
+    "imputation_rate": 0.0,
+    "exceeds_alarm": false
+  },
+  "last_call": {
+    "attempt": 0,
+    "requested_model": "claude-haiku-4-5-20251001",
+    "claude_code_version": "2.1.78 (Claude Code)",
+    "billing": "claude_pro_max_subscription",
+    "tools": "",
+    "effort": "low",
+    "permission_mode": "dontAsk",
+    "output_format": "json",
+    "session_id": "38be22c7-9b63-4579-bc19-80cb3e993ed6",
+    "duration_ms": 15079,
+    "duration_api_ms": 15072,
+    "num_turns": 1,
+    "total_cost_usd": 0.00876915,
+    "usage": {
+      "input_tokens": 10,
+      "cache_creation_input_tokens": 1171,
+      "cache_read_input_tokens": 6354,
+      "output_tokens": 1332,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 1171,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "",
+      "iterations": [],
+      "speed": "standard"
+    },
+    "observed_model": "claude-haiku-4-5-20251001"
+  }
+}

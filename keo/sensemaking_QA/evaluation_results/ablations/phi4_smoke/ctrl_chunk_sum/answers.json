@@ -1,0 +1,197 @@
+[
+  {
+    "question_id": "system_level_understanding_005",
+    "question": "How do different maintenance actions like replacement and repair influence the recurrence rates of similar problems in the aircraft fleet?",
+    "question_category": "system_level_understanding",
+    "question_type": "analytical",
+    "ground_truth": null,
+    "original_problem": null,
+    "ablation": {
+      "method": "chunk_sum",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "selection": {
+        "selector": "mst",
+        "use_mst": true
+      },
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "local",
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "provider": "local",
+      "answer_model": "mlx-community/phi-4-4bit",
+      "answer_model_exact": "mlx-community/phi-4-4bit",
+      "kg_path": "../kg/output/kg_llm/gpt4o_with_nodes_batches/100/gpt4o_withprevnodes_100_with_entity_mentions_fixed.gml",
+      "corpus_csv": null,
+      "text_column": null
+    },
+    "vanilla_answer": null,
+    "textchunkrag_answer": null,
+    "keo_answer": null,
+    "community_answer": null,
+    "hybrid_answer": null,
+    "routed_answer": null,
+    "graphrag_answer": null,
+    "risk_answer": null,
+    "chunk_tok_answer": null,
+    "chunk_sum_answer": {
+      "question_id": "system_level_understanding_005",
+      "question": "How do different maintenance actions like replacement and repair influence the recurrence rates of similar problems in the aircraft fleet?",
+      "category": "system_level_understanding",
+      "answer": "To understand how different maintenance actions like replacement and repair influence the recurrence rates of similar problems in an aircraft fleet, it's essential to analyze patterns from maintenance records and apply systemic insights from aviation safety principles.\n\n1. **Repair vs. Replacement:**\n   - **Repair Actions:** Repairs, such as those conducted on the right engine for oil leaks, often address immediate issues but may not fully resolve underlying causes. This can lead to recurrence if the root cause, such as material fatigue or improper installation, is not addressed. Repairs might be quicker and less costly, but they can be temporary solutions if not accompanied by thorough diagnostics and preventive measures.\n   - **Replacement Actions:** Replacing components, such as engines or critical parts like the air cycle unit, can be more effective in preventing recurrence. Replacement ensures that new parts with no wear or latent defects are installed, reducing the likelihood of repeated failures. However, replacements are typically more expensive and require more downtime.\n\n2. **Influence on Recurrence Rates:**\n   - **Root Cause Analysis:** Effective maintenance strategies should include comprehensive root cause analysis. For instance, recurring oil leaks in the right engine might indicate systemic issues such as design flaws or operational stresses that need addressing beyond simple repairs.\n   - **Preventive Maintenance:** Implementing preventive maintenance schedules based on data analytics can help identify patterns and predict failures before they occur. This proactive approach can significantly reduce recurrence rates by addressing potential issues during routine checks.\n   - **Component-Specific Focus:** Maintenance actions should be tailored to the specific components and failure modes identified. For example, targeted maintenance on the air cycle unit and counter-balance weights, as noted in the records, suggests a focus on components with known issues, which can help mitigate recurrence.\n\n3. **Actionable Insights:**\n   - **Enhanced Training:** Maintenance personnel should receive ongoing training to recognize early signs of failure and understand the importance of addressing root causes rather than just symptoms.\n   - **Data-Driven Decisions:** Utilizing maintenance data to inform decisions can help prioritize actions that have the most significant impact on reducing recurrence. For example, if magnetic failures are a recurring issue, investing in better diagnostic tools or more robust components could be beneficial.\n   - **Safety-Critical Procedures:** Ensuring that safety-critical procedures, such as run-ups after maintenance, are always completed can prevent incomplete repairs from leading to in-flight issues. This also reinforces the importance of not taking off until all maintenance actions are verified.\n\nIn summary, while repairs can provide quick fixes, replacements and preventive maintenance strategies are more effective in reducing recurrence rates of similar problems. A data-driven, component-specific approach, combined with thorough training and adherence to safety protocols, can enhance the reliability and safety of the aircraft fleet.",
+      "method": "chunk_sum",
+      "cross_record_summary": "Cross-record Patterns:\n\n1. **Entities (Components, Systems, Aircraft) that Recur:**\n   - **Aircraft Model:** The aircraft model SABB-340B is mentioned, indicating a focus on this specific type.\n   - **Engine:** The right engine is specifically noted in one instance for an oil leak, suggesting engines are a recurring focus.\n   - **Air Cycle Unit:** Mentioned in the context of maintenance, indicating it is a component of interest.\n   - **Counter-Balance Weight:** Highlighted during a maintenance procedure, suggesting its importance in maintenance activities.\n\n2. **Failure Modes or Causes that Repeat:**\n   - **Oil Leaks:** Specifically noted in the context of the right engine, indicating a recurring issue.\n   - **Magnetic (Mag.) Failure:** Mentioned as a cause for flight return, suggesting it is a notable failure mode.\n   - **General Maintenance Issues:** The need for overnight maintenance and incomplete repairs before flight indicate recurring maintenance challenges.\n\n3. **Relationships Between Components, Causes, and Actions:**\n   - **Repair and Recurrence:** The narrative of returning to service after an oil leak repair suggests a relationship between repair actions and the recurrence of similar issues.\n   - **Maintenance Timing and Flight Operations:** The instance of a flight returning due to a mag. failure before repairs were completed implies a relationship between maintenance timing and operational decisions.\n   - **Component-Specific Maintenance:** The loading of a counter-balance weight and the maintenance of the air cycle unit suggest targeted maintenance actions for specific components.\n\n4. **Rare but Safety-Critical Elements:**\n   - **Incomplete Repairs Before Flight:** The situation where pilots took off before repairs were completed is rare but highlights a critical safety concern.\n   - **Run-Up Procedures Post-Maintenance:** The run-up after air cycle unit maintenance suggests a safety-critical procedure to ensure proper function before flight.",
+      "context_used": 613,
+      "context_budget": 4000,
+      "chunks_retrieved": 5,
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "model": "mlx-community/phi-4-4bit",
+      "model_exact": "mlx-community/phi-4-4bit",
+      "model_provider": "local"
+    },
+    "chunk_dedup_answer": null,
+    "keo_shuf_answer": null,
+    "keo_norel_answer": null
+  },
+  {
+    "question_id": "root_cause_analysis_007",
+    "question": "What role do inspection and repair procedures play in preventing structural damage, and where are the gaps?",
+    "question_category": "root_cause_analysis",
+    "question_type": "analytical",
+    "ground_truth": null,
+    "original_problem": null,
+    "ablation": {
+      "method": "chunk_sum",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "selection": {
+        "selector": "mst",
+        "use_mst": true
+      },
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "local",
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "provider": "local",
+      "answer_model": "mlx-community/phi-4-4bit",
+      "answer_model_exact": "mlx-community/phi-4-4bit",
+      "kg_path": "../kg/output/kg_llm/gpt4o_with_nodes_batches/100/gpt4o_withprevnodes_100_with_entity_mentions_fixed.gml",
+      "corpus_csv": null,
+      "text_column": null
+    },
+    "vanilla_answer": null,
+    "textchunkrag_answer": null,
+    "keo_answer": null,
+    "community_answer": null,
+    "hybrid_answer": null,
+    "routed_answer": null,
+    "graphrag_answer": null,
+    "risk_answer": null,
+    "chunk_tok_answer": null,
+    "chunk_sum_answer": {
+      "question_id": "root_cause_analysis_007",
+      "question": "What role do inspection and repair procedures play in preventing structural damage, and where are the gaps?",
+      "category": "root_cause_analysis",
+      "answer": "Inspection and repair procedures play a crucial role in preventing structural damage and ensuring the overall safety and airworthiness of aircraft. These procedures are designed to identify potential issues before they lead to failures, allowing for timely interventions that can prevent accidents and incidents. The cross-record pattern summary from the aviation maintenance records highlights several key areas where inspection and repair procedures are critical, as well as where gaps may exist.\n\n1. **Role of Inspection and Repair Procedures:**\n   - **Prevention of Structural Failures:** Regular inspections of structural components, such as cabin door support rods and elevator trim panels, are essential for identifying signs of wear, damage, or tampering. By catching these issues early, maintenance teams can perform necessary repairs to prevent catastrophic failures during flight.\n   - **Ensuring Proper Fastening:** The recurring issue of improperly fastened components, such as the engine cowling inspection door, underscores the importance of thorough inspections to verify that all fasteners are secure. Proper fastening is critical to maintaining the integrity of the aircraft's structure and systems.\n   - **Debris Management:** The damage to propellers caused by debris highlights the need for effective runway maintenance and debris management procedures. Regular inspections of runways and surrounding areas can help identify and remove debris, reducing the risk of damage to aircraft components.\n\n2. **Identified Gaps:**\n   - **Tampering and Unauthorized Access:** The tampering with the elevator trim inspection panel suggests a gap in security measures to prevent unauthorized access to critical components. Enhanced security protocols and regular checks can help mitigate this risk.\n   - **Debris Impact Management:** The recurring issue of prop damage due to debris indicates a gap in debris management practices. Implementing more rigorous debris inspection and removal procedures on runways can help prevent such incidents.\n   - **Vibration and Dynamic Loads:** The rare but critical incident of vibration on takeoff leading to an aborted flight highlights the need for better monitoring and management of dynamic loads during critical phases of flight. This may involve more frequent inspections and maintenance of components that are subject to high stress during takeoff and landing.\n\n3. **Actionable Insights:**\n   - **Enhance Security Measures:** Implement stricter access controls and monitoring systems to prevent tampering with critical aircraft components.\n   - **Improve Fastening Checks:** Develop and enforce standardized procedures for verifying the secure fastening of all components during inspections.\n   - **Strengthen Debris Management:** Establish more comprehensive debris inspection and removal protocols on runways to prevent damage to aircraft components.\n   - **Monitor Dynamic Loads:** Increase the frequency and scope of inspections for components subject to high dynamic loads, particularly during takeoff and landing, to identify and address potential issues early.\n\nBy addressing these gaps and reinforcing inspection and repair procedures, aviation maintenance can significantly enhance the safety and reliability of aircraft operations.",
+      "method": "chunk_sum",
+      "cross_record_summary": "Cross-record patterns identified from the aviation maintenance records:\n\n1. **Entities (components, systems, aircraft) that recur across multiple records:**\n   - **Inspection Panels and Doors:** Multiple records mention issues related to inspection panels and doors, such as the elevator trim inspection panel being tampered with and the engine cowling inspection door coming off.\n   - **Structural Components:** The cabin door support rod is mentioned as broken, indicating recurring attention to structural integrity.\n   - **Propellers:** There is a mention of prop damage due to debris, highlighting propellers as a recurring component of concern.\n\n2. **Failure modes or causes that repeat, and how often:**\n   - **Improper Fastening:** The engine cowling inspection door issue highlights improper fastening as a recurring cause.\n   - **Tampering or Damage:** The elevator trim inspection panel being tampered with suggests issues related to unauthorized access or damage.\n   - **Debris Impact:** Prop damage due to debris indicates a recurring issue related to runway maintenance and debris management.\n   - **Structural Breakage:** The broken cabin door support rod points to structural failure as a recurring concern.\n\n3. **Relationships between components, causes, and actions that the records imply:**\n   - **Inspection and Fastening:** There is a relationship between inspection procedures and the need for proper fastening, as seen with the engine cowling inspection door.\n   - **Tampering and Structural Integrity:** Tampering with inspection panels can lead to structural issues, as implied by the elevator trim inspection panel incident.\n   - **Debris and Component Damage:** The presence of debris on runways can lead to damage of critical components like propellers, suggesting a need for better debris management.\n\n4. **Anything rare but safety-critical:**\n   - **Vibration on Takeoff:** The incident of vibration on takeoff leading to an aborted flight and hitting a fence is rare but highlights a critical safety concern related to takeoff dynamics.",
+      "context_used": 611,
+      "context_budget": 4000,
+      "chunks_retrieved": 5,
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "model": "mlx-community/phi-4-4bit",
+      "model_exact": "mlx-community/phi-4-4bit",
+      "model_provider": "local"
+    },
+    "chunk_dedup_answer": null,
+    "keo_shuf_answer": null,
+    "keo_norel_answer": null
+  },
+  {
+    "question_id": "maintenance_narratives_008",
+    "question": "8. How does the interaction between electrical system failures and other aircraft systems contribute to broader operational risks, and what redundant systems could mitigate these risks?",
+    "question_category": "context_specific",
+    "question_type": "contextual",
+    "ground_truth": null,
+    "original_problem": null,
+    "ablation": {
+      "method": "chunk_sum",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "selection": {
+        "selector": "mst",
+        "use_mst": true
+      },
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "local",
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "provider": "local",
+      "answer_model": "mlx-community/phi-4-4bit",
+      "answer_model_exact": "mlx-community/phi-4-4bit",
+      "kg_path": "../kg/output/kg_llm/gpt4o_with_nodes_batches/100/gpt4o_withprevnodes_100_with_entity_mentions_fixed.gml",
+      "corpus_csv": null,
+      "text_column": null
+    },
+    "vanilla_answer": null,
+    "textchunkrag_answer": null,
+    "keo_answer": null,
+    "community_answer": null,
+    "hybrid_answer": null,
+    "routed_answer": null,
+    "graphrag_answer": null,
+    "risk_answer": null,
+    "chunk_tok_answer": null,
+    "chunk_sum_answer": {
+      "question_id": "maintenance_narratives_008",
+      "question": "8. How does the interaction between electrical system failures and other aircraft systems contribute to broader operational risks, and what redundant systems could mitigate these risks?",
+      "category": "context_specific",
+      "answer": "The interaction between electrical system failures and other aircraft systems significantly contributes to broader operational risks due to the central role the electrical system plays in modern aircraft operations. When the electrical system fails, it can lead to cascading effects on other critical systems, such as the landing gear, as evidenced by incidents of gear collapse or malfunction following electrical failures. This interdependency underscores the importance of robust electrical system integrity for overall aircraft safety.\n\n**Key Points:**\n\n1. **Interdependency of Systems:**\n   - The electrical system is integral to the operation of various aircraft systems, including the landing gear. Failures in the electrical system can directly lead to malfunctions in these dependent systems, as seen in cases where gear collapse occurred due to electrical failures.\n\n2. **Pilot Actions and Emergency Procedures:**\n   - The effectiveness of pilot responses to electrical failures is crucial. The records indicate that failures to execute emergency procedures can exacerbate situations, highlighting the need for rigorous training and clear protocols to manage such failures effectively.\n\n3. **Ground Equipment Confusion:**\n   - The presence of ground equipment like the Ground Power Unit (GPU) can lead to operational confusion, particularly if not properly managed or communicated. This confusion can delay or complicate emergency responses, increasing operational risks.\n\n**Redundant Systems to Mitigate Risks:**\n\n1. **Redundant Electrical Systems:**\n   - Implementing redundant electrical systems can ensure that critical functions remain operational even if one part of the system fails. This includes having backup power sources and independent circuits for essential systems like the landing gear.\n\n2. **Enhanced Corrosion Protection:**\n   - Given that corrosion is a noted cause of electrical failures, enhancing corrosion protection measures for electrical components, such as battery leads, can prevent such failures. Regular inspections and maintenance focused on corrosion prevention are essential.\n\n3. **Improved Pilot Training and Procedures:**\n   - Ensuring that pilots are well-trained in emergency procedures specific to electrical failures can mitigate risks. This includes regular drills and updates to emergency protocols to reflect the latest best practices.\n\n4. **Clear Communication and Identification of Ground Equipment:**\n   - Establishing clear protocols for the identification and management of ground equipment can reduce confusion. This includes ensuring that all ground equipment is clearly marked and that pilots are informed of its status and location.\n\n5. **ATC System Enhancements:**\n   - Although rare, ATC system errors can contribute to operational risks. Enhancing ATC systems to provide more reliable and accurate information can help prevent conflicts and improve overall safety.\n\nBy addressing these areas, the aviation industry can reduce the risks associated with electrical system failures and their impact on broader aircraft operations, thereby enhancing overall flight safety.",
+      "method": "chunk_sum",
+      "cross_record_summary": "Cross-record patterns identified from the aviation maintenance records:\n\n1. **Entities (components, systems, aircraft) that recur across multiple records:**\n   - **Electrical System:** Central to multiple incidents, with failures leading to broader operational issues.\n   - **Landing Gear:** Repeatedly affected by electrical failures, leading to gear collapse or malfunction.\n   - **Pilot Actions:** Involvement in emergency procedures or failure to execute them is noted.\n   - **Ground Power Unit (GPU):** Mentioned as a potential source of confusion or error.\n\n2. **Failure modes or causes that repeat, and how often:**\n   - **Electrical System Failures:** Frequently mentioned as a root cause of operational issues, including gear malfunction.\n   - **Corrosion:** Specifically noted as a cause of electrical failure (e.g., corroded battery lead).\n   - **Pilot Error or Confusion:** Repeatedly implicated, either through failure to execute emergency procedures or confusion regarding ground equipment.\n\n3. **Relationships between components, causes, and actions that the records imply:**\n   - **Electrical System and Landing Gear:** A direct relationship where electrical failure leads to landing gear issues, such as collapse or partial extension.\n   - **Pilot Actions and Emergency Procedures:** The records imply a critical relationship where the absence of proper pilot action in response to electrical failures exacerbates the situation.\n   - **Ground Equipment and Operational Confusion:** The presence of ground equipment like the GPU can lead to operational confusion, impacting decision-making.\n\n4. **Anything rare but safety-critical:**\n   - **ATC System Error:** While not directly related to the electrical system, it is a rare but critical factor contributing to broader operational risks, as seen in the conflict between aircraft.",
+      "context_used": 591,
+      "context_budget": 4000,
+      "chunks_retrieved": 5,
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "model": "mlx-community/phi-4-4bit",
+      "model_exact": "mlx-community/phi-4-4bit",
+      "model_provider": "local"
+    },
+    "chunk_dedup_answer": null,
+    "keo_shuf_answer": null,
+    "keo_norel_answer": null
+  }
+]

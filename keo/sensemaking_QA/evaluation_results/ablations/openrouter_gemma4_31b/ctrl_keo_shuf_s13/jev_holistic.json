@@ -1,0 +1,6658 @@
+{
+  "rubric": "jev_holistic",
+  "style_names": [
+    "Holistic",
+    "Sensemaking"
+  ],
+  "judge_model": "typesafe/jev-1.13",
+  "provider": "openrouter",
+  "not_comparable_to": "Claude holistic files and grounded_sourcecard.json",
+  "answers_file": "./evaluation_results/ablations/openrouter_gemma4_31b/ctrl_keo_shuf_s13/answers.json",
+  "field": "keo_shuf_answer",
+  "items": [
+    {
+      "question_id": "root_cause_analysis_001",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.43,
+        "theme_identification": 4.99,
+        "synthesis_quality": 3.7,
+        "strategic_value": 3.93,
+        "pattern_recognition": 2.9699999999999998
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.43,
+          "confidence": 0.52,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.07,
+            "2": 0.08,
+            "3": 0.15,
+            "4": 0.69
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 3.7,
+          "confidence": 0,
+          "probabilities": {
+            "0": 0,
+            "1": 0.18,
+            "2": 0.25,
+            "3": 0.26,
+            "4": 0.31
+          }
+        },
+        "strategic_value": {
+          "score": 3.93,
+          "confidence": 0.48,
+          "probabilities": {
+            "0": 0,
+            "1": 0.1,
+            "2": 0.14,
+            "3": 0.49,
+            "4": 0.27
+          }
+        },
+        "pattern_recognition": {
+          "score": 2.9699999999999998,
+          "confidence": 0.04,
+          "probabilities": {
+            "0": 0.23,
+            "1": 0.13,
+            "2": 0.28,
+            "3": 0.16,
+            "4": 0.2
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1160,
+        "output_tokens": 87,
+        "cost": 4.872e-05
+      },
+      "overall": 4.004
+    },
+    {
+      "question_id": "root_cause_analysis_002",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.63,
+        "theme_identification": 4.99,
+        "synthesis_quality": 3.23,
+        "strategic_value": 4.220000000000001,
+        "pattern_recognition": 3.38
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.63,
+          "confidence": 0.69,
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.02,
+            "2": 0.08,
+            "3": 0.1,
+            "4": 0.78
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 3.23,
+          "confidence": 0.33,
+          "probabilities": {
+            "0": 0,
+            "1": 0.29,
+            "2": 0.37,
+            "3": 0.16,
+            "4": 0.18
+          }
+        },
+        "strategic_value": {
+          "score": 4.220000000000001,
+          "confidence": 0.5,
+          "probabilities": {
+            "0": 0,
+            "1": 0.06,
+            "2": 0.08,
+            "3": 0.45,
+            "4": 0.41
+          }
+        },
+        "pattern_recognition": {
+          "score": 3.38,
+          "confidence": 0,
+          "probabilities": {
+            "0": 0.19,
+            "1": 0.12,
+            "2": 0.14,
+            "3": 0.22,
+            "4": 0.33
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1203,
+        "output_tokens": 87,
+        "cost": 5.0526e-05
+      },
+      "overall": 4.09
+    },
+    {
+      "question_id": "root_cause_analysis_003",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.75,
+        "theme_identification": 4.970000000000001,
+        "synthesis_quality": 4.59,
+        "strategic_value": 4.01,
+        "pattern_recognition": 4.95
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.75,
+          "confidence": 0.79,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.01,
+            "2": 0.04,
+            "3": 0.12,
+            "4": 0.82
+          }
+        },
+        "theme_identification": {
+          "score": 4.970000000000001,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.02,
+            "4": 0.98
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.59,
+          "confidence": 0.66,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.06,
+            "3": 0.29,
+            "4": 0.65
+          }
+        },
+        "strategic_value": {
+          "score": 4.01,
+          "confidence": 0.51,
+          "probabilities": {
+            "0": 0,
+            "1": 0.08,
+            "2": 0.12,
+            "3": 0.5,
+            "4": 0.3
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.95,
+          "confidence": 0.96,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.05,
+            "4": 0.95
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1153,
+        "output_tokens": 87,
+        "cost": 4.8426e-05
+      },
+      "overall": 4.654
+    },
+    {
+      "question_id": "root_cause_analysis_004",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.7,
+        "theme_identification": 5.0,
+        "synthesis_quality": 4.42,
+        "strategic_value": 3.9,
+        "pattern_recognition": 4.859999999999999
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.7,
+          "confidence": 0.75,
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.01,
+            "2": 0.04,
+            "3": 0.09,
+            "4": 0.83
+          }
+        },
+        "theme_identification": {
+          "score": 5.0,
+          "confidence": 1,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.42,
+          "confidence": 0.51,
+          "probabilities": {
+            "0": 0,
+            "1": 0.02,
+            "2": 0.11,
+            "3": 0.31,
+            "4": 0.56
+          }
+        },
+        "strategic_value": {
+          "score": 3.9,
+          "confidence": 0.36,
+          "probabilities": {
+            "0": 0,
+            "1": 0.15,
+            "2": 0.12,
+            "3": 0.4,
+            "4": 0.33
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.859999999999999,
+          "confidence": 0.88,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.11,
+            "4": 0.88
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1219,
+        "output_tokens": 87,
+        "cost": 5.1198e-05
+      },
+      "overall": 4.576
+    },
+    {
+      "question_id": "root_cause_analysis_005",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.67,
+        "theme_identification": 4.98,
+        "synthesis_quality": 4.29,
+        "strategic_value": 3.73,
+        "pattern_recognition": 4.8100000000000005
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.67,
+          "confidence": 0.73,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.01,
+            "2": 0.05,
+            "3": 0.17,
+            "4": 0.76
+          }
+        },
+        "theme_identification": {
+          "score": 4.98,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.29,
+          "confidence": 0.4,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.15,
+            "3": 0.39,
+            "4": 0.45
+          }
+        },
+        "strategic_value": {
+          "score": 3.73,
+          "confidence": 0.53,
+          "probabilities": {
+            "0": 0,
+            "1": 0.09,
+            "2": 0.24,
+            "3": 0.52,
+            "4": 0.15
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.8100000000000005,
+          "confidence": 0.84,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.16,
+            "4": 0.83
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1175,
+        "output_tokens": 87,
+        "cost": 4.935e-05
+      },
+      "overall": 4.496
+    },
+    {
+      "question_id": "root_cause_analysis_006",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.6,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.49,
+        "strategic_value": 4.17,
+        "pattern_recognition": 4.35
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.6,
+          "confidence": 0.67,
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.03,
+            "2": 0.06,
+            "3": 0.12,
+            "4": 0.77
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.49,
+          "confidence": 0.57,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.09,
+            "3": 0.31,
+            "4": 0.59
+          }
+        },
+        "strategic_value": {
+          "score": 4.17,
+          "confidence": 0.52,
+          "probabilities": {
+            "0": 0,
+            "1": 0.04,
+            "2": 0.12,
+            "3": 0.47,
+            "4": 0.37
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.35,
+          "confidence": 0.46,
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.02,
+            "2": 0.1,
+            "3": 0.26,
+            "4": 0.59
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1210,
+        "output_tokens": 87,
+        "cost": 5.082e-05
+      },
+      "overall": 4.5200000000000005
+    },
+    {
+      "question_id": "root_cause_analysis_007",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.109999999999999,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.33,
+        "strategic_value": 4.0600000000000005,
+        "pattern_recognition": 4.75
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.109999999999999,
+          "confidence": 0.26,
+          "probabilities": {
+            "0": 0.04,
+            "1": 0.01,
+            "2": 0.24,
+            "3": 0.2,
+            "4": 0.51
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.33,
+          "confidence": 0.44,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.13,
+            "3": 0.37,
+            "4": 0.49
+          }
+        },
+        "strategic_value": {
+          "score": 4.0600000000000005,
+          "confidence": 0.5,
+          "probabilities": {
+            "0": 0,
+            "1": 0.07,
+            "2": 0.12,
+            "3": 0.48,
+            "4": 0.33
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.75,
+          "confidence": 0.79,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.03,
+            "3": 0.17,
+            "4": 0.8
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1248,
+        "output_tokens": 87,
+        "cost": 5.2416e-05
+      },
+      "overall": 4.448
+    },
+    {
+      "question_id": "root_cause_analysis_008",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 3.44,
+        "theme_identification": 4.98,
+        "synthesis_quality": 4.720000000000001,
+        "strategic_value": 4.35,
+        "pattern_recognition": 4.93
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 3.44,
+          "confidence": 0,
+          "probabilities": {
+            "0": 0.19,
+            "1": 0.02,
+            "2": 0.28,
+            "3": 0.18,
+            "4": 0.33
+          }
+        },
+        "theme_identification": {
+          "score": 4.98,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.720000000000001,
+          "confidence": 0.76,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.04,
+            "3": 0.2,
+            "4": 0.76
+          }
+        },
+        "strategic_value": {
+          "score": 4.35,
+          "confidence": 0.46,
+          "probabilities": {
+            "0": 0,
+            "1": 0.04,
+            "2": 0.07,
+            "3": 0.39,
+            "4": 0.5
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.93,
+          "confidence": 0.94,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.05,
+            "4": 0.94
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1160,
+        "output_tokens": 87,
+        "cost": 4.872e-05
+      },
+      "overall": 4.484
+    },
+    {
+      "question_id": "predictive_maintenance_001",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.51,
+        "theme_identification": 4.970000000000001,
+        "synthesis_quality": 3.56,
+        "strategic_value": 3.78,
+        "pattern_recognition": 4.5
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.51,
+          "confidence": 0.59,
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.01,
+            "2": 0.1,
+            "3": 0.15,
+            "4": 0.71
+          }
+        },
+        "theme_identification": {
+          "score": 4.970000000000001,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.02,
+            "4": 0.98
+          }
+        },
+        "synthesis_quality": {
+          "score": 3.56,
+          "confidence": 0.33,
+          "probabilities": {
+            "0": 0,
+            "1": 0.12,
+            "2": 0.42,
+            "3": 0.24,
+            "4": 0.22
+          }
+        },
+        "strategic_value": {
+          "score": 3.78,
+          "confidence": 0.43,
+          "probabilities": {
+            "0": 0,
+            "1": 0.13,
+            "2": 0.19,
+            "3": 0.44,
+            "4": 0.24
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.5,
+          "confidence": 0.58,
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.01,
+            "2": 0.07,
+            "3": 0.24,
+            "4": 0.66
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1131,
+        "output_tokens": 87,
+        "cost": 4.7502e-05
+      },
+      "overall": 4.264
+    },
+    {
+      "question_id": "predictive_maintenance_002",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 3.66,
+        "theme_identification": 4.99,
+        "synthesis_quality": 3.77,
+        "strategic_value": 4.05,
+        "pattern_recognition": 4.73
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 3.66,
+          "confidence": 0.2,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.12,
+            "2": 0.35000000000000003,
+            "3": 0.22,
+            "4": 0.3
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 3.77,
+          "confidence": 0.19,
+          "probabilities": {
+            "0": 0,
+            "1": 0.1,
+            "2": 0.31,
+            "3": 0.31,
+            "4": 0.28
+          }
+        },
+        "strategic_value": {
+          "score": 4.05,
+          "confidence": 0.53,
+          "probabilities": {
+            "0": 0,
+            "1": 0.05,
+            "2": 0.16,
+            "3": 0.48,
+            "4": 0.31
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.73,
+          "confidence": 0.77,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.01,
+            "2": 0.03,
+            "3": 0.15,
+            "4": 0.8
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1177,
+        "output_tokens": 87,
+        "cost": 4.9434e-05
+      },
+      "overall": 4.24
+    },
+    {
+      "question_id": "predictive_maintenance_003",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.34,
+        "theme_identification": 4.970000000000001,
+        "synthesis_quality": 4.68,
+        "strategic_value": 4.09,
+        "pattern_recognition": 4.88
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.34,
+          "confidence": 0.45,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.02,
+            "2": 0.14,
+            "3": 0.28,
+            "4": 0.55
+          }
+        },
+        "theme_identification": {
+          "score": 4.970000000000001,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.02,
+            "4": 0.98
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.68,
+          "confidence": 0.74,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.03,
+            "3": 0.25,
+            "4": 0.72
+          }
+        },
+        "strategic_value": {
+          "score": 4.09,
+          "confidence": 0.54,
+          "probabilities": {
+            "0": 0,
+            "1": 0.04,
+            "2": 0.15,
+            "3": 0.49,
+            "4": 0.32
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.88,
+          "confidence": 0.9,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.08,
+            "4": 0.91
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1174,
+        "output_tokens": 87,
+        "cost": 4.9308e-05
+      },
+      "overall": 4.592
+    },
+    {
+      "question_id": "predictive_maintenance_004",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.74,
+        "theme_identification": 4.98,
+        "synthesis_quality": 4.62,
+        "strategic_value": 4.140000000000001,
+        "pattern_recognition": 4.95
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.74,
+          "confidence": 0.78,
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.01,
+            "2": 0.04,
+            "3": 0.09,
+            "4": 0.84
+          }
+        },
+        "theme_identification": {
+          "score": 4.98,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.62,
+          "confidence": 0.68,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.04,
+            "3": 0.28,
+            "4": 0.67
+          }
+        },
+        "strategic_value": {
+          "score": 4.140000000000001,
+          "confidence": 0.28,
+          "probabilities": {
+            "0": 0,
+            "1": 0.07,
+            "2": 0.13,
+            "3": 0.37,
+            "4": 0.43
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.95,
+          "confidence": 0.95,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.04,
+            "4": 0.96
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1215,
+        "output_tokens": 87,
+        "cost": 5.103e-05
+      },
+      "overall": 4.686
+    },
+    {
+      "question_id": "predictive_maintenance_005",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 3.54,
+        "theme_identification": 4.99,
+        "synthesis_quality": 3.31,
+        "strategic_value": 3.09,
+        "pattern_recognition": 4.6
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 3.54,
+          "confidence": 0.1,
+          "probabilities": {
+            "0": 0.1,
+            "1": 0.07,
+            "2": 0.34,
+            "3": 0.18,
+            "4": 0.31
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1
+          }
+        },
+        "synthesis_quality": {
+          "score": 3.31,
+          "confidence": 0.42,
+          "probabilities": {
+            "0": 0,
+            "1": 0.19,
+            "2": 0.46,
+            "3": 0.2,
+            "4": 0.15
+          }
+        },
+        "strategic_value": {
+          "score": 3.09,
+          "confidence": 0.4,
+          "probabilities": {
+            "0": 0,
+            "1": 0.31,
+            "2": 0.34,
+            "3": 0.29,
+            "4": 0.06
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.6,
+          "confidence": 0.66,
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.01,
+            "2": 0.03,
+            "3": 0.23,
+            "4": 0.71
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1197,
+        "output_tokens": 87,
+        "cost": 5.0274e-05
+      },
+      "overall": 3.906
+    },
+    {
+      "question_id": "predictive_maintenance_006",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.35,
+        "theme_identification": 4.95,
+        "synthesis_quality": 4.63,
+        "strategic_value": 4.13,
+        "pattern_recognition": 4.84
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.35,
+          "confidence": 0.46,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.03,
+            "2": 0.17,
+            "3": 0.2,
+            "4": 0.59
+          }
+        },
+        "theme_identification": {
+          "score": 4.95,
+          "confidence": 0.96,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.04,
+            "4": 0.96
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.63,
+          "confidence": 0.69,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.05,
+            "3": 0.24,
+            "4": 0.7
+          }
+        },
+        "strategic_value": {
+          "score": 4.13,
+          "confidence": 0.5,
+          "probabilities": {
+            "0": 0,
+            "1": 0.06,
+            "2": 0.11,
+            "3": 0.46,
+            "4": 0.37
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.84,
+          "confidence": 0.87,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.01,
+            "2": 0.02,
+            "3": 0.08,
+            "4": 0.88
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1238,
+        "output_tokens": 87,
+        "cost": 5.1996e-05
+      },
+      "overall": 4.58
+    },
+    {
+      "question_id": "predictive_maintenance_007",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 3.2,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.1899999999999995,
+        "strategic_value": 3.87,
+        "pattern_recognition": 4.859999999999999
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 3.2,
+          "confidence": 0.12,
+          "probabilities": {
+            "0": 0.17,
+            "1": 0.1,
+            "2": 0.32,
+            "3": 0.19,
+            "4": 0.22
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.1899999999999995,
+          "confidence": 0.32,
+          "probabilities": {
+            "0": 0,
+            "1": 0.06,
+            "2": 0.18,
+            "3": 0.29,
+            "4": 0.47
+          }
+        },
+        "strategic_value": {
+          "score": 3.87,
+          "confidence": 0.45,
+          "probabilities": {
+            "0": 0,
+            "1": 0.12,
+            "2": 0.15,
+            "3": 0.46,
+            "4": 0.27
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.859999999999999,
+          "confidence": 0.88,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.03,
+            "3": 0.07,
+            "4": 0.9
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1119,
+        "output_tokens": 87,
+        "cost": 4.6998e-05
+      },
+      "overall": 4.2219999999999995
+    },
+    {
+      "question_id": "predictive_maintenance_008",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.1,
+        "theme_identification": 4.98,
+        "synthesis_quality": 3.87,
+        "strategic_value": 4.07,
+        "pattern_recognition": 4.67
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.1,
+          "confidence": 0.25,
+          "probabilities": {
+            "0": 0.07,
+            "1": 0.04,
+            "2": 0.17,
+            "3": 0.13,
+            "4": 0.59
+          }
+        },
+        "theme_identification": {
+          "score": 4.98,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 3.87,
+          "confidence": 0.36,
+          "probabilities": {
+            "0": 0,
+            "1": 0.08,
+            "2": 0.28,
+            "3": 0.32,
+            "4": 0.32
+          }
+        },
+        "strategic_value": {
+          "score": 4.07,
+          "confidence": 0.23,
+          "probabilities": {
+            "0": 0,
+            "1": 0.11,
+            "2": 0.11,
+            "3": 0.36,
+            "4": 0.42
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.67,
+          "confidence": 0.73,
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.01,
+            "2": 0.04,
+            "3": 0.14,
+            "4": 0.79
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1252,
+        "output_tokens": 87,
+        "cost": 5.2584e-05
+      },
+      "overall": 4.337999999999999
+    },
+    {
+      "question_id": "safety_recommendations_001",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.4,
+        "theme_identification": 4.99,
+        "synthesis_quality": 3.07,
+        "strategic_value": 3.92,
+        "pattern_recognition": 4.32
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.4,
+          "confidence": 0.5,
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.02,
+            "2": 0.14,
+            "3": 0.17,
+            "4": 0.64
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 3.07,
+          "confidence": 0.38,
+          "probabilities": {
+            "0": 0,
+            "1": 0.34,
+            "2": 0.39,
+            "3": 0.14,
+            "4": 0.13
+          }
+        },
+        "strategic_value": {
+          "score": 3.92,
+          "confidence": 0.35,
+          "probabilities": {
+            "0": 0,
+            "1": 0.15,
+            "2": 0.13,
+            "3": 0.37,
+            "4": 0.35
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.32,
+          "confidence": 0.43,
+          "probabilities": {
+            "0": 0.06,
+            "1": 0.02,
+            "2": 0.08,
+            "3": 0.21,
+            "4": 0.63
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1103,
+        "output_tokens": 87,
+        "cost": 4.6326e-05
+      },
+      "overall": 4.140000000000001
+    },
+    {
+      "question_id": "safety_recommendations_002",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.32,
+        "theme_identification": 4.99,
+        "synthesis_quality": 3.07,
+        "strategic_value": 3.48,
+        "pattern_recognition": 3.29
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.32,
+          "confidence": 0.43,
+          "probabilities": {
+            "0": 0.06,
+            "1": 0.02,
+            "2": 0.14,
+            "3": 0.11,
+            "4": 0.67
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1
+          }
+        },
+        "synthesis_quality": {
+          "score": 3.07,
+          "confidence": 0.11,
+          "probabilities": {
+            "0": 0,
+            "1": 0.42,
+            "2": 0.25,
+            "3": 0.19,
+            "4": 0.14
+          }
+        },
+        "strategic_value": {
+          "score": 3.48,
+          "confidence": 0.31,
+          "probabilities": {
+            "0": 0,
+            "1": 0.25,
+            "2": 0.16,
+            "3": 0.43,
+            "4": 0.16
+          }
+        },
+        "pattern_recognition": {
+          "score": 3.29,
+          "confidence": 0,
+          "probabilities": {
+            "0": 0.22,
+            "1": 0.07,
+            "2": 0.2,
+            "3": 0.22,
+            "4": 0.29
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1134,
+        "output_tokens": 87,
+        "cost": 4.7628e-05
+      },
+      "overall": 3.8300000000000005
+    },
+    {
+      "question_id": "safety_recommendations_003",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.779999999999999,
+        "theme_identification": 4.98,
+        "synthesis_quality": 2.8200000000000003,
+        "strategic_value": 4.279999999999999,
+        "pattern_recognition": 2.71
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.779999999999999,
+          "confidence": 0.82,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.01,
+            "2": 0.04,
+            "3": 0.08,
+            "4": 0.86
+          }
+        },
+        "theme_identification": {
+          "score": 4.98,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 2.8200000000000003,
+          "confidence": 0.32,
+          "probabilities": {
+            "0": 0,
+            "1": 0.53,
+            "2": 0.24,
+            "3": 0.13,
+            "4": 0.1
+          }
+        },
+        "strategic_value": {
+          "score": 4.279999999999999,
+          "confidence": 0.4,
+          "probabilities": {
+            "0": 0,
+            "1": 0.05,
+            "2": 0.07,
+            "3": 0.43,
+            "4": 0.45
+          }
+        },
+        "pattern_recognition": {
+          "score": 2.71,
+          "confidence": 0,
+          "probabilities": {
+            "0": 0.3,
+            "1": 0.18,
+            "2": 0.2,
+            "3": 0.15,
+            "4": 0.17
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1144,
+        "output_tokens": 87,
+        "cost": 4.8048e-05
+      },
+      "overall": 3.914
+    },
+    {
+      "question_id": "safety_recommendations_004",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 3.42,
+        "theme_identification": 4.98,
+        "synthesis_quality": 3.0,
+        "strategic_value": 3.79,
+        "pattern_recognition": 3.53
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 3.42,
+          "confidence": 0.15,
+          "probabilities": {
+            "0": 0.11,
+            "1": 0.08,
+            "2": 0.37,
+            "3": 0.16,
+            "4": 0.28
+          }
+        },
+        "theme_identification": {
+          "score": 4.98,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 3.0,
+          "confidence": 0.16,
+          "probabilities": {
+            "0": 0,
+            "1": 0.4,
+            "2": 0.32,
+            "3": 0.16,
+            "4": 0.12
+          }
+        },
+        "strategic_value": {
+          "score": 3.79,
+          "confidence": 0.42,
+          "probabilities": {
+            "0": 0,
+            "1": 0.13,
+            "2": 0.2,
+            "3": 0.43,
+            "4": 0.24
+          }
+        },
+        "pattern_recognition": {
+          "score": 3.53,
+          "confidence": 0,
+          "probabilities": {
+            "0": 0.17,
+            "1": 0.07,
+            "2": 0.16,
+            "3": 0.25,
+            "4": 0.35
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1151,
+        "output_tokens": 87,
+        "cost": 4.8342e-05
+      },
+      "overall": 3.7440000000000007
+    },
+    {
+      "question_id": "safety_recommendations_005",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.85,
+        "theme_identification": 4.99,
+        "synthesis_quality": 2.83,
+        "strategic_value": 4.3100000000000005,
+        "pattern_recognition": 3.0
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.85,
+          "confidence": 0.87,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0,
+            "2": 0.03,
+            "3": 0.07,
+            "4": 0.89
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 2.83,
+          "confidence": 0.3,
+          "probabilities": {
+            "0": 0,
+            "1": 0.54,
+            "2": 0.21,
+            "3": 0.14,
+            "4": 0.11
+          }
+        },
+        "strategic_value": {
+          "score": 4.3100000000000005,
+          "confidence": 0.43,
+          "probabilities": {
+            "0": 0,
+            "1": 0.07,
+            "2": 0.08,
+            "3": 0.32,
+            "4": 0.53
+          }
+        },
+        "pattern_recognition": {
+          "score": 3.0,
+          "confidence": 0,
+          "probabilities": {
+            "0": 0.25,
+            "1": 0.14,
+            "2": 0.19,
+            "3": 0.2,
+            "4": 0.22
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1213,
+        "output_tokens": 87,
+        "cost": 5.0946e-05
+      },
+      "overall": 3.996
+    },
+    {
+      "question_id": "safety_recommendations_006",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.05,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.18,
+        "strategic_value": 4.390000000000001,
+        "pattern_recognition": 4.6899999999999995
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.05,
+          "confidence": 0.21,
+          "probabilities": {
+            "0": 0.05,
+            "1": 0.05,
+            "2": 0.2,
+            "3": 0.18,
+            "4": 0.52
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.18,
+          "confidence": 0.32,
+          "probabilities": {
+            "0": 0,
+            "1": 0.04,
+            "2": 0.18,
+            "3": 0.33,
+            "4": 0.45
+          }
+        },
+        "strategic_value": {
+          "score": 4.390000000000001,
+          "confidence": 0.5,
+          "probabilities": {
+            "0": 0,
+            "1": 0.03,
+            "2": 0.04,
+            "3": 0.43,
+            "4": 0.5
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.6899999999999995,
+          "confidence": 0.74,
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.01,
+            "2": 0.04,
+            "3": 0.14,
+            "4": 0.79
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1250,
+        "output_tokens": 87,
+        "cost": 5.25e-05
+      },
+      "overall": 4.459999999999999
+    },
+    {
+      "question_id": "safety_recommendations_007",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 3.48,
+        "theme_identification": 5.0,
+        "synthesis_quality": 4.79,
+        "strategic_value": 4.55,
+        "pattern_recognition": 4.970000000000001
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 3.48,
+          "confidence": 0,
+          "probabilities": {
+            "0": 0.26,
+            "1": 0,
+            "2": 0.19,
+            "3": 0.09,
+            "4": 0.46
+          }
+        },
+        "theme_identification": {
+          "score": 5.0,
+          "confidence": 1,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.79,
+          "confidence": 0.83,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.18,
+            "4": 0.81
+          }
+        },
+        "strategic_value": {
+          "score": 4.55,
+          "confidence": 0.62,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.03,
+            "3": 0.35,
+            "4": 0.61
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.970000000000001,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.02,
+            "4": 0.98
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1202,
+        "output_tokens": 87,
+        "cost": 5.0484e-05
+      },
+      "overall": 4.558
+    },
+    {
+      "question_id": "safety_recommendations_008",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.8,
+        "theme_identification": 4.98,
+        "synthesis_quality": 4.71,
+        "strategic_value": 4.51,
+        "pattern_recognition": 4.92
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.8,
+          "confidence": 0.83,
+          "probabilities": {
+            "0": 0.02,
+            "1": 0,
+            "2": 0.03,
+            "3": 0.07,
+            "4": 0.88
+          }
+        },
+        "theme_identification": {
+          "score": 4.98,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.71,
+          "confidence": 0.76,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.03,
+            "3": 0.21,
+            "4": 0.76
+          }
+        },
+        "strategic_value": {
+          "score": 4.51,
+          "confidence": 0.59,
+          "probabilities": {
+            "0": 0,
+            "1": 0.04,
+            "2": 0.03,
+            "3": 0.31,
+            "4": 0.62
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.92,
+          "confidence": 0.94,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0,
+            "2": 0,
+            "3": 0.04,
+            "4": 0.95
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1170,
+        "output_tokens": 87,
+        "cost": 4.914e-05
+      },
+      "overall": 4.784000000000001
+    },
+    {
+      "question_id": "system_level_understanding_001",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.74,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.85,
+        "strategic_value": 3.81,
+        "pattern_recognition": 4.970000000000001
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.74,
+          "confidence": 0.78,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.04,
+            "3": 0.12,
+            "4": 0.83
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.85,
+          "confidence": 0.87,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.14,
+            "4": 0.85
+          }
+        },
+        "strategic_value": {
+          "score": 3.81,
+          "confidence": 0.41,
+          "probabilities": {
+            "0": 0,
+            "1": 0.14,
+            "2": 0.17,
+            "3": 0.43,
+            "4": 0.26
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.970000000000001,
+          "confidence": 0.97,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.03,
+            "4": 0.97
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1174,
+        "output_tokens": 87,
+        "cost": 4.9308e-05
+      },
+      "overall": 4.672
+    },
+    {
+      "question_id": "system_level_understanding_002",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.18,
+        "theme_identification": 4.98,
+        "synthesis_quality": 4.77,
+        "strategic_value": 4.32,
+        "pattern_recognition": 4.95
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.18,
+          "confidence": 0.31,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.07,
+            "2": 0.15,
+            "3": 0.28,
+            "4": 0.49
+          }
+        },
+        "theme_identification": {
+          "score": 4.98,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.77,
+          "confidence": 0.81,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.2,
+            "4": 0.79
+          }
+        },
+        "strategic_value": {
+          "score": 4.32,
+          "confidence": 0.43,
+          "probabilities": {
+            "0": 0,
+            "1": 0.02,
+            "2": 0.08,
+            "3": 0.44,
+            "4": 0.46
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.95,
+          "confidence": 0.95,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.04,
+            "4": 0.95
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1176,
+        "output_tokens": 87,
+        "cost": 4.9392e-05
+      },
+      "overall": 4.64
+    },
+    {
+      "question_id": "system_level_understanding_003",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.63,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.82,
+        "strategic_value": 4.55,
+        "pattern_recognition": 4.970000000000001
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.63,
+          "confidence": 0.69,
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.01,
+            "2": 0.05,
+            "3": 0.12,
+            "4": 0.79
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 1,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.82,
+          "confidence": 0.85,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.16,
+            "4": 0.83
+          }
+        },
+        "strategic_value": {
+          "score": 4.55,
+          "confidence": 0.62,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.05,
+            "3": 0.32,
+            "4": 0.62
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.970000000000001,
+          "confidence": 0.97,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.03,
+            "4": 0.97
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1240,
+        "output_tokens": 87,
+        "cost": 5.208e-05
+      },
+      "overall": 4.792
+    },
+    {
+      "question_id": "system_level_understanding_004",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.38,
+        "theme_identification": 5.0,
+        "synthesis_quality": 3.4,
+        "strategic_value": 3.78,
+        "pattern_recognition": 4.32
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.38,
+          "confidence": 0.48,
+          "probabilities": {
+            "0": 0.08,
+            "1": 0,
+            "2": 0.09,
+            "3": 0.1,
+            "4": 0.73
+          }
+        },
+        "theme_identification": {
+          "score": 5.0,
+          "confidence": 1,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1
+          }
+        },
+        "synthesis_quality": {
+          "score": 3.4,
+          "confidence": 0.31,
+          "probabilities": {
+            "0": 0,
+            "1": 0.21,
+            "2": 0.37,
+            "3": 0.24,
+            "4": 0.18
+          }
+        },
+        "strategic_value": {
+          "score": 3.78,
+          "confidence": 0.4,
+          "probabilities": {
+            "0": 0,
+            "1": 0.14,
+            "2": 0.19,
+            "3": 0.42,
+            "4": 0.25
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.32,
+          "confidence": 0.43,
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.03,
+            "2": 0.1,
+            "3": 0.3,
+            "4": 0.55
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1232,
+        "output_tokens": 87,
+        "cost": 5.1744e-05
+      },
+      "overall": 4.176
+    },
+    {
+      "question_id": "system_level_understanding_005",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 3.72,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.79,
+        "strategic_value": 3.48,
+        "pattern_recognition": 4.9399999999999995
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 3.72,
+          "confidence": 0,
+          "probabilities": {
+            "0": 0.13,
+            "1": 0.03,
+            "2": 0.24,
+            "3": 0.21,
+            "4": 0.39
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.79,
+          "confidence": 0.83,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.18,
+            "4": 0.81
+          }
+        },
+        "strategic_value": {
+          "score": 3.48,
+          "confidence": 0.33,
+          "probabilities": {
+            "0": 0,
+            "1": 0.23,
+            "2": 0.2,
+            "3": 0.43,
+            "4": 0.14
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.9399999999999995,
+          "confidence": 0.95,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.05,
+            "4": 0.95
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1199,
+        "output_tokens": 87,
+        "cost": 5.0358e-05
+      },
+      "overall": 4.384
+    },
+    {
+      "question_id": "system_level_understanding_006",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.46,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.59,
+        "strategic_value": 3.82,
+        "pattern_recognition": 4.96
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.46,
+          "confidence": 0.55,
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.06,
+            "2": 0.09,
+            "3": 0.12,
+            "4": 0.71
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.59,
+          "confidence": 0.66,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.05,
+            "3": 0.29,
+            "4": 0.65
+          }
+        },
+        "strategic_value": {
+          "score": 3.82,
+          "confidence": 0.33,
+          "probabilities": {
+            "0": 0,
+            "1": 0.18,
+            "2": 0.12,
+            "3": 0.39,
+            "4": 0.31
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.96,
+          "confidence": 0.97,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.03,
+            "4": 0.97
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1314,
+        "output_tokens": 87,
+        "cost": 5.5188e-05
+      },
+      "overall": 4.564
+    },
+    {
+      "question_id": "system_level_understanding_007",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.65,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.470000000000001,
+        "strategic_value": 3.83,
+        "pattern_recognition": 4.9399999999999995
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.65,
+          "confidence": 0.71,
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.02,
+            "2": 0.06,
+            "3": 0.11,
+            "4": 0.79
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.470000000000001,
+          "confidence": 0.56,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.08,
+            "3": 0.34,
+            "4": 0.57
+          }
+        },
+        "strategic_value": {
+          "score": 3.83,
+          "confidence": 0.41,
+          "probabilities": {
+            "0": 0,
+            "1": 0.14,
+            "2": 0.15,
+            "3": 0.44,
+            "4": 0.27
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.9399999999999995,
+          "confidence": 0.95,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.05,
+            "4": 0.95
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1149,
+        "output_tokens": 87,
+        "cost": 4.8258e-05
+      },
+      "overall": 4.5760000000000005
+    },
+    {
+      "question_id": "system_level_understanding_008",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.13,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.88,
+        "strategic_value": 4.63,
+        "pattern_recognition": 4.96
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.13,
+          "confidence": 0.28,
+          "probabilities": {
+            "0": 0.06,
+            "1": 0.03,
+            "2": 0.17,
+            "3": 0.18,
+            "4": 0.56
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 1,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.88,
+          "confidence": 0.9,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.11,
+            "4": 0.89
+          }
+        },
+        "strategic_value": {
+          "score": 4.63,
+          "confidence": 0.69,
+          "probabilities": {
+            "0": 0,
+            "1": 0.02,
+            "2": 0.02,
+            "3": 0.27,
+            "4": 0.69
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.96,
+          "confidence": 0.97,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.03,
+            "4": 0.97
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1186,
+        "output_tokens": 87,
+        "cost": 4.9812e-05
+      },
+      "overall": 4.718
+    },
+    {
+      "question_id": "comparative_analysis_001",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.220000000000001,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.42,
+        "strategic_value": 4.18,
+        "pattern_recognition": 4.75
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.220000000000001,
+          "confidence": 0.35,
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.04,
+            "2": 0.17,
+            "3": 0.21,
+            "4": 0.55
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.42,
+          "confidence": 0.52,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.12,
+            "3": 0.31,
+            "4": 0.56
+          }
+        },
+        "strategic_value": {
+          "score": 4.18,
+          "confidence": 0.59,
+          "probabilities": {
+            "0": 0,
+            "1": 0.02,
+            "2": 0.12,
+            "3": 0.52,
+            "4": 0.34
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.75,
+          "confidence": 0.79,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.02,
+            "2": 0.03,
+            "3": 0.12,
+            "4": 0.82
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1155,
+        "output_tokens": 87,
+        "cost": 4.851e-05
+      },
+      "overall": 4.5120000000000005
+    },
+    {
+      "question_id": "comparative_analysis_002",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 3.96,
+        "theme_identification": 4.98,
+        "synthesis_quality": 4.77,
+        "strategic_value": 3.69,
+        "pattern_recognition": 4.890000000000001
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 3.96,
+          "confidence": 0.14,
+          "probabilities": {
+            "0": 0.15,
+            "1": 0.01,
+            "2": 0.14,
+            "3": 0.14,
+            "4": 0.56
+          }
+        },
+        "theme_identification": {
+          "score": 4.98,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.02,
+            "4": 0.98
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.77,
+          "confidence": 0.81,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.03,
+            "3": 0.18,
+            "4": 0.79
+          }
+        },
+        "strategic_value": {
+          "score": 3.69,
+          "confidence": 0.46,
+          "probabilities": {
+            "0": 0,
+            "1": 0.06,
+            "2": 0.35,
+            "3": 0.42,
+            "4": 0.17
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.890000000000001,
+          "confidence": 0.91,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.02,
+            "3": 0.07,
+            "4": 0.91
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1269,
+        "output_tokens": 87,
+        "cost": 5.3298e-05
+      },
+      "overall": 4.458
+    },
+    {
+      "question_id": "comparative_analysis_003",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 3.74,
+        "theme_identification": 4.96,
+        "synthesis_quality": 4.6899999999999995,
+        "strategic_value": 3.86,
+        "pattern_recognition": 4.93
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 3.74,
+          "confidence": 0.29,
+          "probabilities": {
+            "0": 0.04,
+            "1": 0.11,
+            "2": 0.23,
+            "3": 0.32,
+            "4": 0.3
+          }
+        },
+        "theme_identification": {
+          "score": 4.96,
+          "confidence": 0.97,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.02,
+            "4": 0.97
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.6899999999999995,
+          "confidence": 0.74,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.03,
+            "3": 0.25,
+            "4": 0.72
+          }
+        },
+        "strategic_value": {
+          "score": 3.86,
+          "confidence": 0.52,
+          "probabilities": {
+            "0": 0,
+            "1": 0.08,
+            "2": 0.2,
+            "3": 0.5,
+            "4": 0.22
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.93,
+          "confidence": 0.94,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.06,
+            "4": 0.9400000000000001
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1134,
+        "output_tokens": 87,
+        "cost": 4.7628e-05
+      },
+      "overall": 4.436
+    },
+    {
+      "question_id": "comparative_analysis_004",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 3.98,
+        "theme_identification": 4.91,
+        "synthesis_quality": 4.0600000000000005,
+        "strategic_value": 3.31,
+        "pattern_recognition": 4.84
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 3.98,
+          "confidence": 0.15,
+          "probabilities": {
+            "0": 0.1,
+            "1": 0.02,
+            "2": 0.21,
+            "3": 0.14,
+            "4": 0.53
+          }
+        },
+        "theme_identification": {
+          "score": 4.91,
+          "confidence": 0.93,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.07,
+            "4": 0.92
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.0600000000000005,
+          "confidence": 0.22,
+          "probabilities": {
+            "0": 0,
+            "1": 0.05,
+            "2": 0.22,
+            "3": 0.33,
+            "4": 0.4
+          }
+        },
+        "strategic_value": {
+          "score": 3.31,
+          "confidence": 0.23,
+          "probabilities": {
+            "0": 0,
+            "1": 0.29,
+            "2": 0.22,
+            "3": 0.38,
+            "4": 0.11
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.84,
+          "confidence": 0.87,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.02,
+            "3": 0.1,
+            "4": 0.88
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1246,
+        "output_tokens": 87,
+        "cost": 5.2332e-05
+      },
+      "overall": 4.220000000000001
+    },
+    {
+      "question_id": "comparative_analysis_005",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.46,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.2,
+        "strategic_value": 4.470000000000001,
+        "pattern_recognition": 4.85
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.46,
+          "confidence": 0.55,
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.02,
+            "2": 0.09,
+            "3": 0.17,
+            "4": 0.68
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.2,
+          "confidence": 0.33,
+          "probabilities": {
+            "0": 0,
+            "1": 0.03,
+            "2": 0.16,
+            "3": 0.38,
+            "4": 0.43
+          }
+        },
+        "strategic_value": {
+          "score": 4.470000000000001,
+          "confidence": 0.56,
+          "probabilities": {
+            "0": 0,
+            "1": 0.02,
+            "2": 0.05,
+            "3": 0.36,
+            "4": 0.57
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.85,
+          "confidence": 0.87,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.1,
+            "4": 0.89
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1207,
+        "output_tokens": 87,
+        "cost": 5.0694e-05
+      },
+      "overall": 4.593999999999999
+    },
+    {
+      "question_id": "comparative_analysis_006",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.16,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.46,
+        "strategic_value": 4.359999999999999,
+        "pattern_recognition": 4.890000000000001
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.16,
+          "confidence": 0.3,
+          "probabilities": {
+            "0": 0.05,
+            "1": 0.01,
+            "2": 0.23,
+            "3": 0.17,
+            "4": 0.54
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.46,
+          "confidence": 0.55,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.1,
+            "3": 0.31,
+            "4": 0.58
+          }
+        },
+        "strategic_value": {
+          "score": 4.359999999999999,
+          "confidence": 0.55,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.07,
+            "3": 0.47,
+            "4": 0.45
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.890000000000001,
+          "confidence": 0.91,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.07,
+            "4": 0.92
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1170,
+        "output_tokens": 87,
+        "cost": 4.914e-05
+      },
+      "overall": 4.572
+    },
+    {
+      "question_id": "comparative_analysis_007",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.33,
+        "theme_identification": 4.74,
+        "synthesis_quality": 4.63,
+        "strategic_value": 4.0600000000000005,
+        "pattern_recognition": 4.95
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.33,
+          "confidence": 0.44,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.05,
+            "2": 0.11,
+            "3": 0.25,
+            "4": 0.58
+          }
+        },
+        "theme_identification": {
+          "score": 4.74,
+          "confidence": 0.79,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.04,
+            "3": 0.18,
+            "4": 0.78
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.63,
+          "confidence": 0.69,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.04,
+            "3": 0.28,
+            "4": 0.68
+          }
+        },
+        "strategic_value": {
+          "score": 4.0600000000000005,
+          "confidence": 0.51,
+          "probabilities": {
+            "0": 0,
+            "1": 0.06,
+            "2": 0.15,
+            "3": 0.45999999999999996,
+            "4": 0.33
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.95,
+          "confidence": 0.96,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.04,
+            "4": 0.96
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1192,
+        "output_tokens": 87,
+        "cost": 5.0064e-05
+      },
+      "overall": 4.542
+    },
+    {
+      "question_id": "comparative_analysis_008",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.109999999999999,
+        "theme_identification": 4.98,
+        "synthesis_quality": 4.85,
+        "strategic_value": 4.12,
+        "pattern_recognition": 4.91
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.109999999999999,
+          "confidence": 0.26,
+          "probabilities": {
+            "0": 0.04,
+            "1": 0.03,
+            "2": 0.2,
+            "3": 0.25,
+            "4": 0.48
+          }
+        },
+        "theme_identification": {
+          "score": 4.98,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.85,
+          "confidence": 0.88,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.13,
+            "4": 0.86
+          }
+        },
+        "strategic_value": {
+          "score": 4.12,
+          "confidence": 0.51,
+          "probabilities": {
+            "0": 0,
+            "1": 0.05,
+            "2": 0.12,
+            "3": 0.48,
+            "4": 0.35
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.91,
+          "confidence": 0.92,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.07,
+            "4": 0.92
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1125,
+        "output_tokens": 87,
+        "cost": 4.725e-05
+      },
+      "overall": 4.593999999999999
+    },
+    {
+      "question_id": "trend_analysis_001",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.63,
+        "theme_identification": 4.859999999999999,
+        "synthesis_quality": 4.82,
+        "strategic_value": 4.55,
+        "pattern_recognition": 4.92
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.63,
+          "confidence": 0.69,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.02,
+            "2": 0.05,
+            "3": 0.17,
+            "4": 0.75
+          }
+        },
+        "theme_identification": {
+          "score": 4.859999999999999,
+          "confidence": 0.88,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.02,
+            "3": 0.09,
+            "4": 0.89
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.82,
+          "confidence": 0.85,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.16,
+            "4": 0.83
+          }
+        },
+        "strategic_value": {
+          "score": 4.55,
+          "confidence": 0.63,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.04,
+            "3": 0.35,
+            "4": 0.6
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.92,
+          "confidence": 0.94,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.07,
+            "4": 0.93
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1148,
+        "output_tokens": 87,
+        "cost": 4.8216e-05
+      },
+      "overall": 4.756
+    },
+    {
+      "question_id": "trend_analysis_002",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.15,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.33,
+        "strategic_value": 3.94,
+        "pattern_recognition": 4.890000000000001
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.15,
+          "confidence": 0.29,
+          "probabilities": {
+            "0": 0.06,
+            "1": 0.04,
+            "2": 0.16,
+            "3": 0.18,
+            "4": 0.56
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.33,
+          "confidence": 0.44,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.13,
+            "3": 0.38,
+            "4": 0.48
+          }
+        },
+        "strategic_value": {
+          "score": 3.94,
+          "confidence": 0.54,
+          "probabilities": {
+            "0": 0,
+            "1": 0.07,
+            "2": 0.17,
+            "3": 0.51,
+            "4": 0.25
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.890000000000001,
+          "confidence": 0.91,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.08,
+            "4": 0.91
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1183,
+        "output_tokens": 87,
+        "cost": 4.9686e-05
+      },
+      "overall": 4.46
+    },
+    {
+      "question_id": "trend_analysis_003",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.26,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.77,
+        "strategic_value": 4.220000000000001,
+        "pattern_recognition": 4.96
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.26,
+          "confidence": 0.39,
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.07,
+            "2": 0.12,
+            "3": 0.17,
+            "4": 0.61
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.77,
+          "confidence": 0.81,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.2,
+            "4": 0.79
+          }
+        },
+        "strategic_value": {
+          "score": 4.220000000000001,
+          "confidence": 0.55,
+          "probabilities": {
+            "0": 0,
+            "1": 0.03,
+            "2": 0.1,
+            "3": 0.49,
+            "4": 0.38
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.96,
+          "confidence": 0.97,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.03,
+            "4": 0.97
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1252,
+        "output_tokens": 87,
+        "cost": 5.2584e-05
+      },
+      "overall": 4.640000000000001
+    },
+    {
+      "question_id": "trend_analysis_004",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.45,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.7,
+        "strategic_value": 3.68,
+        "pattern_recognition": 4.970000000000001
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.45,
+          "confidence": 0.54,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.05,
+            "2": 0.09,
+            "3": 0.15,
+            "4": 0.7
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.7,
+          "confidence": 0.75,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.03,
+            "3": 0.23,
+            "4": 0.74
+          }
+        },
+        "strategic_value": {
+          "score": 3.68,
+          "confidence": 0.37,
+          "probabilities": {
+            "0": 0,
+            "1": 0.18,
+            "2": 0.18,
+            "3": 0.42,
+            "4": 0.22
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.970000000000001,
+          "confidence": 0.97,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.03,
+            "4": 0.97
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1246,
+        "output_tokens": 87,
+        "cost": 5.2332e-05
+      },
+      "overall": 4.558
+    },
+    {
+      "question_id": "trend_analysis_005",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.45,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.390000000000001,
+        "strategic_value": 4.05,
+        "pattern_recognition": 3.95
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.45,
+          "confidence": 0.54,
+          "probabilities": {
+            "0": 0.05,
+            "1": 0.02,
+            "2": 0.08,
+            "3": 0.1,
+            "4": 0.75
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.390000000000001,
+          "confidence": 0.49,
+          "probabilities": {
+            "0": 0,
+            "1": 0.03,
+            "2": 0.11,
+            "3": 0.29,
+            "4": 0.57
+          }
+        },
+        "strategic_value": {
+          "score": 4.05,
+          "confidence": 0.21,
+          "probabilities": {
+            "0": 0,
+            "1": 0.11,
+            "2": 0.11,
+            "3": 0.38,
+            "4": 0.4
+          }
+        },
+        "pattern_recognition": {
+          "score": 3.95,
+          "confidence": 0.13,
+          "probabilities": {
+            "0": 0.08,
+            "1": 0.06,
+            "2": 0.14,
+            "3": 0.24,
+            "4": 0.48
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1253,
+        "output_tokens": 87,
+        "cost": 5.2626e-05
+      },
+      "overall": 4.3660000000000005
+    },
+    {
+      "question_id": "trend_analysis_006",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 3.88,
+        "theme_identification": 4.96,
+        "synthesis_quality": 4.73,
+        "strategic_value": 3.07,
+        "pattern_recognition": 4.9399999999999995
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 3.88,
+          "confidence": 0.06,
+          "probabilities": {
+            "0": 0.09,
+            "1": 0.09,
+            "2": 0.17,
+            "3": 0.16,
+            "4": 0.49
+          }
+        },
+        "theme_identification": {
+          "score": 4.96,
+          "confidence": 0.96,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.02,
+            "4": 0.97
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.73,
+          "confidence": 0.77,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.02,
+            "3": 0.21,
+            "4": 0.77
+          }
+        },
+        "strategic_value": {
+          "score": 3.07,
+          "confidence": 0.11,
+          "probabilities": {
+            "0": 0,
+            "1": 0.38,
+            "2": 0.24,
+            "3": 0.31,
+            "4": 0.07
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.9399999999999995,
+          "confidence": 0.95,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.04,
+            "4": 0.95
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1185,
+        "output_tokens": 87,
+        "cost": 4.977e-05
+      },
+      "overall": 4.316
+    },
+    {
+      "question_id": "trend_analysis_007",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.65,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.23,
+        "strategic_value": 4.279999999999999,
+        "pattern_recognition": 4.88
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.65,
+          "confidence": 0.7,
+          "probabilities": {
+            "0": 0.04,
+            "1": 0.01,
+            "2": 0.04,
+            "3": 0.09,
+            "4": 0.82
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 1,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.23,
+          "confidence": 0.5,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.16,
+            "3": 0.42,
+            "4": 0.41
+          }
+        },
+        "strategic_value": {
+          "score": 4.279999999999999,
+          "confidence": 0.4,
+          "probabilities": {
+            "0": 0,
+            "1": 0.03,
+            "2": 0.09,
+            "3": 0.44,
+            "4": 0.44
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.88,
+          "confidence": 0.9,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.1,
+            "4": 0.9
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1188,
+        "output_tokens": 87,
+        "cost": 4.9896e-05
+      },
+      "overall": 4.606
+    },
+    {
+      "question_id": "trend_analysis_008",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.85,
+        "theme_identification": 4.970000000000001,
+        "synthesis_quality": 4.59,
+        "strategic_value": 4.16,
+        "pattern_recognition": 4.79
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.85,
+          "confidence": 0.87,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.01,
+            "2": 0.02,
+            "3": 0.07,
+            "4": 0.89
+          }
+        },
+        "theme_identification": {
+          "score": 4.970000000000001,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.02,
+            "4": 0.98
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.59,
+          "confidence": 0.65,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.05,
+            "3": 0.28,
+            "4": 0.65
+          }
+        },
+        "strategic_value": {
+          "score": 4.16,
+          "confidence": 0.3,
+          "probabilities": {
+            "0": 0,
+            "1": 0.06,
+            "2": 0.12,
+            "3": 0.4,
+            "4": 0.42
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.79,
+          "confidence": 0.83,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0,
+            "2": 0.03,
+            "3": 0.11,
+            "4": 0.85
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1235,
+        "output_tokens": 87,
+        "cost": 5.187e-05
+      },
+      "overall": 4.672
+    },
+    {
+      "question_id": "global_001",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.85,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.62,
+        "strategic_value": 4.13,
+        "pattern_recognition": 4.859999999999999
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.85,
+          "confidence": 0.88,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.02,
+            "3": 0.07,
+            "4": 0.9
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 1,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.62,
+          "confidence": 0.69,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.05,
+            "3": 0.26,
+            "4": 0.68
+          }
+        },
+        "strategic_value": {
+          "score": 4.13,
+          "confidence": 0.43,
+          "probabilities": {
+            "0": 0,
+            "1": 0.1,
+            "2": 0.08,
+            "3": 0.42,
+            "4": 0.4
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.859999999999999,
+          "confidence": 0.88,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.11,
+            "4": 0.88
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1264,
+        "output_tokens": 87,
+        "cost": 5.3088e-05
+      },
+      "overall": 4.6899999999999995
+    },
+    {
+      "question_id": "global_002",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.2,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.49,
+        "strategic_value": 3.41,
+        "pattern_recognition": 4.95
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.2,
+          "confidence": 0.33,
+          "probabilities": {
+            "0": 0.06,
+            "1": 0.03,
+            "2": 0.17,
+            "3": 0.14,
+            "4": 0.6
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.49,
+          "confidence": 0.57,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.08,
+            "3": 0.33,
+            "4": 0.59
+          }
+        },
+        "strategic_value": {
+          "score": 3.41,
+          "confidence": 0.3,
+          "probabilities": {
+            "0": 0,
+            "1": 0.19,
+            "2": 0.33,
+            "3": 0.35,
+            "4": 0.13
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.95,
+          "confidence": 0.96,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.04,
+            "4": 0.96
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1249,
+        "output_tokens": 87,
+        "cost": 5.2458e-05
+      },
+      "overall": 4.408
+    },
+    {
+      "question_id": "global_003",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.390000000000001,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.74,
+        "strategic_value": 2.95,
+        "pattern_recognition": 4.95
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.390000000000001,
+          "confidence": 0.49,
+          "probabilities": {
+            "0": 0.07,
+            "1": 0.02,
+            "2": 0.09,
+            "3": 0.11,
+            "4": 0.71
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.74,
+          "confidence": 0.78,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.02,
+            "3": 0.23,
+            "4": 0.75
+          }
+        },
+        "strategic_value": {
+          "score": 2.95,
+          "confidence": 0.21,
+          "probabilities": {
+            "0": 0,
+            "1": 0.38,
+            "2": 0.32,
+            "3": 0.25,
+            "4": 0.05
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.95,
+          "confidence": 0.96,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.04,
+            "4": 0.96
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1244,
+        "output_tokens": 87,
+        "cost": 5.2248e-05
+      },
+      "overall": 4.404
+    },
+    {
+      "question_id": "global_004",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.09,
+        "theme_identification": 4.98,
+        "synthesis_quality": 4.26,
+        "strategic_value": 4.09,
+        "pattern_recognition": 4.859999999999999
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.09,
+          "confidence": 0.24,
+          "probabilities": {
+            "0": 0.06,
+            "1": 0.03,
+            "2": 0.2,
+            "3": 0.2,
+            "4": 0.51
+          }
+        },
+        "theme_identification": {
+          "score": 4.98,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.26,
+          "confidence": 0.54,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.13,
+            "3": 0.46,
+            "4": 0.41
+          }
+        },
+        "strategic_value": {
+          "score": 4.09,
+          "confidence": 0.52,
+          "probabilities": {
+            "0": 0,
+            "1": 0.05,
+            "2": 0.15,
+            "3": 0.47,
+            "4": 0.33
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.859999999999999,
+          "confidence": 0.88,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.11,
+            "4": 0.88
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1237,
+        "output_tokens": 87,
+        "cost": 5.1954e-05
+      },
+      "overall": 4.456
+    },
+    {
+      "question_id": "global_005",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.63,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.66,
+        "strategic_value": 3.11,
+        "pattern_recognition": 3.62
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.63,
+          "confidence": 0.69,
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.04,
+            "2": 0.04,
+            "3": 0.09,
+            "4": 0.81
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.66,
+          "confidence": 0.72,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.04,
+            "3": 0.25,
+            "4": 0.71
+          }
+        },
+        "strategic_value": {
+          "score": 3.11,
+          "confidence": 0.07,
+          "probabilities": {
+            "0": 0,
+            "1": 0.38,
+            "2": 0.22,
+            "3": 0.3,
+            "4": 0.1
+          }
+        },
+        "pattern_recognition": {
+          "score": 3.62,
+          "confidence": 0.31,
+          "probabilities": {
+            "0": 0.04,
+            "1": 0.02,
+            "2": 0.41,
+            "3": 0.34,
+            "4": 0.19
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1264,
+        "output_tokens": 87,
+        "cost": 5.3088e-05
+      },
+      "overall": 4.202
+    },
+    {
+      "question_id": "global_006",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.45,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.6,
+        "strategic_value": 4.609999999999999,
+        "pattern_recognition": 4.91
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.45,
+          "confidence": 0.54,
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.02,
+            "2": 0.11,
+            "3": 0.16,
+            "4": 0.69
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.6,
+          "confidence": 0.66,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.06,
+            "3": 0.27,
+            "4": 0.66
+          }
+        },
+        "strategic_value": {
+          "score": 4.609999999999999,
+          "confidence": 0.67,
+          "probabilities": {
+            "0": 0,
+            "1": 0.02,
+            "2": 0.03,
+            "3": 0.27,
+            "4": 0.68
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.91,
+          "confidence": 0.92,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.06,
+            "4": 0.93
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1231,
+        "output_tokens": 87,
+        "cost": 5.1702e-05
+      },
+      "overall": 4.712
+    },
+    {
+      "question_id": "global_007",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.79,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.640000000000001,
+        "strategic_value": 4.35,
+        "pattern_recognition": 4.970000000000001
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.79,
+          "confidence": 0.82,
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.01,
+            "2": 0.02,
+            "3": 0.08,
+            "4": 0.87
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.640000000000001,
+          "confidence": 0.7,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.04,
+            "3": 0.27,
+            "4": 0.69
+          }
+        },
+        "strategic_value": {
+          "score": 4.35,
+          "confidence": 0.46,
+          "probabilities": {
+            "0": 0,
+            "1": 0.04,
+            "2": 0.06,
+            "3": 0.42,
+            "4": 0.48
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.970000000000001,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.03,
+            "4": 0.97
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1247,
+        "output_tokens": 87,
+        "cost": 5.2374e-05
+      },
+      "overall": 4.748
+    },
+    {
+      "question_id": "global_008",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.58,
+        "theme_identification": 5.0,
+        "synthesis_quality": 4.8100000000000005,
+        "strategic_value": 4.2,
+        "pattern_recognition": 4.970000000000001
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.58,
+          "confidence": 0.65,
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.04,
+            "2": 0.04,
+            "3": 0.09,
+            "4": 0.8
+          }
+        },
+        "theme_identification": {
+          "score": 5.0,
+          "confidence": 1,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.8100000000000005,
+          "confidence": 0.84,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.17,
+            "4": 0.82
+          }
+        },
+        "strategic_value": {
+          "score": 4.2,
+          "confidence": 0.49,
+          "probabilities": {
+            "0": 0,
+            "1": 0.05,
+            "2": 0.11,
+            "3": 0.43,
+            "4": 0.41
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.970000000000001,
+          "confidence": 0.97,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.03,
+            "4": 0.97
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1282,
+        "output_tokens": 87,
+        "cost": 5.3844e-05
+      },
+      "overall": 4.712000000000001
+    },
+    {
+      "question_id": "global_009",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.8,
+        "theme_identification": 4.99,
+        "synthesis_quality": 3.05,
+        "strategic_value": 4.3,
+        "pattern_recognition": 2.19
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.8,
+          "confidence": 0.83,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.02,
+            "2": 0.03,
+            "3": 0.06,
+            "4": 0.88
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 3.05,
+          "confidence": 0.12,
+          "probabilities": {
+            "0": 0,
+            "1": 0.45,
+            "2": 0.21,
+            "3": 0.17,
+            "4": 0.17
+          }
+        },
+        "strategic_value": {
+          "score": 4.3,
+          "confidence": 0.42,
+          "probabilities": {
+            "0": 0,
+            "1": 0.1,
+            "2": 0.06,
+            "3": 0.26,
+            "4": 0.58
+          }
+        },
+        "pattern_recognition": {
+          "score": 2.19,
+          "confidence": 0.01,
+          "probabilities": {
+            "0": 0.47,
+            "1": 0.14,
+            "2": 0.18,
+            "3": 0.14,
+            "4": 0.07
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1199,
+        "output_tokens": 87,
+        "cost": 5.0358e-05
+      },
+      "overall": 3.8660000000000005
+    },
+    {
+      "question_id": "global_010",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.470000000000001,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.57,
+        "strategic_value": 3.64,
+        "pattern_recognition": 4.91
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.470000000000001,
+          "confidence": 0.56,
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.02,
+            "2": 0.09,
+            "3": 0.21,
+            "4": 0.66
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 1,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.57,
+          "confidence": 0.64,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.06,
+            "3": 0.3,
+            "4": 0.63
+          }
+        },
+        "strategic_value": {
+          "score": 3.64,
+          "confidence": 0.37,
+          "probabilities": {
+            "0": 0,
+            "1": 0.19,
+            "2": 0.18,
+            "3": 0.43,
+            "4": 0.2
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.91,
+          "confidence": 0.92,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.06,
+            "4": 0.93
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1215,
+        "output_tokens": 87,
+        "cost": 5.103e-05
+      },
+      "overall": 4.516
+    },
+    {
+      "question_id": "global_011",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.42,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.29,
+        "strategic_value": 3.84,
+        "pattern_recognition": 4.85
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.42,
+          "confidence": 0.52,
+          "probabilities": {
+            "0": 0.04,
+            "1": 0.02,
+            "2": 0.12,
+            "3": 0.13,
+            "4": 0.69
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.29,
+          "confidence": 0.41,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.14,
+            "3": 0.41,
+            "4": 0.44
+          }
+        },
+        "strategic_value": {
+          "score": 3.84,
+          "confidence": 0.39,
+          "probabilities": {
+            "0": 0,
+            "1": 0.14,
+            "2": 0.17,
+            "3": 0.41,
+            "4": 0.28
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.85,
+          "confidence": 0.88,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.12,
+            "4": 0.87
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1317,
+        "output_tokens": 87,
+        "cost": 5.5314e-05
+      },
+      "overall": 4.478
+    },
+    {
+      "question_id": "global_012",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.890000000000001,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.779999999999999,
+        "strategic_value": 3.81,
+        "pattern_recognition": 4.88
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.890000000000001,
+          "confidence": 0.91,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.07,
+            "4": 0.92
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.779999999999999,
+          "confidence": 0.81,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.2,
+            "4": 0.79
+          }
+        },
+        "strategic_value": {
+          "score": 3.81,
+          "confidence": 0.46,
+          "probabilities": {
+            "0": 0,
+            "1": 0.11,
+            "2": 0.19,
+            "3": 0.47000000000000003,
+            "4": 0.23
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.88,
+          "confidence": 0.9,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.1,
+            "4": 0.89
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1169,
+        "output_tokens": 87,
+        "cost": 4.9098e-05
+      },
+      "overall": 4.67
+    },
+    {
+      "question_id": "global_013",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.62,
+        "theme_identification": 5.0,
+        "synthesis_quality": 4.82,
+        "strategic_value": 4.7,
+        "pattern_recognition": 4.970000000000001
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.62,
+          "confidence": 0.68,
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.03,
+            "2": 0.05,
+            "3": 0.11,
+            "4": 0.79
+          }
+        },
+        "theme_identification": {
+          "score": 5.0,
+          "confidence": 1,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.82,
+          "confidence": 0.85,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.17,
+            "4": 0.82
+          }
+        },
+        "strategic_value": {
+          "score": 4.7,
+          "confidence": 0.75,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.01,
+            "3": 0.26,
+            "4": 0.72
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.970000000000001,
+          "confidence": 0.97,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.02,
+            "4": 0.98
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1206,
+        "output_tokens": 87,
+        "cost": 5.0652e-05
+      },
+      "overall": 4.822
+    },
+    {
+      "question_id": "global_014",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.2,
+        "theme_identification": 4.92,
+        "synthesis_quality": 4.62,
+        "strategic_value": 3.21,
+        "pattern_recognition": 4.970000000000001
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.2,
+          "confidence": 0.33,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.06,
+            "2": 0.16,
+            "3": 0.27,
+            "4": 0.5
+          }
+        },
+        "theme_identification": {
+          "score": 4.92,
+          "confidence": 0.93,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.05,
+            "4": 0.93
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.62,
+          "confidence": 0.68,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.06,
+            "3": 0.26,
+            "4": 0.68
+          }
+        },
+        "strategic_value": {
+          "score": 3.21,
+          "confidence": 0.17,
+          "probabilities": {
+            "0": 0,
+            "1": 0.33,
+            "2": 0.23,
+            "3": 0.34,
+            "4": 0.1
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.970000000000001,
+          "confidence": 0.97,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.03,
+            "4": 0.97
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1129,
+        "output_tokens": 87,
+        "cost": 4.7418e-05
+      },
+      "overall": 4.384
+    },
+    {
+      "question_id": "global_015",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.720000000000001,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.38,
+        "strategic_value": 4.42,
+        "pattern_recognition": 3.66
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.720000000000001,
+          "confidence": 0.76,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.02,
+            "2": 0.06,
+            "3": 0.09,
+            "4": 0.82
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.38,
+          "confidence": 0.48,
+          "probabilities": {
+            "0": 0,
+            "1": 0.03,
+            "2": 0.1,
+            "3": 0.32,
+            "4": 0.55
+          }
+        },
+        "strategic_value": {
+          "score": 4.42,
+          "confidence": 0.52,
+          "probabilities": {
+            "0": 0,
+            "1": 0.07,
+            "2": 0.06,
+            "3": 0.25,
+            "4": 0.62
+          }
+        },
+        "pattern_recognition": {
+          "score": 3.66,
+          "confidence": 0,
+          "probabilities": {
+            "0": 0.1,
+            "1": 0.05,
+            "2": 0.29,
+            "3": 0.2,
+            "4": 0.36
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1088,
+        "output_tokens": 87,
+        "cost": 4.5696e-05
+      },
+      "overall": 4.433999999999999
+    },
+    {
+      "question_id": "maintenance_narratives_001",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 3.71,
+        "theme_identification": 4.98,
+        "synthesis_quality": 4.220000000000001,
+        "strategic_value": 2.8200000000000003,
+        "pattern_recognition": 4.82
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 3.71,
+          "confidence": 0,
+          "probabilities": {
+            "0": 0.04,
+            "1": 0.2,
+            "2": 0.17,
+            "3": 0.2,
+            "4": 0.39
+          }
+        },
+        "theme_identification": {
+          "score": 4.98,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.02,
+            "4": 0.98
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.220000000000001,
+          "confidence": 0.35,
+          "probabilities": {
+            "0": 0,
+            "1": 0.03,
+            "2": 0.19,
+            "3": 0.31,
+            "4": 0.47
+          }
+        },
+        "strategic_value": {
+          "score": 2.8200000000000003,
+          "confidence": 0.31,
+          "probabilities": {
+            "0": 0,
+            "1": 0.43,
+            "2": 0.35,
+            "3": 0.2,
+            "4": 0.02
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.82,
+          "confidence": 0.85,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.02,
+            "3": 0.12,
+            "4": 0.86
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1224,
+        "output_tokens": 87,
+        "cost": 5.1408e-05
+      },
+      "overall": 4.110000000000001
+    },
+    {
+      "question_id": "maintenance_narratives_002",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 3.99,
+        "theme_identification": 4.970000000000001,
+        "synthesis_quality": 4.82,
+        "strategic_value": 2.98,
+        "pattern_recognition": 4.93
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 3.99,
+          "confidence": 0.16,
+          "probabilities": {
+            "0": 0.05,
+            "1": 0.09,
+            "2": 0.18,
+            "3": 0.2,
+            "4": 0.48
+          }
+        },
+        "theme_identification": {
+          "score": 4.970000000000001,
+          "confidence": 0.97,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.02,
+            "4": 0.97
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.82,
+          "confidence": 0.85,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.02,
+            "3": 0.15,
+            "4": 0.83
+          }
+        },
+        "strategic_value": {
+          "score": 2.98,
+          "confidence": 0.45,
+          "probabilities": {
+            "0": 0,
+            "1": 0.33,
+            "2": 0.38,
+            "3": 0.25,
+            "4": 0.04
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.93,
+          "confidence": 0.94,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.04,
+            "4": 0.95
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1189,
+        "output_tokens": 87,
+        "cost": 4.9938e-05
+      },
+      "overall": 4.338
+    },
+    {
+      "question_id": "maintenance_narratives_003",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 3.92,
+        "theme_identification": 4.98,
+        "synthesis_quality": 3.74,
+        "strategic_value": 3.12,
+        "pattern_recognition": 3.03
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 3.92,
+          "confidence": 0.1,
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.07,
+            "2": 0.25,
+            "3": 0.26,
+            "4": 0.39
+          }
+        },
+        "theme_identification": {
+          "score": 4.98,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 3.74,
+          "confidence": 0.23,
+          "probabilities": {
+            "0": 0,
+            "1": 0.09,
+            "2": 0.34,
+            "3": 0.31,
+            "4": 0.26
+          }
+        },
+        "strategic_value": {
+          "score": 3.12,
+          "confidence": 0.07,
+          "probabilities": {
+            "0": 0,
+            "1": 0.34,
+            "2": 0.26,
+            "3": 0.33,
+            "4": 0.07
+          }
+        },
+        "pattern_recognition": {
+          "score": 3.03,
+          "confidence": 0.37,
+          "probabilities": {
+            "0": 0.11,
+            "1": 0.14,
+            "2": 0.43,
+            "3": 0.25,
+            "4": 0.07
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1178,
+        "output_tokens": 87,
+        "cost": 4.9476e-05
+      },
+      "overall": 3.7580000000000005
+    },
+    {
+      "question_id": "maintenance_narratives_004",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.3,
+        "theme_identification": 4.98,
+        "synthesis_quality": 4.71,
+        "strategic_value": 3.4,
+        "pattern_recognition": 4.93
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.3,
+          "confidence": 0.42,
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.03,
+            "2": 0.14,
+            "3": 0.23,
+            "4": 0.58
+          }
+        },
+        "theme_identification": {
+          "score": 4.98,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.71,
+          "confidence": 0.75,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.05,
+            "3": 0.18,
+            "4": 0.76
+          }
+        },
+        "strategic_value": {
+          "score": 3.4,
+          "confidence": 0.32,
+          "probabilities": {
+            "0": 0,
+            "1": 0.2,
+            "2": 0.3,
+            "3": 0.39,
+            "4": 0.11
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.93,
+          "confidence": 0.95,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.05,
+            "4": 0.94
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1180,
+        "output_tokens": 87,
+        "cost": 4.956e-05
+      },
+      "overall": 4.464
+    },
+    {
+      "question_id": "maintenance_narratives_005",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.16,
+        "theme_identification": 4.970000000000001,
+        "synthesis_quality": 4.3,
+        "strategic_value": 3.13,
+        "pattern_recognition": 4.83
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.16,
+          "confidence": 0.3,
+          "probabilities": {
+            "0": 0.08,
+            "1": 0.03,
+            "2": 0.15,
+            "3": 0.14,
+            "4": 0.6
+          }
+        },
+        "theme_identification": {
+          "score": 4.970000000000001,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.02,
+            "4": 0.98
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.3,
+          "confidence": 0.41,
+          "probabilities": {
+            "0": 0,
+            "1": 0.03,
+            "2": 0.15,
+            "3": 0.32,
+            "4": 0.5
+          }
+        },
+        "strategic_value": {
+          "score": 3.13,
+          "confidence": 0.06,
+          "probabilities": {
+            "0": 0,
+            "1": 0.32,
+            "2": 0.31,
+            "3": 0.29,
+            "4": 0.08
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.83,
+          "confidence": 0.86,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.02,
+            "3": 0.11,
+            "4": 0.87
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1219,
+        "output_tokens": 87,
+        "cost": 5.1198e-05
+      },
+      "overall": 4.2780000000000005
+    },
+    {
+      "question_id": "maintenance_narratives_006",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 3.99,
+        "theme_identification": 4.98,
+        "synthesis_quality": 4.7,
+        "strategic_value": 2.95,
+        "pattern_recognition": 4.91
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 3.99,
+          "confidence": 0.16,
+          "probabilities": {
+            "0": 0.04,
+            "1": 0.07,
+            "2": 0.2,
+            "3": 0.24,
+            "4": 0.45
+          }
+        },
+        "theme_identification": {
+          "score": 4.98,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.02,
+            "4": 0.98
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.7,
+          "confidence": 0.75,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.03,
+            "3": 0.23,
+            "4": 0.74
+          }
+        },
+        "strategic_value": {
+          "score": 2.95,
+          "confidence": 0.49,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.32,
+            "2": 0.42,
+            "3": 0.22,
+            "4": 0.03
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.91,
+          "confidence": 0.93,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.07,
+            "4": 0.92
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1205,
+        "output_tokens": 87,
+        "cost": 5.061e-05
+      },
+      "overall": 4.306
+    },
+    {
+      "question_id": "maintenance_narratives_007",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.23,
+        "theme_identification": 4.970000000000001,
+        "synthesis_quality": 3.63,
+        "strategic_value": 4.09,
+        "pattern_recognition": 3.57
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.23,
+          "confidence": 0.36,
+          "probabilities": {
+            "0": 0.07,
+            "1": 0.03,
+            "2": 0.15,
+            "3": 0.11,
+            "4": 0.64
+          }
+        },
+        "theme_identification": {
+          "score": 4.970000000000001,
+          "confidence": 0.97,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.03,
+            "4": 0.97
+          }
+        },
+        "synthesis_quality": {
+          "score": 3.63,
+          "confidence": 0.24,
+          "probabilities": {
+            "0": 0,
+            "1": 0.14,
+            "2": 0.33999999999999997,
+            "3": 0.26,
+            "4": 0.26
+          }
+        },
+        "strategic_value": {
+          "score": 4.09,
+          "confidence": 0.44,
+          "probabilities": {
+            "0": 0,
+            "1": 0.09,
+            "2": 0.11,
+            "3": 0.42,
+            "4": 0.38
+          }
+        },
+        "pattern_recognition": {
+          "score": 3.57,
+          "confidence": 0,
+          "probabilities": {
+            "0": 0.13,
+            "1": 0.06,
+            "2": 0.23,
+            "3": 0.28,
+            "4": 0.3
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1301,
+        "output_tokens": 87,
+        "cost": 5.4642e-05
+      },
+      "overall": 4.098000000000001
+    },
+    {
+      "question_id": "maintenance_narratives_008",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.029999999999999,
+        "theme_identification": 4.98,
+        "synthesis_quality": 4.55,
+        "strategic_value": 3.15,
+        "pattern_recognition": 4.91
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.029999999999999,
+          "confidence": 0.19,
+          "probabilities": {
+            "0": 0.05,
+            "1": 0.04,
+            "2": 0.18,
+            "3": 0.29,
+            "4": 0.44
+          }
+        },
+        "theme_identification": {
+          "score": 4.98,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.02,
+            "4": 0.98
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.55,
+          "confidence": 0.62,
+          "probabilities": {
+            "0": 0,
+            "1": 0.02,
+            "2": 0.07,
+            "3": 0.26,
+            "4": 0.65
+          }
+        },
+        "strategic_value": {
+          "score": 3.15,
+          "confidence": 0.36,
+          "probabilities": {
+            "0": 0,
+            "1": 0.3,
+            "2": 0.32,
+            "3": 0.3,
+            "4": 0.08
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.91,
+          "confidence": 0.93,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.06,
+            "4": 0.93
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1051,
+        "output_tokens": 87,
+        "cost": 4.4142e-05
+      },
+      "overall": 4.324
+    },
+    {
+      "question_id": "maintenance_narratives_009",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.41,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.4399999999999995,
+        "strategic_value": 2.76,
+        "pattern_recognition": 4.33
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.41,
+          "confidence": 0.51,
+          "probabilities": {
+            "0": 0.06,
+            "1": 0.01,
+            "2": 0.09,
+            "3": 0.14,
+            "4": 0.7
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.4399999999999995,
+          "confidence": 0.53,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.09,
+            "3": 0.35,
+            "4": 0.55
+          }
+        },
+        "strategic_value": {
+          "score": 2.76,
+          "confidence": 0.35,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.44,
+            "2": 0.37,
+            "3": 0.16,
+            "4": 0.02
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.33,
+          "confidence": 0.44,
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.02,
+            "2": 0.09,
+            "3": 0.31,
+            "4": 0.55
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1211,
+        "output_tokens": 87,
+        "cost": 5.0862e-05
+      },
+      "overall": 4.186
+    },
+    {
+      "question_id": "maintenance_narratives_010",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.5600000000000005,
+        "theme_identification": 4.98,
+        "synthesis_quality": 4.57,
+        "strategic_value": 4.37,
+        "pattern_recognition": 4.93
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.5600000000000005,
+          "confidence": 0.63,
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.01,
+            "2": 0.09,
+            "3": 0.11,
+            "4": 0.76
+          }
+        },
+        "theme_identification": {
+          "score": 4.98,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.57,
+          "confidence": 0.64,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.06,
+            "3": 0.28,
+            "4": 0.65
+          }
+        },
+        "strategic_value": {
+          "score": 4.37,
+          "confidence": 0.47,
+          "probabilities": {
+            "0": 0,
+            "1": 0.07,
+            "2": 0.06,
+            "3": 0.29,
+            "4": 0.58
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.93,
+          "confidence": 0.94,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0,
+            "2": 0,
+            "3": 0.04,
+            "4": 0.95
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1246,
+        "output_tokens": 87,
+        "cost": 5.2332e-05
+      },
+      "overall": 4.682
+    },
+    {
+      "question_id": "aircraft_problems_actions_001",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.4399999999999995,
+        "theme_identification": 4.99,
+        "synthesis_quality": 3.17,
+        "strategic_value": 3.6,
+        "pattern_recognition": 4.16
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.4399999999999995,
+          "confidence": 0.54,
+          "probabilities": {
+            "0": 0.07,
+            "1": 0,
+            "2": 0.07,
+            "3": 0.1,
+            "4": 0.76
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1
+          }
+        },
+        "synthesis_quality": {
+          "score": 3.17,
+          "confidence": 0.03,
+          "probabilities": {
+            "0": 0,
+            "1": 0.4,
+            "2": 0.23,
+            "3": 0.18,
+            "4": 0.19
+          }
+        },
+        "strategic_value": {
+          "score": 3.6,
+          "confidence": 0.41,
+          "probabilities": {
+            "0": 0,
+            "1": 0.17,
+            "2": 0.22,
+            "3": 0.45,
+            "4": 0.16
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.16,
+          "confidence": 0.3,
+          "probabilities": {
+            "0": 0.07,
+            "1": 0.05,
+            "2": 0.1,
+            "3": 0.22,
+            "4": 0.56
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1190,
+        "output_tokens": 87,
+        "cost": 4.998e-05
+      },
+      "overall": 4.072
+    },
+    {
+      "question_id": "aircraft_problems_actions_002",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 3.44,
+        "theme_identification": 4.87,
+        "synthesis_quality": 3.78,
+        "strategic_value": 3.55,
+        "pattern_recognition": 4.51
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 3.44,
+          "confidence": 0.32,
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.12,
+            "2": 0.39,
+            "3": 0.28,
+            "4": 0.18
+          }
+        },
+        "theme_identification": {
+          "score": 4.87,
+          "confidence": 0.89,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.03,
+            "3": 0.08,
+            "4": 0.89
+          }
+        },
+        "synthesis_quality": {
+          "score": 3.78,
+          "confidence": 0,
+          "probabilities": {
+            "0": 0,
+            "1": 0.2,
+            "2": 0.19,
+            "3": 0.25,
+            "4": 0.36
+          }
+        },
+        "strategic_value": {
+          "score": 3.55,
+          "confidence": 0.43,
+          "probabilities": {
+            "0": 0,
+            "1": 0.17,
+            "2": 0.22,
+            "3": 0.49,
+            "4": 0.12
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.51,
+          "confidence": 0.59,
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.01,
+            "2": 0.09,
+            "3": 0.17,
+            "4": 0.7
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1110,
+        "output_tokens": 87,
+        "cost": 4.662e-05
+      },
+      "overall": 4.029999999999999
+    },
+    {
+      "question_id": "aircraft_problems_actions_003",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 3.95,
+        "theme_identification": 4.99,
+        "synthesis_quality": 3.95,
+        "strategic_value": 4.01,
+        "pattern_recognition": 4.859999999999999
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 3.95,
+          "confidence": 0.13,
+          "probabilities": {
+            "0": 0.12,
+            "1": 0.01,
+            "2": 0.21,
+            "3": 0.12,
+            "4": 0.54
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 3.95,
+          "confidence": 0.42,
+          "probabilities": {
+            "0": 0,
+            "1": 0.06,
+            "2": 0.26,
+            "3": 0.35,
+            "4": 0.33
+          }
+        },
+        "strategic_value": {
+          "score": 4.01,
+          "confidence": 0.57,
+          "probabilities": {
+            "0": 0,
+            "1": 0.06,
+            "2": 0.13,
+            "3": 0.55,
+            "4": 0.26
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.859999999999999,
+          "confidence": 0.88,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.11,
+            "4": 0.88
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1145,
+        "output_tokens": 87,
+        "cost": 4.809e-05
+      },
+      "overall": 4.351999999999999
+    },
+    {
+      "question_id": "aircraft_problems_actions_004",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 3.29,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.66,
+        "strategic_value": 4.37,
+        "pattern_recognition": 4.96
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 3.29,
+          "confidence": 0,
+          "probabilities": {
+            "0": 0.22,
+            "1": 0.03,
+            "2": 0.29,
+            "3": 0.14,
+            "4": 0.32
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 1,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.66,
+          "confidence": 0.72,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.05,
+            "3": 0.22,
+            "4": 0.72
+          }
+        },
+        "strategic_value": {
+          "score": 4.37,
+          "confidence": 0.48,
+          "probabilities": {
+            "0": 0,
+            "1": 0.02,
+            "2": 0.06,
+            "3": 0.46,
+            "4": 0.46
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.96,
+          "confidence": 0.96,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.03,
+            "4": 0.97
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1208,
+        "output_tokens": 87,
+        "cost": 5.0736e-05
+      },
+      "overall": 4.454000000000001
+    },
+    {
+      "question_id": "aircraft_problems_actions_005",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.640000000000001,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.0600000000000005,
+        "strategic_value": 4.07,
+        "pattern_recognition": 4.77
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.640000000000001,
+          "confidence": 0.7,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.03,
+            "2": 0.07,
+            "3": 0.11,
+            "4": 0.78
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.0600000000000005,
+          "confidence": 0.21,
+          "probabilities": {
+            "0": 0,
+            "1": 0.06,
+            "2": 0.22,
+            "3": 0.32,
+            "4": 0.4
+          }
+        },
+        "strategic_value": {
+          "score": 4.07,
+          "confidence": 0.47,
+          "probabilities": {
+            "0": 0,
+            "1": 0.07,
+            "2": 0.14,
+            "3": 0.44,
+            "4": 0.35
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.77,
+          "confidence": 0.81,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.03,
+            "3": 0.16,
+            "4": 0.81
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1162,
+        "output_tokens": 87,
+        "cost": 4.8804e-05
+      },
+      "overall": 4.506
+    },
+    {
+      "question_id": "aircraft_problems_actions_006",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 3.0,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.68,
+        "strategic_value": 4.33,
+        "pattern_recognition": 4.96
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 3.0,
+          "confidence": 0,
+          "probabilities": {
+            "0": 0.29,
+            "1": 0.02,
+            "2": 0.34,
+            "3": 0.1,
+            "4": 0.25
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 1,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.68,
+          "confidence": 0.73,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.03,
+            "3": 0.26,
+            "4": 0.71
+          }
+        },
+        "strategic_value": {
+          "score": 4.33,
+          "confidence": 0.59,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.07,
+            "3": 0.51,
+            "4": 0.41
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.96,
+          "confidence": 0.96,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.04,
+            "4": 0.96
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1176,
+        "output_tokens": 87,
+        "cost": 4.9392e-05
+      },
+      "overall": 4.392
+    },
+    {
+      "question_id": "aircraft_problems_actions_007",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 3.66,
+        "theme_identification": 4.55,
+        "synthesis_quality": 3.9,
+        "strategic_value": 3.35,
+        "pattern_recognition": 4.859999999999999
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 3.66,
+          "confidence": 0.15,
+          "probabilities": {
+            "0": 0.07,
+            "1": 0.05,
+            "2": 0.32,
+            "3": 0.27,
+            "4": 0.29
+          }
+        },
+        "theme_identification": {
+          "score": 4.55,
+          "confidence": 0.63,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.05,
+            "3": 0.35,
+            "4": 0.6
+          }
+        },
+        "synthesis_quality": {
+          "score": 3.9,
+          "confidence": 0.08,
+          "probabilities": {
+            "0": 0,
+            "1": 0.11,
+            "2": 0.23,
+            "3": 0.32,
+            "4": 0.33999999999999997
+          }
+        },
+        "strategic_value": {
+          "score": 3.35,
+          "confidence": 0.28,
+          "probabilities": {
+            "0": 0,
+            "1": 0.23,
+            "2": 0.28,
+            "3": 0.38,
+            "4": 0.11
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.859999999999999,
+          "confidence": 0.88,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.02,
+            "3": 0.08,
+            "4": 0.9
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1106,
+        "output_tokens": 87,
+        "cost": 4.6452e-05
+      },
+      "overall": 4.064
+    },
+    {
+      "question_id": "aircraft_problems_actions_008",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.26,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.25,
+        "strategic_value": 4.35,
+        "pattern_recognition": 4.92
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.26,
+          "confidence": 0.39,
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.07,
+            "2": 0.13,
+            "3": 0.2,
+            "4": 0.58
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.25,
+          "confidence": 0.37,
+          "probabilities": {
+            "0": 0,
+            "1": 0.02,
+            "2": 0.14,
+            "3": 0.41,
+            "4": 0.43
+          }
+        },
+        "strategic_value": {
+          "score": 4.35,
+          "confidence": 0.46,
+          "probabilities": {
+            "0": 0,
+            "1": 0.02,
+            "2": 0.08,
+            "3": 0.43,
+            "4": 0.47
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.92,
+          "confidence": 0.93,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.06,
+            "4": 0.93
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1196,
+        "output_tokens": 87,
+        "cost": 5.0232e-05
+      },
+      "overall": 4.554
+    },
+    {
+      "question_id": "aircraft_problems_actions_009",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 3.83,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.7,
+        "strategic_value": 4.220000000000001,
+        "pattern_recognition": 4.859999999999999
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 3.83,
+          "confidence": 0.03,
+          "probabilities": {
+            "0": 0.07,
+            "1": 0.07,
+            "2": 0.21,
+            "3": 0.24,
+            "4": 0.41000000000000003
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 1,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 1
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.7,
+          "confidence": 0.75,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.04,
+            "3": 0.21,
+            "4": 0.74
+          }
+        },
+        "strategic_value": {
+          "score": 4.220000000000001,
+          "confidence": 0.48,
+          "probabilities": {
+            "0": 0,
+            "1": 0.05,
+            "2": 0.1,
+            "3": 0.43,
+            "4": 0.42
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.859999999999999,
+          "confidence": 0.88,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.02,
+            "3": 0.09,
+            "4": 0.89
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1182,
+        "output_tokens": 87,
+        "cost": 4.9644e-05
+      },
+      "overall": 4.5200000000000005
+    },
+    {
+      "question_id": "aircraft_problems_actions_010",
+      "status": "scored",
+      "rubric": "jev_holistic",
+      "style_names": [
+        "Holistic",
+        "Sensemaking"
+      ],
+      "scores": {
+        "global_perspective": 4.640000000000001,
+        "theme_identification": 4.99,
+        "synthesis_quality": 4.59,
+        "strategic_value": 3.88,
+        "pattern_recognition": 4.92
+      },
+      "detail": {
+        "global_perspective": {
+          "score": 4.640000000000001,
+          "confidence": 0.7,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.01,
+            "2": 0.06,
+            "3": 0.18,
+            "4": 0.74
+          }
+        },
+        "theme_identification": {
+          "score": 4.99,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "synthesis_quality": {
+          "score": 4.59,
+          "confidence": 0.66,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.05,
+            "3": 0.29,
+            "4": 0.66
+          }
+        },
+        "strategic_value": {
+          "score": 3.88,
+          "confidence": 0.43,
+          "probabilities": {
+            "0": 0,
+            "1": 0.12,
+            "2": 0.16,
+            "3": 0.44,
+            "4": 0.28
+          }
+        },
+        "pattern_recognition": {
+          "score": 4.92,
+          "confidence": 0.93,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.06,
+            "4": 0.93
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1258,
+        "output_tokens": 87,
+        "cost": 5.2836e-05
+      },
+      "overall": 4.604000000000001
+    }
+  ],
+  "n_items": 83,
+  "n_scored": 83,
+  "n_no_source": 0,
+  "timestamp": "2026-10-01T01:28:29.963746+00:00"
+}

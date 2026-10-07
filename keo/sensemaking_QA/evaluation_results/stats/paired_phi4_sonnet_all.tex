@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lrrrrrrl}
+\toprule
+Arm & Mean & $\Delta$ & 95\% CI & $p_{\text{Holm}}$ & $d_z$ & MDE & Reading \\
+\midrule
+keo & 2.292 & -- & -- & -- & -- & -- & reference \\
+\midrule
+chunk\_sum & 2.371 & $+0.080$ & $[+0.017, +0.145]$ & 0.066 & $+0.27$ & 0.092 & underpowered n.s. \\
+keo\_norel & 2.282 & $-0.010$ & $[-0.060, +0.041]$ & 0.778 & $-0.04$ & 0.071 & underpowered n.s. \\
+keo\_shuf & 2.260 & $-0.031$ & $[-0.080, +0.017]$ & 0.494 & $-0.14$ & 0.069 & underpowered n.s. \\
+chunk\_tok & 2.193 & $-0.099$ & $[-0.157, -0.043]$ & 0.003 & $-0.37$ & 0.082 & lower \\
+textchunk & 2.128 & $-0.164$ & $[-0.229, -0.101]$ & $<$0.001 & $-0.55$ & 0.091 & lower \\
+chunk\_dedup & 2.058 & $-0.234$ & $[-0.292, -0.176]$ & $<$0.001 & $-0.85$ & 0.084 & lower \\
+\bottomrule
+\end{tabular}
+\caption{Paired comparison against keo on overall ($n=83$ questions, judge scores 1--5). $\Delta$ is the mean paired difference with a percentile bootstrap 95\% CI; $p$ is a two-sided sign-flip permutation test, Holm-corrected within the metric; MDE is the smallest difference detectable at 80\% power.}
+\label{tab:paired-overall}
+\end{table}

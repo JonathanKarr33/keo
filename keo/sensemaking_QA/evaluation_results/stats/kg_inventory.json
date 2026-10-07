@@ -1,0 +1,53 @@
+{
+  "note": "Inventory of KGs cited in acl_latex.tex Appendix sec:kg_inventory. Measured 2026-09-26. No Claude paired stats across scale.",
+  "graphs": [
+    {
+      "role": "controls_sonnet_final",
+      "path": "keo/kg/output/kg_llm/gpt4o_with_nodes_batches/100/gpt4o_withprevnodes_100_with_entity_mentions_fixed.gml",
+      "builder": "gpt4o",
+      "source_records": 100,
+      "nodes": 160,
+      "edges": 128,
+      "weak_components": 38
+    },
+    {
+      "role": "risk_recall_severity_batch",
+      "path": "keo/kg/output/kg_llm/gs100_total500/gemma3_4b_it/kg_gemma3_4b_it.gml",
+      "builder": "gemma3_4b_it",
+      "source_records": 500,
+      "nodes": 1432,
+      "edges": 1468,
+      "weak_components": 205,
+      "lexicon_safety_relevant_edges": 219
+    },
+    {
+      "role": "human_structure_rarity_note",
+      "path": "keo/kg/output/knowledge_graph.gml",
+      "nodes": 468,
+      "edges": 278,
+      "weak_components": 211
+    },
+    {
+      "role": "second_domain_pilot",
+      "path": "keo/second_domain/data/pilot_kg.gml",
+      "builder": "co_occurrence_stub",
+      "nodes": 40,
+      "edges": 413,
+      "weak_components": 1
+    },
+    {
+      "role": "on_disk_not_judged",
+      "path": "keo/kg/output/kg_llm/gs100_total100/gemma3_4b_it/kg_gemma3_4b_it.gml",
+      "nodes": 428,
+      "edges": 341,
+      "weak_components": 96
+    },
+    {
+      "role": "on_disk_not_judged",
+      "path": "keo/kg/output/kg_llm/gs100_total500/phi4mini_instruct/kg_phi4mini_instruct.gml",
+      "nodes": 1320,
+      "edges": 1192,
+      "weak_components": 227
+    }
+  ]
+}

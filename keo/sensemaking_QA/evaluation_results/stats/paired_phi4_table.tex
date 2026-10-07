@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lrrrrrrl}
+\toprule
+Arm & Mean & $\Delta$ & 95\% CI & $p_{\text{Holm}}$ & $d_z$ & MDE & Reading \\
+\midrule
+mst\_on\_freq & 2.230 & -- & -- & -- & -- & -- & reference \\
+\midrule
+ctrl\_chunk\_sum & 2.366 & $+0.136$ & $[+0.024, +0.248]$ & 0.116 & $+0.26$ & 0.163 & underpowered n.s. \\
+ctrl\_chunk\_tok & 2.290 & $+0.060$ & $[-0.034, +0.154]$ & 0.697 & $+0.14$ & 0.137 & underpowered n.s. \\
+ctrl\_keo\_shuf\_s13 & 2.282 & $+0.052$ & $[-0.035, +0.139]$ & 0.697 & $+0.13$ & 0.126 & underpowered n.s. \\
+ctrl\_keo\_norel & 2.281 & $+0.051$ & $[-0.036, +0.136]$ & 0.697 & $+0.12$ & 0.125 & underpowered n.s. \\
+textchunk & 2.154 & $-0.076$ & $[-0.167, +0.017]$ & 0.475 & $-0.18$ & 0.133 & underpowered n.s. \\
+ctrl\_chunk\_dedup & 2.125 & $-0.105$ & $[-0.192, -0.024]$ & 0.116 & $-0.26$ & 0.122 & underpowered n.s. \\
+\bottomrule
+\end{tabular}
+\caption{Paired comparison against mst\_on\_freq on overall ($n=83$ questions, judge scores 1--5). $\Delta$ is the mean paired difference with a percentile bootstrap 95\% CI; $p$ is a two-sided sign-flip permutation test, Holm-corrected within the metric; MDE is the smallest difference detectable at 80\% power.}
+\label{tab:paired-overall}
+\end{table}

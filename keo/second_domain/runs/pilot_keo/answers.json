@@ -1,0 +1,3777 @@
+[
+  {
+    "question_id": "sd_gsm_1",
+    "question": "What recurring operational themes appear across the narratives, and how might they inform proactive risk mitigation?",
+    "question_category": "comprehensive",
+    "question_type": "global",
+    "ground_truth": null,
+    "original_problem": null,
+    "ablation": {
+      "method": "keo",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "selection": {
+        "selector": "mst",
+        "use_mst": true
+      },
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "hash",
+      "embedding_model": "hash-v1",
+      "provider": "local",
+      "answer_model": "mlx-community/phi-4-4bit",
+      "answer_model_exact": "mlx-community/phi-4-4bit",
+      "kg_path": "/Users/jonathankarr/Documents/keo/keo/second_domain/data/pilot_kg.gml",
+      "corpus_csv": "/Users/jonathankarr/Documents/keo/keo/second_domain/data/sample.csv",
+      "text_column": "narrative"
+    },
+    "vanilla_answer": null,
+    "textchunkrag_answer": null,
+    "keo_answer": {
+      "question_id": "sd_gsm_1",
+      "question": "What recurring operational themes appear across the narratives, and how might they inform proactive risk mitigation?",
+      "category": "comprehensive",
+      "answer": "The recurring operational themes identified in the knowledge graph and community insights indicate several key areas of concern in aviation maintenance that can inform proactive risk mitigation strategies. Here's a comprehensive analysis:\n\n1. **Missed Approaches and Landing Issues**:\n   - **Theme**: There is a notable pattern of missed approaches and landing-related incidents. These often involve critical phases of flight where precision and reliability are paramount.\n   - **Insight**: Missed approaches can be symptomatic of broader issues such as inadequate training, pilot fatigue, or mechanical problems. Ensuring rigorous training programs and implementing fatigue management strategies can mitigate these risks. Additionally, regular checks on landing gear and braking systems can prevent mechanical failures during these critical phases.\n\n2. **Fuel Management and Inspection**:\n   - **Theme**: The co-occurrence of fuel-related issues with inspections suggests potential lapses in fuel system checks or documentation.\n   - **Insight**: Implementing a robust fuel management system that includes regular inspections and audits can prevent fuel-related incidents. This includes verifying fuel quality, ensuring proper fuel quantity, and checking for leaks or contamination.\n\n3. **Crew and Communication**:\n   - **Theme**: The involvement of the crew, particularly the captain, in incidents highlights the importance of human factors.\n   - **Insight**: Enhancing crew resource management (CRM) training can improve communication and decision-making under stress. Regular simulations and drills can prepare crews for unexpected scenarios, reducing the likelihood of errors during critical flight phases.\n\n4. **Maintenance and Aircraft Systems**:\n   - **Theme**: Maintenance records frequently mention issues with engines, electrical systems, and cargo handling.\n   - **Insight**: Proactive maintenance schedules that prioritize high-risk components can prevent failures. Implementing predictive maintenance technologies, such as condition monitoring and data analytics, can identify potential issues before they lead to failures.\n\n5. **Runway and Takeoff/Landing Dynamics**:\n   - **Theme**: The connection between runway operations and takeoff/landing incidents suggests environmental and operational factors at play.\n   - **Insight**: Regular runway inspections and maintenance can prevent surface irregularities that contribute to takeoff and landing issues. Additionally, implementing advanced weather monitoring systems can provide pilots with real-time data to make informed decisions.\n\n6. **Warning Systems and Alerts**:\n   - **Theme**: The presence of warnings and alerts in the records indicates potential issues with the aircraft's alerting systems.\n   - **Insight**: Ensuring that all warning systems are functional and that crews are trained to respond appropriately can mitigate risks. Regular testing and calibration of these systems are essential to maintain their reliability.\n\nBy addressing these themes through targeted interventions, aviation safety can be significantly enhanced. Proactive risk mitigation strategies should focus on comprehensive training, robust maintenance protocols, and the integration of advanced technologies to monitor and manage aircraft systems effectively.",
+      "method": "keo",
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "hash",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "graph_nodes_used": 4,
+      "model": "mlx-community/phi-4-4bit",
+      "model_exact": "mlx-community/phi-4-4bit",
+      "model_provider": "local",
+      "graph_available": true,
+      "evidence": {
+        "seed_nodes": [
+          {
+            "id": "during",
+            "sim": 0.0
+          },
+          {
+            "id": "climb",
+            "sim": 0.0
+          },
+          {
+            "id": "engine",
+            "sim": 0.0
+          },
+          {
+            "id": "after",
+            "sim": 0.0
+          },
+          {
+            "id": "fuel",
+            "sim": 0.0
+          },
+          {
+            "id": "landing",
+            "sim": 0.0
+          },
+          {
+            "id": "reported",
+            "sim": 0.0
+          },
+          {
+            "id": "crew",
+            "sim": 0.0
+          },
+          {
+            "id": "maintenance",
+            "sim": 0.0
+          },
+          {
+            "id": "delayed",
+            "sim": 0.0
+          }
+        ],
+        "triples": [
+          {
+            "id": "80120da6c276",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "approach",
+            "weight": 8.0
+          },
+          {
+            "id": "c0b450cd01e3",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 7.0
+          },
+          {
+            "id": "f09a9a880903",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "climb",
+            "weight": 4.0
+          },
+          {
+            "id": "43c80171ce6e",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "runway",
+            "weight": 2.0
+          },
+          {
+            "id": "3cb794aeb3ca",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "failed",
+            "weight": 2.0
+          },
+          {
+            "id": "9986c6be215f",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "delayed",
+            "weight": 2.0
+          },
+          {
+            "id": "9193e28ae63c",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "error",
+            "weight": 2.0
+          },
+          {
+            "id": "4e8859b91a48",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "electrical",
+            "weight": 1.0
+          },
+          {
+            "id": "fd220550ca89",
+            "head": "climb",
+            "relation": "co_occurs_with",
+            "tail": "engine",
+            "weight": 2.0
+          },
+          {
+            "id": "5aa27b4fd6bd",
+            "head": "engine",
+            "relation": "co_occurs_with",
+            "tail": "down",
+            "weight": 2.0
+          },
+          {
+            "id": "2a2c5f026b29",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 5.0
+          },
+          {
+            "id": "109c8bd3c704",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "fuel",
+            "weight": 4.0
+          },
+          {
+            "id": "f027c4170e4b",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "before",
+            "weight": 4.0
+          },
+          {
+            "id": "ffe03f03b0bb",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "flight",
+            "weight": 4.0
+          },
+          {
+            "id": "82db75cbc3ca",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "cargo",
+            "weight": 4.0
+          },
+          {
+            "id": "2547b765f2cb",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "found",
+            "weight": 2.0
+          },
+          {
+            "id": "987682cf0d0a",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "not",
+            "weight": 2.0
+          },
+          {
+            "id": "b73fc93caf4b",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "inspection",
+            "weight": 2.0
+          },
+          {
+            "id": "c184769b044f",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "aircraft",
+            "weight": 2.0
+          },
+          {
+            "id": "2cf9597d2872",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "issued",
+            "weight": 2.0
+          },
+          {
+            "id": "262283784da8",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "led",
+            "weight": 2.0
+          },
+          {
+            "id": "fdf54784f54e",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "altitude",
+            "weight": 2.0
+          },
+          {
+            "id": "73ddf9cd108e",
+            "head": "landing",
+            "relation": "co_occurs_with",
+            "tail": "approach",
+            "weight": 5.0
+          },
+          {
+            "id": "ea1ec05aebff",
+            "head": "reported",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 3.0
+          },
+          {
+            "id": "0b7aefae8f2c",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "takeoff",
+            "weight": 4.0
+          },
+          {
+            "id": "ad8ae0ab4c92",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "cabin",
+            "weight": 4.0
+          },
+          {
+            "id": "056b067fb42b",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "near",
+            "weight": 3.0
+          },
+          {
+            "id": "d859b1abd480",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "off",
+            "weight": 3.0
+          },
+          {
+            "id": "1cca6323c5b8",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "warning",
+            "weight": 3.0
+          },
+          {
+            "id": "ae412969df51",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "mel",
+            "weight": 3.0
+          },
+          {
+            "id": "560e0225c38a",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "atc",
+            "weight": 2.0
+          },
+          {
+            "id": "016c615df1d0",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "traffic",
+            "weight": 2.0
+          },
+          {
+            "id": "46dde4e35da4",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "noted",
+            "weight": 2.0
+          },
+          {
+            "id": "c6d8dd8a7492",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "until",
+            "weight": 2.0
+          },
+          {
+            "id": "4e2d37837501",
+            "head": "maintenance",
+            "relation": "co_occurs_with",
+            "tail": "flight",
+            "weight": 3.0
+          },
+          {
+            "id": "d8dce1440b8c",
+            "head": "approach",
+            "relation": "co_occurs_with",
+            "tail": "missed",
+            "weight": 5.0
+          },
+          {
+            "id": "cd2a1a803924",
+            "head": "approach",
+            "relation": "co_occurs_with",
+            "tail": "captain",
+            "weight": 3.0
+          },
+          {
+            "id": "cf1782e855ed",
+            "head": "departure",
+            "relation": "co_occurs_with",
+            "tail": "before",
+            "weight": 3.0
+          },
+          {
+            "id": "ac70d09f7870",
+            "head": "before",
+            "relation": "co_occurs_with",
+            "tail": "under",
+            "weight": 2.0
+          }
+        ],
+        "confidence": 0.0,
+        "use_mst": true,
+        "edge_weight": "freq",
+        "embedding_backend": "hash",
+        "controls": {
+          "shuffle_edges": false,
+          "strip_relations": false,
+          "dedup_chunks": false,
+          "match_context_budget": false,
+          "control_seed": null
+        },
+        "selection": {
+          "selector": "mst",
+          "use_mst": true
+        }
+      }
+    },
+    "community_answer": null,
+    "hybrid_answer": null,
+    "routed_answer": null,
+    "graphrag_answer": {
+      "question_id": "sd_gsm_1",
+      "question": "What recurring operational themes appear across the narratives, and how might they inform proactive risk mitigation?",
+      "category": "comprehensive",
+      "answer": "The recurring operational themes identified in the knowledge graph and community insights indicate several key areas of concern in aviation maintenance that can inform proactive risk mitigation strategies. Here's a comprehensive analysis:\n\n1. **Missed Approaches and Landing Issues**:\n   - **Theme**: There is a notable pattern of missed approaches and landing-related incidents. These often involve critical phases of flight where precision and reliability are paramount.\n   - **Insight**: Missed approaches can be symptomatic of broader issues such as inadequate training, pilot fatigue, or mechanical problems. Ensuring rigorous training programs and implementing fatigue management strategies can mitigate these risks. Additionally, regular checks on landing gear and braking systems can prevent mechanical failures during these critical phases.\n\n2. **Fuel Management and Inspection**:\n   - **Theme**: The co-occurrence of fuel-related issues with inspections suggests potential lapses in fuel system checks or documentation.\n   - **Insight**: Implementing a robust fuel management system that includes regular inspections and audits can prevent fuel-related incidents. This includes verifying fuel quality, ensuring proper fuel quantity, and checking for leaks or contamination.\n\n3. **Crew and Communication**:\n   - **Theme**: The involvement of the crew, particularly the captain, in incidents highlights the importance of human factors.\n   - **Insight**: Enhancing crew resource management (CRM) training can improve communication and decision-making under stress. Regular simulations and drills can prepare crews for unexpected scenarios, reducing the likelihood of errors during critical flight phases.\n\n4. **Maintenance and Aircraft Systems**:\n   - **Theme**: Maintenance records frequently mention issues with engines, electrical systems, and cargo handling.\n   - **Insight**: Proactive maintenance schedules that prioritize high-risk components can prevent failures. Implementing predictive maintenance technologies, such as condition monitoring and data analytics, can identify potential issues before they lead to failures.\n\n5. **Runway and Takeoff/Landing Dynamics**:\n   - **Theme**: The connection between runway operations and takeoff/landing incidents suggests environmental and operational factors at play.\n   - **Insight**: Regular runway inspections and maintenance can prevent surface irregularities that contribute to takeoff and landing issues. Additionally, implementing advanced weather monitoring systems can provide pilots with real-time data to make informed decisions.\n\n6. **Warning Systems and Alerts**:\n   - **Theme**: The presence of warnings and alerts in the records indicates potential issues with the aircraft's alerting systems.\n   - **Insight**: Ensuring that all warning systems are functional and that crews are trained to respond appropriately can mitigate risks. Regular testing and calibration of these systems are essential to maintain their reliability.\n\nBy addressing these themes through targeted interventions, aviation safety can be significantly enhanced. Proactive risk mitigation strategies should focus on comprehensive training, robust maintenance protocols, and the integration of advanced technologies to monitor and manage aircraft systems effectively.",
+      "method": "keo",
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "hash",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "graph_nodes_used": 4,
+      "model": "mlx-community/phi-4-4bit",
+      "model_exact": "mlx-community/phi-4-4bit",
+      "model_provider": "local",
+      "graph_available": true,
+      "evidence": {
+        "seed_nodes": [
+          {
+            "id": "during",
+            "sim": 0.0
+          },
+          {
+            "id": "climb",
+            "sim": 0.0
+          },
+          {
+            "id": "engine",
+            "sim": 0.0
+          },
+          {
+            "id": "after",
+            "sim": 0.0
+          },
+          {
+            "id": "fuel",
+            "sim": 0.0
+          },
+          {
+            "id": "landing",
+            "sim": 0.0
+          },
+          {
+            "id": "reported",
+            "sim": 0.0
+          },
+          {
+            "id": "crew",
+            "sim": 0.0
+          },
+          {
+            "id": "maintenance",
+            "sim": 0.0
+          },
+          {
+            "id": "delayed",
+            "sim": 0.0
+          }
+        ],
+        "triples": [
+          {
+            "id": "80120da6c276",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "approach",
+            "weight": 8.0
+          },
+          {
+            "id": "c0b450cd01e3",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 7.0
+          },
+          {
+            "id": "f09a9a880903",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "climb",
+            "weight": 4.0
+          },
+          {
+            "id": "43c80171ce6e",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "runway",
+            "weight": 2.0
+          },
+          {
+            "id": "3cb794aeb3ca",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "failed",
+            "weight": 2.0
+          },
+          {
+            "id": "9986c6be215f",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "delayed",
+            "weight": 2.0
+          },
+          {
+            "id": "9193e28ae63c",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "error",
+            "weight": 2.0
+          },
+          {
+            "id": "4e8859b91a48",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "electrical",
+            "weight": 1.0
+          },
+          {
+            "id": "fd220550ca89",
+            "head": "climb",
+            "relation": "co_occurs_with",
+            "tail": "engine",
+            "weight": 2.0
+          },
+          {
+            "id": "5aa27b4fd6bd",
+            "head": "engine",
+            "relation": "co_occurs_with",
+            "tail": "down",
+            "weight": 2.0
+          },
+          {
+            "id": "2a2c5f026b29",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 5.0
+          },
+          {
+            "id": "109c8bd3c704",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "fuel",
+            "weight": 4.0
+          },
+          {
+            "id": "f027c4170e4b",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "before",
+            "weight": 4.0
+          },
+          {
+            "id": "ffe03f03b0bb",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "flight",
+            "weight": 4.0
+          },
+          {
+            "id": "82db75cbc3ca",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "cargo",
+            "weight": 4.0
+          },
+          {
+            "id": "2547b765f2cb",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "found",
+            "weight": 2.0
+          },
+          {
+            "id": "987682cf0d0a",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "not",
+            "weight": 2.0
+          },
+          {
+            "id": "b73fc93caf4b",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "inspection",
+            "weight": 2.0
+          },
+          {
+            "id": "c184769b044f",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "aircraft",
+            "weight": 2.0
+          },
+          {
+            "id": "2cf9597d2872",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "issued",
+            "weight": 2.0
+          },
+          {
+            "id": "262283784da8",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "led",
+            "weight": 2.0
+          },
+          {
+            "id": "fdf54784f54e",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "altitude",
+            "weight": 2.0
+          },
+          {
+            "id": "73ddf9cd108e",
+            "head": "landing",
+            "relation": "co_occurs_with",
+            "tail": "approach",
+            "weight": 5.0
+          },
+          {
+            "id": "ea1ec05aebff",
+            "head": "reported",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 3.0
+          },
+          {
+            "id": "0b7aefae8f2c",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "takeoff",
+            "weight": 4.0
+          },
+          {
+            "id": "ad8ae0ab4c92",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "cabin",
+            "weight": 4.0
+          },
+          {
+            "id": "056b067fb42b",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "near",
+            "weight": 3.0
+          },
+          {
+            "id": "d859b1abd480",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "off",
+            "weight": 3.0
+          },
+          {
+            "id": "1cca6323c5b8",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "warning",
+            "weight": 3.0
+          },
+          {
+            "id": "ae412969df51",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "mel",
+            "weight": 3.0
+          },
+          {
+            "id": "560e0225c38a",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "atc",
+            "weight": 2.0
+          },
+          {
+            "id": "016c615df1d0",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "traffic",
+            "weight": 2.0
+          },
+          {
+            "id": "46dde4e35da4",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "noted",
+            "weight": 2.0
+          },
+          {
+            "id": "c6d8dd8a7492",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "until",
+            "weight": 2.0
+          },
+          {
+            "id": "4e2d37837501",
+            "head": "maintenance",
+            "relation": "co_occurs_with",
+            "tail": "flight",
+            "weight": 3.0
+          },
+          {
+            "id": "d8dce1440b8c",
+            "head": "approach",
+            "relation": "co_occurs_with",
+            "tail": "missed",
+            "weight": 5.0
+          },
+          {
+            "id": "cd2a1a803924",
+            "head": "approach",
+            "relation": "co_occurs_with",
+            "tail": "captain",
+            "weight": 3.0
+          },
+          {
+            "id": "cf1782e855ed",
+            "head": "departure",
+            "relation": "co_occurs_with",
+            "tail": "before",
+            "weight": 3.0
+          },
+          {
+            "id": "ac70d09f7870",
+            "head": "before",
+            "relation": "co_occurs_with",
+            "tail": "under",
+            "weight": 2.0
+          }
+        ],
+        "confidence": 0.0,
+        "use_mst": true,
+        "edge_weight": "freq",
+        "embedding_backend": "hash",
+        "controls": {
+          "shuffle_edges": false,
+          "strip_relations": false,
+          "dedup_chunks": false,
+          "match_context_budget": false,
+          "control_seed": null
+        },
+        "selection": {
+          "selector": "mst",
+          "use_mst": true
+        }
+      }
+    },
+    "risk_answer": null,
+    "chunk_tok_answer": null,
+    "chunk_sum_answer": null,
+    "chunk_dedup_answer": null,
+    "keo_shuf_answer": null,
+    "keo_norel_answer": null
+  },
+  {
+    "question_id": "sd_gsm_2",
+    "question": "Which combinations of equipment and environmental factors most often co-occur in reported incidents?",
+    "question_category": "context-specific",
+    "question_type": "global",
+    "ground_truth": null,
+    "original_problem": null,
+    "ablation": {
+      "method": "keo",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "selection": {
+        "selector": "mst",
+        "use_mst": true
+      },
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "hash",
+      "embedding_model": "hash-v1",
+      "provider": "local",
+      "answer_model": "mlx-community/phi-4-4bit",
+      "answer_model_exact": "mlx-community/phi-4-4bit",
+      "kg_path": "/Users/jonathankarr/Documents/keo/keo/second_domain/data/pilot_kg.gml",
+      "corpus_csv": "/Users/jonathankarr/Documents/keo/keo/second_domain/data/sample.csv",
+      "text_column": "narrative"
+    },
+    "vanilla_answer": null,
+    "textchunkrag_answer": null,
+    "keo_answer": {
+      "question_id": "sd_gsm_2",
+      "question": "Which combinations of equipment and environmental factors most often co-occur in reported incidents?",
+      "category": "context-specific",
+      "answer": "To determine which combinations of equipment and environmental factors most often co-occur in reported incidents, we need to analyze the patterns and relationships within the provided knowledge graph context and community insights.\n\n### Analysis:\n\n1. **Key Patterns from the Knowledge Graph:**\n   - The graph highlights several recurring themes: \"Approach,\" \"Landing,\" \"Missed,\" \"Runway,\" \"Takeoff,\" and \"Engine.\" These elements are often linked with incidents, suggesting that they are critical phases or components in aviation operations.\n   - Environmental factors such as \"Altitude,\" \"Cabin,\" and \"Weather\" (implied by \"Warning\" and \"Atc\") are also frequently mentioned, indicating their influence on incidents.\n\n2. **Community Insights:**\n   - Community 1 focuses on the sequence: \"Missed,\" \"Approach,\" \"Landing,\" \"Runway,\" \"Takeoff.\" This sequence suggests that incidents often occur during critical phases of flight, particularly around landing and takeoff, which are high-risk periods due to the complexity and precision required.\n\n3. **Equipment and Environmental Factors:**\n   - **Equipment:** The \"Engine\" and \"Electrical\" systems are frequently mentioned, indicating that failures or malfunctions in these systems are common contributors to incidents.\n   - **Environmental Factors:** \"Altitude\" and \"Weather\" conditions are significant, as they can exacerbate equipment issues or create challenging operating conditions.\n\n### Actionable Insights:\n\n- **Focus on Critical Phases:** Maintenance and inspection protocols should prioritize the approach, landing, and takeoff phases. Enhanced monitoring and predictive maintenance during these phases can help mitigate risks.\n  \n- **Engine and Electrical Systems:** Regular and thorough inspections of engine and electrical systems are crucial. Implementing advanced diagnostic tools can help detect potential failures before they lead to incidents.\n\n- **Environmental Monitoring:** Integrating real-time weather and altitude data into maintenance and operational decision-making can improve response strategies and reduce the likelihood of incidents related to environmental factors.\n\n- **Training and Procedures:** Continuous training for crew members on handling equipment failures and adverse environmental conditions can enhance safety. Developing robust procedures for these scenarios is essential.\n\nBy focusing on these insights, aviation safety can be significantly improved, reducing the frequency and severity of incidents related to equipment and environmental factors.",
+      "method": "keo",
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "hash",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "graph_nodes_used": 4,
+      "model": "mlx-community/phi-4-4bit",
+      "model_exact": "mlx-community/phi-4-4bit",
+      "model_provider": "local",
+      "graph_available": true,
+      "evidence": {
+        "seed_nodes": [
+          {
+            "id": "landing",
+            "sim": 0.2672612419124244
+          },
+          {
+            "id": "reported",
+            "sim": 0.2672612419124244
+          },
+          {
+            "id": "warning",
+            "sim": 0.2672612419124244
+          },
+          {
+            "id": "during",
+            "sim": 0.0
+          },
+          {
+            "id": "climb",
+            "sim": 0.0
+          },
+          {
+            "id": "engine",
+            "sim": 0.0
+          },
+          {
+            "id": "after",
+            "sim": 0.0
+          },
+          {
+            "id": "fuel",
+            "sim": 0.0
+          },
+          {
+            "id": "crew",
+            "sim": 0.0
+          },
+          {
+            "id": "maintenance",
+            "sim": 0.0
+          }
+        ],
+        "triples": [
+          {
+            "id": "80120da6c276",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "approach",
+            "weight": 8.0
+          },
+          {
+            "id": "c0b450cd01e3",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 7.0
+          },
+          {
+            "id": "f09a9a880903",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "climb",
+            "weight": 4.0
+          },
+          {
+            "id": "43c80171ce6e",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "runway",
+            "weight": 2.0
+          },
+          {
+            "id": "3cb794aeb3ca",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "failed",
+            "weight": 2.0
+          },
+          {
+            "id": "9986c6be215f",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "delayed",
+            "weight": 2.0
+          },
+          {
+            "id": "9193e28ae63c",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "error",
+            "weight": 2.0
+          },
+          {
+            "id": "4e8859b91a48",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "electrical",
+            "weight": 1.0
+          },
+          {
+            "id": "fd220550ca89",
+            "head": "climb",
+            "relation": "co_occurs_with",
+            "tail": "engine",
+            "weight": 2.0
+          },
+          {
+            "id": "5aa27b4fd6bd",
+            "head": "engine",
+            "relation": "co_occurs_with",
+            "tail": "down",
+            "weight": 2.0
+          },
+          {
+            "id": "2a2c5f026b29",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 5.0
+          },
+          {
+            "id": "109c8bd3c704",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "fuel",
+            "weight": 4.0
+          },
+          {
+            "id": "f027c4170e4b",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "before",
+            "weight": 4.0
+          },
+          {
+            "id": "ffe03f03b0bb",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "flight",
+            "weight": 4.0
+          },
+          {
+            "id": "82db75cbc3ca",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "cargo",
+            "weight": 4.0
+          },
+          {
+            "id": "2547b765f2cb",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "found",
+            "weight": 2.0
+          },
+          {
+            "id": "987682cf0d0a",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "not",
+            "weight": 2.0
+          },
+          {
+            "id": "b73fc93caf4b",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "inspection",
+            "weight": 2.0
+          },
+          {
+            "id": "c184769b044f",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "aircraft",
+            "weight": 2.0
+          },
+          {
+            "id": "2cf9597d2872",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "issued",
+            "weight": 2.0
+          },
+          {
+            "id": "262283784da8",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "led",
+            "weight": 2.0
+          },
+          {
+            "id": "fdf54784f54e",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "altitude",
+            "weight": 2.0
+          },
+          {
+            "id": "73ddf9cd108e",
+            "head": "landing",
+            "relation": "co_occurs_with",
+            "tail": "approach",
+            "weight": 5.0
+          },
+          {
+            "id": "ea1ec05aebff",
+            "head": "reported",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 3.0
+          },
+          {
+            "id": "0b7aefae8f2c",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "takeoff",
+            "weight": 4.0
+          },
+          {
+            "id": "ad8ae0ab4c92",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "cabin",
+            "weight": 4.0
+          },
+          {
+            "id": "056b067fb42b",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "near",
+            "weight": 3.0
+          },
+          {
+            "id": "d859b1abd480",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "off",
+            "weight": 3.0
+          },
+          {
+            "id": "1cca6323c5b8",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "warning",
+            "weight": 3.0
+          },
+          {
+            "id": "ae412969df51",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "mel",
+            "weight": 3.0
+          },
+          {
+            "id": "560e0225c38a",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "atc",
+            "weight": 2.0
+          },
+          {
+            "id": "016c615df1d0",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "traffic",
+            "weight": 2.0
+          },
+          {
+            "id": "46dde4e35da4",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "noted",
+            "weight": 2.0
+          },
+          {
+            "id": "c6d8dd8a7492",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "until",
+            "weight": 2.0
+          },
+          {
+            "id": "4e2d37837501",
+            "head": "maintenance",
+            "relation": "co_occurs_with",
+            "tail": "flight",
+            "weight": 3.0
+          },
+          {
+            "id": "d8dce1440b8c",
+            "head": "approach",
+            "relation": "co_occurs_with",
+            "tail": "missed",
+            "weight": 5.0
+          },
+          {
+            "id": "cd2a1a803924",
+            "head": "approach",
+            "relation": "co_occurs_with",
+            "tail": "captain",
+            "weight": 3.0
+          },
+          {
+            "id": "cf1782e855ed",
+            "head": "departure",
+            "relation": "co_occurs_with",
+            "tail": "before",
+            "weight": 3.0
+          },
+          {
+            "id": "ac70d09f7870",
+            "head": "before",
+            "relation": "co_occurs_with",
+            "tail": "under",
+            "weight": 2.0
+          }
+        ],
+        "confidence": 0.08017837257372731,
+        "use_mst": true,
+        "edge_weight": "freq",
+        "embedding_backend": "hash",
+        "controls": {
+          "shuffle_edges": false,
+          "strip_relations": false,
+          "dedup_chunks": false,
+          "match_context_budget": false,
+          "control_seed": null
+        },
+        "selection": {
+          "selector": "mst",
+          "use_mst": true
+        }
+      }
+    },
+    "community_answer": null,
+    "hybrid_answer": null,
+    "routed_answer": null,
+    "graphrag_answer": {
+      "question_id": "sd_gsm_2",
+      "question": "Which combinations of equipment and environmental factors most often co-occur in reported incidents?",
+      "category": "context-specific",
+      "answer": "To determine which combinations of equipment and environmental factors most often co-occur in reported incidents, we need to analyze the patterns and relationships within the provided knowledge graph context and community insights.\n\n### Analysis:\n\n1. **Key Patterns from the Knowledge Graph:**\n   - The graph highlights several recurring themes: \"Approach,\" \"Landing,\" \"Missed,\" \"Runway,\" \"Takeoff,\" and \"Engine.\" These elements are often linked with incidents, suggesting that they are critical phases or components in aviation operations.\n   - Environmental factors such as \"Altitude,\" \"Cabin,\" and \"Weather\" (implied by \"Warning\" and \"Atc\") are also frequently mentioned, indicating their influence on incidents.\n\n2. **Community Insights:**\n   - Community 1 focuses on the sequence: \"Missed,\" \"Approach,\" \"Landing,\" \"Runway,\" \"Takeoff.\" This sequence suggests that incidents often occur during critical phases of flight, particularly around landing and takeoff, which are high-risk periods due to the complexity and precision required.\n\n3. **Equipment and Environmental Factors:**\n   - **Equipment:** The \"Engine\" and \"Electrical\" systems are frequently mentioned, indicating that failures or malfunctions in these systems are common contributors to incidents.\n   - **Environmental Factors:** \"Altitude\" and \"Weather\" conditions are significant, as they can exacerbate equipment issues or create challenging operating conditions.\n\n### Actionable Insights:\n\n- **Focus on Critical Phases:** Maintenance and inspection protocols should prioritize the approach, landing, and takeoff phases. Enhanced monitoring and predictive maintenance during these phases can help mitigate risks.\n  \n- **Engine and Electrical Systems:** Regular and thorough inspections of engine and electrical systems are crucial. Implementing advanced diagnostic tools can help detect potential failures before they lead to incidents.\n\n- **Environmental Monitoring:** Integrating real-time weather and altitude data into maintenance and operational decision-making can improve response strategies and reduce the likelihood of incidents related to environmental factors.\n\n- **Training and Procedures:** Continuous training for crew members on handling equipment failures and adverse environmental conditions can enhance safety. Developing robust procedures for these scenarios is essential.\n\nBy focusing on these insights, aviation safety can be significantly improved, reducing the frequency and severity of incidents related to equipment and environmental factors.",
+      "method": "keo",
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "hash",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "graph_nodes_used": 4,
+      "model": "mlx-community/phi-4-4bit",
+      "model_exact": "mlx-community/phi-4-4bit",
+      "model_provider": "local",
+      "graph_available": true,
+      "evidence": {
+        "seed_nodes": [
+          {
+            "id": "landing",
+            "sim": 0.2672612419124244
+          },
+          {
+            "id": "reported",
+            "sim": 0.2672612419124244
+          },
+          {
+            "id": "warning",
+            "sim": 0.2672612419124244
+          },
+          {
+            "id": "during",
+            "sim": 0.0
+          },
+          {
+            "id": "climb",
+            "sim": 0.0
+          },
+          {
+            "id": "engine",
+            "sim": 0.0
+          },
+          {
+            "id": "after",
+            "sim": 0.0
+          },
+          {
+            "id": "fuel",
+            "sim": 0.0
+          },
+          {
+            "id": "crew",
+            "sim": 0.0
+          },
+          {
+            "id": "maintenance",
+            "sim": 0.0
+          }
+        ],
+        "triples": [
+          {
+            "id": "80120da6c276",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "approach",
+            "weight": 8.0
+          },
+          {
+            "id": "c0b450cd01e3",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 7.0
+          },
+          {
+            "id": "f09a9a880903",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "climb",
+            "weight": 4.0
+          },
+          {
+            "id": "43c80171ce6e",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "runway",
+            "weight": 2.0
+          },
+          {
+            "id": "3cb794aeb3ca",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "failed",
+            "weight": 2.0
+          },
+          {
+            "id": "9986c6be215f",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "delayed",
+            "weight": 2.0
+          },
+          {
+            "id": "9193e28ae63c",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "error",
+            "weight": 2.0
+          },
+          {
+            "id": "4e8859b91a48",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "electrical",
+            "weight": 1.0
+          },
+          {
+            "id": "fd220550ca89",
+            "head": "climb",
+            "relation": "co_occurs_with",
+            "tail": "engine",
+            "weight": 2.0
+          },
+          {
+            "id": "5aa27b4fd6bd",
+            "head": "engine",
+            "relation": "co_occurs_with",
+            "tail": "down",
+            "weight": 2.0
+          },
+          {
+            "id": "2a2c5f026b29",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 5.0
+          },
+          {
+            "id": "109c8bd3c704",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "fuel",
+            "weight": 4.0
+          },
+          {
+            "id": "f027c4170e4b",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "before",
+            "weight": 4.0
+          },
+          {
+            "id": "ffe03f03b0bb",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "flight",
+            "weight": 4.0
+          },
+          {
+            "id": "82db75cbc3ca",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "cargo",
+            "weight": 4.0
+          },
+          {
+            "id": "2547b765f2cb",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "found",
+            "weight": 2.0
+          },
+          {
+            "id": "987682cf0d0a",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "not",
+            "weight": 2.0
+          },
+          {
+            "id": "b73fc93caf4b",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "inspection",
+            "weight": 2.0
+          },
+          {
+            "id": "c184769b044f",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "aircraft",
+            "weight": 2.0
+          },
+          {
+            "id": "2cf9597d2872",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "issued",
+            "weight": 2.0
+          },
+          {
+            "id": "262283784da8",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "led",
+            "weight": 2.0
+          },
+          {
+            "id": "fdf54784f54e",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "altitude",
+            "weight": 2.0
+          },
+          {
+            "id": "73ddf9cd108e",
+            "head": "landing",
+            "relation": "co_occurs_with",
+            "tail": "approach",
+            "weight": 5.0
+          },
+          {
+            "id": "ea1ec05aebff",
+            "head": "reported",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 3.0
+          },
+          {
+            "id": "0b7aefae8f2c",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "takeoff",
+            "weight": 4.0
+          },
+          {
+            "id": "ad8ae0ab4c92",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "cabin",
+            "weight": 4.0
+          },
+          {
+            "id": "056b067fb42b",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "near",
+            "weight": 3.0
+          },
+          {
+            "id": "d859b1abd480",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "off",
+            "weight": 3.0
+          },
+          {
+            "id": "1cca6323c5b8",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "warning",
+            "weight": 3.0
+          },
+          {
+            "id": "ae412969df51",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "mel",
+            "weight": 3.0
+          },
+          {
+            "id": "560e0225c38a",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "atc",
+            "weight": 2.0
+          },
+          {
+            "id": "016c615df1d0",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "traffic",
+            "weight": 2.0
+          },
+          {
+            "id": "46dde4e35da4",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "noted",
+            "weight": 2.0
+          },
+          {
+            "id": "c6d8dd8a7492",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "until",
+            "weight": 2.0
+          },
+          {
+            "id": "4e2d37837501",
+            "head": "maintenance",
+            "relation": "co_occurs_with",
+            "tail": "flight",
+            "weight": 3.0
+          },
+          {
+            "id": "d8dce1440b8c",
+            "head": "approach",
+            "relation": "co_occurs_with",
+            "tail": "missed",
+            "weight": 5.0
+          },
+          {
+            "id": "cd2a1a803924",
+            "head": "approach",
+            "relation": "co_occurs_with",
+            "tail": "captain",
+            "weight": 3.0
+          },
+          {
+            "id": "cf1782e855ed",
+            "head": "departure",
+            "relation": "co_occurs_with",
+            "tail": "before",
+            "weight": 3.0
+          },
+          {
+            "id": "ac70d09f7870",
+            "head": "before",
+            "relation": "co_occurs_with",
+            "tail": "under",
+            "weight": 2.0
+          }
+        ],
+        "confidence": 0.08017837257372731,
+        "use_mst": true,
+        "edge_weight": "freq",
+        "embedding_backend": "hash",
+        "controls": {
+          "shuffle_edges": false,
+          "strip_relations": false,
+          "dedup_chunks": false,
+          "match_context_budget": false,
+          "control_seed": null
+        },
+        "selection": {
+          "selector": "mst",
+          "use_mst": true
+        }
+      }
+    },
+    "risk_answer": null,
+    "chunk_tok_answer": null,
+    "chunk_sum_answer": null,
+    "chunk_dedup_answer": null,
+    "keo_shuf_answer": null,
+    "keo_norel_answer": null
+  },
+  {
+    "question_id": "sd_gsm_3",
+    "question": "What patterns suggest communication or procedural breakdowns rather than purely mechanical failures?",
+    "question_category": "category-specific",
+    "question_type": "global",
+    "ground_truth": null,
+    "original_problem": null,
+    "ablation": {
+      "method": "keo",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "selection": {
+        "selector": "mst",
+        "use_mst": true
+      },
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "hash",
+      "embedding_model": "hash-v1",
+      "provider": "local",
+      "answer_model": "mlx-community/phi-4-4bit",
+      "answer_model_exact": "mlx-community/phi-4-4bit",
+      "kg_path": "/Users/jonathankarr/Documents/keo/keo/second_domain/data/pilot_kg.gml",
+      "corpus_csv": "/Users/jonathankarr/Documents/keo/keo/second_domain/data/sample.csv",
+      "text_column": "narrative"
+    },
+    "vanilla_answer": null,
+    "textchunkrag_answer": null,
+    "keo_answer": {
+      "question_id": "sd_gsm_3",
+      "question": "What patterns suggest communication or procedural breakdowns rather than purely mechanical failures?",
+      "category": "category-specific",
+      "answer": "To identify patterns suggesting communication or procedural breakdowns rather than purely mechanical failures in aviation maintenance records, we need to focus on several key indicators within the graph-based knowledge context and community insights. Here's an analytical overview:\n\n1. **Temporal Sequences and Coordination**:\n   - The sequence of events such as \"Before Departure,\" \"During Flight,\" and \"After Landing\" indicates critical phases where communication and procedural adherence are essential. Breakdowns often occur when there is a lack of coordination between these phases, such as inadequate pre-flight checks or post-landing inspections.\n   - The co-occurrence of \"Maintenance\" with \"Cargo\" and \"Cabin\" suggests that procedural lapses might occur if maintenance checks are not synchronized with cargo loading/unloading or cabin preparation activities.\n\n2. **Human Factors and Crew Communication**:\n   - The involvement of \"Captain\" and \"Crew\" in sequences like \"Missed Approach\" and \"Landing\" highlights the importance of effective communication. Breakdowns may be indicated by repeated \"Missed Approaches\" or \"Warnings\" that suggest miscommunication or misunderstanding of procedures.\n   - The presence of \"Error\" and \"Warning\" in the knowledge path suggests that procedural failures might be due to human error, possibly exacerbated by inadequate training or unclear communication protocols.\n\n3. **Inspection and Reporting Gaps**:\n   - The co-occurrence of \"Inspection\" with \"Not Found\" and \"Issued\" indicates potential procedural gaps where inspections are either not conducted thoroughly or findings are not communicated effectively. This can lead to unresolved issues being carried over to subsequent flights.\n   - The sequence involving \"Reported\" and \"Near\" suggests that incidents or near-misses are reported but not always acted upon promptly, indicating a breakdown in the feedback loop necessary for procedural improvements.\n\n4. **Systemic and Procedural Errors**:\n   - The presence of \"Failed\" and \"Delayed\" in conjunction with \"Maintenance\" and \"Electrical\" suggests that procedural delays in addressing maintenance issues can lead to systemic failures. This might be due to inadequate scheduling or prioritization of maintenance tasks.\n   - The co-occurrence of \"Error\" with \"Electrical\" and \"Runway\" suggests that procedural errors, such as incorrect wiring or miscommunication during runway operations, can lead to significant safety risks.\n\n**Actionable Insights**:\n- **Enhance Communication Protocols**: Implement robust communication protocols between crew members and maintenance teams to ensure that all procedural steps are clearly understood and executed.\n- **Strengthen Inspection and Reporting Systems**: Ensure that inspections are thorough and findings are communicated effectively to prevent unresolved issues from affecting subsequent operations.\n- **Improve Training and Awareness**: Regular training sessions focused on procedural adherence and error recognition can help mitigate human errors.\n- **Optimize Maintenance Scheduling**: Develop a more efficient scheduling system to address maintenance tasks promptly, reducing the risk of systemic failures due to delayed repairs.\n\nBy focusing on",
+      "method": "keo",
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "hash",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "graph_nodes_used": 4,
+      "model": "mlx-community/phi-4-4bit",
+      "model_exact": "mlx-community/phi-4-4bit",
+      "model_provider": "local",
+      "graph_available": true,
+      "evidence": {
+        "seed_nodes": [
+          {
+            "id": "runway",
+            "sim": 0.31622776601683794
+          },
+          {
+            "id": "during",
+            "sim": 0.0
+          },
+          {
+            "id": "climb",
+            "sim": 0.0
+          },
+          {
+            "id": "engine",
+            "sim": 0.0
+          },
+          {
+            "id": "after",
+            "sim": 0.0
+          },
+          {
+            "id": "fuel",
+            "sim": 0.0
+          },
+          {
+            "id": "landing",
+            "sim": 0.0
+          },
+          {
+            "id": "reported",
+            "sim": 0.0
+          },
+          {
+            "id": "crew",
+            "sim": 0.0
+          },
+          {
+            "id": "maintenance",
+            "sim": 0.0
+          }
+        ],
+        "triples": [
+          {
+            "id": "80120da6c276",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "approach",
+            "weight": 8.0
+          },
+          {
+            "id": "c0b450cd01e3",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 7.0
+          },
+          {
+            "id": "f09a9a880903",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "climb",
+            "weight": 4.0
+          },
+          {
+            "id": "43c80171ce6e",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "runway",
+            "weight": 2.0
+          },
+          {
+            "id": "3cb794aeb3ca",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "failed",
+            "weight": 2.0
+          },
+          {
+            "id": "9986c6be215f",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "delayed",
+            "weight": 2.0
+          },
+          {
+            "id": "9193e28ae63c",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "error",
+            "weight": 2.0
+          },
+          {
+            "id": "4e8859b91a48",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "electrical",
+            "weight": 1.0
+          },
+          {
+            "id": "fd220550ca89",
+            "head": "climb",
+            "relation": "co_occurs_with",
+            "tail": "engine",
+            "weight": 2.0
+          },
+          {
+            "id": "5aa27b4fd6bd",
+            "head": "engine",
+            "relation": "co_occurs_with",
+            "tail": "down",
+            "weight": 2.0
+          },
+          {
+            "id": "2a2c5f026b29",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 5.0
+          },
+          {
+            "id": "109c8bd3c704",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "fuel",
+            "weight": 4.0
+          },
+          {
+            "id": "f027c4170e4b",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "before",
+            "weight": 4.0
+          },
+          {
+            "id": "ffe03f03b0bb",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "flight",
+            "weight": 4.0
+          },
+          {
+            "id": "82db75cbc3ca",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "cargo",
+            "weight": 4.0
+          },
+          {
+            "id": "2547b765f2cb",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "found",
+            "weight": 2.0
+          },
+          {
+            "id": "987682cf0d0a",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "not",
+            "weight": 2.0
+          },
+          {
+            "id": "b73fc93caf4b",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "inspection",
+            "weight": 2.0
+          },
+          {
+            "id": "c184769b044f",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "aircraft",
+            "weight": 2.0
+          },
+          {
+            "id": "2cf9597d2872",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "issued",
+            "weight": 2.0
+          },
+          {
+            "id": "262283784da8",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "led",
+            "weight": 2.0
+          },
+          {
+            "id": "fdf54784f54e",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "altitude",
+            "weight": 2.0
+          },
+          {
+            "id": "73ddf9cd108e",
+            "head": "landing",
+            "relation": "co_occurs_with",
+            "tail": "approach",
+            "weight": 5.0
+          },
+          {
+            "id": "ea1ec05aebff",
+            "head": "reported",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 3.0
+          },
+          {
+            "id": "0b7aefae8f2c",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "takeoff",
+            "weight": 4.0
+          },
+          {
+            "id": "ad8ae0ab4c92",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "cabin",
+            "weight": 4.0
+          },
+          {
+            "id": "056b067fb42b",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "near",
+            "weight": 3.0
+          },
+          {
+            "id": "d859b1abd480",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "off",
+            "weight": 3.0
+          },
+          {
+            "id": "1cca6323c5b8",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "warning",
+            "weight": 3.0
+          },
+          {
+            "id": "ae412969df51",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "mel",
+            "weight": 3.0
+          },
+          {
+            "id": "560e0225c38a",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "atc",
+            "weight": 2.0
+          },
+          {
+            "id": "016c615df1d0",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "traffic",
+            "weight": 2.0
+          },
+          {
+            "id": "46dde4e35da4",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "noted",
+            "weight": 2.0
+          },
+          {
+            "id": "c6d8dd8a7492",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "until",
+            "weight": 2.0
+          },
+          {
+            "id": "4e2d37837501",
+            "head": "maintenance",
+            "relation": "co_occurs_with",
+            "tail": "flight",
+            "weight": 3.0
+          },
+          {
+            "id": "d8dce1440b8c",
+            "head": "approach",
+            "relation": "co_occurs_with",
+            "tail": "missed",
+            "weight": 5.0
+          },
+          {
+            "id": "cd2a1a803924",
+            "head": "approach",
+            "relation": "co_occurs_with",
+            "tail": "captain",
+            "weight": 3.0
+          },
+          {
+            "id": "cf1782e855ed",
+            "head": "departure",
+            "relation": "co_occurs_with",
+            "tail": "before",
+            "weight": 3.0
+          },
+          {
+            "id": "ac70d09f7870",
+            "head": "before",
+            "relation": "co_occurs_with",
+            "tail": "under",
+            "weight": 2.0
+          }
+        ],
+        "confidence": 0.03162277660168379,
+        "use_mst": true,
+        "edge_weight": "freq",
+        "embedding_backend": "hash",
+        "controls": {
+          "shuffle_edges": false,
+          "strip_relations": false,
+          "dedup_chunks": false,
+          "match_context_budget": false,
+          "control_seed": null
+        },
+        "selection": {
+          "selector": "mst",
+          "use_mst": true
+        }
+      }
+    },
+    "community_answer": null,
+    "hybrid_answer": null,
+    "routed_answer": null,
+    "graphrag_answer": {
+      "question_id": "sd_gsm_3",
+      "question": "What patterns suggest communication or procedural breakdowns rather than purely mechanical failures?",
+      "category": "category-specific",
+      "answer": "To identify patterns suggesting communication or procedural breakdowns rather than purely mechanical failures in aviation maintenance records, we need to focus on several key indicators within the graph-based knowledge context and community insights. Here's an analytical overview:\n\n1. **Temporal Sequences and Coordination**:\n   - The sequence of events such as \"Before Departure,\" \"During Flight,\" and \"After Landing\" indicates critical phases where communication and procedural adherence are essential. Breakdowns often occur when there is a lack of coordination between these phases, such as inadequate pre-flight checks or post-landing inspections.\n   - The co-occurrence of \"Maintenance\" with \"Cargo\" and \"Cabin\" suggests that procedural lapses might occur if maintenance checks are not synchronized with cargo loading/unloading or cabin preparation activities.\n\n2. **Human Factors and Crew Communication**:\n   - The involvement of \"Captain\" and \"Crew\" in sequences like \"Missed Approach\" and \"Landing\" highlights the importance of effective communication. Breakdowns may be indicated by repeated \"Missed Approaches\" or \"Warnings\" that suggest miscommunication or misunderstanding of procedures.\n   - The presence of \"Error\" and \"Warning\" in the knowledge path suggests that procedural failures might be due to human error, possibly exacerbated by inadequate training or unclear communication protocols.\n\n3. **Inspection and Reporting Gaps**:\n   - The co-occurrence of \"Inspection\" with \"Not Found\" and \"Issued\" indicates potential procedural gaps where inspections are either not conducted thoroughly or findings are not communicated effectively. This can lead to unresolved issues being carried over to subsequent flights.\n   - The sequence involving \"Reported\" and \"Near\" suggests that incidents or near-misses are reported but not always acted upon promptly, indicating a breakdown in the feedback loop necessary for procedural improvements.\n\n4. **Systemic and Procedural Errors**:\n   - The presence of \"Failed\" and \"Delayed\" in conjunction with \"Maintenance\" and \"Electrical\" suggests that procedural delays in addressing maintenance issues can lead to systemic failures. This might be due to inadequate scheduling or prioritization of maintenance tasks.\n   - The co-occurrence of \"Error\" with \"Electrical\" and \"Runway\" suggests that procedural errors, such as incorrect wiring or miscommunication during runway operations, can lead to significant safety risks.\n\n**Actionable Insights**:\n- **Enhance Communication Protocols**: Implement robust communication protocols between crew members and maintenance teams to ensure that all procedural steps are clearly understood and executed.\n- **Strengthen Inspection and Reporting Systems**: Ensure that inspections are thorough and findings are communicated effectively to prevent unresolved issues from affecting subsequent operations.\n- **Improve Training and Awareness**: Regular training sessions focused on procedural adherence and error recognition can help mitigate human errors.\n- **Optimize Maintenance Scheduling**: Develop a more efficient scheduling system to address maintenance tasks promptly, reducing the risk of systemic failures due to delayed repairs.\n\nBy focusing on",
+      "method": "keo",
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "hash",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "graph_nodes_used": 4,
+      "model": "mlx-community/phi-4-4bit",
+      "model_exact": "mlx-community/phi-4-4bit",
+      "model_provider": "local",
+      "graph_available": true,
+      "evidence": {
+        "seed_nodes": [
+          {
+            "id": "runway",
+            "sim": 0.31622776601683794
+          },
+          {
+            "id": "during",
+            "sim": 0.0
+          },
+          {
+            "id": "climb",
+            "sim": 0.0
+          },
+          {
+            "id": "engine",
+            "sim": 0.0
+          },
+          {
+            "id": "after",
+            "sim": 0.0
+          },
+          {
+            "id": "fuel",
+            "sim": 0.0
+          },
+          {
+            "id": "landing",
+            "sim": 0.0
+          },
+          {
+            "id": "reported",
+            "sim": 0.0
+          },
+          {
+            "id": "crew",
+            "sim": 0.0
+          },
+          {
+            "id": "maintenance",
+            "sim": 0.0
+          }
+        ],
+        "triples": [
+          {
+            "id": "80120da6c276",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "approach",
+            "weight": 8.0
+          },
+          {
+            "id": "c0b450cd01e3",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 7.0
+          },
+          {
+            "id": "f09a9a880903",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "climb",
+            "weight": 4.0
+          },
+          {
+            "id": "43c80171ce6e",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "runway",
+            "weight": 2.0
+          },
+          {
+            "id": "3cb794aeb3ca",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "failed",
+            "weight": 2.0
+          },
+          {
+            "id": "9986c6be215f",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "delayed",
+            "weight": 2.0
+          },
+          {
+            "id": "9193e28ae63c",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "error",
+            "weight": 2.0
+          },
+          {
+            "id": "4e8859b91a48",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "electrical",
+            "weight": 1.0
+          },
+          {
+            "id": "fd220550ca89",
+            "head": "climb",
+            "relation": "co_occurs_with",
+            "tail": "engine",
+            "weight": 2.0
+          },
+          {
+            "id": "5aa27b4fd6bd",
+            "head": "engine",
+            "relation": "co_occurs_with",
+            "tail": "down",
+            "weight": 2.0
+          },
+          {
+            "id": "2a2c5f026b29",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 5.0
+          },
+          {
+            "id": "109c8bd3c704",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "fuel",
+            "weight": 4.0
+          },
+          {
+            "id": "f027c4170e4b",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "before",
+            "weight": 4.0
+          },
+          {
+            "id": "ffe03f03b0bb",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "flight",
+            "weight": 4.0
+          },
+          {
+            "id": "82db75cbc3ca",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "cargo",
+            "weight": 4.0
+          },
+          {
+            "id": "2547b765f2cb",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "found",
+            "weight": 2.0
+          },
+          {
+            "id": "987682cf0d0a",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "not",
+            "weight": 2.0
+          },
+          {
+            "id": "b73fc93caf4b",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "inspection",
+            "weight": 2.0
+          },
+          {
+            "id": "c184769b044f",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "aircraft",
+            "weight": 2.0
+          },
+          {
+            "id": "2cf9597d2872",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "issued",
+            "weight": 2.0
+          },
+          {
+            "id": "262283784da8",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "led",
+            "weight": 2.0
+          },
+          {
+            "id": "fdf54784f54e",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "altitude",
+            "weight": 2.0
+          },
+          {
+            "id": "73ddf9cd108e",
+            "head": "landing",
+            "relation": "co_occurs_with",
+            "tail": "approach",
+            "weight": 5.0
+          },
+          {
+            "id": "ea1ec05aebff",
+            "head": "reported",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 3.0
+          },
+          {
+            "id": "0b7aefae8f2c",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "takeoff",
+            "weight": 4.0
+          },
+          {
+            "id": "ad8ae0ab4c92",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "cabin",
+            "weight": 4.0
+          },
+          {
+            "id": "056b067fb42b",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "near",
+            "weight": 3.0
+          },
+          {
+            "id": "d859b1abd480",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "off",
+            "weight": 3.0
+          },
+          {
+            "id": "1cca6323c5b8",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "warning",
+            "weight": 3.0
+          },
+          {
+            "id": "ae412969df51",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "mel",
+            "weight": 3.0
+          },
+          {
+            "id": "560e0225c38a",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "atc",
+            "weight": 2.0
+          },
+          {
+            "id": "016c615df1d0",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "traffic",
+            "weight": 2.0
+          },
+          {
+            "id": "46dde4e35da4",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "noted",
+            "weight": 2.0
+          },
+          {
+            "id": "c6d8dd8a7492",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "until",
+            "weight": 2.0
+          },
+          {
+            "id": "4e2d37837501",
+            "head": "maintenance",
+            "relation": "co_occurs_with",
+            "tail": "flight",
+            "weight": 3.0
+          },
+          {
+            "id": "d8dce1440b8c",
+            "head": "approach",
+            "relation": "co_occurs_with",
+            "tail": "missed",
+            "weight": 5.0
+          },
+          {
+            "id": "cd2a1a803924",
+            "head": "approach",
+            "relation": "co_occurs_with",
+            "tail": "captain",
+            "weight": 3.0
+          },
+          {
+            "id": "cf1782e855ed",
+            "head": "departure",
+            "relation": "co_occurs_with",
+            "tail": "before",
+            "weight": 3.0
+          },
+          {
+            "id": "ac70d09f7870",
+            "head": "before",
+            "relation": "co_occurs_with",
+            "tail": "under",
+            "weight": 2.0
+          }
+        ],
+        "confidence": 0.03162277660168379,
+        "use_mst": true,
+        "edge_weight": "freq",
+        "embedding_backend": "hash",
+        "controls": {
+          "shuffle_edges": false,
+          "strip_relations": false,
+          "dedup_chunks": false,
+          "match_context_budget": false,
+          "control_seed": null
+        },
+        "selection": {
+          "selector": "mst",
+          "use_mst": true
+        }
+      }
+    },
+    "risk_answer": null,
+    "chunk_tok_answer": null,
+    "chunk_sum_answer": null,
+    "chunk_dedup_answer": null,
+    "keo_shuf_answer": null,
+    "keo_norel_answer": null
+  },
+  {
+    "question_id": "sd_gsm_4",
+    "question": "How do temporal or seasonal factors appear to interact with equipment-related issues in the corpus?",
+    "question_category": "comprehensive",
+    "question_type": "global",
+    "ground_truth": null,
+    "original_problem": null,
+    "ablation": {
+      "method": "keo",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "selection": {
+        "selector": "mst",
+        "use_mst": true
+      },
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "hash",
+      "embedding_model": "hash-v1",
+      "provider": "local",
+      "answer_model": "mlx-community/phi-4-4bit",
+      "answer_model_exact": "mlx-community/phi-4-4bit",
+      "kg_path": "/Users/jonathankarr/Documents/keo/keo/second_domain/data/pilot_kg.gml",
+      "corpus_csv": "/Users/jonathankarr/Documents/keo/keo/second_domain/data/sample.csv",
+      "text_column": "narrative"
+    },
+    "vanilla_answer": null,
+    "textchunkrag_answer": null,
+    "keo_answer": {
+      "question_id": "sd_gsm_4",
+      "question": "How do temporal or seasonal factors appear to interact with equipment-related issues in the corpus?",
+      "category": "comprehensive",
+      "answer": "To address how temporal or seasonal factors interact with equipment-related issues in aviation maintenance records, we need to consider several key aspects that influence maintenance patterns and equipment reliability.\n\n### Temporal and Seasonal Influences on Equipment-Related Issues\n\n1. **Weather Conditions:**\n   - **Winter:** Cold temperatures can lead to issues such as fuel gelling, icing on critical surfaces, and increased wear on de-icing systems. Maintenance records often show a spike in inspections and repairs related to these systems during winter months.\n   - **Summer:** High temperatures can affect battery performance and increase the likelihood of overheating in electrical systems. Maintenance activities may focus on cooling systems and electrical inspections during this period.\n\n2. **Operational Load:**\n   - **Peak Travel Seasons:** During holidays and summer vacation periods, aircraft experience higher operational loads, leading to increased wear and tear. This can result in more frequent maintenance checks and repairs, particularly on engines and landing gear.\n   - **Off-Peak Seasons:** Maintenance can be more thorough during these times, as aircraft are less frequently in use. This allows for more comprehensive inspections and preventive maintenance activities.\n\n3. **Environmental Factors:**\n   - **Humidity and Salt Exposure:** In coastal areas or regions with high humidity, corrosion becomes a significant issue. Maintenance records may show increased frequency of inspections for corrosion, particularly on airframes and critical components.\n   - **Dust and Sand:** In desert regions, particulate matter can affect engines and air filtration systems. Maintenance activities often include more frequent cleaning and replacement of filters.\n\n4. **Regulatory and Inspection Cycles:**\n   - Maintenance schedules are often aligned with regulatory requirements, which can be influenced by seasonal factors. For example, certain inspections may be mandated more frequently during specific times of the year due to anticipated environmental conditions.\n\n### Actionable Insights\n\n- **Proactive Maintenance Planning:** Airlines should adjust their maintenance schedules to account for seasonal variations, ensuring that inspections and repairs are conducted before peak operational periods.\n- **Resource Allocation:** Allocate additional resources and personnel during high-demand seasons to handle the increased maintenance workload efficiently.\n- **Environmental Adaptation:** Implement region-specific maintenance strategies to address environmental challenges, such as corrosion in coastal areas or particulate management in desert regions.\n- **Data-Driven Decisions:** Utilize historical maintenance data to predict and prepare for seasonal equipment-related issues, optimizing both safety and operational efficiency.\n\nBy understanding and anticipating the interaction between temporal factors and equipment-related issues, aviation operators can enhance safety and reliability, ensuring that aircraft are maintained in optimal condition throughout the year.",
+      "method": "keo",
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "hash",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "graph_nodes_used": 4,
+      "model": "mlx-community/phi-4-4bit",
+      "model_exact": "mlx-community/phi-4-4bit",
+      "model_provider": "local",
+      "graph_available": true,
+      "evidence": {
+        "seed_nodes": [
+          {
+            "id": "during",
+            "sim": 0.0
+          },
+          {
+            "id": "climb",
+            "sim": 0.0
+          },
+          {
+            "id": "engine",
+            "sim": 0.0
+          },
+          {
+            "id": "after",
+            "sim": 0.0
+          },
+          {
+            "id": "fuel",
+            "sim": 0.0
+          },
+          {
+            "id": "landing",
+            "sim": 0.0
+          },
+          {
+            "id": "reported",
+            "sim": 0.0
+          },
+          {
+            "id": "crew",
+            "sim": 0.0
+          },
+          {
+            "id": "maintenance",
+            "sim": 0.0
+          },
+          {
+            "id": "delayed",
+            "sim": 0.0
+          }
+        ],
+        "triples": [
+          {
+            "id": "80120da6c276",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "approach",
+            "weight": 8.0
+          },
+          {
+            "id": "c0b450cd01e3",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 7.0
+          },
+          {
+            "id": "f09a9a880903",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "climb",
+            "weight": 4.0
+          },
+          {
+            "id": "43c80171ce6e",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "runway",
+            "weight": 2.0
+          },
+          {
+            "id": "3cb794aeb3ca",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "failed",
+            "weight": 2.0
+          },
+          {
+            "id": "9986c6be215f",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "delayed",
+            "weight": 2.0
+          },
+          {
+            "id": "9193e28ae63c",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "error",
+            "weight": 2.0
+          },
+          {
+            "id": "4e8859b91a48",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "electrical",
+            "weight": 1.0
+          },
+          {
+            "id": "fd220550ca89",
+            "head": "climb",
+            "relation": "co_occurs_with",
+            "tail": "engine",
+            "weight": 2.0
+          },
+          {
+            "id": "5aa27b4fd6bd",
+            "head": "engine",
+            "relation": "co_occurs_with",
+            "tail": "down",
+            "weight": 2.0
+          },
+          {
+            "id": "2a2c5f026b29",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 5.0
+          },
+          {
+            "id": "109c8bd3c704",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "fuel",
+            "weight": 4.0
+          },
+          {
+            "id": "f027c4170e4b",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "before",
+            "weight": 4.0
+          },
+          {
+            "id": "ffe03f03b0bb",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "flight",
+            "weight": 4.0
+          },
+          {
+            "id": "82db75cbc3ca",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "cargo",
+            "weight": 4.0
+          },
+          {
+            "id": "2547b765f2cb",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "found",
+            "weight": 2.0
+          },
+          {
+            "id": "987682cf0d0a",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "not",
+            "weight": 2.0
+          },
+          {
+            "id": "b73fc93caf4b",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "inspection",
+            "weight": 2.0
+          },
+          {
+            "id": "c184769b044f",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "aircraft",
+            "weight": 2.0
+          },
+          {
+            "id": "2cf9597d2872",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "issued",
+            "weight": 2.0
+          },
+          {
+            "id": "262283784da8",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "led",
+            "weight": 2.0
+          },
+          {
+            "id": "fdf54784f54e",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "altitude",
+            "weight": 2.0
+          },
+          {
+            "id": "73ddf9cd108e",
+            "head": "landing",
+            "relation": "co_occurs_with",
+            "tail": "approach",
+            "weight": 5.0
+          },
+          {
+            "id": "ea1ec05aebff",
+            "head": "reported",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 3.0
+          },
+          {
+            "id": "0b7aefae8f2c",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "takeoff",
+            "weight": 4.0
+          },
+          {
+            "id": "ad8ae0ab4c92",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "cabin",
+            "weight": 4.0
+          },
+          {
+            "id": "056b067fb42b",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "near",
+            "weight": 3.0
+          },
+          {
+            "id": "d859b1abd480",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "off",
+            "weight": 3.0
+          },
+          {
+            "id": "1cca6323c5b8",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "warning",
+            "weight": 3.0
+          },
+          {
+            "id": "ae412969df51",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "mel",
+            "weight": 3.0
+          },
+          {
+            "id": "560e0225c38a",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "atc",
+            "weight": 2.0
+          },
+          {
+            "id": "016c615df1d0",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "traffic",
+            "weight": 2.0
+          },
+          {
+            "id": "46dde4e35da4",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "noted",
+            "weight": 2.0
+          },
+          {
+            "id": "c6d8dd8a7492",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "until",
+            "weight": 2.0
+          },
+          {
+            "id": "4e2d37837501",
+            "head": "maintenance",
+            "relation": "co_occurs_with",
+            "tail": "flight",
+            "weight": 3.0
+          },
+          {
+            "id": "d8dce1440b8c",
+            "head": "approach",
+            "relation": "co_occurs_with",
+            "tail": "missed",
+            "weight": 5.0
+          },
+          {
+            "id": "cd2a1a803924",
+            "head": "approach",
+            "relation": "co_occurs_with",
+            "tail": "captain",
+            "weight": 3.0
+          },
+          {
+            "id": "cf1782e855ed",
+            "head": "departure",
+            "relation": "co_occurs_with",
+            "tail": "before",
+            "weight": 3.0
+          },
+          {
+            "id": "ac70d09f7870",
+            "head": "before",
+            "relation": "co_occurs_with",
+            "tail": "under",
+            "weight": 2.0
+          }
+        ],
+        "confidence": 0.0,
+        "use_mst": true,
+        "edge_weight": "freq",
+        "embedding_backend": "hash",
+        "controls": {
+          "shuffle_edges": false,
+          "strip_relations": false,
+          "dedup_chunks": false,
+          "match_context_budget": false,
+          "control_seed": null
+        },
+        "selection": {
+          "selector": "mst",
+          "use_mst": true
+        }
+      }
+    },
+    "community_answer": null,
+    "hybrid_answer": null,
+    "routed_answer": null,
+    "graphrag_answer": {
+      "question_id": "sd_gsm_4",
+      "question": "How do temporal or seasonal factors appear to interact with equipment-related issues in the corpus?",
+      "category": "comprehensive",
+      "answer": "To address how temporal or seasonal factors interact with equipment-related issues in aviation maintenance records, we need to consider several key aspects that influence maintenance patterns and equipment reliability.\n\n### Temporal and Seasonal Influences on Equipment-Related Issues\n\n1. **Weather Conditions:**\n   - **Winter:** Cold temperatures can lead to issues such as fuel gelling, icing on critical surfaces, and increased wear on de-icing systems. Maintenance records often show a spike in inspections and repairs related to these systems during winter months.\n   - **Summer:** High temperatures can affect battery performance and increase the likelihood of overheating in electrical systems. Maintenance activities may focus on cooling systems and electrical inspections during this period.\n\n2. **Operational Load:**\n   - **Peak Travel Seasons:** During holidays and summer vacation periods, aircraft experience higher operational loads, leading to increased wear and tear. This can result in more frequent maintenance checks and repairs, particularly on engines and landing gear.\n   - **Off-Peak Seasons:** Maintenance can be more thorough during these times, as aircraft are less frequently in use. This allows for more comprehensive inspections and preventive maintenance activities.\n\n3. **Environmental Factors:**\n   - **Humidity and Salt Exposure:** In coastal areas or regions with high humidity, corrosion becomes a significant issue. Maintenance records may show increased frequency of inspections for corrosion, particularly on airframes and critical components.\n   - **Dust and Sand:** In desert regions, particulate matter can affect engines and air filtration systems. Maintenance activities often include more frequent cleaning and replacement of filters.\n\n4. **Regulatory and Inspection Cycles:**\n   - Maintenance schedules are often aligned with regulatory requirements, which can be influenced by seasonal factors. For example, certain inspections may be mandated more frequently during specific times of the year due to anticipated environmental conditions.\n\n### Actionable Insights\n\n- **Proactive Maintenance Planning:** Airlines should adjust their maintenance schedules to account for seasonal variations, ensuring that inspections and repairs are conducted before peak operational periods.\n- **Resource Allocation:** Allocate additional resources and personnel during high-demand seasons to handle the increased maintenance workload efficiently.\n- **Environmental Adaptation:** Implement region-specific maintenance strategies to address environmental challenges, such as corrosion in coastal areas or particulate management in desert regions.\n- **Data-Driven Decisions:** Utilize historical maintenance data to predict and prepare for seasonal equipment-related issues, optimizing both safety and operational efficiency.\n\nBy understanding and anticipating the interaction between temporal factors and equipment-related issues, aviation operators can enhance safety and reliability, ensuring that aircraft are maintained in optimal condition throughout the year.",
+      "method": "keo",
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "hash",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "graph_nodes_used": 4,
+      "model": "mlx-community/phi-4-4bit",
+      "model_exact": "mlx-community/phi-4-4bit",
+      "model_provider": "local",
+      "graph_available": true,
+      "evidence": {
+        "seed_nodes": [
+          {
+            "id": "during",
+            "sim": 0.0
+          },
+          {
+            "id": "climb",
+            "sim": 0.0
+          },
+          {
+            "id": "engine",
+            "sim": 0.0
+          },
+          {
+            "id": "after",
+            "sim": 0.0
+          },
+          {
+            "id": "fuel",
+            "sim": 0.0
+          },
+          {
+            "id": "landing",
+            "sim": 0.0
+          },
+          {
+            "id": "reported",
+            "sim": 0.0
+          },
+          {
+            "id": "crew",
+            "sim": 0.0
+          },
+          {
+            "id": "maintenance",
+            "sim": 0.0
+          },
+          {
+            "id": "delayed",
+            "sim": 0.0
+          }
+        ],
+        "triples": [
+          {
+            "id": "80120da6c276",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "approach",
+            "weight": 8.0
+          },
+          {
+            "id": "c0b450cd01e3",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 7.0
+          },
+          {
+            "id": "f09a9a880903",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "climb",
+            "weight": 4.0
+          },
+          {
+            "id": "43c80171ce6e",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "runway",
+            "weight": 2.0
+          },
+          {
+            "id": "3cb794aeb3ca",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "failed",
+            "weight": 2.0
+          },
+          {
+            "id": "9986c6be215f",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "delayed",
+            "weight": 2.0
+          },
+          {
+            "id": "9193e28ae63c",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "error",
+            "weight": 2.0
+          },
+          {
+            "id": "4e8859b91a48",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "electrical",
+            "weight": 1.0
+          },
+          {
+            "id": "fd220550ca89",
+            "head": "climb",
+            "relation": "co_occurs_with",
+            "tail": "engine",
+            "weight": 2.0
+          },
+          {
+            "id": "5aa27b4fd6bd",
+            "head": "engine",
+            "relation": "co_occurs_with",
+            "tail": "down",
+            "weight": 2.0
+          },
+          {
+            "id": "2a2c5f026b29",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 5.0
+          },
+          {
+            "id": "109c8bd3c704",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "fuel",
+            "weight": 4.0
+          },
+          {
+            "id": "f027c4170e4b",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "before",
+            "weight": 4.0
+          },
+          {
+            "id": "ffe03f03b0bb",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "flight",
+            "weight": 4.0
+          },
+          {
+            "id": "82db75cbc3ca",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "cargo",
+            "weight": 4.0
+          },
+          {
+            "id": "2547b765f2cb",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "found",
+            "weight": 2.0
+          },
+          {
+            "id": "987682cf0d0a",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "not",
+            "weight": 2.0
+          },
+          {
+            "id": "b73fc93caf4b",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "inspection",
+            "weight": 2.0
+          },
+          {
+            "id": "c184769b044f",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "aircraft",
+            "weight": 2.0
+          },
+          {
+            "id": "2cf9597d2872",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "issued",
+            "weight": 2.0
+          },
+          {
+            "id": "262283784da8",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "led",
+            "weight": 2.0
+          },
+          {
+            "id": "fdf54784f54e",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "altitude",
+            "weight": 2.0
+          },
+          {
+            "id": "73ddf9cd108e",
+            "head": "landing",
+            "relation": "co_occurs_with",
+            "tail": "approach",
+            "weight": 5.0
+          },
+          {
+            "id": "ea1ec05aebff",
+            "head": "reported",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 3.0
+          },
+          {
+            "id": "0b7aefae8f2c",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "takeoff",
+            "weight": 4.0
+          },
+          {
+            "id": "ad8ae0ab4c92",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "cabin",
+            "weight": 4.0
+          },
+          {
+            "id": "056b067fb42b",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "near",
+            "weight": 3.0
+          },
+          {
+            "id": "d859b1abd480",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "off",
+            "weight": 3.0
+          },
+          {
+            "id": "1cca6323c5b8",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "warning",
+            "weight": 3.0
+          },
+          {
+            "id": "ae412969df51",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "mel",
+            "weight": 3.0
+          },
+          {
+            "id": "560e0225c38a",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "atc",
+            "weight": 2.0
+          },
+          {
+            "id": "016c615df1d0",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "traffic",
+            "weight": 2.0
+          },
+          {
+            "id": "46dde4e35da4",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "noted",
+            "weight": 2.0
+          },
+          {
+            "id": "c6d8dd8a7492",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "until",
+            "weight": 2.0
+          },
+          {
+            "id": "4e2d37837501",
+            "head": "maintenance",
+            "relation": "co_occurs_with",
+            "tail": "flight",
+            "weight": 3.0
+          },
+          {
+            "id": "d8dce1440b8c",
+            "head": "approach",
+            "relation": "co_occurs_with",
+            "tail": "missed",
+            "weight": 5.0
+          },
+          {
+            "id": "cd2a1a803924",
+            "head": "approach",
+            "relation": "co_occurs_with",
+            "tail": "captain",
+            "weight": 3.0
+          },
+          {
+            "id": "cf1782e855ed",
+            "head": "departure",
+            "relation": "co_occurs_with",
+            "tail": "before",
+            "weight": 3.0
+          },
+          {
+            "id": "ac70d09f7870",
+            "head": "before",
+            "relation": "co_occurs_with",
+            "tail": "under",
+            "weight": 2.0
+          }
+        ],
+        "confidence": 0.0,
+        "use_mst": true,
+        "edge_weight": "freq",
+        "embedding_backend": "hash",
+        "controls": {
+          "shuffle_edges": false,
+          "strip_relations": false,
+          "dedup_chunks": false,
+          "match_context_budget": false,
+          "control_seed": null
+        },
+        "selection": {
+          "selector": "mst",
+          "use_mst": true
+        }
+      }
+    },
+    "risk_answer": null,
+    "chunk_tok_answer": null,
+    "chunk_sum_answer": null,
+    "chunk_dedup_answer": null,
+    "keo_shuf_answer": null,
+    "keo_norel_answer": null
+  },
+  {
+    "question_id": "sd_gsm_5",
+    "question": "What system-level insights emerge when comparing high-severity versus routine reports?",
+    "question_category": "context-specific",
+    "question_type": "global",
+    "ground_truth": null,
+    "original_problem": null,
+    "ablation": {
+      "method": "keo",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "selection": {
+        "selector": "mst",
+        "use_mst": true
+      },
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "hash",
+      "embedding_model": "hash-v1",
+      "provider": "local",
+      "answer_model": "mlx-community/phi-4-4bit",
+      "answer_model_exact": "mlx-community/phi-4-4bit",
+      "kg_path": "/Users/jonathankarr/Documents/keo/keo/second_domain/data/pilot_kg.gml",
+      "corpus_csv": "/Users/jonathankarr/Documents/keo/keo/second_domain/data/sample.csv",
+      "text_column": "narrative"
+    },
+    "vanilla_answer": null,
+    "textchunkrag_answer": null,
+    "keo_answer": {
+      "question_id": "sd_gsm_5",
+      "question": "What system-level insights emerge when comparing high-severity versus routine reports?",
+      "category": "context-specific",
+      "answer": "To address the question of what system-level insights emerge when comparing high-severity versus routine reports in aviation maintenance records, we can draw from both the provided knowledge graph and general principles of aviation safety and maintenance.\n\n### System-Level Insights:\n\n1. **Correlation with Flight Phases:**\n   - **High-Severity Reports:** These often correlate with critical phases of flight such as takeoff and landing. The knowledge path highlights terms like \"Approach,\" \"Landing,\" \"Missed,\" and \"Runway,\" indicating that high-severity issues frequently arise during these high-risk periods. This suggests a need for heightened vigilance and possibly more rigorous pre-flight checks during these phases.\n   - **Routine Reports:** These are more likely to be associated with less critical phases such as \"Cabin\" and \"Cargo\" inspections, which are routine and scheduled. These reports often involve standard checks that ensure compliance with safety regulations but do not typically indicate immediate safety threats.\n\n2. **Component and System Focus:**\n   - **High-Severity Reports:** These often involve critical systems such as \"Engine,\" \"Electrical,\" and \"Fuel.\" Failures or malfunctions in these systems can have immediate and severe consequences, necessitating rapid response and thorough investigation.\n   - **Routine Reports:** These may focus on less critical systems or components, such as \"Cabin\" or \"Cargo\" areas, where issues are less likely to impact flight safety directly but are important for overall operational efficiency and passenger comfort.\n\n3. **Human Factors and Crew Involvement:**\n   - **High-Severity Reports:** There is often a significant human factor component, with terms like \"Captain,\" \"Crew,\" and \"Atc\" appearing frequently. This suggests that high-severity incidents may involve complex interactions between crew actions and system failures, highlighting the need for comprehensive crew training and effective communication protocols.\n   - **Routine Reports:** These are less likely to involve complex human factors and are more focused on procedural compliance and regular maintenance activities.\n\n4. **Inspection and Maintenance Practices:**\n   - **High-Severity Reports:** These often result from lapses in inspection or maintenance practices, as indicated by terms like \"Inspection,\" \"Failed,\" and \"Delayed.\" This underscores the importance of adhering to strict maintenance schedules and protocols to prevent severe incidents.\n   - **Routine Reports:** These are typically the result of regular inspections and maintenance activities, ensuring that aircraft are kept in optimal condition and that potential issues are identified and addressed before they escalate.\n\n5. **Systemic Patterns and Predictive Maintenance:**\n   - **High-Severity Reports:** The presence of systemic patterns, such as repeated issues with specific components or systems, can be identified through high-severity reports. This information can be used to develop predictive maintenance strategies that focus on high-risk areas, potentially preventing future incidents.\n   - **Routine Reports:** These provide a baseline of normal operational data, which can be used to identify deviations that may indicate emerging issues.",
+      "method": "keo",
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "hash",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "graph_nodes_used": 4,
+      "model": "mlx-community/phi-4-4bit",
+      "model_exact": "mlx-community/phi-4-4bit",
+      "model_provider": "local",
+      "graph_available": true,
+      "evidence": {
+        "seed_nodes": [
+          {
+            "id": "fuel",
+            "sim": 0.2886751345948129
+          },
+          {
+            "id": "during",
+            "sim": 0.0
+          },
+          {
+            "id": "climb",
+            "sim": 0.0
+          },
+          {
+            "id": "engine",
+            "sim": 0.0
+          },
+          {
+            "id": "after",
+            "sim": 0.0
+          },
+          {
+            "id": "landing",
+            "sim": 0.0
+          },
+          {
+            "id": "reported",
+            "sim": 0.0
+          },
+          {
+            "id": "crew",
+            "sim": 0.0
+          },
+          {
+            "id": "delayed",
+            "sim": 0.0
+          },
+          {
+            "id": "electrical",
+            "sim": 0.0
+          }
+        ],
+        "triples": [
+          {
+            "id": "80120da6c276",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "approach",
+            "weight": 8.0
+          },
+          {
+            "id": "c0b450cd01e3",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 7.0
+          },
+          {
+            "id": "f09a9a880903",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "climb",
+            "weight": 4.0
+          },
+          {
+            "id": "43c80171ce6e",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "runway",
+            "weight": 2.0
+          },
+          {
+            "id": "3cb794aeb3ca",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "failed",
+            "weight": 2.0
+          },
+          {
+            "id": "9986c6be215f",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "delayed",
+            "weight": 2.0
+          },
+          {
+            "id": "9193e28ae63c",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "error",
+            "weight": 2.0
+          },
+          {
+            "id": "4e8859b91a48",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "electrical",
+            "weight": 1.0
+          },
+          {
+            "id": "fd220550ca89",
+            "head": "climb",
+            "relation": "co_occurs_with",
+            "tail": "engine",
+            "weight": 2.0
+          },
+          {
+            "id": "5aa27b4fd6bd",
+            "head": "engine",
+            "relation": "co_occurs_with",
+            "tail": "down",
+            "weight": 2.0
+          },
+          {
+            "id": "2a2c5f026b29",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 5.0
+          },
+          {
+            "id": "109c8bd3c704",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "fuel",
+            "weight": 4.0
+          },
+          {
+            "id": "f027c4170e4b",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "before",
+            "weight": 4.0
+          },
+          {
+            "id": "ffe03f03b0bb",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "flight",
+            "weight": 4.0
+          },
+          {
+            "id": "82db75cbc3ca",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "cargo",
+            "weight": 4.0
+          },
+          {
+            "id": "2547b765f2cb",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "found",
+            "weight": 2.0
+          },
+          {
+            "id": "987682cf0d0a",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "not",
+            "weight": 2.0
+          },
+          {
+            "id": "b73fc93caf4b",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "inspection",
+            "weight": 2.0
+          },
+          {
+            "id": "c184769b044f",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "aircraft",
+            "weight": 2.0
+          },
+          {
+            "id": "2cf9597d2872",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "issued",
+            "weight": 2.0
+          },
+          {
+            "id": "262283784da8",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "led",
+            "weight": 2.0
+          },
+          {
+            "id": "fdf54784f54e",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "altitude",
+            "weight": 2.0
+          },
+          {
+            "id": "73ddf9cd108e",
+            "head": "landing",
+            "relation": "co_occurs_with",
+            "tail": "approach",
+            "weight": 5.0
+          },
+          {
+            "id": "ea1ec05aebff",
+            "head": "reported",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 3.0
+          },
+          {
+            "id": "0b7aefae8f2c",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "takeoff",
+            "weight": 4.0
+          },
+          {
+            "id": "ad8ae0ab4c92",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "cabin",
+            "weight": 4.0
+          },
+          {
+            "id": "056b067fb42b",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "near",
+            "weight": 3.0
+          },
+          {
+            "id": "d859b1abd480",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "off",
+            "weight": 3.0
+          },
+          {
+            "id": "1cca6323c5b8",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "warning",
+            "weight": 3.0
+          },
+          {
+            "id": "ae412969df51",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "mel",
+            "weight": 3.0
+          },
+          {
+            "id": "560e0225c38a",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "atc",
+            "weight": 2.0
+          },
+          {
+            "id": "016c615df1d0",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "traffic",
+            "weight": 2.0
+          },
+          {
+            "id": "46dde4e35da4",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "noted",
+            "weight": 2.0
+          },
+          {
+            "id": "c6d8dd8a7492",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "until",
+            "weight": 2.0
+          },
+          {
+            "id": "4e2d37837501",
+            "head": "maintenance",
+            "relation": "co_occurs_with",
+            "tail": "flight",
+            "weight": 3.0
+          },
+          {
+            "id": "d8dce1440b8c",
+            "head": "approach",
+            "relation": "co_occurs_with",
+            "tail": "missed",
+            "weight": 5.0
+          },
+          {
+            "id": "cd2a1a803924",
+            "head": "approach",
+            "relation": "co_occurs_with",
+            "tail": "captain",
+            "weight": 3.0
+          },
+          {
+            "id": "cf1782e855ed",
+            "head": "departure",
+            "relation": "co_occurs_with",
+            "tail": "before",
+            "weight": 3.0
+          },
+          {
+            "id": "ac70d09f7870",
+            "head": "before",
+            "relation": "co_occurs_with",
+            "tail": "under",
+            "weight": 2.0
+          }
+        ],
+        "confidence": 0.02886751345948129,
+        "use_mst": true,
+        "edge_weight": "freq",
+        "embedding_backend": "hash",
+        "controls": {
+          "shuffle_edges": false,
+          "strip_relations": false,
+          "dedup_chunks": false,
+          "match_context_budget": false,
+          "control_seed": null
+        },
+        "selection": {
+          "selector": "mst",
+          "use_mst": true
+        }
+      }
+    },
+    "community_answer": null,
+    "hybrid_answer": null,
+    "routed_answer": null,
+    "graphrag_answer": {
+      "question_id": "sd_gsm_5",
+      "question": "What system-level insights emerge when comparing high-severity versus routine reports?",
+      "category": "context-specific",
+      "answer": "To address the question of what system-level insights emerge when comparing high-severity versus routine reports in aviation maintenance records, we can draw from both the provided knowledge graph and general principles of aviation safety and maintenance.\n\n### System-Level Insights:\n\n1. **Correlation with Flight Phases:**\n   - **High-Severity Reports:** These often correlate with critical phases of flight such as takeoff and landing. The knowledge path highlights terms like \"Approach,\" \"Landing,\" \"Missed,\" and \"Runway,\" indicating that high-severity issues frequently arise during these high-risk periods. This suggests a need for heightened vigilance and possibly more rigorous pre-flight checks during these phases.\n   - **Routine Reports:** These are more likely to be associated with less critical phases such as \"Cabin\" and \"Cargo\" inspections, which are routine and scheduled. These reports often involve standard checks that ensure compliance with safety regulations but do not typically indicate immediate safety threats.\n\n2. **Component and System Focus:**\n   - **High-Severity Reports:** These often involve critical systems such as \"Engine,\" \"Electrical,\" and \"Fuel.\" Failures or malfunctions in these systems can have immediate and severe consequences, necessitating rapid response and thorough investigation.\n   - **Routine Reports:** These may focus on less critical systems or components, such as \"Cabin\" or \"Cargo\" areas, where issues are less likely to impact flight safety directly but are important for overall operational efficiency and passenger comfort.\n\n3. **Human Factors and Crew Involvement:**\n   - **High-Severity Reports:** There is often a significant human factor component, with terms like \"Captain,\" \"Crew,\" and \"Atc\" appearing frequently. This suggests that high-severity incidents may involve complex interactions between crew actions and system failures, highlighting the need for comprehensive crew training and effective communication protocols.\n   - **Routine Reports:** These are less likely to involve complex human factors and are more focused on procedural compliance and regular maintenance activities.\n\n4. **Inspection and Maintenance Practices:**\n   - **High-Severity Reports:** These often result from lapses in inspection or maintenance practices, as indicated by terms like \"Inspection,\" \"Failed,\" and \"Delayed.\" This underscores the importance of adhering to strict maintenance schedules and protocols to prevent severe incidents.\n   - **Routine Reports:** These are typically the result of regular inspections and maintenance activities, ensuring that aircraft are kept in optimal condition and that potential issues are identified and addressed before they escalate.\n\n5. **Systemic Patterns and Predictive Maintenance:**\n   - **High-Severity Reports:** The presence of systemic patterns, such as repeated issues with specific components or systems, can be identified through high-severity reports. This information can be used to develop predictive maintenance strategies that focus on high-risk areas, potentially preventing future incidents.\n   - **Routine Reports:** These provide a baseline of normal operational data, which can be used to identify deviations that may indicate emerging issues.",
+      "method": "keo",
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "hash",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "graph_nodes_used": 4,
+      "model": "mlx-community/phi-4-4bit",
+      "model_exact": "mlx-community/phi-4-4bit",
+      "model_provider": "local",
+      "graph_available": true,
+      "evidence": {
+        "seed_nodes": [
+          {
+            "id": "fuel",
+            "sim": 0.2886751345948129
+          },
+          {
+            "id": "during",
+            "sim": 0.0
+          },
+          {
+            "id": "climb",
+            "sim": 0.0
+          },
+          {
+            "id": "engine",
+            "sim": 0.0
+          },
+          {
+            "id": "after",
+            "sim": 0.0
+          },
+          {
+            "id": "landing",
+            "sim": 0.0
+          },
+          {
+            "id": "reported",
+            "sim": 0.0
+          },
+          {
+            "id": "crew",
+            "sim": 0.0
+          },
+          {
+            "id": "delayed",
+            "sim": 0.0
+          },
+          {
+            "id": "electrical",
+            "sim": 0.0
+          }
+        ],
+        "triples": [
+          {
+            "id": "80120da6c276",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "approach",
+            "weight": 8.0
+          },
+          {
+            "id": "c0b450cd01e3",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 7.0
+          },
+          {
+            "id": "f09a9a880903",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "climb",
+            "weight": 4.0
+          },
+          {
+            "id": "43c80171ce6e",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "runway",
+            "weight": 2.0
+          },
+          {
+            "id": "3cb794aeb3ca",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "failed",
+            "weight": 2.0
+          },
+          {
+            "id": "9986c6be215f",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "delayed",
+            "weight": 2.0
+          },
+          {
+            "id": "9193e28ae63c",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "error",
+            "weight": 2.0
+          },
+          {
+            "id": "4e8859b91a48",
+            "head": "during",
+            "relation": "co_occurs_with",
+            "tail": "electrical",
+            "weight": 1.0
+          },
+          {
+            "id": "fd220550ca89",
+            "head": "climb",
+            "relation": "co_occurs_with",
+            "tail": "engine",
+            "weight": 2.0
+          },
+          {
+            "id": "5aa27b4fd6bd",
+            "head": "engine",
+            "relation": "co_occurs_with",
+            "tail": "down",
+            "weight": 2.0
+          },
+          {
+            "id": "2a2c5f026b29",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 5.0
+          },
+          {
+            "id": "109c8bd3c704",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "fuel",
+            "weight": 4.0
+          },
+          {
+            "id": "f027c4170e4b",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "before",
+            "weight": 4.0
+          },
+          {
+            "id": "ffe03f03b0bb",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "flight",
+            "weight": 4.0
+          },
+          {
+            "id": "82db75cbc3ca",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "cargo",
+            "weight": 4.0
+          },
+          {
+            "id": "2547b765f2cb",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "found",
+            "weight": 2.0
+          },
+          {
+            "id": "987682cf0d0a",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "not",
+            "weight": 2.0
+          },
+          {
+            "id": "b73fc93caf4b",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "inspection",
+            "weight": 2.0
+          },
+          {
+            "id": "c184769b044f",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "aircraft",
+            "weight": 2.0
+          },
+          {
+            "id": "2cf9597d2872",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "issued",
+            "weight": 2.0
+          },
+          {
+            "id": "262283784da8",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "led",
+            "weight": 2.0
+          },
+          {
+            "id": "fdf54784f54e",
+            "head": "after",
+            "relation": "co_occurs_with",
+            "tail": "altitude",
+            "weight": 2.0
+          },
+          {
+            "id": "73ddf9cd108e",
+            "head": "landing",
+            "relation": "co_occurs_with",
+            "tail": "approach",
+            "weight": 5.0
+          },
+          {
+            "id": "ea1ec05aebff",
+            "head": "reported",
+            "relation": "co_occurs_with",
+            "tail": "crew",
+            "weight": 3.0
+          },
+          {
+            "id": "0b7aefae8f2c",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "takeoff",
+            "weight": 4.0
+          },
+          {
+            "id": "ad8ae0ab4c92",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "cabin",
+            "weight": 4.0
+          },
+          {
+            "id": "056b067fb42b",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "near",
+            "weight": 3.0
+          },
+          {
+            "id": "d859b1abd480",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "off",
+            "weight": 3.0
+          },
+          {
+            "id": "1cca6323c5b8",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "warning",
+            "weight": 3.0
+          },
+          {
+            "id": "ae412969df51",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "mel",
+            "weight": 3.0
+          },
+          {
+            "id": "560e0225c38a",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "atc",
+            "weight": 2.0
+          },
+          {
+            "id": "016c615df1d0",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "traffic",
+            "weight": 2.0
+          },
+          {
+            "id": "46dde4e35da4",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "noted",
+            "weight": 2.0
+          },
+          {
+            "id": "c6d8dd8a7492",
+            "head": "crew",
+            "relation": "co_occurs_with",
+            "tail": "until",
+            "weight": 2.0
+          },
+          {
+            "id": "4e2d37837501",
+            "head": "maintenance",
+            "relation": "co_occurs_with",
+            "tail": "flight",
+            "weight": 3.0
+          },
+          {
+            "id": "d8dce1440b8c",
+            "head": "approach",
+            "relation": "co_occurs_with",
+            "tail": "missed",
+            "weight": 5.0
+          },
+          {
+            "id": "cd2a1a803924",
+            "head": "approach",
+            "relation": "co_occurs_with",
+            "tail": "captain",
+            "weight": 3.0
+          },
+          {
+            "id": "cf1782e855ed",
+            "head": "departure",
+            "relation": "co_occurs_with",
+            "tail": "before",
+            "weight": 3.0
+          },
+          {
+            "id": "ac70d09f7870",
+            "head": "before",
+            "relation": "co_occurs_with",
+            "tail": "under",
+            "weight": 2.0
+          }
+        ],
+        "confidence": 0.02886751345948129,
+        "use_mst": true,
+        "edge_weight": "freq",
+        "embedding_backend": "hash",
+        "controls": {
+          "shuffle_edges": false,
+          "strip_relations": false,
+          "dedup_chunks": false,
+          "match_context_budget": false,
+          "control_seed": null
+        },
+        "selection": {
+          "selector": "mst",
+          "use_mst": true
+        }
+      }
+    },
+    "risk_answer": null,
+    "chunk_tok_answer": null,
+    "chunk_sum_answer": null,
+    "chunk_dedup_answer": null,
+    "keo_shuf_answer": null,
+    "keo_norel_answer": null
+  }
+]

@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lrrr}
+\toprule
+Property & Spearman $\rho$ with $\Delta$ & $p_{\mathrm{perm}}$ & Reading \\
+\midrule
+D\_agg & $-0.182$ & 0.097 & higher property → chunk advantage \\
+D\_ent & $+0.136$ & 0.220 & higher property → KEO advantage \\
+D\_type & $-0.150$ & 0.180 & higher property → chunk advantage \\
+requires\_synthesis & $-0.188$ & 0.085 & higher property → chunk advantage \\
+D\_sim & $+0.033$ & 0.770 & higher property → KEO advantage \\
+D\_rec & $+0.000$ & 1.000 & no rank association \\
+\bottomrule
+\end{tabular}
+\caption{Pivot~A pilot on $n=83$ Claude-Haiku questions. $\Delta = \mathrm{score}(\mathrm{KEO}) - \mathrm{score}(\texttt{chunk\_tok})$. $D_{\mathrm{agg}}$ lexical; $D_{\mathrm{ent}}$ KG overlap; $D_{\mathrm{type}}$ cue router; $D_{\mathrm{sim}}$/$D_{\mathrm{rec}}$ from the retrieval corpus ($n=400$, backend=local).}
+\label{tab:dispersion-pilot}
+\end{table}

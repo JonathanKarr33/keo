@@ -1,0 +1,308 @@
+{
+  "chunk_tok_deltas": [
+    {
+      "label": "Gemma E4B / Haiku",
+      "run": "_gemma4e4b",
+      "n": 83,
+      "delta": 0.2783132530120482,
+      "ci": [
+        0.13493975903614458,
+        0.4265361445783134
+      ],
+      "p_perm": 0.0004,
+      "dz": 0.41045408944009415,
+      "keo_mean": 2.2686746987951807,
+      "chunk_mean": 2.5469879518072287,
+      "p_holm": 0.0028,
+      "sig": true
+    },
+    {
+      "label": "Gemma E4B / Sonnet",
+      "run": "gemma4e4b_sonnet_all",
+      "n": 83,
+      "delta": -0.10843373493975904,
+      "ci": [
+        -0.1783132530120482,
+        -0.04090361445783109
+      ],
+      "p_perm": 0.0031333333333333335,
+      "dz": -0.3305492846484022,
+      "keo_mean": 2.248192771084337,
+      "chunk_mean": 2.139759036144578,
+      "p_holm": 0.01566666666666667,
+      "sig": true
+    },
+    {
+      "label": "Phi-4 / Haiku",
+      "run": "phi4",
+      "n": 83,
+      "delta": 0.06024096385542165,
+      "ci": [
+        -0.034939759036144574,
+        0.15542168674698795
+      ],
+      "p_perm": 0.23653333333333335,
+      "dz": 0.13553687903600087,
+      "keo_mean": 2.230120481927711,
+      "chunk_mean": 2.290361445783133,
+      "p_holm": 0.8597333333333333,
+      "sig": false
+    },
+    {
+      "label": "Phi-4 / Sonnet",
+      "run": "phi4_sonnet_all",
+      "n": 83,
+      "delta": -0.09879518072289153,
+      "ci": [
+        -0.15662650602409633,
+        -0.04331325301204794
+      ],
+      "p_perm": 0.0016666666666666668,
+      "dz": -0.37179874793879225,
+      "keo_mean": 2.291566265060241,
+      "chunk_mean": 2.192771084337349,
+      "p_holm": 0.01,
+      "sig": true
+    },
+    {
+      "label": "Phi-4 labeled / Haiku",
+      "run": "labeled_graph",
+      "n": 83,
+      "delta": -0.04216867469879516,
+      "ci": [
+        -0.14457831325301201,
+        0.05542168674698793
+      ],
+      "p_perm": 0.419,
+      "dz": -0.09195977475114102,
+      "keo_mean": 2.2445783132530117,
+      "chunk_mean": 2.2024096385542165,
+      "p_holm": 0.8597333333333333,
+      "sig": false
+    },
+    {
+      "label": "Gemma 31B / Haiku",
+      "run": "openrouter_gemma4_31b",
+      "n": 83,
+      "delta": -0.07228915662650601,
+      "ci": [
+        -0.20725903614457833,
+        0.06626506024096386
+      ],
+      "p_perm": 0.3284,
+      "dz": -0.11060714164850845,
+      "keo_mean": 3.219277108433734,
+      "chunk_mean": 3.146987951807229,
+      "p_holm": 0.8597333333333333,
+      "sig": false
+    },
+    {
+      "label": "Gemma 31B / Sonnet",
+      "run": "openrouter_gemma4_31b_sonnet",
+      "n": 83,
+      "delta": 0.05542168674698799,
+      "ci": [
+        -0.03132530120481924,
+        0.14216867469879524
+      ],
+      "p_perm": 0.21493333333333334,
+      "dz": 0.13287701411151767,
+      "keo_mean": 2.691566265060241,
+      "chunk_mean": 2.7469879518072284,
+      "p_holm": 0.8597333333333333,
+      "sig": false
+    }
+  ],
+  "win_rates": [
+    {
+      "n": 83,
+      "chunk_wins": 44,
+      "keo_wins": 28,
+      "ties": 11,
+      "chunk_win_rate": 0.5301204819277109,
+      "label": "Gemma E4B / Haiku"
+    },
+    {
+      "n": 83,
+      "chunk_wins": 17,
+      "keo_wins": 40,
+      "ties": 26,
+      "chunk_win_rate": 0.20481927710843373,
+      "label": "Gemma E4B / Sonnet"
+    },
+    {
+      "n": 83,
+      "chunk_wins": 37,
+      "keo_wins": 25,
+      "ties": 21,
+      "chunk_win_rate": 0.4457831325301205,
+      "label": "Phi-4 / Haiku"
+    },
+    {
+      "n": 83,
+      "chunk_wins": 12,
+      "keo_wins": 34,
+      "ties": 37,
+      "chunk_win_rate": 0.14457831325301204,
+      "label": "Phi-4 / Sonnet"
+    },
+    {
+      "n": 83,
+      "chunk_wins": 36,
+      "keo_wins": 33,
+      "ties": 14,
+      "chunk_win_rate": 0.43373493975903615,
+      "label": "Phi-4 labeled / Haiku"
+    },
+    {
+      "n": 83,
+      "chunk_wins": 33,
+      "keo_wins": 34,
+      "ties": 16,
+      "chunk_win_rate": 0.39759036144578314,
+      "label": "Gemma 31B / Haiku"
+    },
+    {
+      "n": 83,
+      "chunk_wins": 30,
+      "keo_wins": 26,
+      "ties": 27,
+      "chunk_win_rate": 0.3614457831325301,
+      "label": "Gemma 31B / Sonnet"
+    }
+  ],
+  "dim_disagreement": {
+    "phi4": {
+      "generator": "phi4",
+      "median_abs_by_dim": {
+        "global_perspective": 0.0,
+        "theme_identification": 0.0,
+        "synthesis_quality": 0.0,
+        "strategic_value": 1.0,
+        "pattern_recognition": 0.0
+      },
+      "mean_abs_by_dim": {
+        "global_perspective": 0.09939759036144578,
+        "theme_identification": 0.4186746987951807,
+        "synthesis_quality": 0.22289156626506024,
+        "strategic_value": 0.572289156626506,
+        "pattern_recognition": 0.25903614457831325
+      },
+      "chunk_tok_delta_by_dim": {
+        "global_perspective": {
+          "haiku_delta": -0.030120481927710843,
+          "sonnet_delta": -0.012048192771084338,
+          "flips": false
+        },
+        "theme_identification": {
+          "haiku_delta": 0.15060240963855423,
+          "sonnet_delta": -0.10843373493975904,
+          "flips": true
+        },
+        "synthesis_quality": {
+          "haiku_delta": -0.012048192771084338,
+          "sonnet_delta": -0.07228915662650602,
+          "flips": false
+        },
+        "strategic_value": {
+          "haiku_delta": 0.1927710843373494,
+          "sonnet_delta": -0.13253012048192772,
+          "flips": true
+        },
+        "pattern_recognition": {
+          "haiku_delta": 0.0,
+          "sonnet_delta": -0.1686746987951807,
+          "flips": false
+        }
+      }
+    },
+    "gemma4e4b": {
+      "generator": "gemma4e4b",
+      "median_abs_by_dim": {
+        "global_perspective": 0.0,
+        "theme_identification": 0.0,
+        "synthesis_quality": 1.0,
+        "strategic_value": 1.0,
+        "pattern_recognition": 0.0
+      },
+      "mean_abs_by_dim": {
+        "global_perspective": 0.26506024096385544,
+        "theme_identification": 0.46686746987951805,
+        "synthesis_quality": 0.5903614457831325,
+        "strategic_value": 0.572289156626506,
+        "pattern_recognition": 0.4397590361445783
+      },
+      "chunk_tok_delta_by_dim": {
+        "global_perspective": {
+          "haiku_delta": 0.27710843373493976,
+          "sonnet_delta": -0.012048192771084338,
+          "flips": false
+        },
+        "theme_identification": {
+          "haiku_delta": 0.3072289156626506,
+          "sonnet_delta": -0.04819277108433735,
+          "flips": true
+        },
+        "synthesis_quality": {
+          "haiku_delta": 0.20481927710843373,
+          "sonnet_delta": -0.13253012048192772,
+          "flips": true
+        },
+        "strategic_value": {
+          "haiku_delta": 0.3493975903614458,
+          "sonnet_delta": -0.012048192771084338,
+          "flips": false
+        },
+        "pattern_recognition": {
+          "haiku_delta": 0.25301204819277107,
+          "sonnet_delta": -0.3373493975903614,
+          "flips": true
+        }
+      }
+    },
+    "gemma4_31b": {
+      "generator": "gemma4_31b",
+      "median_abs_by_dim": {
+        "global_perspective": 0.0,
+        "theme_identification": 1.0,
+        "synthesis_quality": 1.0,
+        "strategic_value": 0.0,
+        "pattern_recognition": 1.0
+      },
+      "mean_abs_by_dim": {
+        "global_perspective": 0.5662650602409639,
+        "theme_identification": 0.6385542168674698,
+        "synthesis_quality": 0.6626506024096386,
+        "strategic_value": 0.5180722891566265,
+        "pattern_recognition": 0.6204819277108434
+      },
+      "chunk_tok_delta_by_dim": {
+        "global_perspective": {
+          "haiku_delta": -0.12048192771084337,
+          "sonnet_delta": 0.12048192771084337,
+          "flips": true
+        },
+        "theme_identification": {
+          "haiku_delta": 0.012048192771084338,
+          "sonnet_delta": 0.03614457831325301,
+          "flips": false
+        },
+        "synthesis_quality": {
+          "haiku_delta": -0.03614457831325301,
+          "sonnet_delta": -0.024096385542168676,
+          "flips": false
+        },
+        "strategic_value": {
+          "haiku_delta": -0.012048192771084338,
+          "sonnet_delta": 0.14457831325301204,
+          "flips": false
+        },
+        "pattern_recognition": {
+          "haiku_delta": -0.20481927710843373,
+          "sonnet_delta": 0.0,
+          "flips": false
+        }
+      }
+    }
+  }
+}

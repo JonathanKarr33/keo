@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>KEO · Severity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="page-severity">
+  <header class="site-header dark">
+    <a class="brand" href="index.html">KEO</a>
+    <nav>
+      <a href="index.html">Sign in</a>
+      <a href="rate.html">Prefs</a>
+      <a href="severity.html" aria-current="page">Severity</a>
+      <a href="adjudicate.html">Adjudicate</a>
+      <a href="status.html">Status</a>
+    </nav>
+    <div class="header-right">
+      <span id="who-label" class="pill"></span>
+      <span id="progress-label" class="progress-text">0 / 100</span>
+      <span id="save-flash" class="flash" hidden></span>
+      <button type="button" id="btn-logout" class="ghost">Log out</button>
+    </div>
+  </header>
+  <div class="progress"><span id="progress-bar"></span></div>
+
+  <main class="severity-main">
+    <p class="eyebrow" id="mode-label">Risk / severity triples · lexicon prior hidden</p>
+    <h1 id="item-title">Triple <span id="item-num">—</span></h1>
+    <p class="lede" id="instructions"></p>
+
+    <details class="sev-defs" open>
+      <summary>Class definitions (FAA AC 25.1309 / SAE ARP4761 style)</summary>
+      <ul id="sev-defs-list">
+        <li><strong>Catastrophic</strong> — Failure conditions that would prevent continued safe flight and landing; multiple fatalities and/or loss of the airplane are plausible.</li>
+        <li><strong>Hazardous</strong> — Large reduction in safety margins or functional capability; physical distress or excessive workload such that the flight crew cannot be relied upon to perform tasks accurately or completely; serious or fatal injury to a relatively small number of occupants plausible.</li>
+        <li><strong>Major</strong> — Significant reduction in safety margins or functional capability; significant increase in crew workload or conditions impairing crew efficiency; physical distress to occupants, including injuries.</li>
+        <li><strong>Minor</strong> — Slight reduction in safety margins or slight increase in crew workload; some physical discomfort to occupants; routine crew actions suffice.</li>
+        <li><strong>No safety effect</strong> (<em>none</em>) — No effect on safety; no effect on operational capability or crew workload beyond ordinary maintenance inconvenience.</li>
+      </ul>
+      <p class="sev-defs-note">Rate the <em>worst plausible outcome of this fact alone</em>, not how often it occurs. Lexicon prior is hidden.</p>
+    </details>
+
+    <div class="triple-card" id="triple-card">
+      <div class="triple-part">
+        <span class="triple-k">Head</span>
+        <p id="head-text">—</p>
+      </div>
+      <div class="triple-part rel">
+        <span class="triple-k">Relation</span>
+        <p id="rel-text">—</p>
+      </div>
+      <div class="triple-part">
+        <span class="triple-k">Tail</span>
+        <p id="tail-text">—</p>
+      </div>
+    </div>
+
+    <div id="adj-panel" class="adj-panel" hidden>
+      <p><strong>Contested.</strong> Annotator 1: <span id="ann1-class">—</span> · Annotator 2: <span id="ann2-class">—</span></p>
+      <div class="adj-res">
+        <label><input type="radio" name="resolution" value="adjudicator" checked/> Solo adjudicator</label>
+        <label><input type="radio" name="resolution" value="conference"/> Team conference</label>
+      </div>
+      <label class="note-label">Optional note
+        <input type="text" id="adj-note" maxlength="500" placeholder="Why this class?"/>
+      </label>
+    </div>
+
+    <p class="field-label">Worst plausible outcome of this fact alone</p>
+    <div class="sev-grid" id="sev-grid" role="group" aria-label="Severity class"></div>
+
+    <div class="severity-nav">
+      <button type="button" id="btn-prev" class="ghost dark">← Prev</button>
+      <button type="button" id="btn-next" class="primary">Next →</button>
+    </div>
+    <p class="kbd-hint sev-hint"><kbd>1</kbd>–<kbd>5</kbd> class · <kbd>←</kbd><kbd>→</kbd> navigate</p>
+    <p id="error" class="error" hidden></p>
+  </main>
+  <script src="auth.js"></script>
+  <script src="severity.js"></script>
+</body>
+</html>

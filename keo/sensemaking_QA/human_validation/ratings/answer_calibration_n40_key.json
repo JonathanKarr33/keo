@@ -1,0 +1,368 @@
+{
+  "batch_id": "answer_calibration_n40_key",
+  "role": "scoring_key_not_for_annotators",
+  "generator": "phi4",
+  "note": "Haiku and Sonnet scores are for later agreement. Do not show this file to annotators.",
+  "items": [
+    {
+      "item_id": "safety_recommendations_006",
+      "left_system": "keo",
+      "right_system": "chunk_tok",
+      "haiku_keo": 2.4,
+      "haiku_chunk_tok": 2.0,
+      "sonnet_keo": 2.0,
+      "sonnet_chunk_tok": 1.8
+    },
+    {
+      "item_id": "safety_recommendations_007",
+      "left_system": "chunk_tok",
+      "right_system": "keo",
+      "haiku_keo": 2.2,
+      "haiku_chunk_tok": 2.2,
+      "sonnet_keo": 2.4,
+      "sonnet_chunk_tok": 2.2
+    },
+    {
+      "item_id": "global_014",
+      "left_system": "chunk_tok",
+      "right_system": "keo",
+      "haiku_keo": 2.2,
+      "haiku_chunk_tok": 2.2,
+      "sonnet_keo": 2.4,
+      "sonnet_chunk_tok": 2.2
+    },
+    {
+      "item_id": "system_level_understanding_001",
+      "left_system": "keo",
+      "right_system": "chunk_tok",
+      "haiku_keo": 1.8,
+      "haiku_chunk_tok": 2.4,
+      "sonnet_keo": 2.4,
+      "sonnet_chunk_tok": 2.2
+    },
+    {
+      "item_id": "root_cause_analysis_001",
+      "left_system": "keo",
+      "right_system": "chunk_tok",
+      "haiku_keo": 2.2,
+      "haiku_chunk_tok": 1.8,
+      "sonnet_keo": 2.4,
+      "sonnet_chunk_tok": 2.2
+    },
+    {
+      "item_id": "global_015",
+      "left_system": "chunk_tok",
+      "right_system": "keo",
+      "haiku_keo": 2.8,
+      "haiku_chunk_tok": 3.4,
+      "sonnet_keo": 2.4,
+      "sonnet_chunk_tok": 2.4
+    },
+    {
+      "item_id": "root_cause_analysis_007",
+      "left_system": "keo",
+      "right_system": "chunk_tok",
+      "haiku_keo": 2.2,
+      "haiku_chunk_tok": 2.8,
+      "sonnet_keo": 2.4,
+      "sonnet_chunk_tok": 2.2
+    },
+    {
+      "item_id": "maintenance_narratives_006",
+      "left_system": "keo",
+      "right_system": "chunk_tok",
+      "haiku_keo": 2.2,
+      "haiku_chunk_tok": 2.8,
+      "sonnet_keo": 2.2,
+      "sonnet_chunk_tok": 2.2
+    },
+    {
+      "item_id": "comparative_analysis_008",
+      "left_system": "keo",
+      "right_system": "chunk_tok",
+      "haiku_keo": 1.8,
+      "haiku_chunk_tok": 2.2,
+      "sonnet_keo": 2.4,
+      "sonnet_chunk_tok": 2.4
+    },
+    {
+      "item_id": "root_cause_analysis_006",
+      "left_system": "chunk_tok",
+      "right_system": "keo",
+      "haiku_keo": 2.2,
+      "haiku_chunk_tok": 2.2,
+      "sonnet_keo": 2.4,
+      "sonnet_chunk_tok": 2.2
+    },
+    {
+      "item_id": "comparative_analysis_004",
+      "left_system": "chunk_tok",
+      "right_system": "keo",
+      "haiku_keo": 1.8,
+      "haiku_chunk_tok": 2.4,
+      "sonnet_keo": 2.4,
+      "sonnet_chunk_tok": 2.4
+    },
+    {
+      "item_id": "maintenance_narratives_005",
+      "left_system": "keo",
+      "right_system": "chunk_tok",
+      "haiku_keo": 2.0,
+      "haiku_chunk_tok": 2.2,
+      "sonnet_keo": 2.2,
+      "sonnet_chunk_tok": 2.4
+    },
+    {
+      "item_id": "root_cause_analysis_002",
+      "left_system": "keo",
+      "right_system": "chunk_tok",
+      "haiku_keo": 2.0,
+      "haiku_chunk_tok": 2.8,
+      "sonnet_keo": 2.2,
+      "sonnet_chunk_tok": 2.2
+    },
+    {
+      "item_id": "global_009",
+      "left_system": "chunk_tok",
+      "right_system": "keo",
+      "haiku_keo": 2.2,
+      "haiku_chunk_tok": 3.4,
+      "sonnet_keo": 2.4,
+      "sonnet_chunk_tok": 2.4
+    },
+    {
+      "item_id": "comparative_analysis_005",
+      "left_system": "chunk_tok",
+      "right_system": "keo",
+      "haiku_keo": 1.8,
+      "haiku_chunk_tok": 2.4,
+      "sonnet_keo": 2.4,
+      "sonnet_chunk_tok": 2.0
+    },
+    {
+      "item_id": "root_cause_analysis_005",
+      "left_system": "keo",
+      "right_system": "chunk_tok",
+      "haiku_keo": 2.4,
+      "haiku_chunk_tok": 3.2,
+      "sonnet_keo": 2.4,
+      "sonnet_chunk_tok": 2.4
+    },
+    {
+      "item_id": "system_level_understanding_003",
+      "left_system": "chunk_tok",
+      "right_system": "keo",
+      "haiku_keo": 2.0,
+      "haiku_chunk_tok": 2.4,
+      "sonnet_keo": 2.0,
+      "sonnet_chunk_tok": 2.0
+    },
+    {
+      "item_id": "predictive_maintenance_004",
+      "left_system": "chunk_tok",
+      "right_system": "keo",
+      "haiku_keo": 2.2,
+      "haiku_chunk_tok": 3.0,
+      "sonnet_keo": 2.0,
+      "sonnet_chunk_tok": 2.2
+    },
+    {
+      "item_id": "maintenance_narratives_003",
+      "left_system": "keo",
+      "right_system": "chunk_tok",
+      "haiku_keo": 2.2,
+      "haiku_chunk_tok": 2.2,
+      "sonnet_keo": 2.4,
+      "sonnet_chunk_tok": 2.4
+    },
+    {
+      "item_id": "trend_analysis_007",
+      "left_system": "chunk_tok",
+      "right_system": "keo",
+      "haiku_keo": 2.2,
+      "haiku_chunk_tok": 2.8,
+      "sonnet_keo": 2.4,
+      "sonnet_chunk_tok": 2.0
+    },
+    {
+      "item_id": "safety_recommendations_008",
+      "left_system": "chunk_tok",
+      "right_system": "keo",
+      "haiku_keo": 3.2,
+      "haiku_chunk_tok": 2.4,
+      "sonnet_keo": 2.8,
+      "sonnet_chunk_tok": 2.4
+    },
+    {
+      "item_id": "trend_analysis_008",
+      "left_system": "chunk_tok",
+      "right_system": "keo",
+      "haiku_keo": 2.4,
+      "haiku_chunk_tok": 2.6,
+      "sonnet_keo": 2.4,
+      "sonnet_chunk_tok": 2.2
+    },
+    {
+      "item_id": "safety_recommendations_002",
+      "left_system": "keo",
+      "right_system": "chunk_tok",
+      "haiku_keo": 2.0,
+      "haiku_chunk_tok": 1.8,
+      "sonnet_keo": 2.2,
+      "sonnet_chunk_tok": 1.8
+    },
+    {
+      "item_id": "maintenance_narratives_008",
+      "left_system": "keo",
+      "right_system": "chunk_tok",
+      "haiku_keo": 2.2,
+      "haiku_chunk_tok": 2.4,
+      "sonnet_keo": 2.2,
+      "sonnet_chunk_tok": 2.4
+    },
+    {
+      "item_id": "trend_analysis_001",
+      "left_system": "keo",
+      "right_system": "chunk_tok",
+      "haiku_keo": 2.4,
+      "haiku_chunk_tok": 2.4,
+      "sonnet_keo": 2.6,
+      "sonnet_chunk_tok": 2.4
+    },
+    {
+      "item_id": "aircraft_problems_actions_005",
+      "left_system": "keo",
+      "right_system": "chunk_tok",
+      "haiku_keo": 2.2,
+      "haiku_chunk_tok": 2.6,
+      "sonnet_keo": 2.4,
+      "sonnet_chunk_tok": 2.2
+    },
+    {
+      "item_id": "comparative_analysis_003",
+      "left_system": "keo",
+      "right_system": "chunk_tok",
+      "haiku_keo": 2.2,
+      "haiku_chunk_tok": 2.2,
+      "sonnet_keo": 2.2,
+      "sonnet_chunk_tok": 1.8
+    },
+    {
+      "item_id": "aircraft_problems_actions_010",
+      "left_system": "keo",
+      "right_system": "chunk_tok",
+      "haiku_keo": 2.0,
+      "haiku_chunk_tok": 2.0,
+      "sonnet_keo": 2.2,
+      "sonnet_chunk_tok": 1.6
+    },
+    {
+      "item_id": "system_level_understanding_002",
+      "left_system": "chunk_tok",
+      "right_system": "keo",
+      "haiku_keo": 2.0,
+      "haiku_chunk_tok": 2.4,
+      "sonnet_keo": 2.4,
+      "sonnet_chunk_tok": 2.4
+    },
+    {
+      "item_id": "aircraft_problems_actions_008",
+      "left_system": "chunk_tok",
+      "right_system": "keo",
+      "haiku_keo": 2.0,
+      "haiku_chunk_tok": 2.2,
+      "sonnet_keo": 2.4,
+      "sonnet_chunk_tok": 2.4
+    },
+    {
+      "item_id": "predictive_maintenance_007",
+      "left_system": "chunk_tok",
+      "right_system": "keo",
+      "haiku_keo": 1.8,
+      "haiku_chunk_tok": 2.0,
+      "sonnet_keo": 2.2,
+      "sonnet_chunk_tok": 2.0
+    },
+    {
+      "item_id": "maintenance_narratives_002",
+      "left_system": "chunk_tok",
+      "right_system": "keo",
+      "haiku_keo": 2.0,
+      "haiku_chunk_tok": 2.0,
+      "sonnet_keo": 2.4,
+      "sonnet_chunk_tok": 2.0
+    },
+    {
+      "item_id": "root_cause_analysis_003",
+      "left_system": "chunk_tok",
+      "right_system": "keo",
+      "haiku_keo": 2.2,
+      "haiku_chunk_tok": 2.2,
+      "sonnet_keo": 2.4,
+      "sonnet_chunk_tok": 2.4
+    },
+    {
+      "item_id": "predictive_maintenance_008",
+      "left_system": "keo",
+      "right_system": "chunk_tok",
+      "haiku_keo": 2.0,
+      "haiku_chunk_tok": 2.0,
+      "sonnet_keo": 2.2,
+      "sonnet_chunk_tok": 1.8
+    },
+    {
+      "item_id": "global_002",
+      "left_system": "chunk_tok",
+      "right_system": "keo",
+      "haiku_keo": 2.0,
+      "haiku_chunk_tok": 2.4,
+      "sonnet_keo": 2.0,
+      "sonnet_chunk_tok": 2.0
+    },
+    {
+      "item_id": "predictive_maintenance_003",
+      "left_system": "keo",
+      "right_system": "chunk_tok",
+      "haiku_keo": 2.4,
+      "haiku_chunk_tok": 2.4,
+      "sonnet_keo": 2.2,
+      "sonnet_chunk_tok": 2.0
+    },
+    {
+      "item_id": "aircraft_problems_actions_004",
+      "left_system": "chunk_tok",
+      "right_system": "keo",
+      "haiku_keo": 2.4,
+      "haiku_chunk_tok": 2.0,
+      "sonnet_keo": 2.4,
+      "sonnet_chunk_tok": 2.2
+    },
+    {
+      "item_id": "predictive_maintenance_001",
+      "left_system": "chunk_tok",
+      "right_system": "keo",
+      "haiku_keo": 3.0,
+      "haiku_chunk_tok": 2.2,
+      "sonnet_keo": 2.4,
+      "sonnet_chunk_tok": 2.2
+    },
+    {
+      "item_id": "global_004",
+      "left_system": "chunk_tok",
+      "right_system": "keo",
+      "haiku_keo": 2.2,
+      "haiku_chunk_tok": 2.4,
+      "sonnet_keo": 1.6,
+      "sonnet_chunk_tok": 2.2
+    },
+    {
+      "item_id": "global_005",
+      "left_system": "keo",
+      "right_system": "chunk_tok",
+      "haiku_keo": 2.9,
+      "haiku_chunk_tok": 2.2,
+      "sonnet_keo": 2.4,
+      "sonnet_chunk_tok": 2.4
+    }
+  ]
+}

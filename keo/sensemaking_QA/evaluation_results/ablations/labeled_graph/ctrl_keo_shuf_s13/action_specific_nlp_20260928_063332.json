@@ -1,0 +1,1180 @@
+{
+  "timestamp": "20260928_063332",
+  "run_id": "labeled_graph",
+  "arm": "ctrl_keo_shuf_s13",
+  "method": "keo_shuf",
+  "nlp_only": true,
+  "by_method": {
+    "keo_shuf": {
+      "total_action_questions": 50,
+      "evaluated_answers": 50,
+      "individual_evaluations": [
+        {
+          "question_id": "action_001",
+          "ground_truth": "REMOVED & REPLACED GASKETS.",
+          "predicted_answer": "Inspection and repair of the right-hand engine intakes to identify and rectify the source of the leaks. This includes checking for potential issues such as improper sealing, damage to intake components, or contamination that could lead to leaks. Replace any damaged parts and ensure all seals are intact and properly installed. Conduct a pressure test to confirm the integrity of the repairs before returning the engine to service.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.027777777777777776,
+            "rouge_1_f1": 0.027777777777777776,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.0,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.028"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.027777777777777776
+        },
+        {
+          "question_id": "action_002",
+          "ground_truth": "LEAK CHECKED GOOD.",
+          "predicted_answer": "Replace the left-hand engine torquemeter hoses with new ones, ensuring proper installation and securing to prevent leaks or disconnections. Conduct a thorough inspection of the surrounding components for any signs of wear or damage. Perform a functional test to verify the integrity and performance of the new hoses. Document the maintenance action in the aircraft's maintenance records.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.03225806451612903,
+            "rouge_1_f1": 0.03225806451612903,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.0,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.032"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.03225806451612903
+        },
+        {
+          "question_id": "action_003",
+          "ground_truth": "REMOVED & REPLACED CYL #3 ROCKER COVER GASKET.",
+          "predicted_answer": "Inspect and replace the rocker cover gasket for cylinder #3. Additionally, check for any signs of oil leakage or damage around the cylinder area that may require further attention. Ensure that the cylinder head and related components are properly torqued and sealed.",
+          "nlp_metrics": {
+            "bleu_score": 0.004392487796991638,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.16326530612244897,
+            "rouge_1_f1": 0.2040816326530612,
+            "rouge_2_f1": 0.0851063829787234,
+            "semantic_similarity": 0.19047619047619047,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.004, METEOR: 0.000, ROUGE-L: 0.163"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.16326530612244897
+        },
+        {
+          "question_id": "action_004",
+          "ground_truth": "STARTED A/C USING FLOODED START PROCEDURE. A/C RAN NORM",
+          "predicted_answer": "Perform a comprehensive inspection of the engine and its associated systems, focusing on fuel supply lines, fuel quantity indicators, and fuel pump functionality. Ensure that all fuel-related components are secure and free from blockages or leaks. Additionally, verify the integrity of the engine cowling and related structures to prevent any potential interference with engine operation. If necessary, conduct a test run to confirm normal engine performance before returning the aircraft to service.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.047619047619047616,
+            "rouge_1_f1": 0.047619047619047616,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.03076923076923077,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.048"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.047619047619047616
+        },
+        {
+          "question_id": "action_005",
+          "ground_truth": "RESEARCHED FDM CARD DATA, FOUND MAX RPM OF 2739.8; WHIC",
+          "predicted_answer": "Perform an immediate inspection of the engine's tachometer and associated sensors to verify their accuracy and functionality. If discrepancies are found, recalibrate or replace the faulty components to prevent potential overspeed conditions. Additionally, review the engine control system for any anomalies that could contribute to uncommanded RPM increases.",
+          "nlp_metrics": {
+            "bleu_score": 0.0037447837904003834,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.06666666666666667,
+            "rouge_1_f1": 0.1,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.11111111111111109,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.004, METEOR: 0.000, ROUGE-L: 0.067"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.06666666666666667
+        },
+        {
+          "question_id": "action_006",
+          "ground_truth": "REMOVED & REPLACED W/ NEW GASKETS.",
+          "predicted_answer": "Replace the intake tube gaskets on both left-hand engine #2 and #4. Inspect the intake tubes for any additional damage or wear that may have contributed to the gasket failure and address as necessary. Ensure all connections are secure and properly torqued according to the manufacturer's specifications. Conduct a pressure test to verify the integrity of the repair.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.06153846153846154,
+            "rouge_1_f1": 0.06153846153846154,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.03571428571428571,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.062"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.06153846153846154
+        },
+        {
+          "question_id": "action_007",
+          "ground_truth": "INSTALLED SCREWS.",
+          "predicted_answer": "Replace the missing baffle screws above the starter and conduct a thorough inspection of the starter assembly to ensure all components are secure and functioning properly. Additionally, verify that all related fasteners in the vicinity are intact and tighten as necessary. Document the replacement and inspection in the maintenance records.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.038461538461538464,
+            "rouge_1_f1": 0.038461538461538464,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.05128205128205129,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.038"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.038461538461538464
+        },
+        {
+          "question_id": "action_008",
+          "ground_truth": "REMOVED & REPLACED ROCKER COVER GASKET.",
+          "predicted_answer": "Replace the #4 rocker cover gasket. Inspect the surrounding area for any additional signs of wear or damage and ensure the new gasket is properly seated and secured. Conduct a pressure test to verify the integrity of the seal after installation.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.1739130434782609,
+            "rouge_1_f1": 0.1739130434782609,
+            "rouge_2_f1": 0.09090909090909091,
+            "semantic_similarity": 0.15,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.174"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.1739130434782609
+        },
+        {
+          "question_id": "action_009",
+          "ground_truth": "REPLACED #2 INTAKE GASKET W/ NEW.",
+          "predicted_answer": "Replace the #2 intake gasket to address the leakage. Ensure the intake manifold is properly sealed and inspect for any additional damage or misalignment that could contribute to the leak.",
+          "nlp_metrics": {
+            "bleu_score": 0.006244385951234721,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.2222222222222222,
+            "rouge_1_f1": 0.2222222222222222,
+            "rouge_2_f1": 0.1176470588235294,
+            "semantic_similarity": 0.1935483870967742,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.006, METEOR: 0.000, ROUGE-L: 0.222"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.2222222222222222
+        },
+        {
+          "question_id": "action_010",
+          "ground_truth": "REMOVED & REPLACED INTAKE GASKET.",
+          "predicted_answer": "Replace the intake gasket for cylinder #2. Inspect the surrounding area for any additional damage or leaks and ensure the intake manifold is properly sealed after replacement.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.19354838709677416,
+            "rouge_1_f1": 0.19354838709677416,
+            "rouge_2_f1": 0.06896551724137931,
+            "semantic_similarity": 0.14285714285714285,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.194"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.19354838709677416
+        },
+        {
+          "question_id": "action_011",
+          "ground_truth": "REPLACED GASKET W/ NEW.",
+          "predicted_answer": "Replace the #2 rocker cover gasket and inspect the surrounding area for any additional leaks or damage. Ensure all fasteners are properly torqued and check for any signs of oil contamination or misalignment that could contribute to the leak. Conduct a pressure test to confirm the integrity of the seal after replacement.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.07142857142857144,
+            "rouge_1_f1": 0.07142857142857144,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.04347826086956521,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.071"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.07142857142857144
+        },
+        {
+          "question_id": "action_012",
+          "ground_truth": "CLEANED & SEALED LEAKING BOLT HOLE.",
+          "predicted_answer": "Tighten or replace the oil filler caps on the engine case halves to prevent oil seepage. Additionally, conduct a thorough inspection for any signs of oil leaks or damage to the oil caps and surrounding areas, and ensure all caps are properly secured.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.041666666666666664,
+            "rouge_1_f1": 0.041666666666666664,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.0,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.042"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.041666666666666664
+        },
+        {
+          "question_id": "action_013",
+          "ground_truth": "STAKED VALVES - NO CHANGE IN COMPRESSION.",
+          "predicted_answer": "Perform a detailed inspection of the engine for potential issues such as worn piston rings, cylinder scoring, or valve leaks. Replace or repair any components that are contributing to the low compression in cylinder #4. Additionally, ensure proper lubrication and check for any signs of oil contamination or carbon buildup.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.07142857142857142,
+            "rouge_1_f1": 0.10714285714285712,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.08163265306122448,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.071"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.07142857142857142
+        },
+        {
+          "question_id": "action_014",
+          "ground_truth": "DRILLED OUT SHEARED RIVET, INSTALLED NEW, REPAIR DONE I",
+          "predicted_answer": "Inspect and replace the sheared rivets on the rear right-hand engine baffle mount bracket. Ensure the replacement rivets are properly sized and installed to prevent future shearing. Conduct a thorough inspection of adjacent components for any additional damage or stress caused by the sheared rivets.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.10909090909090909,
+            "rouge_1_f1": 0.10909090909090909,
+            "rouge_2_f1": 0.03773584905660377,
+            "semantic_similarity": 0.08333333333333333,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.109"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.10909090909090909
+        },
+        {
+          "question_id": "action_015",
+          "ground_truth": "REMOVED & REPLACED GASKET.",
+          "predicted_answer": "Replace the gaskets and inspect the rocker cover mounting bolts for proper torque on #2 and #4 rocker covers. Ensure all surfaces are clean and free from debris before reinstallation. Conduct a leak test after reassembly to confirm the issue is resolved.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.08888888888888889,
+            "rouge_1_f1": 0.08888888888888889,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.0,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.089"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.08888888888888889
+        },
+        {
+          "question_id": "action_016",
+          "ground_truth": "STOP DRILLED CRACK.",
+          "predicted_answer": "Replace the front and left-hand engine baffle. Inspect for potential water contamination in the fuel system and perform a thorough inspection of the engine cowling and related components for any signs of damage or misalignment. Conduct a fuel system check for contaminants and ensure all seals and gaskets are intact.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.0,
+            "rouge_1_f1": 0.0,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.0,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.000"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.0
+        },
+        {
+          "question_id": "action_017",
+          "ground_truth": "REPLACED INTAKE GASKETS.",
+          "predicted_answer": "Inspect and replace the intake manifold gaskets for cylinders #2 and #4. Additionally, check for any cracks or damage in the intake manifold itself and ensure all connections are secure.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.18181818181818182,
+            "rouge_1_f1": 0.18181818181818182,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.14814814814814814,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.182"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.18181818181818182
+        },
+        {
+          "question_id": "action_018",
+          "ground_truth": "STOP DRILLED CRACK IN #3 ENG BAFFLE.",
+          "predicted_answer": "Replace the #3 baffle. Inspect the surrounding area for additional damage or contamination and ensure all related components are secure and intact. Conduct a thorough inspection of the fuel system for any signs of contamination or leaks.",
+          "nlp_metrics": {
+            "bleu_score": 0.005011724662824517,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.09090909090909091,
+            "rouge_1_f1": 0.09090909090909091,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.10810810810810811,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.005, METEOR: 0.000, ROUGE-L: 0.091"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.09090909090909091
+        },
+        {
+          "question_id": "action_019",
+          "ground_truth": "INSTALLED PLUG.",
+          "predicted_answer": "Replace the baffle plug and inspect the surrounding area for any additional damage or missing components. Ensure all related components are secure and functioning properly before returning the aircraft to service.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.06060606060606061,
+            "rouge_1_f1": 0.06060606060606061,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.06896551724137931,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.061"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.06060606060606061
+        },
+        {
+          "question_id": "action_020",
+          "ground_truth": "STARTED A/C SEVERAL TIMES USING NORMAL PROCEDURES. PERF",
+          "predicted_answer": "Perform a comprehensive inspection of the aircraft's fuel system for contamination, specifically checking for water or ice presence. Additionally, verify the integrity and operation of the engine's ignition and fuel delivery systems to ensure proper restart capability. If contamination is detected, drain and replace the contaminated fuel, and inspect fuel lines and filters for blockages or damage.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.02941176470588235,
+            "rouge_1_f1": 0.02941176470588235,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.038461538461538464,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.029"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.02941176470588235
+        },
+        {
+          "question_id": "action_021",
+          "ground_truth": "REMOVED & REPLACED INTAKE GASKET.",
+          "predicted_answer": "Inspect and replace the intake manifold gaskets to address the intake leakage. Ensure all connections are secure and check for any additional signs of wear or damage.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.19354838709677416,
+            "rouge_1_f1": 0.19354838709677416,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.06896551724137931,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.194"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.19354838709677416
+        },
+        {
+          "question_id": "action_022",
+          "ground_truth": "STARTED A/C NORMALLY.",
+          "predicted_answer": "Perform a detailed inspection of the fuel system for contamination, focusing on water presence and ensuring all fuel caps and strainers are secure and functioning. Verify the integrity of the fuel lines and check for any signs of siphoning or improper securing. Additionally, ensure all engine oil filler caps are properly fastened and inspect for any signs of oil leakage. Conduct a thorough preflight check to confirm all components are secure and operational before attempting another startup.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.02469135802469136,
+            "rouge_1_f1": 0.02469135802469136,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.03571428571428572,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.025"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.02469135802469136
+        },
+        {
+          "question_id": "action_023",
+          "ground_truth": "REMOVED & REPLACED W/ NEW GASKET.",
+          "predicted_answer": "Inspect and replace the intake manifold gasket on the right-hand engine. Additionally, check for any potential damage to the intake manifold itself and ensure all connections are secure.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.1176470588235294,
+            "rouge_1_f1": 0.1176470588235294,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.06666666666666667,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.118"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.1176470588235294
+        },
+        {
+          "question_id": "action_024",
+          "ground_truth": "REPLACED PLUGS.",
+          "predicted_answer": "Replace the l/h engine #3 rocker shaft plug to address the wear and prevent potential engine damage.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.19999999999999998,
+            "rouge_1_f1": 0.19999999999999998,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.0,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.200"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.19999999999999998
+        },
+        {
+          "question_id": "action_025",
+          "ground_truth": "REMOVED BAFFLE SECTION & OIL PRESSURE LINE. REPLACED BR",
+          "predicted_answer": "Inspect and replace the baffle bracket on the #3 cylinder. Ensure all associated components are checked for damage or wear, and verify proper installation to prevent recurrence.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.05714285714285714,
+            "rouge_1_f1": 0.11428571428571428,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.058823529411764705,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.057"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.05714285714285714
+        },
+        {
+          "question_id": "action_026",
+          "ground_truth": "REMOVED & REPLACED CHAFE TAPE AS NEEDED.",
+          "predicted_answer": "Inspect and replace the chafe tape on both the middle and right-hand engine cowl to ensure they are properly secured and prevent any potential in-flight issues related to loose cowlings.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.15789473684210525,
+            "rouge_1_f1": 0.15789473684210525,
+            "rouge_2_f1": 0.05555555555555555,
+            "semantic_similarity": 0.1142857142857143,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.158"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.15789473684210525
+        },
+        {
+          "question_id": "action_027",
+          "ground_truth": "SECURED #3 BAFFLE SEAL, L/H.",
+          "predicted_answer": "Secure the aft seal of the left-hand engine #3 baffle in the nacelle to prevent further loosening and potential engine performance issues. Ensure the seal is properly torqued to manufacturer specifications and inspect surrounding components for any additional signs of wear or damage.",
+          "nlp_metrics": {
+            "bleu_score": 0.004185635735742376,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.16,
+            "rouge_1_f1": 0.16,
+            "rouge_2_f1": 0.041666666666666664,
+            "semantic_similarity": 0.14285714285714285,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.004, METEOR: 0.000, ROUGE-L: 0.160"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.16
+        },
+        {
+          "question_id": "action_028",
+          "ground_truth": "REPLACED NUT.",
+          "predicted_answer": "Replace the missing nut on the muffler and conduct a thorough inspection of the muffler and associated components to ensure all fasteners are secure and in good condition.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.13333333333333333,
+            "rouge_1_f1": 0.13333333333333333,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.08,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.133"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.13333333333333333
+        },
+        {
+          "question_id": "action_029",
+          "ground_truth": "RAN UP A/C ENGINE. ADJUSTED IDLE SPEED. IDLE MIXTURE CH",
+          "predicted_answer": "Perform a comprehensive inspection and cleaning of the fuel system, focusing on the gascolator and fuel caps. Ensure all components are properly secured and free of contamination, such as water or dirt. Verify the integrity of the fuel vent line and check for any blockages or obstructions. Conduct a thorough preflight inspection to confirm no loose or improperly installed parts, especially in the fuel system, and ensure all caps are tightly sealed.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.02409638554216867,
+            "rouge_1_f1": 0.02409638554216867,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.03333333333333333,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.024"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.02409638554216867
+        },
+        {
+          "question_id": "action_030",
+          "ground_truth": "REPLACED L/H SIDE BAFFLE W/ SERVICEABLE PART.",
+          "predicted_answer": "Replace the left-hand side baffle in the fuel system to prevent potential fuel contamination and ensure safe operation of the aircraft. Conduct a thorough inspection of the surrounding fuel system components for any additional damage or wear.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.13043478260869565,
+            "rouge_1_f1": 0.13043478260869565,
+            "rouge_2_f1": 0.045454545454545456,
+            "semantic_similarity": 0.10256410256410256,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.130"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.13043478260869565
+        },
+        {
+          "question_id": "action_031",
+          "ground_truth": "REMOVED & REPLACED ROCKER COVER GASKET.",
+          "predicted_answer": "Remove and replace the cylinder #4 rocker cover gasket. Inspect the surrounding area for any additional leaks or damage and ensure the new gasket is properly seated and torqued to specification. Conduct a pressure test to verify the integrity of the seal.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.21276595744680848,
+            "rouge_1_f1": 0.21276595744680848,
+            "rouge_2_f1": 0.08888888888888888,
+            "semantic_similarity": 0.15,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.213"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.21276595744680848
+        },
+        {
+          "question_id": "action_032",
+          "ground_truth": "INSTALLED NEW BAFFLE PLUG.",
+          "predicted_answer": "Replace the right-hand baffle plug with a new one, ensuring proper installation and torque specifications are followed. Conduct a post-installation inspection to verify correct installation and absence of leaks.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.1142857142857143,
+            "rouge_1_f1": 0.2285714285714286,
+            "rouge_2_f1": 0.0606060606060606,
+            "semantic_similarity": 0.19354838709677416,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.114"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.1142857142857143
+        },
+        {
+          "question_id": "action_033",
+          "ground_truth": "INSTALLED NEW CONNECTING ROD ON COOLING BAFFLE.",
+          "predicted_answer": "Replace the left-hand cooling baffle connecting rod. Inspect the surrounding components for any additional damage or wear, and verify the integrity of the cooling system. Ensure proper torque specifications and alignment during reinstallation. Conduct a functional test to confirm the repair's effectiveness.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.1176470588235294,
+            "rouge_1_f1": 0.1568627450980392,
+            "rouge_2_f1": 0.08163265306122448,
+            "semantic_similarity": 0.17777777777777778,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.118"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.1176470588235294
+        },
+        {
+          "question_id": "action_034",
+          "ground_truth": "INSTALLED NEW GASKET, LEAK CK GOOD.",
+          "predicted_answer": "Replace the #4 cylinder's piston rings and inspect the cylinder for scoring or wear. Additionally, check the valve seats and guides for proper seating and condition. If necessary, perform a compression test after repairs to ensure the issue is resolved.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.0,
+            "rouge_1_f1": 0.0,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.0,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.000"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.0
+        },
+        {
+          "question_id": "action_035",
+          "ground_truth": "INSTALLED RIVETED PATCH & REPLACED BOTH BAFFLE PLUGS.",
+          "predicted_answer": "Patch the #3 baffle and replace the worn button plug hole. Ensure all components are properly secured to prevent future issues.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.21428571428571427,
+            "rouge_1_f1": 0.2857142857142857,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.14285714285714288,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.214"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.21428571428571427
+        },
+        {
+          "question_id": "action_036",
+          "ground_truth": "INSTALLED NEW SEAL.",
+          "predicted_answer": "Replace the l/h engine baffle seal above #4 cylinder. Conduct a thorough inspection of the surrounding area for any additional damage or contamination, especially checking for water or debris in the fuel system. Perform a functional test of the engine to ensure no other issues are present. Document the repair and inspection findings in the maintenance records.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.03278688524590164,
+            "rouge_1_f1": 0.03278688524590164,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.04081632653061224,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.033"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.03278688524590164
+        },
+        {
+          "question_id": "action_037",
+          "ground_truth": "REMOVED & REPLACED ROCKER COVER GASKETS.",
+          "predicted_answer": "Replace the left-hand engine #2 and #3 rocker cover gaskets. Ensure all gaskets are properly seated and torqued to specification to prevent future leaks. Inspect the rocker covers for any signs of damage or wear that may require additional attention.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.1739130434782609,
+            "rouge_1_f1": 0.1739130434782609,
+            "rouge_2_f1": 0.09090909090909091,
+            "semantic_similarity": 0.14285714285714285,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.174"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.1739130434782609
+        },
+        {
+          "question_id": "action_038",
+          "ground_truth": "REMOVED & REPLACED GAKSET.",
+          "predicted_answer": "Replace the left-hand engine rocker cover gasket and inspect for any additional leaks or damage to the rocker cover itself. Ensure proper torque specifications are followed during reinstallation.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.0625,
+            "rouge_1_f1": 0.0625,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.0,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.062"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.0625
+        },
+        {
+          "question_id": "action_039",
+          "ground_truth": "REMOVED AFT BAFFLE & OIL PSI LINE. REPLACED RIVET. INST",
+          "predicted_answer": "Action: Inspect and replace the sheared rivet on the aft baffle of cylinder #3. Additionally, examine adjacent rivets and the baffle for any signs of stress or damage, and replace or reinforce as necessary. Ensure all repairs are documented in the maintenance log.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.11538461538461539,
+            "rouge_1_f1": 0.15384615384615385,
+            "rouge_2_f1": 0.04,
+            "semantic_similarity": 0.13636363636363635,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.115"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.11538461538461539
+        },
+        {
+          "question_id": "action_040",
+          "ground_truth": "REMOVED & REPLACED BRACKET.",
+          "predicted_answer": "Replace the left-hand engine corner bracket on the left-hand rear baffle. Inspect adjacent components for additional damage or stress.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.16666666666666666,
+            "rouge_1_f1": 0.16666666666666666,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.0909090909090909,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.167"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.16666666666666666
+        },
+        {
+          "question_id": "action_041",
+          "ground_truth": "INSTALLED NEW HARDWARE.",
+          "predicted_answer": "Inspect the aft right baffle area to confirm the missing hardware. If confirmed, order and install the appropriate replacement hardware as per the aircraft maintenance manual. Ensure all fasteners are torqued to the specified values and conduct a functional check to verify the integrity of the baffle assembly. Document the maintenance action in the aircraft logbook.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.06779661016949153,
+            "rouge_1_f1": 0.06779661016949153,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.04545454545454545,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.068"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.06779661016949153
+        },
+        {
+          "question_id": "action_042",
+          "ground_truth": "SEALED BOLT W/ HIGH TEMP RTV.",
+          "predicted_answer": "**Action:** Inspect and replace the bolt on the top of the engine case to prevent leakage. Ensure the bolt is properly torqued and check for any signs of wear or damage. Additionally, inspect the surrounding area for any potential sources of contamination or damage that could contribute to the leakage.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.03571428571428571,
+            "rouge_1_f1": 0.03571428571428571,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.05,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.036"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.03571428571428571
+        },
+        {
+          "question_id": "action_043",
+          "ground_truth": "REMOVED OLD GASKET & REPLACED W/ NEW.",
+          "predicted_answer": "Replace the left-hand engine #1 rocker cover gasket. Inspect the rocker cover for any signs of damage or wear and ensure a proper seal upon installation.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.06060606060606061,
+            "rouge_1_f1": 0.12121212121212122,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.06451612903225806,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.061"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.06060606060606061
+        },
+        {
+          "question_id": "action_044",
+          "ground_truth": "DAMAGE NEG. ADJUSTED TOWARD I/B & ADJ CLAMPS OUT OF THE",
+          "predicted_answer": "Secure the l/h eng baffle tie rod wire to prevent it from hitting both o/b clamps. Inspect the tie rod and clamps for any signs of wear or damage, and replace if necessary. Ensure that all components are properly aligned and secured to prevent future interference.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.10169491525423728,
+            "rouge_1_f1": 0.1694915254237288,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.1923076923076923,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.102"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.10169491525423728
+        },
+        {
+          "question_id": "action_045",
+          "ground_truth": "CLEANED SNIFFLER VALVES.",
+          "predicted_answer": "Action: Clean and inspect sniffler valves for proper operation and replace if necessary. Ensure associated components are free of debris and functioning correctly.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.23076923076923078,
+            "rouge_1_f1": 0.23076923076923078,
+            "rouge_2_f1": 0.08333333333333334,
+            "semantic_similarity": 0.16666666666666666,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.231"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.23076923076923078
+        },
+        {
+          "question_id": "action_046",
+          "ground_truth": "REMOVED #1 CYL INTAKE TUBE, REMOVED & REPLACED BAFFLE.",
+          "predicted_answer": "Replace the #1 & 3 cylinder lower baffle. Inspect adjacent components for damage and ensure proper installation to prevent recurrence.",
+          "nlp_metrics": {
+            "bleu_score": 0.011451997463067555,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.14814814814814814,
+            "rouge_1_f1": 0.22222222222222218,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.21428571428571425,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.011, METEOR: 0.000, ROUGE-L: 0.148"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.14814814814814814
+        },
+        {
+          "question_id": "action_047",
+          "ground_truth": "REMOVED ROCKER COVER & STAKED VALVE W/ NO EFFECT.",
+          "predicted_answer": "Replace the piston rings or cylinder in cylinder #1 to restore proper compression. Additionally, inspect the cylinder head for potential warping or damage and check for any signs of improper installation or contamination that could affect compression.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.0,
+            "rouge_1_f1": 0.0,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.0,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.000"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.0
+        },
+        {
+          "question_id": "action_048",
+          "ground_truth": "PULLED & ANALYZED SD CARD TO FIND TOP OVERSPEED OF 2722",
+          "predicted_answer": "Perform an immediate inspection and testing of the propeller overspeed protection system. Verify the integrity and functionality of the prop governor and overspeed switch. If any faults or malfunctions are detected, replace the faulty components and conduct a thorough system test before returning the aircraft to service. Additionally, review the pilot's operating procedures to ensure proper response to overspeed warnings.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.056338028169014086,
+            "rouge_1_f1": 0.08450704225352113,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.10344827586206895,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.056"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.056338028169014086
+        },
+        {
+          "question_id": "action_049",
+          "ground_truth": "REPLACED SCREW.",
+          "predicted_answer": "Replace the missing screw on the right-hand engine #4 cylinder aft baffle. Ensure the baffle is properly secured to prevent any potential engine performance issues or damage.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.13333333333333333,
+            "rouge_1_f1": 0.13333333333333333,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.07692307692307693,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.133"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.13333333333333333
+        },
+        {
+          "question_id": "action_050",
+          "ground_truth": "LEAK CK GOOD.",
+          "predicted_answer": "Secure the left-hand engine oil cooler hose to ensure it is positioned at a safe distance from the oil filter to prevent potential oil leaks or contamination. Additionally, inspect and secure the oil filter cap to prevent it from becoming loose.",
+          "nlp_metrics": {
+            "bleu_score": 0,
+            "meteor_score": 0.0,
+            "rouge_l_f1": 0.044444444444444446,
+            "rouge_1_f1": 0.044444444444444446,
+            "rouge_2_f1": 0.0,
+            "semantic_similarity": 0.0,
+            "llm_evaluation_score": 0.0,
+            "exact_match": false,
+            "explanation": "BLEU: 0.000, METEOR: 0.000, ROUGE-L: 0.044"
+          },
+          "llm_evaluation": {
+            "score": null,
+            "skipped": true,
+            "reason": "KEO_ACTION_NLP_ONLY=1",
+            "explanation": "LLM action judge skipped; NLP metrics only"
+          },
+          "overall_score": 0.044444444444444446
+        }
+      ],
+      "aggregate_metrics": {
+        "total_evaluated": 50,
+        "bleu_scores_mean": 0.0007006203080052239,
+        "meteor_scores_mean": 0.0,
+        "rouge_l_f1_scores_mean": 0.10120777665363527,
+        "rouge_1_f1_scores_mean": 0.11442865809574636,
+        "rouge_2_f1_scores_mean": 0.019768213869693855,
+        "semantic_similarity_scores_mean": 0.08339655711057345,
+        "exact_matches_rate": 0.0,
+        "llm_evaluation_scores_mean": null,
+        "llm_scored_n": 0,
+        "nlp_only": true
+      },
+      "evaluation_summary": "ACTION-SPECIFIC EVALUATION SUMMARY\n========================================\nTotal Questions Evaluated: 50\nAverage BLEU Score: 0.001\nAverage METEOR Score: 0.000\nAverage ROUGE-L F1: 0.101\nExact Match Rate: 0.000\nLLM Evaluation Score: skipped (NLP-only)"
+    }
+  },
+  "answer_model": "mlx-community/phi-4-4bit"
+}

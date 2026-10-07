@@ -130,6 +130,9 @@ celerybeat.pid
 # Environments
 .env
 .venv
+# Side-by-side interpreters: .venv is python 3.9 for KEO, .venv-mlx is python 3.12 for the
+# mlx-lm model server (mlx-lm needs >=3.10). Match any such variant.
+.venv*/
 env/
 venv/
 ENV/
@@ -175,4 +178,15 @@ nbs_prev/
 
 # # Ignore graph_cache directory
 # kg_cache/
+
+# LLM completion disk cache (cost saver for re-runs)
+**/completion_cache/
+**/evaluation_results/.completion_cache/
+**/evaluation_results/ablations/.completion_cache/
+keo/sensemaking_QA/evaluation_results/.completion_cache/
 .DS_Store
+
+# Machine-specific notes (storage chores, local paths) — useful but not shared
+*.local.md
+
+papers/

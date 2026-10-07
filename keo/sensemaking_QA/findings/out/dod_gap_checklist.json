@@ -1,0 +1,36 @@
+{
+  "title": "DoD gap KEO addresses",
+  "gaps": [
+    {
+      "gap": "Data gravity / accreditation",
+      "problem": "Sensitive maintenance & military-adjacent text cannot freely hit commercial LLM APIs (FedRAMP/ITAR/FISMA).",
+      "keo": "Operational answers on local Gemma/Phi/Mistral; GPT-4o only offline for KG/Q/judge; optional local embeddings."
+    },
+    {
+      "gap": "Gov API capacity vs mission tempo",
+      "problem": "Army Enterprise LLM Workspace / Azure OpenAI Gov help but are limited relative to volume and classification needs.",
+      "keo": "On-prem / air-gapped path with structured retrieval so smaller local models punch above weight."
+    },
+    {
+      "gap": "Wrong retrieval for the wrong job",
+      "problem": "One RAG style fails: graphs help corpus sensemaking; chunks help procedural action.",
+      "keo": "Dual benchmark + task router (sensemaking\u2192KG, action\u2192chunks, mixed\u2192hybrid)."
+    },
+    {
+      "gap": "Auditability for safety decisions",
+      "problem": "Black-box answers are unacceptable for airworthiness / maintenance advice.",
+      "keo": "Evidence cards with triple/chunk IDs and retrieval confidence for human verification."
+    },
+    {
+      "gap": "Rare but critical faults",
+      "problem": "Frequency-weighted graphs bury low-count, high-severity relations.",
+      "keo": "Rarity/severity edge weights + MST ablations."
+    }
+  ],
+  "why_others_should_use": [
+    "Any org with regulated data (defense, aviation, energy, healthcare) that cannot ship prompts to public APIs.",
+    "Teams that need both dashboard-style sensemaking and step-level procedures from the same corpus.",
+    "Operators who need citation-like evidence, not just fluent text.",
+    "Researchers needing an OMIn-grounded aviation QA split that exposes the graph-vs-chunk tradeoff."
+  ]
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sd_gsm_1",
+    "type": "global",
+    "category": "comprehensive",
+    "question": "What recurring operational themes appear across the narratives, and how might they inform proactive risk mitigation?"
+  },
+  {
+    "id": "sd_gsm_2",
+    "type": "global",
+    "category": "context-specific",
+    "question": "Which combinations of equipment and environmental factors most often co-occur in reported incidents?"
+  },
+  {
+    "id": "sd_gsm_3",
+    "type": "global",
+    "category": "category-specific",
+    "question": "What patterns suggest communication or procedural breakdowns rather than purely mechanical failures?"
+  },
+  {
+    "id": "sd_gsm_4",
+    "type": "global",
+    "category": "comprehensive",
+    "question": "How do temporal or seasonal factors appear to interact with equipment-related issues in the corpus?"
+  },
+  {
+    "id": "sd_gsm_5",
+    "type": "global",
+    "category": "context-specific",
+    "question": "What system-level insights emerge when comparing high-severity versus routine reports?"
+  }
+]

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>KEO · Sign in</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="page-login">
+  <header class="site-header">
+    <a class="brand" href="index.html">KEO</a>
+    <nav>
+      <a href="index.html" aria-current="page">Sign in</a>
+      <a href="rate.html">Prefs</a>
+      <a href="severity.html">Severity</a>
+      <a href="adjudicate.html">Adjudicate</a>
+      <a href="status.html">Status</a>
+    </nav>
+  </header>
+
+  <main class="login-hero">
+    <section class="login-copy">
+      <p class="eyebrow">Human calibration · prefs + severity</p>
+      <h1>Rate answers and risk</h1>
+      <p class="lede">
+        Blind pairwise judgments for aviation sensemaking,
+        plus expert severity classes on KG triples (lexicon prior hidden).
+        Primaries rate independently; disagreements go to an adjudicator or conference.
+      </p>
+      <div class="feature-grid">
+        <div class="feature"><span class="f-ico">①</span><div><strong>Answer prefs</strong><p>Prefer A / B / Neither on 40 pairs</p></div></div>
+        <div class="feature"><span class="f-ico">②</span><div><strong>Severity</strong><p>100 triples · catastrophic→none</p></div></div>
+        <div class="feature"><span class="f-ico">③</span><div><strong>Auto-save</strong><p>Votes and consensus on disk</p></div></div>
+      </div>
+    </section>
+
+    <section class="login-card">
+      <h2>Sign in</h2>
+      <form id="login-form" autocomplete="on">
+        <p class="field-label">Who are you?</p>
+        <div class="annotator-pick three" role="radiogroup" aria-label="Role">
+          <label class="pick">
+            <input type="radio" name="annotator" value="1" checked/>
+            <span class="pick-face">
+              <strong>Annotator 1</strong>
+              <small>Primary rater</small>
+            </span>
+          </label>
+          <label class="pick">
+            <input type="radio" name="annotator" value="2"/>
+            <span class="pick-face">
+              <strong>Annotator 2</strong>
+              <small>Primary rater</small>
+            </span>
+          </label>
+          <label class="pick">
+            <input type="radio" name="annotator" value="3"/>
+            <span class="pick-face">
+              <strong>Adjudicator</strong>
+              <small>Conflicts only</small>
+            </span>
+          </label>
+        </div>
+        <label class="pw-label">
+          Password
+          <input id="password" name="password" type="password" required placeholder="••••••••" autofocus/>
+        </label>
+        <button type="submit">Continue →</button>
+        <p id="login-error" class="error" hidden></p>
+      </form>
+      <p class="fineprint">Passwords are shared offline. Do not open the scoring key.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>KEO preference pack</span></footer>
+  <script src="auth.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>

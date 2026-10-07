@@ -1,0 +1,241 @@
+{
+  "annotator": "1",
+  "updated_at": "2026-09-30T15:23:27",
+  "n_rated": 26,
+  "votes": {
+    "1": {
+      "item_id": "safety_recommendations_006",
+      "preference_ab": "A",
+      "preference_system": "keo",
+      "a_system": "keo",
+      "b_system": "chunk_tok",
+      "swapped_from_pack": false,
+      "updated_at": "2026-09-29T14:37:40"
+    },
+    "2": {
+      "item_id": "safety_recommendations_007",
+      "preference_ab": "neither",
+      "preference_system": "tie",
+      "a_system": "chunk_tok",
+      "b_system": "keo",
+      "swapped_from_pack": false,
+      "updated_at": "2026-09-29T14:39:50"
+    },
+    "3": {
+      "item_id": "global_014",
+      "preference_ab": "A",
+      "preference_system": "chunk_tok",
+      "a_system": "chunk_tok",
+      "b_system": "keo",
+      "swapped_from_pack": false,
+      "updated_at": "2026-09-29T14:43:41"
+    },
+    "4": {
+      "item_id": "system_level_understanding_001",
+      "preference_ab": "A",
+      "preference_system": "keo",
+      "a_system": "keo",
+      "b_system": "chunk_tok",
+      "swapped_from_pack": false,
+      "updated_at": "2026-09-29T15:04:03"
+    },
+    "5": {
+      "item_id": "root_cause_analysis_001",
+      "preference_ab": "B",
+      "preference_system": "keo",
+      "a_system": "chunk_tok",
+      "b_system": "keo",
+      "swapped_from_pack": true,
+      "updated_at": "2026-09-29T15:15:04"
+    },
+    "6": {
+      "item_id": "global_015",
+      "preference_ab": "A",
+      "preference_system": "keo",
+      "a_system": "keo",
+      "b_system": "chunk_tok",
+      "swapped_from_pack": true,
+      "updated_at": "2026-09-29T15:16:01"
+    },
+    "7": {
+      "item_id": "root_cause_analysis_007",
+      "preference_ab": "B",
+      "preference_system": "keo",
+      "a_system": "chunk_tok",
+      "b_system": "keo",
+      "swapped_from_pack": true,
+      "updated_at": "2026-09-29T15:17:08"
+    },
+    "8": {
+      "item_id": "maintenance_narratives_006",
+      "preference_ab": "A",
+      "preference_system": "keo",
+      "a_system": "keo",
+      "b_system": "chunk_tok",
+      "swapped_from_pack": false,
+      "updated_at": "2026-09-29T15:17:42"
+    },
+    "9": {
+      "item_id": "comparative_analysis_008",
+      "preference_ab": "B",
+      "preference_system": "keo",
+      "a_system": "chunk_tok",
+      "b_system": "keo",
+      "swapped_from_pack": true,
+      "updated_at": "2026-09-29T15:18:29"
+    },
+    "10": {
+      "item_id": "root_cause_analysis_006",
+      "preference_ab": "A",
+      "preference_system": "keo",
+      "a_system": "keo",
+      "b_system": "chunk_tok",
+      "swapped_from_pack": true,
+      "updated_at": "2026-09-29T15:26:26"
+    },
+    "40": {
+      "item_id": "global_005",
+      "preference_ab": "B",
+      "preference_system": "chunk_tok",
+      "a_system": "keo",
+      "b_system": "chunk_tok",
+      "swapped_from_pack": false,
+      "updated_at": "2026-09-29T17:54:39"
+    },
+    "36": {
+      "item_id": "predictive_maintenance_003",
+      "preference_ab": "B",
+      "preference_system": "keo",
+      "a_system": "chunk_tok",
+      "b_system": "keo",
+      "swapped_from_pack": true,
+      "updated_at": "2026-09-29T17:59:17"
+    },
+    "28": {
+      "item_id": "aircraft_problems_actions_010",
+      "preference_ab": "B",
+      "preference_system": "keo",
+      "a_system": "chunk_tok",
+      "b_system": "keo",
+      "swapped_from_pack": true,
+      "updated_at": "2026-09-29T18:00:21"
+    },
+    "18": {
+      "item_id": "predictive_maintenance_004",
+      "preference_ab": "B",
+      "preference_system": "keo",
+      "a_system": "chunk_tok",
+      "b_system": "keo",
+      "swapped_from_pack": false,
+      "updated_at": "2026-09-29T18:01:38"
+    },
+    "21": {
+      "item_id": "safety_recommendations_008",
+      "preference_ab": "A",
+      "preference_system": "keo",
+      "a_system": "keo",
+      "b_system": "chunk_tok",
+      "swapped_from_pack": true,
+      "updated_at": "2026-09-29T18:23:14"
+    },
+    "22": {
+      "item_id": "trend_analysis_008",
+      "preference_ab": "B",
+      "preference_system": "keo",
+      "a_system": "chunk_tok",
+      "b_system": "keo",
+      "swapped_from_pack": false,
+      "updated_at": "2026-09-29T18:23:55"
+    },
+    "33": {
+      "item_id": "root_cause_analysis_003",
+      "preference_ab": "B",
+      "preference_system": "keo",
+      "a_system": "chunk_tok",
+      "b_system": "keo",
+      "swapped_from_pack": false,
+      "updated_at": "2026-09-29T18:25:28"
+    },
+    "34": {
+      "item_id": "predictive_maintenance_008",
+      "preference_ab": "B",
+      "preference_system": "keo",
+      "a_system": "chunk_tok",
+      "b_system": "keo",
+      "swapped_from_pack": true,
+      "updated_at": "2026-09-29T18:26:14"
+    },
+    "35": {
+      "item_id": "global_002",
+      "preference_ab": "B",
+      "preference_system": "chunk_tok",
+      "a_system": "keo",
+      "b_system": "chunk_tok",
+      "swapped_from_pack": true,
+      "updated_at": "2026-09-29T18:26:49"
+    },
+    "37": {
+      "item_id": "aircraft_problems_actions_004",
+      "preference_ab": "B",
+      "preference_system": "keo",
+      "a_system": "chunk_tok",
+      "b_system": "keo",
+      "swapped_from_pack": false,
+      "updated_at": "2026-09-29T18:27:45"
+    },
+    "26": {
+      "item_id": "aircraft_problems_actions_005",
+      "preference_ab": "neither",
+      "preference_system": "tie",
+      "a_system": "keo",
+      "b_system": "chunk_tok",
+      "swapped_from_pack": false,
+      "updated_at": "2026-09-30T15:18:51"
+    },
+    "27": {
+      "item_id": "comparative_analysis_003",
+      "preference_ab": "A",
+      "preference_system": "keo",
+      "a_system": "keo",
+      "b_system": "chunk_tok",
+      "swapped_from_pack": false,
+      "updated_at": "2026-09-30T15:19:33"
+    },
+    "38": {
+      "item_id": "predictive_maintenance_001",
+      "preference_ab": "B",
+      "preference_system": "keo",
+      "a_system": "chunk_tok",
+      "b_system": "keo",
+      "swapped_from_pack": false,
+      "updated_at": "2026-09-30T15:20:58"
+    },
+    "39": {
+      "item_id": "global_004",
+      "preference_ab": "B",
+      "preference_system": "keo",
+      "a_system": "chunk_tok",
+      "b_system": "keo",
+      "swapped_from_pack": false,
+      "updated_at": "2026-09-30T15:21:56"
+    },
+    "11": {
+      "item_id": "comparative_analysis_004",
+      "preference_ab": "neither",
+      "preference_system": "tie",
+      "a_system": "chunk_tok",
+      "b_system": "keo",
+      "swapped_from_pack": false,
+      "updated_at": "2026-09-30T15:22:50"
+    },
+    "12": {
+      "item_id": "maintenance_narratives_005",
+      "preference_ab": "A",
+      "preference_system": "keo",
+      "a_system": "keo",
+      "b_system": "chunk_tok",
+      "swapped_from_pack": false,
+      "updated_at": "2026-09-30T15:23:27"
+    }
+  }
+}

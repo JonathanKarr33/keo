@@ -1,0 +1,1869 @@
+{
+  "n_questions": 133,
+  "system": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know.",
+  "note": "Prompts only \u2014 no model was called. Run the live probe when the answerer is free; score answers with answer_corpus_overlap.",
+  "items": [
+    {
+      "question_id": "root_cause_analysis_001",
+      "question": "What are the most frequent underlying causes of leakage issues that result in repeated maintenance actions?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What are the most frequent underlying causes of leakage issues that result in repeated maintenance actions?"
+        }
+      ]
+    },
+    {
+      "question_id": "root_cause_analysis_002",
+      "question": "Which maintenance oversights consistently lead to engine problems and how can these be mitigated effectively?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: Which maintenance oversights consistently lead to engine problems and how can these be mitigated effectively?"
+        }
+      ]
+    },
+    {
+      "question_id": "root_cause_analysis_003",
+      "question": "What patterns emerge in incidents involving structural damage, and how do these correlate with maintenance actions taken?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What patterns emerge in incidents involving structural damage, and how do these correlate with maintenance actions taken?"
+        }
+      ]
+    },
+    {
+      "question_id": "root_cause_analysis_004",
+      "question": "How do multiple factors combine to create recurring fastener issues, and what preventive measures can be implemented?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: How do multiple factors combine to create recurring fastener issues, and what preventive measures can be implemented?"
+        }
+      ]
+    },
+    {
+      "question_id": "root_cause_analysis_005",
+      "question": "What are the common denominators in leakage issues that escalate into significant aircraft downtime?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What are the common denominators in leakage issues that escalate into significant aircraft downtime?"
+        }
+      ]
+    },
+    {
+      "question_id": "root_cause_analysis_006",
+      "question": "Which specific maintenance actions are most often associated with successful resolutions of engine problems, and why?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: Which specific maintenance actions are most often associated with successful resolutions of engine problems, and why?"
+        }
+      ]
+    },
+    {
+      "question_id": "root_cause_analysis_007",
+      "question": "What role do inspection and repair procedures play in preventing structural damage, and where are the gaps?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What role do inspection and repair procedures play in preventing structural damage, and where are the gaps?"
+        }
+      ]
+    },
+    {
+      "question_id": "root_cause_analysis_008",
+      "question": "How does the combination of replacement and tightening action affect the recurrence of fastener issues over time?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: How does the combination of replacement and tightening action affect the recurrence of fastener issues over time?"
+        }
+      ]
+    },
+    {
+      "question_id": "predictive_maintenance_001",
+      "question": "Based on historical patterns, what early warning signs indicate an increased likelihood of engine problems developing into more severe failures?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: Based on historical patterns, what early warning signs indicate an increased likelihood of engine problems developing into more severe failures?"
+        }
+      ]
+    },
+    {
+      "question_id": "predictive_maintenance_002",
+      "question": "Which component combinations show the highest risk of recurring leakage issues and what preventive measures can be implemented to mitigate this risk?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: Which component combinations show the highest risk of recurring leakage issues and what preventive measures can be implemented to mitigate this risk?"
+        }
+      ]
+    },
+    {
+      "question_id": "predictive_maintenance_003",
+      "question": "What maintenance intervals would prevent fastener issues from escalating into structural damage, considering current failure patterns?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What maintenance intervals would prevent fastener issues from escalating into structural damage, considering current failure patterns?"
+        }
+      ]
+    },
+    {
+      "question_id": "predictive_maintenance_004",
+      "question": "How can we predict when structural damage is likely to occur by analyzing previous repair and inspection data?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: How can we predict when structural damage is likely to occur by analyzing previous repair and inspection data?"
+        }
+      ]
+    },
+    {
+      "question_id": "predictive_maintenance_005",
+      "question": "What indicators suggest imminent leakage issues, and how can these be monitored in real-time to prevent in-flight incidents?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What indicators suggest imminent leakage issues, and how can these be monitored in real-time to prevent in-flight incidents?"
+        }
+      ]
+    },
+    {
+      "question_id": "predictive_maintenance_006",
+      "question": "What correlations exist between specific maintenance actions and the reduction in recurrence of engine problems across different aircraft types?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What correlations exist between specific maintenance actions and the reduction in recurrence of engine problems across different aircraft types?"
+        }
+      ]
+    },
+    {
+      "question_id": "predictive_maintenance_007",
+      "question": "How do inspection practices correlate with the early detection of fastener issues, and what improvements can be made to enhance their effectiveness?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: How do inspection practices correlate with the early detection of fastener issues, and what improvements can be made to enhance their effectiveness?"
+        }
+      ]
+    },
+    {
+      "question_id": "predictive_maintenance_008",
+      "question": "What predictive models can be developed to forecast the probability of 'other problems' leading to major failures, using current data on maintenance actions?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What predictive models can be developed to forecast the probability of 'other problems' leading to major failures, using current data on maintenance actions?"
+        }
+      ]
+    },
+    {
+      "question_id": "safety_recommendations_001",
+      "question": "What procedural changes could most effectively reduce the incidence of leakage issues and engine problems?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What procedural changes could most effectively reduce the incidence of leakage issues and engine problems?"
+        }
+      ]
+    },
+    {
+      "question_id": "safety_recommendations_002",
+      "question": "How can targeted training for maintenance crews specifically address the root causes of fastener issues and structural damage?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: How can targeted training for maintenance crews specifically address the root causes of fastener issues and structural damage?"
+        }
+      ]
+    },
+    {
+      "question_id": "safety_recommendations_003",
+      "question": "What inspection protocols should be enhanced or introduced to better identify early signs of engine problems before they escalate?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What inspection protocols should be enhanced or introduced to better identify early signs of engine problems before they escalate?"
+        }
+      ]
+    },
+    {
+      "question_id": "safety_recommendations_004",
+      "question": "In what ways can communication between maintenance teams and flight crews be improved to proactively address and reduce leakage issues?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: In what ways can communication between maintenance teams and flight crews be improved to proactively address and reduce leakage issues?"
+        }
+      ]
+    },
+    {
+      "question_id": "safety_recommendations_005",
+      "question": "What specific safety measures could be implemented to significantly lower the frequency of structural damage occurrences?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What specific safety measures could be implemented to significantly lower the frequency of structural damage occurrences?"
+        }
+      ]
+    },
+    {
+      "question_id": "safety_recommendations_006",
+      "question": "Which maintenance actions are most effective at preventing the recurrence of fastener issues, and how can these be prioritized?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: Which maintenance actions are most effective at preventing the recurrence of fastener issues, and how can these be prioritized?"
+        }
+      ]
+    },
+    {
+      "question_id": "safety_recommendations_007",
+      "question": "What role does the timing and scheduling of maintenance checks play in the prevention of engine problems, and how can it be optimized?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What role does the timing and scheduling of maintenance checks play in the prevention of engine problems, and how can it be optimized?"
+        }
+      ]
+    },
+    {
+      "question_id": "safety_recommendations_008",
+      "question": "How can data analytics tools be utilized to predict and prevent 'other problems' through pattern recognition in maintenance logs?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: How can data analytics tools be utilized to predict and prevent 'other problems' through pattern recognition in maintenance logs?"
+        }
+      ]
+    },
+    {
+      "question_id": "system_level_understanding_001",
+      "question": "How do engine problems and fastener issues correlate with specific maintenance actions, and what patterns emerge in their resolutions?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: How do engine problems and fastener issues correlate with specific maintenance actions, and what patterns emerge in their resolutions?"
+        }
+      ]
+    },
+    {
+      "question_id": "system_level_understanding_002",
+      "question": "What are the relationships between leakage issues and the frequency of inspections, and how can this inform proactive maintenance strategies?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What are the relationships between leakage issues and the frequency of inspections, and how can this inform proactive maintenance strategies?"
+        }
+      ]
+    },
+    {
+      "question_id": "system_level_understanding_003",
+      "question": "How does the distribution of common problems vary with aircraft type and age, and what implications does this have for targeted maintenance interventions?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: How does the distribution of common problems vary with aircraft type and age, and what implications does this have for targeted maintenance interventions?"
+        }
+      ]
+    },
+    {
+      "question_id": "system_level_understanding_004",
+      "question": "What are the systemic factors that contribute to the high incidence of structural damage, and how can predictive analytics enhance prevention efforts?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What are the systemic factors that contribute to the high incidence of structural damage, and how can predictive analytics enhance prevention efforts?"
+        }
+      ]
+    },
+    {
+      "question_id": "system_level_understanding_005",
+      "question": "How do different maintenance actions like replacement and repair influence the recurrence rates of similar problems in the aircraft fleet?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: How do different maintenance actions like replacement and repair influence the recurrence rates of similar problems in the aircraft fleet?"
+        }
+      ]
+    },
+    {
+      "question_id": "system_level_understanding_006",
+      "question": "What patterns exist between the types of problems reported and the subsequent choice of maintenance actions, and how can this guide resource allocation?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What patterns exist between the types of problems reported and the subsequent choice of maintenance actions, and how can this guide resource allocation?"
+        }
+      ]
+    },
+    {
+      "question_id": "system_level_understanding_007",
+      "question": "How do seasonal variations and environmental conditions impact the prevalence of leakage issues, and what preventive measures could mitigate these effects?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: How do seasonal variations and environmental conditions impact the prevalence of leakage issues, and what preventive measures could mitigate these effects?"
+        }
+      ]
+    },
+    {
+      "question_id": "system_level_understanding_008",
+      "question": "What insights can be gleaned from comparing the effectiveness of tightening versus replacement in resolving fastener issues, and how should this influence future maintenance protocols?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What insights can be gleaned from comparing the effectiveness of tightening versus replacement in resolving fastener issues, and how should this influence future maintenance protocols?"
+        }
+      ]
+    },
+    {
+      "question_id": "comparative_analysis_001",
+      "question": "How do failure patterns such as engine problems and leakage issues differ between commercial and cargo aircraft operations?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: How do failure patterns such as engine problems and leakage issues differ between commercial and cargo aircraft operations?"
+        }
+      ]
+    },
+    {
+      "question_id": "comparative_analysis_002",
+      "question": "What are the key differences in maintenance actions taken for structural damage versus fastener issues across various aircraft models?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What are the key differences in maintenance actions taken for structural damage versus fastener issues across various aircraft models?"
+        }
+      ]
+    },
+    {
+      "question_id": "comparative_analysis_003",
+      "question": "Which aircraft types show the most variation in the frequency of leakage issues, and how does this impact overall maintenance strategies?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: Which aircraft types show the most variation in the frequency of leakage issues, and how does this impact overall maintenance strategies?"
+        }
+      ]
+    },
+    {
+      "question_id": "comparative_analysis_004",
+      "question": "How do incident rates of engine problems compare between different airline operators, and what maintenance practices contribute to these differences?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: How do incident rates of engine problems compare between different airline operators, and what maintenance practices contribute to these differences?"
+        }
+      ]
+    },
+    {
+      "question_id": "comparative_analysis_005",
+      "question": "What factors distinguish aircraft with high incidence of fastener issues from those with lower incidence, and how can this inform targeted maintenance interventions?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What factors distinguish aircraft with high incidence of fastener issues from those with lower incidence, and how can this inform targeted maintenance interventions?"
+        }
+      ]
+    },
+    {
+      "question_id": "comparative_analysis_006",
+      "question": "In what ways do maintenance actions such as replacement and repair differ in their effectiveness across different failure patterns like engine problems and structural damage?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: In what ways do maintenance actions such as replacement and repair differ in their effectiveness across different failure patterns like engine problems and structural damage?"
+        }
+      ]
+    },
+    {
+      "question_id": "comparative_analysis_007",
+      "question": "How do seasonal variations impact the frequency of recurring issues like leakage and structural damage across different fleet types?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: How do seasonal variations impact the frequency of recurring issues like leakage and structural damage across different fleet types?"
+        }
+      ]
+    },
+    {
+      "question_id": "comparative_analysis_008",
+      "question": "What are the comparative impacts on safety outcomes between relying more on inspections versus replacements in addressing common problems such as leakage issues and engine problems?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What are the comparative impacts on safety outcomes between relying more on inspections versus replacements in addressing common problems such as leakage issues and engine problems?"
+        }
+      ]
+    },
+    {
+      "question_id": "trend_analysis_001",
+      "question": "What trends are emerging in the frequency of engine problems compared to other common problems over the past year?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What trends are emerging in the frequency of engine problems compared to other common problems over the past year?"
+        }
+      ]
+    },
+    {
+      "question_id": "trend_analysis_002",
+      "question": "How have maintenance actions evolved in response to leakage issues, and what does this imply for future preventive measures?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: How have maintenance actions evolved in response to leakage issues, and what does this imply for future preventive measures?"
+        }
+      ]
+    },
+    {
+      "question_id": "trend_analysis_003",
+      "question": "What seasonal variations exist in the occurrence of fastener issues, and how might these affect maintenance schedules?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What seasonal variations exist in the occurrence of fastener issues, and how might these affect maintenance schedules?"
+        }
+      ]
+    },
+    {
+      "question_id": "trend_analysis_004",
+      "question": "How do failure rates correlate with the types of maintenance actions taken, and what does this indicate about the effectiveness of current strategies?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: How do failure rates correlate with the types of maintenance actions taken, and what does this indicate about the effectiveness of current strategies?"
+        }
+      ]
+    },
+    {
+      "question_id": "trend_analysis_005",
+      "question": "What long-term patterns suggest a need for more frequent inspections to mitigate structural damage?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What long-term patterns suggest a need for more frequent inspections to mitigate structural damage?"
+        }
+      ]
+    },
+    {
+      "question_id": "trend_analysis_006",
+      "question": "What trends can be observed in the relationship between the rise in other problems and the corresponding maintenance actions?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What trends can be observed in the relationship between the rise in other problems and the corresponding maintenance actions?"
+        }
+      ]
+    },
+    {
+      "question_id": "trend_analysis_007",
+      "question": "How have the types of problems identified in aircraft evolved over time, and what implications does this have for prioritizing maintenance resources?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: How have the types of problems identified in aircraft evolved over time, and what implications does this have for prioritizing maintenance resources?"
+        }
+      ]
+    },
+    {
+      "question_id": "trend_analysis_008",
+      "question": "What patterns in maintenance data indicate a potential shift in focus from reactive to proactive safety measures in aviation?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What patterns in maintenance data indicate a potential shift in focus from reactive to proactive safety measures in aviation?"
+        }
+      ]
+    },
+    {
+      "question_id": "global_001",
+      "question": "What are the underlying patterns that contribute to the most frequent maintenance problems, such as leakage issues and engine problems?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What are the underlying patterns that contribute to the most frequent maintenance problems, such as leakage issues and engine problems?"
+        }
+      ]
+    },
+    {
+      "question_id": "global_002",
+      "question": "How do maintenance anomalies correlate with specific aircraft types or models, and what does this reveal about design vulnerabilities?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: How do maintenance anomalies correlate with specific aircraft types or models, and what does this reveal about design vulnerabilities?"
+        }
+      ]
+    },
+    {
+      "question_id": "global_003",
+      "question": "What are the systemic factors contributing to structural damage, and how do they interact to increase risk?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What are the systemic factors contributing to structural damage, and how do they interact to increase risk?"
+        }
+      ]
+    },
+    {
+      "question_id": "global_004",
+      "question": "How do predictive maintenance strategies differ in their effectiveness across different regions or airline operations?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: How do predictive maintenance strategies differ in their effectiveness across different regions or airline operations?"
+        }
+      ]
+    },
+    {
+      "question_id": "global_005",
+      "question": "What are the common root causes identified in the dataset that lead to major maintenance issues, and how can they be mitigated?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What are the common root causes identified in the dataset that lead to major maintenance issues, and how can they be mitigated?"
+        }
+      ]
+    },
+    {
+      "question_id": "global_006",
+      "question": "Which maintenance problems have the strongest correlation with safety incidents, and what does this imply for prioritizing safety recommendations?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: Which maintenance problems have the strongest correlation with safety incidents, and what does this imply for prioritizing safety recommendations?"
+        }
+      ]
+    },
+    {
+      "question_id": "global_007",
+      "question": "What are the emerging trends in fastener issues, and how do they relate to other maintenance problems over time?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What are the emerging trends in fastener issues, and how do they relate to other maintenance problems over time?"
+        }
+      ]
+    },
+    {
+      "question_id": "global_008",
+      "question": "How do the frequencies of different maintenance problems vary based on aircraft age, and what does this indicate about lifecycle management?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: How do the frequencies of different maintenance problems vary based on aircraft age, and what does this indicate about lifecycle management?"
+        }
+      ]
+    },
+    {
+      "question_id": "global_009",
+      "question": "What are the cross-cutting maintenance themes that suggest a need for system-level changes in maintenance protocols?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What are the cross-cutting maintenance themes that suggest a need for system-level changes in maintenance protocols?"
+        }
+      ]
+    },
+    {
+      "question_id": "global_010",
+      "question": "How do maintenance issues influence aircraft annotation discrepancies, and what systemic improvements are suggested?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: How do maintenance issues influence aircraft annotation discrepancies, and what systemic improvements are suggested?"
+        }
+      ]
+    },
+    {
+      "question_id": "global_011",
+      "question": "Which factors contribute most significantly to successful predictive maintenance interventions, and how can they be optimized globally?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: Which factors contribute most significantly to successful predictive maintenance interventions, and how can they be optimized globally?"
+        }
+      ]
+    },
+    {
+      "question_id": "global_012",
+      "question": "What are the overarching themes in safety recommendations, and how do they align with identified root causes and predictive strategies?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What are the overarching themes in safety recommendations, and how do they align with identified root causes and predictive strategies?"
+        }
+      ]
+    },
+    {
+      "question_id": "global_013",
+      "question": "How do maintenance patterns differ between high-traffic and low-traffic routes, and what implications does this have for resource allocation?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: How do maintenance patterns differ between high-traffic and low-traffic routes, and what implications does this have for resource allocation?"
+        }
+      ]
+    },
+    {
+      "question_id": "global_014",
+      "question": "What systemic relationships exist between various maintenance issues, and how do they inform a holistic understanding of aircraft safety?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What systemic relationships exist between various maintenance issues, and how do they inform a holistic understanding of aircraft safety?"
+        }
+      ]
+    },
+    {
+      "question_id": "global_015",
+      "question": "What patterns in maintenance data suggest opportunities for technological innovation to enhance safety and efficiency?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What patterns in maintenance data suggest opportunities for technological innovation to enhance safety and efficiency?"
+        }
+      ]
+    },
+    {
+      "question_id": "maintenance_narratives_001",
+      "question": "1. What common maintenance oversights or pilot errors contribute to the repeated operation of aircraft with known inoperative systems, such as the alternator issue in the Southern Wisconsin Regional record?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: 1. What common maintenance oversights or pilot errors contribute to the repeated operation of aircraft with known inoperative systems, such as the alternator issue in the Southern Wisconsin Regional record?"
+        }
+      ]
+    },
+    {
+      "question_id": "maintenance_narratives_002",
+      "question": "2. How do pilot decision-making processes, such as continuing flights with known mechanical issues, impact the likelihood of subsequent mechanical failures or emergency situations?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: 2. How do pilot decision-making processes, such as continuing flights with known mechanical issues, impact the likelihood of subsequent mechanical failures or emergency situations?"
+        }
+      ]
+    },
+    {
+      "question_id": "maintenance_narratives_003",
+      "question": "3. What are the recurring themes or patterns regarding the causes of landing gear failures, as indicated by incidents like the one at Chisholm-Hibbing, and how can they be addressed through better maintenance protocols?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: 3. What are the recurring themes or patterns regarding the causes of landing gear failures, as indicated by incidents like the one at Chisholm-Hibbing, and how can they be addressed through better maintenance protocols?"
+        }
+      ]
+    },
+    {
+      "question_id": "maintenance_narratives_004",
+      "question": "4. How does the lack of pre-flight checks and systems verification, such as ensuring generators are turned on, correlate with in-flight mechanical failures or emergencies?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: 4. How does the lack of pre-flight checks and systems verification, such as ensuring generators are turned on, correlate with in-flight mechanical failures or emergencies?"
+        }
+      ]
+    },
+    {
+      "question_id": "maintenance_narratives_005",
+      "question": "5. What role does fuel management and system operation play in engine reliability, as suggested by incidents involving rough running engines and fuel pump issues?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: 5. What role does fuel management and system operation play in engine reliability, as suggested by incidents involving rough running engines and fuel pump issues?"
+        }
+      ]
+    },
+    {
+      "question_id": "maintenance_narratives_006",
+      "question": "6. How do pilot training and experience levels, such as those mentioned in records with private and airline transport pilots, influence the frequency and severity of maintenance-related incidents?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: 6. How do pilot training and experience levels, such as those mentioned in records with private and airline transport pilots, influence the frequency and severity of maintenance-related incidents?"
+        }
+      ]
+    },
+    {
+      "question_id": "maintenance_narratives_007",
+      "question": "7. What preventive maintenance strategies could be implemented to address the root causes of engine failures during critical phases of flight, such as go-arounds and precautionary landings?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: 7. What preventive maintenance strategies could be implemented to address the root causes of engine failures during critical phases of flight, such as go-arounds and precautionary landings?"
+        }
+      ]
+    },
+    {
+      "question_id": "maintenance_narratives_008",
+      "question": "8. How does the interaction between electrical system failures and other aircraft systems contribute to broader operational risks, and what redundant systems could mitigate these risks?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: 8. How does the interaction between electrical system failures and other aircraft systems contribute to broader operational risks, and what redundant systems could mitigate these risks?"
+        }
+      ]
+    },
+    {
+      "question_id": "maintenance_narratives_009",
+      "question": "9. What are the commonalities in decision-making errors that lead to continued operation of aircraft with known deficiencies, and how can these be mitigated through improved pilot training and awareness programs?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: 9. What are the commonalities in decision-making errors that lead to continued operation of aircraft with known deficiencies, and how can these be mitigated through improved pilot training and awareness programs?"
+        }
+      ]
+    },
+    {
+      "question_id": "maintenance_narratives_010",
+      "question": "10. How can maintenance data from various incidents be systematically analyzed to develop predictive maintenance models that prevent similar failures in future operations?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: 10. How can maintenance data from various incidents be systematically analyzed to develop predictive maintenance models that prevent similar failures in future operations?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_001",
+      "question": "What action could be taken when: #2 & 3 intakes leaking on r/h engine?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: #2 & 3 intakes leaking on r/h engine?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_002",
+      "question": "What action could be taken when: replace l/h engine torquemeter hoses?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: replace l/h engine torquemeter hoses?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_003",
+      "question": "What action could be taken when: cyl #3 rocker cover is leaking?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: cyl #3 rocker cover is leaking?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_004",
+      "question": "What action could be taken when: eng died after landing?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: eng died after landing?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_005",
+      "question": "What action could be taken when: engine overspeed, 2750 - 2760 rpm for 3-4 seconds?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: engine overspeed, 2750 - 2760 rpm for 3-4 seconds?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_006",
+      "question": "What action could be taken when: l/h eng #2 & 4 intake tube gaskets leaking?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: l/h eng #2 & 4 intake tube gaskets leaking?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_007",
+      "question": "What action could be taken when: 2 baffle screws missing, above starter?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: 2 baffle screws missing, above starter?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_008",
+      "question": "What action could be taken when: #4 rocker cover gasket leaking?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: #4 rocker cover gasket leaking?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_009",
+      "question": "What action could be taken when: #2 intake gasket leaking?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: #2 intake gasket leaking?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_010",
+      "question": "What action could be taken when: cyl #2 intake gasket leaking?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: cyl #2 intake gasket leaking?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_011",
+      "question": "What action could be taken when: #2 rocker cover gasket is leaking?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: #2 rocker cover gasket is leaking?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_012",
+      "question": "What action could be taken when: oil seeping from top of case halves?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: oil seeping from top of case halves?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_013",
+      "question": "What action could be taken when: #4 cyl compression test was 35/80?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: #4 cyl compression test was 35/80?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_014",
+      "question": "What action could be taken when: rear r/h engine baffle mount bracket rivets sheared?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: rear r/h engine baffle mount bracket rivets sheared?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_015",
+      "question": "What action could be taken when: #2 & 4 rocker covers are leaking?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: #2 & 4 rocker covers are leaking?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_016",
+      "question": "What action could be taken when: front & l/h engine baffle cracked?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: front & l/h engine baffle cracked?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_017",
+      "question": "What action could be taken when: cyl #2 & 4 intakes are leaking?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: cyl #2 & 4 intakes are leaking?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_018",
+      "question": "What action could be taken when: #3 baffle cracked?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: #3 baffle cracked?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_019",
+      "question": "What action could be taken when: baffle plug missing?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: baffle plug missing?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_020",
+      "question": "What action could be taken when: while taxiing, engine quit & could not restart?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: while taxiing, engine quit & could not restart?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_021",
+      "question": "What action could be taken when: #1 intake leaking?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: #1 intake leaking?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_022",
+      "question": "What action could be taken when: engine did not start?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: engine did not start?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_023",
+      "question": "What action could be taken when: #2 intake on r/h engine leaking?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: #2 intake on r/h engine leaking?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_024",
+      "question": "What action could be taken when: l/h engine #3 rocker shaft plug worn?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: l/h engine #3 rocker shaft plug worn?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_025",
+      "question": "What action could be taken when: baffle bracket cracked on #3 cylinder?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: baffle bracket cracked on #3 cylinder?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_026",
+      "question": "What action could be taken when: middle & r/h engine cowl need new chafe tape?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: middle & r/h engine cowl need new chafe tape?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_027",
+      "question": "What action could be taken when: l/h eng #3 baffle (aft) seal loose?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: l/h eng #3 baffle (aft) seal loose?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_028",
+      "question": "What action could be taken when: muffler missing nut?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: muffler missing nut?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_029",
+      "question": "What action could be taken when: power at idle, engine quit. restarted & tested idle w/ full?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: power at idle, engine quit. restarted & tested idle w/ full?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_030",
+      "question": "What action could be taken when: l/h side baffle is cracked?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: l/h side baffle is cracked?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_031",
+      "question": "What action could be taken when: cyl #4 rocker cover gasket leaking?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: cyl #4 rocker cover gasket leaking?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_032",
+      "question": "What action could be taken when: r/h baffle plug needs to be replaced?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: r/h baffle plug needs to be replaced?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_033",
+      "question": "What action could be taken when: l/h cooling baffle connecting rod broken?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: l/h cooling baffle connecting rod broken?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_034",
+      "question": "What action could be taken when: #4 cyl has no compression?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: #4 cyl has no compression?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_035",
+      "question": "What action could be taken when: #3 baffle needs to be patched. button plug hole has worn too?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: #3 baffle needs to be patched. button plug hole has worn too?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_036",
+      "question": "What action could be taken when: l/h engine baffle seal above #4 cylinder is torn?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: l/h engine baffle seal above #4 cylinder is torn?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_037",
+      "question": "What action could be taken when: l/h eng #2, 3 rocker cover gaskets are leaking?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: l/h eng #2, 3 rocker cover gaskets are leaking?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_038",
+      "question": "What action could be taken when: #1 rocker cover leaking on l/h engine?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: #1 rocker cover leaking on l/h engine?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_039",
+      "question": "What action could be taken when: cyl #3 aft baffle has sheared rivet?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: cyl #3 aft baffle has sheared rivet?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_040",
+      "question": "What action could be taken when: l/h eng corner bracket on l/h rear baffle is cracked?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: l/h eng corner bracket on l/h rear baffle is cracked?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_041",
+      "question": "What action could be taken when: hardware missing from aft r/h baffle?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: hardware missing from aft r/h baffle?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_042",
+      "question": "What action could be taken when: bolt on top of engine case shows signs of leaking?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: bolt on top of engine case shows signs of leaking?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_043",
+      "question": "What action could be taken when: l/h eng #1 rocker cover gasket leaking?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: l/h eng #1 rocker cover gasket leaking?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_044",
+      "question": "What action could be taken when: l/h eng baffle tie rod wire hitting both o/b clamps?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: l/h eng baffle tie rod wire hitting both o/b clamps?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_045",
+      "question": "What action could be taken when: sniffler valves dirty?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: sniffler valves dirty?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_046",
+      "question": "What action could be taken when: #1 & 3 cylinder lower baffle is cracked?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: #1 & 3 cylinder lower baffle is cracked?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_047",
+      "question": "What action could be taken when: #1 cyl has low compression (30/80)?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: #1 cyl has low compression (30/80)?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_048",
+      "question": "What action could be taken when: prop overspeed in down draft = 2730 rpm, 2-3 secs?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: prop overspeed in down draft = 2730 rpm, 2-3 secs?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_049",
+      "question": "What action could be taken when: r/h engine #4 cyl aft baffle has screw missing?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: r/h engine #4 cyl aft baffle has screw missing?"
+        }
+      ]
+    },
+    {
+      "question_id": "action_050",
+      "question": "What action could be taken when: l/h eng oil cooler hose is positioned too close to oil filte?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: What action could be taken when: l/h eng oil cooler hose is positioned too close to oil filte?"
+        }
+      ]
+    },
+    {
+      "question_id": "aircraft_problems_actions_001",
+      "question": "1. What are the common factors contributing to gasket leaks across different engine components, such as intake and rocker covers, and what preventive measures can be implemented to address these issues?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: 1. What are the common factors contributing to gasket leaks across different engine components, such as intake and rocker covers, and what preventive measures can be implemented to address these issues?"
+        }
+      ]
+    },
+    {
+      "question_id": "aircraft_problems_actions_002",
+      "question": "2. How frequently do incidents of missing or loose screws, such as the baffle screw, occur, and what inspection protocols can be enhanced to ensure such components are secured properly during routine checks?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: 2. How frequently do incidents of missing or loose screws, such as the baffle screw, occur, and what inspection protocols can be enhanced to ensure such components are secured properly during routine checks?"
+        }
+      ]
+    },
+    {
+      "question_id": "aircraft_problems_actions_003",
+      "question": "3. What environmental or operational conditions lead to the rough engine incidents, and how can regular maintenance practices be adjusted to detect and rectify these issues before they manifest during operations?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: 3. What environmental or operational conditions lead to the rough engine incidents, and how can regular maintenance practices be adjusted to detect and rectify these issues before they manifest during operations?"
+        }
+      ]
+    },
+    {
+      "question_id": "aircraft_problems_actions_004",
+      "question": "4. To what extent do cleanliness and maintenance of oil coolers affect engine performance and longevity, and how can regular cleaning schedules be optimized to prevent related engine problems?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: 4. To what extent do cleanliness and maintenance of oil coolers affect engine performance and longevity, and how can regular cleaning schedules be optimized to prevent related engine problems?"
+        }
+      ]
+    },
+    {
+      "question_id": "aircraft_problems_actions_005",
+      "question": "5. Are there any recurring patterns in the types of engine components that experience leakage, and how can material improvements or redesigns help mitigate these leakage issues?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: 5. Are there any recurring patterns in the types of engine components that experience leakage, and how can material improvements or redesigns help mitigate these leakage issues?"
+        }
+      ]
+    },
+    {
+      "question_id": "aircraft_problems_actions_006",
+      "question": "6. How do engine temperature fluctuations impact the integrity of gaskets and seals, and what monitoring systems can be implemented to detect early signs of wear or failure?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: 6. How do engine temperature fluctuations impact the integrity of gaskets and seals, and what monitoring systems can be implemented to detect early signs of wear or failure?"
+        }
+      ]
+    },
+    {
+      "question_id": "aircraft_problems_actions_007",
+      "question": "7. What historical data correlates missing or loose components, like screws, with specific maintenance routines or personnel, and how can training or procedural adjustments reduce these occurrences?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: 7. What historical data correlates missing or loose components, like screws, with specific maintenance routines or personnel, and how can training or procedural adjustments reduce these occurrences?"
+        }
+      ]
+    },
+    {
+      "question_id": "aircraft_problems_actions_008",
+      "question": "8. How do the frequencies of different types of engine problems vary with aircraft usage patterns, and what predictive maintenance strategies can be implemented to address the most common issues preemptively?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: 8. How do the frequencies of different types of engine problems vary with aircraft usage patterns, and what predictive maintenance strategies can be implemented to address the most common issues preemptively?"
+        }
+      ]
+    },
+    {
+      "question_id": "aircraft_problems_actions_009",
+      "question": "9. What are the implications of not finding defects after reports of rough engine operation, and how can diagnostic technologies be improved to better identify subtle or intermittent issues?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: 9. What are the implications of not finding defects after reports of rough engine operation, and how can diagnostic technologies be improved to better identify subtle or intermittent issues?"
+        }
+      ]
+    },
+    {
+      "question_id": "aircraft_problems_actions_010",
+      "question": "10. What role do manufacturer guidelines and maintenance documentation play in the recurrence of specific problems, and how can these resources be enhanced to provide clearer guidance and preventive strategies?",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are answering from parametric memory only. Do not retrieve, browse, or invent citations to documents you have not been shown in this message. If you do not know, say you do not know."
+        },
+        {
+          "role": "user",
+          "content": "Answer the following aviation-maintenance sensemaking question using only what you already know. Do not claim to have read a specific FAA or MaintNet record.\n\nQuestion: 10. What role do manufacturer guidelines and maintenance documentation play in the recurrence of specific problems, and how can these resources be enhanced to provide clearer guidance and preventive strategies?"
+        }
+      ]
+    }
+  ]
+}

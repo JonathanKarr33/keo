@@ -1,0 +1,8 @@
+{
+  "kg": "/Users/jonathankarr/Documents/keo/keo/kg/output/knowledge_graph.gml",
+  "nodes": 468,
+  "edges": 278,
+  "serialized_edges_mst_on": 257,
+  "serialized_edges_mst_off": 267,
+  "reduction": 0.03745318352059925
+}

@@ -1,0 +1,82 @@
+{
+  "pooled": {
+    "runs": 1,
+    "pair": [
+      "chunk_tok",
+      "keo"
+    ],
+    "length_ratio_graph_over_chunk": {
+      "median": 1.6143900418135924,
+      "min": 1.6143900418135924,
+      "max": 1.6143900418135924
+    },
+    "score_gap": {
+      "median": -0.06024096385542165,
+      "mean": -0.06024096385542165
+    },
+    "within_question_length_score_spearman": {
+      "median": -0.003028903293810784,
+      "min": -0.003028903293810784,
+      "max": -0.003028903293810784
+    },
+    "longer_answer_win_rate": {
+      "median": 0.4032258064516129,
+      "n_runs": 1
+    },
+    "runs_where_arm_and_length_are_separable": "1/1",
+    "length_matched": null
+  },
+  "runs": [
+    {
+      "run": "ctrl_chunk_tok_vs_mst_on_freq",
+      "answers_file": "evaluation_results/ablations/phi4/ctrl_chunk_tok+evaluation_results/ablations/phi4/mst_on_freq",
+      "eval_file": "evaluation_results/ablations/phi4/ctrl_chunk_tok/global_sensemaking_evaluation_20260925_102909.json+evaluation_results/ablations/phi4/mst_on_freq/global_sensemaking_evaluation_20260925_091225.json",
+      "analysis": {
+        "pair": [
+          "chunk_tok",
+          "keo"
+        ],
+        "n_questions": 83,
+        "length_chars": {
+          "chunk_tok": {
+            "mean": 1875.7951807228915,
+            "median": 1908.0
+          },
+          "keo": {
+            "mean": 3028.265060240964,
+            "median": 3065.0
+          },
+          "ratio_hi_over_lo": 1.6143900418135924
+        },
+        "score": {
+          "chunk_tok": 2.290361445783133,
+          "keo": 2.230120481927711,
+          "gap": -0.06024096385542165
+        },
+        "length_score_correlation": {
+          "spearman_within_question_diffs": -0.003028903293810784,
+          "pearson_within_question_diffs": 0.05751175533800264,
+          "spearman_pooled": -0.0864216072523213
+        },
+        "longer_answer_wins": {
+          "wins": 25,
+          "ties": 21,
+          "losses": 37,
+          "rate_excluding_ties": 0.4032258064516129
+        },
+        "fixed_effect_model": {
+          "gap_raw": -0.06024096385542168,
+          "gap_adjusted_for_log_length": -0.11070679663628964,
+          "log_length_coefficient": 0.10097686575433341,
+          "share_of_gap_absorbed_by_length": -0.8377328241624082
+        },
+        "collinearity": {
+          "arm_vs_log_length_corr": 0.89318905040377,
+          "share_of_questions_where_graph_arm_longer": 1.0,
+          "separable": true
+        },
+        "length_matched_subsample": null
+      }
+    }
+  ]
+}

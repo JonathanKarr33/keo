@@ -1,11 +1,36 @@
-pandas
-networkx
-matplotlib
-scipy
-tqdm
-transformers
-torch
-accelerate
-torchvision
-openai
-huggingface_hub
+# KEO sensemaking QA — pipeline dependencies
+# Lower bounds are the versions the revision runs were verified against
+# (Python 3.9; pyproject targets 3.10, either works for this directory).
+#
+#   python -m venv .venv && .venv/bin/python -m pip install -r requirements.txt
+
+# --- core: graph, data, plotting, stats ---
+pandas>=2.2.2
+numpy>=2.0.2
+networkx>=3.2.1
+scipy>=1.13.1
+matplotlib>=3.9.4
+tqdm>=4.67.3
+
+# --- LLM providers ---
+# openai also serves provider=local (vLLM / Ollama OpenAI-compatible endpoints)
+openai>=2.48.0
+anthropic>=0.125.0
+huggingface_hub>=0.36.2
+
+# --- embeddings: --embedding-backend local (default) ---
+# Pulls torch. Skip these two only if you stay on --embedding-backend hash.
+sentence-transformers>=5.1.2
+torch>=2.8.0
+
+# --- action-specific NLP metrics (BLEU / METEOR / ROUGE in evaluator.py) ---
+# Without these the action metrics silently return zeros.
+nltk>=3.9.2
+rouge-score>=0.1.2
+
+# --- optional: running HF models in-process rather than via an API ---
+# transformers>=4.57.6
+# accelerate
+
+# Note: paper-grade judging needs no Python client — it shells out to the
+# Claude Code CLI (`claude auth login`). See papers/COST_SHEET.md.

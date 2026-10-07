@@ -1,0 +1,5579 @@
+{
+  "rubric": "jev_grounded",
+  "style_names": [
+    "Grounded",
+    "Source-card"
+  ],
+  "judge_model": "typesafe/jev-1.13",
+  "provider": "openrouter",
+  "not_comparable_to": "Claude holistic files and grounded_sourcecard.json",
+  "answers_file": "./evaluation_results/ablations/_gemma4e4b/ctrl_keo_shuf_s13/answers.json",
+  "field": "keo_shuf_answer",
+  "items": [
+    {
+      "question_id": "root_cause_analysis_001",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.06,
+        "relevance": 4.85,
+        "coverage": 1.05,
+        "specificity": 1.77
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.06,
+          "confidence": 0.95,
+          "probabilities": {
+            "0": 0.95,
+            "1": 0.05,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.85,
+          "confidence": 0.88,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.02,
+            "2": 0.02,
+            "3": 0.03,
+            "4": 0.92
+          }
+        },
+        "coverage": {
+          "score": 1.05,
+          "confidence": 0.96,
+          "probabilities": {
+            "0": 0.97,
+            "1": 0.02,
+            "2": 0.01,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.77,
+          "confidence": 0.76,
+          "probabilities": {
+            "0": 0.26,
+            "1": 0.72,
+            "2": 0.02,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2158,
+        "output_tokens": 62,
+        "cost": 9.0636e-05
+      }
+    },
+    {
+      "question_id": "root_cause_analysis_002",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.49,
+        "relevance": 4.75,
+        "coverage": 2.0300000000000002,
+        "specificity": 2.48
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.49,
+          "confidence": 0.59,
+          "probabilities": {
+            "0": 0.54,
+            "1": 0.44,
+            "2": 0.01,
+            "3": 0.01,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.75,
+          "confidence": 0.79,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.05,
+            "3": 0.14,
+            "4": 0.81
+          }
+        },
+        "coverage": {
+          "score": 2.0300000000000002,
+          "confidence": 0.14,
+          "probabilities": {
+            "0": 0.45,
+            "1": 0.1,
+            "2": 0.4,
+            "3": 0.04,
+            "4": 0.01
+          }
+        },
+        "specificity": {
+          "score": 2.48,
+          "confidence": 0.45,
+          "probabilities": {
+            "0": 0.12,
+            "1": 0.35,
+            "2": 0.46,
+            "3": 0.06,
+            "4": 0.01
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2249,
+        "output_tokens": 62,
+        "cost": 9.4458e-05
+      }
+    },
+    {
+      "question_id": "root_cause_analysis_003",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.28,
+        "relevance": 4.07,
+        "coverage": 1.46,
+        "specificity": 1.96
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.28,
+          "confidence": 0.77,
+          "probabilities": {
+            "0": 0.75,
+            "1": 0.24,
+            "2": 0.01,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.07,
+          "confidence": 0.22,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.05,
+            "2": 0.28,
+            "3": 0.17,
+            "4": 0.49
+          }
+        },
+        "coverage": {
+          "score": 1.46,
+          "confidence": 0.61,
+          "probabilities": {
+            "0": 0.72,
+            "1": 0.12,
+            "2": 0.15,
+            "3": 0.01,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.96,
+          "confidence": 0.51,
+          "probabilities": {
+            "0": 0.32,
+            "1": 0.41,
+            "2": 0.26,
+            "3": 0.01,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1745,
+        "output_tokens": 62,
+        "cost": 7.329e-05
+      }
+    },
+    {
+      "question_id": "root_cause_analysis_004",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.03,
+        "relevance": 4.68,
+        "coverage": 1.09,
+        "specificity": 1.76
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.03,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0.98,
+            "1": 0.02,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.68,
+          "confidence": 0.73,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.05,
+            "3": 0.18,
+            "4": 0.76
+          }
+        },
+        "coverage": {
+          "score": 1.09,
+          "confidence": 0.93,
+          "probabilities": {
+            "0": 0.95,
+            "1": 0.03,
+            "2": 0.02,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.76,
+          "confidence": 0.74,
+          "probabilities": {
+            "0": 0.27,
+            "1": 0.7,
+            "2": 0.03,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2078,
+        "output_tokens": 62,
+        "cost": 8.7276e-05
+      }
+    },
+    {
+      "question_id": "root_cause_analysis_005",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.35,
+        "relevance": 4.6,
+        "coverage": 1.83,
+        "specificity": 2.01
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.35,
+          "confidence": 0.71,
+          "probabilities": {
+            "0": 0.68,
+            "1": 0.3,
+            "2": 0.01,
+            "3": 0.01,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.6,
+          "confidence": 0.66,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.07,
+            "3": 0.23,
+            "4": 0.7
+          }
+        },
+        "coverage": {
+          "score": 1.83,
+          "confidence": 0.31,
+          "probabilities": {
+            "0": 0.45,
+            "1": 0.28,
+            "2": 0.26,
+            "3": 0.01,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 2.01,
+          "confidence": 0.6,
+          "probabilities": {
+            "0": 0.24,
+            "1": 0.53,
+            "2": 0.22,
+            "3": 0.01,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2111,
+        "output_tokens": 62,
+        "cost": 8.8662e-05
+      }
+    },
+    {
+      "question_id": "root_cause_analysis_006",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.03,
+        "relevance": 4.26,
+        "coverage": 1.04,
+        "specificity": 1.63
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.03,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0.98,
+            "1": 0.02,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.26,
+          "confidence": 0.38,
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.08,
+            "2": 0.15,
+            "3": 0.1,
+            "4": 0.65
+          }
+        },
+        "coverage": {
+          "score": 1.04,
+          "confidence": 0.97,
+          "probabilities": {
+            "0": 0.98,
+            "1": 0.01,
+            "2": 0.01,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.63,
+          "confidence": 0.63,
+          "probabilities": {
+            "0": 0.41,
+            "1": 0.56,
+            "2": 0.03,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2209,
+        "output_tokens": 62,
+        "cost": 9.2778e-05
+      }
+    },
+    {
+      "question_id": "root_cause_analysis_007",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.1400000000000001,
+        "relevance": 4.4399999999999995,
+        "coverage": 1.22,
+        "specificity": 1.5699999999999998
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.1400000000000001,
+          "confidence": 0.89,
+          "probabilities": {
+            "0": 0.9,
+            "1": 0.1,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.4399999999999995,
+          "confidence": 0.53,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.11,
+            "3": 0.32,
+            "4": 0.56
+          }
+        },
+        "coverage": {
+          "score": 1.22,
+          "confidence": 0.81,
+          "probabilities": {
+            "0": 0.87,
+            "1": 0.05,
+            "2": 0.08,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.5699999999999998,
+          "confidence": 0.52,
+          "probabilities": {
+            "0": 0.54,
+            "1": 0.36,
+            "2": 0.1,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1797,
+        "output_tokens": 62,
+        "cost": 7.5474e-05
+      }
+    },
+    {
+      "question_id": "root_cause_analysis_008",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.01,
+        "relevance": 4.85,
+        "coverage": 1.03,
+        "specificity": 1.62
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.01,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0.99,
+            "1": 0.01,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.85,
+          "confidence": 0.88,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.02,
+            "2": 0.02,
+            "3": 0.04,
+            "4": 0.91
+          }
+        },
+        "coverage": {
+          "score": 1.03,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0.99,
+            "1": 0.01,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.62,
+          "confidence": 0.62,
+          "probabilities": {
+            "0": 0.42,
+            "1": 0.55,
+            "2": 0.03,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1591,
+        "output_tokens": 62,
+        "cost": 6.6822e-05
+      }
+    },
+    {
+      "question_id": "predictive_maintenance_001",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.2,
+        "relevance": 4.77,
+        "coverage": 1.29,
+        "specificity": 1.9100000000000001
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.2,
+          "confidence": 0.83,
+          "probabilities": {
+            "0": 0.8200000000000001,
+            "1": 0.18,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.77,
+          "confidence": 0.81,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.05,
+            "3": 0.09,
+            "4": 0.85
+          }
+        },
+        "coverage": {
+          "score": 1.29,
+          "confidence": 0.76,
+          "probabilities": {
+            "0": 0.83,
+            "1": 0.05,
+            "2": 0.1,
+            "3": 0.01,
+            "4": 0.01
+          }
+        },
+        "specificity": {
+          "score": 1.9100000000000001,
+          "confidence": 0.71,
+          "probabilities": {
+            "0": 0.22,
+            "1": 0.66,
+            "2": 0.11,
+            "3": 0.01,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2313,
+        "output_tokens": 62,
+        "cost": 9.7146e-05
+      }
+    },
+    {
+      "question_id": "predictive_maintenance_002",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.9300000000000002,
+        "relevance": 4.58,
+        "coverage": 3.52,
+        "specificity": 2.66
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.9300000000000002,
+          "confidence": 0.57,
+          "probabilities": {
+            "0": 0.29,
+            "1": 0.59,
+            "2": 0.05,
+            "3": 0.05,
+            "4": 0.02
+          }
+        },
+        "relevance": {
+          "score": 4.58,
+          "confidence": 0.65,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.11,
+            "3": 0.19,
+            "4": 0.7
+          }
+        },
+        "coverage": {
+          "score": 3.52,
+          "confidence": 0.51,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.01,
+            "2": 0.48,
+            "3": 0.45,
+            "4": 0.05
+          }
+        },
+        "specificity": {
+          "score": 2.66,
+          "confidence": 0.44,
+          "probabilities": {
+            "0": 0.14,
+            "1": 0.23,
+            "2": 0.49,
+            "3": 0.12,
+            "4": 0.02
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2153,
+        "output_tokens": 62,
+        "cost": 9.0426e-05
+      }
+    },
+    {
+      "question_id": "predictive_maintenance_003",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.06,
+        "relevance": 3.63,
+        "coverage": 1.4,
+        "specificity": 1.87
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.06,
+          "confidence": 0.95,
+          "probabilities": {
+            "0": 0.95,
+            "1": 0.05,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 3.63,
+          "confidence": 0.38,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.04,
+            "2": 0.49,
+            "3": 0.24,
+            "4": 0.22
+          }
+        },
+        "coverage": {
+          "score": 1.4,
+          "confidence": 0.67,
+          "probabilities": {
+            "0": 0.74,
+            "1": 0.12,
+            "2": 0.12,
+            "3": 0.01,
+            "4": 0.01
+          }
+        },
+        "specificity": {
+          "score": 1.87,
+          "confidence": 0.67,
+          "probabilities": {
+            "0": 0.26,
+            "1": 0.62,
+            "2": 0.12,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1659,
+        "output_tokens": 62,
+        "cost": 6.9678e-05
+      }
+    },
+    {
+      "question_id": "predictive_maintenance_004",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.06,
+        "relevance": 4.9399999999999995,
+        "coverage": 1.04,
+        "specificity": 1.69
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.06,
+          "confidence": 0.95,
+          "probabilities": {
+            "0": 0.95,
+            "1": 0.05,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.9399999999999995,
+          "confidence": 0.95,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0,
+            "3": 0.02,
+            "4": 0.97
+          }
+        },
+        "coverage": {
+          "score": 1.04,
+          "confidence": 0.97,
+          "probabilities": {
+            "0": 0.99,
+            "1": 0,
+            "2": 0.01,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.69,
+          "confidence": 0.69,
+          "probabilities": {
+            "0": 0.34,
+            "1": 0.64,
+            "2": 0.02,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1803,
+        "output_tokens": 62,
+        "cost": 7.5726e-05
+      }
+    },
+    {
+      "question_id": "predictive_maintenance_005",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.19,
+        "relevance": 4.8,
+        "coverage": 1.22,
+        "specificity": 1.9300000000000002
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.19,
+          "confidence": 0.85,
+          "probabilities": {
+            "0": 0.83,
+            "1": 0.17,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.8,
+          "confidence": 0.83,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.03,
+            "3": 0.13,
+            "4": 0.84
+          }
+        },
+        "coverage": {
+          "score": 1.22,
+          "confidence": 0.81,
+          "probabilities": {
+            "0": 0.87,
+            "1": 0.05,
+            "2": 0.07,
+            "3": 0,
+            "4": 0.01
+          }
+        },
+        "specificity": {
+          "score": 1.9300000000000002,
+          "confidence": 0.67,
+          "probabilities": {
+            "0": 0.23,
+            "1": 0.62,
+            "2": 0.14,
+            "3": 0.01,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2083,
+        "output_tokens": 62,
+        "cost": 8.7486e-05
+      }
+    },
+    {
+      "question_id": "predictive_maintenance_006",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.15,
+        "relevance": 3.24,
+        "coverage": 2.42,
+        "specificity": 2.1399999999999997
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.15,
+          "confidence": 0.87,
+          "probabilities": {
+            "0": 0.87,
+            "1": 0.13,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 3.24,
+          "confidence": 0.68,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.05,
+            "2": 0.71,
+            "3": 0.14,
+            "4": 0.09
+          }
+        },
+        "coverage": {
+          "score": 2.42,
+          "confidence": 0.44,
+          "probabilities": {
+            "0": 0.25,
+            "1": 0.11,
+            "2": 0.61,
+            "3": 0.02,
+            "4": 0.01
+          }
+        },
+        "specificity": {
+          "score": 2.1399999999999997,
+          "confidence": 0.51,
+          "probabilities": {
+            "0": 0.23,
+            "1": 0.45,
+            "2": 0.29,
+            "3": 0.03,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2321,
+        "output_tokens": 62,
+        "cost": 9.7482e-05
+      }
+    },
+    {
+      "question_id": "predictive_maintenance_007",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.01,
+        "relevance": 4.52,
+        "coverage": 1.03,
+        "specificity": 1.65
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.01,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0.99,
+            "1": 0.01,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.52,
+          "confidence": 0.6,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.08,
+            "3": 0.3,
+            "4": 0.62
+          }
+        },
+        "coverage": {
+          "score": 1.03,
+          "confidence": 0.97,
+          "probabilities": {
+            "0": 0.98,
+            "1": 0.01,
+            "2": 0.01,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.65,
+          "confidence": 0.69,
+          "probabilities": {
+            "0": 0.36,
+            "1": 0.63,
+            "2": 0.01,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2067,
+        "output_tokens": 62,
+        "cost": 8.6814e-05
+      }
+    },
+    {
+      "question_id": "predictive_maintenance_008",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.07,
+        "relevance": 4.6899999999999995,
+        "coverage": 1.05,
+        "specificity": 1.5699999999999998
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.07,
+          "confidence": 0.95,
+          "probabilities": {
+            "0": 0.96,
+            "1": 0.04,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.6899999999999995,
+          "confidence": 0.74,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.06,
+            "3": 0.18,
+            "4": 0.76
+          }
+        },
+        "coverage": {
+          "score": 1.05,
+          "confidence": 0.96,
+          "probabilities": {
+            "0": 0.99,
+            "1": 0,
+            "2": 0.01,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.5699999999999998,
+          "confidence": 0.58,
+          "probabilities": {
+            "0": 0.47,
+            "1": 0.5,
+            "2": 0.03,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1897,
+        "output_tokens": 62,
+        "cost": 7.9674e-05
+      }
+    },
+    {
+      "question_id": "safety_recommendations_001",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.37,
+        "relevance": 4.96,
+        "coverage": 2.02,
+        "specificity": 2.63
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.37,
+          "confidence": 0.69,
+          "probabilities": {
+            "0": 0.68,
+            "1": 0.29,
+            "2": 0.01,
+            "3": 0.01,
+            "4": 0.01
+          }
+        },
+        "relevance": {
+          "score": 4.96,
+          "confidence": 0.97,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.98
+          }
+        },
+        "coverage": {
+          "score": 2.02,
+          "confidence": 0.15,
+          "probabilities": {
+            "0": 0.43,
+            "1": 0.15,
+            "2": 0.38,
+            "3": 0.03,
+            "4": 0.01
+          }
+        },
+        "specificity": {
+          "score": 2.63,
+          "confidence": 0.52,
+          "probabilities": {
+            "0": 0.12,
+            "1": 0.24,
+            "2": 0.55,
+            "3": 0.08,
+            "4": 0.01
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2097,
+        "output_tokens": 62,
+        "cost": 8.8074e-05
+      }
+    },
+    {
+      "question_id": "safety_recommendations_002",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.02,
+        "relevance": 4.67,
+        "coverage": 1.06,
+        "specificity": 1.72
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.02,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0.99,
+            "1": 0.01,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.67,
+          "confidence": 0.72,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.04,
+            "3": 0.23,
+            "4": 0.72
+          }
+        },
+        "coverage": {
+          "score": 1.06,
+          "confidence": 0.95,
+          "probabilities": {
+            "0": 0.97,
+            "1": 0.01,
+            "2": 0.02,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.72,
+          "confidence": 0.72,
+          "probabilities": {
+            "0": 0.31,
+            "1": 0.67,
+            "2": 0.02,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2309,
+        "output_tokens": 62,
+        "cost": 9.6978e-05
+      }
+    },
+    {
+      "question_id": "safety_recommendations_003",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.11,
+        "relevance": 4.98,
+        "coverage": 1.27,
+        "specificity": 1.8199999999999998
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.11,
+          "confidence": 0.91,
+          "probabilities": {
+            "0": 0.91,
+            "1": 0.09,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.98,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "coverage": {
+          "score": 1.27,
+          "confidence": 0.78,
+          "probabilities": {
+            "0": 0.83,
+            "1": 0.1,
+            "2": 0.07,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.8199999999999998,
+          "confidence": 0.74,
+          "probabilities": {
+            "0": 0.25,
+            "1": 0.69,
+            "2": 0.06,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2176,
+        "output_tokens": 62,
+        "cost": 9.1392e-05
+      }
+    },
+    {
+      "question_id": "safety_recommendations_004",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.06,
+        "relevance": 4.8100000000000005,
+        "coverage": 1.05,
+        "specificity": 1.6400000000000001
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.06,
+          "confidence": 0.95,
+          "probabilities": {
+            "0": 0.96,
+            "1": 0.04,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.8100000000000005,
+          "confidence": 0.84,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.03,
+            "3": 0.12,
+            "4": 0.85
+          }
+        },
+        "coverage": {
+          "score": 1.05,
+          "confidence": 0.96,
+          "probabilities": {
+            "0": 0.98,
+            "1": 0.01,
+            "2": 0.01,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.6400000000000001,
+          "confidence": 0.68,
+          "probabilities": {
+            "0": 0.37,
+            "1": 0.62,
+            "2": 0.01,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2164,
+        "output_tokens": 62,
+        "cost": 9.0888e-05
+      }
+    },
+    {
+      "question_id": "safety_recommendations_005",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.11,
+        "relevance": 4.91,
+        "coverage": 1.33,
+        "specificity": 1.76
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.11,
+          "confidence": 0.91,
+          "probabilities": {
+            "0": 0.91,
+            "1": 0.09,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.91,
+          "confidence": 0.92,
+          "probabilities": {
+            "0": 0,
+            "1": 0.02,
+            "2": 0.01,
+            "3": 0.02,
+            "4": 0.95
+          }
+        },
+        "coverage": {
+          "score": 1.33,
+          "confidence": 0.73,
+          "probabilities": {
+            "0": 0.82,
+            "1": 0.06,
+            "2": 0.11,
+            "3": 0.01,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.76,
+          "confidence": 0.59,
+          "probabilities": {
+            "0": 0.36,
+            "1": 0.53,
+            "2": 0.11,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1683,
+        "output_tokens": 62,
+        "cost": 7.0686e-05
+      }
+    },
+    {
+      "question_id": "safety_recommendations_006",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.0,
+        "relevance": 4.8100000000000005,
+        "coverage": 1.01,
+        "specificity": 1.63
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.0,
+          "confidence": 1,
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.8100000000000005,
+          "confidence": 0.84,
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.02,
+            "2": 0.01,
+            "3": 0.01,
+            "4": 0.93
+          }
+        },
+        "coverage": {
+          "score": 1.01,
+          "confidence": 1,
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.63,
+          "confidence": 0.68,
+          "probabilities": {
+            "0": 0.38,
+            "1": 0.62,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1614,
+        "output_tokens": 62,
+        "cost": 6.7788e-05
+      }
+    },
+    {
+      "question_id": "safety_recommendations_007",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.16,
+        "relevance": 4.529999999999999,
+        "coverage": 1.56,
+        "specificity": 1.88
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.16,
+          "confidence": 0.87,
+          "probabilities": {
+            "0": 0.86,
+            "1": 0.14,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.529999999999999,
+          "confidence": 0.61,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.07,
+            "3": 0.32,
+            "4": 0.61
+          }
+        },
+        "coverage": {
+          "score": 1.56,
+          "confidence": 0.54,
+          "probabilities": {
+            "0": 0.67,
+            "1": 0.13,
+            "2": 0.19,
+            "3": 0,
+            "4": 0.01
+          }
+        },
+        "specificity": {
+          "score": 1.88,
+          "confidence": 0.64,
+          "probabilities": {
+            "0": 0.28,
+            "1": 0.57,
+            "2": 0.14,
+            "3": 0.01,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2283,
+        "output_tokens": 62,
+        "cost": 9.5886e-05
+      }
+    },
+    {
+      "question_id": "safety_recommendations_008",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.05,
+        "relevance": 4.890000000000001,
+        "coverage": 1.06,
+        "specificity": 1.54
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.05,
+          "confidence": 0.96,
+          "probabilities": {
+            "0": 0.97,
+            "1": 0.03,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.890000000000001,
+          "confidence": 0.91,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.01,
+            "3": 0.05,
+            "4": 0.93
+          }
+        },
+        "coverage": {
+          "score": 1.06,
+          "confidence": 0.95,
+          "probabilities": {
+            "0": 0.97,
+            "1": 0.01,
+            "2": 0.01,
+            "3": 0,
+            "4": 0.01
+          }
+        },
+        "specificity": {
+          "score": 1.54,
+          "confidence": 0.55,
+          "probabilities": {
+            "0": 0.53,
+            "1": 0.41,
+            "2": 0.06,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2072,
+        "output_tokens": 62,
+        "cost": 8.7024e-05
+      }
+    },
+    {
+      "question_id": "system_level_understanding_001",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.49,
+        "relevance": 3.92,
+        "coverage": 1.9100000000000001,
+        "specificity": 2.24
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.49,
+          "confidence": 0.59,
+          "probabilities": {
+            "0": 0.62,
+            "1": 0.33,
+            "2": 0.02,
+            "3": 0.02,
+            "4": 0.01
+          }
+        },
+        "relevance": {
+          "score": 3.92,
+          "confidence": 0.2,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.37,
+            "3": 0.31,
+            "4": 0.31
+          }
+        },
+        "coverage": {
+          "score": 1.9100000000000001,
+          "confidence": 0.24,
+          "probabilities": {
+            "0": 0.5,
+            "1": 0.11,
+            "2": 0.37,
+            "3": 0.01,
+            "4": 0.01
+          }
+        },
+        "specificity": {
+          "score": 2.24,
+          "confidence": 0.52,
+          "probabilities": {
+            "0": 0.17,
+            "1": 0.48,
+            "2": 0.3,
+            "3": 0.05,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2322,
+        "output_tokens": 62,
+        "cost": 9.7524e-05
+      }
+    },
+    {
+      "question_id": "system_level_understanding_002",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.3,
+        "relevance": 4.67,
+        "coverage": 1.79,
+        "specificity": 1.92
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.3,
+          "confidence": 0.75,
+          "probabilities": {
+            "0": 0.73,
+            "1": 0.27,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.67,
+          "confidence": 0.73,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.08,
+            "3": 0.16,
+            "4": 0.76
+          }
+        },
+        "coverage": {
+          "score": 1.79,
+          "confidence": 0.59,
+          "probabilities": {
+            "0": 0.35,
+            "1": 0.52,
+            "2": 0.11,
+            "3": 0.01,
+            "4": 0.01
+          }
+        },
+        "specificity": {
+          "score": 1.92,
+          "confidence": 0.62,
+          "probabilities": {
+            "0": 0.26,
+            "1": 0.56,
+            "2": 0.17,
+            "3": 0.01,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2066,
+        "output_tokens": 62,
+        "cost": 8.6772e-05
+      }
+    },
+    {
+      "question_id": "system_level_understanding_003",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.3599999999999999,
+        "relevance": 4.34,
+        "coverage": 2.4299999999999997,
+        "specificity": 1.97
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.3599999999999999,
+          "confidence": 0.7,
+          "probabilities": {
+            "0": 0.67,
+            "1": 0.33,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.34,
+          "confidence": 0.45,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.17,
+            "3": 0.31,
+            "4": 0.52
+          }
+        },
+        "coverage": {
+          "score": 2.4299999999999997,
+          "confidence": 0.47,
+          "probabilities": {
+            "0": 0.18,
+            "1": 0.23,
+            "2": 0.56,
+            "3": 0.01,
+            "4": 0.01
+          }
+        },
+        "specificity": {
+          "score": 1.97,
+          "confidence": 0.49,
+          "probabilities": {
+            "0": 0.32,
+            "1": 0.4,
+            "2": 0.27,
+            "3": 0.01,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2172,
+        "output_tokens": 62,
+        "cost": 9.1224e-05
+      }
+    },
+    {
+      "question_id": "system_level_understanding_004",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.41,
+        "relevance": 4.23,
+        "coverage": 2.4699999999999998,
+        "specificity": 2.46
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.41,
+          "confidence": 0.66,
+          "probabilities": {
+            "0": 0.62,
+            "1": 0.36,
+            "2": 0.01,
+            "3": 0.01,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.23,
+          "confidence": 0.51,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.18,
+            "3": 0.41,
+            "4": 0.41
+          }
+        },
+        "coverage": {
+          "score": 2.4699999999999998,
+          "confidence": 0.48,
+          "probabilities": {
+            "0": 0.18,
+            "1": 0.21,
+            "2": 0.5700000000000001,
+            "3": 0.03,
+            "4": 0.01
+          }
+        },
+        "specificity": {
+          "score": 2.46,
+          "confidence": 0.46,
+          "probabilities": {
+            "0": 0.15,
+            "1": 0.29,
+            "2": 0.52,
+            "3": 0.04,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2167,
+        "output_tokens": 62,
+        "cost": 9.1014e-05
+      }
+    },
+    {
+      "question_id": "system_level_understanding_005",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.02,
+        "relevance": 4.82,
+        "coverage": 1.1,
+        "specificity": 1.58
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.02,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0.99,
+            "1": 0.01,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.82,
+          "confidence": 0.85,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.03,
+            "3": 0.1,
+            "4": 0.86
+          }
+        },
+        "coverage": {
+          "score": 1.1,
+          "confidence": 0.91,
+          "probabilities": {
+            "0": 0.95,
+            "1": 0.01,
+            "2": 0.04,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.58,
+          "confidence": 0.56,
+          "probabilities": {
+            "0": 0.47,
+            "1": 0.49,
+            "2": 0.04,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2021,
+        "output_tokens": 62,
+        "cost": 8.4882e-05
+      }
+    },
+    {
+      "question_id": "system_level_understanding_006",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.73,
+        "relevance": 4.46,
+        "coverage": 3.2,
+        "specificity": 3.0
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.73,
+          "confidence": 0.39,
+          "probabilities": {
+            "0": 0.47,
+            "1": 0.43,
+            "2": 0.03,
+            "3": 0.04,
+            "4": 0.03
+          }
+        },
+        "relevance": {
+          "score": 4.46,
+          "confidence": 0.55,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.11,
+            "3": 0.3,
+            "4": 0.59
+          }
+        },
+        "coverage": {
+          "score": 3.2,
+          "confidence": 0.7,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.06,
+            "2": 0.68,
+            "3": 0.22,
+            "4": 0.03
+          }
+        },
+        "specificity": {
+          "score": 3.0,
+          "confidence": 0.45,
+          "probabilities": {
+            "0": 0.09,
+            "1": 0.15,
+            "2": 0.45999999999999996,
+            "3": 0.26,
+            "4": 0.04
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1756,
+        "output_tokens": 62,
+        "cost": 7.3752e-05
+      }
+    },
+    {
+      "question_id": "system_level_understanding_007",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.25,
+        "relevance": 4.85,
+        "coverage": 1.74,
+        "specificity": 2.1399999999999997
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.25,
+          "confidence": 0.8,
+          "probabilities": {
+            "0": 0.77,
+            "1": 0.23,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.85,
+          "confidence": 0.88,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.11,
+            "4": 0.88
+          }
+        },
+        "coverage": {
+          "score": 1.74,
+          "confidence": 0.39,
+          "probabilities": {
+            "0": 0.45,
+            "1": 0.39,
+            "2": 0.16,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 2.1399999999999997,
+          "confidence": 0.67,
+          "probabilities": {
+            "0": 0.13,
+            "1": 0.61,
+            "2": 0.25,
+            "3": 0.01,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2166,
+        "output_tokens": 62,
+        "cost": 9.0972e-05
+      }
+    },
+    {
+      "question_id": "system_level_understanding_008",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.01,
+        "relevance": 4.970000000000001,
+        "coverage": 1.02,
+        "specificity": 1.76
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.01,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0.99,
+            "1": 0.01,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.970000000000001,
+          "confidence": 0.97,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.99
+          }
+        },
+        "coverage": {
+          "score": 1.02,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.76,
+          "confidence": 0.78,
+          "probabilities": {
+            "0": 0.25,
+            "1": 0.74,
+            "2": 0.01,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1708,
+        "output_tokens": 62,
+        "cost": 7.1736e-05
+      }
+    },
+    {
+      "question_id": "comparative_analysis_001",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.04,
+        "relevance": 4.84,
+        "coverage": 1.12,
+        "specificity": 1.78
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.04,
+          "confidence": 0.97,
+          "probabilities": {
+            "0": 0.97,
+            "1": 0.03,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.84,
+          "confidence": 0.87,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.03,
+            "3": 0.07,
+            "4": 0.89
+          }
+        },
+        "coverage": {
+          "score": 1.12,
+          "confidence": 0.9,
+          "probabilities": {
+            "0": 0.92,
+            "1": 0.06,
+            "2": 0.02,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.78,
+          "confidence": 0.77,
+          "probabilities": {
+            "0": 0.24,
+            "1": 0.74,
+            "2": 0.02,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2133,
+        "output_tokens": 62,
+        "cost": 8.9586e-05
+      }
+    },
+    {
+      "question_id": "comparative_analysis_002",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.09,
+        "relevance": 3.93,
+        "coverage": 1.73,
+        "specificity": 2.1399999999999997
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.09,
+          "confidence": 0.93,
+          "probabilities": {
+            "0": 0.92,
+            "1": 0.08,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 3.93,
+          "confidence": 0.58,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.26,
+            "3": 0.51,
+            "4": 0.22
+          }
+        },
+        "coverage": {
+          "score": 1.73,
+          "confidence": 0.62,
+          "probabilities": {
+            "0": 0.36,
+            "1": 0.5700000000000001,
+            "2": 0.07,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 2.1399999999999997,
+          "confidence": 0.61,
+          "probabilities": {
+            "0": 0.16,
+            "1": 0.55,
+            "2": 0.29,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1796,
+        "output_tokens": 62,
+        "cost": 7.5432e-05
+      }
+    },
+    {
+      "question_id": "comparative_analysis_003",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.23,
+        "relevance": 3.18,
+        "coverage": 1.99,
+        "specificity": 1.72
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.23,
+          "confidence": 0.81,
+          "probabilities": {
+            "0": 0.8,
+            "1": 0.2,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 3.18,
+          "confidence": 0.83,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.85,
+            "3": 0.1,
+            "4": 0.04
+          }
+        },
+        "coverage": {
+          "score": 1.99,
+          "confidence": 0.17,
+          "probabilities": {
+            "0": 0.36,
+            "1": 0.31,
+            "2": 0.31,
+            "3": 0.01,
+            "4": 0.01
+          }
+        },
+        "specificity": {
+          "score": 1.72,
+          "confidence": 0.59,
+          "probabilities": {
+            "0": 0.39,
+            "1": 0.52,
+            "2": 0.09,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1978,
+        "output_tokens": 62,
+        "cost": 8.3076e-05
+      }
+    },
+    {
+      "question_id": "comparative_analysis_004",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.06,
+        "relevance": 3.53,
+        "coverage": 1.19,
+        "specificity": 1.77
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.06,
+          "confidence": 0.95,
+          "probabilities": {
+            "0": 0.95,
+            "1": 0.05,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 3.53,
+          "confidence": 0.54,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.6,
+            "3": 0.25,
+            "4": 0.14
+          }
+        },
+        "coverage": {
+          "score": 1.19,
+          "confidence": 0.84,
+          "probabilities": {
+            "0": 0.88,
+            "1": 0.07,
+            "2": 0.04,
+            "3": 0,
+            "4": 0.01
+          }
+        },
+        "specificity": {
+          "score": 1.77,
+          "confidence": 0.61,
+          "probabilities": {
+            "0": 0.35,
+            "1": 0.54,
+            "2": 0.11,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2143,
+        "output_tokens": 62,
+        "cost": 9.0006e-05
+      }
+    },
+    {
+      "question_id": "comparative_analysis_005",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.01,
+        "relevance": 4.33,
+        "coverage": 1.03,
+        "specificity": 1.8
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.01,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.33,
+          "confidence": 0.44,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.12,
+            "3": 0.42,
+            "4": 0.46
+          }
+        },
+        "coverage": {
+          "score": 1.03,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0.98,
+            "1": 0.01,
+            "2": 0.01,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.8,
+          "confidence": 0.81,
+          "probabilities": {
+            "0": 0.22,
+            "1": 0.77,
+            "2": 0.01,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2193,
+        "output_tokens": 62,
+        "cost": 9.2106e-05
+      }
+    },
+    {
+      "question_id": "comparative_analysis_006",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.04,
+        "relevance": 4.48,
+        "coverage": 1.25,
+        "specificity": 1.8199999999999998
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.04,
+          "confidence": 0.96,
+          "probabilities": {
+            "0": 0.96,
+            "1": 0.04,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.48,
+          "confidence": 0.57,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.1,
+            "3": 0.3,
+            "4": 0.6
+          }
+        },
+        "coverage": {
+          "score": 1.25,
+          "confidence": 0.79,
+          "probabilities": {
+            "0": 0.83,
+            "1": 0.12,
+            "2": 0.05,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.8199999999999998,
+          "confidence": 0.71,
+          "probabilities": {
+            "0": 0.26,
+            "1": 0.66,
+            "2": 0.07,
+            "3": 0.01,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1823,
+        "output_tokens": 62,
+        "cost": 7.6566e-05
+      }
+    },
+    {
+      "question_id": "comparative_analysis_007",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.04,
+        "relevance": 3.86,
+        "coverage": 1.08,
+        "specificity": 1.83
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.04,
+          "confidence": 0.96,
+          "probabilities": {
+            "0": 0.96,
+            "1": 0.04,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 3.86,
+          "confidence": 0.46,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.37,
+            "3": 0.37,
+            "4": 0.25
+          }
+        },
+        "coverage": {
+          "score": 1.08,
+          "confidence": 0.93,
+          "probabilities": {
+            "0": 0.95,
+            "1": 0.03,
+            "2": 0.02,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.83,
+          "confidence": 0.79,
+          "probabilities": {
+            "0": 0.21,
+            "1": 0.75,
+            "2": 0.04,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2063,
+        "output_tokens": 62,
+        "cost": 8.6646e-05
+      }
+    },
+    {
+      "question_id": "comparative_analysis_008",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.05,
+        "relevance": 4.720000000000001,
+        "coverage": 1.16,
+        "specificity": 1.58
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.05,
+          "confidence": 0.95,
+          "probabilities": {
+            "0": 0.96,
+            "1": 0.04,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.720000000000001,
+          "confidence": 0.77,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.05,
+            "3": 0.16,
+            "4": 0.79
+          }
+        },
+        "coverage": {
+          "score": 1.16,
+          "confidence": 0.87,
+          "probabilities": {
+            "0": 0.89,
+            "1": 0.08,
+            "2": 0.03,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.58,
+          "confidence": 0.58,
+          "probabilities": {
+            "0": 0.46,
+            "1": 0.51,
+            "2": 0.03,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2089,
+        "output_tokens": 62,
+        "cost": 8.7738e-05
+      }
+    },
+    {
+      "question_id": "trend_analysis_001",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.8399999999999999,
+        "relevance": 2.96,
+        "coverage": 2.83,
+        "specificity": 2.8600000000000003
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.8399999999999999,
+          "confidence": 0.3,
+          "probabilities": {
+            "0": 0.45,
+            "1": 0.41,
+            "2": 0.03,
+            "3": 0.06,
+            "4": 0.05
+          }
+        },
+        "relevance": {
+          "score": 2.96,
+          "confidence": 0.77,
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.1,
+            "2": 0.8,
+            "3": 0.03,
+            "4": 0.04
+          }
+        },
+        "coverage": {
+          "score": 2.83,
+          "confidence": 0.7,
+          "probabilities": {
+            "0": 0.11,
+            "1": 0.05,
+            "2": 0.77,
+            "3": 0.05,
+            "4": 0.02
+          }
+        },
+        "specificity": {
+          "score": 2.8600000000000003,
+          "confidence": 0.47,
+          "probabilities": {
+            "0": 0.12,
+            "1": 0.15,
+            "2": 0.5,
+            "3": 0.21,
+            "4": 0.02
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2255,
+        "output_tokens": 62,
+        "cost": 9.471e-05
+      }
+    },
+    {
+      "question_id": "trend_analysis_002",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.28,
+        "relevance": 4.75,
+        "coverage": 2.66,
+        "specificity": 1.92
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.28,
+          "confidence": 0.77,
+          "probabilities": {
+            "0": 0.76,
+            "1": 0.22,
+            "2": 0,
+            "3": 0.01,
+            "4": 0.01
+          }
+        },
+        "relevance": {
+          "score": 4.75,
+          "confidence": 0.79,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.07,
+            "3": 0.08,
+            "4": 0.84
+          }
+        },
+        "coverage": {
+          "score": 2.66,
+          "confidence": 0.56,
+          "probabilities": {
+            "0": 0.17,
+            "1": 0.09,
+            "2": 0.67,
+            "3": 0.05,
+            "4": 0.02
+          }
+        },
+        "specificity": {
+          "score": 1.92,
+          "confidence": 0.52,
+          "probabilities": {
+            "0": 0.33,
+            "1": 0.45,
+            "2": 0.21,
+            "3": 0.01,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2005,
+        "output_tokens": 62,
+        "cost": 8.421e-05
+      }
+    },
+    {
+      "question_id": "trend_analysis_003",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.02,
+        "relevance": 4.779999999999999,
+        "coverage": 1.02,
+        "specificity": 1.73
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.02,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0.98,
+            "1": 0.02,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.779999999999999,
+          "confidence": 0.82,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.04,
+            "3": 0.11,
+            "4": 0.85
+          }
+        },
+        "coverage": {
+          "score": 1.02,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.73,
+          "confidence": 0.76,
+          "probabilities": {
+            "0": 0.28,
+            "1": 0.72,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1743,
+        "output_tokens": 62,
+        "cost": 7.3206e-05
+      }
+    },
+    {
+      "question_id": "trend_analysis_004",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.24,
+        "relevance": 4.17,
+        "coverage": 2.0700000000000003,
+        "specificity": 1.85
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.24,
+          "confidence": 0.8,
+          "probabilities": {
+            "0": 0.8,
+            "1": 0.18,
+            "2": 0.01,
+            "3": 0,
+            "4": 0.01
+          }
+        },
+        "relevance": {
+          "score": 4.17,
+          "confidence": 0.31,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.25,
+            "3": 0.29,
+            "4": 0.45
+          }
+        },
+        "coverage": {
+          "score": 2.0700000000000003,
+          "confidence": 0.17,
+          "probabilities": {
+            "0": 0.41,
+            "1": 0.14,
+            "2": 0.43,
+            "3": 0.01,
+            "4": 0.01
+          }
+        },
+        "specificity": {
+          "score": 1.85,
+          "confidence": 0.53,
+          "probabilities": {
+            "0": 0.36,
+            "1": 0.44,
+            "2": 0.19,
+            "3": 0.01,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1758,
+        "output_tokens": 62,
+        "cost": 7.3836e-05
+      }
+    },
+    {
+      "question_id": "trend_analysis_005",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.28,
+        "relevance": 4.6899999999999995,
+        "coverage": 1.65,
+        "specificity": 2.16
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.28,
+          "confidence": 0.77,
+          "probabilities": {
+            "0": 0.75,
+            "1": 0.25,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.6899999999999995,
+          "confidence": 0.74,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.04,
+            "2": 0.05,
+            "3": 0.05,
+            "4": 0.85
+          }
+        },
+        "coverage": {
+          "score": 1.65,
+          "confidence": 0.46,
+          "probabilities": {
+            "0": 0.52,
+            "1": 0.33,
+            "2": 0.14,
+            "3": 0.01,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 2.16,
+          "confidence": 0.49,
+          "probabilities": {
+            "0": 0.22,
+            "1": 0.41,
+            "2": 0.35,
+            "3": 0.02,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2097,
+        "output_tokens": 62,
+        "cost": 8.8074e-05
+      }
+    },
+    {
+      "question_id": "trend_analysis_006",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.48,
+        "relevance": 3.77,
+        "coverage": 2.6799999999999997,
+        "specificity": 2.0300000000000002
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.48,
+          "confidence": 0.6,
+          "probabilities": {
+            "0": 0.62,
+            "1": 0.32,
+            "2": 0.02,
+            "3": 0.02,
+            "4": 0.02
+          }
+        },
+        "relevance": {
+          "score": 3.77,
+          "confidence": 0,
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.1,
+            "2": 0.34,
+            "3": 0.14,
+            "4": 0.39
+          }
+        },
+        "coverage": {
+          "score": 2.6799999999999997,
+          "confidence": 0.6,
+          "probabilities": {
+            "0": 0.13,
+            "1": 0.14,
+            "2": 0.66,
+            "3": 0.05,
+            "4": 0.02
+          }
+        },
+        "specificity": {
+          "score": 2.0300000000000002,
+          "confidence": 0.49,
+          "probabilities": {
+            "0": 0.3,
+            "1": 0.39,
+            "2": 0.29,
+            "3": 0.02,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1757,
+        "output_tokens": 62,
+        "cost": 7.3794e-05
+      }
+    },
+    {
+      "question_id": "trend_analysis_007",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.65,
+        "relevance": 4.6899999999999995,
+        "coverage": 2.8200000000000003,
+        "specificity": 2.12
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.65,
+          "confidence": 0.46,
+          "probabilities": {
+            "0": 0.55,
+            "1": 0.34,
+            "2": 0.03,
+            "3": 0.04,
+            "4": 0.04
+          }
+        },
+        "relevance": {
+          "score": 4.6899999999999995,
+          "confidence": 0.74,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.06,
+            "3": 0.18,
+            "4": 0.76
+          }
+        },
+        "coverage": {
+          "score": 2.8200000000000003,
+          "confidence": 0.59,
+          "probabilities": {
+            "0": 0.15,
+            "1": 0.03,
+            "2": 0.69,
+            "3": 0.1,
+            "4": 0.03
+          }
+        },
+        "specificity": {
+          "score": 2.12,
+          "confidence": 0.49,
+          "probabilities": {
+            "0": 0.25,
+            "1": 0.43,
+            "2": 0.27,
+            "3": 0.04,
+            "4": 0.01
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2032,
+        "output_tokens": 62,
+        "cost": 8.5344e-05
+      }
+    },
+    {
+      "question_id": "trend_analysis_008",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.51,
+        "relevance": 4.38,
+        "coverage": 2.8200000000000003,
+        "specificity": 2.4699999999999998
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.51,
+          "confidence": 0.57,
+          "probabilities": {
+            "0": 0.68,
+            "1": 0.24,
+            "2": 0.02,
+            "3": 0.03,
+            "4": 0.03
+          }
+        },
+        "relevance": {
+          "score": 4.38,
+          "confidence": 0.48,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.16,
+            "3": 0.25,
+            "4": 0.58
+          }
+        },
+        "coverage": {
+          "score": 2.8200000000000003,
+          "confidence": 0.69,
+          "probabilities": {
+            "0": 0.12,
+            "1": 0.04,
+            "2": 0.77,
+            "3": 0.05,
+            "4": 0.02
+          }
+        },
+        "specificity": {
+          "score": 2.4699999999999998,
+          "confidence": 0.4,
+          "probabilities": {
+            "0": 0.13,
+            "1": 0.4,
+            "2": 0.35,
+            "3": 0.11,
+            "4": 0.01
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2198,
+        "output_tokens": 62,
+        "cost": 9.2316e-05
+      }
+    },
+    {
+      "question_id": "global_001",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.8399999999999999,
+        "relevance": 4.62,
+        "coverage": 2.8899999999999997,
+        "specificity": 2.65
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.8399999999999999,
+          "confidence": 0.54,
+          "probabilities": {
+            "0": 0.35,
+            "1": 0.54,
+            "2": 0.05,
+            "3": 0.05,
+            "4": 0.01
+          }
+        },
+        "relevance": {
+          "score": 4.62,
+          "confidence": 0.68,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.08,
+            "3": 0.2,
+            "4": 0.72
+          }
+        },
+        "coverage": {
+          "score": 2.8899999999999997,
+          "confidence": 0.47,
+          "probabilities": {
+            "0": 0.17,
+            "1": 0.02,
+            "2": 0.56,
+            "3": 0.22,
+            "4": 0.02
+          }
+        },
+        "specificity": {
+          "score": 2.65,
+          "confidence": 0.38,
+          "probabilities": {
+            "0": 0.13,
+            "1": 0.28,
+            "2": 0.41,
+            "3": 0.15,
+            "4": 0.03
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2158,
+        "output_tokens": 62,
+        "cost": 9.0636e-05
+      }
+    },
+    {
+      "question_id": "global_002",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 2.3,
+        "relevance": 4.32,
+        "coverage": 3.19,
+        "specificity": 2.5
+      },
+      "detail": {
+        "attribution": {
+          "score": 2.3,
+          "confidence": 0.25,
+          "probabilities": {
+            "0": 0.3,
+            "1": 0.4,
+            "2": 0.06,
+            "3": 0.17,
+            "4": 0.07
+          }
+        },
+        "relevance": {
+          "score": 4.32,
+          "confidence": 0.44,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.16,
+            "3": 0.34,
+            "4": 0.5
+          }
+        },
+        "coverage": {
+          "score": 3.19,
+          "confidence": 0.59,
+          "probabilities": {
+            "0": 0.07,
+            "1": 0.02,
+            "2": 0.62,
+            "3": 0.25,
+            "4": 0.04
+          }
+        },
+        "specificity": {
+          "score": 2.5,
+          "confidence": 0.27,
+          "probabilities": {
+            "0": 0.23,
+            "1": 0.23,
+            "2": 0.38,
+            "3": 0.14,
+            "4": 0.02
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2275,
+        "output_tokens": 62,
+        "cost": 9.555e-05
+      }
+    },
+    {
+      "question_id": "global_003",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 2.1399999999999997,
+        "relevance": 4.42,
+        "coverage": 3.38,
+        "specificity": 3.3
+      },
+      "detail": {
+        "attribution": {
+          "score": 2.1399999999999997,
+          "confidence": 0.46,
+          "probabilities": {
+            "0": 0.26,
+            "1": 0.52,
+            "2": 0.08,
+            "3": 0.1,
+            "4": 0.04
+          }
+        },
+        "relevance": {
+          "score": 4.42,
+          "confidence": 0.52,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.14,
+            "3": 0.29,
+            "4": 0.57
+          }
+        },
+        "coverage": {
+          "score": 3.38,
+          "confidence": 0.6,
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.01,
+            "2": 0.58,
+            "3": 0.34,
+            "4": 0.05
+          }
+        },
+        "specificity": {
+          "score": 3.3,
+          "confidence": 0.21,
+          "probabilities": {
+            "0": 0.1,
+            "1": 0.11,
+            "2": 0.29,
+            "3": 0.38,
+            "4": 0.12
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2097,
+        "output_tokens": 62,
+        "cost": 8.8074e-05
+      }
+    },
+    {
+      "question_id": "global_004",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.0,
+        "relevance": 4.93,
+        "coverage": 1.01,
+        "specificity": 1.74
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.0,
+          "confidence": 1,
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.93,
+          "confidence": 0.94,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.01,
+            "3": 0.02,
+            "4": 0.96
+          }
+        },
+        "coverage": {
+          "score": 1.01,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.74,
+          "confidence": 0.76,
+          "probabilities": {
+            "0": 0.27,
+            "1": 0.72,
+            "2": 0.01,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2170,
+        "output_tokens": 62,
+        "cost": 9.114e-05
+      }
+    },
+    {
+      "question_id": "global_005",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 2.4,
+        "relevance": 4.85,
+        "coverage": 3.32,
+        "specificity": 3.13
+      },
+      "detail": {
+        "attribution": {
+          "score": 2.4,
+          "confidence": 0.34,
+          "probabilities": {
+            "0": 0.2,
+            "1": 0.48,
+            "2": 0.1,
+            "3": 0.16,
+            "4": 0.06
+          }
+        },
+        "relevance": {
+          "score": 4.85,
+          "confidence": 0.87,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.02,
+            "3": 0.1,
+            "4": 0.88
+          }
+        },
+        "coverage": {
+          "score": 3.32,
+          "confidence": 0.69,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.01,
+            "2": 0.66,
+            "3": 0.29,
+            "4": 0.03
+          }
+        },
+        "specificity": {
+          "score": 3.13,
+          "confidence": 0.43,
+          "probabilities": {
+            "0": 0.1,
+            "1": 0.09,
+            "2": 0.46,
+            "3": 0.3,
+            "4": 0.05
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2070,
+        "output_tokens": 62,
+        "cost": 8.694e-05
+      }
+    },
+    {
+      "question_id": "global_006",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 2.5,
+        "relevance": 4.58,
+        "coverage": 3.43,
+        "specificity": 3.06
+      },
+      "detail": {
+        "attribution": {
+          "score": 2.5,
+          "confidence": 0.22,
+          "probabilities": {
+            "0": 0.21,
+            "1": 0.41,
+            "2": 0.1,
+            "3": 0.21,
+            "4": 0.07
+          }
+        },
+        "relevance": {
+          "score": 4.58,
+          "confidence": 0.65,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.08,
+            "3": 0.26,
+            "4": 0.66
+          }
+        },
+        "coverage": {
+          "score": 3.43,
+          "confidence": 0.52,
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.01,
+            "2": 0.51,
+            "3": 0.39,
+            "4": 0.06
+          }
+        },
+        "specificity": {
+          "score": 3.06,
+          "confidence": 0.4,
+          "probabilities": {
+            "0": 0.09,
+            "1": 0.15,
+            "2": 0.43,
+            "3": 0.27,
+            "4": 0.06
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2264,
+        "output_tokens": 62,
+        "cost": 9.5088e-05
+      }
+    },
+    {
+      "question_id": "global_007",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.2,
+        "relevance": 4.08,
+        "coverage": 2.74,
+        "specificity": 2.08
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.2,
+          "confidence": 0.83,
+          "probabilities": {
+            "0": 0.83,
+            "1": 0.17,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.08,
+          "confidence": 0.23,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.04,
+            "2": 0.28,
+            "3": 0.19,
+            "4": 0.48
+          }
+        },
+        "coverage": {
+          "score": 2.74,
+          "confidence": 0.48,
+          "probabilities": {
+            "0": 0.18,
+            "1": 0.08,
+            "2": 0.61,
+            "3": 0.09,
+            "4": 0.04
+          }
+        },
+        "specificity": {
+          "score": 2.08,
+          "confidence": 0.64,
+          "probabilities": {
+            "0": 0.18,
+            "1": 0.59,
+            "2": 0.22,
+            "3": 0.01,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2149,
+        "output_tokens": 62,
+        "cost": 9.0258e-05
+      }
+    },
+    {
+      "question_id": "global_008",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.01,
+        "relevance": 4.5,
+        "coverage": 1.01,
+        "specificity": 1.58
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.01,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.5,
+          "confidence": 0.59,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.13,
+            "3": 0.18,
+            "4": 0.68
+          }
+        },
+        "coverage": {
+          "score": 1.01,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.58,
+          "confidence": 0.63,
+          "probabilities": {
+            "0": 0.43,
+            "1": 0.56,
+            "2": 0.01,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2153,
+        "output_tokens": 62,
+        "cost": 9.0426e-05
+      }
+    },
+    {
+      "question_id": "global_009",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 2.7199999999999998,
+        "relevance": 4.890000000000001,
+        "coverage": 3.48,
+        "specificity": 3.28
+      },
+      "detail": {
+        "attribution": {
+          "score": 2.7199999999999998,
+          "confidence": 0.06,
+          "probabilities": {
+            "0": 0.2,
+            "1": 0.34,
+            "2": 0.1,
+            "3": 0.25,
+            "4": 0.11
+          }
+        },
+        "relevance": {
+          "score": 4.890000000000001,
+          "confidence": 0.9,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.08,
+            "4": 0.91
+          }
+        },
+        "coverage": {
+          "score": 3.48,
+          "confidence": 0.57,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0,
+            "2": 0.58,
+            "3": 0.32,
+            "4": 0.09
+          }
+        },
+        "specificity": {
+          "score": 3.28,
+          "confidence": 0.23,
+          "probabilities": {
+            "0": 0.08,
+            "1": 0.11,
+            "2": 0.35,
+            "3": 0.36,
+            "4": 0.1
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1895,
+        "output_tokens": 62,
+        "cost": 7.959e-05
+      }
+    },
+    {
+      "question_id": "global_010",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.31,
+        "relevance": 4.4,
+        "coverage": 2.9299999999999997,
+        "specificity": 2.3600000000000003
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.31,
+          "confidence": 0.74,
+          "probabilities": {
+            "0": 0.75,
+            "1": 0.22,
+            "2": 0.01,
+            "3": 0.01,
+            "4": 0.01
+          }
+        },
+        "relevance": {
+          "score": 4.4,
+          "confidence": 0.5,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.15,
+            "3": 0.31,
+            "4": 0.54
+          }
+        },
+        "coverage": {
+          "score": 2.9299999999999997,
+          "confidence": 0.64,
+          "probabilities": {
+            "0": 0.1,
+            "1": 0.06,
+            "2": 0.7,
+            "3": 0.11,
+            "4": 0.03
+          }
+        },
+        "specificity": {
+          "score": 2.3600000000000003,
+          "confidence": 0.39,
+          "probabilities": {
+            "0": 0.15,
+            "1": 0.39,
+            "2": 0.42,
+            "3": 0.03,
+            "4": 0.01
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2228,
+        "output_tokens": 62,
+        "cost": 9.3576e-05
+      }
+    },
+    {
+      "question_id": "global_011",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.01,
+        "relevance": 4.23,
+        "coverage": 1.02,
+        "specificity": 1.5699999999999998
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.01,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0.99,
+            "1": 0.01,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.23,
+          "confidence": 0.36,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.2,
+            "3": 0.35,
+            "4": 0.45
+          }
+        },
+        "coverage": {
+          "score": 1.02,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0.99,
+            "1": 0,
+            "2": 0.01,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.5699999999999998,
+          "confidence": 0.62,
+          "probabilities": {
+            "0": 0.44,
+            "1": 0.55,
+            "2": 0.01,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1757,
+        "output_tokens": 62,
+        "cost": 7.3794e-05
+      }
+    },
+    {
+      "question_id": "global_012",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.43,
+        "relevance": 4.15,
+        "coverage": 1.46,
+        "specificity": 1.9
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.43,
+          "confidence": 0.64,
+          "probabilities": {
+            "0": 0.66,
+            "1": 0.29,
+            "2": 0.02,
+            "3": 0.02,
+            "4": 0.01
+          }
+        },
+        "relevance": {
+          "score": 4.15,
+          "confidence": 0.5,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.21,
+            "3": 0.42,
+            "4": 0.37
+          }
+        },
+        "coverage": {
+          "score": 1.46,
+          "confidence": 0.62,
+          "probabilities": {
+            "0": 0.77,
+            "1": 0.03,
+            "2": 0.17,
+            "3": 0.02,
+            "4": 0.01
+          }
+        },
+        "specificity": {
+          "score": 1.9,
+          "confidence": 0.55,
+          "probabilities": {
+            "0": 0.33,
+            "1": 0.47,
+            "2": 0.18,
+            "3": 0.02,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2171,
+        "output_tokens": 62,
+        "cost": 9.1182e-05
+      }
+    },
+    {
+      "question_id": "global_013",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.0,
+        "relevance": 4.71,
+        "coverage": 1.01,
+        "specificity": 1.6600000000000001
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.0,
+          "confidence": 1,
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.71,
+          "confidence": 0.76,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.03,
+            "3": 0.2,
+            "4": 0.77
+          }
+        },
+        "coverage": {
+          "score": 1.01,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.6600000000000001,
+          "confidence": 0.7,
+          "probabilities": {
+            "0": 0.35,
+            "1": 0.64,
+            "2": 0.01,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1632,
+        "output_tokens": 62,
+        "cost": 6.8544e-05
+      }
+    },
+    {
+      "question_id": "global_014",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 2.1100000000000003,
+        "relevance": 4.52,
+        "coverage": 3.04,
+        "specificity": 2.58
+      },
+      "detail": {
+        "attribution": {
+          "score": 2.1100000000000003,
+          "confidence": 0.4,
+          "probabilities": {
+            "0": 0.31,
+            "1": 0.48,
+            "2": 0.05,
+            "3": 0.11,
+            "4": 0.05
+          }
+        },
+        "relevance": {
+          "score": 4.52,
+          "confidence": 0.6,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.09,
+            "3": 0.29,
+            "4": 0.62
+          }
+        },
+        "coverage": {
+          "score": 3.04,
+          "confidence": 0.81,
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.05,
+            "2": 0.82,
+            "3": 0.08,
+            "4": 0.03
+          }
+        },
+        "specificity": {
+          "score": 2.58,
+          "confidence": 0.2,
+          "probabilities": {
+            "0": 0.24,
+            "1": 0.21,
+            "2": 0.31,
+            "3": 0.22,
+            "4": 0.02
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2243,
+        "output_tokens": 62,
+        "cost": 9.4206e-05
+      }
+    },
+    {
+      "question_id": "global_015",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 2.21,
+        "relevance": 4.67,
+        "coverage": 3.08,
+        "specificity": 2.37
+      },
+      "detail": {
+        "attribution": {
+          "score": 2.21,
+          "confidence": 0.32,
+          "probabilities": {
+            "0": 0.3,
+            "1": 0.45,
+            "2": 0.05,
+            "3": 0.13,
+            "4": 0.07
+          }
+        },
+        "relevance": {
+          "score": 4.67,
+          "confidence": 0.72,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.07,
+            "3": 0.18,
+            "4": 0.75
+          }
+        },
+        "coverage": {
+          "score": 3.08,
+          "confidence": 0.75,
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.07,
+            "2": 0.75,
+            "3": 0.12,
+            "4": 0.04
+          }
+        },
+        "specificity": {
+          "score": 2.37,
+          "confidence": 0.18,
+          "probabilities": {
+            "0": 0.27,
+            "1": 0.26,
+            "2": 0.32,
+            "3": 0.13,
+            "4": 0.02
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2120,
+        "output_tokens": 62,
+        "cost": 8.904e-05
+      }
+    },
+    {
+      "question_id": "maintenance_narratives_001",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.02,
+        "relevance": 4.470000000000001,
+        "coverage": 1.03,
+        "specificity": 1.72
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.02,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0.99,
+            "1": 0.01,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.470000000000001,
+          "confidence": 0.55,
+          "probabilities": {
+            "0": 0,
+            "1": 0.02,
+            "2": 0.12,
+            "3": 0.23,
+            "4": 0.63
+          }
+        },
+        "coverage": {
+          "score": 1.03,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0.98,
+            "1": 0.01,
+            "2": 0.01,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.72,
+          "confidence": 0.72,
+          "probabilities": {
+            "0": 0.31,
+            "1": 0.66,
+            "2": 0.03,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2065,
+        "output_tokens": 62,
+        "cost": 8.673e-05
+      }
+    },
+    {
+      "question_id": "maintenance_narratives_002",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.13,
+        "relevance": 4.95,
+        "coverage": 1.18,
+        "specificity": 1.77
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.13,
+          "confidence": 0.9,
+          "probabilities": {
+            "0": 0.9,
+            "1": 0.1,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.95,
+          "confidence": 0.96,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0.03,
+            "4": 0.97
+          }
+        },
+        "coverage": {
+          "score": 1.18,
+          "confidence": 0.85,
+          "probabilities": {
+            "0": 0.87,
+            "1": 0.1,
+            "2": 0.03,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.77,
+          "confidence": 0.65,
+          "probabilities": {
+            "0": 0.32,
+            "1": 0.6,
+            "2": 0.07,
+            "3": 0.01,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2256,
+        "output_tokens": 62,
+        "cost": 9.4752e-05
+      }
+    },
+    {
+      "question_id": "maintenance_narratives_003",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.13,
+        "relevance": 4.2,
+        "coverage": 1.38,
+        "specificity": 2.12
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.13,
+          "confidence": 0.89,
+          "probabilities": {
+            "0": 0.89,
+            "1": 0.11,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.2,
+          "confidence": 0.34,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.01,
+            "2": 0.2,
+            "3": 0.33,
+            "4": 0.45
+          }
+        },
+        "coverage": {
+          "score": 1.38,
+          "confidence": 0.69,
+          "probabilities": {
+            "0": 0.73,
+            "1": 0.19,
+            "2": 0.06,
+            "3": 0.01,
+            "4": 0.01
+          }
+        },
+        "specificity": {
+          "score": 2.12,
+          "confidence": 0.71,
+          "probabilities": {
+            "0": 0.11,
+            "1": 0.6799999999999999,
+            "2": 0.18,
+            "3": 0.02,
+            "4": 0.01
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2370,
+        "output_tokens": 62,
+        "cost": 9.954e-05
+      }
+    },
+    {
+      "question_id": "maintenance_narratives_004",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.03,
+        "relevance": 4.96,
+        "coverage": 1.02,
+        "specificity": 1.76
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.03,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0.98,
+            "1": 0.02,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.96,
+          "confidence": 0.96,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.01,
+            "4": 0.98
+          }
+        },
+        "coverage": {
+          "score": 1.02,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.76,
+          "confidence": 0.74,
+          "probabilities": {
+            "0": 0.28,
+            "1": 0.69,
+            "2": 0.03,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1999,
+        "output_tokens": 62,
+        "cost": 8.3958e-05
+      }
+    },
+    {
+      "question_id": "maintenance_narratives_005",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.7,
+        "relevance": 4.9399999999999995,
+        "coverage": 2.46,
+        "specificity": 2.91
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.7,
+          "confidence": 0.58,
+          "probabilities": {
+            "0": 0.41,
+            "1": 0.53,
+            "2": 0.02,
+            "3": 0.03,
+            "4": 0.01
+          }
+        },
+        "relevance": {
+          "score": 4.9399999999999995,
+          "confidence": 0.95,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.03,
+            "4": 0.96
+          }
+        },
+        "coverage": {
+          "score": 2.46,
+          "confidence": 0.32,
+          "probabilities": {
+            "0": 0.28,
+            "1": 0.12,
+            "2": 0.49,
+            "3": 0.09,
+            "4": 0.02
+          }
+        },
+        "specificity": {
+          "score": 2.91,
+          "confidence": 0.51,
+          "probabilities": {
+            "0": 0.06,
+            "1": 0.23,
+            "2": 0.49,
+            "3": 0.18,
+            "4": 0.04
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2171,
+        "output_tokens": 62,
+        "cost": 9.1182e-05
+      }
+    },
+    {
+      "question_id": "maintenance_narratives_006",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.01,
+        "relevance": 4.65,
+        "coverage": 1.02,
+        "specificity": 1.53
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.01,
+          "confidence": 0.99,
+          "probabilities": {
+            "0": 0.99,
+            "1": 0.01,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.65,
+          "confidence": 0.71,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.09,
+            "3": 0.14,
+            "4": 0.76
+          }
+        },
+        "coverage": {
+          "score": 1.02,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0.98,
+            "1": 0.01,
+            "2": 0.01,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.53,
+          "confidence": 0.59,
+          "probabilities": {
+            "0": 0.48,
+            "1": 0.51,
+            "2": 0.01,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2223,
+        "output_tokens": 62,
+        "cost": 9.3366e-05
+      }
+    },
+    {
+      "question_id": "maintenance_narratives_007",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.49,
+        "relevance": 4.92,
+        "coverage": 2.56,
+        "specificity": 2.71
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.49,
+          "confidence": 0.59,
+          "probabilities": {
+            "0": 0.55,
+            "1": 0.42,
+            "2": 0.01,
+            "3": 0.01,
+            "4": 0.01
+          }
+        },
+        "relevance": {
+          "score": 4.92,
+          "confidence": 0.93,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.06,
+            "4": 0.93
+          }
+        },
+        "coverage": {
+          "score": 2.56,
+          "confidence": 0.42,
+          "probabilities": {
+            "0": 0.24,
+            "1": 0.09,
+            "2": 0.57,
+            "3": 0.08,
+            "4": 0.02
+          }
+        },
+        "specificity": {
+          "score": 2.71,
+          "confidence": 0.53,
+          "probabilities": {
+            "0": 0.09,
+            "1": 0.24,
+            "2": 0.55,
+            "3": 0.11,
+            "4": 0.01
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2256,
+        "output_tokens": 62,
+        "cost": 9.4752e-05
+      }
+    },
+    {
+      "question_id": "maintenance_narratives_008",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.07,
+        "relevance": 4.65,
+        "coverage": 1.09,
+        "specificity": 1.83
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.07,
+          "confidence": 0.95,
+          "probabilities": {
+            "0": 0.94,
+            "1": 0.06,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.65,
+          "confidence": 0.71,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.06,
+            "3": 0.23,
+            "4": 0.71
+          }
+        },
+        "coverage": {
+          "score": 1.09,
+          "confidence": 0.92,
+          "probabilities": {
+            "0": 0.94,
+            "1": 0.04,
+            "2": 0.02,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.83,
+          "confidence": 0.74,
+          "probabilities": {
+            "0": 0.24,
+            "1": 0.7,
+            "2": 0.06,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2202,
+        "output_tokens": 62,
+        "cost": 9.2484e-05
+      }
+    },
+    {
+      "question_id": "maintenance_narratives_009",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.05,
+        "relevance": 4.0600000000000005,
+        "coverage": 1.04,
+        "specificity": 1.78
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.05,
+          "confidence": 0.96,
+          "probabilities": {
+            "0": 0.97,
+            "1": 0.03,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.0600000000000005,
+          "confidence": 0.48,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.28,
+            "3": 0.38,
+            "4": 0.34
+          }
+        },
+        "coverage": {
+          "score": 1.04,
+          "confidence": 0.97,
+          "probabilities": {
+            "0": 0.98,
+            "1": 0.01,
+            "2": 0.01,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.78,
+          "confidence": 0.76,
+          "probabilities": {
+            "0": 0.25,
+            "1": 0.72,
+            "2": 0.03,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2192,
+        "output_tokens": 62,
+        "cost": 9.2064e-05
+      }
+    },
+    {
+      "question_id": "maintenance_narratives_010",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.9100000000000001,
+        "relevance": 4.109999999999999,
+        "coverage": 2.6,
+        "specificity": 2.24
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.9100000000000001,
+          "confidence": 0.24,
+          "probabilities": {
+            "0": 0.45,
+            "1": 0.39,
+            "2": 0.03,
+            "3": 0.06,
+            "4": 0.07
+          }
+        },
+        "relevance": {
+          "score": 4.109999999999999,
+          "confidence": 0.26,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.27,
+            "3": 0.35,
+            "4": 0.38
+          }
+        },
+        "coverage": {
+          "score": 2.6,
+          "confidence": 0.54,
+          "probabilities": {
+            "0": 0.12,
+            "1": 0.24,
+            "2": 0.59,
+            "3": 0.02,
+            "4": 0.03
+          }
+        },
+        "specificity": {
+          "score": 2.24,
+          "confidence": 0.32,
+          "probabilities": {
+            "0": 0.29,
+            "1": 0.34,
+            "2": 0.23,
+            "3": 0.12,
+            "4": 0.02
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2263,
+        "output_tokens": 62,
+        "cost": 9.5046e-05
+      }
+    },
+    {
+      "question_id": "aircraft_problems_actions_001",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.04,
+        "relevance": 4.91,
+        "coverage": 1.07,
+        "specificity": 1.8
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.04,
+          "confidence": 0.97,
+          "probabilities": {
+            "0": 0.96,
+            "1": 0.04,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.91,
+          "confidence": 0.92,
+          "probabilities": {
+            "0": 0,
+            "1": 0.01,
+            "2": 0.01,
+            "3": 0.03,
+            "4": 0.95
+          }
+        },
+        "coverage": {
+          "score": 1.07,
+          "confidence": 0.94,
+          "probabilities": {
+            "0": 0.95,
+            "1": 0.04,
+            "2": 0.01,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.8,
+          "confidence": 0.78,
+          "probabilities": {
+            "0": 0.23,
+            "1": 0.75,
+            "2": 0.02,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2139,
+        "output_tokens": 62,
+        "cost": 8.9838e-05
+      }
+    },
+    {
+      "question_id": "aircraft_problems_actions_002",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.02,
+        "relevance": 4.33,
+        "coverage": 1.02,
+        "specificity": 1.67
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.02,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 0.99,
+            "1": 0.01,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.33,
+          "confidence": 0.44,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.15,
+            "3": 0.37,
+            "4": 0.48
+          }
+        },
+        "coverage": {
+          "score": 1.02,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.67,
+          "confidence": 0.69,
+          "probabilities": {
+            "0": 0.35,
+            "1": 0.63,
+            "2": 0.02,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1615,
+        "output_tokens": 62,
+        "cost": 6.783e-05
+      }
+    },
+    {
+      "question_id": "aircraft_problems_actions_003",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.27,
+        "relevance": 4.35,
+        "coverage": 1.46,
+        "specificity": 2.27
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.27,
+          "confidence": 0.77,
+          "probabilities": {
+            "0": 0.75,
+            "1": 0.25,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.35,
+          "confidence": 0.46,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.16,
+            "3": 0.33,
+            "4": 0.51
+          }
+        },
+        "coverage": {
+          "score": 1.46,
+          "confidence": 0.61,
+          "probabilities": {
+            "0": 0.7,
+            "1": 0.15,
+            "2": 0.15,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 2.27,
+          "confidence": 0.51,
+          "probabilities": {
+            "0": 0.16,
+            "1": 0.43,
+            "2": 0.39,
+            "3": 0.02,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2280,
+        "output_tokens": 62,
+        "cost": 9.576e-05
+      }
+    },
+    {
+      "question_id": "aircraft_problems_actions_004",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.0,
+        "relevance": 4.76,
+        "coverage": 1.03,
+        "specificity": 1.9300000000000002
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.0,
+          "confidence": 1,
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.76,
+          "confidence": 0.8,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.02,
+            "3": 0.19,
+            "4": 0.79
+          }
+        },
+        "coverage": {
+          "score": 1.03,
+          "confidence": 0.98,
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.9300000000000002,
+          "confidence": 0.9,
+          "probabilities": {
+            "0": 0.1,
+            "1": 0.88,
+            "2": 0.02,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2242,
+        "output_tokens": 62,
+        "cost": 9.4164e-05
+      }
+    },
+    {
+      "question_id": "aircraft_problems_actions_005",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.26,
+        "relevance": 4.82,
+        "coverage": 3.0,
+        "specificity": 2.27
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.26,
+          "confidence": 0.78,
+          "probabilities": {
+            "0": 0.76,
+            "1": 0.24,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.82,
+          "confidence": 0.85,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.05,
+            "3": 0.07,
+            "4": 0.88
+          }
+        },
+        "coverage": {
+          "score": 3.0,
+          "confidence": 0.67,
+          "probabilities": {
+            "0": 0.05,
+            "1": 0.1,
+            "2": 0.68,
+            "3": 0.13,
+            "4": 0.04
+          }
+        },
+        "specificity": {
+          "score": 2.27,
+          "confidence": 0.55,
+          "probabilities": {
+            "0": 0.14,
+            "1": 0.5,
+            "2": 0.33,
+            "3": 0.03,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2186,
+        "output_tokens": 62,
+        "cost": 9.1812e-05
+      }
+    },
+    {
+      "question_id": "aircraft_problems_actions_006",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.04,
+        "relevance": 4.23,
+        "coverage": 1.16,
+        "specificity": 2.0
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.04,
+          "confidence": 0.97,
+          "probabilities": {
+            "0": 0.97,
+            "1": 0.03,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.23,
+          "confidence": 0.36,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.18,
+            "3": 0.4,
+            "4": 0.42
+          }
+        },
+        "coverage": {
+          "score": 1.16,
+          "confidence": 0.87,
+          "probabilities": {
+            "0": 0.89,
+            "1": 0.08,
+            "2": 0.02,
+            "3": 0,
+            "4": 0.01
+          }
+        },
+        "specificity": {
+          "score": 2.0,
+          "confidence": 0.84,
+          "probabilities": {
+            "0": 0.09,
+            "1": 0.83,
+            "2": 0.08,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2245,
+        "output_tokens": 62,
+        "cost": 9.429e-05
+      }
+    },
+    {
+      "question_id": "aircraft_problems_actions_007",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.04,
+        "relevance": 3.44,
+        "coverage": 1.04,
+        "specificity": 1.6400000000000001
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.04,
+          "confidence": 0.97,
+          "probabilities": {
+            "0": 0.97,
+            "1": 0.03,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 3.44,
+          "confidence": 0.58,
+          "probabilities": {
+            "0": 0,
+            "1": 0.03,
+            "2": 0.64,
+            "3": 0.19,
+            "4": 0.14
+          }
+        },
+        "coverage": {
+          "score": 1.04,
+          "confidence": 0.97,
+          "probabilities": {
+            "0": 0.98,
+            "1": 0.01,
+            "2": 0.01,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 1.6400000000000001,
+          "confidence": 0.67,
+          "probabilities": {
+            "0": 0.38,
+            "1": 0.6,
+            "2": 0.02,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 1647,
+        "output_tokens": 62,
+        "cost": 6.9174e-05
+      }
+    },
+    {
+      "question_id": "aircraft_problems_actions_008",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.45,
+        "relevance": 4.55,
+        "coverage": 2.6799999999999997,
+        "specificity": 2.4699999999999998
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.45,
+          "confidence": 0.63,
+          "probabilities": {
+            "0": 0.59,
+            "1": 0.39,
+            "2": 0.01,
+            "3": 0.01,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.55,
+          "confidence": 0.62,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.12,
+            "3": 0.21,
+            "4": 0.67
+          }
+        },
+        "coverage": {
+          "score": 2.6799999999999997,
+          "confidence": 0.66,
+          "probabilities": {
+            "0": 0.05,
+            "1": 0.27,
+            "2": 0.64,
+            "3": 0.03,
+            "4": 0.01
+          }
+        },
+        "specificity": {
+          "score": 2.4699999999999998,
+          "confidence": 0.46,
+          "probabilities": {
+            "0": 0.15,
+            "1": 0.29,
+            "2": 0.5,
+            "3": 0.05,
+            "4": 0.01
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2318,
+        "output_tokens": 62,
+        "cost": 9.7356e-05
+      }
+    },
+    {
+      "question_id": "aircraft_problems_actions_009",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.18,
+        "relevance": 4.49,
+        "coverage": 1.31,
+        "specificity": 1.95
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.18,
+          "confidence": 0.85,
+          "probabilities": {
+            "0": 0.84,
+            "1": 0.16,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.49,
+          "confidence": 0.57,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.09,
+            "3": 0.32,
+            "4": 0.59
+          }
+        },
+        "coverage": {
+          "score": 1.31,
+          "confidence": 0.75,
+          "probabilities": {
+            "0": 0.78,
+            "1": 0.14,
+            "2": 0.07,
+            "3": 0,
+            "4": 0.01
+          }
+        },
+        "specificity": {
+          "score": 1.95,
+          "confidence": 0.7,
+          "probabilities": {
+            "0": 0.21,
+            "1": 0.64,
+            "2": 0.14,
+            "3": 0.01,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2242,
+        "output_tokens": 62,
+        "cost": 9.4164e-05
+      }
+    },
+    {
+      "question_id": "aircraft_problems_actions_010",
+      "status": "scored",
+      "rubric": "jev_grounded",
+      "style_names": [
+        "Grounded",
+        "Source-card"
+      ],
+      "scores": {
+        "attribution": 1.19,
+        "relevance": 4.38,
+        "coverage": 1.88,
+        "specificity": 2.06
+      },
+      "detail": {
+        "attribution": {
+          "score": 1.19,
+          "confidence": 0.84,
+          "probabilities": {
+            "0": 0.82,
+            "1": 0.18,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "relevance": {
+          "score": 4.38,
+          "confidence": 0.48,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.15,
+            "3": 0.32,
+            "4": 0.53
+          }
+        },
+        "coverage": {
+          "score": 1.88,
+          "confidence": 0.8,
+          "probabilities": {
+            "0": 0.18,
+            "1": 0.78,
+            "2": 0.04,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "specificity": {
+          "score": 2.06,
+          "confidence": 0.2,
+          "probabilities": {
+            "0": 0.32,
+            "1": 0.32,
+            "2": 0.35,
+            "3": 0.01,
+            "4": 0
+          }
+        }
+      },
+      "model": "typesafe/jev-1.13-20260917",
+      "usage": {
+        "input_tokens": 2200,
+        "output_tokens": 62,
+        "cost": 9.24e-05
+      }
+    }
+  ],
+  "n_items": 83,
+  "n_scored": 83,
+  "n_no_source": 0,
+  "timestamp": "2026-10-01T01:27:47.297755+00:00"
+}

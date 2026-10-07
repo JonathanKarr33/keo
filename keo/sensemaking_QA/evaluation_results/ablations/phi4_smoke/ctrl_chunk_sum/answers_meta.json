@@ -1,0 +1,80 @@
+{
+  "method": "chunk_sum",
+  "controls": {
+    "shuffle_edges": false,
+    "strip_relations": false,
+    "dedup_chunks": false,
+    "match_context_budget": false,
+    "control_seed": null
+  },
+  "selection": {
+    "selector": "mst",
+    "use_mst": true
+  },
+  "risk_selection_summary": {},
+  "use_mst": true,
+  "edge_weight": "freq",
+  "embedding_backend": "local",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "provider": "local",
+  "API_provider": null,
+  "base_url": "http://127.0.0.1:8000/v1",
+  "answer_model": "mlx-community/phi-4-4bit",
+  "answer_model_exact": "mlx-community/phi-4-4bit",
+  "kg_path": "../kg/output/kg_llm/gpt4o_with_nodes_batches/100/gpt4o_withprevnodes_100_with_entity_mentions_fixed.gml",
+  "n_questions": 3,
+  "timestamp": "2026-09-24T20:43:36.641661",
+  "model_provenance": {
+    "role": "answerer",
+    "timestamp_utc": "2026-09-25T00:43:36.619142+00:00",
+    "llm": {
+      "requested_id": "mlx-community/phi-4-4bit",
+      "resolved_id": "mlx-community/phi-4-4bit",
+      "provider": "local",
+      "base_url": "http://127.0.0.1:8000/v1",
+      "available_models": [
+        "mlx-community/phi-4-4bit"
+      ],
+      "observed_ids": [
+        "mlx-community/phi-4-4bit"
+      ],
+      "exact_id": "mlx-community/phi-4-4bit"
+    },
+    "packages": {
+      "python": "3.9.6",
+      "platform": "macOS-15.7.4-arm64-arm-64bit",
+      "openai": "2.48.0",
+      "anthropic": "0.125.0",
+      "huggingface_hub": "0.36.2",
+      "sentence_transformers": "5.1.2",
+      "transformers": "4.57.6",
+      "torch": "2.8.0",
+      "networkx": "3.2.1"
+    },
+    "embedding": {
+      "backend": "local",
+      "requested_id": "sentence-transformers/all-MiniLM-L6-v2",
+      "resolved_id": "sentence-transformers/all-MiniLM-L6-v2",
+      "dim": 384,
+      "revision_sha": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "resolved_id_with_revision": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4",
+      "st_model_name_or_path": "SentenceTransformer(\n  (0): Transformer({'max_seq_length': 256, 'do_lower_case': False, 'architecture': 'BertModel'})\n  (1): Pooling({'word_embedding_dimension': 384, 'pooling_mode_cls_token': False, 'pooling_mode_mean_tokens': True, 'pooling_mode_max_tokens': False, 'pooling_mode_mean_sqrt_len_tokens': False, 'pooling_mode_weightedmean_tokens': False, 'pooling_mode_lasttoken': False, 'include_prompt': True})\n  (2): Normalize()\n)"
+    },
+    "extra": {
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "local",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": false,
+        "control_seed": null
+      },
+      "selection": {
+        "selector": "mst",
+        "use_mst": true
+      }
+    }
+  }
+}

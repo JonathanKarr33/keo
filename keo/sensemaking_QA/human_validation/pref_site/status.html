@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>KEO · Status</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="page-status">
+  <header class="site-header">
+    <a class="brand" href="index.html">KEO</a>
+    <nav>
+      <a href="index.html">Sign in</a>
+      <a href="rate.html">Prefs</a>
+      <a href="severity.html">Severity</a>
+      <a href="adjudicate.html">Adjudicate</a>
+      <a href="status.html" aria-current="page">Status</a>
+    </nav>
+    <div class="header-right">
+      <button type="button" id="btn-refresh" class="ghost dark">Refresh</button>
+    </div>
+  </header>
+
+  <main class="status-main">
+    <p class="eyebrow">Live from disk</p>
+    <h1>Annotation status</h1>
+    <p class="lede">Progress for answer preferences and severity / risk triples.</p>
+    <h2 class="status-h2">Answer preferences</h2>
+    <div id="summary" class="status-cards"></div>
+    <div id="agree" class="agree-box" hidden></div>
+    <div class="table-wrap">
+      <table id="labels-table">
+        <thead>
+          <tr>
+            <th>Ann.</th>
+            <th>#</th>
+            <th>Item</th>
+            <th>A/B</th>
+            <th>System</th>
+            <th>When</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <h2 class="status-h2">Severity triples</h2>
+    <div id="sev-summary" class="status-cards"></div>
+    <div id="sev-agree" class="agree-box" hidden></div>
+    <div class="table-wrap">
+      <table id="sev-table">
+        <thead>
+          <tr>
+            <th>Ann.</th>
+            <th>#</th>
+            <th>Triple</th>
+            <th>Class</th>
+            <th>When</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="fineprint" id="paths"></p>
+  </main>
+  <script src="status.js"></script>
+</body>
+</html>

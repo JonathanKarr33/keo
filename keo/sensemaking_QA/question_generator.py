@@ -15,7 +15,7 @@ from data_analyzer import AviationDataAnalyzer
 
 
 class SensemakingQuestionGenerator:
-    def __init__(self, api_key: str, model: str = "gpt-4o"):
+    def __init__(self, api_key: str, model: str = "gpt-5.6-terra"):
         """
         Initialize the question generator with OpenAI API
         
@@ -90,6 +90,18 @@ class SensemakingQuestionGenerator:
                 ]
             }
         }
+
+    def _chat(self, messages, max_tokens: int = 1000, temperature: float = 0.7) -> str:
+        mid = (self.model or "").lower()
+        kwargs = {"model": self.model, "messages": messages}
+        if mid.startswith("gpt-5") or mid.startswith("gpt-6") or mid.startswith("o1") or mid.startswith("o3"):
+            kwargs["max_completion_tokens"] = max_tokens
+            kwargs["reasoning_effort"] = "none"
+        else:
+            kwargs["max_tokens"] = max_tokens
+            kwargs["temperature"] = temperature
+        response = self.client.chat.completions.create(**kwargs)
+        return (response.choices[0].message.content or "").strip()
     
     def generate_comprehensive_questions(self, 
                                        analyzer: AviationDataAnalyzer,
@@ -177,17 +189,14 @@ Generate exactly {num_questions} questions, each on a new line without numbering
 """
         
         try:
-            response = self.client.chat.completions.create(
-                model=self.model,
-                messages=[
+            questions_text = self._chat(
+                [
                     {"role": "system", "content": "You are an expert aviation safety analyst specializing in comprehensive data analysis and global pattern recognition."},
                     {"role": "user", "content": prompt}
                 ],
                 max_tokens=1500,
-                temperature=0.8
+                temperature=0.8,
             )
-            
-            questions_text = response.choices[0].message.content.strip()
             questions = [q.strip() for q in questions_text.split('\n') if q.strip()]
             
             # Format as structured data
@@ -246,17 +255,14 @@ Each question should require analysis across multiple records to answer comprehe
 """
         
         try:
-            response = self.client.chat.completions.create(
-                model=self.model,
-                messages=[
+            questions_text = self._chat(
+                [
                     {"role": "system", "content": "You are an aviation maintenance expert focused on identifying actionable insights from incident data."},
                     {"role": "user", "content": prompt}
                 ],
                 max_tokens=1200,
-                temperature=0.7
+                temperature=0.7,
             )
-            
-            questions_text = response.choices[0].message.content.strip()
             questions = [q.strip() for q in questions_text.split('\n') if q.strip()]
             
             # Format as structured data
@@ -310,17 +316,14 @@ Generate exactly {num_questions} questions, each on a new line without numbering
 """
         
         try:
-            response = self.client.chat.completions.create(
-                model=self.model,
-                messages=[
+            questions_text = self._chat(
+                [
                     {"role": "system", "content": "You are an expert aviation safety analyst specializing in maintenance data analysis and pattern recognition."},
                     {"role": "user", "content": prompt}
                 ],
                 max_tokens=1000,
-                temperature=0.8
+                temperature=0.8,
             )
-            
-            questions_text = response.choices[0].message.content.strip()
             questions = [q.strip() for q in questions_text.split('\n') if q.strip()]
             
             # Format as structured data

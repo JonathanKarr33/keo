@@ -1,0 +1,111 @@
+{
+  "track": "A_offline_graph_stats",
+  "kg": "/Users/jonathankarr/Documents/keo/keo/kg/output/knowledge_graph.gml",
+  "n_nodes": 468,
+  "n_edges": 278,
+  "n_components_with_edges": 86,
+  "mean_edge_reduction": 0.030485220604216472,
+  "components_sample": [
+    {
+      "n": 3,
+      "full": 2,
+      "mst": 2
+    },
+    {
+      "n": 103,
+      "full": 107,
+      "mst": 102
+    },
+    {
+      "n": 4,
+      "full": 3,
+      "mst": 3
+    },
+    {
+      "n": 2,
+      "full": 1,
+      "mst": 1
+    },
+    {
+      "n": 8,
+      "full": 7,
+      "mst": 7
+    },
+    {
+      "n": 5,
+      "full": 5,
+      "mst": 4
+    },
+    {
+      "n": 3,
+      "full": 2,
+      "mst": 2
+    },
+    {
+      "n": 9,
+      "full": 8,
+      "mst": 8
+    },
+    {
+      "n": 4,
+      "full": 3,
+      "mst": 3
+    },
+    {
+      "n": 2,
+      "full": 1,
+      "mst": 1
+    },
+    {
+      "n": 3,
+      "full": 2,
+      "mst": 2
+    },
+    {
+      "n": 3,
+      "full": 2,
+      "mst": 2
+    },
+    {
+      "n": 4,
+      "full": 3,
+      "mst": 3
+    },
+    {
+      "n": 6,
+      "full": 5,
+      "mst": 5
+    },
+    {
+      "n": 3,
+      "full": 2,
+      "mst": 2
+    },
+    {
+      "n": 4,
+      "full": 3,
+      "mst": 3
+    },
+    {
+      "n": 2,
+      "full": 1,
+      "mst": 1
+    },
+    {
+      "n": 2,
+      "full": 1,
+      "mst": 1
+    },
+    {
+      "n": 2,
+      "full": 1,
+      "mst": 1
+    },
+    {
+      "n": 2,
+      "full": 1,
+      "mst": 1
+    }
+  ],
+  "note": "Offline MST ablation geometry only; LLM answer sweeps still need API/GPU via run_ablation_matrix.sh"
+}

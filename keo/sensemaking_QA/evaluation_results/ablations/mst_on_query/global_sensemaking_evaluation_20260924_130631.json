@@ -1,0 +1,333 @@
+{
+  "timestamp": "20260924_130631",
+  "by_method": {
+    "keo": {
+      "global_questions_evaluated": 3,
+      "global_metrics": {
+        "global_perspective": 2.0,
+        "theme_identification": 2.0,
+        "synthesis_quality": 2.3333333333333335,
+        "strategic_value": 2.0,
+        "pattern_recognition": 2.0,
+        "total_evaluated": 3
+      },
+      "individual_evaluations": [
+        {
+          "question_id": "system_level_understanding_005",
+          "global_metrics": {
+            "global_perspective": 2.0,
+            "theme_identification": 2.0,
+            "synthesis_quality": 2.0,
+            "strategic_value": 2.0,
+            "pattern_recognition": 2.0
+          },
+          "evaluation_text": "Global Perspective: 2 - The answer references multiple \"Knowledge Paths\" and \"Communities\" but lacks evidence of systematic fleet-wide pattern analysis. It makes generalized claims about dataset trends (e.g., \"replacement tends to reduce recurrence rates more effectively\") without quantitative evidence or demonstration of comprehensive data coverage. The approach is illustrative rather than demonstrative of understanding actual dataset scope and patterns.\n\nTheme Identification: 2 - While replacement vs. repair and preventive maintenance are identified, these are generic themes applicable to most maintenance contexts. The answer fails to identify domain-specific or dataset-specific themes such as equipment criticality patterns, failure mode categories, maintenance-induced failures, or fleet composition effects. The themes lack specificity and depth relative to aviation maintenance complexity.\n\nSynthesis Quality: 2 - The answer enumerates examples from different sources (brake problems, fuel siphonage, engine malfunctions) but does not truly integrate them into cohesive insights. There is no analysis of how these examples interact, overlap, or relate systematically. The synthesis is additive (listing examples) rather than integrative (showing relationships and interdependencies across the dataset).\n\nStrategic Value: 2 - Recommendations are generic platitudes (perform regular inspections, ensure timely maintenance, focus on prevention) without quantification, prioritization, or cost-benefit analysis. The answer provides no metrics for decision-making, no resource allocation guidance, and no equipment-specific prioritization. Strategic decisions require specific, evidence-based recommendations grounded in fleet data.\n\nPattern Recognition: 2 - Only simple, surface-level relationships are identified (replacement outperforms repair). Complex relationships are absent, including conditional patterns (when replacement is superior vs. when repair suffices), equipment-type dependencies, failure-mode cascades, and interaction effects between variables. The analysis lacks the sophistication expected for genuine pattern recognition.\n\nGlobal Sensemaking Assessment: This answer demonstrates LOW global sensemaking capability. It addresses the question with illustrative examples and generic insights rather than comprehensive, data-driven analysis of fleet-wide patterns. The answer lacks quantitative evidence, identifies only obvious themes, fails to integrate insights meaningfully, and provides recommendations insufficiently grounded in systematic dataset analysis. True global sensemaking requires synthesized understanding of complex interdependencies across the entire dataset, which this response does not achieve.",
+          "evaluator_model": "claude-haiku-4-5-20251001",
+          "evaluator_model_exact": "claude-haiku-4-5-20251001"
+        },
+        {
+          "question_id": "root_cause_analysis_007",
+          "global_metrics": {
+            "global_perspective": 2.0,
+            "theme_identification": 2.0,
+            "synthesis_quality": 3.0,
+            "strategic_value": 2.0,
+            "pattern_recognition": 2.0
+          },
+          "evaluation_text": "Global Perspective: 2 - The answer references \"maintenance records\" and specific incidents but lacks evidence of synthesizing patterns across the entire dataset. It treats examples (vibration issues, fastening problems) as isolated cases rather than demonstrating comprehensive, dataset-wide pattern identification. No statistical distribution or systematic scope analysis is evident.\n\nTheme Identification: 2 - While some themes are mentioned (inspection gaps, adherence issues, training needs), they are generic and underexplored. The answer does not connect these themes to specific data-driven patterns or demonstrate how they emerge consistently across multiple incident categories in the dataset.\n\nSynthesis Quality: 3 - The answer combines some related concepts (inspections, training, diagnostics) but lacks evidence of synthesizing across different maintenance domains (structural, engine, brake, control systems). It treats problems somewhat independently rather than revealing how failures in one area might cascade or correlate with systemic issues in others.\n\nStrategic Value: 2 - Recommendations are generic best practices (enhanced focus, advanced tools, better training, continuous review) rather than prioritized, data-driven insights. A strategic answer would specify which gaps have highest impact, resource allocation guidance, or which systemic interventions would yield greatest safety improvements based on dataset analysis.\n\nPattern Recognition: 2 - The answer does not identify complex relationships or dependencies. It fails to explore whether training deficits correlate with specific incident types, how inspection procedures interact with failure modes, or what systemic factors compound maintenance risks. Causal chains and interconnected failures are not analyzed.\n\nGlobal Sensemaking Assessment: This answer does not successfully demonstrate global sensemaking capability. It presents reasonable maintenance improvement suggestions but operates at the level of general industry knowledge rather than dataset-derived synthesis. True global sensemaking would reveal overarching patterns, systemic vulnerabilities, and interconnected factors across the complete maintenance dataset, providing evidence-based strategic insight unavailable through isolated example analysis.",
+          "evaluator_model": "claude-haiku-4-5-20251001",
+          "evaluator_model_exact": "claude-haiku-4-5-20251001"
+        },
+        {
+          "question_id": "maintenance_narratives_008",
+          "global_metrics": {
+            "global_perspective": 2.0,
+            "theme_identification": 2.0,
+            "synthesis_quality": 2.0,
+            "strategic_value": 2.0,
+            "pattern_recognition": 2.0
+          },
+          "evaluation_text": "Global Perspective: 2 - The answer provides general information about electrical system failures without demonstrating analysis of patterns across a maintenance dataset. It lacks reference to specific data points, frequency distributions, or dataset-wide operational trends that would indicate comprehensive understanding of the problem space.\n\nTheme Identification: 2 - While identifying redundancy as a mitigation theme, the answer fails to extract nuanced patterns from data such as failure cascade sequences, frequency of specific interaction types, or systemic vulnerabilities revealed through incident analysis. Themes are generic rather than data-derived.\n\nSynthesis Quality: 2 - The answer reads as general aviation knowledge rather than synthesis across multiple data sources. There is no evidence of cross-referencing maintenance records, incident reports, or system interaction data. No integration of patterns from different datasets or operational domains.\n\nStrategic Value: 2 - Recommendations lack prioritization and specificity needed for high-level decision making. The answer does not identify which electrical failures most frequently trigger cascades, comparative cost-benefit analysis of redundancy options, or data-driven resource allocation guidance. Insights are too generic to guide strategic investment.\n\nPattern Recognition: 2 - While acknowledging that electrical failures compromise other systems, the answer does not identify complex interdependencies, failure sequence patterns, predictive relationships, or systemic vulnerabilities that emerge from comprehensive data analysis. System interactions are mentioned superficially.\n\nGlobal Sensemaking Assessment: This answer does NOT successfully demonstrate global sensemaking capability. It provides standard domain knowledge without evidence of dataset synthesis, pattern extraction, or data-driven analysis. Additionally, the answer contains severe repetition in the conclusion that further undermines quality. Global sensemaking requires identifying overarching themes and dependencies across entire datasets; this response lacks such evidence and reads as general guidance rather than derived insight.",
+          "evaluator_model": "claude-haiku-4-5-20251001",
+          "evaluator_model_exact": "claude-haiku-4-5-20251001"
+        }
+      ],
+      "failed_question_ids": []
+    },
+    "graphrag": {
+      "global_questions_evaluated": 3,
+      "global_metrics": {
+        "global_perspective": 2.0,
+        "theme_identification": 2.3333333333333335,
+        "synthesis_quality": 1.6666666666666667,
+        "strategic_value": 2.0,
+        "pattern_recognition": 2.0,
+        "total_evaluated": 3
+      },
+      "individual_evaluations": [
+        {
+          "question_id": "system_level_understanding_005",
+          "global_metrics": {
+            "global_perspective": 2.0,
+            "theme_identification": 3.0,
+            "synthesis_quality": 2.0,
+            "strategic_value": 2.0,
+            "pattern_recognition": 2.0
+          },
+          "evaluation_text": "Global Perspective: 2 - The answer references multiple knowledge paths and communities but provides no concrete fleet-wide statistics, aggregate metrics, or evidence of analyzing the complete dataset. Statements about patterns are inferential rather than derived from systematic analysis across all records. The references appear generic without demonstrating synthesis of truly global data patterns.\n\nTheme Identification: 3 - Main themes are stated (replacement vs. repair superiority, preventive maintenance emphasis) and organized logically, but they read as generic maintenance principles rather than themes specifically derived from the aviation dataset. The categorization of problem types is clear but not uniquely insightful to this particular fleet's data.\n\nSynthesis Quality: 2 - Multiple sources are referenced (brake, fuel siphonage, engine issues) but connections remain additive and superficial. The answer lists different maintenance scenarios separately without integrating how they relate to each other or the overall fleet health. No evidence of causal analysis linking maintenance actions to measurable recurrence outcomes across interconnected systems.\n\nStrategic Value: 2 - Recommendations are generic (regular inspections, timely maintenance, preventive focus) and could apply to any fleet without reference to this specific data. No quantification of impact (e.g., replacement reduces recurrence by X%), no cost-benefit analysis, no guidance for resource prioritization, and no data-driven thresholds for decision-making.\n\nPattern Recognition: 2 - Only basic dichotomy identified (replacement vs. repair effectiveness). No recognition of complex dependencies, temporal patterns, system interactions, component-specific variations, or confounding factors. Analysis lacks granularity to identify which problems, aircraft types, or conditions benefit most from each maintenance action.\n\nGlobal Sensemaking Assessment: This answer demonstrates WEAK global sensemaking capability. It relies on plausible inference and general maintenance knowledge rather than comprehensive data analysis. The absence of quantitative evidence, lack of concrete fleet-wide patterns, superficial synthesis across sources, and generic rather than dataset-derived insights indicate the answer does not successfully demonstrate global sensemaking about the maintenance dataset.",
+          "evaluator_model": "claude-haiku-4-5-20251001",
+          "evaluator_model_exact": "claude-haiku-4-5-20251001"
+        },
+        {
+          "question_id": "root_cause_analysis_007",
+          "global_metrics": {
+            "global_perspective": 2.0,
+            "theme_identification": 2.0,
+            "synthesis_quality": 2.0,
+            "strategic_value": 2.0,
+            "pattern_recognition": 2.0
+          },
+          "evaluation_text": "Global Perspective: 2 - The answer references \"maintenance records\" and general \"incidents\" but lacks systematic analysis of dataset-wide patterns. No quantified metrics, frequency distributions, or comprehensive dataset scope are demonstrated. Examples appear illustrative rather than representative of dataset-level analysis.\n\nTheme Identification: 2 - While inspection gaps and protocol adherence are mentioned, major themes lack depth. The answer does not differentiate between systemic versus random failures, identify which systems or aircraft types show consistent damage patterns, or establish hierarchies of preventability within the dataset. Themes are surface-level generalizations.\n\nSynthesis Quality: 2 - The answer cites maintenance records and incidents but shows minimal integration of multiple data sources. No synthesis demonstrates how inspection logs, repair histories, incident reports, and structural assessments interconnect. There is no evidence of cross-referencing failure modes against maintenance schedules or connecting preventive actions to outcome reductions across the dataset.\n\nStrategic Value: 2 - Recommendations (enhanced inspections, diagnostic tools, training, procedure review) are generic best-practices, not data-driven. Strategic insights would specify interventions grounded in dataset analysis\u2014such as component-specific inspection interval changes, resource allocation based on damage frequency, or targeted personnel retraining on recurring failure categories.\n\nPattern Recognition: 2 - Only basic cause-effect relationships are identified (tampering \u2192 vibration, loose components \u2192 failures). Complex dependencies are absent: root cause chains, cascading failure modes, interaction effects between maintenance variables, and predictive patterns underlying structural damage are not established through evidence.\n\nGlobal Sensemaking Assessment: This answer does not successfully demonstrate global sensemaking capability. It functions as general domain knowledge applied to aviation maintenance rather than synthesis of specific dataset patterns into cohesive understanding. True global sensemaking would reveal interconnected dataset narratives\u2014how inspection practices, repair outcomes, failure frequencies, and damage types interact systematically\u2014with quantified evidence supporting strategic conclusions.",
+          "evaluator_model": "claude-haiku-4-5-20251001",
+          "evaluator_model_exact": "claude-haiku-4-5-20251001"
+        },
+        {
+          "question_id": "maintenance_narratives_008",
+          "global_metrics": {
+            "global_perspective": 2.0,
+            "theme_identification": 2.0,
+            "synthesis_quality": 1.0,
+            "strategic_value": 2.0,
+            "pattern_recognition": 2.0
+          },
+          "evaluation_text": "Global Perspective: 2 - The answer discusses electrical failures in generalized terms but does not demonstrate understanding of dataset-wide patterns or fleet-specific failure distributions. It lacks analysis of how electrical failures cluster across aircraft types, time periods, or operational contexts within actual maintenance records.\n\nTheme Identification: 2 - While the answer identifies generic themes (redundancy, regular maintenance, system interdependence), these are surface-level observations applicable to any complex system. It fails to identify dataset-specific themes such as which system pairs most frequently fail together, whether certain electrical failures precede cascading failures, or maintenance cost patterns associated with interactions.\n\nSynthesis Quality: 1 - The answer does not synthesize across multiple data sources. It provides a disconnected list of mitigation strategies without correlating them to actual failure patterns, root causes, or maintenance data. The massive repetition of the same maintenance sentence at the end indicates a quality control failure and suggests generation errors rather than thoughtful synthesis.\n\nStrategic Value: 2 - While basic recommendations are offered (redundant systems, maintenance protocols), they lack the data-driven specificity required for high-level decision making. The answer does not prioritize which redundancies to implement, quantify interaction risks, or identify which system pairs warrant focused mitigation efforts based on failure frequency or severity.\n\nPattern Recognition: 2 - The answer acknowledges general system interdependencies but identifies no specific failure cascade patterns, temporal relationships, or complex dependencies discoverable through data analysis. It does not recognize patterns such as common failure sequences, shared failure modes, or system vulnerabilities emerging from actual maintenance records.\n\nGlobal Sensemaking Assessment: This answer demonstrates minimal global sensemaking capability. It fails the fundamental requirement to synthesize dataset-wide information into overarching insights. Instead, it provides generic aviation safety knowledge disconnected from actual data analysis. The quality issues (severe repetition), lack of quantification, absence of dataset-specific patterns, and generic applicability indicate this does not represent analysis of a maintenance database but rather general domain knowledge. A strong global sensemaking answer would anchor recommendations in specific data patterns, interdependency metrics, and fleet-wide failure correlations.",
+          "evaluator_model": "claude-haiku-4-5-20251001",
+          "evaluator_model_exact": "claude-haiku-4-5-20251001"
+        }
+      ],
+      "failed_question_ids": []
+    }
+  },
+  "keo_global": {
+    "global_questions_evaluated": 3,
+    "global_metrics": {
+      "global_perspective": 2.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.3333333333333335,
+      "strategic_value": 2.0,
+      "pattern_recognition": 2.0,
+      "total_evaluated": 3
+    },
+    "individual_evaluations": [
+      {
+        "question_id": "system_level_understanding_005",
+        "global_metrics": {
+          "global_perspective": 2.0,
+          "theme_identification": 2.0,
+          "synthesis_quality": 2.0,
+          "strategic_value": 2.0,
+          "pattern_recognition": 2.0
+        },
+        "evaluation_text": "Global Perspective: 2 - The answer references multiple \"Knowledge Paths\" and \"Communities\" but lacks evidence of systematic fleet-wide pattern analysis. It makes generalized claims about dataset trends (e.g., \"replacement tends to reduce recurrence rates more effectively\") without quantitative evidence or demonstration of comprehensive data coverage. The approach is illustrative rather than demonstrative of understanding actual dataset scope and patterns.\n\nTheme Identification: 2 - While replacement vs. repair and preventive maintenance are identified, these are generic themes applicable to most maintenance contexts. The answer fails to identify domain-specific or dataset-specific themes such as equipment criticality patterns, failure mode categories, maintenance-induced failures, or fleet composition effects. The themes lack specificity and depth relative to aviation maintenance complexity.\n\nSynthesis Quality: 2 - The answer enumerates examples from different sources (brake problems, fuel siphonage, engine malfunctions) but does not truly integrate them into cohesive insights. There is no analysis of how these examples interact, overlap, or relate systematically. The synthesis is additive (listing examples) rather than integrative (showing relationships and interdependencies across the dataset).\n\nStrategic Value: 2 - Recommendations are generic platitudes (perform regular inspections, ensure timely maintenance, focus on prevention) without quantification, prioritization, or cost-benefit analysis. The answer provides no metrics for decision-making, no resource allocation guidance, and no equipment-specific prioritization. Strategic decisions require specific, evidence-based recommendations grounded in fleet data.\n\nPattern Recognition: 2 - Only simple, surface-level relationships are identified (replacement outperforms repair). Complex relationships are absent, including conditional patterns (when replacement is superior vs. when repair suffices), equipment-type dependencies, failure-mode cascades, and interaction effects between variables. The analysis lacks the sophistication expected for genuine pattern recognition.\n\nGlobal Sensemaking Assessment: This answer demonstrates LOW global sensemaking capability. It addresses the question with illustrative examples and generic insights rather than comprehensive, data-driven analysis of fleet-wide patterns. The answer lacks quantitative evidence, identifies only obvious themes, fails to integrate insights meaningfully, and provides recommendations insufficiently grounded in systematic dataset analysis. True global sensemaking requires synthesized understanding of complex interdependencies across the entire dataset, which this response does not achieve.",
+        "evaluator_model": "claude-haiku-4-5-20251001",
+        "evaluator_model_exact": "claude-haiku-4-5-20251001"
+      },
+      {
+        "question_id": "root_cause_analysis_007",
+        "global_metrics": {
+          "global_perspective": 2.0,
+          "theme_identification": 2.0,
+          "synthesis_quality": 3.0,
+          "strategic_value": 2.0,
+          "pattern_recognition": 2.0
+        },
+        "evaluation_text": "Global Perspective: 2 - The answer references \"maintenance records\" and specific incidents but lacks evidence of synthesizing patterns across the entire dataset. It treats examples (vibration issues, fastening problems) as isolated cases rather than demonstrating comprehensive, dataset-wide pattern identification. No statistical distribution or systematic scope analysis is evident.\n\nTheme Identification: 2 - While some themes are mentioned (inspection gaps, adherence issues, training needs), they are generic and underexplored. The answer does not connect these themes to specific data-driven patterns or demonstrate how they emerge consistently across multiple incident categories in the dataset.\n\nSynthesis Quality: 3 - The answer combines some related concepts (inspections, training, diagnostics) but lacks evidence of synthesizing across different maintenance domains (structural, engine, brake, control systems). It treats problems somewhat independently rather than revealing how failures in one area might cascade or correlate with systemic issues in others.\n\nStrategic Value: 2 - Recommendations are generic best practices (enhanced focus, advanced tools, better training, continuous review) rather than prioritized, data-driven insights. A strategic answer would specify which gaps have highest impact, resource allocation guidance, or which systemic interventions would yield greatest safety improvements based on dataset analysis.\n\nPattern Recognition: 2 - The answer does not identify complex relationships or dependencies. It fails to explore whether training deficits correlate with specific incident types, how inspection procedures interact with failure modes, or what systemic factors compound maintenance risks. Causal chains and interconnected failures are not analyzed.\n\nGlobal Sensemaking Assessment: This answer does not successfully demonstrate global sensemaking capability. It presents reasonable maintenance improvement suggestions but operates at the level of general industry knowledge rather than dataset-derived synthesis. True global sensemaking would reveal overarching patterns, systemic vulnerabilities, and interconnected factors across the complete maintenance dataset, providing evidence-based strategic insight unavailable through isolated example analysis.",
+        "evaluator_model": "claude-haiku-4-5-20251001",
+        "evaluator_model_exact": "claude-haiku-4-5-20251001"
+      },
+      {
+        "question_id": "maintenance_narratives_008",
+        "global_metrics": {
+          "global_perspective": 2.0,
+          "theme_identification": 2.0,
+          "synthesis_quality": 2.0,
+          "strategic_value": 2.0,
+          "pattern_recognition": 2.0
+        },
+        "evaluation_text": "Global Perspective: 2 - The answer provides general information about electrical system failures without demonstrating analysis of patterns across a maintenance dataset. It lacks reference to specific data points, frequency distributions, or dataset-wide operational trends that would indicate comprehensive understanding of the problem space.\n\nTheme Identification: 2 - While identifying redundancy as a mitigation theme, the answer fails to extract nuanced patterns from data such as failure cascade sequences, frequency of specific interaction types, or systemic vulnerabilities revealed through incident analysis. Themes are generic rather than data-derived.\n\nSynthesis Quality: 2 - The answer reads as general aviation knowledge rather than synthesis across multiple data sources. There is no evidence of cross-referencing maintenance records, incident reports, or system interaction data. No integration of patterns from different datasets or operational domains.\n\nStrategic Value: 2 - Recommendations lack prioritization and specificity needed for high-level decision making. The answer does not identify which electrical failures most frequently trigger cascades, comparative cost-benefit analysis of redundancy options, or data-driven resource allocation guidance. Insights are too generic to guide strategic investment.\n\nPattern Recognition: 2 - While acknowledging that electrical failures compromise other systems, the answer does not identify complex interdependencies, failure sequence patterns, predictive relationships, or systemic vulnerabilities that emerge from comprehensive data analysis. System interactions are mentioned superficially.\n\nGlobal Sensemaking Assessment: This answer does NOT successfully demonstrate global sensemaking capability. It provides standard domain knowledge without evidence of dataset synthesis, pattern extraction, or data-driven analysis. Additionally, the answer contains severe repetition in the conclusion that further undermines quality. Global sensemaking requires identifying overarching themes and dependencies across entire datasets; this response lacks such evidence and reads as general guidance rather than derived insight.",
+        "evaluator_model": "claude-haiku-4-5-20251001",
+        "evaluator_model_exact": "claude-haiku-4-5-20251001"
+      }
+    ],
+    "failed_question_ids": []
+  },
+  "graphrag_global": {
+    "global_questions_evaluated": 3,
+    "global_metrics": {
+      "global_perspective": 2.0,
+      "theme_identification": 2.0,
+      "synthesis_quality": 2.3333333333333335,
+      "strategic_value": 2.0,
+      "pattern_recognition": 2.0,
+      "total_evaluated": 3
+    },
+    "individual_evaluations": [
+      {
+        "question_id": "system_level_understanding_005",
+        "global_metrics": {
+          "global_perspective": 2.0,
+          "theme_identification": 2.0,
+          "synthesis_quality": 2.0,
+          "strategic_value": 2.0,
+          "pattern_recognition": 2.0
+        },
+        "evaluation_text": "Global Perspective: 2 - The answer references multiple \"Knowledge Paths\" and \"Communities\" but lacks evidence of systematic fleet-wide pattern analysis. It makes generalized claims about dataset trends (e.g., \"replacement tends to reduce recurrence rates more effectively\") without quantitative evidence or demonstration of comprehensive data coverage. The approach is illustrative rather than demonstrative of understanding actual dataset scope and patterns.\n\nTheme Identification: 2 - While replacement vs. repair and preventive maintenance are identified, these are generic themes applicable to most maintenance contexts. The answer fails to identify domain-specific or dataset-specific themes such as equipment criticality patterns, failure mode categories, maintenance-induced failures, or fleet composition effects. The themes lack specificity and depth relative to aviation maintenance complexity.\n\nSynthesis Quality: 2 - The answer enumerates examples from different sources (brake problems, fuel siphonage, engine malfunctions) but does not truly integrate them into cohesive insights. There is no analysis of how these examples interact, overlap, or relate systematically. The synthesis is additive (listing examples) rather than integrative (showing relationships and interdependencies across the dataset).\n\nStrategic Value: 2 - Recommendations are generic platitudes (perform regular inspections, ensure timely maintenance, focus on prevention) without quantification, prioritization, or cost-benefit analysis. The answer provides no metrics for decision-making, no resource allocation guidance, and no equipment-specific prioritization. Strategic decisions require specific, evidence-based recommendations grounded in fleet data.\n\nPattern Recognition: 2 - Only simple, surface-level relationships are identified (replacement outperforms repair). Complex relationships are absent, including conditional patterns (when replacement is superior vs. when repair suffices), equipment-type dependencies, failure-mode cascades, and interaction effects between variables. The analysis lacks the sophistication expected for genuine pattern recognition.\n\nGlobal Sensemaking Assessment: This answer demonstrates LOW global sensemaking capability. It addresses the question with illustrative examples and generic insights rather than comprehensive, data-driven analysis of fleet-wide patterns. The answer lacks quantitative evidence, identifies only obvious themes, fails to integrate insights meaningfully, and provides recommendations insufficiently grounded in systematic dataset analysis. True global sensemaking requires synthesized understanding of complex interdependencies across the entire dataset, which this response does not achieve.",
+        "evaluator_model": "claude-haiku-4-5-20251001",
+        "evaluator_model_exact": "claude-haiku-4-5-20251001"
+      },
+      {
+        "question_id": "root_cause_analysis_007",
+        "global_metrics": {
+          "global_perspective": 2.0,
+          "theme_identification": 2.0,
+          "synthesis_quality": 3.0,
+          "strategic_value": 2.0,
+          "pattern_recognition": 2.0
+        },
+        "evaluation_text": "Global Perspective: 2 - The answer references \"maintenance records\" and specific incidents but lacks evidence of synthesizing patterns across the entire dataset. It treats examples (vibration issues, fastening problems) as isolated cases rather than demonstrating comprehensive, dataset-wide pattern identification. No statistical distribution or systematic scope analysis is evident.\n\nTheme Identification: 2 - While some themes are mentioned (inspection gaps, adherence issues, training needs), they are generic and underexplored. The answer does not connect these themes to specific data-driven patterns or demonstrate how they emerge consistently across multiple incident categories in the dataset.\n\nSynthesis Quality: 3 - The answer combines some related concepts (inspections, training, diagnostics) but lacks evidence of synthesizing across different maintenance domains (structural, engine, brake, control systems). It treats problems somewhat independently rather than revealing how failures in one area might cascade or correlate with systemic issues in others.\n\nStrategic Value: 2 - Recommendations are generic best practices (enhanced focus, advanced tools, better training, continuous review) rather than prioritized, data-driven insights. A strategic answer would specify which gaps have highest impact, resource allocation guidance, or which systemic interventions would yield greatest safety improvements based on dataset analysis.\n\nPattern Recognition: 2 - The answer does not identify complex relationships or dependencies. It fails to explore whether training deficits correlate with specific incident types, how inspection procedures interact with failure modes, or what systemic factors compound maintenance risks. Causal chains and interconnected failures are not analyzed.\n\nGlobal Sensemaking Assessment: This answer does not successfully demonstrate global sensemaking capability. It presents reasonable maintenance improvement suggestions but operates at the level of general industry knowledge rather than dataset-derived synthesis. True global sensemaking would reveal overarching patterns, systemic vulnerabilities, and interconnected factors across the complete maintenance dataset, providing evidence-based strategic insight unavailable through isolated example analysis.",
+        "evaluator_model": "claude-haiku-4-5-20251001",
+        "evaluator_model_exact": "claude-haiku-4-5-20251001"
+      },
+      {
+        "question_id": "maintenance_narratives_008",
+        "global_metrics": {
+          "global_perspective": 2.0,
+          "theme_identification": 2.0,
+          "synthesis_quality": 2.0,
+          "strategic_value": 2.0,
+          "pattern_recognition": 2.0
+        },
+        "evaluation_text": "Global Perspective: 2 - The answer provides general information about electrical system failures without demonstrating analysis of patterns across a maintenance dataset. It lacks reference to specific data points, frequency distributions, or dataset-wide operational trends that would indicate comprehensive understanding of the problem space.\n\nTheme Identification: 2 - While identifying redundancy as a mitigation theme, the answer fails to extract nuanced patterns from data such as failure cascade sequences, frequency of specific interaction types, or systemic vulnerabilities revealed through incident analysis. Themes are generic rather than data-derived.\n\nSynthesis Quality: 2 - The answer reads as general aviation knowledge rather than synthesis across multiple data sources. There is no evidence of cross-referencing maintenance records, incident reports, or system interaction data. No integration of patterns from different datasets or operational domains.\n\nStrategic Value: 2 - Recommendations lack prioritization and specificity needed for high-level decision making. The answer does not identify which electrical failures most frequently trigger cascades, comparative cost-benefit analysis of redundancy options, or data-driven resource allocation guidance. Insights are too generic to guide strategic investment.\n\nPattern Recognition: 2 - While acknowledging that electrical failures compromise other systems, the answer does not identify complex interdependencies, failure sequence patterns, predictive relationships, or systemic vulnerabilities that emerge from comprehensive data analysis. System interactions are mentioned superficially.\n\nGlobal Sensemaking Assessment: This answer does NOT successfully demonstrate global sensemaking capability. It provides standard domain knowledge without evidence of dataset synthesis, pattern extraction, or data-driven analysis. Additionally, the answer contains severe repetition in the conclusion that further undermines quality. Global sensemaking requires identifying overarching themes and dependencies across entire datasets; this response lacks such evidence and reads as general guidance rather than derived insight.",
+        "evaluator_model": "claude-haiku-4-5-20251001",
+        "evaluator_model_exact": "claude-haiku-4-5-20251001"
+      }
+    ],
+    "failed_question_ids": []
+  },
+  "model_provenance": {
+    "role": "judge",
+    "timestamp_utc": "2026-09-24T17:08:16.333227+00:00",
+    "llm": {
+      "requested_id": "claude-haiku-4-5-20251001",
+      "resolved_id": "claude-haiku-4-5-20251001",
+      "exact_id": "claude-haiku-4-5-20251001",
+      "provider": "claude_cli",
+      "billing": "claude_pro_max_subscription",
+      "claude_code_version": "2.1.78 (Claude Code)",
+      "protocol": {
+        "tools": "",
+        "effort": "low",
+        "output_format": "json",
+        "permission_mode": "dontAsk",
+        "pinned_snapshot": true
+      },
+      "note": "Claude Code with pinned snapshot + JSON envelope \u2014 subscription billing; protocol aligned with Messages API judging",
+      "observed_ids": [
+        "claude-haiku-4-5-20251001"
+      ]
+    },
+    "packages": {
+      "python": "3.9.6",
+      "platform": "macOS-15.7.4-arm64-arm-64bit",
+      "openai": "2.48.0",
+      "anthropic": "0.125.0",
+      "huggingface_hub": "0.36.2",
+      "sentence_transformers": "5.1.2",
+      "transformers": "4.57.6",
+      "torch": "2.8.0",
+      "networkx": "3.2.1"
+    },
+    "judge": {
+      "judge_grade": "smoke",
+      "reportable_for_paper": false,
+      "provider": "claude_cli",
+      "requested_model": "claude-haiku-4-5-20251001",
+      "policy": "Smoke intent \u2014 same CLI stack; treat as pipeline check if desired",
+      "parity": {
+        "pinned_model": true,
+        "tools_disabled": true,
+        "temperature_0": false,
+        "effort_low": true,
+        "json_envelope": true
+      }
+    },
+    "nlp_metrics": {
+      "available": true,
+      "missing": null,
+      "allow_missing_override": false
+    },
+    "judge_parse": {
+      "refuses_imputation": true,
+      "allow_imputation_override": false,
+      "comparison_rubrics": [
+        "action",
+        "answer",
+        "global"
+      ],
+      "alarm_threshold": 0.1,
+      "scale": [
+        1.0,
+        5.0
+      ],
+      "by_rubric": {
+        "global": {
+          "responses": 6,
+          "criteria_expected": 30,
+          "criteria_parsed": 30,
+          "imputation_rate": 0.0,
+          "imputed_by_criterion": {},
+          "no_number_by_criterion": {},
+          "out_of_range": []
+        }
+      },
+      "imputation_rate": 0.0,
+      "exceeds_alarm": false
+    },
+    "last_call": {
+      "attempt": 0,
+      "requested_model": "claude-haiku-4-5-20251001",
+      "claude_code_version": "2.1.78 (Claude Code)",
+      "billing": "claude_pro_max_subscription",
+      "tools": "",
+      "effort": "low",
+      "permission_mode": "dontAsk",
+      "output_format": "json",
+      "session_id": "82a66a12-b1bf-4c19-bcc3-54fd8998028f",
+      "duration_ms": 14344,
+      "duration_api_ms": 14340,
+      "num_turns": 1,
+      "total_cost_usd": 0.007026199999999999,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 7862,
+        "output_tokens": 1246,
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "",
+        "iterations": [],
+        "speed": "standard"
+      },
+      "observed_model": "claude-haiku-4-5-20251001"
+    }
+  },
+  "evaluator_model": "claude-haiku-4-5-20251001",
+  "evaluator_model_exact": "claude-haiku-4-5-20251001"
+}

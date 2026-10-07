@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lrrrrrrl}
+\toprule
+Arm & Mean & $\Delta$ & 95\% CI & $p_{\text{Holm}}$ & $d_z$ & MDE & Reading \\
+\midrule
+mst\_on\_freq & 2.287 & -- & -- & -- & -- & -- & reference \\
+\midrule
+risk\_floor0.25 & 2.280 & $-0.007$ & $[-0.055, +0.041]$ & 0.843 & $-0.03$ & 0.068 & underpowered n.s. \\
+ctrl\_chunk\_tok & 2.169 & $-0.118$ & $[-0.171, -0.063]$ & $<$0.001 & $-0.47$ & 0.078 & lower \\
+\bottomrule
+\end{tabular}
+\caption{Paired comparison against mst\_on\_freq on overall ($n=83$ questions, judge scores 1--5). $\Delta$ is the mean paired difference with a percentile bootstrap 95\% CI; $p$ is a two-sided sign-flip permutation test, Holm-corrected within the metric; MDE is the smallest difference detectable at 80\% power.}
+\label{tab:paired-overall}
+\end{table}

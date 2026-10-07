@@ -1,0 +1,43 @@
+Answer calibration — preference only (KEO)
+==========================================
+
+Website
+-------
+  cd keo/sensemaking_QA/human_validation/pref_site
+  python3 serve.py
+  open http://127.0.0.1:8765/
+
+Roles / passwords (offline only; not shown on the site)
+  Annotator 1 (primary):  keo
+  Annotator 2 (primary):  eok
+  Adjudicator (conflicts): adj
+
+Primary task (Annotators 1–2)
+  Prefer A, Prefer B, or Neither. No 1–5 scores.
+  A/B sides are randomized per item (systems stay hidden).
+  Diff highlights show where answers diverge.
+  Votes auto-save.
+
+Adjudication (Annotator 3 or team conference)
+  After both primaries finish, open Adjudicate.
+  Only contested items appear (system preference differs).
+  Prior votes are shown remapped into your A/B layout (still blind).
+  Choose Solo adjudicator OR Team conference, then Prefer A/B/Neither.
+  Optional note field for the rationale.
+
+Do NOT open answer_calibration_n40_key.json until after adjudication.
+
+Severity / risk triples (same site)
+------------------------------------
+  http://127.0.0.1:8765/severity.html
+  Classes: catastrophic, hazardous, major, minor, none (keys 1–5).
+  Lexicon prior is hidden. Do NOT open severity_expert_n100_key.json.
+  Adjudicator resolves class disagreements on the same page.
+
+Outputs
+  human_pref_votes_annotator{1,2,3}.json
+  human_pref_labels.csv
+  human_pref_consensus.json
+  severity_votes_annotator{1,2,3}.json
+  severity_labels.csv
+  severity_consensus.json

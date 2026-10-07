@@ -1,0 +1,194 @@
+[
+  {
+    "question_id": "system_level_understanding_005",
+    "question": "How do different maintenance actions like replacement and repair influence the recurrence rates of similar problems in the aircraft fleet?",
+    "question_category": "system_level_understanding",
+    "question_type": "analytical",
+    "ground_truth": null,
+    "original_problem": null,
+    "ablation": {
+      "method": "chunk_tok",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": true,
+        "control_seed": null
+      },
+      "selection": {
+        "selector": "mst",
+        "use_mst": true
+      },
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "local",
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "provider": "local",
+      "answer_model": "mlx-community/phi-4-4bit",
+      "answer_model_exact": "mlx-community/phi-4-4bit",
+      "kg_path": "../kg/output/kg_llm/gpt4o_with_nodes_batches/100/gpt4o_withprevnodes_100_with_entity_mentions_fixed.gml",
+      "corpus_csv": null,
+      "text_column": null
+    },
+    "vanilla_answer": null,
+    "textchunkrag_answer": null,
+    "keo_answer": null,
+    "community_answer": null,
+    "hybrid_answer": null,
+    "routed_answer": null,
+    "graphrag_answer": null,
+    "risk_answer": null,
+    "chunk_tok_answer": {
+      "question_id": "system_level_understanding_005",
+      "question": "How do different maintenance actions like replacement and repair influence the recurrence rates of similar problems in the aircraft fleet?",
+      "category": "system_level_understanding",
+      "answer": "Different maintenance actions, such as replacement and repair, significantly influence the recurrence rates of similar problems in an aircraft fleet. Replacement generally provides a more definitive solution, as it involves substituting a faulty component with a new one, thereby reducing the likelihood of immediate recurrence. This is particularly effective for components with a high failure rate or those that are critical to safety, as it ensures that the part meets current manufacturing standards and specifications.\n\nOn the other hand, repairs, while often more cost-effective and quicker to implement, may not address the root cause of the problem, especially if it stems from systemic issues or material fatigue. Repairs can be effective if performed meticulously and if the underlying issue is well-understood and isolated. However, they may lead to higher recurrence rates if the repaired component is subject to similar stresses or environmental conditions that led to the initial failure.\n\nThe provided maintenance records highlight instances where both repairs and replacements were performed, such as the repair of an oil leak in the right engine and the replacement of a counter-balance weight. These examples underscore the importance of thorough failure analysis and root cause identification to determine the most appropriate maintenance action. \n\nActionable insights for improving aviation safety include:\n\n1. **Implementing a robust failure analysis process** to understand the root causes of recurring issues, ensuring that maintenance actions address these causes effectively.\n   \n2. **Prioritizing replacements for critical components** with high failure rates or those that are difficult to inspect thoroughly during routine maintenance.\n\n3. **Enhancing training for maintenance personnel** to ensure that repairs are performed to the highest standards and that they are equipped to identify when a repair is insufficient and a replacement is necessary.\n\n4. **Utilizing data analytics** to track the performance and failure rates of components across the fleet, allowing for predictive maintenance strategies that can preemptively address potential failures.\n\nBy focusing on these strategies, aviation safety can be significantly enhanced, reducing the recurrence of similar problems and improving the overall reliability of the aircraft fleet.",
+      "method": "chunk_tok",
+      "context_used": 1193,
+      "context_budget": 1193,
+      "chunks_retrieved": 12,
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": true,
+        "control_seed": null
+      },
+      "model": "mlx-community/phi-4-4bit",
+      "model_exact": "mlx-community/phi-4-4bit",
+      "model_provider": "local"
+    },
+    "chunk_sum_answer": null,
+    "chunk_dedup_answer": null,
+    "keo_shuf_answer": null,
+    "keo_norel_answer": null
+  },
+  {
+    "question_id": "root_cause_analysis_007",
+    "question": "What role do inspection and repair procedures play in preventing structural damage, and where are the gaps?",
+    "question_category": "root_cause_analysis",
+    "question_type": "analytical",
+    "ground_truth": null,
+    "original_problem": null,
+    "ablation": {
+      "method": "chunk_tok",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": true,
+        "control_seed": null
+      },
+      "selection": {
+        "selector": "mst",
+        "use_mst": true
+      },
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "local",
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "provider": "local",
+      "answer_model": "mlx-community/phi-4-4bit",
+      "answer_model_exact": "mlx-community/phi-4-4bit",
+      "kg_path": "../kg/output/kg_llm/gpt4o_with_nodes_batches/100/gpt4o_withprevnodes_100_with_entity_mentions_fixed.gml",
+      "corpus_csv": null,
+      "text_column": null
+    },
+    "vanilla_answer": null,
+    "textchunkrag_answer": null,
+    "keo_answer": null,
+    "community_answer": null,
+    "hybrid_answer": null,
+    "routed_answer": null,
+    "graphrag_answer": null,
+    "risk_answer": null,
+    "chunk_tok_answer": {
+      "question_id": "root_cause_analysis_007",
+      "question": "What role do inspection and repair procedures play in preventing structural damage, and where are the gaps?",
+      "category": "root_cause_analysis",
+      "answer": "Inspection and repair procedures are critical in preventing structural damage in aircraft by ensuring that all components are in optimal condition and correctly installed. These procedures help identify potential issues such as loose fittings, missing bolts, or tampered panels before they lead to failures during flight. For instance, the records highlight incidents where loose elevator trim panels, improperly fastened engine cowling doors, and missing upper strut attach bolts were directly linked to operational hazards.\n\nHowever, gaps exist in the thoroughness and consistency of these procedures. The records indicate lapses such as inadequate preflight inspections, improper restoration processes, and insufficient checks during ground maintenance. These gaps can lead to undetected issues, as seen in the examples of debris left from runway maintenance causing prop damage and a broken cabin door support rod.\n\nTo address these gaps, it is essential to enforce rigorous and standardized inspection protocols, ensure comprehensive training for maintenance personnel, and implement robust oversight mechanisms to verify adherence to safety standards. This approach will help mitigate risks associated with structural damage and enhance overall aviation safety.",
+      "method": "chunk_tok",
+      "context_used": 1135,
+      "context_budget": 1135,
+      "chunks_retrieved": 12,
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": true,
+        "control_seed": null
+      },
+      "model": "mlx-community/phi-4-4bit",
+      "model_exact": "mlx-community/phi-4-4bit",
+      "model_provider": "local"
+    },
+    "chunk_sum_answer": null,
+    "chunk_dedup_answer": null,
+    "keo_shuf_answer": null,
+    "keo_norel_answer": null
+  },
+  {
+    "question_id": "maintenance_narratives_008",
+    "question": "8. How does the interaction between electrical system failures and other aircraft systems contribute to broader operational risks, and what redundant systems could mitigate these risks?",
+    "question_category": "context_specific",
+    "question_type": "contextual",
+    "ground_truth": null,
+    "original_problem": null,
+    "ablation": {
+      "method": "chunk_tok",
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": true,
+        "control_seed": null
+      },
+      "selection": {
+        "selector": "mst",
+        "use_mst": true
+      },
+      "use_mst": true,
+      "edge_weight": "freq",
+      "embedding_backend": "local",
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "provider": "local",
+      "answer_model": "mlx-community/phi-4-4bit",
+      "answer_model_exact": "mlx-community/phi-4-4bit",
+      "kg_path": "../kg/output/kg_llm/gpt4o_with_nodes_batches/100/gpt4o_withprevnodes_100_with_entity_mentions_fixed.gml",
+      "corpus_csv": null,
+      "text_column": null
+    },
+    "vanilla_answer": null,
+    "textchunkrag_answer": null,
+    "keo_answer": null,
+    "community_answer": null,
+    "hybrid_answer": null,
+    "routed_answer": null,
+    "graphrag_answer": null,
+    "risk_answer": null,
+    "chunk_tok_answer": {
+      "question_id": "maintenance_narratives_008",
+      "question": "8. How does the interaction between electrical system failures and other aircraft systems contribute to broader operational risks, and what redundant systems could mitigate these risks?",
+      "category": "context_specific",
+      "answer": "The interaction between electrical system failures and other aircraft systems can significantly contribute to broader operational risks by compromising critical functions such as landing gear extension, engine management, and navigation systems. Electrical failures can lead to cascading effects, where the inability to operate one system affects the performance or safety of others, as seen in scenarios where gear collapse or engine failures occur due to electrical issues.\n\nTo mitigate these risks, implementing redundant systems is crucial. Redundant systems ensure that if one system fails, another can take over its function, maintaining operational safety. For instance, having dual or triple redundant electrical power sources can prevent total electrical failure. Additionally, incorporating independent mechanical or hydraulic backup systems for critical components like landing gear can ensure their operation even in the event of an electrical failure.\n\nActionable insights include:\n- Regularly inspecting and maintaining electrical systems to prevent failures due to corrosion or wear.\n- Training pilots on emergency procedures and the use of backup systems.\n- Ensuring that aircraft are equipped with redundant systems for critical operations to enhance safety and reliability.",
+      "method": "chunk_tok",
+      "context_used": 1309,
+      "context_budget": 1309,
+      "chunks_retrieved": 14,
+      "controls": {
+        "shuffle_edges": false,
+        "strip_relations": false,
+        "dedup_chunks": false,
+        "match_context_budget": true,
+        "control_seed": null
+      },
+      "model": "mlx-community/phi-4-4bit",
+      "model_exact": "mlx-community/phi-4-4bit",
+      "model_provider": "local"
+    },
+    "chunk_sum_answer": null,
+    "chunk_dedup_answer": null,
+    "keo_shuf_answer": null,
+    "keo_norel_answer": null
+  }
+]

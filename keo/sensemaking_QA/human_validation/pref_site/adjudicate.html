@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>KEO · Adjudicate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="page-rate page-adj">
+  <header class="site-header dark">
+    <a class="brand" href="index.html">KEO</a>
+    <nav>
+      <a href="index.html">Sign in</a>
+      <a href="rate.html">Prefs</a>
+      <a href="severity.html">Severity</a>
+      <a href="adjudicate.html" aria-current="page">Adjudicate</a>
+      <a href="status.html">Status</a>
+    </nav>
+    <div class="header-right">
+      <span id="who-label" class="pill">Adjudicator</span>
+      <span id="progress-label" class="progress-text">0 open</span>
+      <span id="save-flash" class="flash" hidden></span>
+      <button type="button" id="btn-logout" class="ghost">Log out</button>
+    </div>
+  </header>
+  <div class="progress"><span id="progress-bar"></span></div>
+
+  <div id="gate" class="gate" hidden>
+    <div class="gate-card">
+      <p class="eyebrow">Not ready</p>
+      <h2 id="gate-title">Waiting on primary raters</h2>
+      <p id="gate-body">Both Annotator 1 and 2 must finish all 40 items before adjudication.</p>
+      <a class="btn-primary" href="status.html">Check status</a>
+    </div>
+  </div>
+
+  <div id="adj-main">
+    <div class="toolbar">
+      <div class="legend" aria-label="Prior votes">
+        <span class="legend-title">Priors</span>
+        <span class="leg" id="prior-1">Ann1: —</span>
+        <span class="leg" id="prior-2">Ann2: —</span>
+      </div>
+      <div class="toolbar-right">
+        <span class="kbd-hint"><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> resolve · <kbd>←</kbd><kbd>→</kbd> nav</span>
+      </div>
+    </div>
+
+    <div id="dots" class="dots" aria-label="Contested items"></div>
+
+    <main class="stage">
+      <div class="nav-row">
+        <button type="button" id="btn-prev" class="navbtn">← Prev</button>
+        <div class="jump-wrap">
+          <span id="item-meta" class="item-meta"></span>
+          <span id="item-status" class="status-inline">open</span>
+        </div>
+        <button type="button" id="btn-next" class="navbtn">Next →</button>
+      </div>
+
+      <article id="card" class="card">
+        <h1 id="question"></h1>
+        <div class="diffbar">
+          <div class="diff-a"><strong>In A more:</strong> <span id="chips-a"></span></div>
+          <div class="diff-b"><strong>In B more:</strong> <span id="chips-b"></span></div>
+        </div>
+        <div class="pair">
+          <section class="ans a">
+            <h2>Answer A</h2>
+            <div id="body-a" class="body"></div>
+          </section>
+          <section class="ans b">
+            <h2>Answer B</h2>
+            <div id="body-b" class="body"></div>
+          </section>
+        </div>
+      </article>
+    </main>
+
+    <footer class="vote-bar">
+      <p class="order-note">Contested item — systems stay hidden. Pick a final preference.</p>
+      <div class="resolution-row">
+        <label class="res-pick">
+          <input type="radio" name="resolution" value="adjudicator" checked/>
+          Solo adjudicator
+        </label>
+        <label class="res-pick">
+          <input type="radio" name="resolution" value="conference"/>
+          Team conference
+        </label>
+      </div>
+      <div class="vote" role="group" aria-label="final preference">
+        <button type="button" data-pref="A" id="vote-a"><span class="v-k">1</span> Prefer A</button>
+        <button type="button" data-pref="neither" id="vote-neither"><span class="v-k">2</span> Neither</button>
+        <button type="button" data-pref="B" id="vote-b"><span class="v-k">3</span> Prefer B</button>
+      </div>
+      <label class="note-label">
+        Optional note
+        <input type="text" id="note" maxlength="500" placeholder="Why this resolution…"/>
+      </label>
+      <label class="auto-next">
+        <input type="checkbox" id="auto-next" checked/>
+        Advance to next open disagreement
+      </label>
+    </footer>
+  </div>
+
+  <div id="done-overlay" class="done-overlay" hidden>
+    <div class="done-card">
+      <p class="eyebrow">Adjudication done</p>
+      <h2 id="done-title">No open disagreements</h2>
+      <p>Consensus file is on disk. Primaries who agreed were left as-is.</p>
+      <div class="done-actions">
+        <a class="btn-primary" href="status.html">View status</a>
+        <button type="button" class="btn-secondary" id="btn-review">Review contested</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+  <script src="adjudicate.js"></script>
+</body>
+</html>
