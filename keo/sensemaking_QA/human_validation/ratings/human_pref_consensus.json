@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-07T15:38:44",
+  "updated_at": "2026-10-11T22:20:38",
   "n_items": 40,
   "n_consensus_agree": 0,
   "n_adjudicated": 0,
@@ -105,42 +105,42 @@
     {
       "item_num": 13,
       "item_id": "root_cause_analysis_002",
-      "ann1_system": null,
+      "ann1_system": "chunk_tok",
       "ann2_system": null,
       "final_system": null,
-      "source": "unrated"
+      "source": "incomplete_primaries"
     },
     {
       "item_num": 14,
       "item_id": "global_009",
-      "ann1_system": null,
+      "ann1_system": "chunk_tok",
       "ann2_system": null,
       "final_system": null,
-      "source": "unrated"
+      "source": "incomplete_primaries"
     },
     {
       "item_num": 15,
       "item_id": "comparative_analysis_005",
-      "ann1_system": null,
+      "ann1_system": "tie",
       "ann2_system": null,
       "final_system": null,
-      "source": "unrated"
+      "source": "incomplete_primaries"
     },
     {
       "item_num": 16,
       "item_id": "root_cause_analysis_005",
-      "ann1_system": null,
+      "ann1_system": "keo",
       "ann2_system": null,
       "final_system": null,
-      "source": "unrated"
+      "source": "incomplete_primaries"
     },
     {
       "item_num": 17,
       "item_id": "system_level_understanding_003",
-      "ann1_system": null,
+      "ann1_system": "chunk_tok",
       "ann2_system": null,
       "final_system": null,
-      "source": "unrated"
+      "source": "incomplete_primaries"
     },
     {
       "item_num": 18,
@@ -153,18 +153,18 @@
     {
       "item_num": 19,
       "item_id": "maintenance_narratives_003",
-      "ann1_system": null,
+      "ann1_system": "tie",
       "ann2_system": null,
       "final_system": null,
-      "source": "unrated"
+      "source": "incomplete_primaries"
     },
     {
       "item_num": 20,
       "item_id": "trend_analysis_007",
-      "ann1_system": null,
+      "ann1_system": "keo",
       "ann2_system": null,
       "final_system": null,
-      "source": "unrated"
+      "source": "incomplete_primaries"
     },
     {
       "item_num": 21,
@@ -185,26 +185,26 @@
     {
       "item_num": 23,
       "item_id": "safety_recommendations_002",
-      "ann1_system": null,
+      "ann1_system": "keo",
       "ann2_system": null,
       "final_system": null,
-      "source": "unrated"
+      "source": "incomplete_primaries"
     },
     {
       "item_num": 24,
       "item_id": "maintenance_narratives_008",
-      "ann1_system": null,
+      "ann1_system": "keo",
       "ann2_system": null,
       "final_system": null,
-      "source": "unrated"
+      "source": "incomplete_primaries"
     },
     {
       "item_num": 25,
       "item_id": "trend_analysis_001",
-      "ann1_system": null,
+      "ann1_system": "keo",
       "ann2_system": null,
       "final_system": null,
-      "source": "unrated"
+      "source": "incomplete_primaries"
     },
     {
       "item_num": 26,
@@ -233,34 +233,34 @@
     {
       "item_num": 29,
       "item_id": "system_level_understanding_002",
-      "ann1_system": null,
+      "ann1_system": "tie",
       "ann2_system": null,
       "final_system": null,
-      "source": "unrated"
+      "source": "incomplete_primaries"
     },
     {
       "item_num": 30,
       "item_id": "aircraft_problems_actions_008",
-      "ann1_system": null,
+      "ann1_system": "keo",
       "ann2_system": null,
       "final_system": null,
-      "source": "unrated"
+      "source": "incomplete_primaries"
     },
     {
       "item_num": 31,
       "item_id": "predictive_maintenance_007",
-      "ann1_system": null,
+      "ann1_system": "keo",
       "ann2_system": null,
       "final_system": null,
-      "source": "unrated"
+      "source": "incomplete_primaries"
     },
     {
       "item_num": 32,
       "item_id": "maintenance_narratives_002",
-      "ann1_system": null,
+      "ann1_system": "keo",
       "ann2_system": null,
       "final_system": null,
-      "source": "unrated"
+      "source": "incomplete_primaries"
     },
     {
       "item_num": 33,
