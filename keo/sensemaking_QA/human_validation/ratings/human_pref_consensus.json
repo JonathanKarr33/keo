@@ -1,26 +1,26 @@
 {
-  "updated_at": "2026-10-12T20:39:19",
+  "updated_at": "2026-10-12T22:02:58",
   "n_items": 40,
   "n_consensus_agree": 22,
-  "n_adjudicated": 0,
-  "n_conference": 0,
-  "n_open_disagreement": 18,
+  "n_adjudicated": 14,
+  "n_conference": 4,
+  "n_open_disagreement": 0,
   "items": [
     {
       "item_num": 1,
       "item_id": "safety_recommendations_006",
       "ann1_system": "keo",
       "ann2_system": "chunk_tok",
-      "final_system": null,
-      "source": "open_disagreement"
+      "final_system": "chunk_tok",
+      "source": "adjudicator"
     },
     {
       "item_num": 2,
       "item_id": "safety_recommendations_007",
       "ann1_system": "tie",
       "ann2_system": "chunk_tok",
-      "final_system": null,
-      "source": "open_disagreement"
+      "final_system": "tie",
+      "source": "adjudicator"
     },
     {
       "item_num": 3,
@@ -51,8 +51,8 @@
       "item_id": "global_015",
       "ann1_system": "keo",
       "ann2_system": "tie",
-      "final_system": null,
-      "source": "open_disagreement"
+      "final_system": "tie",
+      "source": "adjudicator"
     },
     {
       "item_num": 7,
@@ -67,16 +67,16 @@
       "item_id": "maintenance_narratives_006",
       "ann1_system": "keo",
       "ann2_system": "tie",
-      "final_system": null,
-      "source": "open_disagreement"
+      "final_system": "tie",
+      "source": "conference"
     },
     {
       "item_num": 9,
       "item_id": "comparative_analysis_008",
       "ann1_system": "keo",
       "ann2_system": "tie",
-      "final_system": null,
-      "source": "open_disagreement"
+      "final_system": "tie",
+      "source": "conference"
     },
     {
       "item_num": 10,
@@ -91,8 +91,8 @@
       "item_id": "comparative_analysis_004",
       "ann1_system": "tie",
       "ann2_system": "keo",
-      "final_system": null,
-      "source": "open_disagreement"
+      "final_system": "keo",
+      "source": "adjudicator"
     },
     {
       "item_num": 12,
@@ -107,16 +107,16 @@
       "item_id": "root_cause_analysis_002",
       "ann1_system": "chunk_tok",
       "ann2_system": "keo",
-      "final_system": null,
-      "source": "open_disagreement"
+      "final_system": "keo",
+      "source": "adjudicator"
     },
     {
       "item_num": 14,
       "item_id": "global_009",
       "ann1_system": "chunk_tok",
       "ann2_system": "tie",
-      "final_system": null,
-      "source": "open_disagreement"
+      "final_system": "tie",
+      "source": "adjudicator"
     },
     {
       "item_num": 15,
@@ -139,8 +139,8 @@
       "item_id": "system_level_understanding_003",
       "ann1_system": "chunk_tok",
       "ann2_system": "tie",
-      "final_system": null,
-      "source": "open_disagreement"
+      "final_system": "tie",
+      "source": "adjudicator"
     },
     {
       "item_num": 18,
@@ -155,16 +155,16 @@
       "item_id": "maintenance_narratives_003",
       "ann1_system": "tie",
       "ann2_system": "keo",
-      "final_system": null,
-      "source": "open_disagreement"
+      "final_system": "keo",
+      "source": "conference"
     },
     {
       "item_num": 20,
       "item_id": "trend_analysis_007",
       "ann1_system": "keo",
       "ann2_system": "tie",
-      "final_system": null,
-      "source": "open_disagreement"
+      "final_system": "tie",
+      "source": "adjudicator"
     },
     {
       "item_num": 21,
@@ -211,8 +211,8 @@
       "item_id": "aircraft_problems_actions_005",
       "ann1_system": "tie",
       "ann2_system": "keo",
-      "final_system": null,
-      "source": "open_disagreement"
+      "final_system": "keo",
+      "source": "conference"
     },
     {
       "item_num": 27,
@@ -243,8 +243,8 @@
       "item_id": "aircraft_problems_actions_008",
       "ann1_system": "keo",
       "ann2_system": "chunk_tok",
-      "final_system": null,
-      "source": "open_disagreement"
+      "final_system": "chunk_tok",
+      "source": "adjudicator"
     },
     {
       "item_num": 31,
@@ -267,32 +267,32 @@
       "item_id": "root_cause_analysis_003",
       "ann1_system": "keo",
       "ann2_system": "tie",
-      "final_system": null,
-      "source": "open_disagreement"
+      "final_system": "tie",
+      "source": "adjudicator"
     },
     {
       "item_num": 34,
       "item_id": "predictive_maintenance_008",
       "ann1_system": "keo",
       "ann2_system": "tie",
-      "final_system": null,
-      "source": "open_disagreement"
+      "final_system": "keo",
+      "source": "adjudicator"
     },
     {
       "item_num": 35,
       "item_id": "global_002",
       "ann1_system": "chunk_tok",
       "ann2_system": "tie",
-      "final_system": null,
-      "source": "open_disagreement"
+      "final_system": "tie",
+      "source": "adjudicator"
     },
     {
       "item_num": 36,
       "item_id": "predictive_maintenance_003",
       "ann1_system": "keo",
       "ann2_system": "chunk_tok",
-      "final_system": null,
-      "source": "open_disagreement"
+      "final_system": "tie",
+      "source": "adjudicator"
     },
     {
       "item_num": 37,
@@ -315,8 +315,8 @@
       "item_id": "global_004",
       "ann1_system": "keo",
       "ann2_system": "chunk_tok",
-      "final_system": null,
-      "source": "open_disagreement"
+      "final_system": "tie",
+      "source": "adjudicator"
     },
     {
       "item_num": 40,

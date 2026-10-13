@@ -2,12 +2,12 @@
 
 Do not pool Gemma and Phi, or Haiku and Sonnet. Do not invent judged numbers. Launch scripts plan until `--execute`.
 
-**Updated:** 2026-09-30 22:17. ARR for NAACL 2027 is **October 12** (AoE); long-paper body is 8 pages and this draft’s experiments already end on page 8. Ann1 prefs **26/40** (20 KEO / 3 chunk / 3 tie); Ann1 severity **100/100**; Ann2 still 0. Site: [http://127.0.0.1:8765/](http://127.0.0.1:8765/). Jev stays out of the paper. Do not resume Claude source-card for this draft.
+**Updated:** 2026-10-12 22:05. Preference adjudication is done. Final labels: 23 KEO / 4 chunk / 13 neither. Primaries still 28–6–6 and 22–7–11; agreement 22/40 (κ≈0.18). The adjudicator resolved all 18 disagreements: neither on 11, KEO on 5, chunk on 2. Ann2 severity is still 0. Jev stays out of the paper.
 
 ## Before October 12
 
 - [ ] **Edit Figure 1** (`fig:KEO_overview`, `papers/latex/figures/workflow.pdf`). Overview of KG creation, graph RAG, chunk baseline, benchmark, and judges.
-- [ ] **Human annotators.** Ann1: finish the last 14 of 40 preferences (severity already 100/100). Ann2: has not started preferences or severity, so adjudication stays locked. Sync the paper before upload: limitations still say Ann1 is 20/40 with a 16–3–1 lean; the vote file is 26/40 (20 KEO / 3 chunk / 3 tie). If Ann2 cannot finish, keep the abstract’s expert sentence caveated. Do not state a dual-annotator consensus.
+- [x] **Preference adjudication.** Final 23 KEO / 4 chunk / 13 neither. Ann2 severity is still 0/100, so the safety claim stays locked.
   - `cd keo/sensemaking_QA/human_validation/pref_site && python3 serve.py` → [http://127.0.0.1:8765/](http://127.0.0.1:8765/)
   - Annotator **1** / `keo`; Annotator **2** / `eok`; Adjudicator **3** / `adj`
   - Prefs → `human_pref_votes_annotator{1,2}.json`; severity → `severity_votes_annotator{1,2}.json`
