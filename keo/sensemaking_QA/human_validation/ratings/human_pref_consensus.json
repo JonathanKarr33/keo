@@ -1,330 +1,330 @@
 {
-  "updated_at": "2026-10-11T22:20:38",
+  "updated_at": "2026-10-12T20:39:19",
   "n_items": 40,
-  "n_consensus_agree": 0,
+  "n_consensus_agree": 22,
   "n_adjudicated": 0,
   "n_conference": 0,
-  "n_open_disagreement": 0,
+  "n_open_disagreement": 18,
   "items": [
     {
       "item_num": 1,
       "item_id": "safety_recommendations_006",
       "ann1_system": "keo",
-      "ann2_system": null,
+      "ann2_system": "chunk_tok",
       "final_system": null,
-      "source": "incomplete_primaries"
+      "source": "open_disagreement"
     },
     {
       "item_num": 2,
       "item_id": "safety_recommendations_007",
       "ann1_system": "tie",
-      "ann2_system": null,
+      "ann2_system": "chunk_tok",
       "final_system": null,
-      "source": "incomplete_primaries"
+      "source": "open_disagreement"
     },
     {
       "item_num": 3,
       "item_id": "global_014",
       "ann1_system": "chunk_tok",
-      "ann2_system": null,
-      "final_system": null,
-      "source": "incomplete_primaries"
+      "ann2_system": "chunk_tok",
+      "final_system": "chunk_tok",
+      "source": "consensus"
     },
     {
       "item_num": 4,
       "item_id": "system_level_understanding_001",
       "ann1_system": "keo",
-      "ann2_system": null,
-      "final_system": null,
-      "source": "incomplete_primaries"
+      "ann2_system": "keo",
+      "final_system": "keo",
+      "source": "consensus"
     },
     {
       "item_num": 5,
       "item_id": "root_cause_analysis_001",
       "ann1_system": "keo",
-      "ann2_system": null,
-      "final_system": null,
-      "source": "incomplete_primaries"
+      "ann2_system": "keo",
+      "final_system": "keo",
+      "source": "consensus"
     },
     {
       "item_num": 6,
       "item_id": "global_015",
       "ann1_system": "keo",
-      "ann2_system": null,
+      "ann2_system": "tie",
       "final_system": null,
-      "source": "incomplete_primaries"
+      "source": "open_disagreement"
     },
     {
       "item_num": 7,
       "item_id": "root_cause_analysis_007",
       "ann1_system": "keo",
-      "ann2_system": null,
-      "final_system": null,
-      "source": "incomplete_primaries"
+      "ann2_system": "keo",
+      "final_system": "keo",
+      "source": "consensus"
     },
     {
       "item_num": 8,
       "item_id": "maintenance_narratives_006",
       "ann1_system": "keo",
-      "ann2_system": null,
+      "ann2_system": "tie",
       "final_system": null,
-      "source": "incomplete_primaries"
+      "source": "open_disagreement"
     },
     {
       "item_num": 9,
       "item_id": "comparative_analysis_008",
       "ann1_system": "keo",
-      "ann2_system": null,
+      "ann2_system": "tie",
       "final_system": null,
-      "source": "incomplete_primaries"
+      "source": "open_disagreement"
     },
     {
       "item_num": 10,
       "item_id": "root_cause_analysis_006",
       "ann1_system": "keo",
-      "ann2_system": null,
-      "final_system": null,
-      "source": "incomplete_primaries"
+      "ann2_system": "keo",
+      "final_system": "keo",
+      "source": "consensus"
     },
     {
       "item_num": 11,
       "item_id": "comparative_analysis_004",
       "ann1_system": "tie",
-      "ann2_system": null,
+      "ann2_system": "keo",
       "final_system": null,
-      "source": "incomplete_primaries"
+      "source": "open_disagreement"
     },
     {
       "item_num": 12,
       "item_id": "maintenance_narratives_005",
       "ann1_system": "keo",
-      "ann2_system": null,
-      "final_system": null,
-      "source": "incomplete_primaries"
+      "ann2_system": "keo",
+      "final_system": "keo",
+      "source": "consensus"
     },
     {
       "item_num": 13,
       "item_id": "root_cause_analysis_002",
       "ann1_system": "chunk_tok",
-      "ann2_system": null,
+      "ann2_system": "keo",
       "final_system": null,
-      "source": "incomplete_primaries"
+      "source": "open_disagreement"
     },
     {
       "item_num": 14,
       "item_id": "global_009",
       "ann1_system": "chunk_tok",
-      "ann2_system": null,
+      "ann2_system": "tie",
       "final_system": null,
-      "source": "incomplete_primaries"
+      "source": "open_disagreement"
     },
     {
       "item_num": 15,
       "item_id": "comparative_analysis_005",
       "ann1_system": "tie",
-      "ann2_system": null,
-      "final_system": null,
-      "source": "incomplete_primaries"
+      "ann2_system": "tie",
+      "final_system": "tie",
+      "source": "consensus"
     },
     {
       "item_num": 16,
       "item_id": "root_cause_analysis_005",
       "ann1_system": "keo",
-      "ann2_system": null,
-      "final_system": null,
-      "source": "incomplete_primaries"
+      "ann2_system": "keo",
+      "final_system": "keo",
+      "source": "consensus"
     },
     {
       "item_num": 17,
       "item_id": "system_level_understanding_003",
       "ann1_system": "chunk_tok",
-      "ann2_system": null,
+      "ann2_system": "tie",
       "final_system": null,
-      "source": "incomplete_primaries"
+      "source": "open_disagreement"
     },
     {
       "item_num": 18,
       "item_id": "predictive_maintenance_004",
       "ann1_system": "keo",
-      "ann2_system": null,
-      "final_system": null,
-      "source": "incomplete_primaries"
+      "ann2_system": "keo",
+      "final_system": "keo",
+      "source": "consensus"
     },
     {
       "item_num": 19,
       "item_id": "maintenance_narratives_003",
       "ann1_system": "tie",
-      "ann2_system": null,
+      "ann2_system": "keo",
       "final_system": null,
-      "source": "incomplete_primaries"
+      "source": "open_disagreement"
     },
     {
       "item_num": 20,
       "item_id": "trend_analysis_007",
       "ann1_system": "keo",
-      "ann2_system": null,
+      "ann2_system": "tie",
       "final_system": null,
-      "source": "incomplete_primaries"
+      "source": "open_disagreement"
     },
     {
       "item_num": 21,
       "item_id": "safety_recommendations_008",
       "ann1_system": "keo",
-      "ann2_system": null,
-      "final_system": null,
-      "source": "incomplete_primaries"
+      "ann2_system": "keo",
+      "final_system": "keo",
+      "source": "consensus"
     },
     {
       "item_num": 22,
       "item_id": "trend_analysis_008",
       "ann1_system": "keo",
-      "ann2_system": null,
-      "final_system": null,
-      "source": "incomplete_primaries"
+      "ann2_system": "keo",
+      "final_system": "keo",
+      "source": "consensus"
     },
     {
       "item_num": 23,
       "item_id": "safety_recommendations_002",
       "ann1_system": "keo",
-      "ann2_system": null,
-      "final_system": null,
-      "source": "incomplete_primaries"
+      "ann2_system": "keo",
+      "final_system": "keo",
+      "source": "consensus"
     },
     {
       "item_num": 24,
       "item_id": "maintenance_narratives_008",
       "ann1_system": "keo",
-      "ann2_system": null,
-      "final_system": null,
-      "source": "incomplete_primaries"
+      "ann2_system": "keo",
+      "final_system": "keo",
+      "source": "consensus"
     },
     {
       "item_num": 25,
       "item_id": "trend_analysis_001",
       "ann1_system": "keo",
-      "ann2_system": null,
-      "final_system": null,
-      "source": "incomplete_primaries"
+      "ann2_system": "keo",
+      "final_system": "keo",
+      "source": "consensus"
     },
     {
       "item_num": 26,
       "item_id": "aircraft_problems_actions_005",
       "ann1_system": "tie",
-      "ann2_system": null,
+      "ann2_system": "keo",
       "final_system": null,
-      "source": "incomplete_primaries"
+      "source": "open_disagreement"
     },
     {
       "item_num": 27,
       "item_id": "comparative_analysis_003",
       "ann1_system": "keo",
-      "ann2_system": null,
-      "final_system": null,
-      "source": "incomplete_primaries"
+      "ann2_system": "keo",
+      "final_system": "keo",
+      "source": "consensus"
     },
     {
       "item_num": 28,
       "item_id": "aircraft_problems_actions_010",
       "ann1_system": "keo",
-      "ann2_system": null,
-      "final_system": null,
-      "source": "incomplete_primaries"
+      "ann2_system": "keo",
+      "final_system": "keo",
+      "source": "consensus"
     },
     {
       "item_num": 29,
       "item_id": "system_level_understanding_002",
       "ann1_system": "tie",
-      "ann2_system": null,
-      "final_system": null,
-      "source": "incomplete_primaries"
+      "ann2_system": "tie",
+      "final_system": "tie",
+      "source": "consensus"
     },
     {
       "item_num": 30,
       "item_id": "aircraft_problems_actions_008",
       "ann1_system": "keo",
-      "ann2_system": null,
+      "ann2_system": "chunk_tok",
       "final_system": null,
-      "source": "incomplete_primaries"
+      "source": "open_disagreement"
     },
     {
       "item_num": 31,
       "item_id": "predictive_maintenance_007",
       "ann1_system": "keo",
-      "ann2_system": null,
-      "final_system": null,
-      "source": "incomplete_primaries"
+      "ann2_system": "keo",
+      "final_system": "keo",
+      "source": "consensus"
     },
     {
       "item_num": 32,
       "item_id": "maintenance_narratives_002",
       "ann1_system": "keo",
-      "ann2_system": null,
-      "final_system": null,
-      "source": "incomplete_primaries"
+      "ann2_system": "keo",
+      "final_system": "keo",
+      "source": "consensus"
     },
     {
       "item_num": 33,
       "item_id": "root_cause_analysis_003",
       "ann1_system": "keo",
-      "ann2_system": null,
+      "ann2_system": "tie",
       "final_system": null,
-      "source": "incomplete_primaries"
+      "source": "open_disagreement"
     },
     {
       "item_num": 34,
       "item_id": "predictive_maintenance_008",
       "ann1_system": "keo",
-      "ann2_system": null,
+      "ann2_system": "tie",
       "final_system": null,
-      "source": "incomplete_primaries"
+      "source": "open_disagreement"
     },
     {
       "item_num": 35,
       "item_id": "global_002",
       "ann1_system": "chunk_tok",
-      "ann2_system": null,
+      "ann2_system": "tie",
       "final_system": null,
-      "source": "incomplete_primaries"
+      "source": "open_disagreement"
     },
     {
       "item_num": 36,
       "item_id": "predictive_maintenance_003",
       "ann1_system": "keo",
-      "ann2_system": null,
+      "ann2_system": "chunk_tok",
       "final_system": null,
-      "source": "incomplete_primaries"
+      "source": "open_disagreement"
     },
     {
       "item_num": 37,
       "item_id": "aircraft_problems_actions_004",
       "ann1_system": "keo",
-      "ann2_system": null,
-      "final_system": null,
-      "source": "incomplete_primaries"
+      "ann2_system": "keo",
+      "final_system": "keo",
+      "source": "consensus"
     },
     {
       "item_num": 38,
       "item_id": "predictive_maintenance_001",
       "ann1_system": "keo",
-      "ann2_system": null,
-      "final_system": null,
-      "source": "incomplete_primaries"
+      "ann2_system": "keo",
+      "final_system": "keo",
+      "source": "consensus"
     },
     {
       "item_num": 39,
       "item_id": "global_004",
       "ann1_system": "keo",
-      "ann2_system": null,
+      "ann2_system": "chunk_tok",
       "final_system": null,
-      "source": "incomplete_primaries"
+      "source": "open_disagreement"
     },
     {
       "item_num": 40,
       "item_id": "global_005",
       "ann1_system": "chunk_tok",
-      "ann2_system": null,
-      "final_system": null,
-      "source": "incomplete_primaries"
+      "ann2_system": "chunk_tok",
+      "final_system": "chunk_tok",
+      "source": "consensus"
     }
   ]
 }
